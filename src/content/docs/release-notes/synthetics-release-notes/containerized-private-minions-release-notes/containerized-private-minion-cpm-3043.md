@@ -1,0 +1,9 @@
+---
+subject: Containerized private minion (CPM)
+releaseDate: '2021-04-05'
+version: 3.0.43
+---
+
+### Improvements
+
+* Users now have access to the NPM module `ssl-checker` for scripted monitors.
