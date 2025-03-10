@@ -1,0 +1,13 @@
+src/content/eol/2020/05/deprecation-notice-kubernetes-v17-or-lower.md
+src/content/eol/2021/12/deprecation-notice-v1.15andlower.md
+src/content/eol/2023/09/deprecation-notice-v1.22-and-lower.md
+src/content/eol/2023/11/deprecation-notice-v1.23-and-lower.md
+src/content/eol/2024/04/eol-04-22-24.md
+src/content/eol/2024/04/eol-04-24-24-createtracer.md
+src/content/eol/2024/04/eol-04-24-24-polling-api.md
+src/content/eol/2024/07/deprecation-notice-v1.25-and-lower.md
+src/content/eol/2024/08/eol-08-01-24.md
+src/content/eol/2024/08/eol-08-14-24.md
+src/content/eol/2024/10/deprecation-notice-v1.26-and-lower.md
+src/content/eol/2025/01/deprecation-notice-rest-api-keys.md
+src/content/eol/2025/02/eol-01-31-25-synthetics-ip.md
