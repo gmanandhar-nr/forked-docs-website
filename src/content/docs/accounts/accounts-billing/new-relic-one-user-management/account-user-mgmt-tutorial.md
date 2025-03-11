@@ -63,7 +63,7 @@ This tutorial walks you through:
 
     You can see how the <DNT>**User**</DNT> group has the <DNT>**All product admin**</DNT> role and access to that initially created account. And you can see how the <DNT>**Admin**</DNT> group has some administration settings assigned. The `Default` next to those group names refers to them being in the original, default authentication domain.
 
-    If you want to create admins who can only add and remove users, and who don't have the more powerful organization-wide admin capabilities that the <DNT>**Admin**</DNT> group has, you can use the [<DNT>**Group admin**</DNT> role](/docs/accounts/accounts-billing/new-relic-one-user-management/user-management-concepts#group-admin).
+    If you want to create admins who can abc only add and remove users, and who don't have the more powerful organization-wide admin capabilities that the <DNT>**Admin**</DNT> group has, you can use the [<DNT>**Group admin**</DNT> role](/docs/accounts/accounts-billing/new-relic-one-user-management/user-management-concepts#group-admin).
   </Step>
 
   <Step>

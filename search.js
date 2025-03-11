@@ -25,7 +25,7 @@ function findFilePaths(dir, fileList) {
 
 // Main function
 function main() {
-  const startPath = './src/content/eol'; // Replace with the starting directory path
+  const startPath = './src/content/'; // Replace with the starting directory path
   const outputFilePath = './file-paths.txt'; // Define output file path
 
   const filePaths = [];
