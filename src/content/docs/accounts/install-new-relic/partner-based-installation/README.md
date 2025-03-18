@@ -1,2 +1,0 @@
-# partner-based-installation
-
