@@ -190,71 +190,16 @@ For more options, see [the `modify` filter on the Fluent Bit documentation](http
 
 Once you've installed and [configured](#configure-plugin) the Fluent Bit plugin, you can use the following attributes to configure how the plugin sends data to New Relic:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Key
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Key | Description |
+| - | - |
+| `licenseKey` | The . Use either `licenseKey` (**recommended**) or `apiKey`, not both. Default: `none` |
+| `maxBufferSize` | The maximum size the payloads sent, in bytes. Default: `256000` |
+| `maxRecords` | The maximum number of records to send at a time. Default: `1024` |
+| `apiKey` | **Deprecated.** Takes a New Relic [insights insert key](/docs/insights/insights-data-sources/custom-data/send-custom-events-event-api#register), but using the `licenseKey` attribute is preferred. Use either `licenseKey` or `apiKey`, not both. |
+| `endpoint` | Defaults to `https://log-api.newrelic.com/log/v1`. If you're using an EU key, you need set it to `https://log-api.eu.newrelic.com/log/v1` |
 
-  <tbody>
-    <tr>
-      <td>
-        `licenseKey`
-      </td>
-
-      <td>
-        The <InlinePopover type="licenseKey"/>. Use either `licenseKey` (<DNT>**recommended**</DNT>) or `apiKey`, not both. Default: `none`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `maxBufferSize`
-      </td>
-
-      <td>
-        The maximum size the payloads sent, in bytes. Default: `256000`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `maxRecords`
-      </td>
-
-      <td>
-        The maximum number of records to send at a time. Default: `1024`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `apiKey`
-      </td>
-
-      <td>
-        <DNT>**Deprecated.**</DNT> Takes a New Relic [insights insert key](/docs/insights/insights-data-sources/custom-data/send-custom-events-event-api#register), but using the `licenseKey` attribute is preferred. Use either `licenseKey` or `apiKey`, not both.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `endpoint`
-      </td>
-
-      <td>
-        Defaults to `https://log-api.newrelic.com/log/v1`. If you're using an EU key, you need set it to `https://log-api.eu.newrelic.com/log/v1`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View log data [#find-data]
 

@@ -21,55 +21,14 @@ When you go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic
 
 Here are some of the things you can do on this page:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this...**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        View an app's details
-      </td>
-
-      <td>
-        To go directly to the application's <DNT>**Summary**</DNT> page by clicking on the application's name.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Find an app in the index
-      </td>
-
-      <td>
-        Use any of these options to find what you want:
+| **If you want to...** | **Do this...** |
+| - | - |
+| View an app's details | To go directly to the application's **Summary** page by clicking on the application's name. |
+| Find an app in the index | Use any of these options to find what you want:
 
         * Filter or roll up the index by [category or tag](/docs/apm/new-relic-apm/maintenance/labels-categories-organizing-your-apps-servers).
-        * Use the search (magnifying glass) function at the top of the index.
-      </td>
-    </tr>
+        * Use the search (magnifying glass) function at the top of the index. |
+| View details about a recent event or alert | On the **Summary** page, review the entries under **Application activity**. You can select the link to get details. For more information, see [View an app's alert information](/docs/apm/new-relic-apm/installation-configuration/view-apps-alert-information). |
 
-    <tr>
-      <td>
-        View details about a recent event or alert
-      </td>
-
-      <td>
-        On the <DNT>**Summary**</DNT> page, review the entries under <DNT>**Application activity**</DNT>. You can select the link to get details. For more information, see [View an app's alert information](/docs/apm/new-relic-apm/installation-configuration/view-apps-alert-information).
-      </td>
-    </tr>
-  </tbody>
-</table>

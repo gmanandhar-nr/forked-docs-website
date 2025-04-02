@@ -30,27 +30,11 @@ You can automate this process by using the `newrelic-infra-ctl` command. For mor
 
 Generating `debug` log files requires editing your configuration file. For a sample config file that includes all applicable settings, see the [example template](/docs/infrastructure/new-relic-infrastructure/configuration/infrastructure-config-file-template-newrelic-infrayml). To generate detailed logs:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Step
-      </th>
+# Table
 
-      <th>
-        Procedures
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        1.
-      </td>
-
-      <td>
-        Edit your `newrelic-infra.yml` file with logging settings:
+| Step | Procedures |
+| - | - |
+| 1. | Edit your `newrelic-infra.yml` file with logging settings:
 
         ```yml
         log:
@@ -60,41 +44,14 @@ Generating `debug` log files requires editing your configuration file. For a sam
 
         1. Enable debug logging: [`level: debug`](/docs/infrastructure/new-relic-infrastructure/configuration/configure-infrastructure-agent#logging-variables). (If you use a containerized infrastructure agent on CoreOS, see [system-specific notes](#system-notes).)
         2. Set [`file`](/docs/infrastructure/install-configure-infrastructure/configuration/infrastructure-configuration-settings#file) to a convenient log file location.
-        3. [Restart the agent](/docs/infrastructure/new-relic-infrastructure/configuration/start-stop-restart-check-infrastructure-agent-status) so the agent notices the new settings.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        2.
-      </td>
-
-      <td>
-        Let your host run at normal load for about three minutes to generate sufficient logging data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        3.
-      </td>
-
-      <td>
-        Return your settings to default:
+        3. [Restart the agent](/docs/infrastructure/new-relic-infrastructure/configuration/start-stop-restart-check-infrastructure-agent-status) so the agent notices the new settings. |
+| 2. | Let your host run at normal load for about three minutes to generate sufficient logging data. |
+| 3. | Return your settings to default:
 
         1. Disable verbose logging by setting [`level: info`](/docs/infrastructure/new-relic-infrastructure/configuration/configure-infrastructure-agent#level) in `newrelic-infra.yml`.
         2. Optional: Disable logging to a custom file by removing the [`file`](/docs/infrastructure/new-relic-infrastructure/configuration/configure-infrastructure-agent#file) line from the `log` section in `newrelic-infra.yml`.
-        3. [Restart the agent](/docs/infrastructure/new-relic-infrastructure/configuration/start-stop-restart-check-infrastructure-agent-status) so the agent notices the new settings.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        4.
-      </td>
-
-      <td>
-        Examine the log file for errors.
+        3. [Restart the agent](/docs/infrastructure/new-relic-infrastructure/configuration/start-stop-restart-check-infrastructure-agent-status) so the agent notices the new settings. |
+| 4. | Examine the log file for errors.
 
         If you need to send your log file to New Relic Support:
 
@@ -103,11 +60,8 @@ Generating `debug` log files requires editing your configuration file. For a sam
            ```
            New Relic infrastructure agent version X.YY.ZZZ
            ```
-        2. Attach the log file to your support ticket, along with your `newrelic-infra.yml`.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        2. Attach the log file to your support ticket, along with your `newrelic-infra.yml`. |
+
 
 ### Smart verbose mode
 

@@ -86,39 +86,12 @@ NewRelic.startInteraction(actionName: String)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$interactionName` | `string` | Required. The name you want to give to the interaction. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$interactionName`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The name you want to give to the interaction.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Return values [#return-values]
 

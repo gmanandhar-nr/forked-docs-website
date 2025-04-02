@@ -37,109 +37,17 @@ To find your integration data in our infrastructure UI, go to <DNT>**[one.newrel
 
 Data is attached to the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Application | `AwsKinesisAnalyticsApplicationSample` | `AwsKinesisAnalyticsApplication` |
+| ApplicationKpu | `AwsKinesisAnalyticsApplicationSample` | `AwsKinesisAnalyticsApplication` |
+| Task | `AwsKinesisAnalyticsTaskSample` | `AwsKinesisAnalyticsTask` |
+| TaskOperator | `AwsKinesisAnalyticsTaskOperatorSample` | `AwsKinesisAnalyticsTaskOperator` |
+| TaskParallelism | `AwsKinesisAnalyticsTaskParallelismSample` | `AwsKinesisAnalyticsTaskParallelism` |
+| TaskOperatorParallelism | `AwsKinesisAnalyticsTaskOperatorParallelismSample` | `AwsKinesisAnalyticsTaskOperatorParallelism` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Application
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsApplicationSample`
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsApplication`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        ApplicationKpu
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsApplicationSample`
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsApplication`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Task
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsTaskSample`
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsTask`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        TaskOperator
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsTaskOperatorSample`
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsTaskOperator`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        TaskParallelism
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsTaskParallelismSample`
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsTaskParallelism`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        TaskOperatorParallelism
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsTaskOperatorParallelismSample`
-      </td>
-
-      <td>
-        `AwsKinesisAnalyticsTaskOperatorParallelism`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

@@ -36,58 +36,12 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Automation Account metrics [#Azure-automation-account]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `HybridWorkerPing` | The number of pings from the hybrid worker. |
+| `TotalJob` | The total number of jobs. |
+| `TotalUpdateDeploymentMachineRuns` | Total software update deployment machine runs in a software update deployment run. |
+| `TotalUpdateDeploymentRuns` | Total software update deployment runs. |
 
-  <tbody>
-    <tr>
-      <td>
-        `HybridWorkerPing`
-      </td>
-
-      <td>
-        The number of pings from the hybrid worker.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalJob`
-      </td>
-
-      <td>
-        The total number of jobs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalUpdateDeploymentMachineRuns`
-      </td>
-
-      <td>
-        Total software update deployment machine runs in a software update deployment run.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalUpdateDeploymentRuns`
-      </td>
-
-      <td>
-        Total software update deployment runs.
-      </td>
-    </tr>
-  </tbody>
-</table>

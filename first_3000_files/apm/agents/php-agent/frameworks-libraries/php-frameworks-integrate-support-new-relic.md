@@ -29,65 +29,18 @@ It is up to the developers of the various frameworks to decide if they want to h
 
 In order to understand how to best add support for New Relic, it is useful to understand some of the key points of interaction.
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **Term**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Definition**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Term** | **Definition** |
+| - | - |
+| **Web transactions** | **Web transactions** are asset requests (or user hits) to your site. With frameworks, this is often handled by an MVC dispatching mechanism. |
+| **Metrics** | **Metrics** are named entities that report timing information. New Relic uses these metrics to generate charts and pages, such as the [APM **Summary** page](/docs/apm/applications-menu/monitoring/apm-overview-page). For example, New Relic instruments calls to MySQL and generate metrics called `Database/select` or `Database/update` whenever a user selects or updates data.
 
-  <tbody>
-    <tr>
-      <td>
-        <DNT>
-          **Web transactions**
-        </DNT>
-      </td>
+        Metrics only contain timing data. |
+| **Transaction traces** | During every harvest period, New Relic records the slowest web transaction that falls below a user-defined threshold. This is a **transaction trace**.
 
-      <td>
-        <DNT>**Web transactions**</DNT> are asset requests (or user hits) to your site. With frameworks, this is often handled by an MVC dispatching mechanism.
-      </td>
-    </tr>
+        It has more detail than simple metrics. If enabled, it will include a detailed call graph of exactly what functions were called and how long they took. For slow query statements, it obfuscates all data in the call. |
 
-    <tr>
-      <td>
-        <DNT>
-          **Metrics**
-        </DNT>
-      </td>
-
-      <td>
-        <DNT>**Metrics**</DNT> are named entities that report timing information. New Relic uses these metrics to generate charts and pages, such as the [APM <DNT>**Summary**</DNT> page](/docs/apm/applications-menu/monitoring/apm-overview-page). For example, New Relic instruments calls to MySQL and generate metrics called `Database/select` or `Database/update` whenever a user selects or updates data.
-
-        Metrics only contain timing data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Transaction traces**
-        </DNT>
-      </td>
-
-      <td>
-        During every harvest period, New Relic records the slowest web transaction that falls below a user-defined threshold. This is a <DNT>**transaction trace**</DNT>.
-
-        It has more detail than simple metrics. If enabled, it will include a detailed call graph of exactly what functions were called and how long they took. For slow query statements, it obfuscates all data in the call.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Name transactions [#dev]
 

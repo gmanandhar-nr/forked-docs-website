@@ -32,65 +32,15 @@ You can define conditions based on the sets of hosts most important to you, and 
 
 This feature's flexibility allows you to easily customize what to monitor and when to notify selected individuals or teams. In addition, the email notification includes links to help you quickly troubleshoot the situation.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Host not reporting condition**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Features**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Host not reporting condition** | **Features** |
+| - | - |
+| What to monitor | You can use the [entity filter bar](/docs/new-relic-solutions/new-relic-one/core-concepts/search-filter-entities) to select which hosts you want to be monitored with the alert condition. The condition will also automatically apply to any hosts you add in the future that match these filters. |
+| How to notify | Conditions are contained in [policies](/docs/using-new-relic/welcome-new-relic/get-started/glossary#alert-policy). You can select an existing policy or create a new policy with email notifications from the infrastructure monitoring UI. If you want to create a new policy with other types of [notification channels](/docs/alerts/new-relic-alerts/managing-notification-channels/notification-channels-controlling-where-send-alerts), use the [UI](/docs/alerts/new-relic-alerts/configuring-alert-policies/name-or-rename-alert-policy). |
+| When to notify | Email addresses (identified in the policy) will be notified automatically about [threshold](/docs/using-new-relic/welcome-new-relic/get-started/glossary#alert-threshold) incidents for any host matching the filters you have applied, depending on the policy's [incident preferences](/docs/alerts/new-relic-alerts/configuring-alert-policies/specify-when-new-relic-creates-incidents). |
+| Where to troubleshoot | The link at the top of the email notification will take you to the [infrastructure **Events** page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-events-page-live-feed-every-config-change) centered on the time when the host disconnected. Additional links in the email will take you to additional detail. |
 
-  <tbody>
-    <tr>
-      <td>
-        What to monitor
-      </td>
-
-      <td>
-        You can use the [entity filter bar](/docs/new-relic-solutions/new-relic-one/core-concepts/search-filter-entities) to select which hosts you want to be monitored with the alert condition. The condition will also automatically apply to any hosts you add in the future that match these filters.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        How to notify
-      </td>
-
-      <td>
-        Conditions are contained in [policies](/docs/using-new-relic/welcome-new-relic/get-started/glossary#alert-policy). You can select an existing policy or create a new policy with email notifications from the infrastructure monitoring UI. If you want to create a new policy with other types of [notification channels](/docs/alerts/new-relic-alerts/managing-notification-channels/notification-channels-controlling-where-send-alerts), use the [UI](/docs/alerts/new-relic-alerts/configuring-alert-policies/name-or-rename-alert-policy).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        When to notify
-      </td>
-
-      <td>
-        Email addresses (identified in the policy) will be notified automatically about [threshold](/docs/using-new-relic/welcome-new-relic/get-started/glossary#alert-threshold) incidents for any host matching the filters you have applied, depending on the policy's [incident preferences](/docs/alerts/new-relic-alerts/configuring-alert-policies/specify-when-new-relic-creates-incidents).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Where to troubleshoot
-      </td>
-
-      <td>
-        The link at the top of the email notification will take you to the [infrastructure <DNT>**Events**</DNT> page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-events-page-live-feed-every-config-change) centered on the time when the host disconnected. Additional links in the email will take you to additional detail.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Create a "host not reporting" condition [#create-condition]
 

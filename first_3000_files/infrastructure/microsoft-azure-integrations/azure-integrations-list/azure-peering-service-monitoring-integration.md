@@ -36,28 +36,9 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Peering Service metrics [#Azure-peering-service]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `RoundTripTime` | Average round trip time. |
 
-  <tbody>
-    <tr>
-      <td>
-        `RoundTripTime`
-      </td>
-
-      <td>
-        Average round trip time.
-      </td>
-    </tr>
-  </tbody>
-</table>

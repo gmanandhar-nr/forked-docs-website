@@ -41,112 +41,33 @@ As you drill below the initial pageâ€“whether it's OpenTelemetry or APM agentsâ€
 
 The performance charts always reflect the data from the page you're viewing, but the set of performance charts changes as you drill below the opening page. Here's what you need to understand these charts:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Performance
-        chart
-      </th>
+# Table
 
-      <th>
-        Page
-      </th>
+| Performance
+        chart | Page | Description |
+| - | - | - |
+| Response Time | All pages
+        (APM and
+        Opentelemetry) | The average duration of calls between services in the initial view or between transactions in the drill-down views. The initial view for APM shows the response time as metric data, which is based on all calls. The initial view for OpenTelemetry shows the response time as trace data, which is based on sampled calls only.
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Response Time
-      </td>
-
-      <td>
-        All pages<br/>
-        (APM and<br/>
-        Opentelemetry)
-      </td>
-
-      <td>
-        The average duration of calls between services in the initial view or between transactions in the drill-down views. The initial view for APM shows the response time as metric data, which is based on all calls. The initial view for OpenTelemetry shows the response time as trace data, which is based on sampled calls only.
-
-        Response time in all the drill-down pages show response time as trace data, which is based on sampled calls only. How well this represents actual system performance depends on the effective sample rate.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Throughput
-      </td>
-
-      <td>
-        Opening page<br/>
-        (APM only)
-      </td>
-
-      <td>
-        The total number of calls between two services.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Error rate
-      </td>
-
-      <td>
-        Opening page<br/>
-        (APM only)
-      </td>
-
-      <td>
-        The number of errors per minute for calls between two services.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Traced call count
-      </td>
-
-      <td>
-        Opening page<br/>
+        Response time in all the drill-down pages show response time as trace data, which is based on sampled calls only. How well this represents actual system performance depends on the effective sample rate. |
+| Throughput | Opening page
+        (APM only) | The total number of calls between two services. |
+| Error rate | Opening page
+        (APM only) | The number of errors per minute for calls between two services. |
+| Traced call count | Opening page
         (OpenTelemetry)
 
-        Drill-down pages<br/>
-        (APM and<br/>
-        OpenTelemetry)
-      </td>
-
-      <td>
-        Represents the number of sampled calls we have for a given path between two services or transactions. This is lower than the total throughput, unless you are sampling 100% of your requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Traced error count
-      </td>
-
-      <td>
-        Opening page<br/>
+        Drill-down pages
+        (APM and
+        OpenTelemetry) | Represents the number of sampled calls we have for a given path between two services or transactions. This is lower than the total throughput, unless you are sampling 100% of your requests. |
+| Traced error count | Opening page
         (OpenTelemetry)
 
-        Drill-down pages<br/>
-        (APM and<br/>
-        OpenTelemetry)
-      </td>
+        Drill-down pages
+        (APM and
+        OpenTelemetry) | The number of sampled calls between two services or transactions that had errors. |
 
-      <td>
-        The number of sampled calls between two services or transactions that had errors.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## The external services table [#table-view]
 

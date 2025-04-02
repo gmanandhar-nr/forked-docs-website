@@ -31,68 +31,14 @@ To find your integration's metrics, go to <DNT>**[one.newrelic.com](https://one.
 
 This New Relic infrastructure integration collects the following Amazon CloudWatch Network Monitor data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Unit  
+| Metric | Unit | Description |
+| - | - | - |
+| `HealthIndicator` | Binary | Network Health Indicator supports two values for beta-0 (AWS Network is health) or 1 (AWS Network is Degraded) |
+| `RTT` | milliseconds | The time (in milliseconds) that it takes for a network request to go from a starting point to a destination |
+| `PacketLoss` | Percent | Packet loss is measured as a percentage of sampled packets note received by the source before a static timeout is reached |
 
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `HealthIndicator`
-      </td>
-
-      <td>
-        Binary
-      </td>
-
-      <td>
-        Network Health Indicator supports two values for beta-0 (AWS Network is health) or 1 (AWS Network is Degraded)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RTT`
-      </td>
-
-      <td>
-        milliseconds
-      </td>
-
-      <td>
-        The time (in milliseconds) that it takes for a network request to go from a starting point to a destination
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PacketLoss`
-      </td>
-
-      <td>
-        Percent
-      </td>
-
-      <td>
-        Packet loss is measured as a percentage of sampled packets note received by the source before a static timeout is reached
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Create alerts
 

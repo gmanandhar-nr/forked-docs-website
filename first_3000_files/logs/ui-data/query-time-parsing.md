@@ -33,124 +33,18 @@ While both types of parsing make it easier for you to query logs, they have some
 
 You may also choose to use a combination of both parsing approaches. Review the table below to decide if query time parsing is right for you:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Description
-      </th>
+# Table
 
-      <th>
-        Ingest parsing
-      </th>
+| Description | Ingest parsing | Query time parsing |
+| - | - | - |
+| Recommended usage | Best for creating permanent attributes you can query in the future | Best for doing quick queries on attributes that aren't permanent |
+| Parsing language | You create Grok patterns and regular expressions | New Relic creates queries for you using the NRQL [aparse](/docs/nrql/nrql-syntax-clauses-functions/#func-aparse) function |
+| Timing | Applied at ingest | Applied when you query |
+| Results | Makes permanent changes to stored log | Temporarily alters your logs in the UI |
+| Live tail logs | Live tail logs include any extracted values from ingest parsing | Live tail logs **don't** include any extracted values from query time parsing |
+| Exported logs | Exported logs include any extracted values from ingest parsing | Exported logs **don't** include any extracted values from query time parsing |
+| Number of attributes | A maximum of [255 attributes](/docs/logs/log-api/log-event-data/#events) is available at ingest (the actual number attributes you can parse at ingest depends on the nature of your logs) | You can parse a maximum of 32 temporary attributes across all rules for query time parsing |
 
-      <th>
-        Query time parsing
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Recommended usage
-      </td>
-
-      <td>
-        Best for creating permanent attributes you can query in the future
-      </td>
-
-      <td>
-        Best for doing quick queries on attributes that aren't permanent
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Parsing language  
-
-      </td>
-
-      <td>
-        You create Grok patterns and regular expressions
-      </td>
-
-      <td>
-        New Relic creates queries for you using the NRQL [aparse](/docs/nrql/nrql-syntax-clauses-functions/#func-aparse) function
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Timing
-      </td>
-
-      <td>
-        Applied at ingest
-      </td>
-
-      <td>
-        Applied when you query
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Results
-      </td>
-
-      <td>
-        Makes permanent changes to stored log
-      </td>
-
-      <td>
-        Temporarily alters your logs in the UI
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Live tail logs
-      </td>
-
-      <td>
-        Live tail logs include any extracted values from ingest parsing
-      </td>
-
-      <td>
-        Live tail logs **don't** include any extracted values from query time parsing
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Exported logs
-      </td>
-
-      <td>
-        Exported logs include any extracted values from ingest parsing
-      </td>
-
-      <td>
-        Exported logs **don't** include any extracted values from query time parsing
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Number of attributes
-      </td>
-
-      <td>
-        A maximum of [255 attributes](/docs/logs/log-api/log-event-data/#events) is available at ingest (the actual number attributes you can parse at ingest depends on the nature of your logs)
-      </td>
-
-      <td>
-        You can parse a maximum of 32 temporary attributes across all rules for query time parsing
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## How to create a query time parsing rule [#how-to]
 

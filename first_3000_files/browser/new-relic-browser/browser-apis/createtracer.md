@@ -71,47 +71,19 @@ An interaction will not be considered complete until all of its tracers finish. 
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$name`
 
-  <tbody>
-    <tr>
-      <td>
-        `$name`
+        _string_ | Required. This will be used as the name of the tracer.
 
-        _string_
-      </td>
+        If you do not include a name, browser does not add a node to the interaction tree. The callback time will be attributed to the parent node. |
+| `$callback`
 
-      <td>
-        Required. This will be used as the name of the tracer.
+        _function_ | Optional. A callback that contains the synchronous work to run at the end of the async work. To execute this callback, call the wrapper function returned using `createTracer()`. |
 
-        If you do not include a name, browser does not add a node to the interaction tree. The callback time will be attributed to the parent node.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$callback`
-
-        _function_
-      </td>
-
-      <td>
-        Optional. A callback that contains the synchronous work to run at the end of the async work. To execute this callback, call the wrapper function returned using `createTracer()`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

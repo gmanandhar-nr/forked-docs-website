@@ -43,35 +43,14 @@ FROM Event
 WHERE attribute [comparison] [AND|OR ...]
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        <DNT>
-          **Clause**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Notes**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Clause** | **Notes** |
+| - | - |
+| `SELECT function(attribute)`
 
-  <tbody>
-    <tr>
-      <td>
-        `SELECT function(attribute)`
-
-        <DNT>
-          **Required**
-        </DNT>
-      </td>
-
-      <td>
-        Supported [functions](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/#functions) that return numbers include:
+        
+          **Required** | Supported [functions](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/#functions) that return numbers include:
 
         * `apdex`
         * `average`
@@ -84,65 +63,32 @@ WHERE attribute [comparison] [AND|OR ...]
         * `sum`
         * `uniqueCount`
 
-          <Callout variant="tip">
+          
             If you use the `percentile` aggregator in a faceted alert condition with many facets, this may cause this error:
 
             `An error occurred while fetching chart data.`
 
-            If you see this error, use `average` instead.
-          </Callout>
-      </td>
-    </tr>
+            If you see this error, use `average` instead. |
+| `FROM data type`
 
-    <tr>
-      <td>
-        `FROM data type`
-
-        <DNT>
-          **Required**
-        </DNT>
-      </td>
-
-      <td>
-        Multiple [data types](/docs/data-apis/understand-data/new-relic-data-types/) can be targeted.
+        
+          **Required** | Multiple [data types](/docs/data-apis/understand-data/new-relic-data-types/) can be targeted.
 
         Supported data types:
 
         * Events
-        * `Metric` (RAW data points will be returned)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WHERE attribute [comparison] [AND|OR ...]`
-      </td>
-
-      <td>
-        Use the `WHERE` clause to specify a series of one or more conditions. All the [operators](/docs/insights/new-relic-insights/using-new-relic-query-language/nrql-reference#where-operators) are supported.
-        It's used for filtering down the data returned in the query.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="facet">
-        `FACET` attribute
-      </td>
-
-      <td>
-        Include an optional `FACET` clause in your NRQL syntax depending on the [threshold type](#threshold-types) (static or anomaly).
+        * `Metric` (RAW data points will be returned) |
+| `WHERE attribute [comparison] [AND|OR ...]` | Use the `WHERE` clause to specify a series of one or more conditions. All the [operators](/docs/insights/new-relic-insights/using-new-relic-query-language/nrql-reference#where-operators) are supported.
+        It's used for filtering down the data returned in the query. |
+| `FACET` attribute | Include an optional `FACET` clause in your NRQL syntax depending on the [threshold type](#threshold-types) (static or anomaly).
 
         Use the [`FACET`](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/#sel-facet) clause to separate your results by attribute and alert on each attribute independently. No `LIMIT` clause is allowed, but all queries will receive the maximum number of facets possible.
 
         Faceted queries can return a maximum of 5000 values for [static and anomaly](#threshold-types) conditions.
 
-        <Callout variant="important">
-          If the query returns more than the maximum number of values, the alert condition can't be created. If you create the condition and the query returns more than this number later, the alert will fail. Modify your query so that it returns a fewer number of values.
-        </Callout>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        
+          If the query returns more than the maximum number of values, the alert condition can't be created. If you create the condition and the query returns more than this number later, the alert will fail. Modify your query so that it returns a fewer number of values. |
+
 
 ## Reformatting incompatible NRQL [#reformatting]
 

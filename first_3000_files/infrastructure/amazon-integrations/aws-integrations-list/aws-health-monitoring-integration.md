@@ -67,171 +67,26 @@ AWS Health events are ingested as <DNT>**AwsHealthNotification**</DNT> events. Y
 
 The following table shows the main attributes available for <DNT>**AwsHealthNotification**</DNT> events:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Event attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Event attribute | Description |
+| - | - |
+| `affectedEntityArn` | The AWS resource ARN. |
+| `arn` | The ARN of the AWS health event itself. |
+| `affectedRegion` | The AWS affected region. |
+| `affectedResources` | Number of affected resources. Auto-generated metric that can be used to define New Relic  conditions. |
+| `description` | Detailed description of the event. |
+| `eventTypeCategory` | AWS Health category: Issue, ScheduledChange, AccountNotification, Investigation. |
+| `eventTypeCode` | A list of unique identifiers for event types. For example,`AWS_EC2_SYSTEM_MAINTENANCE_EVENT` or `AWS_RDS_MAINTENANCE_SCHEDULED`. |
+| `service` | The AWS services associated with the event. For example, EC2, RDS. |
+| `statusCode` | The AWS health event status: `Open`, `Closed`, `Upcoming`. |
+| `startTime` | The date and time that the event began (in string format). |
+| `startTimestamp` | The epoch timestamp (in seconds) for event began. |
+| `endTime` | The date and time for event resolution (in string format). |
+| `endTimestamp` | The epoch timestamp (in seconds) for event resolution. |
+| `lastUpdatedTime` | The date and time for the last event update received (in string format). |
+| `lastUpdatedTimestamp` | The epoch timestamp (in seconds) for the last event update received. |
 
-  <tbody>
-    <tr>
-      <td>
-        `affectedEntityArn`
-      </td>
-
-      <td>
-        The AWS resource ARN.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `arn`
-      </td>
-
-      <td>
-        The ARN of the AWS health event itself.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `affectedRegion`
-      </td>
-
-      <td>
-        The AWS affected region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `affectedResources`
-      </td>
-
-      <td>
-        Number of affected resources. Auto-generated metric that can be used to define New Relic <InlinePopover type="alerts"/> conditions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `description`
-      </td>
-
-      <td>
-        Detailed description of the event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `eventTypeCategory`
-      </td>
-
-      <td>
-        AWS Health category: Issue, ScheduledChange, AccountNotification, Investigation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `eventTypeCode`
-      </td>
-
-      <td>
-        A list of unique identifiers for event types. For example,`AWS_EC2_SYSTEM_MAINTENANCE_EVENT` or `AWS_RDS_MAINTENANCE_SCHEDULED`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `service`
-      </td>
-
-      <td>
-        The AWS services associated with the event. For example, EC2, RDS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `statusCode`
-      </td>
-
-      <td>
-        The AWS health event status: `Open`, `Closed`, `Upcoming`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `startTime`
-      </td>
-
-      <td>
-        The date and time that the event began (in string format).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `startTimestamp`
-      </td>
-
-      <td>
-        The epoch timestamp (in seconds) for event began.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `endTime`
-      </td>
-
-      <td>
-        The date and time for event resolution (in string format).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `endTimestamp`
-      </td>
-
-      <td>
-        The epoch timestamp (in seconds) for event resolution.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `lastUpdatedTime`
-      </td>
-
-      <td>
-        The date and time for the last event update received (in string format).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `lastUpdatedTimestamp`
-      </td>
-
-      <td>
-        The epoch timestamp (in seconds) for the last event update received.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 NRQL alert conditions can be defined to receive notifications when health events are reported by AWS.
 

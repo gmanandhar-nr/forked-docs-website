@@ -28,77 +28,27 @@ This explains how to authenticate your New Relic mobile app account, and how to 
 
 Depending on your New Relic account, additional installation or authentication steps may be required when you install the New Relic mobile app.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **New Relic account**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Additional requirements**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        New users
-      </td>
-
-      <td>
-        If you do not already have a New Relic account:
+| **New Relic account** | **Additional requirements** |
+| - | - |
+| New users | If you do not already have a New Relic account:
 
         1. From your desktop web browser, [create a New Relic account](https://newrelic.com/signup).
         2. [Install your application](/docs/site/installing-the-agent) with the appropriate New Relic agent.
 
-           As part of new account setup, you will receive an email with a password reset link. The password reset link expires after 20 minutes for mobile apps.
-      </td>
-    </tr>
+           As part of new account setup, you will receive an email with a password reset link. The password reset link expires after 20 minutes for mobile apps. |
+| Existing New Relic users | No additional requirements; your applications, hosts, and key transactions automatically appear after you sign in. |
+| Users with New Relic partner accounts | Depending on the partner, you may need to complete a different [authentication process](/docs/ios/ios-with-partners).
 
-    <tr>
-      <td>
-        Existing New Relic users
-      </td>
+        **Azure Store users:** Due to the deep integration between Azure Storefront and New Relic, Azure Storefront users cannot access their accounts on the New Relic Android or iOS apps. |
+| Users with SAML-SSO enabled accounts | When you sign in to the New Relic mobile app, your session automatically redirects to your web browser. From there you can sign in to your New Relic SAML-SSO account.
 
-      <td>
-        No additional requirements; your applications, hosts, and key transactions automatically appear after you sign in.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Users with New Relic partner accounts
-      </td>
-
-      <td>
-        Depending on the partner, you may need to complete a different [authentication process](/docs/ios/ios-with-partners).
-
-        <DNT>**Azure Store users:**</DNT> Due to the deep integration between Azure Storefront and New Relic, Azure Storefront users cannot access their accounts on the New Relic Android or iOS apps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Users with SAML-SSO enabled accounts
-      </td>
-
-      <td>
-        When you sign in to the New Relic mobile app, your session automatically redirects to your web browser. From there you can sign in to your New Relic SAML-SSO account.
-
-        If you see any errors when using SAML-SSO accounts on your mobile device, verify that you are able to sign in to <DNT>**[one.newrelic.com](https://one.newrelic.com/all-capabilities)**</DNT> with a desktop web browser.
+        If you see any errors when using SAML-SSO accounts on your mobile device, verify that you are able to sign in to **[one.newrelic.com](https://one.newrelic.com/all-capabilities)** with a desktop web browser.
 
         * If no, contact your administrator.
-        * If yes, get support at [support.newrelic.com](https://support.newrelic.com).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * If yes, get support at [support.newrelic.com](https://support.newrelic.com). |
+
 
 ## User settings [#iphone-settings]
 

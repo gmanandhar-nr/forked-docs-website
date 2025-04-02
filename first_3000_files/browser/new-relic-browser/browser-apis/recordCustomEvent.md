@@ -54,49 +54,21 @@ This API call sends a custom browser event with your user-defined eventType and 
 
 ## Parameters [#parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$eventType`
 
-  <tbody>
-    <tr>
-      <td>
-        `$eventType`
+        _string_ | Required. The eventType to store the event data under
 
-        _string_
-      </td>
+        Avoid using [reserved NRQL words](/docs/insights/event-data-sources/custom-events/data-requirements-limits-custom-event-data/#reserved-words) or pre-existing eventTypes when you name the attribute or value. |
+| `$attributes`
 
-      <td>
-        Required. The eventType to store the event data under
+        _JSON object_ | Optional. JSON object with one or more key/value pairs. For example: `{key:"value"}`. The key is reported as its own `PageAction` attribute with the specified values.
 
-        Avoid using [reserved NRQL words](/docs/insights/event-data-sources/custom-events/data-requirements-limits-custom-event-data/#reserved-words) or pre-existing eventTypes when you name the attribute or value.
-      </td>
-    </tr>
+        Avoid using [reserved NRQL words](/docs/insights/event-data-sources/custom-events/data-requirements-limits-custom-event-data/#reserved-words) when you name the attribute/value. |
 
-    <tr>
-      <td>
-        `$attributes`
-
-        _JSON object_
-      </td>
-
-      <td>
-        Optional. JSON object with one or more key/value pairs. For example: `{key:"value"}`. The key is reported as its own `PageAction` attribute with the specified values.
-
-        Avoid using [reserved NRQL words](/docs/insights/event-data-sources/custom-events/data-requirements-limits-custom-event-data/#reserved-words) when you name the attribute/value.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Important considerations and best practices include:
 

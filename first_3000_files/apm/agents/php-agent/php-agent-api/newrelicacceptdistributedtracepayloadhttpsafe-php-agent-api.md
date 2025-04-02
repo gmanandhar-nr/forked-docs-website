@@ -48,41 +48,16 @@ Requires PHP agent [version 8.4 or higher](/docs/release-notes/agent-release-not
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$httpsafe_payload`
 
-  <tbody>
-    <tr>
-      <td>
-        `$httpsafe_payload`
+        _string_ | Required. An HTTPSafe (Base64 encoded) JSON string representation of the payload. |
+| `$transport_type`
 
-        _string_
-      </td>
-
-      <td>
-        Required. An HTTPSafe (Base64 encoded) JSON string representation of the payload.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$transport_type`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. A string overriding the default transport type.
+        _string_ | Optional. A string overriding the default transport type.
 
         Default values:
 
@@ -106,11 +81,8 @@ Requires PHP agent [version 8.4 or higher](/docs/release-notes/agent-release-not
 
         * `Other`
 
-        * `Queue`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `Queue` |
+
 
 ## Return values
 

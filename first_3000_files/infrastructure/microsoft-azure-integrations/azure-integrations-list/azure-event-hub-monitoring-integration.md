@@ -31,53 +31,13 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data is attached to the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Namespace | `AzureEventHubNamespaceSample` | `AzureEventHubNamespace` |
+| Cluster | `AzureEventHubClusterSample` | `AzureEventHubCluster` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Namespace
-      </td>
-
-      <td>
-        `AzureEventHubNamespaceSample`
-      </td>
-
-      <td>
-        `AzureEventHubNamespace`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Cluster
-      </td>
-
-      <td>
-        `AzureEventHubClusterSample`
-      </td>
-
-      <td>
-        `AzureEventHubCluster`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

@@ -42,33 +42,14 @@ Unique values like URLs, Page Titles, Hex Values, Session IDs, and uniquely iden
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$name`
 
-  <tbody>
-    <tr>
-      <td>
-        `$name`
+        _string_ | Required. Name of the transaction. |
 
-        _string_
-      </td>
-
-      <td>
-        Required. Name of the transaction.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

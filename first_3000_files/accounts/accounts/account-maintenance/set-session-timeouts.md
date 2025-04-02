@@ -39,85 +39,17 @@ Users and Restricted Users can view the time period for automatic timeout, but t
 
 The session configuration options provide an additional level of security to ensure that unattended browsers will automatically time out. Session values are automatically stored in the session [cookie](/docs/subscriptions/new-relic-cookies). Additional features include:
 
-<table>
-  <thead>
-    <tr>
-      <th width={225}>
-        <DNT>
-          **Feature**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Notes**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Feature** | **Notes** |
+| - | - |
+| Easy setup | Admins use the slide bar in the New Relic user interface to select predefined time periods. Default is two weeks. |
+| Separate options available by role | Admins can choose for Restricted User sessions to never time out even if they select a session timeout setting. This is useful, for example, when you use a Restricted User login for demos. |
+| Automatic inheritance for child accounts | By default, [child accounts](/docs/subscriptions/creating-sub-accounts) inherit the same session configuration as their parent account. |
+| Most restrictive by default | If users have multiple accounts, the most restrictive setting applies, regardless of which account the user currently is using. |
+| Integration with SAML SSO logout URL | If the account's [SAML SSO configuration](/docs/subscriptions/setting-up-sso) does not include a logout URL, New Relic includes a link from **Session configuration** for the Owner to set it up. If the Admin is not also the Owner, a message about the SAML SSO logout URL requirement appears. |
+| Additional re-authentication setting for SAML SSO | In addition to the session timeout option, Admins can select the time (15 minutes to 2 weeks, or never) for how often a SAML-authenticated browser session must be re-authenticated. |
 
-  <tbody>
-    <tr>
-      <td>
-        Easy setup
-      </td>
-
-      <td>
-        Admins use the slide bar in the New Relic user interface to select predefined time periods. Default is two weeks.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Separate options available by role
-      </td>
-
-      <td>
-        Admins can choose for Restricted User sessions to never time out even if they select a session timeout setting. This is useful, for example, when you use a Restricted User login for demos.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Automatic inheritance for child accounts
-      </td>
-
-      <td>
-        By default, [child accounts](/docs/subscriptions/creating-sub-accounts) inherit the same session configuration as their parent account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Most restrictive by default
-      </td>
-
-      <td>
-        If users have multiple accounts, the most restrictive setting applies, regardless of which account the user currently is using.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Integration with SAML SSO logout URL
-      </td>
-
-      <td>
-        If the account's [SAML SSO configuration](/docs/subscriptions/setting-up-sso) does not include a logout URL, New Relic includes a link from <DNT>**Session configuration**</DNT> for the Owner to set it up. If the Admin is not also the Owner, a message about the SAML SSO logout URL requirement appears.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Additional re-authentication setting for SAML SSO
-      </td>
-
-      <td>
-        In addition to the session timeout option, Admins can select the time (15 minutes to 2 weeks, or never) for how often a SAML-authenticated browser session must be re-authenticated.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Select the session timeout value [#procedures]
 

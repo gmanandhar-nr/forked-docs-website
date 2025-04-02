@@ -27,107 +27,18 @@ To configure these settings:
 1. Go to to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Mobile > (select a mobile app)**</DNT>.
 2. Under the **Settings** section, click on a page based on what you're trying to accomplish:
 
-<table>
-  <thead>
-    <tr>
-      <th width={350}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Select this**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **If you want to...** | **Select this** |
+| - | - |
+| Change the Caution and Critical alert conditions for HTTP status code error rates, network failure error rates, or response time | **Alert conditions** |
+| Turn on or turn off [alert notifications](/docs/mobile-monitoring/new-relic-mobile/get-started/mobile-monitoring-alert-information) | **Alert conditions** |
+| Change your mobile app's name | **Application** |
+| [Enable/disable server-side settings](#configure-server-side-settings) | **Application** |
+| View your mobile app's authentication token | **Application** or **Installation** |
+| [Block or allow hostnames, create rules for status codes, and create aliases for hostnames](/docs/mobile-monitoring/new-relic-mobile/maintenance/configure-network-request-settings) | **Network** |
+| Upgrade our Mobile SDK in your mobile app | **Upgrade** |
 
-  <tbody>
-    <tr>
-      <td>
-        Change the Caution and Critical alert conditions for HTTP status code error rates, network failure error rates, or response time
-      </td>
-
-      <td>
-        <DNT>
-          **Alert conditions**
-        </DNT>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Turn on or turn off [alert notifications](/docs/mobile-monitoring/new-relic-mobile/get-started/mobile-monitoring-alert-information)
-      </td>
-
-      <td>
-        <DNT>
-          **Alert conditions**
-        </DNT>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Change your mobile app's name
-      </td>
-
-      <td>
-        <DNT>
-          **Application**
-        </DNT>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Enable/disable server-side settings](#configure-server-side-settings)
-      </td>
-
-      <td>
-        <DNT>
-          **Application**
-        </DNT>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View your mobile app's authentication token
-      </td>
-
-      <td>
-        <DNT>**Application**</DNT> or <DNT>**Installation**</DNT>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Block or allow hostnames, create rules for status codes, and create aliases for hostnames](/docs/mobile-monitoring/new-relic-mobile/maintenance/configure-network-request-settings)
-      </td>
-
-      <td>
-        <DNT>
-          **Network**
-        </DNT>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Upgrade our Mobile SDK in your mobile app
-      </td>
-
-      <td>
-        <DNT>
-          **Upgrade**
-        </DNT>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View your application token [#application-token]
 

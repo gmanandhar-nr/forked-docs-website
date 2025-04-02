@@ -517,81 +517,15 @@ Read more about each of our specific notification integrations.
 
       You can integrate ServiceNow with New Relic by either using the ServiceNow application destination or using the webhook destination. Please refer to this [installation guide](https://store.servicenow.com/appStoreAttachments.do?sys_id=46dce4241bf9c2503ee8a8ea234bcb79)for more details, tips, and best practices.
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Destination type
-          </th>
+    # Table
 
-          <th>
-            ServiceNow Application destination
-          </th>
+| Destination type | ServiceNow Application destination | Webhook destination |
+| - | - | - |
+| Payload | Controlled by New Relic.  No [notification template](/docs/alerts/get-notified/message-templates).  Limited modification of SNOW attributes via tags. | Payload directly editable in the [notification template](/docs/alerts/get-notified/message-templates). |
+| Ability to update New Relic from ServiceNow | Included. A New Relic connection is automatically created when the destination is created. | Included. You need to create the New Relic connection manually. |
+| Routing policies | Included | Included |
+| Ability to update the target fields directly | Yes, using the tags on entities along with the default New Relic Flow designer. | Yes, using the tags on entities and specifying in the webhook payload along with the default New Relic Flow designer. |
 
-          <th>
-            Webhook destination
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Payload
-          </td>
-
-          <td>
-            Controlled by New Relic.  No [notification template](/docs/alerts/get-notified/message-templates).  Limited modification of SNOW attributes via tags.
-          </td>
-
-          <td>
-            Payload directly editable in the [notification template](/docs/alerts/get-notified/message-templates).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Ability to update New Relic from ServiceNow
-          </td>
-
-          <td>
-            Included. A New Relic connection is automatically created when the destination is created.
-          </td>
-
-          <td>
-            Included. You need to create the New Relic connection manually.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Routing policies
-          </td>
-
-          <td>
-            Included
-          </td>
-
-          <td>
-            Included
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Ability to update the target fields directly
-          </td>
-
-          <td>
-            Yes, using the tags on entities along with the default New Relic Flow designer.
-          </td>
-
-          <td>
-            Yes, using the tags on entities and specifying in the webhook payload along with the default New Relic Flow designer.
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     ### Set up the ServiceNow application destination [#servicenow-destination]
 

@@ -31,81 +31,17 @@ Before you install the Java agent, ensure your system meets these requirements:
   >
     The Java agent is compatible with any JVM-based language, including: Java, Scala, Kotlin, and Clojure. For instrumentation support for language-specific features, see the [Automatically instrumented frameworks and libraries](#auto-instrumented) section below.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Java version
-          </th>
+    # Table
 
-          <th style={{ width: "300px" }}>
-            Compatible Java agent versions
-          </th>
-        </tr>
-      </thead>
+| Java version | Compatible Java agent versions |
+| - | - |
+| Java 7 | v3.0.0 to v6.5.0, v6.5.2, v6.5.3, and v6.5.4 |
+| Java 8 | v3.10.0 to current |
+| Java 11 | v4.7.0 to current |
+| Java 17 | v7.4.0 to current |
+| Java 21 | v8.7.0 to current |
+| Java 23 | v8.15.0 to current |
 
-      <tbody>
-        <tr>
-          <td>
-            Java 7
-          </td>
-
-          <td>
-            v3.0.0 to v6.5.0, v6.5.2, v6.5.3, and v6.5.4
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Java 8
-          </td>
-
-          <td>
-            v3.10.0 to current
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Java 11
-          </td>
-
-          <td>
-            v4.7.0 to current
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Java 17
-          </td>
-
-          <td>
-            v7.4.0 to current
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Java 21
-          </td>
-
-          <td>
-            v8.7.0 to current
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Java 23
-          </td>
-
-          <td>
-            v8.15.0 to current
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     Some Java agent versions in this table are no longer supported, but are still listed for reference. The list of supported Java agent versions is in [Java agent EOL policy](/docs/apm/agents/java-agent/getting-started/java-agent-eol-policy/).
   </Collapser>

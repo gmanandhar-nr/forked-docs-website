@@ -22,128 +22,49 @@ Many global nonprofit, charity and NGO organizations are eligible for Observabil
 
 Examples of ineligible organizations include, but are not limited to:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Ineligible nonprofits**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Higher education institutions
-      </td>
-
-      <td>
-        Private nonprofit and public higher education institutions do not qualify. This includes:
+| **Ineligible nonprofits** | **Comments** |
+| - | - |
+| Higher education institutions | Private nonprofit and public higher education institutions do not qualify. This includes:
 
         * Universities
         * Colleges
-        * Trade schools
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Primary and secondary schools (public and private)
-      </td>
-
-      <td>
-        Primary and secondary schools do not qualify. This includes, but is not limited to:
+        * Trade schools |
+| Primary and secondary schools (public and private) | Primary and secondary schools do not qualify. This includes, but is not limited to:
 
         * K-12 public school districts
         * Individual K-12 public schools within a state or federally funded school district
         * Standalone K-12 charter schools
         * K-12 Knowledge is Power Program (KiPP) schools
-        * Other K-12 schools that are not part of a state or federally funded school district
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Healthcare organizations providing patient care
-      </td>
-
-      <td>
-        This includes hospitals, hospital auxiliaries, healthcare systems, and related health services organizations, such as:
+        * Other K-12 schools that are not part of a state or federally funded school district |
+| Healthcare organizations providing patient care | This includes hospitals, hospital auxiliaries, healthcare systems, and related health services organizations, such as:
 
         * Nursing or convalescent homes
         * Care and housing for the aged
         * Pregnancy centers
 
-          <Callout variant="tip">
-            Free clinics may qualify.
-          </Callout>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Professional, commerce, mutual, and trade organizations
-      </td>
-
-      <td>
-        This includes organizations such as:
+          
+            Free clinics may qualify. |
+| Professional, commerce, mutual, and trade organizations | This includes organizations such as:
 
         * Credit Unions
         * Regulation of business
         * Industry trade shows
         * Professional athletic leagues
-        * Tourist bureaus
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Employee or membership benefit organizations
-      </td>
-
-      <td>
-        This includes organizations such as:
+        * Tourist bureaus |
+| Employee or membership benefit organizations | This includes organizations such as:
 
         * Fraternal Beneficiary societies
         * Associations of employees
         * Employee or member welfare associations
         * Pension and retirement benefits
 
-          <Callout variant="tip">
-            Organizations focusing on the improvement of working conditions may qualify.
-          </Callout>
-      </td>
-    </tr>
+          
+            Organizations focusing on the improvement of working conditions may qualify. |
+| Legislative or political organizations and advocacy groups | Organizations focused on nonpartisan voter education may qualify. |
+| Organizations within countries sanctioned by the US | This includes organizations within any sanctioned countries included on the US Department of Treasury's Office of Foreign Assets [control list](https://www.treasury.gov/resource-center/sanctions/Programs/Pages/Programs.aspx) , which is updated periodically. |
 
-    <tr>
-      <td>
-        Legislative or political organizations and advocacy groups
-      </td>
-
-      <td>
-        Organizations focused on nonpartisan voter education may qualify.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Organizations within countries sanctioned by the US
-      </td>
-
-      <td>
-        This includes organizations within any sanctioned countries included on the US Department of Treasury's Office of Foreign Assets [control list](https://www.treasury.gov/resource-center/sanctions/Programs/Pages/Programs.aspx) , which is updated periodically.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Additional requirements [#requirements]
 

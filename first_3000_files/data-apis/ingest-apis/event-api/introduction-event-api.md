@@ -142,85 +142,21 @@ The Event API accepts specific formats for attributes included in the payload. O
   >
     When defining attributes for your custom events, follow these JSON format guidelines.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Attributes
-          </th>
+    # Table
 
-          <th>
-            JSON format guidelines
-          </th>
-        </tr>
-      </thead>
+| Attributes | JSON format guidelines |
+| - | - |
+| `eventType` | **Required:** The event's name. |
+| Float and string values | Float value format: `"label":value`
 
-      <tbody>
-        <tr>
-          <td>
-            `eventType`
-          </td>
+            String value format: `"label":"value"` |
+| Data types | The API only accepts key-value pairs, not map/object or array values. Supported data types for this API are strings and numbers (integers or floats). For more information, see [Data requirements](/docs/insights/insights-data-sources/custom-data/insights-custom-data-requirements-limits). |
+| Digits in strings | For performance-related reasons, we do not cast values submitted to the API. For example, we treat `123` as a number and `"123"` as a string.
 
-          <td>
-            <DNT>**Required:**</DNT> The event's name.
-          </td>
-        </tr>
+            The database will only store up to 64 bit numbers. Any numbers larger than 64 bits will be truncated. |
+| Dates | For attributes that contain date information, use an unformatted Unix timestamp in the [data formatter](/docs/insights/use-insights-ui/manage-account-data/data-formatter-set-default-formats-numeric-values). You can [define the date attribute](#timestamp) either in seconds or in milliseconds, both relative to the Unix epoch. |
+| Time | Unless otherwise specified, the timestamp for a submitted event is the time it was submitted to New Relic. To specify a different time for the event, use the [`timestamp` attribute](#timestamp). |
 
-        <tr>
-          <td>
-            Float and string values
-          </td>
-
-          <td>
-            Float value format: `"label":value`
-
-            String value format: `"label":"value"`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Data types
-          </td>
-
-          <td>
-            The API only accepts key-value pairs, not map/object or array values. Supported data types for this API are strings and numbers (integers or floats). For more information, see [Data requirements](/docs/insights/insights-data-sources/custom-data/insights-custom-data-requirements-limits).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Digits in strings
-          </td>
-
-          <td>
-            For performance-related reasons, we do not cast values submitted to the API. For example, we treat `123` as a number and `"123"` as a string.
-
-            The database will only store up to 64 bit numbers. Any numbers larger than 64 bits will be truncated.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Dates
-          </td>
-
-          <td>
-            For attributes that contain date information, use an unformatted Unix timestamp in the [data formatter](/docs/insights/use-insights-ui/manage-account-data/data-formatter-set-default-formats-numeric-values). You can [define the date attribute](#timestamp) either in seconds or in milliseconds, both relative to the Unix epoch.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Time
-          </td>
-
-          <td>
-            Unless otherwise specified, the timestamp for a submitted event is the time it was submitted to New Relic. To specify a different time for the event, use the [`timestamp` attribute](#timestamp).
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

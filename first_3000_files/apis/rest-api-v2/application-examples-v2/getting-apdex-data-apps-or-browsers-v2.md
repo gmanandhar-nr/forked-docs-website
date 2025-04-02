@@ -22,97 +22,23 @@ When acquiring data, the values returned may be affected by the time period you 
 
 To specify Apdex metric names and values with REST API calls, use these codes as needed.
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **Metric name**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Metric value**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Metric name** | **Metric value** |
+| - | - |
+| `Apdex` |
+| `score`: Application's Apdex score |
+| `s`: Application's satisfied count |
+| `t`: Application's tolerating count |
+| `f`: Application's frustrated count |
+| `count`: Application's request count |
+| `EndUserApdex` |
+| `score`: Browser's Apdex score |
+| `s`: Browser's satisfied count |
+| `t`: Browser's tolerating count |
+| `f`: Browser's frustrated count |
+| `count`: Browser's request count |
 
-  <tbody>
-    <tr>
-      <td rowSpan={6}>
-        `Apdex`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `score`: Application's Apdex score
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `s`: Application's satisfied count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `t`: Application's tolerating count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `f`: Application's frustrated count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `count`: Application's request count
-      </td>
-    </tr>
-
-    <tr>
-      <td rowSpan={6}>
-        `EndUserApdex`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `score`: Browser's Apdex score
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `s`: Browser's satisfied count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `t`: Browser's tolerating count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `f`: Browser's frustrated count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `count`: Browser's request count
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The calculation used to determine the `score` is explained in [Apdex: Measuring user satisfaction](/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction). The following sections describe how to obtain the `score` and the [s, t, and f values](#apdex-all) used to arrive at it.
 

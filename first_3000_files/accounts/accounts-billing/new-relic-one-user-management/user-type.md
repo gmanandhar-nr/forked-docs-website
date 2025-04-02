@@ -39,44 +39,16 @@ If you're tasked with [adding New Relic users](/docs/accounts/accounts-billing/n
 
 Here's a brief summary of what each user type gets access to:
 
-<table>
-  <thead>
-    <tr>
-      <th className="fcenter">
-        Basic user
-      </th>
+# Table
 
-      <th className="fcenter">
-        Core user
-      </th>
+| Basic user | Core user | Full platform user |
+| - | - | - |
+| Basic users are free. Basic users can set up our observability tools, run queries on your data, use custom  (quickstart dashboards up to 7 days), use some basic alerting features, and more. Basic users **can't** use our curated experiences (for example, our  UI,  UI, or mobile UI).
 
-      <th className="fcenter">
-        Full platform user
-      </th>
-    </tr>
-  </thead>
+        Although free, they can drive billing for usage-based features including the Advanced Compute add-on. | Core users can access more features than basic users but less than full platform users. They have access to some powerful developer-centric features like New Relic CodeStream, errors inbox, and our log management UI.
 
-  <tbody>
-    <tr>
-      <td>
-        Basic users are free. Basic users can set up our observability tools, run queries on your data, use custom <InlinePopover type="dashboards"/> (quickstart dashboards up to 7 days), use some basic alerting features, and more. Basic users **can't** use our curated experiences (for example, our <InlinePopover type="apm"/> UI, <InlinePopover type="browser"/> UI, or mobile UI).
+        If you have Advanced Compute enabled, New Relic CodeStream use is also billed based on CCUs. | Full platform users can access everything, including our more curated observability UI experiences, such as APM, infrastructure monitoring, browser monitoring, , synthetic monitors, and more. |
 
-        Although free, they can drive billing for usage-based features including the Advanced Compute add-on. 
-
-      </td>
-
-      <td>
-        Core users can access more features than basic users but less than full platform users. They have access to some powerful developer-centric features like New Relic CodeStream, errors inbox, and our log management UI.
-
-        If you have Advanced Compute enabled, New Relic CodeStream use is also billed based on CCUs.
-      </td>
-
-      <td>
-        Full platform users can access everything, including our more curated observability UI experiences, such as APM, infrastructure monitoring, browser monitoring, <InlinePopover type="mobile"/>, synthetic monitors, and more.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For a more detailed comparison, see the [User type access comparison table](#user-type-comparison-table).
 

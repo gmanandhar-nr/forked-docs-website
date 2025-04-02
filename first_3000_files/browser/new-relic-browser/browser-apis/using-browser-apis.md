@@ -21,111 +21,20 @@ Below are use cases for each browser API method.
 
 To monitor traces and events, use these methods:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "350px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Use this API
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Use this API |
+| - | - |
+| Track an action that New Relic doesn't automatically track | [`newrelic.addPageAction()`](/docs/browser/new-relic-browser/browser-apis/addpageaction) |
+| Add an object to an in-progress [session trace](/docs/browser/new-relic-browser/browser-pro-features/session-traces-exploring-webpages-life-cycle) | [`newrelic.addToTrace()`](/docs/browser/new-relic-browser/browser-apis/addtotrace) |
+| Record a time point when your page is finished according to custom criteria | [`newrelic.finished()`](/docs/browser/new-relic-browser/browser-apis/finished) |
+| Add an attribute name and value to subsequent events on the page | [`newrelic.setCustomAttribute()`](/docs/browser/new-relic-browser/browser-apis/setcustomattribute) |
+| Add application version information to subsequent events on the page | [`newrelic.setApplicationVersion()`](/docs/browser/new-relic-browser/browser-apis/setApplicationVersion) |
+| Group page views by setting a page name | [`newrelic.setPageViewName()`](/docs/browser/new-relic-browser/browser-apis/setpageviewname) |
+| Add user id information to subsequent events on the page | [`newrelic.setUserId()`](/docs/browser/new-relic-browser/browser-apis/setuserid) |
+| Capture a single browser log event | [`newrelic.log()`](/docs/browser/new-relic-browser/browser-apis/log) |
+| Automatically capture messages passing through your existing logger methods as log events | [`newrelic.wrapLogger()`](/docs/browser/new-relic-browser/browser-apis/wrapLogger) |
 
-  <tbody>
-    <tr>
-      <td>
-        Track an action that New Relic doesn't automatically track
-      </td>
-
-      <td>
-        [`newrelic.addPageAction()`](/docs/browser/new-relic-browser/browser-apis/addpageaction)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Add an object to an in-progress [session trace](/docs/browser/new-relic-browser/browser-pro-features/session-traces-exploring-webpages-life-cycle)
-      </td>
-
-      <td>
-        [`newrelic.addToTrace()`](/docs/browser/new-relic-browser/browser-apis/addtotrace)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Record a time point when your page is finished according to custom criteria
-      </td>
-
-      <td>
-        [`newrelic.finished()`](/docs/browser/new-relic-browser/browser-apis/finished)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Add an attribute name and value to subsequent events on the page
-      </td>
-
-      <td>
-        [`newrelic.setCustomAttribute()`](/docs/browser/new-relic-browser/browser-apis/setcustomattribute)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Add application version information to subsequent events on the page
-      </td>
-
-      <td>
-        [`newrelic.setApplicationVersion()`](/docs/browser/new-relic-browser/browser-apis/setApplicationVersion)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Group page views by setting a page name
-      </td>
-
-      <td>
-        [`newrelic.setPageViewName()`](/docs/browser/new-relic-browser/browser-apis/setpageviewname)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Add user id information to subsequent events on the page
-      </td>
-
-      <td>
-        [`newrelic.setUserId()`](/docs/browser/new-relic-browser/browser-apis/setuserid)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Capture a single browser log event
-      </td>
-
-      <td>
-        [`newrelic.log()`](/docs/browser/new-relic-browser/browser-apis/log)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Automatically capture messages passing through your existing logger methods as log events
-      </td>
-
-      <td>
-        [`newrelic.wrapLogger()`](/docs/browser/new-relic-browser/browser-apis/wrapLogger)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Report errors [#api-errors]
 

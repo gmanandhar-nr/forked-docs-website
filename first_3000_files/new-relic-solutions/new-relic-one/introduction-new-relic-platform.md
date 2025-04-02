@@ -252,71 +252,13 @@ For an introduction to getting around the New Relic platform, see [Get to know N
 
 Here are some query and chart features available across all or most of the platform:
 
-<table>
-  <thead>
-    <tr>
-      <th width={250}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Do this...
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Do this... |
+| - | - |
+| Start querying your data | Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Query builder** to query your data, or to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Metrics & events** to explore the data. |
+| View a chart's query | For most charts, you can [view the NRQL query](/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language#what-is-nrql) used to generate that chart. This can help you understand a chart better or use it as the basis for a new query. |
 
-  <tbody>
-    <tr>
-      <td>
-        Start querying your data
-      </td>
-
-      <td>
-        Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Query builder**</DNT> to query your data, or to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Metrics & events**</DNT> to explore the data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View a chart's query
-      </td>
-
-      <td>
-        For most charts, you can [view the NRQL query](/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language#what-is-nrql) used to generate that chart. This can help you understand a chart better or use it as the basis for a new query.
-      </td>
-    </tr>
-
-    <tr id="select-time">
-      <td>
-        Choose time range
-      </td>
-
-      <td>
-        Drag across a section of a chart to zoom in on that time range. Or, if you want to select a pre-set time range or use a custom one, use the time picker in the top right corner of the UI.
-      </td>
-    </tr>
-
-    <tr id="chart-details">
-      <td>
-        View chart details
-      </td>
-
-      <td>
-        Mouse over a chart to see a pop-up with more detail. For some charts, selecting a point on the chart will take you to a UI page with more information about that metric.
-      </td>
-    </tr>
-
-    <tr id="turn-chart-elements-off-on">
-      <td>
-        Hide or return chart elements
-      </td>
-
-      <td>
-        To hide or unhide a displayed chart element, select that element's name below the chart. The chart display will adjust to reflect the absence or presence of that element.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Share New Relic charts and views with team members [#share]
 

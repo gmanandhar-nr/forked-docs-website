@@ -30,91 +30,18 @@ New Relic .NET extension buildpack for VMware Tanzu requires the following:
 
 The following table provides version and version-support information about New Relic .NET extension buildpack for VMware Tanzu.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Element
-      </th>
+# Table
 
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
+| Element | Details |
+| - | - |
+| Tile version | 1.1.13 |
+| Release date | January 25, 2024 |
+| Software component version | New Relic .NET extension buildpack 1.1.13 |
+| Compatible Ops Manager version(s) | 2.9.x, 2.10.x, and 3.0.x |
+| Compatible VMware Tanzu Application Service for VMs versions | 2.10.x, 2.11.x, 2.12.x, 2.13.x, 3.0.x, 4.0.x and 5.0.x |
+| BOSH stemcell version | Ubuntu Jammy |
+| IaaS support | AWS, GCP, Azure, and vSphere |
 
-  <tbody>
-    <tr>
-      <td>
-        Tile version
-      </td>
-
-      <td>
-        1.1.13
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Release date
-      </td>
-
-      <td>
-        January 25, 2024
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Software component version
-      </td>
-
-      <td>
-        New Relic .NET extension buildpack 1.1.13
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Compatible Ops Manager version(s)
-      </td>
-
-      <td>
-        2.9.x, 2.10.x, and 3.0.x
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Compatible VMware Tanzu Application Service for VMs versions
-      </td>
-
-      <td>
-        2.10.x, 2.11.x, 2.12.x, 2.13.x, 3.0.x, 4.0.x and 5.0.x
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        BOSH stemcell version
-      </td>
-
-      <td>
-        Ubuntu Jammy
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        IaaS support
-      </td>
-
-      <td>
-        AWS, GCP, Azure, and vSphere
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Installation  [#install]
 

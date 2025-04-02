@@ -9,81 +9,17 @@ freshnessValidatedDate: 2024-04-29
 
 This page includes a list of the common commands you have to start with the New Relic One CLI. You can click any command to see its usage options and additional details about the command.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Command
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Command | Description |
+| - | - |
+| [`nr1 autocomplete`](#nr1-autocomplete) | Displays autocomplete installation instructions. |
+| [`nr1 create`](#nr1-create) | Creates a new component from a template: Nerdpack, Nerdlet, launcher, or catalog. |
+| [`nr1 help`](#nr1-help) | Shows all `nr1` commands or details about each command. |
+| [`nr1 nrql`](#nr1-nrql) | Fetches data using [NRQL](/docs/nrql/get-started/introduction-nrql-new-relics-query-language/). |
+| [`nr1 profiles`](#nr1-profiles) | Manages the profiles you use to run CLI commands. |
+| [`nr1 update`](#nr1-update) | Updates to the latest version of the CLI. |
 
-  <tbody>
-    <tr>
-      <td>
-        [`nr1 autocomplete`](#nr1-autocomplete)
-      </td>
-
-      <td>
-        Displays autocomplete installation instructions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 create`](#nr1-create)
-      </td>
-
-      <td>
-        Creates a new component from a template: Nerdpack, Nerdlet, launcher, or catalog.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 help`](#nr1-help)
-      </td>
-
-      <td>
-        Shows all `nr1` commands or details about each command.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nrql`](#nr1-nrql)
-      </td>
-
-      <td>
-        Fetches data using [NRQL](/docs/nrql/get-started/introduction-nrql-new-relics-query-language/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 profiles`](#nr1-profiles)
-      </td>
-
-      <td>
-        Manages the profiles you use to run CLI commands.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 update`](#nr1-update)
-      </td>
-
-      <td>
-        Updates to the latest version of the CLI.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## nr1 autocomplete [#nr1-autocomplete]
 

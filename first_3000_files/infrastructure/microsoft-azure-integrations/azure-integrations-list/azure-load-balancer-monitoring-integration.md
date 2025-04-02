@@ -54,51 +54,14 @@ You can [query and explore your data](/docs/using-new-relic/data/understand-data
 
 To view metrics reported by the Azure Load Balancer integration, query the `AzureLoadBalancerSample` event type. Use the metadata associated with each metric to [filter and facet](/docs/infrastructure/integrations-getting-started/getting-started/understand-integration-data-data-types#metric) the data being reported. For detailed metric information, see the [Azure supported metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftnetworkloadbalancers) documentation.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Metric | Description | Metadata |
+| - | - | - |
+| `vipAvailability` | Average Load Balancer data path availability per time duration. | `frontendIPAddress`
 
-      <th>
-        Metadata
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `vipAvailability`
-      </td>
-
-      <td>
-        Average Load Balancer data path availability per time duration.
-      </td>
-
-      <td>
-        `frontendIPAddress`
-
-        `frontendPort`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dipAvailability`
-      </td>
-
-      <td>
-        Average Load Balancer health probe status per time duration.
-      </td>
-
-      <td>
-        `frontendIPAddress`
+        `frontendPort` |
+| `dipAvailability` | Average Load Balancer health probe status per time duration. | `frontendIPAddress`
 
         `frontendPort`
 
@@ -106,116 +69,35 @@ To view metrics reported by the Azure Load Balancer integration, query the `Azur
 
         `backendPort`
 
-        `protocolType`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `byteCount`
-      </td>
-
-      <td>
-        Total number of Bytes transmitted within time period.
-      </td>
-
-      <td>
-        `frontendIPAddress`
+        `protocolType` |
+| `byteCount` | Total number of Bytes transmitted within time period. | `frontendIPAddress`
 
         `frontendPort`
 
-        `direction`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `packetCount`
-      </td>
-
-      <td>
-        Total number of Packets transmitted within time period.
-      </td>
-
-      <td>
-        `frontendIPAddress`
+        `direction` |
+| `packetCount` | Total number of Packets transmitted within time period. | `frontendIPAddress`
 
         `frontendPort`
 
-        `direction`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `synCount`
-      </td>
-
-      <td>
-        Total number of SYN Packets transmitted within time period.
-      </td>
-
-      <td>
-        `frontendIPAddress`
+        `direction` |
+| `synCount` | Total number of SYN Packets transmitted within time period. | `frontendIPAddress`
 
         `frontendPort`
 
-        `direction`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `snatConnectionCount`
-      </td>
-
-      <td>
-        Total number of new SNAT connections, that is, outbound connections created within time period.
-      </td>
-
-      <td>
-        `frontendIPAddress`
+        `direction` |
+| `snatConnectionCount` | Total number of new SNAT connections, that is, outbound connections created within time period. | `frontendIPAddress`
 
         `backendIPAddress`
 
-        `connectionState`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `allocatedSnatPorts`
-      </td>
-
-      <td>
-        Total number of SNAT ports allocated within time period.
-      </td>
-
-      <td>
-        `frontendIPAddress`
+        `connectionState` |
+| `allocatedSnatPorts` | Total number of SNAT ports allocated within time period. | `frontendIPAddress`
 
         `backendIPAddress`
 
-        `protocolType`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `usedSnatPorts`
-      </td>
-
-      <td>
-        Total number of SNAT ports used within time period.
-      </td>
-
-      <td>
-        `frontendIPAddress`
+        `protocolType` |
+| `usedSnatPorts` | Total number of SNAT ports used within time period. | `frontendIPAddress`
 
         `backendIPAddress`
 
-        `protocolType`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        `protocolType` |
+

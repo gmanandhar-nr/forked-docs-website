@@ -16,63 +16,17 @@ Extensive log data can help you troubleshoot issues. But what if an attribute in
 
 For lengthy string values that are longer than can be stored in NRDB (4,094 characters), we store the long string in three pieces:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Long log sections
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Long log sections | Description |
+| - | - |
+| First 4,094 characters | The first 4,094 characters are stored in a `Log` event field with the same name. So a long `message` value would have its first 4,094 characters stored in a `message` field. |
+| Next 128,000 UTF-8 bytes | The next 128,000 UTF-8 bytes of the string are stored in a `blob` field with the name with `newrelic.ext.` prepended. So a long `message` value would have characters past the first 4,094 characters stored in a `newrelic.ext.message` field as a `blob`.
 
-  <tbody>
-    <tr>
-      <td>
-        First 4,094 characters
-      </td>
+        The actual number of characters stored depends on the UTF-8 representation of the characters. UTF-8 represents Unicode characters as one to four bytes, so we will store anywhere between 32,000 and 128,000 characters past the first 4,094 characters. |
+| Remaining characters | Any characters past 4,094 characters plus 128,000 bytes are dropped and not stored. |
+| Query results | Blob queries have a limit of 20 results. When using `blob()` ensure that your query returns a maximum of 20 results. |
 
-      <td>
-        The first 4,094 characters are stored in a `Log` event field with the same name. So a long `message` value would have its first 4,094 characters stored in a `message` field.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Next 128,000 UTF-8 bytes
-      </td>
-
-      <td>
-        The next 128,000 UTF-8 bytes of the string are stored in a `blob` field with the name with `newrelic.ext.` prepended. So a long `message` value would have characters past the first 4,094 characters stored in a `newrelic.ext.message` field as a `blob`.
-
-        The actual number of characters stored depends on the UTF-8 representation of the characters. UTF-8 represents Unicode characters as one to four bytes, so we will store anywhere between 32,000 and 128,000 characters past the first 4,094 characters.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Remaining characters
-      </td>
-
-      <td>
-        Any characters past 4,094 characters plus 128,000 bytes are dropped and not stored.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Query results
-      </td>
-
-      <td>
-        Blob queries have a limit of 20 results. When using `blob()` ensure that your query returns a maximum of 20 results.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 So the long `message` field would be stored as:
 

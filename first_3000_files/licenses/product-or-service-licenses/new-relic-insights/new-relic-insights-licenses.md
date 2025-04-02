@@ -13,28 +13,9 @@ New Relic Insights is a largely deprecated product, although it is still a produ
 
 We love open-source software, and use the following in New Relic Insights. Thank you, open-source community, for making these fine tools! Some of these are listed under multiple software licenses, and in that case we have listed the license we've chosen to use.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        **Product**
-      </th>
+# Table
 
-      <th>
-        **Licenses**
-      </th>
-    </tr>
-  </thead>
+| **Product** | **Licenses** |
+| - | - |
+| New Relic Insights | See [insights.newrelic.com/licenses](https://insights.newrelic.com/licenses "Link opens in a new window") |
 
-  <tbody>
-    <tr>
-      <td>
-        New Relic Insights
-      </td>
-
-      <td>
-        See [insights.newrelic.com/licenses](https://insights.newrelic.com/licenses "Link opens in a new window")
-      </td>
-    </tr>
-  </tbody>
-</table>

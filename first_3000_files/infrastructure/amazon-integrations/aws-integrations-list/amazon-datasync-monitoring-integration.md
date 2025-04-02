@@ -34,195 +34,23 @@ This New Relic infrastructure integration collects the following Amazon DataSync
 
 ### DataSync Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `BytesCompressed` | Bytes | The physical number of bytes transferred over the network after compression was applied. |
+| `BytesPreparedDestination` | Bytes | The total number of bytes of data that are prepared at the destination location. |
+| `BytesPreparedSource` | Bytes | The total number of bytes of data that are prepared at the source location. |
+| `BytesTransferred` | Bytes | The total number of bytes that are involved in the transfer. |
+| `BytesVerifiedDestination` | Bytes | The total number of bytes of data that are verified at the destination location. |
+| `BytesVerifiedSource` | Bytes | The total number of bytes of data that are verified at the source location. |
+| `BytesWritten` | Bytes | The total logical size of all files that have been transferred to the destination location. |
+| `FilesPreparedDestination` | Bytes | The total number of files that are prepared at the destination location. |
+| `FilesPreparedSource` | Bytes | The total number of files that are prepared at the source location. |
+| `FilesTransferred` | Bytes | The actual number of files or metadata that were transferred over the network. |
+| `FilesVerifiedDestination` | Bytes | The total number of files that are verified at the destination location. |
+| `FilesVerifiedSource` | Bytes | The total number of files that are verified at the source location. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `BytesCompressed`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The physical number of bytes transferred over the network after compression was applied.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesPreparedDestination`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total number of bytes of data that are prepared at the destination location.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesPreparedSource`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total number of bytes of data that are prepared at the source location.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesTransferred`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total number of bytes that are involved in the transfer.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesVerifiedDestination`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total number of bytes of data that are verified at the destination location.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesVerifiedSource`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total number of bytes of data that are verified at the source location.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesWritten`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total logical size of all files that have been transferred to the destination location.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FilesPreparedDestination`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total number of files that are prepared at the destination location.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FilesPreparedSource`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total number of files that are prepared at the source location.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FilesTransferred`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The actual number of files or metadata that were transferred over the network.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FilesVerifiedDestination`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total number of files that are verified at the destination location.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FilesVerifiedSource`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The total number of files that are verified at the source location.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `TaskId`
 

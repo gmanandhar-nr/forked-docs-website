@@ -29,78 +29,14 @@ To view the <DNT>**Go runtime**</DNT> page, go to <DNT>**[one.newrelic.com > All
 
 This table describes the <DNT>**Go runtime**</DNT> page chart data.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Chart name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Chart name | Description |
+| - | - |
+| Goroutines | A count of the average number of goroutines running during a given time slice. |
+| GC pause time | Milliseconds spent in stop-the-world garbage collection. |
+| GC pause frequency | Calls per minute of stop-the-world garbage collection. |
+| GC pauses | The percentage of wall-clock time spent in stop-the-world garbage collection. |
+| CPU utilization | CPU utilization as a percentage of available CPU. |
+| Memory | Average memory used, in mebibytes, during a given time slice. |
 
-  <tbody>
-    <tr>
-      <td>
-        Goroutines
-      </td>
-
-      <td>
-        A count of the average number of goroutines running during a given time slice.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        GC pause time
-      </td>
-
-      <td>
-        Milliseconds spent in stop-the-world garbage collection.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        GC pause frequency
-      </td>
-
-      <td>
-        Calls per minute of stop-the-world garbage collection.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        GC pauses
-      </td>
-
-      <td>
-        The percentage of wall-clock time spent in stop-the-world garbage collection.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        CPU utilization
-      </td>
-
-      <td>
-        CPU utilization as a percentage of available CPU.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Memory
-      </td>
-
-      <td>
-        Average memory used, in mebibytes, during a given time slice.
-      </td>
-    </tr>
-  </tbody>
-</table>

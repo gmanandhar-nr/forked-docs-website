@@ -220,51 +220,14 @@ Before the Azure Monitor integration, monitoring Azure required service-specific
 
 The following table shows the differences between both solutions:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Traditional Azure integrations
-      </th>
+# Table
 
-      <th>
-        New Azure Monitor integration
-      </th>
-    </tr>
-  </thead>
+| Traditional Azure integrations | New Azure Monitor integration |
+| - | - |
+| A separate integration with each Azure service is required to collect metrics and metadata. | Our single Azure Monitor integration is able to collect metrics and metadata from a large and ever-growing list of resources supported by Azure monitor. |
+| Adding support for new Azure services requires building and maintaining a new integration. | Data from new services supported by the Azure monitor is available in New Relic at once. |
+| Minimum metric polling interval: 5 min. | Minimum metric polling interval: 1 min. |
 
-  <tbody>
-    <tr>
-      <td>
-        A separate integration with each Azure service is required to collect metrics and metadata.
-      </td>
-
-      <td>
-        Our single Azure Monitor integration is able to collect metrics and metadata from a large and ever-growing list of resources supported by Azure monitor.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Adding support for new Azure services requires building and maintaining a new integration.
-      </td>
-
-      <td>
-        Data from new services supported by the Azure monitor is available in New Relic at once.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Minimum metric polling interval: 5 min.
-      </td>
-
-      <td>
-        Minimum metric polling interval: 1 min.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 When migrating from our traditional Azure integrations to the Azure Monitor integration, here are a couple things to keep in mind:
 

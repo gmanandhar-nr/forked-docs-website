@@ -84,45 +84,11 @@ The dashboards API supports typed and untyped widgets:
 
 Area supports multiple nrql queries.
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Widget data element
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Widget data element | Description |
+| - | - |
 
-  <tbody>
-    <tr id="area-account_id">
-      <td>
-        `accountId`
-
-        _Integer_
-      </td>
-
-      <td>
-        Source account to fetch data from.
-      </td>
-    </tr>
-
-    <tr id="area-presentation">
-      <td>
-        `query`
-
-        _String_
-      </td>
-
-      <td>
-        The [NRQL query](/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language) that provides the data for the widget.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <CollapserGroup>
   <Collapser

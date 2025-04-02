@@ -36,39 +36,12 @@ To find your integration data in the infrastructure UI, go to <DNT>**[one.newrel
 
 You can [query and explore your data](/docs/using-new-relic/data/understand-data/query-new-relic-data) using this [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Api | `AwsAppSyncApiSample` | `AwsAppSyncApi` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Api
-      </td>
-
-      <td>
-        `AwsAppSyncApiSample`
-      </td>
-
-      <td>
-        `AwsAppSyncApi`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [New Relic data types](/docs/telemetry-data-platform/understand-data/new-relic-data-types/).
 

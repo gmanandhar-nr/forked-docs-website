@@ -30,94 +30,38 @@ You can report custom [events](/docs/using-new-relic/data/understand-data/new-re
 
 When reporting custom events and attributes, follow these general requirements for supported data types, naming syntax, and size:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Requirement
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Requirement | Description |
+| - | - |
+| Payload | Total maximum size or length: **1MB (10^6 bytes) maximum per POST**. We highly recommend using compression.
 
-  <tbody>
-    <tr>
-      <td>
-        Payload
-      </td>
+        The payload must be encoded as **UTF-8**.
 
-      <td>
-        Total maximum size or length: <DNT>**1MB (10^6 bytes) maximum per POST**</DNT>. We highly recommend using compression.
-
-        The payload must be encoded as <DNT>**UTF-8**</DNT>.
-
-        The Event API has additional [HTTP rate limits](/docs/insights/insights-data-sources/custom-data/send-custom-events-event-api#post-limit).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Attribute data types
-      </td>
-
-      <td>
-        [Attribute](/docs/using-new-relic/welcome-new-relic/get-started/glossary#attribute) values can be either a string or a numeric integer or float. For information about formatting date and time data, see [Custom date/time](/docs/query-your-data/explore-query-data/use-charts/use-your-charts/#custom-date-time).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Attribute limits
-      </td>
-
-      <td>
-        Maximum length of attribute name: 255 characters.
+        The Event API has additional [HTTP rate limits](/docs/insights/insights-data-sources/custom-data/send-custom-events-event-api#post-limit). |
+| Attribute data types | [Attribute](/docs/using-new-relic/welcome-new-relic/get-started/glossary#attribute) values can be either a string or a numeric integer or float. For information about formatting date and time data, see [Custom date/time](/docs/query-your-data/explore-query-data/use-charts/use-your-charts/#custom-date-time). |
+| Attribute limits | Maximum length of attribute name: 255 characters.
 
         Maximum length of custom attribute values:
 
         * For events sent via [Event API](/docs/insights/insights-data-sources/custom-data/send-custom-events-event-api): 4096 characters
         * For events sent via agents: 255 characters
 
-          Maximum total attributes per event: 254. <DNT>**Exception:**</DNT> If you use an APM agent API, the max is 64.
+          Maximum total attributes per event: 254. **Exception:** If you use an APM agent API, the max is 64.
 
           Maximum total attributes per event type: 48,000.
 
-          <Callout variant="important">
-            Charts may only display the first 255 characters of attribute values. For complete attribute values, use the [JSON chart type](/docs/insights/use-insights-ui/manage-dashboards/chart-types#widget-json) or [Query API](/docs/insights/insights-api/get-data/query-insights-event-data-api).
-          </Callout>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Naming syntax for events and attributes
-      </td>
-
-      <td>
-        Event names can be a combination of alphanumeric characters, colons (`:`), and underscores (`_`). Attribute names can include those as well as periods (`.`) and forward slashes (`/`).
+          
+            Charts may only display the first 255 characters of attribute values. For complete attribute values, use the [JSON chart type](/docs/insights/use-insights-ui/manage-dashboards/chart-types#widget-json) or [Query API](/docs/insights/insights-api/get-data/query-insights-event-data-api). |
+| Naming syntax for events and attributes | Event names can be a combination of alphanumeric characters, colons (`:`), and underscores (`_`). Attribute names can include those as well as periods (`.`) and forward slashes (`/`).
 
         We recommend starting names with a letter: if it starts with something else, you'll need to put backticks around the name when querying. For more on when backticks are required in a query, see [NRQL reference](/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-how-nrql-works/#syntax).
 
         Do not use [words reserved for use by NRQL](#reserved-words).
 
-        Maximum length of event name: 255 characters.
-      </td>
-    </tr>
+        Maximum length of event name: 255 characters. |
+| Null values | The database does not store any data with a null value. |
 
-    <tr>
-      <td>
-        Null values
-      </td>
-
-      <td>
-        The database does not store any data with a null value.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Reserved words [#reserved-words]
 

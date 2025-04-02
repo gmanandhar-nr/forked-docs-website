@@ -50,48 +50,16 @@ Our Ruby agent auto-instruments your code so you can start monitoring applicatio
    ```
 3. The next step varies depending on if you are using Rails, Roda, or Sinatra:
 
-   <table>
-     <thead>
-       <tr>
-         <th style={{ width: "200px" }}>
-           <DNT>
-             **Ruby installation**
-           </DNT>
-         </th>
+   # Table
 
-         <th>
-           <DNT>
-             **Comments**
-           </DNT>
-         </th>
-       </tr>
-     </thead>
+| **Ruby installation** | **Comments** |
+| - | - |
+| If using Rails, Roda, or Sinatra | * **Rails**: Rails will automatically call `Bundler.require` and cause `newrelic_rpm` to be required during startup of your application.
+           * **Roda, Sinatra**: If you're using Roda, Sinatra or another framework, you must manually call `require 'newrelic_rpm'`. Additionally, if you're using Infinite Tracing, manually call `require 'newrelic/infinite_tracing'`.
 
-     <tbody>
-       <tr>
-         <td>
-           If using Rails, Roda, or Sinatra
-         </td>
+             Alternately, manually call `Bundler.require`, which also enables Infinite Tracing. |
+| If not using Rails, Roda or Sinatra | In order to use automatic browser application monitoring in a Rack application that does **not** use Roda, Sinatra, or Rails, you must manually include additional [Rack middlewares](/docs/agents/ruby-agent/frameworks/rack-middlewares#manual) provided by the agent. Place the New Relic gem as low in the list as possible, allowing the frameworks above it to be instrumented when the gem initializes. |
 
-         <td>
-           * <DNT>**Rails**</DNT>: Rails will automatically call `Bundler.require` and cause `newrelic_rpm` to be required during startup of your application.
-           * <DNT>**Roda, Sinatra**</DNT>: If you're using Roda, Sinatra or another framework, you must manually call `require 'newrelic_rpm'`. Additionally, if you're using Infinite Tracing, manually call `require 'newrelic/infinite_tracing'`.
-
-             Alternately, manually call `Bundler.require`, which also enables Infinite Tracing.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           If not using Rails, Roda or Sinatra
-         </td>
-
-         <td>
-           In order to use automatic browser application monitoring in a Rack application that does **not** use Roda, Sinatra, or Rails, you must manually include additional [Rack middlewares](/docs/agents/ruby-agent/frameworks/rack-middlewares#manual) provided by the agent. Place the New Relic gem as low in the list as possible, allowing the frameworks above it to be instrumented when the gem initializes.
-         </td>
-       </tr>
-     </tbody>
-   </table>
 
 ## Install the configuration file [#Configuration_file]
 

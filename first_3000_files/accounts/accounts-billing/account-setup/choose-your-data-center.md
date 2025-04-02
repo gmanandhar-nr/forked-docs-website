@@ -71,167 +71,49 @@ To create a New Relic organization in the EU region:
 
 If you have an EU region account, use the appropriate endpoints to access the following New Relic APIs:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        API
-      </th>
+# Table
 
-      <th>
-        EU endpoint
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [Browser source maps API](/docs/browser/new-relic-browser/browser-pro-features/push-source-maps-api)
-      </td>
-
-      <td>
-        ```
+| API | EU endpoint |
+| - | - |
+| [Browser source maps API](/docs/browser/new-relic-browser/browser-pro-features/push-source-maps-api) | ```
         sourcemaps.service.eu.newrelic.com
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Infrastructure Alert API](/docs/infrastructure/new-relic-infrastructure/infrastructure-alert-conditions/rest-api-calls-new-relic-infrastructure-alerts)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [Infrastructure Alert API](/docs/infrastructure/new-relic-infrastructure/infrastructure-alert-conditions/rest-api-calls-new-relic-infrastructure-alerts) | ```
         infrastructure-alert.service.eu.newrelic.com
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Mobile apps](/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [Mobile apps](/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token) | ```
         rpm.eu.newrelic.com/mobile
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [NerdGraph GraphQL API](/docs/apis/graphql-api/getting-started/introduction-new-relic-graphql-api)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [NerdGraph GraphQL API](/docs/apis/graphql-api/getting-started/introduction-new-relic-graphql-api) | ```
         api.eu.newrelic.com/graphql
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Partner API](/docs/new-relic-partnerships/partnerships/partner-api)
-      </td>
-
-      <td>
-        The partner API is a global API with no regional data differences. Use this endpoint for both EU and US accounts:
+        ``` |
+| [Partner API](/docs/new-relic-partnerships/partnerships/partner-api) | The partner API is a global API with no regional data differences. Use this endpoint for both EU and US accounts:
 
         ```
         rpm.newrelic.com/api/v2/partners/
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [REST API](/docs/apis/rest-api-v2/getting-started/introduction-new-relic-rest-api-v2)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [REST API](/docs/apis/rest-api-v2/getting-started/introduction-new-relic-rest-api-v2) | ```
         api.eu.newrelic.com
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Synthetic monitoring REST API](/docs/apis/synthetics-rest-api)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [Synthetic monitoring REST API](/docs/apis/synthetics-rest-api) | ```
         synthetics.eu.newrelic.com/synthetics/api
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Trace API](/docs/apm/distributed-tracing/trace-api/introduction-new-relic-trace-api)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [Trace API](/docs/apm/distributed-tracing/trace-api/introduction-new-relic-trace-api) | ```
         trace-api.eu.newrelic.com/trace/v1
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Metric API](/docs/introduction-new-relic-metric-api)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [Metric API](/docs/introduction-new-relic-metric-api) | ```
         metric-api.eu.newrelic.com/metric/v1
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Log API](/docs/introduction-new-relic-logs-api)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [Log API](/docs/introduction-new-relic-logs-api) | ```
         log-api.eu.newrelic.com/log/v1
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Event API](/docs/data-apis/ingest-apis/introduction-event-api)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [Event API](/docs/data-apis/ingest-apis/introduction-event-api) | ```
         insights-collector.eu01.nr-data.net
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Insights Query API](/docs/insights/insights-api/get-data/query-insights-event-data-api)
-      </td>
-
-      <td>
-        ```
+        ``` |
+| [Insights Query API](/docs/insights/insights-api/get-data/query-insights-event-data-api) | ```
         insights-api.eu.newrelic.com
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 ## Access New Relic [#access]
 

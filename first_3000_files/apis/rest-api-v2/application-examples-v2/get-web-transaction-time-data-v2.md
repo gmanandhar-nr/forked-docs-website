@@ -59,85 +59,17 @@ Application total time = <a href="#web-tx-total-time">WebTransactionTotalTime</a
 
 Each of the values in this equation are described in detail later in this document.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Application total time calculation**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Application total time calculation** | **Comments** |
+| - | - |
+| Terms | Not all the terms in the equation may apply. If the corresponding data does not appear for your application, the corresponding terms may be ignored. |
+| Datastore and Database | The `Datastore time`, `Database time`, and `(Ruby) Database` values [are not the same](#datastore-v-database). As of February 2015, `Datastore` is being phased in to replace Database. Also, the [Ruby agent](#ruby_database) stores data in a slightly different form. |
+| Memcache | The [`Memcache`](#memcache) term may not exist for all applications. |
+| Request queuing time | The `Request queuing` time (if it exists) may appear in the chart in the UI, but it is not involved in the calculations. It is presented simply as a convenience. |
+| Response time | The `Response time` may appear in the chart in the UI as an overlaid line. This time is not involved in the calculation for application total time. |
+| Web transaction total time vs. HttpDispatcher | If your application does not report a [`WebTransactionTotalTime` metric](#web-tx-total-time), then use the `HttpDispatcher` metric. The `WebTransactionTotalTime` metric is only present in more recent agents which may exhibit asynchronous behavior. |
 
-  <tbody>
-    <tr>
-      <td>
-        Terms
-      </td>
-
-      <td>
-        Not all the terms in the equation may apply. If the corresponding data does not appear for your application, the corresponding terms may be ignored.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Datastore and Database
-      </td>
-
-      <td>
-        The `Datastore time`, `Database time`, and `(Ruby) Database` values [are not the same](#datastore-v-database). As of February 2015, `Datastore` is being phased in to replace Database. Also, the [Ruby agent](#ruby_database) stores data in a slightly different form.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Memcache
-      </td>
-
-      <td>
-        The [`Memcache`](#memcache) term may not exist for all applications.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Request queuing time
-      </td>
-
-      <td>
-        The `Request queuing` time (if it exists) may appear in the chart in the UI, but it is not involved in the calculations. It is presented simply as a convenience.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Response time
-      </td>
-
-      <td>
-        The `Response time` may appear in the chart in the UI as an overlaid line. This time is not involved in the calculation for application total time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Web transaction total time vs. HttpDispatcher
-      </td>
-
-      <td>
-        If your application does not report a [`WebTransactionTotalTime` metric](#web-tx-total-time), then use the `HttpDispatcher` metric. The `WebTransactionTotalTime` metric is only present in more recent agents which may exhibit asynchronous behavior.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Web transaction total time [#web-tx-total-time]
 

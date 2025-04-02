@@ -57,71 +57,16 @@ For a description of the non-enterprise <DNT>**HTTP requests**</DNT> UI page, se
 
 ## Group, sort, and filter HTTP requests [#group-sort-filter]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Do this...
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Do this... |
+| - | - |
+| Group and sort HTTP requests in different ways | Make selections from the **Group by** and **Sort by** dropdowns. By default, the **HTTP requests** page is grouped by request domain and sorted by average response time. |
+| Filter for specific HTTP requests | Select an HTTP request from the **Errors and failures** list and/or select multiple filters from the **Filter** dropdown. |
+| See or remove applied filters | The filters you select are displayed next to the filter dropdown. To clear filters, select the `X` icon on the filter you want to clear. |
+| Change the time window | Select a new time period from the time picker dropdown. |
+| View information for a specific app version | Using the **Versions** dropdown, select the version for which you want to see charts and lists. |
 
-  <tbody>
-    <tr>
-      <td>
-        Group and sort HTTP requests in different ways
-      </td>
-
-      <td>
-        Make selections from the <DNT>**Group by**</DNT> and <DNT>**Sort by**</DNT> dropdowns. By default, the <DNT>**HTTP requests**</DNT> page is grouped by request domain and sorted by average response time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Filter for specific HTTP requests
-      </td>
-
-      <td>
-        Select an HTTP request from the <DNT>**Errors and failures**</DNT> list and/or select multiple filters from the <DNT>**Filter**</DNT> dropdown.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        See or remove applied filters
-      </td>
-
-      <td>
-        The filters you select are displayed next to the filter dropdown. To clear filters, select the `X` icon on the filter you want to clear.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Change the time window
-      </td>
-
-      <td>
-        Select a new time period from the time picker dropdown.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View information for a specific app version
-      </td>
-
-      <td>
-        Using the <DNT>**Versions**</DNT> dropdown, select the version for which you want to see charts and lists.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View and share HTTP request data [#insights]
 

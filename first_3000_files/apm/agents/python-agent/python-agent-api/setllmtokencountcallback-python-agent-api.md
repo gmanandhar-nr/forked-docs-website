@@ -36,45 +36,17 @@ In most cases, this API will be called exactly once, but you can make multiple c
 
 ## API Parameters [#api-parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `callback`
 
-  <tbody>
-    <tr>
-      <td>
-        `callback`
+        _callable_ or _None_ | Required. The callback to calculate token counts. To unset the current callback, pass `None` in instead of a callback function. |
+| `application`
 
-        _callable_ or _None_
-      </td>
+        _object_ | Optional. The specific application object to associate the API call with. An application object can be obtained using the [`newrelic.agent.application`](/docs/apm/agents/python-agent/python-agent-api/application-python-agent-api/) function. |
 
-      <td>
-        Required. The callback to calculate token counts. To unset the current callback, pass `None` in instead of a callback function.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `application`
-
-        _object_
-      </td>
-
-      <td>
-        Optional. The specific application object to associate the API call with. An application object can be obtained using the [`newrelic.agent.application`](/docs/apm/agents/python-agent/python-agent-api/application-python-agent-api/) function.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values [#return-values]
 

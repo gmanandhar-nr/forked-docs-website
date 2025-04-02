@@ -36,41 +36,13 @@ By default, New Relic queries your AWS IoT services [every 5 minutes](/docs/inte
 
 After [connecting the AWS IoT integration to New Relic](/docs/integrations/amazon-integrations/getting-started/connect-aws-services-infrastructure) and waiting a few minutes, you can [use integration data](/docs/telemetry-data-platform/understand-data/new-relic-data-types/):
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        View AWS IoT integrations data
-      </th>
+# Table
 
-      <th>
-        Do this
-      </th>
-    </tr>
-  </thead>
+| View AWS IoT integrations data | Do this |
+| - | - |
+| and [alerts](/docs/infrastructure/new-relic-infrastructure/infrastructure-alert-conditions/infrastructure-alerts-add-edit-or-view-host-alert-information#integration) | Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > AWS > IoT**. |
+| [Metric data](#metrics) on custom dashboards | Go to the [query builder](/docs/query-your-data/explore-query-data/query-builder/query-builder-basic-mode) and create queries for `IOTBrokerSample`, `IOTRuleActionSample`, and `IOTRuleSample` events. |
 
-  <tbody>
-    <tr>
-      <td>
-        <InlinePopover type="dashboards"/> and [alerts](/docs/infrastructure/new-relic-infrastructure/infrastructure-alert-conditions/infrastructure-alerts-add-edit-or-view-host-alert-information#integration)
-      </td>
-
-      <td>
-        Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > AWS > IoT**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Metric data](#metrics) on custom dashboards
-      </td>
-
-      <td>
-        Go to the [query builder](/docs/query-your-data/explore-query-data/query-builder/query-builder-basic-mode) and create queries for `IOTBrokerSample`, `IOTRuleActionSample`, and `IOTRuleSample` events.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Metric data [#metrics]
 

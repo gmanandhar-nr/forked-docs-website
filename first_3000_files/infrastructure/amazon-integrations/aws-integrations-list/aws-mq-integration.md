@@ -38,67 +38,14 @@ To view your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 You can [query and explore your data](/docs/using-new-relic/data/understand-data/query-new-relic-data) using the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Broker | `AwsMqBrokerSample` | `AwsMqBroker` |
+| Topic | `AwsMqTopicSample` | `AwsMqTopic` |
+| Queue | `AwsMqQueueSample` | `AwsMqQueue` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Broker
-      </td>
-
-      <td>
-        `AwsMqBrokerSample`
-      </td>
-
-      <td>
-        `AwsMqBroker`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Topic
-      </td>
-
-      <td>
-        `AwsMqTopicSample`
-      </td>
-
-      <td>
-        `AwsMqTopic`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Queue
-      </td>
-
-      <td>
-        `AwsMqQueueSample`
-      </td>
-
-      <td>
-        `AwsMqQueue`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

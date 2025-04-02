@@ -16,94 +16,21 @@ freshnessValidatedDate: never
 
 When adding custom attribute values to transactions, custom events, spans, and errors, the API accepts an `object`. This describes how these values are processed and how they will appear in APM. In all cases, `NULL` values are not recorded.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        .NET type
-      </th>
+# Table
 
-      <th>
-        How the value will be represented
-      </th>
-    </tr>
-  </thead>
+| .NET type | How the value will be represented |
+| - | - |
+| `byte, Int16, Int32, Int64`
 
-  <tbody>
-    <tr>
-      <td>
-        `byte, Int16, Int32, Int64`
+        `sbyte, UInt16, UInt32, UInt64` | As an integral value |
+| `float, double, decimal` | A decimal-based number |
+| `string` | A string truncated after 255-bytes.
 
-        `sbyte, UInt16, UInt32, UInt64`
-      </td>
+        Empty strings are supported. |
+| `bool` | True or false |
+| `DateTime` | A string representation following the ISO-8601 format, including time zone information:
 
-      <td>
-        As an integral value
-      </td>
-    </tr>
+        `2020-02-13T11:31:19.5767650-08:00` |
+| `TimeSpan` | A decimal-based number representing number of seconds. |
+| everything else | The `ToString()` method will be applied. Custom types must have an implementation of `Object.ToString()` or they will throw an exception. |
 
-    <tr>
-      <td>
-        `float, double, decimal`
-      </td>
-
-      <td>
-        A decimal-based number
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `string`
-      </td>
-
-      <td>
-        A string truncated after 255-bytes.
-
-        Empty strings are supported.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `bool`
-      </td>
-
-      <td>
-        True or false
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DateTime`
-      </td>
-
-      <td>
-        A string representation following the ISO-8601 format, including time zone information:
-
-        `2020-02-13T11:31:19.5767650-08:00`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TimeSpan`
-      </td>
-
-      <td>
-        A decimal-based number representing number of seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        everything else
-      </td>
-
-      <td>
-        The `ToString()` method will be applied. Custom types must have an implementation of `Object.ToString()` or they will throw an exception.
-      </td>
-    </tr>
-  </tbody>
-</table>

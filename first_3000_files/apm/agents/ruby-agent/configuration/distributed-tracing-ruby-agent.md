@@ -138,27 +138,11 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
 
         If you're using Ruby on Rails version 3 or higher, Rails will automatically call `Bundler.require` and cause `newrelic-infinite_tracing` to be required during startup of your application. If you're using Sinatra or another framework, you may need to call `require 'newrelic/infinite_tracing'` or manually call `Bundler.require`.
 
-        <table>
-          <thead>
-            <tr>
-              <th style={{ width: "200px" }}>
-                Type
-              </th>
+        # Table
 
-              <th>
-                Required configuration
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                Infinite Tracing
-              </td>
-
-              <td>
-                Configuration options:
+| Type | Required configuration |
+| - | - |
+| Infinite Tracing | Configuration options:
 
                 * Configuration file (`newrelic.yml`):
 
@@ -174,11 +158,8 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
                   ```sh
                   NEW_RELIC_DISTRIBUTED_TRACING_ENABLED=true
                   NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST="YOUR_TRACE_OBSERVER_HOST"
-                  ```
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  ``` |
+
       </Collapser>
     </CollapserGroup>
 

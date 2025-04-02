@@ -30,82 +30,17 @@ This New Relic infrastructure integration collects the following Amazon API Gate
 
 ### Amazon API Gateway v2 Metric data [#table-of-metrics]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric
+# Table
 
-      </th>
+| Metric | Description |
+| - | - |
+| `4xx` | The number of client-side errors captured in a given period. |
+| `5xx` | The number of server-side errors captured in a given period. |
+| `Count` | The total number API requests in a given period. |
+| `IntegrationLatency` | The time between when API Gateway relays a request to the backend and when it receives a response from the backend. |
+| `Latency` | The time between when API Gateway receives a request from a client and when it returns a response to the client. The latency includes the integration latency and other API Gateway overhead. |
+| `DataProcessed` | The amount of data processed in bytes. |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `4xx`
-      </td>
-
-      <td>
-        The number of client-side errors captured in a given period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `5xx`
-      </td>
-
-      <td>
-        The number of server-side errors captured in a given period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Count`
-      </td>
-
-      <td>
-        The total number API requests in a given period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IntegrationLatency`
-      </td>
-
-      <td>
-        The time between when API Gateway relays a request to the backend and when it receives a response from the backend.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Latency`
-      </td>
-
-      <td>
-        The time between when API Gateway receives a request from a client and when it returns a response to the client. The latency includes the integration latency and other API Gateway overhead.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DataProcessed`
-      </td>
-
-      <td>
-        The amount of data processed in bytes.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Dimensions [#dimensions]
 

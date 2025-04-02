@@ -47,58 +47,17 @@ java.net.SocketException: Connection reset
 
 Depending on how frequently the message appears, do the following to troubleshoot the problem:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Frequency of INFO message**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        A few minutes
-      </td>
-
-      <td>
-        New Relic's Java agent can cache a significant amount of metric data when it cannot connect. Even if the outage lasts a few minutes, in general, this will not result in any loss of information in the <InlinePopover type="apm"/> UI. You can safely ignore these messages.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Intermittently over a few days
-      </td>
-
-      <td>
-        Intermittent connection issues can occasionally cause many of these messages in a short time. If this occurs only once every few days, and all your app data appears in the New Relic UI, you can safely ignore these messages.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Every minute for several minutes
-      </td>
-
-      <td>
-        If failures occur every minute for more than a few minutes, then the Java agent is not able to receive data from your app, and no data can be reported. In this situation:
+| **Frequency of INFO message** | **Comments** |
+| - | - |
+| A few minutes | New Relic's Java agent can cache a significant amount of metric data when it cannot connect. Even if the outage lasts a few minutes, in general, this will not result in any loss of information in the  UI. You can safely ignore these messages. |
+| Intermittently over a few days | Intermittent connection issues can occasionally cause many of these messages in a short time. If this occurs only once every few days, and all your app data appears in the New Relic UI, you can safely ignore these messages. |
+| Every minute for several minutes | If failures occur every minute for more than a few minutes, then the Java agent is not able to receive data from your app, and no data can be reported. In this situation:
 
         1. Verify whether New Relic is experiencing availability problems: Check New Relic's status at [status.newrelic.com](https://status.newrelic.com).
-        2. If New Relic is not reporting any issues, [gather troubleshooting information](/docs/agents/java-agent/troubleshooting/gather-troubleshooting-information-java) for your app.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        2. If New Relic is not reporting any issues, [gather troubleshooting information](/docs/agents/java-agent/troubleshooting/gather-troubleshooting-information-java) for your app. |
+
 
 ## Cause
 

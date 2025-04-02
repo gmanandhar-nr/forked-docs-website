@@ -10,55 +10,14 @@ NRQL condition guided mode simplifies the creation of "host not reporting" (HNR)
 
 An HNR event is generated when the infrastructure agent fails to transmit data to our collector within a specified timeframe.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Host not reporting condition**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Features**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Host not reporting condition** | **Features** |
+| - | - |
+| What to monitor | You can use the [entity filter bar](/docs/new-relic-solutions/new-relic-one/core-concepts/search-filter-entities) to select which hosts you want to the NRQL alert condition to monitor. Based on your selections, the NRQL query will be automatically built for you. The condition will also automatically apply to any hosts you add in the future that match your condition's filters. |
+| How to notify | NRQL conditions are contained in [policies](/docs/using-new-relic/welcome-new-relic/get-started/glossary#alert-policy). Policies use [workflows and destinations](/docs/alerts/get-notified/intro-notifications/) to determine how to notify you when an incident is created. |
+| When to open an incident | HNR guided mode leads you through creating a loss of signal NRQL condition. This means you have full access to all of the [loss of signal threshold settings](/docs/alerts/create-alert/create-alert-condition/create-nrql-alert-conditions/#signal-loss) including configuring the time window that triggers an HNR event and selecting from options: **Close all current open incidents**,  **Open new "lost signal" incident**, and **Do not open "lost signal" incident on expected termination**. These settings, in combination with the policy's [incident preferences](/docs/alerts/new-relic-alerts/configuring-alert-policies/specify-when-new-relic-creates-incidents), determine when an incident will open. |
 
-  <tbody>
-    <tr>
-      <td>
-        What to monitor
-      </td>
-
-      <td>
-        You can use the [entity filter bar](/docs/new-relic-solutions/new-relic-one/core-concepts/search-filter-entities) to select which hosts you want to the NRQL alert condition to monitor. Based on your selections, the NRQL query will be automatically built for you. The condition will also automatically apply to any hosts you add in the future that match your condition's filters.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        How to notify
-      </td>
-
-      <td>
-        NRQL conditions are contained in [policies](/docs/using-new-relic/welcome-new-relic/get-started/glossary#alert-policy). Policies use [workflows and destinations](/docs/alerts/get-notified/intro-notifications/) to determine how to notify you when an incident is created.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        When to open an incident
-      </td>
-
-      <td>
-        HNR guided mode leads you through creating a loss of signal NRQL condition. This means you have full access to all of the [loss of signal threshold settings](/docs/alerts/create-alert/create-alert-condition/create-nrql-alert-conditions/#signal-loss) including configuring the time window that triggers an HNR event and selecting from options: <DNT>**Close all current open incidents**</DNT>,  <DNT>**Open new "lost signal" incident**</DNT>, and <DNT>**Do not open "lost signal" incident on expected termination**</DNT>. These settings, in combination with the policy's [incident preferences](/docs/alerts/new-relic-alerts/configuring-alert-policies/specify-when-new-relic-creates-incidents), determine when an incident will open.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Create a NRQL HNR alert condition [#create-nrql-hnr-alert-condition]
 

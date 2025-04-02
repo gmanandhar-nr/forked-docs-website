@@ -41,79 +41,23 @@ Log records are stored by default in the `Log` event type. You can create additi
 
 Some specific attributes have additional restrictions:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Restrictions
-      </th>
-    </tr>
-  </thead>
+| Attribute | Restrictions |
+| - | - |
+| `accountId` | This is a reserved attribute name. If it is included, it will be dropped during ingest. |
+| `eventType` | This is a reserved attribute name. If it is included, it will be dropped during ingest. |
+| `entity.guid`
+        `entity.name`
+        `entity.type` | These attributes are used internally to identify entities. Any values submitted with these keys in the attributes section of a metric data point may cause undefined behavior such as missing entities in the UI or telemetry not associating with the expected entities.
 
-  <tbody>
-    <tr>
-      <td>
-        `accountId`
-      </td>
+        For more information, see our documentation about [entity synthesis](/docs/new-relic-one/use-new-relic-one/core-concepts/what-entity-new-relic/#entity-synthesis). |
+| `timestamp` | This value must be an integer representing milliseconds since Unix epoch. Seconds since epoch is also supported.
 
-      <td>
-        This is a reserved attribute name. If it is included, it will be dropped during ingest.
-      </td>
-    </tr>
+        Payloads with timestamps older than 48 hours may be dropped. |
+| `instrumentation.name`
+        `instrumentation.provider`
+        `instrumentation.version` | These attributes are reserved for internal use by our mobile and browser integrations.
+        
+        If you use any of these integrations, then you should not rely on or make use of these instrumentation attributes. |
 
-    <tr>
-      <td>
-        `eventType`
-      </td>
-
-      <td>
-        This is a reserved attribute name. If it is included, it will be dropped during ingest.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <span class="children-nowrap">`entity.guid`</span>
-        <span class="children-nowrap">`entity.name`</span>
-        <span class="children-nowrap">`entity.type`</span>
-      </td>
-
-      <td>
-        These attributes are used internally to identify entities. Any values submitted with these keys in the attributes section of a metric data point may cause undefined behavior such as missing entities in the UI or telemetry not associating with the expected entities.
-
-        For more information, see our documentation about [entity synthesis](/docs/new-relic-one/use-new-relic-one/core-concepts/what-entity-new-relic/#entity-synthesis).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `timestamp`
-      </td>
-
-      <td>
-        This value must be an integer representing milliseconds since Unix epoch. Seconds since epoch is also supported.
-
-        Payloads with timestamps older than 48 hours may be dropped.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <span class="children-nowrap">`instrumentation.name`</span>
-        <span class="children-nowrap">`instrumentation.provider`</span>
-        <span class="children-nowrap">`instrumentation.version`</span>
-      </td>
-
-      <td>
-        These attributes are reserved for internal use by our mobile and browser integrations.
-        <Callout variant="important">
-        If you use any of these integrations, then you should not rely on or make use of these instrumentation attributes.
-        </Callout>
-      </td>
-    </tr>
-  </tbody>
-</table>

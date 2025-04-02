@@ -45,48 +45,11 @@ The integration reports [metric data](/docs/telemetry-data-platform/understand-d
 
 The metric data that New Relic receives from your Google Cloud Storage integration includes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `api.Requests` | Delta count of API calls. |
+| `network.ReceivedBytes` | Delta count of bytes received over the network. |
+| `network.SentBytes` | Delta count of bytes sent over the network. |
 
-  <tbody>
-    <tr>
-      <td>
-        `api.Requests`
-      </td>
-
-      <td>
-        Delta count of API calls.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `network.ReceivedBytes`
-      </td>
-
-      <td>
-        Delta count of bytes received over the network.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `network.SentBytes`
-      </td>
-
-      <td>
-        Delta count of bytes sent over the network.
-      </td>
-    </tr>
-  </tbody>
-</table>

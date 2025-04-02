@@ -79,75 +79,16 @@ The page color-codes the tree results:
 * Yellow: Percentages greater than 10%
 * Black: Percentages less than 10%
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this...**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **If you want to...** | **Do this...** |
+| - | - |
+| Change how the thread profile information appears | Select your choices of available options in the **Tree settings**, and select **Refresh tree**. |
+| Change how much information appears | Select the **Expand** or **Collapse** options above the call tree, or select the name or arrow on any line in the call tree. |
+| View summary information about any line in the call tree | Mouse over the line. |
+| Email the thread profile results to others | Select **Share this profile**. |
+| Start another session or view a different thread profile | Select **Back to all profiles**. |
 
-  <tbody>
-    <tr>
-      <td>
-        Change how the thread profile information appears
-      </td>
-
-      <td>
-        Select your choices of available options in the <DNT>**Tree settings**</DNT>, and select <DNT>**Refresh tree**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Change how much information appears
-      </td>
-
-      <td>
-        Select the <DNT>**Expand**</DNT> or <DNT>**Collapse**</DNT> options above the call tree, or select the name or arrow on any line in the call tree.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View summary information about any line in the call tree
-      </td>
-
-      <td>
-        Mouse over the line.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Email the thread profile results to others
-      </td>
-
-      <td>
-        Select <DNT>**Share this profile**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Start another session or view a different thread profile
-      </td>
-
-      <td>
-        Select <DNT>**Back to all profiles**</DNT>.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Agent considerations [#agent-requirements]
 

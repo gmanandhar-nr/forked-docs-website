@@ -36,39 +36,12 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data is attached to the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th width="150px">
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| VPNGateway | `AzureVpnGatewaysVPNGatewaySample` | `AzureVpnGatewaysVPNGateway` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        VPNGateway
-      </td>
-
-      <td>
-        `AzureVpnGatewaysVPNGatewaySample`
-      </td>
-
-      <td>
-        `AzureVpnGatewaysVPNGateway`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

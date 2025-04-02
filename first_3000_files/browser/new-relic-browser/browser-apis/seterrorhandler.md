@@ -52,33 +52,14 @@ In addition, later versions of the agent support fingerprinting or grouping of e
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$callback`
 
-  <tbody>
-    <tr>
-      <td>
-        `$callback`
+        _function_ | Required**.** When an error occurs, the callback is called with the error object as a parameter. The callback will be called with each error, so it is not specific to one error. |
 
-        _function_
-      </td>
-
-      <td>
-        Required<DNT>**.**</DNT> When an error occurs, the callback is called with the error object as a parameter. The callback will be called with each error, so it is not specific to one error.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

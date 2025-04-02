@@ -85,137 +85,19 @@ NewRelic.noticeHttpTransaction(
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$url` | `string` | Required. The URL of the request. |
+| `$httpMethod` | `string` | Required. The HTTP method used, such as GET or POST. |
+| `$statusCode` | `int` | Required. The statusCode of the HTTP response, such as 200 for **OK**. |
+| `$startTime` | `int` | Required. The start time of the request in milliseconds since the epoch. |
+| `$endTime` | `int` | Required. The end time of the request in milliseconds since the epoch. |
+| `$bytesSent` | `int` | Required. The number of bytes sent in the request. |
+| `$bytesReceived` | `int` | Required. The number of bytes received in the response. |
+| `$responseBody` | `string` | Optional. The response body of the HTTP response. The response body will be truncated and included in an HTTP Error metric if the HTTP transaction is an error. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$url`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The URL of the request.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$httpMethod`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The HTTP method used, such as GET or POST.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$statusCode`
-            </td>
-
-            <td>
-              `int`
-            </td>
-
-            <td>
-              Required. The statusCode of the HTTP response, such as 200 for <DNT>**OK**</DNT>.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$startTime`
-            </td>
-
-            <td>
-              `int`
-            </td>
-
-            <td>
-              Required. The start time of the request in milliseconds since the epoch.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$endTime`
-            </td>
-
-            <td>
-              `int`
-            </td>
-
-            <td>
-              Required. The end time of the request in milliseconds since the epoch.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$bytesSent`
-            </td>
-
-            <td>
-              `int`
-            </td>
-
-            <td>
-              Required. The number of bytes sent in the request.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$bytesReceived`
-            </td>
-
-            <td>
-              `int`
-            </td>
-
-            <td>
-              Required. The number of bytes received in the response.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$responseBody`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Optional. The response body of the HTTP response. The response body will be truncated and included in an HTTP Error metric if the HTTP transaction is an error.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Examples [#examples]
 

@@ -18,97 +18,20 @@ Here are troubleshooting tips when using [cross application traces](/docs/apm/tr
 
 Make sure you meet these requirements for your agent's version, protocols, interfaces, or message queue libraries. If you are using a protocol that is not listed here, you will not see a connection between your applications.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Agent version**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Notes**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Agent version** | **Notes** |
+| - | - |
+| [Go 1.11 or higher](/docs/release-notes/agent-release-notes/go-release-notes/go-agent-111) | HTTP, HTTPS |
+| [Java 3.9.0 or higher](/docs/release-notes/agent-release-notes/java-release-notes) | HTTP, HTTPs, JMS 1.1, RabbitMQ
 
-  <tbody>
-    <tr>
-      <td>
-        [Go 1.11 or higher](/docs/release-notes/agent-release-notes/go-release-notes/go-agent-111)
-      </td>
+        The Java agent also supports several message queue libraries, including those that use the JMS 1.1 interface. |
+| [.NET 4.2 or higher](/docs/release-notes/agent-release-notes/net-release-notes) | HTTP, and [supported .NET messaging systems](/docs/agents/net-agent/getting-started/compatibility-requirements-net-agent#messaging) |
+| [Node.js 2.0.0 or higher](/docs/release-notes/agent-release-notes/nodejs-release-notes) | HTTP, HTTPS, RabbitMQ |
+| [PHP 4.19.0 or higher](/docs/release-notes/agent-release-notes/php-release-notes) | HTTP, HTTPS, and [supported PHP message queuing systems](/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements#queuing) |
+| [Python 2.38.0.31 or higher](/docs/release-notes/agent-release-notes/python-release-notes) | HTTP, HTTPS, and [supported Python message queuing systems](/docs/agents/python-agent/supported-features/python-message-queues) |
+| [Ruby 4.3.0 or higher](/docs/release-notes/agent-release-notes/ruby-release-notes) | [HTTP](/docs/agents/ruby-agent/features/http-client-tracing-ruby), HTTPS, [RabbitMQ](/docs/agents/ruby-agent/features/message-queues) |
 
-      <td>
-        HTTP, HTTPS
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Java 3.9.0 or higher](/docs/release-notes/agent-release-notes/java-release-notes)
-      </td>
-
-      <td>
-        HTTP, HTTPs, JMS 1.1, RabbitMQ
-
-        The Java agent also supports several message queue libraries, including those that use the JMS 1.1 interface.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [.NET 4.2 or higher](/docs/release-notes/agent-release-notes/net-release-notes)
-      </td>
-
-      <td>
-        HTTP, and [supported .NET messaging systems](/docs/agents/net-agent/getting-started/compatibility-requirements-net-agent#messaging)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Node.js 2.0.0 or higher](/docs/release-notes/agent-release-notes/nodejs-release-notes)
-      </td>
-
-      <td>
-        HTTP, HTTPS, RabbitMQ
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [PHP 4.19.0 or higher](/docs/release-notes/agent-release-notes/php-release-notes)
-      </td>
-
-      <td>
-        HTTP, HTTPS, and [supported PHP message queuing systems](/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements#queuing)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Python 2.38.0.31 or higher](/docs/release-notes/agent-release-notes/python-release-notes)
-      </td>
-
-      <td>
-        HTTP, HTTPS, and [supported Python message queuing systems](/docs/agents/python-agent/supported-features/python-message-queues)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Ruby 4.3.0 or higher](/docs/release-notes/agent-release-notes/ruby-release-notes)
-      </td>
-
-      <td>
-        [HTTP](/docs/agents/ruby-agent/features/http-client-tracing-ruby), HTTPS, [RabbitMQ](/docs/agents/ruby-agent/features/message-queues)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Config file requirements [#requirements]
 

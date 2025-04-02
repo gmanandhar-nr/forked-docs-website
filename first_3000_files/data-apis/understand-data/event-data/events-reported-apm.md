@@ -22,51 +22,14 @@ freshnessValidatedDate: never
 
 [APM](/docs/apm/new-relic-apm/getting-started) reports [event data](/docs/using-new-relic/data/understand-data/new-relic-data-types#event-data) that appears in some UI displays and is also available for [querying and charting](/docs/using-new-relic/data/understand-data/query-new-relic-data). Select an event name in the following table to see its attributes.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Event
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Event | Description |
+| - | - |
+| [`Transaction`](/attribute-dictionary/?event=Transaction) | A transaction is a logical unit of work in a software application. The `Transaction` event includes information about the app, database calls, the duration of the transaction, and any errors that may occur. |
+| [`TransactionError`](/attribute-dictionary/?event=TransactionError) | Transaction errors occur when a request throws an exception in the code path that was taken to fill that request. The number of transaction errors does not equal the number of transactions, because you can specify whether you want to [collect, ignore, or mark errors as expected](/docs/agents/manage-apm-agents/agent-data/manage-errors-apm-collect-ignore-or-mark-expected). |
+| [`Span`](/attribute-dictionary/?event=Span) | Span events are created when New Relic agents, or other tracing instrumentation tools, instrument operations that are part of a distributed trace. See the [definition of span](/docs/using-new-relic/welcome-new-relic/getting-started/glossary#span). |
 
-  <tbody>
-    <tr>
-      <td id="transaction-event">
-        [`Transaction`](/attribute-dictionary/?event=Transaction)
-      </td>
-
-      <td>
-        A transaction is a logical unit of work in a software application. The `Transaction` event includes information about the app, database calls, the duration of the transaction, and any errors that may occur.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="transactionerror-event">
-        [`TransactionError`](/attribute-dictionary/?event=TransactionError)
-      </td>
-
-      <td>
-        Transaction errors occur when a request throws an exception in the code path that was taken to fill that request. The number of transaction errors does not equal the number of transactions, because you can specify whether you want to [collect, ignore, or mark errors as expected](/docs/agents/manage-apm-agents/agent-data/manage-errors-apm-collect-ignore-or-mark-expected).
-      </td>
-    </tr>
-
-    <tr>
-      <td id="span-event">
-        [`Span`](/attribute-dictionary/?event=Span)
-      </td>
-
-      <td>
-        Span events are created when New Relic agents, or other tracing instrumentation tools, instrument operations that are part of a distributed trace. See the [definition of span](/docs/using-new-relic/welcome-new-relic/getting-started/glossary#span).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Related documentation:
 

@@ -81,39 +81,12 @@ NewRelic.removeAttribute(name: String?)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$name` | `string` | Required. The name of the attribute that you want to remove. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$name`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The name of the attribute that you want to remove.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Return values [#return-values]
 

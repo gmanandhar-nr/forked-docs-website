@@ -55,141 +55,41 @@ newrelic.agent.MessageTransaction(library, destination_type, destination_name, a
 
 The decorator and context manager use these parameters:
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `library`
 
-  <tbody>
-    <tr>
-      <td>
-        `library`
+        _string_ or _function_ | Required. The name (or type) of message broker in use. Pass either a string which defines it or a function which returns it. |
+| `destination_type`
 
-        _string_ or _function_
-      </td>
+        _string_ or _function_ | Required. The type of destination targeted by the operation. Pass either a string which defines it or a function which returns it. This is typically `Exchange` or `Queue`. |
+| `destination_name`
 
-      <td>
-        Required. The name (or type) of message broker in use. Pass either a string which defines it or a function which returns it.
-      </td>
-    </tr>
+        _string_ or _function_ | Required. The name of the destination being targeted by the operation. Pass either a string which defines it or a function which returns it. |
+| `application`
 
-    <tr>
-      <td>
-        `destination_type`
+        _Application_ | Required. An application instance, as returned by [`application`](/docs/agents/python-agent/python-agent-api/application). |
+| `routing_key`
 
-        _string_ or _function_
-      </td>
+        _string_ or _function_ | Optional. The routing key of the message. |
+| `exchange_type`
 
-      <td>
-        Required. The type of destination targeted by the operation. Pass either a string which defines it or a function which returns it. This is typically `Exchange` or `Queue`.
-      </td>
-    </tr>
+        _string_ or _function_ | Optional. The exchange type of the message. |
+| `headers`
 
-    <tr>
-      <td>
-        `destination_name`
+        _dictionary_ or _function_ | Optional. The headers of the message. |
+| `queue_name`
 
-        _string_ or _function_
-      </td>
+        _string_ or _function_ | Optional. The queue name property of the message. |
+| `reply_to`
 
-      <td>
-        Required. The name of the destination being targeted by the operation. Pass either a string which defines it or a function which returns it.
-      </td>
-    </tr>
+        _string_ or _function_ | Optional. The `replyTo` property of the message. |
+| `correlation_id`
 
-    <tr>
-      <td>
-        `application`
+        _string_ or _function_ | Optional. The `correlationID` property of the message. |
 
-        _Application_
-      </td>
-
-      <td>
-        Required. An application instance, as returned by [`application`](/docs/agents/python-agent/python-agent-api/application).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `routing_key`
-
-        _string_ or _function_
-      </td>
-
-      <td>
-        Optional. The routing key of the message.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `exchange_type`
-
-        _string_ or _function_
-      </td>
-
-      <td>
-        Optional. The exchange type of the message.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `headers`
-
-        _dictionary_ or _function_
-      </td>
-
-      <td>
-        Optional. The headers of the message.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `queue_name`
-
-        _string_ or _function_
-      </td>
-
-      <td>
-        Optional. The queue name property of the message.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `reply_to`
-
-        _string_ or _function_
-      </td>
-
-      <td>
-        Optional. The `replyTo` property of the message.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `correlation_id`
-
-        _string_ or _function_
-      </td>
-
-      <td>
-        Optional. The `correlationID` property of the message.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Parameters for MessageTransactionWrapper [#wrapper-parameters]
 

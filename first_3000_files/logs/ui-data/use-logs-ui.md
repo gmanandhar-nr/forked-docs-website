@@ -293,99 +293,25 @@ Depending on your New Relic subscription, you can access your logs from several 
   Let your app's <InlinePopover type="apm"/> agent forward log data directly to New Relic with [APM logs in context](/docs/apm/new-relic-apm/getting-started/get-started-logs-context). No need to install or maintain additional third-party software!
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "175px" }}>
-        To view logs...
-      </th>
+# Table
 
-      <th>
-        Do this...
-      </th>
-    </tr>
-  </thead>
+| To view logs... | Do this... |
+| - | - |
+| Directly from the logs UI | * Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Logs**.
+        * EU region data center [(if available)](/docs/using-new-relic/welcome-new-relic/get-started/our-eu-us-region-data-centers/): Go to **[one.eu.newrelic.com/](https://one.eu.newrelic.com) > Logs**. |
+| From your app in APM | Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > APM**, select an app, then use any of these options:
 
-  <tbody>
-    <tr>
-      <td>
-        Directly from the logs UI
-      </td>
-
-      <td>
-        * Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Logs**</DNT>.
-        * EU region data center [(if available)](/docs/using-new-relic/welcome-new-relic/get-started/our-eu-us-region-data-centers/): Go to <DNT>**[one.eu.newrelic.com/](https://one.eu.newrelic.com) > Logs**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        From your app in APM
-      </td>
-
-      <td>
-        Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > APM**</DNT>, select an app, then use any of these options:
-
-        * <DNT>
+        * 
             **Triage > Logs**
-          </DNT>
-        * <DNT>
+          
+        * 
             **Triage > Errors inbox > (select an error) > Logs**
-          </DNT>
-        * <DNT>
-            **Events > Errors > (select an error) > See logs**
-          </DNT>
-      </td>
-    </tr>
+          
+        * 
+            **Events > Errors > (select an error) > See logs** |
+| From distributed tracing | Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > APM & services > (select an app) > Distributed tracing > (select a trace) > Logs**. |
+| From a host in your infrastructure | Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure**, select a host, and then click **Logs**. |
+| From Kubernetes | From the Kubernetes UI, select a cluster, and then click **Logs**. |
+| From an entity | Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > All entities > (select an entity) > Logs**. |
+| From your IDE | [Install New Relic's CodeStream extension](/docs/codestream/start-here/install-codestream) to view logs in your IDE. |
 
-    <tr>
-      <td>
-        From distributed tracing
-      </td>
-
-      <td>
-        Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > APM & services > (select an app) > Distributed tracing > (select a trace) > Logs**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        From a host in your infrastructure
-      </td>
-
-      <td>
-        Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure**</DNT>, select a host, and then click <DNT>**Logs**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        From Kubernetes
-      </td>
-
-      <td>
-        From the Kubernetes UI, select a cluster, and then click <DNT>**Logs**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        From an entity
-      </td>
-
-      <td>
-        Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > All entities > (select an entity) > Logs**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        From your IDE
-      </td>
-
-      <td>
-        [Install New Relic's CodeStream extension](/docs/codestream/start-here/install-codestream) to view logs in your IDE.
-      </td>
-    </tr>
-  </tbody>
-</table>

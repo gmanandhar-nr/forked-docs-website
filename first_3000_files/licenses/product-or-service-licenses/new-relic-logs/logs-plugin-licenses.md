@@ -22,39 +22,12 @@ The following licenses are for the plugins used to connects your log data with N
     id="aws-cloudwatch"
     title="AWS CloudWatch"
   >
-    <table>
-      <thead>
-        <tr>
-          <th width={150}>
-            **Library**
-          </th>
+    # Table
 
-          <th>
-            **License**
-          </th>
+| **Library** | **License** | **Copyright** |
+| - | - | - |
+| [AWS CloudWatch](https://github.com/newrelic/nr-logging-lambda/blob/master/LICENSE) | [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) | © 2019 New Relic, Inc. |
 
-          <th>
-            **Copyright**
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            [AWS CloudWatch](https://github.com/newrelic/nr-logging-lambda/blob/master/LICENSE)
-          </td>
-
-          <td>
-            [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-          </td>
-
-          <td>
-            © 2019 New Relic, Inc.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

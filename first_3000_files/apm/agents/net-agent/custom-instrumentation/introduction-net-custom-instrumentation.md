@@ -30,45 +30,17 @@ This document describes how to instrument activity that is not instrumented by t
 
 The .NET agent supports two methods of custom instrumentation:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Method
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Method | Description |
+| - | - |
+| Attribute custom instrumentation | Instrument your code by decorating your methods with an attribute. Attribute instrumentation is simpler to implement than XML instrumentation because you only need to add a single decorator, in the same place in your code as the method you want to instrument.
 
-  <tbody>
-    <tr>
-      <td>
-        Attribute custom instrumentation
-      </td>
+        For instructions, see [Custom instrumentation via attributes](/docs/agents/net-agent/api-guides/custom-instrumentation-attributes-net). |
+| XML custom instrumentation | Instrument your code by listing the target methods in an XML file. XML instrumentation is more complex than attribute instrumentation, and it will fail if you change the name of the assembly, class, or method you want to instrument. However, XML instrumentation does not require you to modify your source code.
 
-      <td>
-        Instrument your code by decorating your methods with an attribute. Attribute instrumentation is simpler to implement than XML instrumentation because you only need to add a single decorator, in the same place in your code as the method you want to instrument.
+        For instructions, see [Create transactions via XML](/docs/agents/net-agent/instrumentation/net-custom-transactions) and [Add detail to transactions via XML](/docs/agents/net-agent/custom-instrumentation/add-detail-transactions-xml-net#blocking-instrumentation). |
 
-        For instructions, see [Custom instrumentation via attributes](/docs/agents/net-agent/api-guides/custom-instrumentation-attributes-net).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        XML custom instrumentation
-      </td>
-
-      <td>
-        Instrument your code by listing the target methods in an XML file. XML instrumentation is more complex than attribute instrumentation, and it will fail if you change the name of the assembly, class, or method you want to instrument. However, XML instrumentation does not require you to modify your source code.
-
-        For instructions, see [Create transactions via XML](/docs/agents/net-agent/instrumentation/net-custom-transactions) and [Add detail to transactions via XML](/docs/agents/net-agent/custom-instrumentation/add-detail-transactions-xml-net#blocking-instrumentation).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Creating transactions vs. adding detail [#new-existing]
 

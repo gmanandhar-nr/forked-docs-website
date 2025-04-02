@@ -36,57 +36,20 @@ To instrument your app, New Relic separates each path through your code into its
 
 Use these methods when New Relic is not instrumenting a particular part of your code at all:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Do this...
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Start timing a method New Relic is not instrumenting automatically
-      </td>
-
-      <td>
-        Create a new transaction. See [`newrelic.startWebTransaction()`](https://newrelic.github.io/node-newrelic/API.html#startWebTransaction).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Stop timing a method after its work is completed
-      </td>
-
-      <td>
-        Use either of these options:
+| If you want to... | Do this... |
+| - | - |
+| Start timing a method New Relic is not instrumenting automatically | Create a new transaction. See [`newrelic.startWebTransaction()`](https://newrelic.github.io/node-newrelic/API.html#startWebTransaction). |
+| Stop timing a method after its work is completed | Use either of these options:
 
         * Return a promise from the callback handed to [`newrelic.startWebTransaction`](https://newrelic.github.io/node-newrelic/API.html#startWebTransaction).
-        * Call `end` on a [handle](https://newrelic.github.io/node-newrelic/TransactionHandle.html) (GitHub) returned from [`newrelic.getTransaction`](https://newrelic.github.io/node-newrelic/API.html#getTransaction).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Prevent a transaction from reporting to New Relic
-      </td>
-
-      <td>
-        Ignore the transaction using any of these options:
+        * Call `end` on a [handle](https://newrelic.github.io/node-newrelic/TransactionHandle.html) (GitHub) returned from [`newrelic.getTransaction`](https://newrelic.github.io/node-newrelic/API.html#getTransaction). |
+| Prevent a transaction from reporting to New Relic | Ignore the transaction using any of these options:
 
         * See [Rules for ignoring requests](/docs/agents/nodejs-agent/supported-features/nodejs-agent-api#ignoring)`.`
-        * Call `ignore()` on a [handle](http://newrelic.github.io/node-newrelic/TransactionHandle.html) (GitHub) returned from [`newrelic.getTransaction`](https://newrelic.github.io/node-newrelic/API.html#getTransaction).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * Call `ignore()` on a [handle](http://newrelic.github.io/node-newrelic/TransactionHandle.html) (GitHub) returned from [`newrelic.getTransaction`](https://newrelic.github.io/node-newrelic/API.html#getTransaction). |
+
 
 For more information about create custom web transactions, see the [startWebTransaction example on GitHub](https://github.com/newrelic/newrelic-node-examples/tree/0a036fd669b4b47b8afbc7add8696980f799f0da/custom-instrumentation/start-web-transaction).
 

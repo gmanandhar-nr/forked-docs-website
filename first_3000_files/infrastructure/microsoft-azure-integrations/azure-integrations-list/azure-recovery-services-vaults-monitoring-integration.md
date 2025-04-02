@@ -34,38 +34,10 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Recovery Services Vaults metrics [#Azure-Recovery-Services-Vaults]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `BackupHealthEvent` | The count of health events pertaining to backup job health. |
+| `RestoreHealthEvent` | The count of health events pertaining to restore job health. |
 
-  <tbody>
-    <tr>
-      <td>
-        `BackupHealthEvent`
-      </td>
-
-      <td>
-        The count of health events pertaining to backup job health.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RestoreHealthEvent`
-      </td>
-
-      <td>
-        The count of health events pertaining to restore job health.
-      </td>
-    </tr>
-  </tbody>
-</table>

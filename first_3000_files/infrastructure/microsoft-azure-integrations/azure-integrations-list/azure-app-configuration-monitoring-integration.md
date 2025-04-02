@@ -36,58 +36,12 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure App Configuration metrics [#Azure-app-configuration]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `DailyStorageUsage` | Total storage usage of the store in percentage. Updated at minimum every 24 hours. |
+| `HttpIncomingRequestCount` | Total number of incoming HTTP requests. |
+| `HttpIncomingRequestDuration` | Latency on an HTTP request. |
+| `ThrottledHttpRequestCount` | Throttled HTTP requests. |
 
-  <tbody>
-    <tr>
-      <td>
-        `DailyStorageUsage`
-      </td>
-
-      <td>
-        Total storage usage of the store in percentage. Updated at minimum every 24 hours.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HttpIncomingRequestCount`
-      </td>
-
-      <td>
-        Total number of incoming HTTP requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HttpIncomingRequestDuration`
-      </td>
-
-      <td>
-        Latency on an HTTP request.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ThrottledHttpRequestCount`
-      </td>
-
-      <td>
-        Throttled HTTP requests.
-      </td>
-    </tr>
-  </tbody>
-</table>

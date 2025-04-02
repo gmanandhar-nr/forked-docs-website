@@ -73,41 +73,13 @@ Listing the available metric names for your application can be a very intensive 
 
 Follow these guidelines to optimize your use:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Listing metric names
-      </th>
+# Table
 
-      <th>
-        Guidelines
-      </th>
-    </tr>
-  </thead>
+| Listing metric names | Guidelines |
+| - | - |
+| Metric names | Carefully consider the metric names you need. If you know any part of the metric name, use the `name=` filter to limit the amount of data returned. This filter is a simple character match (no regular expression is available), but it can significantly reduce the amount of data retrieved. |
+| Cache | Once you get your metric names, consider caching this list for future use. In most cases the metric names are not volatile and can be reused, saving processing time. |
 
-  <tbody>
-    <tr>
-      <td>
-        Metric names
-      </td>
-
-      <td>
-        Carefully consider the metric names you need. If you know any part of the metric name, use the `name=` filter to limit the amount of data returned. This filter is a simple character match (no regular expression is available), but it can significantly reduce the amount of data retrieved.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Cache
-      </td>
-
-      <td>
-        Once you get your metric names, consider caching this list for future use. In most cases the metric names are not volatile and can be reused, saving processing time.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## List metric names for your app [#view_app_metrics_names]
 

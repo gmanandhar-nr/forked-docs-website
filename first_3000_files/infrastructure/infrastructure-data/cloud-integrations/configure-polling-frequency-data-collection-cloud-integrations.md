@@ -66,119 +66,31 @@ For some cloud integrations, an additional number of calls to the cloud provider
 
 To better control the amount of API calls that are sent to your cloud account for these integrations, you can specify when you need these types of data to be collected. Different data collection toggles are available, depending on the integration.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Toggle
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Toggle | Description |
+| - | - |
+| **Collect tags** | Some integrations require additional API calls to the cloud provider to report tags. Tag collection is enabled by default.
 
-  <tbody>
-    <tr>
-      <td id="collect_tags">
-        <DNT>
-          **Collect tags**
-        </DNT>
-      </td>
+        Switch this to **Off** if you don't want the integration to collect your cloud resource tags and thus reduce the volume of API calls. |
+| **Collect [extended inventory](#extended-impact)** | Some integrations can collect extended inventory metadata about your cloud resources by making additional API calls to the cloud provider. The metadata included within the extended inventory for each cloud integration is described in the integration documentation.
 
-      <td>
-        Some integrations require additional API calls to the cloud provider to report tags. Tag collection is enabled by default.
+        Extended inventory collection is **disabled by default**.
 
-        Switch this to <DNT>**Off**</DNT> if you don't want the integration to collect your cloud resource tags and thus reduce the volume of API calls.
-      </td>
-    </tr>
+        Switch this to **On** if you want to monitor extended inventory. This will increase the volume of API calls. |
+| **Collect shards data** | Available for AWS Kinesis Streams integration.
 
-    <tr>
-      <td id="extended">
-        <DNT>
-          **Collect [extended inventory](#extended-impact)**
-        </DNT>
-      </td>
+        By default, we don't report shard metrics. Switch this to **On** if you want to monitor shard metrics in addition to data stream metrics. |
+| **Collect node data** | Available for AWS Elasticsearch integration.
 
-      <td>
-        Some integrations can collect extended inventory metadata about your cloud resources by making additional API calls to the cloud provider. The metadata included within the extended inventory for each cloud integration is described in the integration documentation.
+        By default, we don't report Elasticsearch node metrics. Switch this to **On** if you want to monitor node metrics in addition to cluster metrics. |
+| **Collect NAT Gateway data** and **Collect VPN data** | Available for AWS VPC integration.
 
-        Extended inventory collection is <DNT>**disabled by default**</DNT>.
+        By default, we don't report NAT Gateway nor VPN metrics. Switch these to **On** if you want to monitor NAT Gateway and VPN metrics and inventory, in addition to other VPC related entities inventory. |
+| **Collect IP addresses** | Available for AWS EC2 integration.
 
-        Switch this to <DNT>**On**</DNT> if you want to monitor extended inventory. This will increase the volume of API calls.
-      </td>
-    </tr>
+        By default, we collect EC2 instance metadata that includes public and private IP addresses, and network interface details. Switch this to **Off** if you don't want New Relic to store and display these IP data. |
 
-    <tr>
-      <td id="shards">
-        <DNT>
-          **Collect shards data**
-        </DNT>
-      </td>
-
-      <td>
-        Available for AWS Kinesis Streams integration.
-
-        By default, we don't report shard metrics. Switch this to <DNT>**On**</DNT> if you want to monitor shard metrics in addition to data stream metrics.
-      </td>
-    </tr>
-
-    <tr id="lambda-edge">
-      <td>
-        <DNT>
-          **Collect Lambda@Edge data**
-        </DNT>
-      </td>
-
-      <td>
-        Available for AWS CloudFront integration.
-
-        By default, we don't report Lambda@Edge data. Switch this to <DNT>**On**</DNT> if you're using Lambda@Edge in AWS CloudFront and want to get Lambda execution location metadata.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Collect node data**
-        </DNT>
-      </td>
-
-      <td>
-        Available for AWS Elasticsearch integration.
-
-        By default, we don't report Elasticsearch node metrics. Switch this to <DNT>**On**</DNT> if you want to monitor node metrics in addition to cluster metrics.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**Collect NAT Gateway data**</DNT> and <DNT>**Collect VPN data**</DNT>
-      </td>
-
-      <td>
-        Available for AWS VPC integration.
-
-        By default, we don't report NAT Gateway nor VPN metrics. Switch these to <DNT>**On**</DNT> if you want to monitor NAT Gateway and VPN metrics and inventory, in addition to other VPC related entities inventory.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Collect IP addresses**
-        </DNT>
-      </td>
-
-      <td>
-        Available for AWS EC2 integration.
-
-        By default, we collect EC2 instance metadata that includes public and private IP addresses, and network interface details. Switch this to <DNT>**Off**</DNT> if you don't want New Relic to store and display these IP data.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Filters
 

@@ -61,51 +61,14 @@ To stream logs to the Lambda function:
 
 You can configure traffic logs from within AWS in three modes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Type
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Type | Description |
+| - | - |
+| Accepted traffic | Logs will only capture traffic in the right |
+| Rejected traffic | Logs will only reflect rejected traffic |
+| All traffic | Logs will show both accepted and rejected traffic |
 
-  <tbody>
-    <tr>
-      <td>
-        Accepted traffic
-      </td>
-
-      <td>
-        Logs will only capture traffic in the right
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Rejected traffic
-      </td>
-
-      <td>
-        Logs will only reflect rejected traffic
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        All traffic
-      </td>
-
-      <td>
-        Logs will show both accepted and rejected traffic
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Polling frequency [#polling]
 

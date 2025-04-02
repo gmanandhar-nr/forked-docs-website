@@ -207,50 +207,18 @@ Muting rules override specific incidents. They don't disable existing policies o
 
 The following table describes how the alerts incident lifecycle is affected by muted incidents:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        IF
-      </th>
+# Table
 
-      <th>
-        THEN
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td
+| IF | THEN |
+| - | - |
+| <td
         colSpan={3}
         style={{ backgroundColor: "rgb(238, 238, 238)" }}
       >
-        <DNT>Event</DNT>: Issue is activated
-      </td>
-    </tr>
+        Event: Issue is activated |
+| An issue is activated because of an incident that is not muted | Notifications for this issue will be sent. |
+| An issue is activated due to an incident that is muted | Notifications for this issue will not be sent (muted). |
 
-    <tr>
-      <td>
-        An issue is activated because of an incident that is not muted
-      </td>
-
-      <td>
-        Notifications for this issue will be sent.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        An issue is activated due to an incident that is muted
-      </td>
-
-      <td>
-        Notifications for this issue will not be sent (muted).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Muting behavior with workflows [#workflow-behavior]
 

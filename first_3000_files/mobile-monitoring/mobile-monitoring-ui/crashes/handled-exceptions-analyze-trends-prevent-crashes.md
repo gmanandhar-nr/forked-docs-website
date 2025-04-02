@@ -182,82 +182,32 @@ The <DNT>**Occurrences**</DNT> page shows details about the selected exception, 
   <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Mobile > (select an app) > Exceptions > Handled exceptions > (select an exception) > Occurrences:**</DNT> Use the thread details to further examine patterns in the stack trace for a handled exception.
 </figcaption>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **If you want to...** | **Do this** |
+| - | - |
+| Find general patterns | From the **Occurrences** page:
 
-  <tbody>
-    <tr>
-      <td>
-        Find general patterns
-      </td>
-
-      <td>
-        From the <DNT>**Occurrences**</DNT> page:
-
-        * Review the selected occurrence's <DNT>**Summary**</DNT> information.
-        * Compare the <DNT>**Occurrence by version**</DNT> and <DNT>**Breakdown of handled exception type**</DNT> charts.
-        * On the <DNT>**Breakdown of handled exception type**</DNT> chart, toggle between `Device type` and `OS version`.
+        * Review the selected occurrence's **Summary** information.
+        * Compare the **Occurrence by version** and **Breakdown of handled exception type** charts.
+        * On the **Breakdown of handled exception type** chart, toggle between `Device type` and `OS version`.
         * Use the [time picker](/docs/query-your-data/explore-query-data/dashboards/manage-your-dashboard/#dash-time-picker) to adjust the currently selected time period.
-        * To look for other patterns, select <DNT>**Back to handled exceptions**</DNT>.
-      </td>
-    </tr>
+        * To look for other patterns, select **Back to handled exceptions**. |
+| Find more specific patterns | Do any of the following:
 
-    <tr>
-      <td>
-        Find more specific patterns
-      </td>
-
-      <td>
-        Do any of the following:
-
-        * From the top of the page, select a specific <DNT>**Version**</DNT>, or select one or more <DNT>**Filter**</DNT>.
+        * From the top of the page, select a specific **Version**, or select one or more **Filter**.
         * Examine the data in the thread.
-        * From the <DNT>**Stack trace**</DNT> details, scroll through the number of occurrences.
-        * Use the [time picker](/docs/query-your-data/explore-query-data/dashboards/manage-your-dashboard/#dash-time-picker) to adjust the currently selected time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Find patterns from attributes
-      </td>
-
-      <td>
-        Review the lists of [`MobileHandledException`attributes](/docs/insights/insights-data-sources/default-data/mobile-events-attributes#mobilehandledexception-attributes) related to the occurrence, including:
+        * From the **Stack trace** details, scroll through the number of occurrences.
+        * Use the [time picker](/docs/query-your-data/explore-query-data/dashboards/manage-your-dashboard/#dash-time-picker) to adjust the currently selected time period. |
+| Find patterns from attributes | Review the lists of [`MobileHandledException`attributes](/docs/insights/insights-data-sources/default-data/mobile-events-attributes#mobilehandledexception-attributes) related to the occurrence, including:
 
         * Handled exceptions
         * Device
         * Connection
         * Location
-        * Other, such as [custom attributes](/docs/insights/insights-data-sources/custom-events/insert-custom-events-attributes-mobile-data) you created
-      </td>
-    </tr>
+        * Other, such as [custom attributes](/docs/insights/insights-data-sources/custom-events/insert-custom-events-attributes-mobile-data) you created |
+| Query or visualize the occurrence data | Use New Relic to [query the data](/docs/insights/nrql-new-relic-query-language/using-nrql/query-page-create-edit-nrql-queries) or to [create dashboards](/docs/insights/use-insights-ui/manage-dashboards/create-edit-copy-insights-dashboards) that you can view or share. |
 
-    <tr>
-      <td>
-        Query or visualize the occurrence data
-      </td>
-
-      <td>
-        Use New Relic to [query the data](/docs/insights/nrql-new-relic-query-language/using-nrql/query-page-create-edit-nrql-queries) or to [create dashboards](/docs/insights/use-insights-ui/manage-dashboards/create-edit-copy-insights-dashboards) that you can view or share.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Event trails for an occurrence [#event-trail]
 

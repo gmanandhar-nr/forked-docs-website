@@ -80,155 +80,35 @@ class { 'newrelic_installer::install':
 
 Here are the parameters for the `newrelic_installer::install` public class:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Type
-      </th>
-
-      <th>
-        IsRequired
-      </th>
-
-      <th>
-        Parameter description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `targets`
-      </td>
-
-      <td>
-        String
-      </td>
-
-      <td>
-        Required
-      </td>
-
-      <td>
-        Specifies target to be instrumented with New Relic.
+| Parameter | Type | IsRequired | Parameter description |
+| - | - | - | - |
+| `targets` | String | Required | Specifies target to be instrumented with New Relic.
 
         Supported values include:
 
         * `'infrastructure'` - New Relic infrastructure agent
         * `'logs'` - Logs integration for New Relic infrastructure agent. \*_requires `'infrastructure'`_
-        * `'php'` - New Relic PHP APM agent
-      </td>
-    </tr>
+        * `'php'` - New Relic PHP APM agent |
+| `environment_variables` | Hash | Required | Hash of environment variables to set prior to execution.
 
-    <tr>
-      <td>
-        `environment_variables`
-      </td>
-
-      <td>
-        Hash
-      </td>
-
-      <td>
-        Required
-      </td>
-
-      <td>
-        Hash of environment variables to set prior to execution.
-
-        * `NEW_RELIC_API_KEY`: your New Relic [user key](/docs/apis/intro-apis/new-relic-api-keys). <DNT>**Required**</DNT>.
-        * `NEW_RELIC_ACCOUNT_ID`: your New Relic account ID. <DNT>**Required**</DNT>.
+        * `NEW_RELIC_API_KEY`: your New Relic [user key](/docs/apis/intro-apis/new-relic-api-keys). **Required**.
+        * `NEW_RELIC_ACCOUNT_ID`: your New Relic account ID. **Required**.
         * `NEW_RELIC_REGION`: your [data center region](/docs/accounts/accounts-billing/account-setup/choose-your-data-center) (`US` or `EU`). Defaults to `US`.
-        * `NEW_RELIC_APPLICATION_NAME`: used by `'php'`. This config option sets the application name that data is reported under in APM. Defaults to `'PHP Application'` if not specified.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `verbosity`
-      </td>
-
-      <td>
-        String
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Specifies command output verbosity
+        * `NEW_RELIC_APPLICATION_NAME`: used by `'php'`. This config option sets the application name that data is reported under in APM. Defaults to `'PHP Application'` if not specified. |
+| `verbosity` | String | Optional | Specifies command output verbosity
 
         Supported values include
 
         * `debug`
-        * `trace`
-      </td>
-    </tr>
+        * `trace` |
+| `tags` | Hash | Optional | Hash of tags associated with entities instrumented with New Relic. Examples:
 
-    <tr>
-      <td>
-        `tags`
-      </td>
-
-      <td>
-        Hash
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Hash of tags associated with entities instrumented with New Relic. Examples:
-
-        * `{'key-name' => 'value', 'foo' => 'bar'}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `proxy`
-      </td>
-
-      <td>
-        String
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Sets the proxy server the agent should use. Examples:
+        * `{'key-name' => 'value', 'foo' => 'bar'}` |
+| `proxy` | String | Optional | Sets the proxy server the agent should use. Examples:
 
         * `https://myproxy.foo.com:8080`
-        * `http://10.10.254.254`
-      </td>
-    </tr>
+        * `http://10.10.254.254` |
+| `install_timeout_seconds` | Integer | Optional | Sets the timeout in seconds for New Relic installations.  Default is `600`. |
 
-    <tr>
-      <td>
-        `install_timeout_seconds`
-      </td>
-
-      <td>
-        Integer
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Sets the timeout in seconds for New Relic installations.  Default is `600`.
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -176,27 +176,11 @@ Want to try out our .NET agent? [Create a New Relic account](https://newrelic.co
         >
             The agent has been verified to work with the following operating systems:
 
-            <table>
-            <thead>
-                <tr>
-                <th style={{ width: "150px" }}>
-                    Operating system
-                </th>
+            # Table
 
-                <th>
-                    Supported versions
-                </th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                <td>
-                    Windows (32- and 64-bit Intel compatible architectures)
-                </td>
-
-                <td>
-                    * Windows Server 2008 R2 SP1
+| Operating system | Supported versions |
+| - | - |
+| Windows (32- and 64-bit Intel compatible architectures) | * Windows Server 2008 R2 SP1
                     * Windows Server 2012
                     * Windows Server 2012 R2
                     * Windows Server 2016
@@ -204,32 +188,11 @@ Want to try out our .NET agent? [Create a New Relic account](https://newrelic.co
                     * Windows Server 2022
                     * Windows 10
                     * Windows 11
-                    * Windows containers running on Server 2016 (NanoServer based images are not supported)
-                </td>
-                </tr>
+                    * Windows containers running on Server 2016 (NanoServer based images are not supported) |
+| Linux (64-bit Intel compatible only) | All x64 Linux distributions supported by the .NET Core 2.0+/.NET 5+ runtime are supported by the .NET agent. For a full list, refer to Microsoft's documentation for the version of the runtime you are using. |
+| Linux (ARM64/aarch64 architectures) | All ARM64 Linux distributions supported by the .NET 5+ runtime are supported by the .NET agent, with the following known exceptions:
+                    * Alpine Linux |
 
-                <tr>
-                <td>
-                    Linux (64-bit Intel compatible only)
-                </td>
-
-                <td>
-                    All x64 Linux distributions supported by the .NET Core 2.0+/.NET 5+ runtime are supported by the .NET agent. For a full list, refer to Microsoft's documentation for the version of the runtime you are using.
-                </td>
-                </tr>
-
-                <tr>
-                <td>
-                    Linux (ARM64/aarch64 architectures)
-                </td>
-
-                <td>
-                    All ARM64 Linux distributions supported by the .NET 5+ runtime are supported by the .NET agent, with the following known exceptions:
-                    * Alpine Linux
-                </td>
-                </tr>
-            </tbody>
-            </table>
         </Collapser>
 
         <Collapser

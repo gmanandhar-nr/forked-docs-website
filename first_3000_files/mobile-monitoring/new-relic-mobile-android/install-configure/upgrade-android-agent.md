@@ -29,54 +29,20 @@ If you have previously installed version 2 or 3 of the Android SDK: Go to <DNT>*
 
 If you have previously installed version 1 of the Android SDK, follow these [one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) >
 
-<table>
-  <thead>
-    <tr>
-      <th width={75}>
-        <DNT>
-          **Step**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Notes**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Step** | **Notes** |
+| - | - |
+| 1. | **Open your AndroidManifest.xml file, and remove the `NewRelicApplication` class.**
+        
 
-  <tbody>
-    <tr>
-      <td>
-        1.
-      </td>
+        When you first ran **nrandroid-setup**, the `NewRelicApplication` class was added to your `AndroidManifest.xml` file. This has been removed from the New Relic SDK and is no longer necessary.
 
-      <td>
-        <DNT>
-          **Open your AndroidManifest.xml file, and remove the `NewRelicApplication` class.**
-        </DNT>
+        If you had an existing `Application` subclass and modified it to inherit from `NewRelicApplication`, update your subclass to inherit from `Application` instead. |
+| 2. | **Stop using `nrandroid-ant`.**
+        
 
-        When you first ran <DNT>**nrandroid-setup**</DNT>, the `NewRelicApplication` class was added to your `AndroidManifest.xml` file. This has been removed from the New Relic SDK and is no longer necessary.
+        The  capability no longer requires the custom Ant wrapper script for Android applications. Once you upgrade, simply use your standard build tools.
 
-        If you had an existing `Application` subclass and modified it to inherit from `NewRelicApplication`, update your subclass to inherit from `Application` instead.
-      </td>
-    </tr>
+        If you modified an existing Maven configuration to invoke the mobile build steps, remove those modifications, and use the revised build instructions. |
 
-    <tr>
-      <td>
-        2.
-      </td>
-
-      <td>
-        <DNT>
-          **Stop using `nrandroid-ant`.**
-        </DNT>
-
-        The <InlinePopover type="mobile"/> capability no longer requires the custom Ant wrapper script for Android applications. Once you upgrade, simply use your standard build tools.
-
-        If you modified an existing Maven configuration to invoke the mobile build steps, remove those modifications, and use the revised build instructions.
-      </td>
-    </tr>
-  </tbody>
-</table>

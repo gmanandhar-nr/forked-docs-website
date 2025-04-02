@@ -55,101 +55,19 @@ This integration collects the following data from all ElastiCache instances:
   For full descriptions, see [Amazon ElastiCache Metrics and Dimensions](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/elasticache-metricscollected.html).
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "285px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Data type
-      </th>
-    </tr>
-  </thead>
+| Name | Data type |
+| - | - |
+| `CPUUtilization` | percent |
+| `CpuCreditUsage` | count |
+| `CpuCreditBalance` | count |
+| `DatabaseMemoryUsagePercentage` | percent |
+| `FreeableMemory` | bytes |
+| `NetworkBytesIn` | bytes |
+| `NetworkBytesOut` | bytes |
+| `SwapUsage` | bytes |
 
-  <tbody>
-    <tr>
-      <td>
-        `CPUUtilization`
-      </td>
-
-      <td>
-        percent
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuCreditUsage`
-      </td>
-
-      <td>
-        count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuCreditBalance`
-      </td>
-
-      <td>
-        count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DatabaseMemoryUsagePercentage`
-      </td>
-
-      <td>
-        percent
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FreeableMemory`
-      </td>
-
-      <td>
-        bytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkBytesIn`
-      </td>
-
-      <td>
-        bytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkBytesOut`
-      </td>
-
-      <td>
-        bytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SwapUsage`
-      </td>
-
-      <td>
-        bytes
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Redis-specific ElastiCache data [#redis-specific]
 

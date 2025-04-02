@@ -33,57 +33,16 @@ You can drag and drop, or upload, a source map file into the browser UI to assoc
 
 Other JS error frame features include:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this...**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        See more of the surrounding code
-      </td>
-
-      <td>
-        Select `Show 10 more lines above/below` to view the code before or after the code in the stack trace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        See original, minified file information
-      </td>
-
-      <td>
-        * For individual frame info: Next to the frame's source line and column, mouse over the <Icon name="fe-more-horizontal"/>
+| **If you want to...** | **Do this...** |
+| - | - |
+| See more of the surrounding code | Select `Show 10 more lines above/below` to view the code before or after the code in the stack trace. |
+| See original, minified file information | * For individual frame info: Next to the frame's source line and column, mouse over the 
           ellipsis.
-        * For raw data of the entire stack trace: At the top of the error tab, select <DNT>**&lt;/> Raw**</DNT>.
-      </td>
-    </tr>
+        * For raw data of the entire stack trace: At the top of the error tab, select **&lt;/> Raw**. |
+| Remove a source map | From an expanded stack trace frame, select **Remove file**. |
 
-    <tr>
-      <td>
-        Remove a source map
-      </td>
-
-      <td>
-        From an expanded stack trace frame, select <DNT>**Remove file**</DNT>.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Troubleshooting [#troubleshoot]
 

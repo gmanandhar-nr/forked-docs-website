@@ -36,489 +36,55 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Data Explorer metrics [#Azure-data-explorer]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
+
+| Metric | Description |
+| - | - |
+| `BatchBlobCount` | Number of data sources in an aggregated batch for ingestion. |
+| `BatchDuration` | The duration of the aggregation phase in the ingestion flow. |
+| `BatchesProcessed` | Number of batches aggregated for ingestion. Batching Type: whether the batch reached batching time, data size or number of files limit set by batching policy. |
+| `BatchSize` | Uncompressed expected data size in an aggregated batch for ingestion. |
+| `BlobsDropped` | Number of BLOBs permanently rejected by a component. |
+| `BlobsProcessed` | Number of BLOBs processed by a component. |
+| `BlobsReceived` | Number of BLOBs received from input stream by a component. |
+| `CacheUtilizationFactor` | Percentage of utilized disk space dedicated for hot cache in the cluster. 100% means that the disk space assigned to hot data is optimally utilized. No action is needed in terms of the cache size. More than 100% means that the cluster's disk space is not large enough to accommodate the hot data, as defined by your caching policies. To ensure that sufficient space is available for all the hot data, the amount of hot data needs to be reduced or the cluster needs to be scaled out. Enabling auto scale is recommended. |
+| `ContinuousExportMaxLatenessMinutes` | The lateness (in minutes) reported by the continuous export jobs in the cluster. |
+| `ContinuousExportNumOfRecordsExported` | Number of records exported, fired for every storage artifact written during the export operation. |
+| `ContinuousExportPendingCount` | The number of pending continuous export jobs ready for execution. |
+| `ContinuousExportResult` | Indicates whether Continuous Export succeeded or failed. |
+| `CPU` | CPU utilization level. |
+| `DiscoveryLatency` | Reported by data connections (if exist). Time in seconds from when a message is enqueued or event is created until it is discovered by data connection. This time is not included in the Azure Data Explorer total ingestion duration. |
+| `EventsDropped` | Number of events dropped permanently by data connection. An Ingestion result metric with a failure reason will be sent. |
+| `EventsProcessed` | Number of events processed by the cluster. |
+| `EventsProcessedForEventHubs` | Number of events processed by the cluster when ingesting from Event/IoT Hub. |
+| `EventsReceived` | Number of events received by data connection. |
+| `ExportUtilization` | Export utilization. |
+| `FollowerLatency` | The follower databases synchronize changes in the leader databases. Because of the synchronization, there's a data lag of a few seconds to a few minutes in data availability.This metric measures the length of the time lag. The time lag depends on the overall size of the leader database metadata.This is a cluster level metrics: the followers catch metadata of all databases that are followed. This metric represents the latency of the process. |
+| `IngestionLatencyInSeconds` | Latency of data ingested, from the time the data was received in the cluster until it's ready for query. The ingestion latency period depends on the ingestion scenario. |
+| `IngestionResult` | Total number of sources that either failed or succeeded to be ingested. Splitting the metric by status, you can get detailed information about the status of the ingestion operations. |
+| `IngestionUtilization` | Ratio of used ingestion slots in the cluster. |
+| `IngestionVolumeInMB` | Overall volume of ingested data to the cluster. |
+| `InstanceCount` | Total instance count. |
+| `KeepAlive` | Sanity check indicates the cluster responds to queries. |
+| `TotalNodeCountMaterializedViewAgeMinutes` | The materialized view age in minutes. |
+| `MaterializedViewAgeSeconds` | The materialized view age in seconds. |
+| `MaterializedViewDataLoss` | Indicates potential data loss in materialized view. |
+| `MaterializedViewExtentsRebuild` | Number of extents rebuild. |
+| `MaterializedViewHealth` | The health of the materialized view (1 for healthy, 0 for non-healthy). |
+| `MaterializedViewRecordsInDelta` | The number of records in the non-materialized part of the view. |
+| `MaterializedViewResult` | The result of the materialization process. |
+| `QueryDuration` | Queries duration in seconds. |
+| `QueryResult` | Total number of queries. |
+| `QueueLength` | Number of pending messages in a component's queue. |
+| `QueueOldestMessage` | Time in seconds from when the oldest message in queue was inserted. |
+| `ReceivedDataSizeBytes` | Size of data received by data connection. This is the size of the data stream, or of raw data size if provided. |
+| `StageLatency` | Cumulative time from when a message is discovered until it is received by the reporting component for processing (discovery time is set when message is enqueued for ingestion queue, or when discovered by data connection). |
+| `StreamingIngestDataRate` | Streaming ingest data rate. |
+| `StreamingIngestDuration` | Streaming ingest duration in milliseconds. |
+| `StreamingIngestResults` | Streaming ingest result. |
+| `TotalNumberOfConcurrentQueries` | Total number of concurrent queries. |
+| `TotalNumberOfExtents` | Total number of data extents. |
+| `TotalNumberOfThrottledCommands` | Total number of throttled commands. |
+| `TotalNumberOfThrottledQueries` | Total number of throttled queries. |
+| `WeakConsistencyLatency` | The max latency between the previous metadata sync and the next one (in DB/node scope). |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `BatchBlobCount`
-      </td>
-
-      <td>
-        Number of data sources in an aggregated batch for ingestion.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BatchDuration`
-      </td>
-
-      <td>
-        The duration of the aggregation phase in the ingestion flow.
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BatchesProcessed`
-      </td>
-
-      <td>
-        Number of batches aggregated for ingestion. Batching Type: whether the batch reached batching time, data size or number of files limit set by batching policy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BatchSize`
-      </td>
-
-      <td>
-        Uncompressed expected data size in an aggregated batch for ingestion.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BlobsDropped`
-      </td>
-
-      <td>
-        Number of BLOBs permanently rejected by a component.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BlobsProcessed`
-      </td>
-
-      <td>
-        Number of BLOBs processed by a component.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BlobsReceived`
-      </td>
-
-      <td>
-        Number of BLOBs received from input stream by a component.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CacheUtilizationFactor`
-      </td>
-
-      <td>
-        Percentage of utilized disk space dedicated for hot cache in the cluster. 100% means that the disk space assigned to hot data is optimally utilized. No action is needed in terms of the cache size. More than 100% means that the cluster's disk space is not large enough to accommodate the hot data, as defined by your caching policies. To ensure that sufficient space is available for all the hot data, the amount of hot data needs to be reduced or the cluster needs to be scaled out. Enabling auto scale is recommended.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ContinuousExportMaxLatenessMinutes`
-      </td>
-
-      <td>
-        The lateness (in minutes) reported by the continuous export jobs in the cluster.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ContinuousExportNumOfRecordsExported`
-      </td>
-
-      <td>
-        Number of records exported, fired for every storage artifact written during the export operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ContinuousExportPendingCount`
-      </td>
-
-      <td>
-        The number of pending continuous export jobs ready for execution.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ContinuousExportResult`
-      </td>
-
-      <td>
-        Indicates whether Continuous Export succeeded or failed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPU`
-      </td>
-
-      <td>
-        CPU utilization level.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiscoveryLatency`
-      </td>
-
-      <td>
-        Reported by data connections (if exist). Time in seconds from when a message is enqueued or event is created until it is discovered by data connection. This time is not included in the Azure Data Explorer total ingestion duration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EventsDropped`
-      </td>
-
-      <td>
-        Number of events dropped permanently by data connection. An Ingestion result metric with a failure reason will be sent.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EventsProcessed`
-      </td>
-
-      <td>
-        Number of events processed by the cluster.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EventsProcessedForEventHubs`
-      </td>
-
-      <td>
-        Number of events processed by the cluster when ingesting from Event/IoT Hub.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EventsReceived`
-      </td>
-
-      <td>
-        Number of events received by data connection.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ExportUtilization`
-      </td>
-
-      <td>
-        Export utilization.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FollowerLatency`
-      </td>
-
-      <td>
-        The follower databases synchronize changes in the leader databases. Because of the synchronization, there's a data lag of a few seconds to a few minutes in data availability.This metric measures the length of the time lag. The time lag depends on the overall size of the leader database metadata.This is a cluster level metrics: the followers catch metadata of all databases that are followed. This metric represents the latency of the process.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngestionLatencyInSeconds`
-      </td>
-
-      <td>
-        Latency of data ingested, from the time the data was received in the cluster until it's ready for query. The ingestion latency period depends on the ingestion scenario.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngestionResult`
-      </td>
-
-      <td>
-        Total number of sources that either failed or succeeded to be ingested. Splitting the metric by status, you can get detailed information about the status of the ingestion operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngestionUtilization`
-      </td>
-
-      <td>
-        Ratio of used ingestion slots in the cluster.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngestionVolumeInMB`
-      </td>
-
-      <td>
-        Overall volume of ingested data to the cluster.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstanceCount`
-      </td>
-
-      <td>
-        Total instance count.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KeepAlive`
-      </td>
-
-      <td>
-        Sanity check indicates the cluster responds to queries.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalNodeCountMaterializedViewAgeMinutes`
-      </td>
-
-      <td>
-        The materialized view age in minutes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MaterializedViewAgeSeconds`
-      </td>
-
-      <td>
-        The materialized view age in seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MaterializedViewDataLoss`
-      </td>
-
-      <td>
-        Indicates potential data loss in materialized view.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MaterializedViewExtentsRebuild`
-      </td>
-
-      <td>
-        Number of extents rebuild.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MaterializedViewHealth`
-      </td>
-
-      <td>
-        The health of the materialized view (1 for healthy, 0 for non-healthy).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MaterializedViewRecordsInDelta`
-      </td>
-
-      <td>
-        The number of records in the non-materialized part of the view.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MaterializedViewResult`
-      </td>
-
-      <td>
-        The result of the materialization process.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `QueryDuration`
-      </td>
-
-      <td>
-        Queries duration in seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `QueryResult`
-      </td>
-
-      <td>
-        Total number of queries.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `QueueLength`
-      </td>
-
-      <td>
-        Number of pending messages in a component's queue.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `QueueOldestMessage`
-      </td>
-
-      <td>
-        Time in seconds from when the oldest message in queue was inserted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReceivedDataSizeBytes`
-      </td>
-
-      <td>
-        Size of data received by data connection. This is the size of the data stream, or of raw data size if provided.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StageLatency`
-      </td>
-
-      <td>
-        Cumulative time from when a message is discovered until it is received by the reporting component for processing (discovery time is set when message is enqueued for ingestion queue, or when discovered by data connection).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StreamingIngestDataRate`
-      </td>
-
-      <td>
-        Streaming ingest data rate.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StreamingIngestDuration`
-      </td>
-
-      <td>
-        Streaming ingest duration in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StreamingIngestResults`
-      </td>
-
-      <td>
-        Streaming ingest result.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalNumberOfConcurrentQueries`
-      </td>
-
-      <td>
-        Total number of concurrent queries.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalNumberOfExtents`
-      </td>
-
-      <td>
-        Total number of data extents.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalNumberOfThrottledCommands`
-      </td>
-
-      <td>
-        Total number of throttled commands.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalNumberOfThrottledQueries`
-      </td>
-
-      <td>
-        Total number of throttled queries.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WeakConsistencyLatency`
-      </td>
-
-      <td>
-        The max latency between the previous metadata sync and the next one (in DB/node scope).
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -287,92 +287,42 @@ The following properties are not available in the .NET agent v9.0. Please visit 
   >
     The capture attributes flag on `browserMonitoring`, `transactionTracer`, `transactionEvents`, and `errorCollector` is obsolete. Instead, use the `attributes` sub-element to configure attribute settings for each of these destinations.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            <DNT>
-              **New property**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Example**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| **New property** | **Example** |
+| - | - |
+| [`browserMonitoring`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#browser-attributes) | ```xml
+            
+              
+                myKey.*
+                myKey.foo
+              
+            
+            ``` |
+| [`transactionTracer`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#tracer-attributes) | ```xml
+            
+              
+                myKey.*
+                myKey.foo
+              
+            
+            ``` |
+| [`transactionEvents`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#paragrp-attributes) | ```xml
+            
+              
+                myKey.*
+                myKey.foo
+              
+            
+            ``` |
+| [`errorCollector`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#error-attributes) | ```xml
+            
+              
+                myKey.*
+                myKey.foo
+              
+            >
+            ``` |
 
-      <tbody>
-        <tr>
-          <td>
-            [`browserMonitoring`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#browser-attributes)
-          </td>
-
-          <td>
-            ```xml
-            <browserMonitoring enabled="true">
-              <attributes enabled="false">
-                <include>myKey.*</include>
-                <exclude>myKey.foo</exclude>
-              </attributes>
-            </browserMonitoring>
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [`transactionTracer`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#tracer-attributes)
-          </td>
-
-          <td>
-            ```xml
-            <transactionTracer enabled="true">
-              <attributes enabled="false">
-                <include>myKey.*</include>
-                <exclude>myKey.foo</exclude>
-              </attributes>
-            </transactionTracer>
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [`transactionEvents`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#paragrp-attributes)
-          </td>
-
-          <td>
-            ```xml
-            <transactionEvents enabled="true">
-              <attributes enabled="false">
-                <include>myKey.*</include>
-                <exclude>myKey.foo</exclude>
-              </attributes>
-            </transactionEvents>
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [`errorCollector`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#error-attributes)
-          </td>
-
-          <td>
-            ```xml
-            <errorCollector enabled="true">
-              <attributes enabled="false">
-                <include>myKey.*</include>
-                <exclude>myKey.foo</exclude>
-              </attributes>
-            </errorCollector>>
-            ```
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 </CollapserGroup>

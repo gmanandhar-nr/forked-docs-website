@@ -84,254 +84,55 @@ These are some of the most commonly used NerdGraph features:
 
 Here are all our available NerdGraph docs:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "240px" }}>
-        Topic
-      </th>
+# Table
 
-      <th>
-        Tutorials
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Account management
-      </td>
-
-      <td>
-        * [Manage accounts](/docs/apis/nerdgraph/examples/manage-accounts-nerdgraph)
+| Topic | Tutorials |
+| - | - |
+| Account management | * [Manage accounts](/docs/apis/nerdgraph/examples/manage-accounts-nerdgraph)
         * [Manage users](/docs/apis/nerdgraph/examples/nerdgraph-manage-users)
         * [Manage user groups](/docs/apis/nerdgraph/examples/nerdgraph-user-mgmt)
-        * [Create and manage API keys](/docs/apis/nerdgraph/examples/use-nerdgraph-manage-license-keys-user-keys) (data ingest keys, and user keys)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Alerts
-      </td>
-
-      <td>
-        * For New Relic alerts: see [all alert-related tutorials](/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/alerts-nerdgraph/nerdgraph-api-examples)
-        * For alert correlation: [Configuring topology for incident correlation](/docs/apis/nerdgraph/examples/topology-nerdgraph-tutorial)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <InlinePopover type="apm"/> agents
-      </td>
-
-      <td>
-        [APM agent configuration](/docs/apis/nerdgraph/examples/apm-config-nerdgraph)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <InlinePopover type="browser"/>
-      </td>
-
-      <td>
-        * [Install browser agent and configure monitoring](/docs/apis/nerdgraph/examples/browser-monitoring-config-nerdgraph)
-        * [Instrument multiple apps using NPM package](/docs/apis/nerdgraph/examples/combining-npm-nerdgraph)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Change tracking
-      </td>
-
-      <td>
-        * [Track changes using NerdGraph](/docs/change-tracking/change-tracking-graphql/)
-        * [Track changes using the CLI](/docs/change-tracking/change-tracking-cli/#create-list)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Dashboards
-      </td>
-
-      <td>
-        * [Create and manage dashboards](/docs/apis/nerdgraph/examples/nerdgraph-dashboards)
+        * [Create and manage API keys](/docs/apis/nerdgraph/examples/use-nerdgraph-manage-license-keys-user-keys) (data ingest keys, and user keys) |
+| Alerts | * For New Relic alerts: see [all alert-related tutorials](/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/alerts-nerdgraph/nerdgraph-api-examples)
+        * For alert correlation: [Configuring topology for incident correlation](/docs/apis/nerdgraph/examples/topology-nerdgraph-tutorial) |
+| agents | [APM agent configuration](/docs/apis/nerdgraph/examples/apm-config-nerdgraph) |
+|  | * [Install browser agent and configure monitoring](/docs/apis/nerdgraph/examples/browser-monitoring-config-nerdgraph)
+        * [Instrument multiple apps using NPM package](/docs/apis/nerdgraph/examples/combining-npm-nerdgraph) |
+| Change tracking | * [Track changes using NerdGraph](/docs/change-tracking/change-tracking-graphql/)
+        * [Track changes using the CLI](/docs/change-tracking/change-tracking-cli/#create-list) |
+| Dashboards | * [Create and manage dashboards](/docs/apis/nerdgraph/examples/nerdgraph-dashboards)
         * [Dashboards: charts and widgets](/docs/apis/nerdgraph/examples/create-widgets-dashboards-api)
         * [Export dashboards to other accounts](/docs/apis/nerdgraph/examples/export-import-dashboards-using-api/)
         * [Export dashboards as files](/docs/apis/nerdgraph/examples/export-dashboards-pdfpng-using-api/)
         * [Manage externally shared dashboards](/docs/apis/nerdgraph/examples/manage-live-dashboard-urls-via-api)
-        * [Manage externally shared charts](/docs/apis/nerdgraph/examples/manage-live-chart-urls-via-api)       
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Cloud integrations (AWS, Azure, GCP)
-      </td>
-
-      <td>
-        [Configure cloud integrations](/docs/apis/nerdgraph/examples/nerdgraph-cloud-integrations-api-tutorial)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Data management
-      </td>
-
-      <td>
-        * [Convert event data to metric data](/docs/telemetry-data-platform/ingest-manage-data/convert-data-metrics/analyze-monitor-data-trends-metrics)
+        * [Manage externally shared charts](/docs/apis/nerdgraph/examples/manage-live-chart-urls-via-api) |
+| Cloud integrations (AWS, Azure, GCP) | [Configure cloud integrations](/docs/apis/nerdgraph/examples/nerdgraph-cloud-integrations-api-tutorial) |
+| Data management | * [Convert event data to metric data](/docs/telemetry-data-platform/ingest-manage-data/convert-data-metrics/analyze-monitor-data-trends-metrics)
         * [Data retention](/docs/telemetry-data-platform/manage-data/manage-data-retention/#api-examples)
         * [Streaming data export](/docs/apis/nerdgraph/examples/nerdgraph-streaming-export)
-        * [Drop data](/docs/accounts/accounts/data-management/drop-data-using-nerdgraph)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Distributed tracing
-      </td>
-
-      <td>
-        * [Query distributed tracing data](/docs/apis/nerdgraph/examples/nerdgraph-distributed-trace-data-tutorial)
-        * [Configure Infinite Tracing](/docs/apis/nerdgraph/examples/configure-infinite-tracing-graphql)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Entities
-      </td>
-
-      <td>
-        * [Get data about monitored entities](/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial)
+        * [Drop data](/docs/accounts/accounts/data-management/drop-data-using-nerdgraph) |
+| Distributed tracing | * [Query distributed tracing data](/docs/apis/nerdgraph/examples/nerdgraph-distributed-trace-data-tutorial)
+        * [Configure Infinite Tracing](/docs/apis/nerdgraph/examples/configure-infinite-tracing-graphql) |
+| Entities | * [Get data about monitored entities](/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial)
         * [Understand entity relationships and dependencies](/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial) (used to build service maps)
-        * [Query and configure "golden metrics"](/docs/apis/nerdgraph/examples/golden-metrics-entities-nerdgraph-api-tutorial) (important entity metrics)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Log management
-      </td>
-
-      <td>
-        * [Manage log data partitions](/docs/apis/nerdgraph/examples/nerdgraph-data-partition-rules-tutorial)
+        * [Query and configure "golden metrics"](/docs/apis/nerdgraph/examples/golden-metrics-entities-nerdgraph-api-tutorial) (important entity metrics) |
+| Log management | * [Manage log data partitions](/docs/apis/nerdgraph/examples/nerdgraph-data-partition-rules-tutorial)
         * [Manage log parsing rules](/docs/apis/nerdgraph/examples/nerdgraph-log-parsing-rules-tutorial/)
-        * [Manage obfuscation expressions and rules](/docs/logs/ui-data/obfuscation-ui/)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Mobile monitoring
-      </td>
-
-      <td>
-        * [Create a new mobile app](/docs/apis/nerdgraph/examples/mobile-monitoring-config-nerdgraph/#create-mobile)
+        * [Manage obfuscation expressions and rules](/docs/logs/ui-data/obfuscation-ui/) |
+| Mobile monitoring | * [Create a new mobile app](/docs/apis/nerdgraph/examples/mobile-monitoring-config-nerdgraph/#create-mobile)
         * [Retrieve an application token](/docs/apis/nerdgraph/examples/mobile-monitoring-config-nerdgraph/#get-mobile-token)
-        * [Examples of configuring <InlinePopover type="mobile"/>](/docs/apis/nerdgraph/examples/mobile-monitoring-config-nerdgraph/#configure-mobile-application)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        New Relic apps
-      </td>
-
-      <td>
-        [Build a New Relic app](/docs/new-relic-solutions/build-nr-ui/query-and-store-data)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Querying and charts
-      </td>
-
-      <td>
-        * [Run NRQL queries of your data](/docs/apis/nerdgraph/examples/nerdgraph-nrql-tutorial)
+        * [Examples of configuring ](/docs/apis/nerdgraph/examples/mobile-monitoring-config-nerdgraph/#configure-mobile-application) |
+| New Relic apps | [Build a New Relic app](/docs/new-relic-solutions/build-nr-ui/query-and-store-data) |
+| Querying and charts | * [Run NRQL queries of your data](/docs/apis/nerdgraph/examples/nerdgraph-nrql-tutorial)
         * [Run queries across multiple accounts](/docs/apis/nerdgraph/examples/nerdgraph-nrql-tutorial/#cross-account-query)
-        * [Asynchronous, longer-running queries](/docs/apis/nerdgraph/examples/async-queries-nrql-tutorial)
-      </td>
-    </tr>
+        * [Asynchronous, longer-running queries](/docs/apis/nerdgraph/examples/async-queries-nrql-tutorial) |
+| Scorecards | [Create and manage Scorecards and its rules](/docs/apis/nerdgraph/examples/nerdgraph-scorecards-tutorial) |
+| RAG Data Indexing | * [Enhance NRAI with RAG](/docs/apis/nerdgraph/examples/nerdgraph-rag) |
+| Service levels | [Configure and manage service levels](/docs/apis/nerdgraph/examples/nerdgraph-slm) |
+| Synthetic monitoring | [Manage your monitors](/docs/apis/nerdgraph/examples/nerdgraph-synthetics-tutorial) |
+| Tags | [Add and manage tags](/docs/apis/nerdgraph/examples/nerdgraph-tagging-api-tutorial) |
+| Teams | [Create your Teams](/docs/apis/nerdgraph/tutorials/nerdgraph-teams-tutorial) |
+| Workloads | [View and configure workloads](/docs/apis/nerdgraph/tutorials/nerdgraph-workloads-api-tutorials) |
 
-    <tr>
-      <td>
-        Scorecards
-      </td>
-
-      <td>
-        [Create and manage Scorecards and its rules](/docs/apis/nerdgraph/examples/nerdgraph-scorecards-tutorial)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        RAG Data Indexing
-      </td>
-
-      <td>
-        * [Enhance NRAI with RAG](/docs/apis/nerdgraph/examples/nerdgraph-rag)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Service levels
-      </td>
-
-      <td>
-        [Configure and manage service levels](/docs/apis/nerdgraph/examples/nerdgraph-slm)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Synthetic monitoring
-      </td>
-
-      <td>
-        [Manage your monitors](/docs/apis/nerdgraph/examples/nerdgraph-synthetics-tutorial)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Tags
-      </td>
-
-      <td>
-        [Add and manage tags](/docs/apis/nerdgraph/examples/nerdgraph-tagging-api-tutorial)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Teams
-      </td>
-
-      <td>
-        [Create your Teams](/docs/apis/nerdgraph/tutorials/nerdgraph-teams-tutorial)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Workloads
-      </td>
-
-      <td>
-        [View and configure workloads](/docs/apis/nerdgraph/tutorials/nerdgraph-workloads-api-tutorials)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## NerdGraph terminology [#terminology]
 

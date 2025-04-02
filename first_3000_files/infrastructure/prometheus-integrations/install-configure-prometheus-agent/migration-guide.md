@@ -28,101 +28,19 @@ The metrics are sent in the same way that they were sent using the Prometheus Op
 
 The following table highlights the metadata renamed between the Prometheus OpenMetrics integration, `nri-prometheus` and the Prometheus agent, `newrelic-prometheus-agent`:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        `nri-prometheus`
-      </th>
+# Table
 
-      <th style={{ width: "200px" }}>
-        `newrelic-prometheus-agent`
-      </th>
-    </tr>
-  </thead>
+| `nri-prometheus` | `newrelic-prometheus-agent` |
+| - | - |
+| `namespaceName` | `namespace` |
+| `nodeName` | `node` |
+| `podName` | `pod` |
+| `serviceName` | `service` |
+| `deploymentName` | N/A |
+| `clusterName` | `cluster_name` |
+| `scrapedTargetKind` | `job`. You can also use it to indetify the scrape kind. |
+| `scrapedTargetName` | `instance`. It also contains the `host:port` for the target. |
 
-  <tbody>
-    <tr>
-      <td>
-        `namespaceName`
-      </td>
-
-      <td>
-        `namespace`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `nodeName`
-      </td>
-
-      <td>
-        `node`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `podName`
-      </td>
-
-      <td>
-        `pod`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `serviceName`
-      </td>
-
-      <td>
-        `service`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deploymentName`
-      </td>
-
-      <td>
-        N/A
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `clusterName`
-      </td>
-
-      <td>
-        `cluster_name`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `scrapedTargetKind`
-      </td>
-
-      <td>
-        `job`. You can also use it to indetify the scrape kind.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `scrapedTargetName`
-      </td>
-
-      <td>
-        `instance`. It also contains the `host:port` for the target.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 If you'd like the previous `nri-prometheus` metadata attribute names to persist after the migration, you can enable the following remote write relabel config in the `newrelic-prometheus-agent` [values.yaml](https://github.com/newrelic/newrelic-prometheus-configurator/blob/main/charts/newrelic-prometheus-agent/values.yaml) file.  This will ensure that dashboards and alerts targeting these attributes will continue to function normally.
 

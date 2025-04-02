@@ -31,122 +31,27 @@ The absence of data may occur for several reasons.
 
 To troubleshoot the most common reasons for missing data, try these solutions as applicable.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Basic solutions**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Check app and framework for compatibility with agent
-      </td>
-
-      <td>
-        [.NET Framework compatibility and requirements](/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent)
+| **Basic solutions** | **Comments** |
+| - | - |
+| Check app and framework for compatibility with agent | [.NET Framework compatibility and requirements](/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent)
 
         or
 
-        [.NET Core compatibility and requirements](/docs/agents/net-agent/getting-started/compatibility-requirements-net-core-20-agent)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Learn about common install issues
-      </td>
-
-      <td>
-        See [Troubleshooting for .NET Core and Linux](/docs/apm/agents/net-agent/troubleshooting/debugging-net-core-agent-linux) or [Troubleshooting for Windows](/docs/apm/agents/net-agent/troubleshooting/debugging-net-windows)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Configure for short-lived .NET process
-      </td>
-
-      <td>
-        If you have a short-lived (below 60 seconds) process, it may not report data. For more information, see [Monitor short-lived processes](/docs/agents/net-agent/troubleshooting/monitor-short-lived-net-processes).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**.NET Core:**</DNT> Check Kestrel requirements.
-      </td>
-
-      <td>
-        Make sure you are using a [Kestrel app/web server](/docs/agents/net-agent/getting-started/compatibility-requirements-net-core-20-agent#app-web-servers) supported by New Relic. Otherwise, you may need to ensure your .NET agent has [.NET Framework support](/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent#app-web-servers) enabled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**.NET Core:**</DNT> Check environment variables.
-      </td>
-
-      <td>
-        Make sure you have configured all the [required environment variables](/docs/agents/net-agent/configuration/net-agent-configuration/#environment-variables), then restart the agent.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**.NET Framework:**</DNT> Restart IIS.
-      </td>
-
-      <td>
-        If your app is not receiving traffic, no data will be reported to New Relic. To restart IIS:
+        [.NET Core compatibility and requirements](/docs/agents/net-agent/getting-started/compatibility-requirements-net-core-20-agent) |
+| Learn about common install issues | See [Troubleshooting for .NET Core and Linux](/docs/apm/agents/net-agent/troubleshooting/debugging-net-core-agent-linux) or [Troubleshooting for Windows](/docs/apm/agents/net-agent/troubleshooting/debugging-net-windows) |
+| Configure for short-lived .NET process | If you have a short-lived (below 60 seconds) process, it may not report data. For more information, see [Monitor short-lived processes](/docs/agents/net-agent/troubleshooting/monitor-short-lived-net-processes). |
+| **.NET Core:** Check Kestrel requirements. | Make sure you are using a [Kestrel app/web server](/docs/agents/net-agent/getting-started/compatibility-requirements-net-core-20-agent#app-web-servers) supported by New Relic. Otherwise, you may need to ensure your .NET agent has [.NET Framework support](/docs/agents/net-agent/getting-started/compatibility-requirements-net-framework-agent#app-web-servers) enabled. |
+| **.NET Core:** Check environment variables. | Make sure you have configured all the [required environment variables](/docs/agents/net-agent/configuration/net-agent-configuration/#environment-variables), then restart the agent. |
+| **.NET Framework:** Restart IIS. | If your app is not receiving traffic, no data will be reported to New Relic. To restart IIS:
 
         1. From a command line, run `IISRESET`.
-        2. Verify that traffic is being sent to your application.
-      </td>
-    </tr>
+        2. Verify that traffic is being sent to your application. |
+| Run New Relic Diagnostics. | To try to automatically identify the issue, use [New Relic Diagnostics](/docs/agents/manage-apm-agents/troubleshooting/new-relic-diagnostics). |
+| Check for [profiler conflicts](/docs/agents/net-agent/troubleshooting/profiler-conflicts). | If you are using Microsoft's System Center Operations Manager (SCOM), follow the troubleshooting procedures to [resolve .NET and SCOM conflicts](/docs/dotnet/dotnet-kb-104). |
+| Review log files. | If [log files](/docs/agents/net-agent/troubleshooting/generate-logs-troubleshooting-net) exist, open them and review for errors. |
 
-    <tr>
-      <td>
-        Run New Relic Diagnostics.
-      </td>
-
-      <td>
-        To try to automatically identify the issue, use [New Relic Diagnostics](/docs/agents/manage-apm-agents/troubleshooting/new-relic-diagnostics).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Check for [profiler conflicts](/docs/agents/net-agent/troubleshooting/profiler-conflicts).
-      </td>
-
-      <td>
-        If you are using Microsoft's System Center Operations Manager (SCOM), follow the troubleshooting procedures to [resolve .NET and SCOM conflicts](/docs/dotnet/dotnet-kb-104).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Review log files.
-      </td>
-
-      <td>
-        If [log files](/docs/agents/net-agent/troubleshooting/generate-logs-troubleshooting-net) exist, open them and review for errors.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Advanced solutions
 

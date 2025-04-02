@@ -31,53 +31,13 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data is attached to the following [event types](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Cluster | `GcpBigtableClusterSample` | `GcpBigtableCluster` |
+| Table | `GcpBigtableTableSample` | `GcpBigtableTable` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Cluster
-      </td>
-
-      <td>
-        `GcpBigtableClusterSample`
-      </td>
-
-      <td>
-        `GcpBigtableCluster`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Table
-      </td>
-
-      <td>
-        `GcpBigtableTableSample`
-      </td>
-
-      <td>
-        `GcpBigtableTable`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

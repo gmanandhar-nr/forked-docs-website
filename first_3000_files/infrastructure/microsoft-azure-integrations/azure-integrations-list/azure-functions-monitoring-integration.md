@@ -46,123 +46,18 @@ For more on how to find and use integration data, see [Understand and use data](
 
 To view metrics reported by the Azure Functions integration, query the `AzureFunctionsAppSample` event type. Use the metadata associated with each metric to [filter and facet](/docs/infrastructure/integrations-getting-started/getting-started/understand-integration-data-data-types#metric) the data being reported. For detailed metric information, see the [Azure supported metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftwebsites-functions) documentation.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "290px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Metric | Description | Metadata |
+| - | - | - |
+| `averageMemoryWorkingSetBytes` | Average count in bytes of memory working set. | `instance` |
+| `functionExecutionCount` | Function execution count. | `instance` |
+| `functionExecutionUnits` | Function execution in units. | `instance` |
+| `http5xx` | Total number of HTTP server errors 500-599. | `instance` |
+| `memoryWorkingSetBytes` | Total bytes of memory working set. | `instance` |
+| `receivedBytes` | Total bytes received by the functions. | `instance` |
+| `sentBytes` | Total bytes sent by the functions. | `instance` |
 
-      <th>
-        Metadata
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `averageMemoryWorkingSetBytes`
-      </td>
-
-      <td>
-        Average count in bytes of memory working set.
-      </td>
-
-      <td>
-        `instance`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `functionExecutionCount`
-      </td>
-
-      <td>
-        Function execution count.
-      </td>
-
-      <td>
-        `instance`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `functionExecutionUnits`
-      </td>
-
-      <td>
-        Function execution in units.
-      </td>
-
-      <td>
-        `instance`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `http5xx`
-      </td>
-
-      <td>
-        Total number of HTTP server errors 500-599.
-      </td>
-
-      <td>
-        `instance`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `memoryWorkingSetBytes`
-      </td>
-
-      <td>
-        Total bytes of memory working set.
-      </td>
-
-      <td>
-        `instance`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `receivedBytes`
-      </td>
-
-      <td>
-        Total bytes received by the functions.
-      </td>
-
-      <td>
-        `instance`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `sentBytes`
-      </td>
-
-      <td>
-        Total bytes sent by the functions.
-      </td>
-
-      <td>
-        `instance`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Other system data [#other-attributes]
 

@@ -41,92 +41,26 @@ Features of the eAPM integration include:
 
 The eAPM integration is a new way to monitor Kubernetes services, offering a different approach to monitoring services compared to the traditional APM agent. The key differences between the eAPM and APM agents are:
 
-<table>
-  <thead>
-    <tr>
-      <th>Functionality</th>
-      <th>eAPM agent</th>
-      <th>APM agent</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Summary</td>
-      <td>✅</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>Transaction</td>
-      <td>✅</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>Database OPS</td>
-      <td>✅</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>External Service</td>
-      <td>❌</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>Distributed Tracing</td>
-      <td>❌</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>Programming language agnostic</td>
-      <td>✅</td>
-      <td>❌</td>
-    </tr>
-    <tr>
-      <td>Custom Instrumentation</td>
-      <td>❌</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>Auto-discover apps and services continuously</td>
-      <td>✅</td>
-      <td>❌</td>
-    </tr>
-    <tr>
-      <td>Deduplicate Data Ingestion from eBPF</td>
-      <td>✅</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>Linux support</td>
-      <td>✅</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>Windows support</td>
-      <td>❌</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>TCP and DNS telemetry</td>
-      <td>✅</td>
-      <td>❌</td>
-    </tr>
-    <tr>
-      <td>Does not require additional container</td>
-      <td>✅</td>
-      <td>❌</td>
-    </tr>
-    <tr>
-      <td>Agent</td>
-      <td>One per Node</td>
-      <td>One per App</td>
-    </tr>
-    <tr>
-      <td>Telemetry Data Source</td>
-      <td>eBPF</td>
-      <td>APM language agent</td>
-    </tr>
-  </tbody>
-</table>
+# Table
+
+| Functionality | eAPM agent | APM agent |
+| - | - | - |
+| Summary | ✅ | ✅ |
+| Transaction | ✅ | ✅ |
+| Database OPS | ✅ | ✅ |
+| External Service | ❌ | ✅ |
+| Distributed Tracing | ❌ | ✅ |
+| Programming language agnostic | ✅ | ❌ |
+| Custom Instrumentation | ❌ | ✅ |
+| Auto-discover apps and services continuously | ✅ | ❌ |
+| Deduplicate Data Ingestion from eBPF | ✅ | ✅ |
+| Linux support | ✅ | ✅ |
+| Windows support | ❌ | ✅ |
+| TCP and DNS telemetry | ✅ | ❌ |
+| Does not require additional container | ✅ | ❌ |
+| Agent | One per Node | One per App |
+| Telemetry Data Source | eBPF | APM language agent |
+
 
 ## Installation of eAPM agent [#installation]
 

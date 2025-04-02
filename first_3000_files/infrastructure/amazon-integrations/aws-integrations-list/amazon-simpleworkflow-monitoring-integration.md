@@ -32,195 +32,23 @@ This New Relic infrastructure integration collects the following Amazon SWF data
 
 ### SWF metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `DecisionTaskScheduleToStartTime` | Time | The time interval, in milliseconds, between the time that the decision task was scheduled and when it was picked up by a worker and started. |
+| `DecisionTaskStartToCloseTime` | Time | The time interval, in milliseconds, between the time that the decision task was started and when it closed. |
+| `DecisionTasksCompleted` | Count | The count of decision tasks that have been completed. |
+| `PendingTasks` | Count | The count of pending tasks in a 1 minute interval for a specific Task List. |
+| `StartedDecisionTasksTimedOutOnClose` | Count | The count of decision tasks that started but timed out on closing. |
+| `WorkflowStartToCloseTime` | Time | The time, in milliseconds, between the time the workflow started and when it closed. |
+| `WorkflowsCanceled` | Count | The count of workflows that were canceled. |
+| `WorkflowsCompleted` | Count | The count of workflows that completed. |
+| `WorkflowsContinuedAsNew` | Count | The count of workflows that continued as new. |
+| `WorkflowsFailed` | Count | The count of workflows that failed. |
+| `WorkflowsTerminated` | Count | The count of workflows that were terminated. |
+| `WorkflowsTimedOut` | Count | The count of workflows that timed out, for any reason. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `DecisionTaskScheduleToStartTime`
-      </td>
-
-      <td>
-        Time
-      </td>
-
-      <td>
-        The time interval, in milliseconds, between the time that the decision task was scheduled and when it was picked up by a worker and started.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DecisionTaskStartToCloseTime`
-      </td>
-
-      <td>
-        Time
-      </td>
-
-      <td>
-        The time interval, in milliseconds, between the time that the decision task was started and when it closed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DecisionTasksCompleted`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The count of decision tasks that have been completed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PendingTasks`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The count of pending tasks in a 1 minute interval for a specific Task List.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StartedDecisionTasksTimedOutOnClose`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The count of decision tasks that started but timed out on closing.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowStartToCloseTime`
-      </td>
-
-      <td>
-        Time
-      </td>
-
-      <td>
-        The time, in milliseconds, between the time the workflow started and when it closed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowsCanceled`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The count of workflows that were canceled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowsCompleted`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The count of workflows that completed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowsContinuedAsNew`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The count of workflows that continued as new.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowsFailed`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The count of workflows that failed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowsTerminated`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The count of workflows that were terminated.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowsTimedOut`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The count of workflows that timed out, for any reason.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `Domain`
 

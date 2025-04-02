@@ -139,45 +139,13 @@ Agent configuration gives you more options than server-side configuration does. 
 
 The slow queries list contains the following metrics:
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **Metric**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Metric** | **Description** |
+| - | - |
+| `Response time` | The average response time (in milliseconds) for the statements sampled. |
+| `Sample count` | The number of slow queries identified in the sample. |
 
-  <tbody>
-    <tr>
-      <td>
-        `Response time`
-      </td>
-
-      <td>
-        The average response time (in milliseconds) for the statements sampled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Sample count`
-      </td>
-
-      <td>
-        The number of slow queries identified in the sample.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 To view additional details, select an individual slow query:
 

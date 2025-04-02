@@ -34,69 +34,14 @@ This New Relic infrastructure integration collects the following Amazon WorkSpac
 
 ### WorkSpaces Web Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `SessionAttempt` | Count | The number of Amazon WorkSpaces Web session attempts. |
+| `SessionSuccess` | Count | The number of successful Amazon WorkSpaces Web session starts. |
+| `SessionFailure` | Count | The number of failed Amazon WorkSpaces Web session starts. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `SessionAttempt`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of Amazon WorkSpaces Web session attempts.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SessionSuccess`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of successful Amazon WorkSpaces Web session starts.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SessionFailure`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of failed Amazon WorkSpaces Web session starts.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has the same dimension: `PortalId`.
 

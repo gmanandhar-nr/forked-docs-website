@@ -21,27 +21,11 @@ You're not seeing expected log data in the New Relic UI after ten minutes of ins
 
 If no data appears after you set up a log-reporting solution and wait about five minutes, try the following:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Logs troubleshooting
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Infrastructure and APM agents
-      </td>
-
-      <td>
-        These agents are designed to automatically report log data. This is referred to as [logs-in-context](/docs/logs/logs-context/logs-in-context). If you don't see that data, or want to do additional configuration, some options:
+| Logs troubleshooting | Comments |
+| - | - |
+| Infrastructure and APM agents | These agents are designed to automatically report log data. This is referred to as [logs-in-context](/docs/logs/logs-context/logs-in-context). If you don't see that data, or want to do additional configuration, some options:
 
         For APM:
 
@@ -75,76 +59,28 @@ If no data appears after you set up a log-reporting solution and wait about five
             * Monolog (version 2 or 3)
         * You can use our [Groundskeeper app](https://onenr.io/0OQMXd57DjG) to see if your APM agent is up-to-date.
 
-        For the infrastructure agent: see [logging config options](/docs/infrastructure/install-infrastructure-agent/configuration/infrastructure-agent-configuration-settings/#logging-variables).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Access to data
-      </td>
-
-      <td>
-        It's possible you may not have the right permissions or account access. See [Factors affecting access to features and data](/docs/accounts/accounts-billing/account-structure/factors-affecting-access-features-data/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Compatibility
-      </td>
-
-      <td>
-        If you've set up log forwarding, ensure you've installed a [compatible log forwarder](/docs/logs/forward-logs/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Status codes
-      </td>
-
-      <td>
-        Check the response status code being returned from the New Relic log collection endpoint. For example, you might see:
+        For the infrastructure agent: see [logging config options](/docs/infrastructure/install-infrastructure-agent/configuration/infrastructure-agent-configuration-settings/#logging-variables). |
+| Access to data | It's possible you may not have the right permissions or account access. See [Factors affecting access to features and data](/docs/accounts/accounts-billing/account-structure/factors-affecting-access-features-data/). |
+| Compatibility | If you've set up log forwarding, ensure you've installed a [compatible log forwarder](/docs/logs/forward-logs/). |
+| Status codes | Check the response status code being returned from the New Relic log collection endpoint. For example, you might see:
 
         ```
         HTTP Error 403: Forbidden. Review your license key.
         ```
 
-        This error means that you're using an invalid security key. New Relic requires a <InlinePopover type="licenseKey"/> to enable log shipping.
+        This error means that you're using an invalid security key. New Relic requires a  to enable log shipping.
 
-        An `HTTP 202` response indicates success.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Errors
-      </td>
-
-      <td>
-        Run a query using the [`NrIntegrationErrors` event](/docs/telemetry-data-platform/manage-data/nrintegrationerror/) to see if any errors are related to logging. For example, look for messages like:
+        An `HTTP 202` response indicates success. |
+| Errors | Run a query using the [`NrIntegrationErrors` event](/docs/telemetry-data-platform/manage-data/nrintegrationerror/) to see if any errors are related to logging. For example, look for messages like:
 
         ```
         Error unmarshalling message payload
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Query `Log`
-      </td>
-
-      <td>
-        Try querying the `Log` data type:
+        ``` |
+| Query `Log` | Try querying the `Log` data type:
 
         ```sql
         SELECT * FROM Log
         ```
 
-        If no data appears in the query builder, then no data will appear in the <DNT>**Logs**</DNT> UI. For more information, see [our docs about data query options](/docs/query-your-data/explore-query-data/get-started/introduction-querying-new-relic-data).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        If no data appears in the query builder, then no data will appear in the **Logs** UI. For more information, see [our docs about data query options](/docs/query-your-data/explore-query-data/get-started/introduction-querying-new-relic-data). |
+

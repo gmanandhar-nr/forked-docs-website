@@ -43,41 +43,13 @@ Besides a critical threshold level, you can also set thresholds for a less serio
 
 Thresholds are set during the process of [creating a condition](/docs/alerts/new-relic-alerts/defining-conditions/define-alert-conditions):
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Goal
-      </th>
+# Table
 
-      <th>
-        Instructions
-      </th>
-    </tr>
-  </thead>
+| Goal | Instructions |
+| - | - |
+| Set thresholds for a new condition | Set thresholds as part of the process of [creating a condition](/docs/alerts/new-relic-alerts/defining-conditions/define-alert-conditions#create-condition). |
+| View and update thresholds for existing conditions | To view a condition’s thresholds: [find that condition in the UI](/docs/alerts/new-relic-alerts/defining-conditions/define-alert-conditions#alert-condition-view). To update thresholds, select a condition’s thresholds and make changes. |
 
-  <tbody>
-    <tr>
-      <td>
-        Set thresholds for a new condition
-      </td>
-
-      <td>
-        Set thresholds as part of the process of [creating a condition](/docs/alerts/new-relic-alerts/defining-conditions/define-alert-conditions#create-condition).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View and update thresholds for existing conditions
-      </td>
-
-      <td>
-        To view a condition’s thresholds: [find that condition in the UI](/docs/alerts/new-relic-alerts/defining-conditions/define-alert-conditions#alert-condition-view). To update thresholds, select a condition’s thresholds and make changes.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 To learn more about specific alert condition types (like anomaly and NRQL), see [Types of conditions](/docs/alerts/new-relic-alerts/defining-conditions/define-alert-conditions#condition-types).
 

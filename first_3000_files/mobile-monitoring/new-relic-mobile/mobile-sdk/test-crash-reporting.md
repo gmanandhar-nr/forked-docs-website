@@ -80,39 +80,12 @@ NewRelic.crashNow(message:String!)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$message` | `string` | Optional. A message attached to the exception. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$message`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Optional. A message attached to the exception.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Example [#example]
 

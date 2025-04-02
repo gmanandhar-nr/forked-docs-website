@@ -36,265 +36,28 @@ All imported data has one common dimension: `ReplicationInstanceIdentifier`
 
 ### Replication Instance Metrics data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `AvailableMemory` | Bytes | An estimate of how much memory is available for starting new applications, without swapping. |
+| `CPUAllocated` | Percent | The percentage of CPU maximally allocated for the task (0 means no limit). |
+| `CPUUtilization` | Count | The percentage of allocated vCPU (virtual CPU) currently in use on the instance. |
+| `DiskQueueDepth` | Count | The number of outstanding read/write requests (I/Os) waiting to access the disk. |
+| `FreeStorageSpace` | Bytes | The amount of available storage space. |
+| `FreeMemory` | Bytes | The amount of physical memory available for use by applications, page cache, and for the kernel’s own data structures. |
+| `FreeableMemory` | Bytes | The amount of available random access memory. |
+| `MemoryAllocated` | MiB | The maximum allocation of memory for the task (0 means no limits). |
+| `WriteIOPS` | Count/Second | The average number of disk write I/O operations per second. |
+| `ReadIOPS` | Count/Second | The average number of disk read I/O operations per second. |
+| `WriteThroughput` | Bytes/Second | The average number of bytes write from disk per second. |
+| `ReadThroughput` | Bytes/Second | The average number of bytes read from disk per second. |
+| `WriteLatency` | Milliseconds | The average amount of time taken per disk I/O (output) operation. |
+| `ReadLatency` | Milliseconds | The average amount of time taken per disk I/O (input) operation. |
+| `SwapUsage` | Bytes | The amount of swap space used on the replication instance. |
+| `NetworkTransmitThroughput` | Bytes/second | The outgoing (Transmit) network traffic on the replication instance, including both customer database traffic and AWS DMS traffic used for monitoring and replication. |
+| `NetworkReceiveThroughput` | Bytes/second | The incoming (Receive) network traffic on the replication instance, including both customer database traffic and AWS DMS traffic used for monitoring and replication. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `AvailableMemory`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        An estimate of how much memory is available for starting new applications, without swapping.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUAllocated`
-      </td>
-
-      <td>
-        Percent
-      </td>
-
-      <td>
-        The percentage of CPU maximally allocated for the task (0 means no limit).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUUtilization`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The percentage of allocated vCPU (virtual CPU) currently in use on the instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskQueueDepth`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of outstanding read/write requests (I/Os) waiting to access the disk.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FreeStorageSpace`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The amount of available storage space.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FreeMemory`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The amount of physical memory available for use by applications, page cache, and for the kernel’s own data structures.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FreeableMemory`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The amount of available random access memory.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MemoryAllocated`
-      </td>
-
-      <td>
-        MiB
-      </td>
-
-      <td>
-        The maximum allocation of memory for the task (0 means no limits).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WriteIOPS`
-      </td>
-
-      <td>
-        Count/Second
-      </td>
-
-      <td>
-        The average number of disk write I/O operations per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReadIOPS`
-      </td>
-
-      <td>
-        Count/Second
-      </td>
-
-      <td>
-        The average number of disk read I/O operations per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WriteThroughput`
-      </td>
-
-      <td>
-        Bytes/Second
-      </td>
-
-      <td>
-        The average number of bytes write from disk per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReadThroughput`
-      </td>
-
-      <td>
-        Bytes/Second
-      </td>
-
-      <td>
-        The average number of bytes read from disk per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WriteLatency`
-      </td>
-
-      <td>
-        Milliseconds
-      </td>
-
-      <td>
-        The average amount of time taken per disk I/O (output) operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReadLatency`
-      </td>
-
-      <td>
-        Milliseconds
-      </td>
-
-      <td>
-        The average amount of time taken per disk I/O (input) operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SwapUsage`
-      </td>
-
-      <td>
-        Bytes
-      </td>
-
-      <td>
-        The amount of swap space used on the replication instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkTransmitThroughput`
-      </td>
-
-      <td>
-        Bytes/second
-      </td>
-
-      <td>
-        The outgoing (Transmit) network traffic on the replication instance, including both customer database traffic and AWS DMS traffic used for monitoring and replication.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkReceiveThroughput`
-      </td>
-
-      <td>
-        Bytes/second
-      </td>
-
-      <td>
-        The incoming (Receive) network traffic on the replication instance, including both customer database traffic and AWS DMS traffic used for monitoring and replication.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Replication Task Metrics data
 

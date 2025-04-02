@@ -37,81 +37,15 @@ The infrastructure agent reports several [default events](/docs/infrastructure/m
 
 The table below lists some samplers to configure:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Event
-      </th>
+# Table
 
-      <th>
-        Sampling frequency
-      </th>
+| Event | Sampling frequency | Allow/deny list |
+| - | - | - |
+| Network | [Network sampling rate](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#metrics-network-sample-rate) | Not available |
+| Process | [Process sampling rate](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#metrics-process-sample-rate) | [Allow list (Windows only)](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#allowed-list-process-sample) |
+| Storage | [Storage sampling rate](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#metrics-storage-sample-rate) | [Deny list](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#file-devices-ignored) |
+| System | [System sampling rate](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#metrics-system-sample-rate) | Not available |
 
-      <th>
-        Allow/deny list
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Network
-      </td>
-
-      <td>
-        [Network sampling rate](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#metrics-network-sample-rate)
-      </td>
-
-      <td>
-        Not available
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Process
-      </td>
-
-      <td>
-        [Process sampling rate](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#metrics-process-sample-rate)
-      </td>
-
-      <td>
-        [Allow list (Windows only)](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#allowed-list-process-sample)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Storage
-      </td>
-
-      <td>
-        [Storage sampling rate](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#metrics-storage-sample-rate)
-      </td>
-
-      <td>
-        [Deny list](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#file-devices-ignored)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        System
-      </td>
-
-      <td>
-        [System sampling rate](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#metrics-system-sample-rate)
-      </td>
-
-      <td>
-        Not available
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Reduce agent plugin reporting [#reduce_plugins]
 

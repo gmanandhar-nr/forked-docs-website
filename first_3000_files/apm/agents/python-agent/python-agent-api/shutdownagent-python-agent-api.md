@@ -27,35 +27,16 @@ Forcibly shut down the agent. The agent makes a final attempt to upload data to 
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `timeout`
 
-  <tbody>
-    <tr>
-      <td>
-        `timeout`
+        _int_ or _float_ | Optional, but highly recommended. The maximum length of time the caller waits for the agent to finish uploading data. If the timeout period ends before the agent finishes, the agent continues reporting data in the background, but the caller may forcibly kill the whole process and stop the upload.
 
-        _int_ or _float_
-      </td>
+        If no value is set or set to `None`, the agent uses the default global timeout value, which can be overriden in configuration settings but defaults to 2.5 seconds. |
 
-      <td>
-        Optional, but highly recommended. The maximum length of time the caller waits for the agent to finish uploading data. If the timeout period ends before the agent finishes, the agent continues reporting data in the background, but the caller may forcibly kill the whole process and stop the upload.
-
-        If no value is set or set to `None`, the agent uses the default global timeout value, which can be overriden in configuration settings but defaults to 2.5 seconds.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

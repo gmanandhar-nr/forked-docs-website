@@ -66,47 +66,19 @@ Using these methods together allows many options for filtering and grouping in t
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$name`
 
-  <tbody>
-    <tr>
-      <td>
-        `$name`
+        _string_ | Required. If null, the name will be set using the [`targetGroupedUrl` attribute](/docs/insights/explore-data/attributes/browser-default-attributes-insights#target-groupedurl).
 
-        _string_
-      </td>
+        If not null, this will set the [`browserInteractionName`](/docs/insights/explore-data/attributes/browser-default-attributes-insights#interaction-name) attribute in the `BrowserInteraction` event. |
+| `$trigger`
 
-      <td>
-        Required. If null, the name will be set using the [`targetGroupedUrl` attribute](/docs/insights/explore-data/attributes/browser-default-attributes-insights#target-groupedurl).
+        _string_ | Optional. If not null, this will set the [`TRIGGER`](/docs/insights/explore-data/attributes/browser-default-attributes-insights#trigger) attribute on the `BrowserInteraction` event. |
 
-        If not null, this will set the [`browserInteractionName`](/docs/insights/explore-data/attributes/browser-default-attributes-insights#interaction-name) attribute in the `BrowserInteraction` event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$trigger`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. If not null, this will set the [`TRIGGER`](/docs/insights/explore-data/attributes/browser-default-attributes-insights#trigger) attribute on the `BrowserInteraction` event.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

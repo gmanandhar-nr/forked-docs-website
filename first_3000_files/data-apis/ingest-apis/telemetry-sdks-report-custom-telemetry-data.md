@@ -34,141 +34,36 @@ The Telemetry SDKs use our Metric API, Event API, Log API, and Trace API, which 
 
 The Telemetry SDKs are open source software on GitHub. Use the language-specific GitHub links below to get library details, coding examples, and procedures for how to use the SDKs. We currently support the following libraries, with more to be created in the future:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "190px" }}>
-        Language
-      </th>
+# Table
 
-      <th style={{ width: "330px" }}>
-        Library
-      </th>
-
-      <th>
-        Supported New Relic data types
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Java
-      </td>
-
-      <td>
-        [Java library on GitHub](https://github.com/newrelic/newrelic-telemetry-sdk-java)
-      </td>
-
-      <td>
-        Metrics
+| Language | Library | Supported New Relic data types |
+| - | - | - |
+| Java | [Java library on GitHub](https://github.com/newrelic/newrelic-telemetry-sdk-java) | Metrics
 
         Events
 
         Logs
 
-        Traces
-      </td>
-    </tr>
+        Traces |
+| Node/TypeScript | [Node.js library on GitHub](https://github.com/newrelic/newrelic-telemetry-sdk-node) | Metrics
 
-    <tr>
-      <td>
-        Node/TypeScript
-      </td>
-
-      <td>
-        [Node.js library on GitHub](https://github.com/newrelic/newrelic-telemetry-sdk-node)
-      </td>
-
-      <td>
-        Metrics
-
-        Traces
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Python
-      </td>
-
-      <td>
-        [Python library on GitHub](https://github.com/newrelic/newrelic-telemetry-sdk-python)
-      </td>
-
-      <td>
-        Metrics
+        Traces |
+| Python | [Python library on GitHub](https://github.com/newrelic/newrelic-telemetry-sdk-python) | Metrics
 
         Events
 
         Logs
 
-        Traces
-      </td>
-    </tr>
+        Traces |
+| Go | [Go library on Github](https://github.com/newrelic/newrelic-telemetry-sdk-go) | Metrics
 
-    <tr>
-      <td>
-        Go
-      </td>
+        Traces |
+| C | [C library on Github](https://github.com/newrelic/newrelic-telemetry-sdk-c) | Traces |
+| Rust | [Rust library on Github](https://github.com/newrelic/newrelic-telemetry-sdk-rust) | Traces |
+| Ruby | [Ruby library on Github](https://github.com/newrelic/newrelic-telemetry-sdk-ruby)
 
-      <td>
-        [Go library on Github](https://github.com/newrelic/newrelic-telemetry-sdk-go)
-      </td>
+        [Gem on Rubygems](https://rubygems.org/gems/newrelic-telemetry_sdk) | Traces |
 
-      <td>
-        Metrics
-
-        Traces
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        C
-      </td>
-
-      <td>
-        [C library on Github](https://github.com/newrelic/newrelic-telemetry-sdk-c)
-      </td>
-
-      <td>
-        Traces
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Rust
-      </td>
-
-      <td>
-        [Rust library on Github](https://github.com/newrelic/newrelic-telemetry-sdk-rust)
-      </td>
-
-      <td>
-        Traces
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Ruby
-      </td>
-
-      <td>
-        [Ruby library on Github](https://github.com/newrelic/newrelic-telemetry-sdk-ruby)
-
-        [Gem on Rubygems](https://rubygems.org/gems/newrelic-telemetry_sdk)
-      </td>
-
-      <td>
-        Traces
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on the supported data types, see:
 

@@ -24,45 +24,26 @@ When you first deploy your app, you can change the default name to a more descri
 
 Typically, configuring your app-local `newrelic.config` file is the most convenient naming method.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Naming method
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Naming method | Description |
+| - | - |
+| Recommended:
 
-  <tbody>
-    <tr>
-      <td>
-        Recommended:
-
-        Configure your app-local `newrelic.config` file
-      </td>
-
-      <td>
-        This method lets you give your app a unique name with specific configuration settings. It also works for both IIS and non-IIS hosted apps.
+        Configure your app-local `newrelic.config` file | This method lets you give your app a unique name with specific configuration settings. It also works for both IIS and non-IIS hosted apps.
 
         1. Copy the `newrelic.config` file from the agent home directory into your app's root folder.
 
-           <DNT>**Default:**</DNT> `%ALLUSERSPROFILE%\New Relic\.NET Agent`
+           **Default:** `%ALLUSERSPROFILE%\New Relic\.NET Agent`
         2. Open the copy and set your app name as follows:
 
            ```xml
-           <application>
-               <name>App Name</name>
-           </application>
+           
+               App Name
+           
            ```
-        3. Restart your application.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        3. Restart your application. |
+
 
 As long as your app is active, data should appear within a few minutes. If not, follow our [troubleshooting procedures](/docs/agents/net-agent/troubleshooting/no-data-appears-net).
 

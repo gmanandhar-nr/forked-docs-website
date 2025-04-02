@@ -30,59 +30,15 @@ New Relic connects metrics to individual applications using your [license key](/
 
 You can assign a new app name or change the app alias. These have two different effects:
 
-<table>
-  <thead>
-    <tr>
-      <th width={100}>
-        Term
-      </th>
+# Table
 
-      <th width={200}>
-        <DNT>
-          **How to change it**
-        </DNT>
-      </th>
+| Term | **How to change it** | **Effect** |
+| - | - | - |
+| Name | [Assign the name in your config file](#assigning) | Changing the app name in the agent's configuration file will cause the application to report to a new heading in the New Relic user interface, with a total discontinuity of data.
 
-      <th>
-        <DNT>
-          **Effect**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+        This is useful, for example, if you want to start over and report new data. If no other agents are reporting to the old app name, the old app name will appear gray and can be deleted. |
+| Alias | [Change the alias in the APM Settings UI](#app-alias) | [Creating an **alias** for the app name](/docs/apm/new-relic-apm/maintenance/rename-your-application#app-alias) only changes how the app name appears in the New Relic UI. Changing the alias does not affect how data is reported. It simply helps you keep track of your data with a useful alias. |
 
-  <tbody>
-    <tr>
-      <td>
-        Name
-      </td>
-
-      <td>
-        [Assign the name in your config file](#assigning)
-      </td>
-
-      <td>
-        Changing the app name in the agent's configuration file will cause the application to report to a new heading in the New Relic user interface, with a total discontinuity of data.
-
-        This is useful, for example, if you want to start over and report new data. If no other agents are reporting to the old app name, the old app name will appear gray and can be deleted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Alias
-      </td>
-
-      <td>
-        [Change the alias in the APM Settings UI](#app-alias)
-      </td>
-
-      <td>
-        [Creating an <DNT>**alias**</DNT> for the app name](/docs/apm/new-relic-apm/maintenance/rename-your-application#app-alias) only changes how the app name appears in the New Relic UI. Changing the alias does not affect how data is reported. It simply helps you keep track of your data with a useful alias.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Give each app a descriptive name [#app-name]
 

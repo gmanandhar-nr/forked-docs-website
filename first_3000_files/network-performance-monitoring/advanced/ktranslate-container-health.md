@@ -153,207 +153,24 @@ Below are some common searches that can be used during troubleshooting to gather
 
 The `-metrics` option captures the following performance metrics when polling devices:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "400px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Granularity
-      </th>
+| Metric | Granularity | Description |
+| - | - | - |
+| `baseserver_healthcheck_execution_total` | Top Level | Rate of internal health checks. Shows mostly that things are not deadlocked and should always be greater than 0. |
+| `inputq` | Top Level | Messages per second (msg/sec) received over the last 60 seconds from all SNMP, Flow, and VPC inputs combined. |
+| `jchfq` | Top Level | Gauge rate with number of available pre-allocated buffers. It should be about 8,000. |
+| `delivery_metrics_nr` | Delivery to New Relic | Batches per second (batches/sec) sent over the last 60 seconds for all metrics to New Relic. |
+| `delivery_logs_nr` | Delivery to New Relic | Logs per second (logs/sec) sent over the last 60 seconds for all logs to New Relic. |
+| `delivery_wins_nr` | Delivery to New Relic | Wins per second (wins/sec) of 200 HTTP codes received over the last 60 seconds from sending metrics and events to New Relic. |
+| `device_metrics` | SNMP | Polls per second (polls/sec) of SNMP polling over the last 60 seconds for device level metrics. |
+| `interface_metrics` | SNMP | Polls per second (polls/sec) of SNMP polling over the last 60 seconds for interface level metrics. |
+| `snmp_fail` | SNMP | Gauge to monitor if SNMP polling is working faceted by `device_name`. Where 1 means good and 2 means fail. |
+| `netflow.flows` | Netflow | Flows per second (fps) received over the last 60 seconds for all device flow data: IPFIX, NetFlow, or sFlow. |
+| `syslog_queue` | Syslog | Gauge of syslog messages waiting to be processed. |
+| `syslog_errors` | Syslog | Errors per second (errors/sec) over the last 60 seconds while processing syslog messages. |
+| `syslog_messages` | Syslog | Messages per second (msg/sec) received over the last 60 seconds for all syslog data. |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `baseserver_healthcheck_execution_total`
-      </td>
-
-      <td>
-        Top Level
-      </td>
-
-      <td>
-        Rate of internal health checks. Shows mostly that things are not deadlocked and should always be greater than 0.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `inputq`
-      </td>
-
-      <td>
-        Top Level
-      </td>
-
-      <td>
-        Messages per second (msg/sec) received over the last 60 seconds from all SNMP, Flow, and VPC inputs combined.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `jchfq`
-      </td>
-
-      <td>
-        Top Level
-      </td>
-
-      <td>
-        Gauge rate with number of available pre-allocated buffers. It should be about 8,000.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `delivery_metrics_nr`
-      </td>
-
-      <td>
-        Delivery to New Relic
-      </td>
-
-      <td>
-        Batches per second (batches/sec) sent over the last 60 seconds for all metrics to New Relic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `delivery_logs_nr`
-      </td>
-
-      <td>
-        Delivery to New Relic
-      </td>
-
-      <td>
-        Logs per second (logs/sec) sent over the last 60 seconds for all logs to New Relic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `delivery_wins_nr`
-      </td>
-
-      <td>
-        Delivery to New Relic
-      </td>
-
-      <td>
-        Wins per second (wins/sec) of 200 HTTP codes received over the last 60 seconds from sending metrics and events to New Relic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `device_metrics`
-      </td>
-
-      <td>
-        SNMP
-      </td>
-
-      <td>
-        Polls per second (polls/sec) of SNMP polling over the last 60 seconds for device level metrics.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `interface_metrics`
-      </td>
-
-      <td>
-        SNMP
-      </td>
-
-      <td>
-        Polls per second (polls/sec) of SNMP polling over the last 60 seconds for interface level metrics.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `snmp_fail`
-      </td>
-
-      <td>
-        SNMP
-      </td>
-
-      <td>
-        Gauge to monitor if SNMP polling is working faceted by `device_name`. Where 1 means good and 2 means fail.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `netflow.flows`
-      </td>
-
-      <td>
-        Netflow
-      </td>
-
-      <td>
-        Flows per second (fps) received over the last 60 seconds for all device flow data: IPFIX, NetFlow, or sFlow.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `syslog_queue`
-      </td>
-
-      <td>
-        Syslog
-      </td>
-
-      <td>
-        Gauge of syslog messages waiting to be processed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `syslog_errors`
-      </td>
-
-      <td>
-        Syslog
-      </td>
-
-      <td>
-        Errors per second (errors/sec) over the last 60 seconds while processing syslog messages.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `syslog_messages`
-      </td>
-
-      <td>
-        Syslog
-      </td>
-
-      <td>
-        Messages per second (msg/sec) received over the last 60 seconds for all syslog data.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Common metrics searches [#common-metric-searches]
 

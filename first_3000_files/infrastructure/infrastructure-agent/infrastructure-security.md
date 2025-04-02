@@ -103,123 +103,18 @@ For current agent versions, New Relic requires that it run as the root user (on 
   >
     Unless otherwise noted, this information applies to any Linux operating system.
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Directory or file
-          </th>
+    # Table
 
-          <th>
-            Purpose
-          </th>
+| Directory or file | Purpose | Linux OS |
+| - | - | - |
+| `/etc/newrelic-infra.yml` | Default configuration file | Any |
+| `/usr/bin/newrelic-infra-service` | Default agent service wrapper binary install location | Any |
+| `/usr/bin/newrelic-infra` | Default agent binary install location | Any |
+| `/usr/bin/newrelic-infra-ctl` | Default CLI agent control binary location | Any |
+| `/var/db/newrelic-infra/` | Default inventory cache and plugin binaries | Any |
+| `/var/run/newrelic-infra.pid` | Default pid file | Any |
+| `stdout`, `stderr`, `logs` | Depending on configuration, the agent writes logs to `stdout`, which may connect to your system logging service | Any |
 
-          <th style={{ width: "150px" }}>
-            Linux OS
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            `/etc/newrelic-infra.yml`
-          </td>
-
-          <td>
-            Default configuration file
-          </td>
-
-          <td>
-            Any
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `/usr/bin/newrelic-infra-service`
-          </td>
-
-          <td>
-            Default agent service wrapper binary install location
-          </td>
-
-          <td>
-            Any
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `/usr/bin/newrelic-infra`
-          </td>
-
-          <td>
-            Default agent binary install location
-          </td>
-
-          <td>
-            Any
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `/usr/bin/newrelic-infra-ctl`
-          </td>
-
-          <td>
-            Default CLI agent control binary location
-          </td>
-
-          <td>
-            Any
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `/var/db/newrelic-infra/`
-          </td>
-
-          <td>
-            Default inventory cache and plugin binaries
-          </td>
-
-          <td>
-            Any
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `/var/run/newrelic-infra.pid`
-          </td>
-
-          <td>
-            Default pid file
-          </td>
-
-          <td>
-            Any
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `stdout`, `stderr`, `logs`
-          </td>
-
-          <td>
-            Depending on configuration, the agent writes logs to `stdout`, which may connect to your system logging service
-          </td>
-
-          <td>
-            Any
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

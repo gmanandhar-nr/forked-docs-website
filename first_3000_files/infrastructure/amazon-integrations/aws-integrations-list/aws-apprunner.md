@@ -36,133 +36,18 @@ To find your integration data:
 
 ## Metric data [#metric]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average)
+# Table
 
-      </th>
+| Metric (min, max, average) | Unit | Description |
+| - | - | - |
+| `2xxStatusResponses` | count | Number of successfull requests to the service |
+| `4xxStatusResponses` | count | Number of failed requests to the service |
+| `ActiveInstances` | count | Number of active instances |
+| `CPUUtilization` | percentage | Instance CPU loading |
+| `MemoryUtilization` | percentage | Instance memory utilization |
+| `RequestLatency` | ms | How long a request takes |
+| `Requests` | count | Total number of requests |
 
-      <th>
-        Unit
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `2xxStatusResponses`
-      </td>
-
-      <td>
-        count
-
-      </td>
-
-      <td>
-        Number of successfull requests to the service
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `4xxStatusResponses`
-
-      </td>
-
-      <td>
-        count
-
-      </td>
-
-      <td>
-        Number of failed requests to the service
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ActiveInstances`
-      </td>
-
-      <td>
-        count
-
-      </td>
-
-      <td>
-        Number of active instances
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUUtilization`
-      </td>
-
-      <td>
-        percentage
-
-      </td>
-
-      <td>
-        Instance CPU loading
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MemoryUtilization`
-      </td>
-
-      <td>
-        percentage
-
-      </td>
-
-      <td>
-        Instance memory utilization
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RequestLatency`
-      </td>
-
-      <td>
-        ms
-
-      </td>
-
-      <td>
-        How long a request takes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Requests`
-      </td>
-
-      <td>
-        count
-
-      </td>
-
-      <td>
-        Total number of requests
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## How to use your data
 

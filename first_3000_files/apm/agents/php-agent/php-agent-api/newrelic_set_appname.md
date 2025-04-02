@@ -44,89 +44,33 @@ This method is intended to be called once, as each call to the API (even with th
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td colSpan={2}>
-        ```php
+| Parameter | Description |
+| - | - |
+| ```php
         function newrelic_set_appname(string $name) : bool
-        ```
-      </td>
-    </tr>
+        ``` |
+| `$name`
 
-    <tr>
-      <td>
-        `$name`
-
-        _string_
-      </td>
-
-      <td>
-        Required. Name(s) of app metrics should be reported under in New Relic user interface. Uses the same format as [`newrelic.appname`](/docs/agents/php-agent/configuration/php-agent-newrelicini-settings#inivar-appname) and can set multiple application names by separating each with a semicolon `;`.
-      </td>
-    </tr>
-
-    <tr>
-      <td colSpan={2}>
-        ```php
+        _string_ | Required. Name(s) of app metrics should be reported under in New Relic user interface. Uses the same format as [`newrelic.appname`](/docs/agents/php-agent/configuration/php-agent-newrelicini-settings#inivar-appname) and can set multiple application names by separating each with a semicolon `;`. |
+| ```php
         function newrelic_set_appname(string $name, string $license, bool $xmit) : bool
-        ```
-      </td>
-    </tr>
+        ``` |
+| `$name`
 
-    <tr>
-      <td>
-        `$name`
+        _string_ | Required. Name(s) of app metrics should be reported under in New Relic user interface. Uses the same format as [`newrelic.appname`](/docs/agents/php-agent/configuration/php-agent-newrelicini-settings#inivar-appname) and can set multiple application names by separating each with a semi-colon `;`. |
+| `$license`
 
-        _string_
-      </td>
+        _string_ | Required (can be empty string). Specify a different license key to report metrics to a different New Relic account. If set to empty string, defaults to license key in the agent's `newrelic.ini` file. |
+| `$xmit`
 
-      <td>
-        Required. Name(s) of app metrics should be reported under in New Relic user interface. Uses the same format as [`newrelic.appname`](/docs/agents/php-agent/configuration/php-agent-newrelicini-settings#inivar-appname) and can set multiple application names by separating each with a semi-colon `;`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$license`
-
-        _string_
-      </td>
-
-      <td>
-        Required (can be empty string). Specify a different license key to report metrics to a different New Relic account. If set to empty string, defaults to license key in the agent's `newrelic.ini` file.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$xmit`
-
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Defaults to `false`.
+        _boolean_ | Optional. Defaults to `false`.
 
         If `false` or omitted, the agent discards the current transaction and all data captured up to this call is lost.
 
-        If `true`, the agent sends the data that was gathered right before executing this call. <DNT>**The data is associated with the old app name**</DNT>. This has a very slight performance impact as it takes a few milliseconds for the agent to dump its data.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        If `true`, the agent sends the data that was gathered right before executing this call. **The data is associated with the old app name**. This has a very slight performance impact as it takes a few milliseconds for the agent to dump its data. |
+
 
 ## Return values
 

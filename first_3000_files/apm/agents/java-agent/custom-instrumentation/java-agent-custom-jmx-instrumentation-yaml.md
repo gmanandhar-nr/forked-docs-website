@@ -42,116 +42,21 @@ The custom instrumentation file must be in the [YAML format](https://en.wikipedi
 
 Here is a summary of each property in the JMX file. For more information, see [Custom JMX YAML examples](/docs/java/custom-jmx-yaml-examples).
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Value**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Definition**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Value** | **Definition** |
+| - | - |
+| `name` | The primary descriptive name identifying your YAML custom instrumentation file. Include one space before the `name` property. |
+| `version` | The version of the extension file. If two extensions have the same name, only the extension with the highest version will be used. Be sure the version property is on a separate line from `name`. Include one space before the version property. |
+| `enabled` | If `true`, the Java agent will read the extension. If `false`, the Java agent will ignore the extension. Include one space before the `enabled` property. |
+| `jmx` | No value follows the property `jmx`. Use zero spaces before the property. |
+| `object_name` | Matches the specific MBean's object. If you are using JDK version 1.6 or higher, the `object_name` can include asterisks (\*). Include two spaces before the dash and one space between the dash and `object_name`. |
+| `root_metric_name` | Available with New Relic's Java agent version 3.7.0 or higher. An optional property that provides the ability to name the metric used in New Relic. To use `object_name` property values, specify the property key in brackets(`{}`). New Relic will automatically prefix the `root_metric_name` specified with JMX and append the attribute name to the end of the metric. Include four spaces before `root_metric_name`. |
+| `metrics` | There is no value on the metrics line. Include four spaces before metrics. |
+| `attributes` | A comma-separated list of the MBean's attributes. The attribute name must match exactly. Include 6 spaces before the dash and one space between the dash and `attributes` keyword. |
+| `type` | * If `simple`, each value will be reported to the New Relic collector.
+        * If `monotonically_increasing` (default), the positive difference will be reported to the New Relic collector. |
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
-      </td>
-
-      <td>
-        The primary descriptive name identifying your YAML custom instrumentation file. Include one space before the `name` property.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `version`
-      </td>
-
-      <td>
-        The version of the extension file. If two extensions have the same name, only the extension with the highest version will be used. Be sure the version property is on a separate line from `name`. Include one space before the version property.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `enabled`
-      </td>
-
-      <td>
-        If `true`, the Java agent will read the extension. If `false`, the Java agent will ignore the extension. Include one space before the `enabled` property.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `jmx`
-      </td>
-
-      <td>
-        No value follows the property `jmx`. Use zero spaces before the property.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `object_name`
-      </td>
-
-      <td>
-        Matches the specific MBean's object. If you are using JDK version 1.6 or higher, the `object_name` can include asterisks (\*). Include two spaces before the dash and one space between the dash and `object_name`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `root_metric_name`
-      </td>
-
-      <td>
-        Available with New Relic's Java agent version 3.7.0 or higher. An optional property that provides the ability to name the metric used in New Relic. To use `object_name` property values, specify the property key in brackets(`{}`). New Relic will automatically prefix the `root_metric_name` specified with JMX and append the attribute name to the end of the metric. Include four spaces before `root_metric_name`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `metrics`
-      </td>
-
-      <td>
-        There is no value on the metrics line. Include four spaces before metrics.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `attributes`
-      </td>
-
-      <td>
-        A comma-separated list of the MBean's attributes. The attribute name must match exactly. Include 6 spaces before the dash and one space between the dash and `attributes` keyword.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="attribute-type">
-        `type`
-      </td>
-
-      <td>
-        * If `simple`, each value will be reported to the New Relic collector.
-        * If `monotonically_increasing` (default), the positive difference will be reported to the New Relic collector.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## YAML file location [#file_location]
 

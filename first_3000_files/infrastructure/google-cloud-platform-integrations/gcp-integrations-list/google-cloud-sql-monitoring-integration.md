@@ -38,384 +38,50 @@ To view [metric data](/docs/telemetry-data-platform/understand-data/new-relic-da
 
 Query `GcpCloudSqlSample` events in New Relic to view data for the following attributes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Attribute
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `database.AutoFailoverRequestCount`
-      </td>
-
-      <td>
-        Delta of number of instance auto-failover requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.AvailableForFailover`
-      </td>
-
-      <td>
-        This is over `0` if the failover operation is available on the instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.cpu.ReservedCores`
-      </td>
-
-      <td>
-        Number of cores reserved for the database.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.cpu.UsageTime`
-      </td>
-
-      <td>
-        Cumulative CPU usage time in seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.cpu.Utilization`
-      </td>
-
-      <td>
-        The fraction of the reserved CPU that is currently in use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.disk.BytesUsed`
-      </td>
-
-      <td>
-        Data utilization in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.disk.Quota`
-      </td>
-
-      <td>
-        Maximum data disk size in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.disk.ReadOps`
-      </td>
-
-      <td>
-        Delta count of data disk read IO operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.disk.Utilization`
-      </td>
-
-      <td>
-        The fraction of the disk quota that is currently in use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.disk.WriteOps`
-      </td>
-
-      <td>
-        Delta count of disk write IO operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.memory.Quota`
-      </td>
-
-      <td>
-        Maximum RAM size in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.memory.Usage`
-      </td>
-
-      <td>
-        RAM usage in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.memory.Utilization`
-      </td>
-
-      <td>
-        The fraction of the memory quota that is currently in use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.InnodbBufferPoolPagesDirty`
-      </td>
-
-      <td>
-        The fraction of the memory quota that is currently in use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.InnodbBufferPoolPagesFree`
-      </td>
-
-      <td>
-        Number of unused pages in the InnoDB buffer pool.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.InnodbBufferPoolPagesTotal`
-      </td>
-
-      <td>
-        Total number of pages in the InnoDB buffer pool.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.InnodbDataFsyncs`
-      </td>
-
-      <td>
-        Delta count of InnoDB fsync() calls.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.InnodbOsLogFsyncs`
-      </td>
-
-      <td>
-        Delta count of InnoDB fsync() calls to the log file.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.InnodbPagesRead`
-      </td>
-
-      <td>
-        Delta count of InnoDB pages read.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.InnodbPagesWritten`
-      </td>
-
-      <td>
-        Delta count of InnoDB pages written.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.Queries`
-      </td>
-
-      <td>
-        Delta count of statements executed by the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.Questions`
-      </td>
-
-      <td>
-        Delta count of statements executed by the server sent by the client.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.ReceivedBytesCount`
-      </td>
-
-      <td>
-        Delta count of bytes received by MySQL process.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.replication.SecondsBehindMaster`
-      </td>
-
-      <td>
-        Number of seconds the read replica is behind its master (approximation).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.replication.SlaveIoRunning`
-      </td>
-
-      <td>
-        Indicates whether the I/O thread for reading the master's binary log is running. Possible values are `Yes`, `No`, and `Connecting`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.replication.SlaveSqlRunning`
-      </td>
-
-      <td>
-        Indicates whether the I/O thread for reading the master's binary log is running. Possible values are `Yes`, `No`, and `Connecting`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.mysql.SentBytesCount`
-      </td>
-
-      <td>
-        Indicates whether the I/O thread for reading the master's binary log is running. Possible values are `Yes`, `No`, and `Connecting`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.network.Connections`
-      </td>
-
-      <td>
-        Number of connections to the Cloud SQL MySQL instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.network.ReceivedBytesCount`
-      </td>
-
-      <td>
-        Delta count of bytes received through the network.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.network.SentBytesCount`
-      </td>
-
-      <td>
-        Delta count of bytes sent through the network.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.postgresql.NumBackends`
-      </td>
-
-      <td>
-        Number of connections to the Cloud SQL PostgreSQL instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.postgresql.replication.ReplicaByteLag`
-      </td>
-
-      <td>
-        Replication lag in bytes. Reported from the master per replica.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.postgresql.TransactionCount`
-      </td>
-
-      <td>
-        Delta count of number of transactions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.State`
-      </td>
-
-      <td>
-        The current serving state of the Cloud SQL instance. This can be one of the following:
+# Table
+
+| Attribute | Description |
+| - | - |
+| `database.AutoFailoverRequestCount` | Delta of number of instance auto-failover requests. |
+| `database.AvailableForFailover` | This is over `0` if the failover operation is available on the instance. |
+| `database.cpu.ReservedCores` | Number of cores reserved for the database. |
+| `database.cpu.UsageTime` | Cumulative CPU usage time in seconds. |
+| `database.cpu.Utilization` | The fraction of the reserved CPU that is currently in use. |
+| `database.disk.BytesUsed` | Data utilization in bytes. |
+| `database.disk.Quota` | Maximum data disk size in bytes. |
+| `database.disk.ReadOps` | Delta count of data disk read IO operations. |
+| `database.disk.Utilization` | The fraction of the disk quota that is currently in use. |
+| `database.disk.WriteOps` | Delta count of disk write IO operations. |
+| `database.memory.Quota` | Maximum RAM size in bytes. |
+| `database.memory.Usage` | RAM usage in bytes. |
+| `database.memory.Utilization` | The fraction of the memory quota that is currently in use. |
+| `database.mysql.InnodbBufferPoolPagesDirty` | The fraction of the memory quota that is currently in use. |
+| `database.mysql.InnodbBufferPoolPagesFree` | Number of unused pages in the InnoDB buffer pool. |
+| `database.mysql.InnodbBufferPoolPagesTotal` | Total number of pages in the InnoDB buffer pool. |
+| `database.mysql.InnodbDataFsyncs` | Delta count of InnoDB fsync() calls. |
+| `database.mysql.InnodbOsLogFsyncs` | Delta count of InnoDB fsync() calls to the log file. |
+| `database.mysql.InnodbPagesRead` | Delta count of InnoDB pages read. |
+| `database.mysql.InnodbPagesWritten` | Delta count of InnoDB pages written. |
+| `database.mysql.Queries` | Delta count of statements executed by the server. |
+| `database.mysql.Questions` | Delta count of statements executed by the server sent by the client. |
+| `database.mysql.ReceivedBytesCount` | Delta count of bytes received by MySQL process. |
+| `database.mysql.replication.SecondsBehindMaster` | Number of seconds the read replica is behind its master (approximation). |
+| `database.mysql.replication.SlaveIoRunning` | Indicates whether the I/O thread for reading the master's binary log is running. Possible values are `Yes`, `No`, and `Connecting`. |
+| `database.mysql.replication.SlaveSqlRunning` | Indicates whether the I/O thread for reading the master's binary log is running. Possible values are `Yes`, `No`, and `Connecting`. |
+| `database.mysql.SentBytesCount` | Indicates whether the I/O thread for reading the master's binary log is running. Possible values are `Yes`, `No`, and `Connecting`. |
+| `database.network.Connections` | Number of connections to the Cloud SQL MySQL instance. |
+| `database.network.ReceivedBytesCount` | Delta count of bytes received through the network. |
+| `database.network.SentBytesCount` | Delta count of bytes sent through the network. |
+| `database.postgresql.NumBackends` | Number of connections to the Cloud SQL PostgreSQL instance. |
+| `database.postgresql.replication.ReplicaByteLag` | Replication lag in bytes. Reported from the master per replica. |
+| `database.postgresql.TransactionCount` | Delta count of number of transactions. |
+| `database.State` | The current serving state of the Cloud SQL instance. This can be one of the following:
 
         * `RUNNABLE`: The instance is running, or is ready to run when accessed.
         * `SUSPENDED`: The instance is not available, for example due to problems with billing.
         * `PENDING_CREATE`: The instance is being created.
         * `MAINTENANCE`: The instance is down for maintenance.
-        * `UNKNOWN_STATE`: The state of the instance is unknown.
-      </td>
-    </tr>
+        * `UNKNOWN_STATE`: The state of the instance is unknown. |
+| `database.Up` | Indicates if the server is up or not. On-demand instances are spun down if no connections are made for a sufficient amount of time. |
+| `database.Uptime` | Delta count of the time in seconds the instance has been running. |
 
-    <tr>
-      <td>
-        `database.Up`
-      </td>
-
-      <td>
-        Indicates if the server is up or not. On-demand instances are spun down if no connections are made for a sufficient amount of time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `database.Uptime`
-      </td>
-
-      <td>
-        Delta count of the time in seconds the instance has been running.
-      </td>
-    </tr>
-  </tbody>
-</table>

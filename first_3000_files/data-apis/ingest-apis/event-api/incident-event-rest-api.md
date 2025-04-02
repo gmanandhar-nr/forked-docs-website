@@ -79,31 +79,14 @@ The incident event API uses the Event API's value types. For descriptions of the
     If you create two trigger events with the exact same `aggregationTag`, they will be aggregated to the same incident. Meaning, only one incident is created from multiple triggers.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Field
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Field | Description |
+| - | - |
+| `aggregationTag.*`
 
-  <tbody>
-    <tr>
-      <td>
-        `aggregationTag.*`
-
-        _string_, _number_, or _timestamp_
-      </td>
-
-      <td>
-        <DNT>
-          **REQUIRED**
-        </DNT>
+        _string_, _number_, or _timestamp_ | **REQUIRED**
+        
 
         Any attribute prefixed with `aggregationTag` will be used to aggregate trigger events together.
 
@@ -115,156 +98,51 @@ The incident event API uses the Event API's value types. For descriptions of the
 
         ```json
         reserved_key: {"priority",  "accountId", "originalAccountId", "policyId", "conditionId", "aggregationKey", "entityType", "entityName", "entityId", "violationUuid", "violationId", "nrIncidentId" }
-        ```
-      </td>
-    </tr>
+        ``` |
+| `state`
 
-    <tr>
-      <td>
-        `state`
+        _enum: (`trigger`, `resolve`)_ | **REQUIRED**
+        
 
-        _enum: (`trigger`, `resolve`)_
-      </td>
+        Whether the event should trigger a new incident or resolve an existing one. Updates to the incident can also be sent using trigger. |
+| `priority`
 
-      <td>
-        <DNT>
-          **REQUIRED**
-        </DNT>
+        _enum: (`low`, `medium`, `high`, `critical`)_ | The incident's priority. Default: `high`.
 
-        Whether the event should trigger a new incident or resolve an existing one. Updates to the incident can also be sent using trigger.
-      </td>
-    </tr>
+        Highest priority will be used when different priorities are sent. |
+| `title`
 
-    <tr>
-      <td>
-        `priority`
+        _string_ | **REQUIRED, when `state` is `trigger`**
+        
 
-        _enum: (`low`, `medium`, `high`, `critical`)_
-      </td>
+        The triggering event's title. |
+| `source`
 
-      <td>
-        The incident's priority. Default: `high`.
+        _string_ | **REQUIRED, when `state` is `trigger`**
+        
 
-        Highest priority will be used when different priorities are sent.
-      </td>
-    </tr>
+        The origin of the incident, or the monitoring system that triggered it (not the entity that faulted). |
+| `description`
 
-    <tr>
-      <td>
-        `title`
+        _string_ | The triggering event's description. |
+| `deepLinkUrl`
 
-        _string_
-      </td>
+        _string_ | A deep link to a page related to the incident. |
+| `runbookUrl`
 
-      <td>
-        <DNT>
-          **REQUIRED, when `state` is `trigger`**
-        </DNT>
+        _string_ | A runbook URL. |
+| `externalId`
 
-        The triggering event's title.
-      </td>
-    </tr>
+        _string_ | An external ID you can attach to the event.
 
-    <tr>
-      <td>
-        `source`
+        For example, it can be used to query for errors related to ingesting this event. |
+| `entityName`
 
-        _string_
-      </td>
+        _string_ | The name of the entity that generated the incident. |
+| `entity.guid`
 
-      <td>
-        <DNT>
-          **REQUIRED, when `state` is `trigger`**
-        </DNT>
+        _string_ | The ID of the entity that generated the incident. |
+| `version`
 
-        The origin of the incident, or the monitoring system that triggered it (not the entity that faulted).
-      </td>
-    </tr>
+        _float_ | The current format's version. |
 
-    <tr>
-      <td>
-        `description`
-
-        _string_
-      </td>
-
-      <td>
-        The triggering event's description.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deepLinkUrl`
-
-        _string_
-      </td>
-
-      <td>
-        A deep link to a page related to the incident.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `runbookUrl`
-
-        _string_
-      </td>
-
-      <td>
-        A runbook URL.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `externalId`
-
-        _string_
-      </td>
-
-      <td>
-        An external ID you can attach to the event.
-
-        For example, it can be used to query for errors related to ingesting this event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `entityName`
-
-        _string_
-      </td>
-
-      <td>
-        The name of the entity that generated the incident.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `entity.guid`
-
-        _string_
-      </td>
-
-      <td>
-        The ID of the entity that generated the incident.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `version`
-
-        _float_
-      </td>
-
-      <td>
-        The current format's version.
-      </td>
-    </tr>
-  </tbody>
-</table>

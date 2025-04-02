@@ -36,328 +36,39 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Application Insights metrics [#Azure-application-insights]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `availabilityResults/availabilityPercentage` | Percentage of successfully completed availability tests. |
+| `availabilityResults/count` | Count of availability tests. |
+| `availabilityResults/duration` | Availability test duration. |
+| `browserTimings/networkDuration` | Time between user request and network connection. Includes DNS lookup and transport connection. |
+| `browserTimings/processingDuration` | Time between receiving the last byte of a document until the DOM is loaded. Async requests may still be processing. |
+| `browserTimings/receiveDuration` | Time between the first and last bytes, or until disconnection. |
+| `browserTimings/sendDuration` | Time between network connection and receiving the first byte. |
+| `browserTimings/totalDuration` | Time from user request until DOM, stylesheets, scripts and images are loaded. |
+| `dependencies/count` | Count of calls made by the application to external resources. |
+| `dependencies/duration` | Duration of calls made by the application to external resources. |
+| `dependencies/failed` | Count of failed dependency calls made by the application to external resources. |
+| `exceptions/browser` | Count of uncaught exceptions thrown in the browser. |
+| `exceptions/count` | Combined count of all uncaught exceptions. |
+| `exceptions/server` | Count of uncaught exceptions thrown in the server application. |
+| `pageViews/count` | Count of page views. |
+| `pageViews/duration` | Page view load time. |
+| `performanceCounters/exceptionsPerSecond` | Count of handled and unhandled exceptions reported to windows, including .NET exceptions and unmanaged exceptions that are converted into .NET exceptions. |
+| `performanceCounters/memoryAvailableBytes` | Physical memory immediately available for allocation to a process or for system use. |
+| `performanceCounters/processCpuPercentage` | The percentage of elapsed time that all process threads used the processor to execute instructions. This can vary between 0 to 100. This metric indicates the performance of w3wp process alone. |
+| `performanceCounters/processIOBytesPerSecond` | Total bytes per second read and written to files, network and devices. |
+| `performanceCounters/processorCpuPercentage` | The percentage of time that the processor spends in non-idle threads. |
+| `performanceCounters/processPrivateBytes` | Memory exclusively assigned to the monitored application's processes. |
+| `performanceCounters/requestExecutionTime` | Execution time of the most recent request. |
+| `performanceCounters/requestsInQueue` | Length of the application request queue. |
+| `performanceCounters/requestsPerSecond` | Rate of all requests to the application per second from ASP.NET. |
+| `requests/count` | Count of HTTP requests completed. |
+| `requests/duration` | Time between receiving an HTTP request and finishing sending the response. |
+| `requests/failed` | Count of HTTP requests marked as failed. In most cases these are requests with a response code >= 400 and not equal to 401. |
+| `requests/rate` | Rate of server requests per second. |
+| `traces/count` | Trace document count. |
+| `requests/count` | Count of HTTP requests completed. |
 
-  <tbody>
-    <tr>
-      <td>
-        `availabilityResults/availabilityPercentage`
-      </td>
-
-      <td>
-        Percentage of successfully completed availability tests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `availabilityResults/count`
-      </td>
-
-      <td>
-        Count of availability tests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `availabilityResults/duration`
-      </td>
-
-      <td>
-        Availability test duration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `browserTimings/networkDuration`
-      </td>
-
-      <td>
-        Time between user request and network connection. Includes DNS lookup and transport connection.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `browserTimings/processingDuration`
-      </td>
-
-      <td>
-        Time between receiving the last byte of a document until the DOM is loaded. Async requests may still be processing.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `browserTimings/receiveDuration`
-      </td>
-
-      <td>
-        Time between the first and last bytes, or until disconnection.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `browserTimings/sendDuration`
-      </td>
-
-      <td>
-        Time between network connection and receiving the first byte.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `browserTimings/totalDuration`
-      </td>
-
-      <td>
-        Time from user request until DOM, stylesheets, scripts and images are loaded.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dependencies/count`
-      </td>
-
-      <td>
-        Count of calls made by the application to external resources.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dependencies/duration`
-      </td>
-
-      <td>
-        Duration of calls made by the application to external resources.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dependencies/failed`
-      </td>
-
-      <td>
-        Count of failed dependency calls made by the application to external resources.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `exceptions/browser`
-      </td>
-
-      <td>
-        Count of uncaught exceptions thrown in the browser.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `exceptions/count`
-      </td>
-
-      <td>
-        Combined count of all uncaught exceptions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `exceptions/server`
-      </td>
-
-      <td>
-        Count of uncaught exceptions thrown in the server application.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `pageViews/count`
-      </td>
-
-      <td>
-        Count of page views.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `pageViews/duration`
-      </td>
-
-      <td>
-        Page view load time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `performanceCounters/exceptionsPerSecond`
-      </td>
-
-      <td>
-        Count of handled and unhandled exceptions reported to windows, including .NET exceptions and unmanaged exceptions that are converted into .NET exceptions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `performanceCounters/memoryAvailableBytes`
-      </td>
-
-      <td>
-        Physical memory immediately available for allocation to a process or for system use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `performanceCounters/processCpuPercentage`
-      </td>
-
-      <td>
-        The percentage of elapsed time that all process threads used the processor to execute instructions. This can vary between 0 to 100. This metric indicates the performance of w3wp process alone.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `performanceCounters/processIOBytesPerSecond`
-      </td>
-
-      <td>
-        Total bytes per second read and written to files, network and devices.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `performanceCounters/processorCpuPercentage`
-      </td>
-
-      <td>
-        The percentage of time that the processor spends in non-idle threads.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `performanceCounters/processPrivateBytes`
-      </td>
-
-      <td>
-        Memory exclusively assigned to the monitored application's processes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `performanceCounters/requestExecutionTime`
-      </td>
-
-      <td>
-        Execution time of the most recent request.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `performanceCounters/requestsInQueue`
-      </td>
-
-      <td>
-        Length of the application request queue.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `performanceCounters/requestsPerSecond`
-      </td>
-
-      <td>
-        Rate of all requests to the application per second from ASP.NET.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `requests/count`
-      </td>
-
-      <td>
-        Count of HTTP requests completed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `requests/duration`
-      </td>
-
-      <td>
-        Time between receiving an HTTP request and finishing sending the response.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `requests/failed`
-      </td>
-
-      <td>
-        Count of HTTP requests marked as failed. In most cases these are requests with a response code >= 400 and not equal to 401.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `requests/rate`
-      </td>
-
-      <td>
-        Rate of server requests per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `traces/count`
-      </td>
-
-      <td>
-        Trace document count.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `requests/count`
-      </td>
-
-      <td>
-        Count of HTTP requests completed.
-      </td>
-    </tr>
-  </tbody>
-</table>

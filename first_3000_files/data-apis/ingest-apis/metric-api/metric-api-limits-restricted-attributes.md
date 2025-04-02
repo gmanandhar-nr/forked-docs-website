@@ -24,194 +24,40 @@ This document describes data requirements for the [Metric API](/docs/new-relic-m
 
 The following default limits apply for all Metric data:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Condition
-      </th>
+# Table
 
-      <th>
-        Limit
-      </th>
-    </tr>
-  </thead>
+| Condition | Limit |
+| - | - |
+| Age range for timestamp values | Metrics reported with a timestamp older than 48 hours ago or newer than 24 hours from the time they are reported are dropped. |
+| Max data points per minute (DPM) | 3-15 million DPM [(learn more)](#additional-considerations) |
+| Max unique time series (cardinality) per account per day | 1-15 million [(learn more)](#additional-considerations)
 
-  <tbody>
-    <tr>
-      <td>
-        Age range for timestamp values
-      </td>
-
-      <td>
-        Metrics reported with a timestamp older than 48 hours ago or newer than 24 hours from the time they are reported are dropped.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Max data points per minute (DPM)
-      </td>
-
-      <td>
-        3-15 million DPM [(learn more)](#additional-considerations)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Max unique time series (cardinality) per account per day
-      </td>
-
-      <td>
-        1-15 million [(learn more)](#additional-considerations)
-
-        A time series is a single, unique combination of a metric name and any attributes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Max unique time series (cardinality) per metric name per day
-      </td>
-
-      <td>
-        100k
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Max payloads per minute
-      </td>
-
-      <td>
-        100k [(learn more)](#additional-considerations)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Max attributes per metric
-      </td>
-
-      <td>
-        100
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Max metric attribute name length
-      </td>
-
-      <td>
-        255 characters
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Max characters for an attribute key
-      </td>
-
-      <td>
-        255 characters
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Max metric attribute value length
-      </td>
-
-      <td>
-        4096 characters
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Allowed HTTP protocols
-      </td>
-
-      <td>
-        HTTPS only
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Numerical long values falling outside minimum or maximum Java long values
-      </td>
-
-      <td>
-        Numerical long values that fall outside of the minimum or maximum Java long value will be rejected.
+        A time series is a single, unique combination of a metric name and any attributes. |
+| Max unique time series (cardinality) per metric name per day | 100k |
+| Max payloads per minute | 100k [(learn more)](#additional-considerations) |
+| Max attributes per metric | 100 |
+| Max metric attribute name length | 255 characters |
+| Max characters for an attribute key | 255 characters |
+| Max metric attribute value length | 4096 characters |
+| Allowed HTTP protocols | HTTPS only |
+| Numerical long values falling outside minimum or maximum Java long values | Numerical long values that fall outside of the minimum or maximum Java long value will be rejected.
 
         * If the number is in the common block, then the entire block will be dropped.
-        * If the number is in a metric data point, then the metric data point it resides in will be dropped.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Numerical double values falling outside minimum or maximum Java double values
-      </td>
-
-      <td>
-        Numeric double values that fall outside of a the minimum or maximum Java double value will be rejected.
+        * If the number is in a metric data point, then the metric data point it resides in will be dropped. |
+| Numerical double values falling outside minimum or maximum Java double values | Numeric double values that fall outside of a the minimum or maximum Java double value will be rejected.
 
         * If the number is in the common block, then the entire block will be dropped.
-        * If the number is in a metric data point, then the metric data point it resides in will be dropped.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Numerical double values that require rounding to convert to a double-precision floating-point number.
-      </td>
-
-      <td>
-        Numeric double values that require rounding to convert to a double-precision floating-point number will be rejected.
+        * If the number is in a metric data point, then the metric data point it resides in will be dropped. |
+| Numerical double values that require rounding to convert to a double-precision floating-point number. | Numeric double values that require rounding to convert to a double-precision floating-point number will be rejected.
 
         An example of this is `1.12345678901234567E18`. A double can contain a value this large but it does not have enough precision to represent it accurately (it would have to be rounded to `1.12345678901234573E18`).
 
         * If the number is in the common block, then the entire block will be dropped.
-        * If the number is in a metric data point, then the metric data point it resides in will be dropped.
-      </td>
-    </tr>
+        * If the number is in a metric data point, then the metric data point it resides in will be dropped. |
+| Payload size | Total maximum size or length: **1MB (10^6 bytes) maximum per POST**. We highly recommend using compression. |
+| Payload format | The payload must encoded as **UTF-8**. |
+| Attribute naming syntax | Attribute names can be a combination of alphanumeric characters, colons (`:`), periods (`.`), and underscores (`_`). |
 
-    <tr>
-      <td>
-        Payload size
-      </td>
-
-      <td>
-        Total maximum size or length: <DNT>**1MB (10^6 bytes) maximum per POST**</DNT>. We highly recommend using compression.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Payload format
-      </td>
-
-      <td>
-        The payload must encoded as <DNT>**UTF-8**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Attribute naming syntax
-      </td>
-
-      <td>
-        Attribute names can be a combination of alphanumeric characters, colons (`:`), periods (`.`), and underscores (`_`).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The following default limits apply only to data collected via the Prometheus Remote Write integration:
 

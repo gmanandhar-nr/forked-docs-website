@@ -60,84 +60,20 @@ You can also use custom events with the [metrics and events explorer](/docs/quer
 
 Methods for sending custom events and attributes include:
 
-<table>
-  <thead>
-    <tr>
-      <th width="200px">
-        Source
-      </th>
+# Table
 
-      <th>
-        How to send custom data
-      </th>
-    </tr>
-  </thead>
+| Source | How to send custom data |
+| - | - |
+| [APM agent](/docs/apm/new-relic-apm/getting-started/introduction-apm) | Use  agent APIs to [report custom events and custom attributes](/docs/data-apis/custom-data/custom-events/apm-report-custom-events-attributes/). |
+| [Browser monitoring agent](/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring) | Use the browser agent APIs to [send custom events](/docs/data-apis/custom-data/custom-events/report-browser-monitoring-custom-events-attributes) and [set custom attributes](/docs/browser/new-relic-browser/browser-agent-spa-api/setcustomattribute-browser-agent-api).
 
-  <tbody>
-    <tr>
-      <td>
-        [APM agent](/docs/apm/new-relic-apm/getting-started/introduction-apm)
-      </td>
+        Forward [APM agent custom attributes](/docs/data-apis/custom-data/custom-events/report-browser-monitoring-custom-events-attributes/) to the `PageView` event. |
+| [Event API](/docs/data-apis/ingest-apis/introduction-event-api) | To report custom events not associated with other New Relic features, use the [Event API](/docs/data-apis/ingest-apis/introduction-event-api). |
+| [Infrastructure monitoring agent](/docs/infrastructure/new-relic-infrastructure/data-instrumentation/default-infrastructure-attributes-events) | [Add custom attributes](/docs/infrastructure/manage-your-data/data-instrumentation/default-infrastructure-monitoring-data) to default infrastructure events.
 
-      <td>
-        Use <InlinePopover type="apm"/> agent APIs to [report custom events and custom attributes](/docs/data-apis/custom-data/custom-events/apm-report-custom-events-attributes/).
-      </td>
-    </tr>
+        Use the [Flex integration tool](/docs/infrastructure/host-integrations/host-integrations-list/flex-integration-tool-build-your-own-integration/) to report your own custom event data. |
+| [Mobile monitoring agent](/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring) | Use the mobile agent API to [send custom events and attributes](/docs/data-apis/custom-data/custom-events/report-mobile-monitoring-custom-events-attributes). |
+| [Synthetic monitoring](/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring) | [Add custom attributes](/docs/synthetics/synthetic-monitoring/scripting-monitors/add-custom-attributes-synthetic-monitoring-data) to the `SyntheticCheck` event via the `$util.insights` tools. |
 
-    <tr>
-      <td>
-        [Browser monitoring agent](/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring)
-      </td>
-
-      <td>        
-        Use the browser agent APIs to [send custom events](/docs/data-apis/custom-data/custom-events/report-browser-monitoring-custom-events-attributes) and [set custom attributes](/docs/browser/new-relic-browser/browser-agent-spa-api/setcustomattribute-browser-agent-api).
-
-        Forward [APM agent custom attributes](/docs/data-apis/custom-data/custom-events/report-browser-monitoring-custom-events-attributes/) to the `PageView` event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Event API](/docs/data-apis/ingest-apis/introduction-event-api)
-      </td>
-
-      <td>
-        To report custom events not associated with other New Relic features, use the [Event API](/docs/data-apis/ingest-apis/introduction-event-api).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Infrastructure monitoring agent](/docs/infrastructure/new-relic-infrastructure/data-instrumentation/default-infrastructure-attributes-events)
-      </td>
-
-      <td>
-        [Add custom attributes](/docs/infrastructure/manage-your-data/data-instrumentation/default-infrastructure-monitoring-data) to default infrastructure events.
-
-        Use the [Flex integration tool](/docs/infrastructure/host-integrations/host-integrations-list/flex-integration-tool-build-your-own-integration/) to report your own custom event data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Mobile monitoring agent](/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring)
-      </td>
-
-      <td>
-        Use the mobile agent API to [send custom events and attributes](/docs/data-apis/custom-data/custom-events/report-mobile-monitoring-custom-events-attributes).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Synthetic monitoring](/docs/synthetics/synthetic-monitoring/getting-started/get-started-synthetic-monitoring)
-      </td>
-
-      <td>
-        [Add custom attributes](/docs/synthetics/synthetic-monitoring/scripting-monitors/add-custom-attributes-synthetic-monitoring-data) to the `SyntheticCheck` event via the `$util.insights` tools.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For other options for reporting custom data, see [Custom data](/docs/data-apis/custom-data/intro-custom-data).

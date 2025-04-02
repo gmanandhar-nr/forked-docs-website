@@ -35,37 +35,12 @@ You can follow these recommended actions to improve and get the most out of your
 
 ## Improve alert response [#alert-response]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        What should I do
-      </th>
+# Table
 
-      <th>
-        Benefit
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Have an explanatory name for the alert
-      </td>
-
-      <td>
-        The description and the tags must give you self-descriptive alerts to know which service is wrong, which environment is involved, which team owns it, and if it's impacting to end users. It helps you to answer faster and decide what to do.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Add tags to your alert conditions
-      </td>
-
-      <td>
-        Your issues and incidents have these tags in their metadata. Use them to do flexible filters in workflows or add them to your notification payload.
+| What should I do | Benefit |
+| - | - |
+| Have an explanatory name for the alert | The description and the tags must give you self-descriptive alerts to know which service is wrong, which environment is involved, which team owns it, and if it's impacting to end users. It helps you to answer faster and decide what to do. |
+| Add tags to your alert conditions | Your issues and incidents have these tags in their metadata. Use them to do flexible filters in workflows or add them to your notification payload.
 
         Issues have 3 sources of tags:
 
@@ -73,62 +48,14 @@ You can follow these recommended actions to improve and get the most out of your
         * The current values from the [`facet/where` clause](/docs/alerts-applied-intelligence/new-relic-alerts/alert-conditions/create-nrql-alert-conditions/#syntax) from the alert condition.
         * The tags from the breaching entity if the alerts results are scoped to a unique entity. If the incident isn't scoped to the entity, entity tags won't be brought over.
 
-        These events are stored in NRDB. Don't worry about the nr\* tables consumption because they aren't counted as ingest.
-      </td>
-    </tr>
+        These events are stored in NRDB. Don't worry about the nr\* tables consumption because they aren't counted as ingest. |
+| Categorize the alert conditions | Across your organization define alert categories, expectations for handling their notifications, and a unique destination.
+        For example, proactive to Slack to notify before the incident occurs; reactive to PagerDuty to detect and notify of an ongoing incident; or informative to Jira. |
+| Define the communication and escalation method | Decide the means of [notifications](/docs/alerts-applied-intelligence/notifications/notification-integrations/). Some methods of notifications are: [email](/docs/alerts-applied-intelligence/notifications/notification-integrations/#email), [Slack](/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack), [PagerDuty](/docs/alerts-applied-intelligence/notifications/notification-integrations/#pagerduty), or [Jira](/docs/alerts-applied-intelligence/notifications/notification-integrations/#jira). |
+| Add a responsible team | This team is in charge of handling the first notification. |
+| Add a [runbook url](/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/understand-technical-concepts/provide-runbook-instructions-alert-activity/) to every alert condition | The runbook must describe remediation steps to follow and who to involve or escalate to. |
+| Use [enrichments](/docs/alerts-applied-intelligence/applied-intelligence/incident-workflows/incident-workflows/#enrichments) | Prioritize and triage your alert notifications faster by providing additional metrics specific to the issue. |
 
-    <tr>
-      <td>
-        Categorize the alert conditions
-      </td>
-
-      <td>
-        Across your organization define alert categories, expectations for handling their notifications, and a unique destination.
-        For example, proactive to Slack to notify before the incident occurs; reactive to PagerDuty to detect and notify of an ongoing incident; or informative to Jira.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Define the communication and escalation method
-      </td>
-
-      <td>
-        Decide the means of [notifications](/docs/alerts-applied-intelligence/notifications/notification-integrations/). Some methods of notifications are: [email](/docs/alerts-applied-intelligence/notifications/notification-integrations/#email), [Slack](/docs/alerts-applied-intelligence/notifications/notification-integrations/#slack), [PagerDuty](/docs/alerts-applied-intelligence/notifications/notification-integrations/#pagerduty), or [Jira](/docs/alerts-applied-intelligence/notifications/notification-integrations/#jira).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Add a responsible team
-      </td>
-
-      <td>
-        This team is in charge of handling the first notification.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Add a [runbook url](/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/understand-technical-concepts/provide-runbook-instructions-alert-activity/) to every alert condition
-      </td>
-
-      <td>
-        The runbook must describe remediation steps to follow and who to involve or escalate to.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Use [enrichments](/docs/alerts-applied-intelligence/applied-intelligence/incident-workflows/incident-workflows/#enrichments)
-      </td>
-
-      <td>
-        Prioritize and triage your alert notifications faster by providing additional metrics specific to the issue.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Improve alert maintenance [#alert-maintenance]
 

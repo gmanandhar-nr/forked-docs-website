@@ -56,47 +56,19 @@ To use a customized [page view name](/docs/browser/new-relic-browser/additional-
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$name`
 
-  <tbody>
-    <tr>
-      <td>
-        `$name`
+        _string_ | Required. The page name you want to use. Use alphanumeric characters. |
+| `$host`
 
-        _string_
-      </td>
+        _string_ | Optional. Default is `http://custom.transaction`. Typically set `host` to your site's domain URI.
 
-      <td>
-        Required. The page name you want to use. Use alphanumeric characters.
-      </td>
-    </tr>
+        To further group these custom transactions, provide a custom `host`. Otherwise, the page views will be assigned the default domain `custom.transaction`. Segments within the name must be explicitly added to your [URL allow list settings](/docs/browser/new-relic-browser/configuration/group-browser-metrics-urls) if they do not already appear. |
 
-    <tr>
-      <td>
-        `$host`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. Default is `http://custom.transaction`. Typically set `host` to your site's domain URI.
-
-        To further group these custom transactions, provide a custom `host`. Otherwise, the page views will be assigned the default domain `custom.transaction`. Segments within the name must be explicitly added to your [URL allow list settings](/docs/browser/new-relic-browser/configuration/group-browser-metrics-urls) if they do not already appear.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

@@ -17,80 +17,16 @@ freshnessValidatedDate: never
 
 We love open-source software, and use the following in the New Relic APM Agent SDK. Thank you, open-source community, for making these fine tools! Some of these are listed under multiple software licenses, and in that case we have listed the license we've chosen to use.
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        **Library**
-      </th>
+# Table
 
-      <th>
-        **License**
-      </th>
-    </tr>
-  </thead>
+| **Library** | **License** |
+| - | - |
+| [Boost C++](http://www.boost.org) | [Boost Software](http://www.boost.org/LICENSE_1_0.txt) |
+| [curl](http://curl.haxx.se/) | [Curl (MIT/X Style)](http://curl.haxx.se/docs/copyright.html) |
+| [libjson](http://sourceforge.net/projects/libjson/) | [libjson (BSD-2 Style)](https://github.com/GerHobbelt/libjson/blob/master/License.txt) |
+| [log4cplus](http://sourceforge.net/projects/log4cplus/) | [Apache Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) |
+| [OpenSSL](http://www.openssl.org) | [OpenSSL (BSD Style)](http://www.openssl.org/source/license.html) |
+| [zlib](http://www.zlib.net) | [zlib](http://www.zlib.net/zlib_license.html) |
 
-  <tbody>
-    <tr>
-      <td>
-        [Boost C++](http://www.boost.org)
-      </td>
-
-      <td>
-        [Boost Software](http://www.boost.org/LICENSE_1_0.txt)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [curl](http://curl.haxx.se/)
-      </td>
-
-      <td>
-        [Curl (MIT/X Style)](http://curl.haxx.se/docs/copyright.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [libjson](http://sourceforge.net/projects/libjson/)
-      </td>
-
-      <td>
-        [libjson (BSD-2 Style)](https://github.com/GerHobbelt/libjson/blob/master/License.txt)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [log4cplus](http://sourceforge.net/projects/log4cplus/)
-      </td>
-
-      <td>
-        [Apache Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [OpenSSL](http://www.openssl.org)
-      </td>
-
-      <td>
-        [OpenSSL (BSD Style)](http://www.openssl.org/source/license.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [zlib](http://www.zlib.net)
-      </td>
-
-      <td>
-        [zlib](http://www.zlib.net/zlib_license.html)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The remainder of the code is covered by the New Relic License agreement found in the LICENSE file in the distribution.

@@ -24,61 +24,15 @@ You've set up policies and conditions that generate incidents, but you aren't ge
 
 Here are some tips to avoid being placed on our suppression list:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Field
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Field | Description |
+| - | - |
+| Confirm real email accounts for new users | Many email bounce-backs happen when a user is added, but before their email is confirmed. This causes the email to be added to our suppression list before the user can receive the confirmation email. |
+| Check your distribution lists | When one email address on a distribution list fails, the entire distribution list is added to our suppression list. To avoid this, make sure invalid or outdated email addresses are removed from your distribution lists. |
+| Add your email to our allow list | Many messages can end up in you or your company’s spam filter. To ensure your system recognizes emails sent by us, add [noreply@newrelic.com](mailto:noreply@newrelic.com) and \*@mailer-d.newrelic.com to your allow list or “Safe Senders” list as a trusted email source. |
+| Consider other delivery options | In general, email isn't the most reliable way to receive notifications. For your most important alerts, set up [alternate means of communication](/docs/apis/nerdgraph/examples/nerdgraph-api-notifications-channels/) as a backup. |
 
-  <tbody>
-    <tr>
-      <td>
-        Confirm real email accounts for new users
-      </td>
-
-      <td>
-        Many email bounce-backs happen when a user is added, but before their email is confirmed. This causes the email to be added to our suppression list before the user can receive the confirmation email.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Check your distribution lists
-      </td>
-
-      <td>
-        When one email address on a distribution list fails, the entire distribution list is added to our suppression list. To avoid this, make sure invalid or outdated email addresses are removed from your distribution lists.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Add your email to our allow list
-      </td>
-
-      <td>
-        Many messages can end up in you or your company’s spam filter. To ensure your system recognizes emails sent by us, add [noreply@newrelic.com](mailto:noreply@newrelic.com) and \*@mailer-d.newrelic.com to your allow list or “Safe Senders” list as a trusted email source.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Consider other delivery options
-      </td>
-
-      <td>
-        In general, email isn't the most reliable way to receive notifications. For your most important alerts, set up [alternate means of communication](/docs/apis/nerdgraph/examples/nerdgraph-api-notifications-channels/) as a backup.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Cause
 

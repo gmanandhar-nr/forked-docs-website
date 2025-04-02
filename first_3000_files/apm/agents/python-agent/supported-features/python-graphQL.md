@@ -226,55 +226,14 @@ GraphQL/operation/GraphQL/{operation_type}/{operation_name}/{deepest_unique_path
   **Operation span attributes**
 </DNT>
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Name**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Name** | **Description** |
+| - | - |
+| `graphql.operation.type` | Query or mutation |
+| `graphql.operation.name` | Name given to the operation or `` |
+| `graphql.operation.query` | Name given to the query or `` |
 
-  <tbody>
-    <tr>
-      <td>
-        `graphql.operation.type`
-      </td>
-
-      <td>
-        Query or mutation
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `graphql.operation.name`
-      </td>
-
-      <td>
-        Name given to the operation or `< anonymous >`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `graphql.operation.query`
-      </td>
-
-      <td>
-        Name given to the query or `< anonymous >`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Field resolver spans
 

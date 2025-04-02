@@ -32,125 +32,18 @@ This New Relic infrastructure integration collects the following Amazon SageMake
 
 ### SageMaker Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `Invocations` | Count | The number of InvokeEndpoint requests sent to a model endpoint. |
+| `InvocationsPerInstance` | Count | The number of invocations sent to a model, normalized by InstanceCount in each ProductionVariant. |
+| `OverheadLatency` | Microseconds | The interval of time added to the time taken to respond to a client request by SageMaker overheads. |
+| `ModelLatency` | Microseconds | The interval of time taken by a model to respond to a SageMaker API request. |
+| `Invocation4XXErrors` | Count | The number of InvokeEndpoint requests where the model returned a 4xx HTTP response code. |
+| `Invocation5XXErrors` | Count | The number of InvokeEndpoint requests where the model returned a 5xx HTTP response code. |
+| `InvocationModelErrors` | Count | The number of model invocation requests which did not result in 2XX HTTP response. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `Invocations`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of InvokeEndpoint requests sent to a model endpoint.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InvocationsPerInstance`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of invocations sent to a model, normalized by InstanceCount in each ProductionVariant.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OverheadLatency`
-      </td>
-
-      <td>
-        Microseconds
-      </td>
-
-      <td>
-        The interval of time added to the time taken to respond to a client request by SageMaker overheads.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ModelLatency`
-      </td>
-
-      <td>
-        Microseconds
-      </td>
-
-      <td>
-        The interval of time taken by a model to respond to a SageMaker API request.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Invocation4XXErrors`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of InvokeEndpoint requests where the model returned a 4xx HTTP response code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Invocation5XXErrors`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of InvokeEndpoint requests where the model returned a 5xx HTTP response code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InvocationModelErrors`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of model invocation requests which did not result in 2XX HTTP response.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data from SageMaker have one dimension: `EndpointName`
 

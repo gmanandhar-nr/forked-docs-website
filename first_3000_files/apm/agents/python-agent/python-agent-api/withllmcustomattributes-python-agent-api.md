@@ -36,33 +36,14 @@ These custom attributes can be viewed on LLM events and queried for in the New R
 
 ## Parameters [#parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `custom_attribute_map`
 
-  <tbody>
-    <tr>
-      <td>
-        `custom_attribute_map`
+        _dictionary_ | Required. A non-empty dictionary where each key-value pair indicates the custom attribute name and its respective value. |
 
-        _dictionary_
-      </td>
-
-      <td>
-        Required. A non-empty dictionary where each key-value pair indicates the custom attribute name and its respective value.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values [#return-values]
 

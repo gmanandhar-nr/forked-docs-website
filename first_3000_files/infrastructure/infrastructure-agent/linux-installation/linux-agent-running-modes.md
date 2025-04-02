@@ -14,55 +14,18 @@ freshnessValidatedDate: never
 
 The infrastructure agent for Linux environments can run as root, privileged, or unprivileged user, which are described below:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Mode
-      </th>
+# Table
 
-      <th>
-        Overview
-      </th>
-    </tr>
-  </thead>
+| Mode | Overview |
+| - | - |
+| Root | Installed by default. Runs as `root` and has total access to all the system metrics and inventory. |
+| Privileged | Runs as a non-privileged user named `nri-agent` that is created automatically during the installation process.
 
-  <tbody>
-    <tr>
-      <td>
-        Root
-      </td>
+        Normal users do not have `READ` access to all the system metrics, so the agent will not be able to report all the metrics of the root mode. However, privileged mode can collect more metrics than unprivileged mode, including most of the inventory. This is because at installation time, the `/usr/bin/newrelic-infra` executable is granted with [`CAP_SYS_PTRACE` and `CAP_DAC_READ_SEARCH` kernel capabilities](http://man7.org/linux/man-pages/man7/capabilities.7.html). |
+| Unprivileged | Runs as a non-privileged user named `nri-agent` that is created automatically during the installation process.
 
-      <td>
-        Installed by default. Runs as `root` and has total access to all the system metrics and inventory.
-      </td>
-    </tr>
+        This mode is the most restricted. Normal users do not have `READ` access to all the system metrics, so the agent will not be able to report all the metrics of the root or privileged modes. |
 
-    <tr>
-      <td>
-        Privileged
-      </td>
-
-      <td>
-        Runs as a non-privileged user named `nri-agent` that is created automatically during the installation process.
-
-        Normal users do not have `READ` access to all the system metrics, so the agent will not be able to report all the metrics of the root mode. However, privileged mode can collect more metrics than unprivileged mode, including most of the inventory. This is because at installation time, the `/usr/bin/newrelic-infra` executable is granted with [`CAP_SYS_PTRACE` and `CAP_DAC_READ_SEARCH` kernel capabilities](http://man7.org/linux/man-pages/man7/capabilities.7.html).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Unprivileged
-      </td>
-
-      <td>
-        Runs as a non-privileged user named `nri-agent` that is created automatically during the installation process.
-
-        This mode is the most restricted. Normal users do not have `READ` access to all the system metrics, so the agent will not be able to report all the metrics of the root or privileged modes.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Metrics and inventory provided [#mode-metrics]
 

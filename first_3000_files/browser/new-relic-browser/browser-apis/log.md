@@ -45,45 +45,17 @@ When you execute this function with a valid message and elective options, the br
 
 ## Parameters [#log-parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `message`
 
-  <tbody>
-    <tr>
-      <td>
-        `message`
+        _string_ | Required. A string value which will be set to the `message` value of the created log event. The `message` property of the log event is the most visible property exposed on the log event and is used across the UI platform when displaying logs. |
+| `options`
 
-        _string_
-      </td>
+        _Object_ | Optional. An object used for supplying optional configurations for the captured log. `options.customAttributes` is an object of key:val pairs that assigns a top-level property and value to the created log for each attribute supplied. The enum `options.level` assigns a log level to the created log event.  The `level` must be one of: `debug | error | info | trace | warn`.  The log level defaults to `info` if not supplied. |
 
-      <td>
-        Required. A string value which will be set to the `message` value of the created log event. The `message` property of the log event is the most visible property exposed on the log event and is used across the UI platform when displaying logs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `options`
-
-        _Object_
-      </td>
-
-      <td>
-        Optional. An object used for supplying optional configurations for the captured log. `options.customAttributes` is an object of key:val pairs that assigns a top-level property and value to the created log for each attribute supplied. The enum `options.level` assigns a log level to the created log event.  The `level` must be one of: `debug | error | info | trace | warn`.  The log level defaults to `info` if not supplied.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples [#log-examples]
 

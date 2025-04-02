@@ -42,53 +42,16 @@ Log patterns use advanced clustering algorithms to group together similar log me
 
 If you see <DNT>**Patterns are turned off**</DNT> in your logs UI, click <DNT>**Configure patterns**</DNT> and enable it. If you don't see patterns within 30 minutes of enabling the feature, there may be a lack of data with a message attribute for the system to create a pattern from it.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Log patterns
-      </th>
+# Table
 
-      <th>
-        Limitations and considerations
-      </th>
-    </tr>
-  </thead>
+| Log patterns | Limitations and considerations |
+| - | - |
+| Pricing | There is no separate pricing for log patterns. The only cost is for additional data generated and added to your log records.
 
-  <tbody>
-    <tr>
-      <td>
-        Pricing
-      </td>
+        A pattern attribute will be added to all logs that match a pattern. Attributes also may be added when common values are discovered, such as GUIDs, IP addresses, URL, or email addresses. These attributes are automatically extracted from the log message as part of the pattern process. |
+| HITRUST accounts | The log patterns feature is not FedRAMP compliant. FedRAMP or other HITRUST accounts are not eligible to use patterns. |
+| Log pattern matching limits | We have a system of safety limits on memory and CPU resources when matching logs to patterns. These matching limits can have an impact on the percentage of logs that are able to be grouped into log patterns. However, log pattern matching is a "best effort" process: it is not an error if not all of your logs have the opportunity to be grouped by patterns. You will still get value from the grouping that is able to be done within resource limits. |
 
-      <td>
-        There is no separate pricing for log patterns. The only cost is for additional data generated and added to your log records.
-
-        A pattern attribute will be added to all logs that match a pattern. Attributes also may be added when common values are discovered, such as GUIDs, IP addresses, URL, or email addresses. These attributes are automatically extracted from the log message as part of the pattern process.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        HITRUST accounts
-      </td>
-
-      <td>
-        The log patterns feature is not FedRAMP compliant. FedRAMP or other HITRUST accounts are not eligible to use patterns.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Log pattern matching limits
-      </td>
-
-      <td>
-        We have a system of safety limits on memory and CPU resources when matching logs to patterns. These matching limits can have an impact on the percentage of logs that are able to be grouped into log patterns. However, log pattern matching is a "best effort" process: it is not an error if not all of your logs have the opportunity to be grouped by patterns. You will still get value from the grouping that is able to be done within resource limits.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Get started [#get-started]
 

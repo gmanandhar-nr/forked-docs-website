@@ -57,98 +57,16 @@ You can [query and explore your data](/docs/using-new-relic/data/understand-data
 
 This infrastructure integration collects the following AWS Auto Scaling data:
 
-<table>
-  <thead>
-    <tr>
-      <th width="300px">
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `groupDesiredCapacity` | The number of instances that the Auto Scaling group attempts to maintain. |
+| `groupInServiceInstances` | The number of instances that are running as part of the Auto Scaling group. |
+| `groupMaxSize` | The maximum size of the Auto Scaling group. |
+| `groupMinSize` | The minimum size of the Auto Scaling group. |
+| `groupPendingInstances` | The number of instances that are pending and not yet in service. |
+| `groupStandbyInstances` | The number of instances that are in a "standby" state. |
+| `groupTerminatingInstances` | The number of instances that are in the process of terminating. |
+| `groupTotalInstances` | The total number of instances in the Auto Scaling group. |
 
-  <tbody>
-    <tr>
-      <td>
-        `groupDesiredCapacity`
-      </td>
-
-      <td>
-        The number of instances that the Auto Scaling group attempts to maintain.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `groupInServiceInstances`
-      </td>
-
-      <td>
-        The number of instances that are running as part of the Auto Scaling group.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `groupMaxSize`
-      </td>
-
-      <td>
-        The maximum size of the Auto Scaling group.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `groupMinSize`
-      </td>
-
-      <td>
-        The minimum size of the Auto Scaling group.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `groupPendingInstances`
-      </td>
-
-      <td>
-        The number of instances that are pending and not yet in service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `groupStandbyInstances`
-      </td>
-
-      <td>
-        The number of instances that are in a "standby" state.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `groupTerminatingInstances`
-      </td>
-
-      <td>
-        The number of instances that are in the process of terminating.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `groupTotalInstances`
-      </td>
-
-      <td>
-        The total number of instances in the Auto Scaling group.
-      </td>
-    </tr>
-  </tbody>
-</table>

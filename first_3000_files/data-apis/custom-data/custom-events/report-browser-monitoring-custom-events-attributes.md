@@ -42,65 +42,15 @@ Use the browser API's [`addPageAction`](/docs/browser/new-relic-browser/browser-
 
 In order to report `Custom` events, verify these prerequisites:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Requirement**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Requirement** | **Comments** |
+| - | - |
+| Agent version | Your browser monitoring agent version must be [1.277.0 or higher](/docs/browser/new-relic-browser/installation-configuration/upgrading-browser-agent#checking). |
+| Client browser version | To record `Custom` events, the browser must [support cross-domain XHRs](/docs/browser/new-relic-browser/getting-started/compatibility-requirements#browser-types). |
+| Events per cycle | `Custom` events are buffered with other Browser events and are sent every 30 seconds. If 1,000 total events are observed, the agent will harvest the buffered events immediately, bypassing the harvest cycle interval. |
+| Event/attribute naming, data type, size | Ensure you follow [general requirements](/docs/insights/insights-data-sources/custom-data/data-requirements#general) around event/attribute naming syntax, data types, and size. |
 
-  <tbody>
-    <tr>
-      <td>
-        Agent version
-      </td>
-
-      <td>
-        Your browser monitoring agent version must be [1.277.0 or higher](/docs/browser/new-relic-browser/installation-configuration/upgrading-browser-agent#checking).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Client browser version
-      </td>
-
-      <td>
-        To record `Custom` events, the browser must [support cross-domain XHRs](/docs/browser/new-relic-browser/getting-started/compatibility-requirements#browser-types).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Events per cycle
-      </td>
-
-      <td>
-        `Custom` events are buffered with other Browser events and are sent every 30 seconds. If 1,000 total events are observed, the agent will harvest the buffered events immediately, bypassing the harvest cycle interval.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Event/attribute naming, data type, size
-      </td>
-
-      <td>
-        Ensure you follow [general requirements](/docs/insights/insights-data-sources/custom-data/data-requirements#general) around event/attribute naming syntax, data types, and size.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 In order to report `PageAction` events, verify these prerequisites:
 

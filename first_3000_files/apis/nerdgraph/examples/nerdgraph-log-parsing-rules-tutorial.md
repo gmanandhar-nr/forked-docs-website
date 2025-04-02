@@ -15,131 +15,22 @@ You can use NerdGraph at [api.newrelic.com/graphiql](https://api.newrelic.com/gr
 
 Available parsing rule fields include:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{width: "200px"}}>
-        Fields
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Fields | Description |
+| - | - |
+| `id` | Unique data parsing identifier. |
+| `parsingRules` | The name of the parsing rule. |
+| `description` | A description of what this parsing rule represents. |
+| `grok` | The Grok pattern for this parsing rule. For example, you can include the `logtype` for the Grok pattern you are using with a [built-in parsing rule](/docs/logs/log-management/ui-data/built-log-parsing-rulesets/), such as `logtype = 'alb'`. However, you are not limited to using `logtype`; any attribute can be used as matching criteria. |
+| `lucene` | The search value used from the New Relic UI; for example, `logtype:alb`. For more information about valid Lucene functions in the New Relic UI, see our documentation about [logs query syntax](/docs/logs/log-management/ui-data/query-syntax-logs/). |
+| `accountId` | The New Relic account ID for the user. |
+| `nrql` | The NRQL query string used for queries, if applicable; for example: `"SELECT * FROM Log WHERE `logtype` = 'testLogs'"` |
+| `createdBy` | The user who created the rule. Optional: You can also include `email`, `gravatar`, `id`, and `name` with this. |
+| `updatedBy` | The user who last updated the rule. Optional: You can also include `email`, `gravatar`, `id`, and `name` with this. |
+| `enabled` | Whether or not this parsing rule is enabled. |
+| `deleted` | Whether or not this parsing rule has been deleted. Deleting a parsing rule does not delete the already routed logs. |
 
-  <tbody>
-    <tr>
-      <td>
-        `id`
-      </td>
-
-      <td>
-        Unique data parsing identifier.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `parsingRules`
-      </td>
-
-      <td>
-        The name of the parsing rule.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `description`
-      </td>
-
-      <td>
-        A description of what this parsing rule represents.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `grok`
-      </td>
-
-      <td>
-        The Grok pattern for this parsing rule. For example, you can include the `logtype` for the Grok pattern you are using with a [built-in parsing rule](/docs/logs/log-management/ui-data/built-log-parsing-rulesets/), such as `logtype = 'alb'`. However, you are not limited to using `logtype`; any attribute can be used as matching criteria.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `lucene`
-      </td>
-
-      <td>
-        The search value used from the New Relic UI; for example, `logtype:alb`. For more information about valid Lucene functions in the New Relic UI, see our documentation about [logs query syntax](/docs/logs/log-management/ui-data/query-syntax-logs/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `accountId`
-      </td>
-
-      <td>
-        The New Relic account ID for the user.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `nrql`
-      </td>
-
-      <td>
-        The NRQL query string used for queries, if applicable; for example: `"SELECT * FROM Log WHERE `logtype` = 'testLogs'"`        
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `createdBy`
-      </td>
-
-      <td>
-        The user who created the rule. Optional: You can also include `email`, `gravatar`, `id`, and `name` with this.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `updatedBy`
-      </td>
-
-      <td>
-        The user who last updated the rule. Optional: You can also include `email`, `gravatar`, `id`, and `name` with this.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `enabled`
-      </td>
-
-      <td>
-        Whether or not this parsing rule is enabled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deleted`
-      </td>
-
-      <td>
-        Whether or not this parsing rule has been deleted. Deleting a parsing rule does not delete the already routed logs.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Example query of log parsing rules [#query-parsing-rules]
 

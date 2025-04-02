@@ -35,49 +35,16 @@ New Relic's Node.js agent shows messages sent and received using the RabbitMQ cl
 
 Supported entry points for queue operations appear as `Put` (publish a message) or `Take` (receive a message) in APM's user interface.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Queue operations**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Publish a message (`Put` in UI)**
-        </DNT>
-      </th>
+| **Queue operations** | **Publish a message (`Put` in UI)** | **Receive a message (`Take` in UI)** |
+| - | - | - |
+| RabbitMQ | `publish`
 
-      <th>
-        <DNT>
-          **Receive a message (`Take` in UI)**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+        `sendToQueue` | `get`
 
-  <tbody>
-    <tr>
-      <td>
-        RabbitMQ
-      </td>
+        `consume` |
 
-      <td>
-        `publish`
-
-        `sendToQueue`
-      </td>
-
-      <td>
-        `get`
-
-        `consume`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View in New Relic UI [#view-queue]
 

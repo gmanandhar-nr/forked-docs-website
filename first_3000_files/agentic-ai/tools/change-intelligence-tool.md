@@ -56,21 +56,9 @@ For more information on integrating the New Relic Change Tracking feature with G
 
 **To use change intelligence:**
 
-<table>
-  <thead>
-    <tr>
-      <th>Action</th>
-      <th>Example prompt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>To generate a Change Intelligence report</td>
-      <td>`@newrelic how did my deployment for <entity_name> go?`</td>
-    </tr>
-    <tr>
-      <td>To analyze a specific deployment</td>
-      <td>`@newrelic analyze deployment <deployment_number>` or `<deployment_number>`</td>
-    </tr>
-  </tbody>
-</table>
+# Table
+
+| Action | Example prompt |
+| - | - |
+| To generate a Change Intelligence report | `@newrelic how did my deployment for  go?` |
+| To analyze a specific deployment | `@newrelic analyze deployment ` or `` |

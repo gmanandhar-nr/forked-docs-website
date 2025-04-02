@@ -35,119 +35,16 @@ A workflow is triggered by issue events for issues that match the workflow filte
 
 The following events trigger the workflow and send notifications to the relevant destination end-points:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Notification trigger
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Notification trigger | Description | Example | Destinations notified by default |
+| - | - | - | - |
+| Activated | An issue is activated | The issue state changes from CREATED to ACTIVATED | All the destinations |
+| Acknowledged | An issue is acknowledged by a user either through the a notification, the issue page, or a third party integration | The issue has been seen by a user and marked as acknowledged | Webhook, PagerDuty, Slack, Email, Mobile App |
+| Closed | The issue has been closed. | The issue has been closed due to closing all its incidents, end of TTL, or has been `Inactive` for too long | All the destinations |
+| Priority changed | The issue's priority has been raised | An incident in the issue has moved from High priority and become a Critical priority issue | Webhook, Event Bridge, ServiceNow, Jira |
+| Other updates | An incident got added to the issue, an incident was closed, or a different issue was merged to this one | An incident has been resolved | Webhook, Event Bridge, ServiceNow, Jira, PagerDuty (account integration) |
 
-      <th>
-        Example
-      </th>
-
-      <th>
-        Destinations notified by default
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Activated
-      </td>
-
-      <td>
-        An issue is activated
-      </td>
-
-      <td>
-        The issue state changes from CREATED to ACTIVATED
-      </td>
-
-      <td>
-        All the destinations
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Acknowledged
-      </td>
-
-      <td>
-        An issue is acknowledged by a user either through the a notification, the issue page, or a third party integration
-      </td>
-
-      <td>
-        The issue has been seen by a user and marked as acknowledged
-      </td>
-
-      <td>
-        Webhook, PagerDuty, Slack, Email, Mobile App
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Closed
-      </td>
-
-      <td>
-        The issue has been closed.
-      </td>
-
-      <td>
-        The issue has been closed due to closing all its incidents, end of TTL, or has been `Inactive` for too long
-      </td>
-
-      <td>
-        All the destinations
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Priority changed
-      </td>
-
-      <td>
-        The issue's priority has been raised
-      </td>
-
-      <td>
-        An incident in the issue has moved from High priority and become a Critical priority issue
-      </td>
-
-      <td>
-        Webhook, Event Bridge, ServiceNow, Jira
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Other updates
-      </td>
-
-      <td>
-        An incident got added to the issue, an incident was closed, or a different issue was merged to this one
-      </td>
-
-      <td>
-        An incident has been resolved
-      </td>
-
-      <td>
-        Webhook, Event Bridge, ServiceNow, Jira, PagerDuty (account integration)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Required permissions [#requirements]
 

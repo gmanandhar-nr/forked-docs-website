@@ -41,71 +41,16 @@ OpenTelemetry is a vendor-neutral open standard for instrumenting and exporting 
 
 These components work together to create distinct advantages described in the table below.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Feature
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Feature | Description |
+| - | - |
+| Language agnostic | OpenTelemetry reduces the cognitive load of polyglot teams by providing one vocabulary and one toolkit. |
+| Open standard | As an open standard with an open governance structure, no single vendor controls the direction of OpenTelemetry. |
+| Full control of observability data | The highly configurable and extensible nature of language SDKs and the Collector offer unparalleled control over your telemetry data pipeline. |
+| Rich instrumentation ecosystem | One of the goals of OpenTelemetry is for the APIs to ultimately be used directly in upstream libraries and frameworks. To bridge the gap, OpenTelemetry provides a large catalog of instrumentation contributed from engineers all over the world. There is more collective instrumentation effort in OpenTelemetry than any one vendor can provide on their own. |
+| Future proof | While OpenTelemetry has already come a long way, it seems poised to grow in adoption thanks to its large active community, industry support, and open governance model. While we can't see into the future, OpenTelemetry is the most likely open source winner in the observability industry. |
 
-  <tbody>
-    <tr>
-      <td>
-        Language agnostic
-      </td>
-
-      <td>
-        OpenTelemetry reduces the cognitive load of polyglot teams by providing one vocabulary and one toolkit.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Open standard
-      </td>
-
-      <td>
-        As an open standard with an open governance structure, no single vendor controls the direction of OpenTelemetry.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Full control of observability data
-      </td>
-
-      <td>
-        The highly configurable and extensible nature of language SDKs and the Collector offer unparalleled control over your telemetry data pipeline.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Rich instrumentation ecosystem
-      </td>
-
-      <td>
-        One of the goals of OpenTelemetry is for the APIs to ultimately be used directly in upstream libraries and frameworks. To bridge the gap, OpenTelemetry provides a large catalog of instrumentation contributed from engineers all over the world. There is more collective instrumentation effort in OpenTelemetry than any one vendor can provide on their own.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Future proof
-      </td>
-
-      <td>
-        While OpenTelemetry has already come a long way, it seems poised to grow in adoption thanks to its large active community, industry support, and open governance model. While we can't see into the future, OpenTelemetry is the most likely open source winner in the observability industry.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## OpenTelemetry or New Relic instrumentation? [#choice]
 

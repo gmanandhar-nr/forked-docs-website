@@ -34,141 +34,20 @@ The Kafka integration captures the non-default broker and topic configuration pa
 
 The Kafka integration collects both Metrics and Inventory information. Check the <DNT>**Applies To**</DNT> column below to see the settings available to each collection:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Setting
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-
-      <th>
-        Default
-      </th>
-
-      <th>
-        Applies To
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <DNT>
-          **CLUSTER_NAME**
-        </DNT>
-      </td>
-
-      <td>
-        User-defined name to uniquely identify the cluster being monitored. <DNT>**Required**</DNT>.
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td style={{ "text-align": "center" }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **KAFKA_VERSION**
-        </DNT>
-      </td>
-
-      <td>
-        The version of the Kafka broker you're connecting to, used for setting optimum API versions. It must match -or be lower than- the version from the broker.
+| Setting | Description | Default | Applies To |
+| - | - | - | - |
+| **CLUSTER_NAME** | User-defined name to uniquely identify the cluster being monitored. **Required**. | N/A | M/I |
+| **KAFKA_VERSION** | The version of the Kafka broker you're connecting to, used for setting optimum API versions. It must match -or be lower than- the version from the broker.
 
         Versions older than 1.0.0 may be missing some features.
 
-        Note that if the broker binary name is `kafka_2.12-2.7.0`, the Kafka API version to be used is 2.7.0 and the preceding 2.12 is the Scala language version.
-      </td>
+        Note that if the broker binary name is `kafka_2.12-2.7.0`, the Kafka API version to be used is 2.7.0 and the preceding 2.12 is the Scala language version. | 1.0.0 | M/I |
+| **AUTODISCOVER_STRATEGY** | the method of discovering brokers. Options are `zookeeper` or `bootstrap`. | zookeeper | M/I |
+| **METRICS** | Set to `true` to enable Metrics only collection. | false |
+| **INVENTORY** | Set to `true` to enable Inventory only collection. | false |
 
-      <td>
-        1.0.0
-      </td>
-
-      <td style={{ "text-align": "center" }}>
-        M/I
-      </td>
-    </tr>
-
-    {
-      ' '
-    }
-
-    <tr>
-      <td>
-        <DNT>
-          **AUTODISCOVER_STRATEGY**
-        </DNT>
-      </td>
-
-      <td>
-        the method of discovering brokers. Options are `zookeeper` or `bootstrap`.
-      </td>
-
-      <td>
-        zookeeper
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    {
-      ' '
-    }
-
-    <tr>
-      <td>
-        <DNT>
-          **METRICS**
-        </DNT>
-      </td>
-
-      <td>
-        Set to `true` to enable Metrics only collection.
-      </td>
-
-      <td>
-        false
-      </td>
-
-      <td style={{ 'text-align': 'center' }}/>
-    </tr>
-
-    {
-      ' '
-    }
-
-    <tr>
-      <td>
-        <DNT>
-          **INVENTORY**
-        </DNT>
-      </td>
-
-      <td>
-        Set to `true` to enable Inventory only collection.
-      </td>
-
-      <td>
-        false
-      </td>
-
-      <td style={{ 'text-align': 'center' }}/>
-    </tr>
-  </tbody>
-</table>
 
 ## Zookeeper autodiscovery arguments [#zookeeper-discovery]
 

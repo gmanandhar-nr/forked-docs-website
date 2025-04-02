@@ -37,93 +37,29 @@ If called outside of the context of a monitored web request or background task, 
   In almost all cases, `notice_error` will require no parameters.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `error`
 
-  <tbody>
-    <tr>
-      <td>
-        `error`
+        _tuple_ | Optional and rarely used. A tuple containing exception information `(exception_class, exception_instance, traceback)` returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info). |
+| `attributes`
 
-        _tuple_
-      </td>
+        _dict_ | Optional. Custom attributes to add to the error event (in addition to any custom attributes already added to the transaction). If [high-security mode](/docs/agents/manage-apm-agents/configuration/high-security-mode) is enabled, this will not work. |
+| `expected`
 
-      <td>
-        Optional and rarely used. A tuple containing exception information `(exception_class, exception_instance, traceback)` returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info).
-      </td>
-    </tr>
+        _boolean_, _iterable[String]_, _callable(exception_class, exception_instance, traceback)->boolean_ | Optional. Errors to mark as expected can be passed in as an iterable of strings in the form `module:class`. This value can also be a callable or a Boolean indicating whether the error is expected. These errors will be reported to the UI but will not affect Apdex score or error rate. |
+| `ignore`
 
-    <tr>
-      <td>
-        `attributes`
+        _boolean_, _iterable[String]_, _callable(exception_class_, _exception_instance, traceback)->boolean_ | Optional. Errors to ignore can be passed in as an iterable of strings in the form `module:class`. This value can also be a callable or a Boolean indicating whether the error should be ignored. Useful when certain types of exceptions should always be ignored and never recorded. |
+| `status_code`
 
-        _dict_
-      </td>
+        _string_, _integer_, _callable(exception_class, exception_instance, traceback)_ | Optional. The exception status code. This value can be a string, integer, or a callable that takes in exception information `(exception_class, exception_instance, traceback)` returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info) and returns the status code as an integer. |
+| `application`
 
-      <td>
-        Optional. Custom attributes to add to the error event (in addition to any custom attributes already added to the transaction). If [high-security mode](/docs/agents/manage-apm-agents/configuration/high-security-mode) is enabled, this will not work.
-      </td>
-    </tr>
+        _application object_ | Optional. If called outside of the context of a monitored web request or background task, the call will be ignored unless the [`application` object](/docs/agents/python-agent/python-agent-api/application) is provided. |
 
-    <tr>
-      <td>
-        `expected`
-
-        _boolean_, _iterable[String]_, _callable(exception_class, exception_instance, traceback)->boolean_
-      </td>
-
-      <td>
-        Optional. Errors to mark as expected can be passed in as an iterable of strings in the form `module:class`. This value can also be a callable or a Boolean indicating whether the error is expected. These errors will be reported to the UI but will not affect Apdex score or error rate.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ignore`
-
-        _boolean_, _iterable[String]_, _callable(exception_class_, _exception_instance, traceback)->boolean_
-      </td>
-
-      <td>
-        Optional. Errors to ignore can be passed in as an iterable of strings in the form `module:class`. This value can also be a callable or a Boolean indicating whether the error should be ignored. Useful when certain types of exceptions should always be ignored and never recorded.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `status_code`
-
-        _string_, _integer_, _callable(exception_class, exception_instance, traceback)_
-      </td>
-
-      <td>
-        Optional. The exception status code. This value can be a string, integer, or a callable that takes in exception information `(exception_class, exception_instance, traceback)` returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info) and returns the status code as an integer.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `application`
-
-        _application object_
-      </td>
-
-      <td>
-        Optional. If called outside of the context of a monitored web request or background task, the call will be ignored unless the [`application` object](/docs/agents/python-agent/python-agent-api/application) is provided.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

@@ -67,161 +67,25 @@ This integration collects the following data from `PrivateNetworkSample` with a 
   For full descriptions, see [Amazon VPC NAT Gateway Metrics and Dimensions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/nat-gateway-metricscollected.html).
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "285px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `activeConnectionCount` | The total number of concurrent active TCP connections through the NAT gateway. |
+| `bytesInFromDestination` | The number of bytes received by the NAT gateway from the destination. |
+| `bytesInFromSource` | The number of bytes received by the NAT gateway from clients in your VPC. |
+| `bytesOutToDestination` | The number of bytes sent out through the NAT gateway to the destination. |
+| `bytesOutToSource` | The number of bytes sent through the NAT gateway to the clients in your VPC. |
+| `connectionAttemptCount` | The number of connection attempts made through the NAT gateway. |
+| `connectionEstablishedCount` | The number of connections established through the NAT gateway. |
+| `errorPortAllocation` | The number of times the NAT gateway could not allocate a source port. |
+| `idleTimeoutCount` | The number of connections that transitioned from the active state to the idle state. An active connection transitions to idle if it was not closed gracefully and there was no activity for the last 350 seconds. |
+| `packetsDropCount` | The number of packets dropped by the NAT gateway. |
+| `packetsInFromDestination` | The number of packets received by the NAT gateway from the destination. |
+| `packetsInFromSource` | The number of packets received by the NAT gateway from clients in your VPC. |
+| `packetsOutToDestination` | The number of packets sent out through the NAT gateway to the destination. |
+| `packetsOutToSource` | The number of packets sent through the NAT gateway to the clients in your VPC. |
 
-  <tbody>
-    <tr>
-      <td>
-        `activeConnectionCount`
-      </td>
-
-      <td>
-        The total number of concurrent active TCP connections through the NAT gateway.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `bytesInFromDestination`
-      </td>
-
-      <td>
-        The number of bytes received by the NAT gateway from the destination.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `bytesInFromSource`
-      </td>
-
-      <td>
-        The number of bytes received by the NAT gateway from clients in your VPC.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `bytesOutToDestination`
-      </td>
-
-      <td>
-        The number of bytes sent out through the NAT gateway to the destination.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `bytesOutToSource`
-      </td>
-
-      <td>
-        The number of bytes sent through the NAT gateway to the clients in your VPC.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `connectionAttemptCount`
-      </td>
-
-      <td>
-        The number of connection attempts made through the NAT gateway.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `connectionEstablishedCount`
-      </td>
-
-      <td>
-        The number of connections established through the NAT gateway.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `errorPortAllocation`
-      </td>
-
-      <td>
-        The number of times the NAT gateway could not allocate a source port.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `idleTimeoutCount`
-      </td>
-
-      <td>
-        The number of connections that transitioned from the active state to the idle state. An active connection transitions to idle if it was not closed gracefully and there was no activity for the last 350 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `packetsDropCount`
-      </td>
-
-      <td>
-        The number of packets dropped by the NAT gateway.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `packetsInFromDestination`
-      </td>
-
-      <td>
-        The number of packets received by the NAT gateway from the destination.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `packetsInFromSource`
-      </td>
-
-      <td>
-        The number of packets received by the NAT gateway from clients in your VPC.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `packetsOutToDestination`
-      </td>
-
-      <td>
-        The number of packets sent out through the NAT gateway to the destination.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `packetsOutToSource`
-      </td>
-
-      <td>
-        The number of packets sent through the NAT gateway to the clients in your VPC.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### VPC VPN Tunnel
 

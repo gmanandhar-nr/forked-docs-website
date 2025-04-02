@@ -53,78 +53,23 @@ The Python agent is [compatible with most of the common WSGI web frameworks](/do
 
 Use these methods to monitor web transactions, non-web transactions, and transaction segments:
 
-<table>
-  <thead>
-    <tr>
-      <th width={250}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Do this...
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Monitor WSGI web transactions
-      </td>
-
-      <td>
-        The Python agent automatically captures web transactions for [supported frameworks](/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent). If you do not have a supported framework, you can use the [`wsgi_application`](/docs/agents/python-agent/python-agent-api/wsgi_application) function to monitor your WSGI entry point.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Monitor ASGI web transactions
-      </td>
-
-      <td>
-        The Python agent automatically captures web transactions for [supported frameworks](/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent). If you do not have a supported framework, you can use the [`asgi_application`](/docs/apm/agents/python-agent/python-agent-api/asgi_application) function to monitor your ASGI entry point.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Monitor non-web transactions
-      </td>
-
-      <td>
-        The Python agent classifies [non-web transactions](/docs/apm/transactions/intro-transactions/monitor-background-processes-other-non-web-transactions) as background tasks. To capture non-web transactions, use [`background_task`](/docs/agents/python-agent/python-agent-api/background_task).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Capture more details about a transaction
-      </td>
-
-      <td>
-        If your [transaction traces](/docs/apm/transactions/transaction-traces/introduction-transaction-traces) do not have the level of detail you want:
+| If you want to... | Do this... |
+| - | - |
+| Monitor WSGI web transactions | The Python agent automatically captures web transactions for [supported frameworks](/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent). If you do not have a supported framework, you can use the [`wsgi_application`](/docs/agents/python-agent/python-agent-api/wsgi_application) function to monitor your WSGI entry point. |
+| Monitor ASGI web transactions | The Python agent automatically captures web transactions for [supported frameworks](/docs/agents/python-agent/getting-started/compatibility-requirements-python-agent). If you do not have a supported framework, you can use the [`asgi_application`](/docs/apm/agents/python-agent/python-agent-api/asgi_application) function to monitor your ASGI entry point. |
+| Monitor non-web transactions | The Python agent classifies [non-web transactions](/docs/apm/transactions/intro-transactions/monitor-background-processes-other-non-web-transactions) as background tasks. To capture non-web transactions, use [`background_task`](/docs/agents/python-agent/python-agent-api/background_task). |
+| Capture more details about a transaction | If your [transaction traces](/docs/apm/transactions/transaction-traces/introduction-transaction-traces) do not have the level of detail you want:
 
         * Use [`function_trace`](/docs/agents/python-agent/python-agent-api/function_trace) to capture more function-level detail in transactions.
-        * Use [`datastore_trace`](/docs/agents/python-agent/python-agent-api/datastore_trace) to capture more detail about datastore calls.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Ignore a transaction
-      </td>
-
-      <td>
-        Use any of these options:
+        * Use [`datastore_trace`](/docs/agents/python-agent/python-agent-api/datastore_trace) to capture more detail about datastore calls. |
+| Ignore a transaction | Use any of these options:
 
         * To ignore a transaction altogether, use [`ignore_transaction`](/docs/agents/python-agent/python-agent-api/ignore_transaction).
         * To prevent a transaction from producing a transaction trace, use [`suppress_transaction_trace`](/docs/agents/python-agent/python-agent-api/suppress_transaction_trace).
-        * To end a transaction before the agent would end it automatically, use [`end_of_transaction`](/docs/agents/python-agent/python-agent-api/end-of-transaction).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * To end a transaction before the agent would end it automatically, use [`end_of_transaction`](/docs/agents/python-agent/python-agent-api/end-of-transaction). |
+
 
 ## Add and edit transaction metadata [#metadata]
 

@@ -48,91 +48,35 @@ If you need different security settings than default or high-security mode, you 
   Some of these settings can be changed using environment variables. See [Python agent environment variables](/docs/agents/python-agent/installation-configuration/python-agent-configuration#environment-variables) for the complete list.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th width="340px">
-        <DNT>
-          **Setting**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Effects on data security**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Setting** | **Effects on data security** |
+| - | - |
+| [`audit_log_file`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#audit-log-file)
 
-  <tbody>
-    <tr>
-      <td>
-        [`audit_log_file`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#audit-log-file)
-
-        _string_
-      </td>
-
-      <td>
-        Default: (none)
+        _string_ | Default: (none)
 
         If you use this to set the name of the audit log file, the agent will log details of messages passed back and forth between the monitored process and the data collector.
 
-        You can then evaluate the information that the agent sends to the collector to see if it includes sensitive information.
-      </td>
-    </tr>
+        You can then evaluate the information that the agent sends to the collector to see if it includes sensitive information. |
+| [`high_security`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#high_security)
 
-    <tr>
-      <td>
-        [`high_security`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#high_security)
+        _boolean_ | Default: `false`
 
-        _boolean_
-      </td>
+        To enable [high-security mode](#restricted), set this to `true` and [enable high security](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send. |
+| [`proxy_host`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#proxy)
 
-      <td>
-        Default: `false`
+        _string_ | Default: (none)
 
-        To enable [high-security mode](#restricted), set this to `true` and [enable high security](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send.
-      </td>
-    </tr>
+        Some proxies default to using HTTP, which is a less secure protocol. |
+| [`attributes.enabled`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#cfg-attributes-enabled)
 
-    <tr>
-      <td>
-        [`proxy_host`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#proxy)
+        _boolean_ | Default: `true`
 
-        _string_
-      </td>
+        By default, you are sending [attributes](/docs/agents/python-agent/attributes/enabling-disabling-attributes-python). If you do not want to send attributes, set this to `false`. |
+| [`attributes.exclude`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#cfg-attributes-exclude)
 
-      <td>
-        Default: (none)
-
-        Some proxies default to using HTTP, which is a less secure protocol.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`attributes.enabled`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#cfg-attributes-enabled)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `true`
-
-        By default, you are sending [attributes](/docs/agents/python-agent/attributes/enabling-disabling-attributes-python). If you do not want to send attributes, set this to `false`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`attributes.exclude`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#cfg-attributes-exclude)
-
-        _string_
-      </td>
-
-      <td>
-        Default: (none)
+        _string_ | Default: (none)
 
         If there are specific attribute keys that you do **not** want to send in transaction traces, identify them using `attributes.exclude`. This restricts the information sent.
 
@@ -141,54 +85,24 @@ If you need different security settings than default or high-security mode, you 
         * `request.headers.*`: Removes all request headers.
 
           (Note that HTTP headers that contain sensitive data such as `cookie` and `authorization` are never collected.)
-        * `response.headers.*`: Removes all response headers.
-      </td>
-    </tr>
+        * `response.headers.*`: Removes all response headers. |
+| [`custom_insights_events.enabled`](/docs/agents/python-agent/configuration/python-agent-configuration#custom-insights-events-settings)
 
-    <tr>
-      <td>
-        [`custom_insights_events.enabled`](/docs/agents/python-agent/configuration/python-agent-configuration#custom-insights-events-settings)
+        _boolean_ | Default: `true`
 
-        _boolean_
-      </td>
+        By default, the agent records events sent to the Event API via [`record_custom_event()`](/docs/agents/python-agent/api/python-agent-api-guide#record_custom_event). If you enable [high-security mode](#restricted), this is automatically set to `false`. |
+| [`transaction_tracer.record_sql`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#txn-tracer-sql)
 
-      <td>
-        Default: `true`
-
-        By default, the agent records events sent to the Event API via [`record_custom_event()`](/docs/agents/python-agent/api/python-agent-api-guide#record_custom_event). If you enable [high-security mode](#restricted), this is automatically set to `false`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`transaction_tracer.record_sql`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#txn-tracer-sql)
-
-        _string_
-      </td>
-
-      <td>
-        Default: `obfuscated`
+        _string_ | Default: `obfuscated`
 
         By default, `transaction_tracer.record_sql` is set to `obfuscated`, which strips out the numeric and string literals.
 
         * If you do not want the agent to capture query information, set this to `off`.
         * If you want the agent to capture all query information in its original form, set this to `raw`.
-        * When you enable [high-security mode](#restricted), this is automatically set to `obfuscated`.
-      </td>
-    </tr>
+        * When you enable [high-security mode](#restricted), this is automatically set to `obfuscated`. |
+| [`strip_exception_messages.enabled`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#strip_exception_messages_enabled)
 
-    <tr>
-      <td>
-        [`strip_exception_messages.enabled`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#strip_exception_messages_enabled)
+        _boolean_ | Default: `false`
 
-        _boolean_
-      </td>
+        If you enable [high-security mode](#restricted), this is automatically set to `true`. If you are not using high-security mode but want to strip messages from all exceptions except those in your [allow list](/docs/agents/python-agent/configuration/python-agent-configuration#strip_exception_messages_whitelist), set this to `true`. |
 
-      <td>
-        Default: `false`
-
-        If you enable [high-security mode](#restricted), this is automatically set to `true`. If you are not using high-security mode but want to strip messages from all exceptions except those in your [allow list](/docs/agents/python-agent/configuration/python-agent-configuration#strip_exception_messages_whitelist), set this to `true`.
-      </td>
-    </tr>
-  </tbody>
-</table>

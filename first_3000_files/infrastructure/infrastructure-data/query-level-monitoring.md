@@ -77,48 +77,19 @@ The Query analysis provides a high-level overview of database performance, enabl
 
 The Query analysis has the following widgets:
 
-<table>
-  <thead>
-    <tr>
-      <th>Widgets</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Database</td>
-      <td>Displays a list of all monitored databases, offering a quick assessment of their performance status.</td>
-    </tr>
-    <tr>
-      <td>Average Execution Time (ms)</td>
-      <td>Displays a list of average times taken for queries to execute, helping identify under-performing queries.</td>
-    </tr>
-    <tr>
-      <td>Execution Counts Over Time</td>
-      <td>Visualizes query execution frequency, aiding in identifying patterns or spikes that indicate performance issues.</td>
-    </tr>
-    <tr>
-      <td>Top Wait Events</td>
-      <td>Displays a list of the most frequent wait events affecting performance, such as I/O waits or lock waits.</td>
-    </tr>
-    <tr>
-      <td>Top N Slowest</td>
-      <td>Highlights the slowest-performing queries across databases to prioritize optimization efforts.</td>
-    </tr>
-    <tr>
-      <td>Disk IO Usage (Avg Disk Reads)</td>
-      <td>Monitors the average disk read operations to assess their impact on performance.</td>
-    </tr>
-    <tr>
-      <td>Disk IO Usage (Avg Disk Writes)</td>
-      <td>Monitors the average disk write operations to assess their impact on performance.</td>
-    </tr>
-    <tr>
-      <td>Blocking Details</td>
-      <td>Provides information on blocked and blocking sessions to address lock-related issues.</td>
-    </tr>
-  </tbody>
-</table>
+# Table
+
+| Widgets | Description |
+| - | - |
+| Database | Displays a list of all monitored databases, offering a quick assessment of their performance status. |
+| Average Execution Time (ms) | Displays a list of average times taken for queries to execute, helping identify under-performing queries. |
+| Execution Counts Over Time | Visualizes query execution frequency, aiding in identifying patterns or spikes that indicate performance issues. |
+| Top Wait Events | Displays a list of the most frequent wait events affecting performance, such as I/O waits or lock waits. |
+| Top N Slowest | Highlights the slowest-performing queries across databases to prioritize optimization efforts. |
+| Disk IO Usage (Avg Disk Reads) | Monitors the average disk read operations to assess their impact on performance. |
+| Disk IO Usage (Avg Disk Writes) | Monitors the average disk write operations to assess their impact on performance. |
+| Blocking Details | Provides information on blocked and blocking sessions to address lock-related issues. |
+
 
 
 

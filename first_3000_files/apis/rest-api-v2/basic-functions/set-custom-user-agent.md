@@ -40,61 +40,20 @@ To set a custom user agent, include an agent string in the HTTP header <DNT>**Us
 
 Examples:
 
-<table>
-  <thead>
-    <tr>
-      <th width={125}>
-        <DNT>
-          **Language**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Example**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        cURL
-      </td>
-
-      <td>
-        ```sh
+| **Language** | **Example** |
+| - | - |
+| cURL | ```sh
         curl -H 'User-Agent: my-integration/1.2.3'
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Java (using GET)
-      </td>
-
-      <td>
-        ```java
+        ``` |
+| Java (using GET) | ```java
         get.setHeader("User-Agent", "my-integration/1.2.3");
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PHP
-      </td>
-
-      <td>
-        ```php
+        ``` |
+| PHP | ```php
         header('User-Agent: my-integration/1.2.3');
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 The minimum user agent string is the integration name and version: `name/version`. You can string together multiple values in a space-separated list. The full syntax is:
 

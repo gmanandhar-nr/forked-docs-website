@@ -37,101 +37,15 @@ Avoiding alert fatigue should be a central goal of your alerting strategy. One s
 
 For example, you might consider defining some alert severity protocols that you can apply across the organization and use workflows to ensure the alerts are routed correctly. Teams may apply slightly different routing for each severity, but introducing a common language and understanding of impact across the organization can pay dividends as your alerting efforts scale out.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Severity
-      </th>
+# Table
 
-      <th>
-        Impact
-      </th>
+| Severity | Impact | Audience | Integrations |
+| - | - | - | - |
+| Sev 1 / P1 | Critical | On call SRE, C-Level Manager / Incident Commander /, Relevant Product Owner and DevOps teams | Pagerduty, Slack, Email |
+| Sev 2 / P2 | High | Relevant Product Owner and DevOps teams | Pagerduty, Slack |
+| Sev 3 / P3 | Medium | DevOps teams | Slack |
+| Sandbox / Sev 4 / P4 | Low / None | DevOps teams | Sandbox Slack |
 
-      <th>
-        Audience
-      </th>
-
-      <th>
-        Integrations
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Sev 1 / P1
-      </td>
-
-      <td>
-        Critical
-      </td>
-
-      <td>
-        On call SRE, C-Level Manager / Incident Commander /, Relevant Product Owner and DevOps teams
-      </td>
-
-      <td>
-        Pagerduty, Slack, Email
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Sev 2 / P2
-      </td>
-
-      <td>
-        High
-      </td>
-
-      <td>
-        Relevant Product Owner and DevOps teams
-      </td>
-
-      <td>
-        Pagerduty, Slack
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Sev 3 / P3
-      </td>
-
-      <td>
-        Medium
-      </td>
-
-      <td>
-        DevOps teams
-      </td>
-
-      <td>
-        Slack
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Sandbox / Sev 4 / P4
-      </td>
-
-      <td>
-        Low / None
-      </td>
-
-      <td>
-        DevOps teams
-      </td>
-
-      <td>
-        Sandbox Slack
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <figcaption>
   An example of how an organization might define some alert security protocols.

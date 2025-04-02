@@ -152,53 +152,21 @@ Follow these steps to rotate the Azure client secret in the infrastructure UI:
 
 To uninstall Azure integrations, follow these steps.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **If you want to...** | **Do this** |
+| - | - |
+| Disable one or more Azure service integrations | To disable services while keeping your Azure account linked to New Relic:
 
-  <tbody>
-    <tr>
-      <td id="disable-azure-integrations">
-        Disable one or more Azure service integrations
-      </td>
+        1. Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > Azure > Manage services**.
+        2. From your **Edit Azure account** page, clear the checkbox for each active service you want to disable.
+        3. Save your changes. |
+| Disable all Azure integrations | To disconnect your Azure account completely from New Relic, you need to unlink your Azure account. This requires being either the user who registered the app or an administrator. This procedure will disable all New Relic integrations associated with that Azure account.
 
-      <td>
-        To disable services while keeping your Azure account linked to New Relic:
-
-        1. Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > Azure > Manage services**</DNT>.
-        2. From your <DNT>**Edit Azure account**</DNT> page, clear the checkbox for each active service you want to disable.
+        1. Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > Azure > Manage services**.
+        2. From your **Edit Azure account** page, select **Unlink this account**.
         3. Save your changes.
-      </td>
-    </tr>
+        4. Sign in to [Azure](https://portal.azure.com/) and go into **All Services > Identity > App registrations**, or go to **Azure Active Directory** service and select **App registrations**.
+        5. Find the registered app (the recommended name is `NewRelic-Integrations`). To see the full list of available apps, select the dropdown menu beside the search field and select **All apps**.
+        6. Select the app and, on the panel that opens, select **Delete**. |
 
-    <tr>
-      <td id="unlink-azure">
-        Disable all Azure integrations
-      </td>
-
-      <td>
-        To disconnect your Azure account completely from New Relic, you need to unlink your Azure account. This requires being either the user who registered the app or an administrator. This procedure will disable all New Relic integrations associated with that Azure account.
-
-        1. Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > Azure > Manage services**</DNT>.
-        2. From your <DNT>**Edit Azure account**</DNT> page, select <DNT>**Unlink this account**</DNT>.
-        3. Save your changes.
-        4. Sign in to [Azure](https://portal.azure.com/) and go into <DNT>**All Services > Identity > App registrations**</DNT>, or go to <DNT>**Azure Active Directory**</DNT> service and select <DNT>**App registrations**</DNT>.
-        5. Find the registered app (the recommended name is `NewRelic-Integrations`). To see the full list of available apps, select the dropdown menu beside the search field and select <DNT>**All apps**</DNT>.
-        6. Select the app and, on the panel that opens, select <DNT>**Delete**</DNT>.
-      </td>
-    </tr>
-  </tbody>
-</table>

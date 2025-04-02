@@ -55,57 +55,22 @@ If you're using integrations, see that integration's doc for more on reported da
 
 Select an event name in the following table to see its attributes.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Event
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Event | Description |
+| - | - |
+| [`SystemSample`](/attribute-dictionary/?event=SystemSample) | `SystemSample` contains data describing the current overall state of the entire server, including CPU, memory, disk, and network. We take a snapshot of this data every 5 seconds and package it into a `SystemSample` event, which is then sent to New Relic. This data appears on the [**Systems** UI tab](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#system). |
+| [`ProcessSample`](/attribute-dictionary/?event=ProcessSample) | `ProcessSample` gathers detailed resource usage information from programs running on a single system. We take a snapshot of this data every 20 seconds for every active process and package it into a `ProcessSample` event, which is then sent to New Relic. This data appears on the [**Processes** UI page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#processes).
 
-  <tbody>
-    <tr>
-      <td>
-        [`SystemSample`](/attribute-dictionary/?event=SystemSample)
-      </td>
+        
+          Process metrics are not reported by default. To report this data, [enable process metrics](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#enable-process-metrics). |
+| [`StorageSample`](/attribute-dictionary/?event=StorageSample) | `StorageSample` represents a single storage device that contains partitions currently mounted on the server. Each sample gathers descriptive information about the device, the type of file system it uses, and its current usage and capacity. We take a snapshot of this data every 20 seconds for each mounted file system and package it into a `StorageSample` event, which is then sent to New Relic. This data appears on the [**Storage** UI page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#storage).
 
-      <td>
-        `SystemSample` contains data describing the current overall state of the entire server, including CPU, memory, disk, and network. We take a snapshot of this data every 5 seconds and package it into a `SystemSample` event, which is then sent to New Relic. This data appears on the [<DNT>**Systems**</DNT> UI tab](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#system).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`ProcessSample`](/attribute-dictionary/?event=ProcessSample)
-      </td>
-
-      <td>
-        `ProcessSample` gathers detailed resource usage information from programs running on a single system. We take a snapshot of this data every 20 seconds for every active process and package it into a `ProcessSample` event, which is then sent to New Relic. This data appears on the [<DNT>**Processes**</DNT> UI page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#processes).
-
-        <Callout variant="important">
-          Process metrics are not reported by default. To report this data, [enable process metrics](/docs/infrastructure/install-configure-manage-infrastructure/configuration/infrastructure-configuration-settings#enable-process-metrics).
-        </Callout>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`StorageSample`](/attribute-dictionary/?event=StorageSample)
-      </td>
-
-      <td>
-        `StorageSample` represents a single storage device that contains partitions currently mounted on the server. Each sample gathers descriptive information about the device, the type of file system it uses, and its current usage and capacity. We take a snapshot of this data every 20 seconds for each mounted file system and package it into a `StorageSample` event, which is then sent to New Relic. This data appears on the [<DNT>**Storage**</DNT> UI page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#storage).
-
-        <Callout variant="important">
+        
           If your server uses disks with file systems other than the supported file systems in the following table, `StorageSample` events will not be generated for those disks.
-        </Callout>
+        
 
-        <CollapserGroup>
+        
           <Collapser
             id="linux-supported"
             title="Supported Linux storage systems"
@@ -121,7 +86,7 @@ Select an event name in the following table to see its attributes.
             * `ext4`
             * `hfs`
             * `zfs`
-          </Collapser>
+          
 
           <Collapser
             id="windows-supported"
@@ -130,25 +95,14 @@ Select an event name in the following table to see its attributes.
             Supported Windows storage file systems:
 
             * `NTFS`
-            * `ReFS` (version 1.0.976 and higher)
-          </Collapser>
-        </CollapserGroup>
-      </td>
-    </tr>
+            * `ReFS` (version 1.0.976 and higher) |
+| [`NetworkSample`](/attribute-dictionary/?event=NetworkSample) | `NetworkSample` captures the descriptive and state information for each network device associated with a server. It includes the device's interface and address information, as well as current usage data. We take a snapshot of this data every 10 seconds for each attached network interface and package it into a `NetworkSample` event, which is then sent to New Relic. This data appears on the [**Network** UI page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#network).
 
-    <tr>
-      <td>
-        [`NetworkSample`](/attribute-dictionary/?event=NetworkSample)
-      </td>
-
-      <td>
-        `NetworkSample` captures the descriptive and state information for each network device associated with a server. It includes the device's interface and address information, as well as current usage data. We take a snapshot of this data every 10 seconds for each attached network interface and package it into a `NetworkSample` event, which is then sent to New Relic. This data appears on the [<DNT>**Network**</DNT> UI page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#network).
-
-        <Callout variant="important">
+        
           Not all the network devices will be included by default, the filters in the following table will not generate `NetworkSample` for the matching interfaces unless the [network-inferface-filters](/docs/infrastructure/install-infrastructure-agent/configuration/infrastructure-agent-configuration-settings/#network-interface-filters) config attribute is modified.
-        </Callout>
+        
 
-        <CollapserGroup>
+        
           <Collapser
             id="filters-linux"
             title="Linux"
@@ -157,7 +111,7 @@ Select an event name in the following table to see its attributes.
 
             * Network interfaces that start with `dummy`, `lo`, `vmnet`, `sit`, `tun`, `tap`, or `veth`
             * Network interfaces that contain `tun` or `tap`
-          </Collapser>
+          
 
           <Collapser
             id="filters-windows"
@@ -165,33 +119,10 @@ Select an event name in the following table to see its attributes.
           >
             Default network interface filters for Windows:
 
-            * Network interfaces that start with `Loop`, `isatap`, or `Local`
-          </Collapser>
-        </CollapserGroup>
-      </td>
-    </tr>
+            * Network interfaces that start with `Loop`, `isatap`, or `Local` |
+| [`ContainerSample`](/attribute-dictionary/?event=ContainerSample) | `ContainerSample` collects the descriptive and state information for each Docker container. It includes the container's ID, name, image, image name, as well metrics about CPU, memory and networking. We take a snapshot of this data every 15 seconds for each container and package it into a `ContainerSample` event, which is then sent to New Relic. This data appears on the [**Containers** UI page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#containers). For more information, see [Docker monitoring](/docs/infrastructure/new-relic-infrastructure/data-instrumentation/docker-instrumentation-infrastructure). |
+| [`InfrastructureEvent`](/attribute-dictionary/?event=InfrastructureEvent) | `InfrastructureEvent` describes changes (deltas) that occur in a system's live state. When an inventory or system state is added, removed, or changed, we'll generate an `InfrastructureEvent` that logs that activity. This data appears on the [**Events** UI page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-events-page-live-feed-every-config-change). |
 
-    <tr>
-      <td>
-        [`ContainerSample`](/attribute-dictionary/?event=ContainerSample)
-      </td>
-
-      <td>
-        `ContainerSample` collects the descriptive and state information for each Docker container. It includes the container's ID, name, image, image name, as well metrics about CPU, memory and networking. We take a snapshot of this data every 15 seconds for each container and package it into a `ContainerSample` event, which is then sent to New Relic. This data appears on the [<DNT>**Containers**</DNT> UI page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#containers). For more information, see [Docker monitoring](/docs/infrastructure/new-relic-infrastructure/data-instrumentation/docker-instrumentation-infrastructure).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`InfrastructureEvent`](/attribute-dictionary/?event=InfrastructureEvent)
-      </td>
-
-      <td>
-        `InfrastructureEvent` describes changes (deltas) that occur in a system's live state. When an inventory or system state is added, removed, or changed, we'll generate an `InfrastructureEvent` that logs that activity. This data appears on the [<DNT>**Events**</DNT> UI page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-events-page-live-feed-every-config-change).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 To learn about infrastructure integration data, see the [documentation for a specific integration](/docs/infrastructure/infrastructure-integrations/get-started/introduction-infrastructure-integrations).
 

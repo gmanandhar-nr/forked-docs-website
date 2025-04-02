@@ -32,97 +32,16 @@ This New Relic infrastructure integration collects the following Amazon WorkMail
 
 ### WorkMail Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `OrganizationEmailReceived` | Count | The number of emails received by your Amazon WorkMail organization. |
+| `MailboxEmailDelivered` | Count | The number of emails delivered to individual mailboxes in your Amazon WorkMail organization. |
+| `IncomingEmailBounced` | Count | The number of incoming emails that bounced due to full mailboxes. |
+| `OutgoingEmailBounced` | Count | The number of outgoing emails that could not be delivered, counted for each intended recipient. |
+| `OutgoingEmailSent` | Count | The number of emails successfully sent from your Amazon WorkMail organization. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `OrganizationEmailReceived`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of emails received by your Amazon WorkMail organization.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MailboxEmailDelivered`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of emails delivered to individual mailboxes in your Amazon WorkMail organization.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IncomingEmailBounced`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of incoming emails that bounced due to full mailboxes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OutgoingEmailBounced`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of outgoing emails that could not be delivered, counted for each intended recipient.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OutgoingEmailSent`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of emails successfully sent from your Amazon WorkMail organization.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `OrganizationId`
 

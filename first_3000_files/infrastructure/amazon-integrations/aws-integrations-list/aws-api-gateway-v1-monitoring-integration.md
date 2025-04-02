@@ -66,91 +66,18 @@ For more on how to use your data, see [Understand and use integration data](/doc
 
 This New Relic infrastructure integration collects the following Amazon API Gateway data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "260px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `4XXError` | The number of client-side errors captured |
+| `5XXError` | The number of server-side errors captured. |
+| `CacheHitCount` | The number of requests served from the API cache. |
+| `CacheMissCount` | The number of requests served from the backend when API caching is enabled. |
+| `Count` | The number of calls to API methods. |
+| `IntegrationLatency` | The time in milliseconds between when API Gateway relays a request to the backend and when it receives a response from the backend. |
+| `Latency` | The time in milliseconds between when API Gateway receives a request from a client and when it returns a response to the client. The latency includes the integration latency and other API Gateway overhead. |
 
-  <tbody>
-    <tr>
-      <td>
-        `4XXError`
-      </td>
-
-      <td>
-        The number of client-side errors captured
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `5XXError`
-      </td>
-
-      <td>
-        The number of server-side errors captured.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CacheHitCount`
-      </td>
-
-      <td>
-        The number of requests served from the API cache.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CacheMissCount`
-      </td>
-
-      <td>
-        The number of requests served from the backend when API caching is enabled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Count`
-      </td>
-
-      <td>
-        The number of calls to API methods.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IntegrationLatency`
-      </td>
-
-      <td>
-        The time in milliseconds between when API Gateway relays a request to the backend and when it receives a response from the backend.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Latency`
-      </td>
-
-      <td>
-        The time in milliseconds between when API Gateway receives a request from a client and when it returns a response to the client. The latency includes the integration latency and other API Gateway overhead.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Dimensions
 

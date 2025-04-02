@@ -17,53 +17,16 @@ Here are some comparisons between the different browser agent types:
 
 We have three types of browser agents: Lite, Pro, and Pro+SPA.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Browser agent type
-      </th>
+# Table
 
-      <th>
-        Comparison
-      </th>
-    </tr>
-  </thead>
+| Browser agent type | Comparison |
+| - | - |
+| Pro+SPA | This is the default installed agent when you enable browser monitoring. It gives you access to all browser monitoring features.
 
-  <tbody>
-    <tr>
-      <td>
-        Pro+SPA
-      </td>
+        Pro+SPA is not useful only for single page applications. After install, you can downgrade to the lower agent types if you don't want or need SPA monitoring. |
+| Pro | This agent version lacks the [features designed for SPA monitoring](/docs/browser/single-page-app-monitoring/get-started/introduction-single-page-app-monitoring). |
+| Lite | This agent version reports some basic page load timing and browser user information, but lacks many of the more advanced browser monitoring features, and also lacks SPA monitoring features. |
 
-      <td>
-        This is the default installed agent when you enable browser monitoring. It gives you access to all browser monitoring features.
-
-        Pro+SPA is not useful only for single page applications. After install, you can downgrade to the lower agent types if you don't want or need SPA monitoring.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Pro
-      </td>
-
-      <td>
-        This agent version lacks the [features designed for SPA monitoring](/docs/browser/single-page-app-monitoring/get-started/introduction-single-page-app-monitoring).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Lite
-      </td>
-
-      <td>
-        This agent version reports some basic page load timing and browser user information, but lacks many of the more advanced browser monitoring features, and also lacks SPA monitoring features.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Browser agent features [#agent-features]
 

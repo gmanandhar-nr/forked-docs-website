@@ -20,73 +20,14 @@ Until recently, New Relic has relied on the method described in [Quantiles over 
 
 To better understand the impact of different error types, it’s helpful to take a closer look at error types in the context of percentile calculation `percentile(p) = x`. The table shows how error type impacts lower and upper bound of reported value.
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **Error type**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Lower bound of reported_x**
-        </DNT>
-      </th>
+| **Error type** | **Lower bound of reported_x** | **Upper bound of reported_x** |
+| - | - | - |
+| absolute error | actual_x - absolute_error | actual_x + absolute_error |
+| relative error | actual_x \* (1 - relative_error) | actual_x \* (1 + relative_error) |
+| rank error | percentile \* (p - rank error) | percentile \* (p + rank error) |
 
-      <th>
-        <DNT>
-          **Upper bound of reported_x**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        absolute error
-      </td>
-
-      <td>
-        actual_x - absolute_error
-      </td>
-
-      <td>
-        actual_x + absolute_error
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        relative error
-      </td>
-
-      <td>
-        actual_x \* (1 - relative_error)
-      </td>
-
-      <td>
-        actual_x \* (1 + relative_error)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        rank error
-      </td>
-
-      <td>
-        percentile \* (p - rank error)
-      </td>
-
-      <td>
-        percentile \* (p + rank error)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 As you can see in the table, for absolute error, reported value is within +/- range of actual value, and for relative error, reported value is within +/- percent of actual value.
 

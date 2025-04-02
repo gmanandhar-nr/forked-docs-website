@@ -53,33 +53,14 @@ NOTE: The agent automatically attempts to determine the text value of the HTML e
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$value`
 
-  <tbody>
-    <tr>
-      <td>
-        `$value`
+        _string_ | The text value of the HTML element that represents the action that started the interaction. |
 
-        _string_
-      </td>
-
-      <td>
-        The text value of the HTML element that represents the action that started the interaction.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

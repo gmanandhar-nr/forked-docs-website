@@ -32,36 +32,14 @@ New Relic provides various NerdGraph mutations to create and manage Scorecards a
 
     #### Input parameters
 
-    <table>
-      <thead>
-        <tr>
-          <th>Parameter</th>
-          <th>Data Type</th>
-          <th>Is it Required?</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>`name`</td>
-          <td>String</td>
-          <td>Yes</td>
-          <td>The name of the Scorecard.</td>
-        </tr>
-        <tr>
-          <td>`description`</td>
-          <td>String</td>
-          <td>No</td>
-          <td>A brief description of the Scorecard.</td>
-        </tr>
-        <tr>
-          <td>`accountId`</td>
-          <td>String</td>
-          <td>Yes</td>
-          <td>The account where the entity will be stored.</td>
-        </tr>
-      </tbody>
-    </table>
+    # Table
+
+| Parameter | Data Type | Is it Required? | Description |
+| - | - | - | - |
+| `name` | String | Yes | The name of the Scorecard. |
+| `description` | String | No | A brief description of the Scorecard. |
+| `accountId` | String | Yes | The account where the entity will be stored. |
+
 
     #### Sample request
 

@@ -68,65 +68,15 @@ Here is a summary of the data available on individual <DNT>**Node VMs**</DNT> ch
   >
     This chart shows the total time spent in garbage collection per minute, broken down by GC type. It is only shown when viewing a single server. You might see the following types depending on your version of Node.js and app activity:
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "225px" }}>
-            <DNT>
-              **Value**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Description**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| **Value** | **Description** |
+| - | - |
+| `Scavenge` | The most common garbage collection method. Node.js will typically trigger one of these every time the VM is idle. |
+| `MarkSweepCompact` | The heaviest type of garbage collection V8 may do. If you see many of these happening you will need to either keep fewer objects around in your process or increase V8's heap limit. |
+| `IncrementalMarking` | A phased garbage collection that interleaves collection with application logic to reduce the amount of time the application is paused. Only in Node.js v6 or higher. |
+| `ProcessWeakCallbacks` | After a garbage collection occurs, V8 will call any weak reference callbacks registered for objects that have been freed. This measurement is from the start of the first weak callback to the end of the last for a given garbage collection. Only in Node.js v6 or higher. |
 
-      <tbody>
-        <tr>
-          <td>
-            `Scavenge`
-          </td>
-
-          <td>
-            The most common garbage collection method. Node.js will typically trigger one of these every time the VM is idle.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `MarkSweepCompact`
-          </td>
-
-          <td>
-            The heaviest type of garbage collection V8 may do. If you see many of these happening you will need to either keep fewer objects around in your process or increase V8's heap limit.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `IncrementalMarking`
-          </td>
-
-          <td>
-            A phased garbage collection that interleaves collection with application logic to reduce the amount of time the application is paused. Only in Node.js v6 or higher.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `ProcessWeakCallbacks`
-          </td>
-
-          <td>
-            After a garbage collection occurs, V8 will call any weak reference callbacks registered for objects that have been freed. This measurement is from the start of the first weak callback to the end of the last for a given garbage collection. Only in Node.js v6 or higher.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

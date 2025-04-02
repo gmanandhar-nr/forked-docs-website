@@ -30,111 +30,20 @@ Once published, you can find the release artifacts for this release [here](https
 
 ### Checksums
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        File
-      </th>
+# Table
 
-      <th>
-        SHA - 256  Hash
-      </th>
-    </tr>
-  </thead>
+| File | SHA - 256  Hash |
+| - | - |
+| newrelic-dotnet-agent-10.10.0-1.x86_64.rpm | 8429831E81012C58359083083766DC3FA8D2156ACCEA5D77FE9486965E3CAC88 |
+| newrelic-dotnet-agent_10.10.0_amd64.deb | 7BC7C9631BA1055C9CFD7CE6A40BCB4A91C59709CA05920B4D8474BFA5DDB2DE |
+| newrelic-dotnet-agent_10.10.0_amd64.tar.gz | 0B8F7D49CC28A568D9316C9DBD1560CE15AB23886F3DFDC89A55E447BD37DB0E |
+| newrelic-dotnet-agent_10.10.0_arm64.deb | 706B5A22CB6A814BF56B2E5752EA24573F9DDD96314E6443824D127BB569CD49 |
+| newrelic-dotnet-agent_10.10.0_arm64.tar.gz | 7C373CC56FFCD75637210042FD8410C1A31DF4A45A7BA54451AC82781C3595CE |
+| NewRelicDotNetAgent_10.10.0_x64.msi | 779AB4D7223381A436414AC905F2124251557C79B6C1C8F5BC9911D9D339ABD5 |
+| NewRelicDotNetAgent_10.10.0_x64.zip | BB1F08E489C3726EED3516FC115AEC6754917123B3E8CE4AD0C742A8FDD6635D |
+| NewRelicDotNetAgent_10.10.0_x86.msi | 0F6DFE2FFD1563145A209D5F1A211E52750C7DCA2AAEA069705FE47BEC186D02 |
+| NewRelicDotNetAgent_10.10.0_x86.zip | 04227164837B98C618EF86620E15E9D862939994CF7BCD93752C62DF9820401B |
 
-  <tbody>
-    <tr>
-      <td>
-        newrelic-dotnet-agent-10.10.0-1.x86_64.rpm
-      </td>
-
-      <td>
-        8429831E81012C58359083083766DC3FA8D2156ACCEA5D77FE9486965E3CAC88
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-dotnet-agent_10.10.0_amd64.deb
-      </td>
-
-      <td>
-        7BC7C9631BA1055C9CFD7CE6A40BCB4A91C59709CA05920B4D8474BFA5DDB2DE
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-dotnet-agent_10.10.0_amd64.tar.gz
-      </td>
-
-      <td>
-        0B8F7D49CC28A568D9316C9DBD1560CE15AB23886F3DFDC89A55E447BD37DB0E
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-dotnet-agent_10.10.0_arm64.deb
-      </td>
-
-      <td>
-        706B5A22CB6A814BF56B2E5752EA24573F9DDD96314E6443824D127BB569CD49
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-dotnet-agent_10.10.0_arm64.tar.gz
-      </td>
-
-      <td>
-        7C373CC56FFCD75637210042FD8410C1A31DF4A45A7BA54451AC82781C3595CE
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        NewRelicDotNetAgent_10.10.0_x64.msi
-      </td>
-
-      <td>
-        779AB4D7223381A436414AC905F2124251557C79B6C1C8F5BC9911D9D339ABD5
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        NewRelicDotNetAgent_10.10.0_x64.zip
-      </td>
-
-      <td>
-        BB1F08E489C3726EED3516FC115AEC6754917123B3E8CE4AD0C742A8FDD6635D
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        NewRelicDotNetAgent_10.10.0_x86.msi
-      </td>
-
-      <td>
-        0F6DFE2FFD1563145A209D5F1A211E52750C7DCA2AAEA069705FE47BEC186D02
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        NewRelicDotNetAgent_10.10.0_x86.zip
-      </td>
-
-      <td>
-        04227164837B98C618EF86620E15E9D862939994CF7BCD93752C62DF9820401B
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Updating
 

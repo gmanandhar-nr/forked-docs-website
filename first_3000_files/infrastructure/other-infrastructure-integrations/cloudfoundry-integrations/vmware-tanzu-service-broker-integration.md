@@ -54,91 +54,18 @@ New Relic Nozzle for VMware Tanzu has the following requirements:
 
 The following table provides version and version-support information about the service broker for VMware Tanzu.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Element
-      </th>
+# Table
 
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
+| Element | Details |
+| - | - |
+| Version | 1.12.36 |
+| Release date | December 09, 2024 |
+| Software component version | New Relic Service Broker 1.12.36 |
+| Compatible Ops Manager version(s) | 2.9.x, 2.10.x, and 3.x |
+| Compatible VMware Tanzu Application Service for VMs versions | 2.10.x, 2.11.x, 2.12.x, 2.13.x, 3.x, 4.x, 5.x, 6.x, and 10.x |
+| BOSH stemcell version | Ubuntu Jammy |
+| IaaS support | AWS, GCP, Azure, and vSphere |
 
-  <tbody>
-    <tr>
-      <td>
-        Version
-      </td>
-
-      <td>
-        1.12.36
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Release date
-      </td>
-
-      <td>
-        December 09, 2024
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Software component version
-      </td>
-
-      <td>
-        New Relic Service Broker 1.12.36
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Compatible Ops Manager version(s)
-      </td>
-
-      <td>
-        2.9.x, 2.10.x, and 3.x
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Compatible VMware Tanzu Application Service for VMs versions
-      </td>
-
-      <td>
-        2.10.x, 2.11.x, 2.12.x, 2.13.x, 3.x, 4.x, 5.x, 6.x, and 10.x
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        BOSH stemcell version
-      </td>
-
-      <td>
-        Ubuntu Jammy
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        IaaS support
-      </td>
-
-      <td>
-        AWS, GCP, Azure, and vSphere
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The current tile removes the `all_open` security group from the tile default security settings. If you are using a previous versions of the tile, make your VMware Tanzu environment more secure by removing the `all_open` security group from the Application Security Group (ASG) settings. The new version of the tile doesn't open the security, nor does it close the security if it was already open.
 

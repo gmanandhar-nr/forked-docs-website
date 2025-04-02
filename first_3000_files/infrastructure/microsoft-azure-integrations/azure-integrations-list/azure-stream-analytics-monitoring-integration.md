@@ -36,194 +36,26 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Stream Analytics metrics [#Azure-stream-analytics]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `AMLCalloutFailedRequests` | Failed Function Requests. |
+| `AMLCalloutInputEvents` | Function Events. |
+| `AMLCalloutRequests` | Function Requests. |
+| `ConversionErrors` | Total number of jobs successfully deleted. |
+| `DeserializationError` | Input Deserialization Errors. |
+| `DroppedOrAdjustedEvents` | Out of order Events. |
+| `EarlyInputEvents` | Early Input Events. |
+| `Errors` | Runtime Errors. |
+| `InputEventBytes` | Input Event Bytes. |
+| `InputEvents` | Input Events. |
+| `InputEventsSourcesBacklogged` | Backlogged Input Events. |
+| `InputEventsSourcesPerSecond` | Input Sources Received. |
+| `LateInputEvents` | Late Input Events. |
+| `OutputEvents` | Output Events. |
+| `OutputWatermarkDelaySeconds` | Watermark Delay. |
+| `ProcessCPUUsagePercentage` | CPU % Utilization. |
+| `ResourceUtilization` | SU (Memory) % Utilization. |
+| Number of nodes waiting for the Start Task to complete. |
 
-  <tbody>
-    <tr>
-      <td>
-        `AMLCalloutFailedRequests`
-      </td>
-
-      <td>
-        Failed Function Requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AMLCalloutInputEvents`
-      </td>
-
-      <td>
-        Function Events.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AMLCalloutRequests`
-      </td>
-
-      <td>
-        Function Requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ConversionErrors`
-      </td>
-
-      <td>
-        Total number of jobs successfully deleted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DeserializationError`
-      </td>
-
-      <td>
-        Input Deserialization Errors.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DroppedOrAdjustedEvents`
-      </td>
-
-      <td>
-        Out of order Events.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EarlyInputEvents`
-      </td>
-
-      <td>
-        Early Input Events.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Errors`
-      </td>
-
-      <td>
-        Runtime Errors.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InputEventBytes`
-      </td>
-
-      <td>
-        Input Event Bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InputEvents`
-      </td>
-
-      <td>
-        Input Events.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InputEventsSourcesBacklogged`
-      </td>
-
-      <td>
-        Backlogged Input Events.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InputEventsSourcesPerSecond`
-      </td>
-
-      <td>
-        Input Sources Received.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LateInputEvents`
-      </td>
-
-      <td>
-        Late Input Events.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OutputEvents`
-      </td>
-
-      <td>
-        Output Events.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OutputWatermarkDelaySeconds`
-      </td>
-
-      <td>
-        Watermark Delay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ProcessCPUUsagePercentage`
-      </td>
-
-      <td>
-        CPU % Utilization.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ResourceUtilization`
-      </td>
-
-      <td>
-        SU (Memory) % Utilization.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Number of nodes waiting for the Start Task to complete.
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -32,83 +32,15 @@ This New Relic infrastructure integration collects the following Amazon Inspecto
 
 ### Inspector Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `TotalMatchingAgents` | Count | Number of agents that match this target |
+| `TotalHealthyAgents` | Count | Number of agents that match this target that are healthy |
+| `TotalAssessmentRuns` | Count | Number of assessment runs for this target |
+| `TotalAssessmentRunFindings` | Count | Number of findings for this target |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `TotalMatchingAgents`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of agents that match this target
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalHealthyAgents`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of agents that match this target that are healthy
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalAssessmentRuns`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of assessment runs for this target
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalAssessmentRunFindings`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of findings for this target
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `AssessmentTargetName`
 

@@ -44,143 +44,57 @@ If you need different security settings than default or high-security mode, you 
 * [Custom attributes](/docs/agents/net-agent/attributes/net-agent-attributes#NRaddCustomParameter)
 * [.NET agent API](/docs/agents/net-agent/api-guides/guide-using-net-agent-api)
 
-<table>
-  <thead>
-    <tr>
-      <th width="300px">
-        <DNT>
-          **Setting**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Effects on data security**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Setting** | **Effects on data security** |
+| - | - |
+| [`auditLog`](/docs/agents/net-agent/configuration/net-agent-configuration#log-auditLog)
 
-  <tbody>
-    <tr>
-      <td>
-        [`auditLog`](/docs/agents/net-agent/configuration/net-agent-configuration#log-auditLog)
+        _boolean_ | Default: `false`
 
-        _boolean_
-      </td>
+        Records all data sent to and received from New Relic in both an auditlog log file and the standard log file. |
+| [`highSecurity`](/docs/agents/net-agent/configuration/net-agent-configuration#high_security_mode)
 
-      <td>
-        Default: `false`
+        _boolean_ | Default: `false`
 
-        Records all data sent to and received from New Relic in both an auditlog log file and the standard log file.
-      </td>
-    </tr>
+        To enable [high-security mode](#restricted), set this to `true` and [enable high security in New Relic](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic. |
+| [`proxy.host`](/docs/agents/net-agent/configuration/net-agent-configuration#proxy-host)
 
-    <tr>
-      <td>
-        [`highSecurity`](/docs/agents/net-agent/configuration/net-agent-configuration#high_security_mode)
+        _string_ | Default: (none)
 
-        _boolean_
-      </td>
+        Some proxies default to using HTTP, which is a less secure protocol. |
+| [`attributes.enabled`](/docs/agents/net-agent/configuration/net-agent-configuration#agent-attributes-enabled)
 
-      <td>
-        Default: `false`
+        _boolean_ | Default: `true`
 
-        To enable [high-security mode](#restricted), set this to `true` and [enable high security in New Relic](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic.
-      </td>
-    </tr>
+        By default, you are sending [attributes](/docs/agents/net-agent/attributes/net-agent-attributes) to New Relic. |
+| [`attributes.exclude`](/docs/agents/net-agent/configuration/net-agent-configuration#agent-attributes-exclude)
 
-    <tr>
-      <td>
-        [`proxy.host`](/docs/agents/net-agent/configuration/net-agent-configuration#proxy-host)
-
-        _string_
-      </td>
-
-      <td>
-        Default: (none)
-
-        Some proxies default to using HTTP, which is a less secure protocol.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`attributes.enabled`](/docs/agents/net-agent/configuration/net-agent-configuration#agent-attributes-enabled)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `true`
-
-        By default, you are sending [attributes](/docs/agents/net-agent/attributes/net-agent-attributes) to New Relic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`attributes.exclude`](/docs/agents/net-agent/configuration/net-agent-configuration#agent-attributes-exclude)
-
-        _string_
-      </td>
-
-      <td>
-        Default: (none)
+        _string_ | Default: (none)
 
         If there are specific attribute keys that you do **not** want to send to New Relic in transaction traces, identify them using `attributes.exclude`. This restricts the information sent to New Relic.
 
         Consider if you want to exclude these potentially sensitive attributes using `attributes.exclude` or if you need the information sent to New Relic:
 
         * `request.referer`: Removes the referer of the request.
-        * `request.uri`: Removes the path for the transaction's incoming request.
-      </td>
-    </tr>
+        * `request.uri`: Removes the path for the transaction's incoming request. |
+| [`recordSql`](/docs/agents/net-agent/configuration/net-agent-configuration#tracer-recordSql)
 
-    <tr>
-      <td>
-        [`recordSql`](/docs/agents/net-agent/configuration/net-agent-configuration#tracer-recordSql)
-
-        _string_
-      </td>
-
-      <td>
-        Default: `obfuscated`
+        _string_ | Default: `obfuscated`
 
         By default, `recordSql` is set to `obfuscated`, which strips out the numeric and string literals.
 
         * If you do not want the agent to capture query information, set this to `off`.
         * If you want the agent to capture all query information in its original form, set this to `raw`.
-        * When you enable [high-security mode](#restricted), this is automatically set to `obfuscated`.
-      </td>
-    </tr>
+        * When you enable [high-security mode](#restricted), this is automatically set to `obfuscated`. |
+| [`stripExceptionMessages`](/docs/agents/net-agent/configuration/net-agent-configuration#strip_exception_messages)
 
-    <tr>
-      <td>
-        [`stripExceptionMessages`](/docs/agents/net-agent/configuration/net-agent-configuration#strip_exception_messages)
+        _boolean_ | Default: `false`
 
-        _boolean_
-      </td>
+        By default, this is set to `false`, which means that the agent sends messages from all exceptions to the New Relic collector. If you enable [high-security mode](#restricted), this is automatically changed to `true`, and the agent strips the messages from exceptions. |
+| [`customEvents.enabled`](/docs/insights/insights-data-sources/custom-data/insert-custom-events-new-relic-apm-agents#net-att)
 
-      <td>
-        Default: `false`
+        _boolean_ | Default: `true`
 
-        By default, this is set to `false`, which means that the agent sends messages from all exceptions to the New Relic collector. If you enable [high-security mode](#restricted), this is automatically changed to `true`, and the agent strips the messages from exceptions.
-      </td>
-    </tr>
+        By default, the agent records events sent to the custom events API via `RecordCustomEvent()`. If you enable [high-security mode](#restricted), this is automatically set to `false`. |
 
-    <tr>
-      <td>
-        [`customEvents.enabled`](/docs/insights/insights-data-sources/custom-data/insert-custom-events-new-relic-apm-agents#net-att)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `true`
-
-        By default, the agent records events sent to the custom events API via `RecordCustomEvent()`. If you enable [high-security mode](#restricted), this is automatically set to `false`.
-      </td>
-    </tr>
-  </tbody>
-</table>

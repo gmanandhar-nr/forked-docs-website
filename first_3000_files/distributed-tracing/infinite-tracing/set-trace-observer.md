@@ -119,41 +119,13 @@ To create a new trace observer if you're using New Relic <InlinePopover type="ap
           ```
        3. Insert your own values into the `curl` request:
 
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  Value
-                </th>
+          # Table
 
-                <th>
-                  Description
-                </th>
-              </tr>
-            </thead>
+| Value | Description |
+| - | - |
+| `YOUR_LICENSE_KEY` | Replace this with your ingest . |
+| `YOUR_TRACE_OBSERVER_URL` | Replace this with the **For other integrations** endpoint value you copied in a previous step. |
 
-            <tbody>
-              <tr>
-                <td>
-                  `YOUR_LICENSE_KEY`
-                </td>
-
-                <td>
-                  Replace this with your ingest <InlinePopover type="licenseKey"/>.
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  `YOUR_TRACE_OBSERVER_URL`
-                </td>
-
-                <td>
-                  Replace this with the <DNT>**For other integrations**</DNT> endpoint value you copied in a previous step.
-                </td>
-              </tr>
-            </tbody>
-          </table>
        4. Copy the curl request into a terminal and execute it.
        5. The test should return `HTTP/1.1 202 Accepted`, indicating success. If it does not, check the following common issues:
           * Confirm that you used the [<DNT>**For other integrations**</DNT> endpoint](#endpoints) value.

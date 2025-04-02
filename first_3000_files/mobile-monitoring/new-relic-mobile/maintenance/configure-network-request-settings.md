@@ -67,101 +67,15 @@ When using `*` (a wildcard), the regex rules are slightly different. The wildcar
 
 Here are some examples of successfully using wildcards to create an alias:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Hosts
-      </th>
+# Table
 
-      <th>
-        Alias
-      </th>
+| Hosts | Alias | Example domain | Result |
+| - | - | - | - |
+| `192.168.*.100` | LOCAL | `192.168.10.100` | LOCAL |
+| `tbr.*.something.com` | tbr.\*.something.com | `tbr.gh99898.something.com` | tbr.\*.something.com |
+| `api1.mydomain.co.uk` | API | `api1.mydomain.co.uk` | API |
+| `api2.mydomain.co.uk` | API | `api2.mydomain.co.uk` | API |
 
-      <th>
-        Example domain
-      </th>
-
-      <th>
-        Result
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `192.168.*.100`
-      </td>
-
-      <td>
-        LOCAL
-      </td>
-
-      <td>
-        `192.168.10.100`
-      </td>
-
-      <td>
-        LOCAL
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `tbr.*.something.com`
-      </td>
-
-      <td>
-        tbr.\*.something.com
-      </td>
-
-      <td>
-        `tbr.gh99898.something.com`
-      </td>
-
-      <td>
-        tbr.\*.something.com
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `api1.mydomain.co.uk`
-      </td>
-
-      <td>
-        API
-      </td>
-
-      <td>
-        `api1.mydomain.co.uk`
-      </td>
-
-      <td>
-        API
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `api2.mydomain.co.uk`
-      </td>
-
-      <td>
-        API
-      </td>
-
-      <td>
-        `api2.mydomain.co.uk`
-      </td>
-
-      <td>
-        API
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Now that you've seen some example of how this works, let's look at some examples of _what won't work_.
 

@@ -47,98 +47,34 @@ To update the Ruby agent:
   If you are updating from an older agent version, including major version jumps, review the following list for changes in functionality.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Migration
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td id="migration-7-8">
-        From version 7 to 8
-      </td>
-
-      <td>
-        Release notes: [Ruby agent 8.0.0](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-800)
+| Migration | Comments |
+| - | - |
+| From version 7 to 8 | Release notes: [Ruby agent 8.0.0](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-800)
 
         Please see our [Ruby agent 7.x to 8.x migration guide](/docs/apm/agents/ruby-agent/getting-started/migration-8x-guide/) for helpful strategies and tips for migrating from earlier versions of the Ruby agent to 8.0.0. We cover new configuration defaults, changes to the `add_method_tracer` API and deprecated items and their replacements in this guide.
 
         * Changes to the `add_method_tracer` API method
         * Distributed Tracing is enabled by default
         * Cross Application Tracing is deprecated
-        * Removed deprecated API methods and legacy instrumentation
-      </td>
-    </tr>
-
-    <tr>
-      <td id="migration-6-7">
-        From version 6 to 7
-      </td>
-
-      <td>
-        Release notes: [Ruby agent 7.0.0](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-700)
+        * Removed deprecated API methods and legacy instrumentation |
+| From version 6 to 7 | Release notes: [Ruby agent 7.0.0](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-700)
 
         Please see our [Ruby agent 6.x to 7.x migration guide](/docs/agents/ruby-agent/getting-started/migration-7x-guide/) for helpful strategies and tips for migrating from earlier versions of the Ruby agent to 7.0.0. We cover new configuration settings, diagnosiing and installing SSL CA certificates and deprecated items and their replacements in this guide.
 
         * Ruby 2.0 and 2.1 dropped
         * Implemented prepend auto-instrumentation strategies for most Ruby gems/libraries
         * Removed SSL cert bundle
-        * Removed various deprecated config options
-      </td>
-    </tr>
+        * Removed various deprecated config options |
+| From version 5 to 6 | Release notes: [Ruby agent 6.0.0.351](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-600351)
 
-    <tr>
-      <td id="migration-5-6">
-        From version 5 to 6
-      </td>
+        With the addition of the Tracer API for flexible custom instrumentation, several APIs were deprecated. If used, they need to be updated. For more information, see [Ruby custom instrumentation](/docs/agents/ruby-agent/api-guides/ruby-custom-instrumentation). |
+| From version 4 to 5 | Release notes: [Ruby agent 5.0.0.342](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-500342)
 
-      <td>
-        Release notes: [Ruby agent 6.0.0.351](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-600351)
+        SSL connections to New Relic are now mandatory. |
+| From version 3 to 4 | Release notes: [Ruby agent 4.0.0.332](/docs/release-notes/ruby-agent-400332)
 
-        With the addition of the Tracer API for flexible custom instrumentation, several APIs were deprecated. If used, they need to be updated. For more information, see [Ruby custom instrumentation](/docs/agents/ruby-agent/api-guides/ruby-custom-instrumentation).
-      </td>
-    </tr>
+        The agent no longer supports Ruby versions prior to 2.0, JRuby 1.7 and earlier, and all versions of Rubinius. |
+| Deprecated API calls | For a list of deprecated API calls and their replacements, see [Update deprecated API calls](/docs/agents/ruby-agent/troubleshooting/update-deprecated-api-calls). |
 
-    <tr>
-      <td id="migration-4-5">
-        From version 4 to 5
-      </td>
-
-      <td>
-        Release notes: [Ruby agent 5.0.0.342](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-500342)
-
-        SSL connections to New Relic are now mandatory.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="migration-3-4">
-        From version 3 to 4
-      </td>
-
-      <td>
-        Release notes: [Ruby agent 4.0.0.332](/docs/release-notes/ruby-agent-400332)
-
-        The agent no longer supports Ruby versions prior to 2.0, JRuby 1.7 and earlier, and all versions of Rubinius.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="deprecated-apis">
-        Deprecated API calls
-      </td>
-
-      <td>
-        For a list of deprecated API calls and their replacements, see [Update deprecated API calls](/docs/agents/ruby-agent/troubleshooting/update-deprecated-api-calls).
-      </td>
-    </tr>
-  </tbody>
-</table>

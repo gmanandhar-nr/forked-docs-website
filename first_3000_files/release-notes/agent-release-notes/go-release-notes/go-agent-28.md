@@ -15,51 +15,14 @@ downloadLink: 'https://github.com/newrelic/go-agent/tree/v2.8.0'
   * Note that the overall limits on how many events can be sent per minute have not changed. Also, span events, metrics, and trace data is unaffected, and will still be sent every minute.
 * Introduce support for databases using [database/sql](https://golang.org/pkg/database/sql/). This new functionality allows you to instrument MySQL, PostgreSQL, and SQLite calls without manually creating [DatastoreSegment](https://godoc.org/github.com/newrelic/go-agent#DatastoreSegment)s.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Database Library Supported
-      </th>
+# Table
 
-      <th>
-        Integration Package
-      </th>
-    </tr>
-  </thead>
+| Database Library Supported | Integration Package |
+| - | - |
+| [go-sql-driver/mysql](https://github.com/go-sql-driver/mysql) | [\_integrations/nrmysql](https://godoc.org/github.com/newrelic/go-agent/_integrations/nrmysql) |
+| [lib/pq](https://github.com/lib/pq) | [\_integrations/nrpq](https://godoc.org/github.com/newrelic/go-agent/_integrations/nrpq) |
+| [mattn/go-sqlite3](https://github.com/mattn/go-sqlite3) | [\_integrations/nrsqlite3](https://godoc.org/github.com/newrelic/go-agent/_integrations/nrsqlite3) |
 
-  <tbody>
-    <tr>
-      <td>
-        [go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
-      </td>
-
-      <td>
-        [\_integrations/nrmysql](https://godoc.org/github.com/newrelic/go-agent/_integrations/nrmysql)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [lib/pq](https://github.com/lib/pq)
-      </td>
-
-      <td>
-        [\_integrations/nrpq](https://godoc.org/github.com/newrelic/go-agent/_integrations/nrpq)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [mattn/go-sqlite3](https://github.com/mattn/go-sqlite3)
-      </td>
-
-      <td>
-        [\_integrations/nrsqlite3](https://godoc.org/github.com/newrelic/go-agent/_integrations/nrsqlite3)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Using these database integration packages is easy! First replace the driver with our integration version:
 

@@ -57,39 +57,12 @@ NewRelic.withApplicationBuild(buildId: String?)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$buildId` | `string` | Required. The string indicating build ID. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$buildId`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The string indicating build ID.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Example [#example]
 

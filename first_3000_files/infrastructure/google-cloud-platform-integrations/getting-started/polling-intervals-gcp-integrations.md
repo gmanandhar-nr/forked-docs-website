@@ -14,162 +14,18 @@ New Relic's GCP integrations query your GCP services according to a polling inte
 
 ## New Relic polling intervals [#manage-polling]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        GCP integration
-      </th>
+# Table
 
-      <th style={{ width: "125px" }}>
-        New Relic polling interval
-      </th>
+| GCP integration | New Relic polling interval | Resolution |
+| - | - | - |
+| [App Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-app-engine-monitoring-integration) | 5 minutes | 1 data point per minute |
+| [BigQuery](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-bigquery-monitoring-integration) | 5 minutes | Resolution for this integration varies. See [BigQuery metric data](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-bigquery-monitoring-integration#metrics) for more information. |
+| [Cloud Functions](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-functions-monitoring-integration) | 5 minutes | 1 data point per minute |
+| [Cloud Load Balancing](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-load-balancing-monitoring-integration) | 5 minutes | 1 data point per minute |
+| [Cloud Pub/Sub](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-pubsub-monitoring-integration) | 5 minutes | 1 data point per minute |
+| [Cloud Spanner](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-spanner-monitoring-integration) | 5 minutes | 1 data point per minute |
+| [Cloud SQL](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-sql-monitoring-integration) | 5 minutes | 1 data point per minute |
+| [Cloud Storage](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-storage-monitoring-integration) | 5 minutes | 1 data point per minute |
+| [Compute Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-app-engine-monitoring-integration) | 5 minutes | 1 data point per minute |
+| [Kubernetes Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-kubernetes-engine-monitoring-integration) | 5 minutes | 1 data point per minute |
 
-      <th>
-        Resolution
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [App Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-app-engine-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        1 data point per minute
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [BigQuery](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-bigquery-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        Resolution for this integration varies. See [BigQuery metric data](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-bigquery-monitoring-integration#metrics) for more information.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Cloud Functions](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-functions-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        1 data point per minute
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Cloud Load Balancing](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-load-balancing-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        1 data point per minute
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Cloud Pub/Sub](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-pubsub-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        1 data point per minute
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Cloud Spanner](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-spanner-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        1 data point per minute
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Cloud SQL](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-sql-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        1 data point per minute
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Cloud Storage](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-storage-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        1 data point per minute
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Compute Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-app-engine-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        1 data point per minute
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Kubernetes Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-kubernetes-engine-monitoring-integration)
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-
-      <td>
-        1 data point per minute
-      </td>
-    </tr>
-  </tbody>
-</table>

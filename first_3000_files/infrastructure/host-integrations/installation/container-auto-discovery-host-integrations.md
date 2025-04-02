@@ -107,45 +107,20 @@ To configure discovery, set up a `discovery` entry in your integration configura
   Properties values will be matched with an <DNT>**exact string**</DNT>, unless the value to match is set between `/.../`. The contents within the slashes will be matched as [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Discovery key name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Discovery key name | Description |
+| - | - |
+| `ttl`
 
-  <tbody>
-    <tr>
-      <td>
-        `ttl`
-
-        Type: String
-      </td>
-
-      <td>
-        Time-To-Live of the cached discovery results, used to minimize the number of discovery processes. Define as a number followed by a time unit (`s`, `m` or `h`).
+        Type: String | Time-To-Live of the cached discovery results, used to minimize the number of discovery processes. Define as a number followed by a time unit (`s`, `m` or `h`).
 
         Examples: `30s`, `10m`, `1h`, `0`
 
-        Default: 1m
-      </td>
-    </tr>
+        Default: 1m |
+| `docker`
 
-    <tr>
-      <td>
-        `docker`
-
-        Type: YAML properties
-      </td>
-
-      <td>
-        Docker containers matching definition. This consists of a `match` property containing a map where:
+        Type: YAML properties | Docker containers matching definition. This consists of a `match` property containing a map where:
 
         * Each key is any of the following properties.
 
@@ -167,11 +142,8 @@ To configure discovery, set up a `discovery` entry in your integration configura
 
         * `name`: Container name
 
-        * `label.<label name>`: Any container label, accessible by its name
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `label.`: Any container label, accessible by its name |
+
 
 ### Discovery example [#example]
 

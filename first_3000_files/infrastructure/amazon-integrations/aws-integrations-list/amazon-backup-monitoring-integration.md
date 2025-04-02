@@ -32,172 +32,26 @@ This New Relic infrastructure integration collects the following AWS Backup metr
 
 ### AWS Backup Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric  
+# Table
 
-      </th>
+| Metric | Description |
+| - | - |
+| `NumberOfBackupJobsCreated` | The number of backup jobs that AWS Backup created. |
+| `NumberOfBackupJobsPending` | The number of backup jobs about to run in AWS Backup. |
+| `NumberOfBackupJobsRunning` | The number of backup jobs currently running in AWS Backup. |
+| `NumberOfBackupJobsAborted` | The number of user-cancelled backup jobs. |
+| `NumberOfBackupJobsCompleted` | The number of backup jobs that AWS Backup finished. |
+| `NumberOfBackupJobsFailed` | The number of backup jobs with a status of Failed. Often caused by scheduling a backup job during or 1 hour before a database resource or 4 hours before or during an Amazon FSx maintenance window or automated backup window and not using AWS Backup to perform continuous backup for point-in-time restores. See Point-in-Time Recovery for a list of supported services and instructions on how to use AWS Backup to take continuous backups, or reschedule your backup jobs. |
+| `NumberOfBackupJobsExpired` | The number of backup jobs that AWS Backup attempted to delete based on your backup retention lifecycle but couldn't delete. You'll pay for the storage that expired backups consume and should delete them manually. |
+| `NumberOfCopyJobsCreated` | The number of cross-account and cross-region copy jobs that AWS Backup created. |
+| `NumberOfCopyJobsRunning` | The number of cross-account and cross-Region copy jobs currently running in AWS Backup. |
+| `NumberOfCopyJobsCompleted` | The number of cross-account and cross-Region copy jobs that AWS Backup finished. |
+| `NumberOfCopyJobsFailed` | The number of cross-account and cross-Region copy jobs that AWS Backup attempted but couldn't complete. |
+| `NumberOfRestoreJobsPending` | The number of restore jobs about to run in AWS Backup. |
+| `NumberOfRestoreJobsRunning` | The number of restore jobs currently running in AWS Backup. |
+| `NumberOfRestoreJobsCompleted` | The number of restore jobs that AWS Backup finished. |
+| `NumberOfRestoreJobsFailed` | The number of restore jobs that AWS Backup attempted but couldn't complete. |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `NumberOfBackupJobsCreated`
-      </td>
-
-      <td>
-        The number of backup jobs that AWS Backup created.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfBackupJobsPending`
-      </td>
-
-      <td>
-        The number of backup jobs about to run in AWS Backup.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfBackupJobsRunning`
-      </td>
-
-      <td>
-        The number of backup jobs currently running in AWS Backup.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfBackupJobsAborted`
-      </td>
-
-      <td>
-        The number of user-cancelled backup jobs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfBackupJobsCompleted`
-      </td>
-
-      <td>
-        The number of backup jobs that AWS Backup finished.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfBackupJobsFailed`
-      </td>
-
-      <td>
-        The number of backup jobs with a status of Failed. Often caused by scheduling a backup job during or 1 hour before a database resource or 4 hours before or during an Amazon FSx maintenance window or automated backup window and not using AWS Backup to perform continuous backup for point-in-time restores. See Point-in-Time Recovery for a list of supported services and instructions on how to use AWS Backup to take continuous backups, or reschedule your backup jobs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfBackupJobsExpired`
-      </td>
-
-      <td>
-        The number of backup jobs that AWS Backup attempted to delete based on your backup retention lifecycle but couldn't delete. You'll pay for the storage that expired backups consume and should delete them manually.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfCopyJobsCreated`
-      </td>
-
-      <td>
-        The number of cross-account and cross-region copy jobs that AWS Backup created.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfCopyJobsRunning`
-      </td>
-
-      <td>
-        The number of cross-account and cross-Region copy jobs currently running in AWS Backup.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfCopyJobsCompleted`
-      </td>
-
-      <td>
-        The number of cross-account and cross-Region copy jobs that AWS Backup finished.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfCopyJobsFailed`
-      </td>
-
-      <td>
-        The number of cross-account and cross-Region copy jobs that AWS Backup attempted but couldn't complete.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfRestoreJobsPending`
-      </td>
-
-      <td>
-        The number of restore jobs about to run in AWS Backup.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfRestoreJobsRunning`
-      </td>
-
-      <td>
-        The number of restore jobs currently running in AWS Backup.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfRestoreJobsCompleted`
-      </td>
-
-      <td>
-        The number of restore jobs that AWS Backup finished.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfRestoreJobsFailed`
-      </td>
-
-      <td>
-        The number of restore jobs that AWS Backup attempted but couldn't complete.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `ResourceType`
 

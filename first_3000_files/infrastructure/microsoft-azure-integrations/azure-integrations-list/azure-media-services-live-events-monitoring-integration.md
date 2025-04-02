@@ -36,58 +36,12 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Media Services Live Events metrics [#Azure-media-services-live-events]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `IngestBitrate` | The incoming bitrate in bits per second for a live event. |
+| `IngestDriftValue` | Drift between the timestamp of the ingested content and the system clock, measured in seconds per minute. A non zero value indicates that the ingested content is arriving slower than system clock time. |
+| `IngestLastTimestamp` | Last timestamp ingested for a live event. |
+| `LiveOutputLastTimestamp` | Timestamp of the last fragment uploaded to storage for a live event output. |
 
-  <tbody>
-    <tr>
-      <td>
-        `IngestBitrate`
-      </td>
-
-      <td>
-        The incoming bitrate in bits per second for a live event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngestDriftValue`
-      </td>
-
-      <td>
-        Drift between the timestamp of the ingested content and the system clock, measured in seconds per minute. A non zero value indicates that the ingested content is arriving slower than system clock time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngestLastTimestamp`
-      </td>
-
-      <td>
-        Last timestamp ingested for a live event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LiveOutputLastTimestamp`
-      </td>
-
-      <td>
-        Timestamp of the last fragment uploaded to storage for a live event output.
-      </td>
-    </tr>
-  </tbody>
-</table>

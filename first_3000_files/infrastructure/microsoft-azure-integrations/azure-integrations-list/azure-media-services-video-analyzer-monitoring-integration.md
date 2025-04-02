@@ -36,38 +36,10 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Media Services Video Analyzer metrics [#Azure-media-services-video-analyzer]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `IngressBytes` | The number of bytes ingressed by the pipeline node. |
+| `pipeline` | The number of pipelines of each kind and state. |
 
-  <tbody>
-    <tr>
-      <td>
-        `IngressBytes`
-      </td>
-
-      <td>
-        The number of bytes ingressed by the pipeline node.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `pipeline`
-      </td>
-
-      <td>
-        The number of pipelines of each kind and state.
-      </td>
-    </tr>
-  </tbody>
-</table>

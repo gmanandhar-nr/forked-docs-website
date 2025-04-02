@@ -42,148 +42,21 @@ You can query and explore your data in [our logs UI](/docs/logs/ui-data/use-logs
 
 This table describes the data reported from Verified Access logs. For example logs, see the [AWS Verified Access log examples doc](https://docs.aws.amazon.com/verified-access/latest/ug/verified-access-logs-examples.html).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Field
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Field | Description |
+| - | - |
+| `activity` | The name of the activity for Verified Access. |
+| `category_name` | Log category. In this case it will usually be `Application activity`. |
+| `class_name` | Names the class of the log. |
+| `device` | Provides information about the device attempting to access the application, like the IP address. |
+| `duration` | The duration of the request. |
+| `end_time` | The time that the the request ended. |
+| `http_request` | Information about the request to access the application, like method, port, and hostname. |
+| `http_response` | The response code from the request. |
+| `identity` | Information about the identity of the user attempting to access the application. |
+| `metadata.product` | Identifier for the log. |
+| `src_endpoint` | The defines the source IP and port of the originating request. |
+| `status` | The status of the attempted login, should be `success`, `failure`, or `unknown`. |
+| `type_name` | The name of the type of access log. |
 
-  <tbody>
-    <tr>
-      <td>
-        `activity`
-      </td>
-
-      <td>
-        The name of the activity for Verified Access.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `category_name`
-      </td>
-
-      <td>
-        Log category. In this case it will usually be `Application activity`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `class_name`
-      </td>
-
-      <td>
-        Names the class of the log.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `device`
-      </td>
-
-      <td>
-        Provides information about the device attempting to access the application, like the IP address.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `duration`
-      </td>
-
-      <td>
-        The duration of the request.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `end_time`
-      </td>
-
-      <td>
-        The time that the the request ended.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `http_request`
-      </td>
-
-      <td>
-        Information about the request to access the application, like method, port, and hostname.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `http_response`
-      </td>
-
-      <td>
-        The response code from the request.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `identity`
-      </td>
-
-      <td>
-        Information about the identity of the user attempting to access the application.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `metadata.product`
-      </td>
-
-      <td>
-        Identifier for the log.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `src_endpoint`
-      </td>
-
-      <td>
-        The defines the source IP and port of the originating request.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `status`
-      </td>
-
-      <td>
-        The status of the attempted login, should be `success`, `failure`, or `unknown`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `type_name`
-      </td>
-
-      <td>
-        The name of the type of access log.
-      </td>
-    </tr>
-  </tbody>
-</table>

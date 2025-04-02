@@ -42,106 +42,51 @@ Complete the following steps to set up the Apache Druid integration:
 
     2. In the file paths listed in the left column, add the code snippets listed in the right columns.
 
-       <table>
-         <thead>
-           <tr>
-             <th>
-               Filepath
-             </th>
+       # Table
 
-             <th>
-               Code snippet
-             </th>
-           </tr>
-         </thead>
-
-         <tbody>
-           <tr>
-             <td>
-               `PATH/TO/broker/runtime.properties`
-             </td>
-
-             <td>
-               ```ini
+| Filepath | Code snippet |
+| - | - |
+| `PATH/TO/broker/runtime.properties` | ```ini
                # Monitoring
                druid.monitoring.monitors=["org.apache.druid.java.util.metrics.JvmMonitor"]
                druid.emitter=prometheus
                druid.emitter.logging.logLevel=info
                druid.emitter.prometheus.strategy=exporter
                druid.emitter.prometheus.port=19091
-               ```
-             </td>
-           </tr>
-
-           <tr>
-             <td>
-               `PATH/TO/coordinator-overlord/runtime.properties`
-             </td>
-
-             <td>
-               ```ini
+               ``` |
+| `PATH/TO/coordinator-overlord/runtime.properties` | ```ini
                # Monitoring
                druid.monitoring.monitors=["org.apache.druid.java.util.metrics.JvmMonitor"]
                druid.emitter=prometheus
                druid.emitter.logging.logLevel=info
                druid.emitter.prometheus.strategy=exporter
                druid.emitter.prometheus.port=19092
-               ```
-             </td>
-           </tr>
-
-           <tr>
-             <td>
-               `PATH/TO/historical/runtime.properties`
-             </td>
-
-             <td>
-               ```ini
+               ``` |
+| `PATH/TO/historical/runtime.properties` | ```ini
                # Monitoring
                druid.monitoring.monitors=["org.apache.druid.java.util.metrics.JvmMonitor"]
                druid.emitter=prometheus
                druid.emitter.logging.logLevel=info
                druid.emitter.prometheus.strategy=exporter
                druid.emitter.prometheus.port=19093
-               ```
-             </td>
-           </tr>
-
-           <tr>
-             <td>
-               `PATH/TO/middleManager/runtime.properties`
-             </td>
-
-             <td>
-               ```ini
+               ``` |
+| `PATH/TO/middleManager/runtime.properties` | ```ini
                # Monitoring
                druid.monitoring.monitors=["org.apache.druid.java.util.metrics.JvmMonitor"]
                druid.emitter=prometheus
                druid.emitter.logging.logLevel=info
                druid.emitter.prometheus.strategy=exporter
                druid.emitter.prometheus.port=19094
-               ```
-             </td>
-           </tr>
-
-           <tr>
-             <td>
-               `PATH/TO/router/runtime.properties`
-             </td>
-
-             <td>
-               ```ini
+               ``` |
+| `PATH/TO/router/runtime.properties` | ```ini
                # Monitoring
                druid.monitoring.monitors=["org.apache.druid.java.util.metrics.JvmMonitor"]
                druid.emitter=prometheus
                druid.emitter.logging.logLevel=info
                druid.emitter.prometheus.strategy=exporter
                druid.emitter.prometheus.port=19095
-               ```
-             </td>
-           </tr>
-         </tbody>
-       </table>
+               ``` |
+
   </Step>
 
   <Step>

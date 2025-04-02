@@ -157,40 +157,12 @@ The New Relic platform uses a color-coded [health status](/docs/alerts-applied-i
 
 Availability of data depends on these factors:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Scope
-      </th>
+# Table
 
-      <th>
-        Data retention
-      </th>
-    </tr>
-  </thead>
+| Scope | Data retention |
+| - | - |
+| Entity explorer and search | In the [entity list](/docs/new-relic-solutions/new-relic-one/core-concepts/new-relic-explorer-view-performance-across-apps-services-hosts#find), data is available for eight days after an entity no longer exists, with one exception: data reported by integrations, such as Amazon AWS, is only available for one day after an entity ceases to exist. |
+| Our database (accessible via [NRQL query](/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql)) | For querying our database (for example, via the [query builder](/docs/query-your-data/explore-query-data/query-builder/introduction-query-builder) or metrics and events, availability is dependent on the [data retention](/docs/telemetry-data-platform/get-data-new-relic/manage-data/manage-retention-stored-data) for that data type. |
 
-  <tbody>
-    <tr>
-      <td>
-        Entity explorer and search
-      </td>
-
-      <td>
-        In the [entity list](/docs/new-relic-solutions/new-relic-one/core-concepts/new-relic-explorer-view-performance-across-apps-services-hosts#find), data is available for eight days after an entity no longer exists, with one exception: data reported by integrations, such as Amazon AWS, is only available for one day after an entity ceases to exist.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Our database (accessible via [NRQL query](/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql))
-      </td>
-
-      <td>
-        For querying our database (for example, via the [query builder](/docs/query-your-data/explore-query-data/query-builder/introduction-query-builder) or metrics and events, availability is dependent on the [data retention](/docs/telemetry-data-platform/get-data-new-relic/manage-data/manage-retention-stored-data) for that data type.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 As a result of these factors, a short-lived entity (like a cloud host) may not be available in the explorer list or via search, but its data may still be available via NRQL query.

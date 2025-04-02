@@ -127,77 +127,15 @@ If you haven't installed it, see [how to install the infrastructure agent](/docs
 
 ### Configuration parameters [#config-parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Definition
-      </th>
+| Parameter | Definition | Value |
+| - | - | - |
+| `hostname` | Domain of the Redis cluster | If running on localhost mode use `localhost` |
+| `port` | Port of the Redis Enterprise API | The default port is `9443` |
+| `username` | The Redis user you created | Email address such as `devops@example.com` |
+| `password` | Your password |
 
-      <th>
-        Value
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `hostname`
-      </td>
-
-      <td>
-        Domain of the Redis cluster
-      </td>
-
-      <td>
-        If running on localhost mode use `localhost`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `port`
-      </td>
-
-      <td>
-        Port of the Redis Enterprise API
-      </td>
-
-      <td>
-        The default port is `9443`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `username`
-      </td>
-
-      <td>
-        The Redis user you created
-      </td>
-
-      <td>
-        Email address such as `devops@example.com`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `password`
-      </td>
-
-      <td>
-        Your password
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Install dashboards [#install-dashboards]
 

@@ -66,37 +66,18 @@ The `setCurrentRouteName()` API determines the name attributes for [`BrowserInte
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$name`
 
-  <tbody>
-    <tr>
-      <td>
-        `$name`
+        _string_ | Required. Current route name for the page.
 
-        _string_
-      </td>
+        Route names passed to `setCurrentRouteName()` can be any string, but they should represent a routing **pattern** rather than a specific resource. For example, use `/users/:id` rather than `/users/123`.
 
-      <td>
-        Required. Current route name for the page.
+        If `null`, exits out of the route change requirement and returns ot the default naming strategy. |
 
-        Route names passed to `setCurrentRouteName()` can be any string, but they should represent a routing <DNT>**pattern**</DNT> rather than a specific resource. For example, use `/users/:id` rather than `/users/123`.
-
-        If `null`, exits out of the route change requirement and returns ot the default naming strategy.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

@@ -137,41 +137,16 @@ To pass the `-javaagent` argument on JBoss:
   >
     Use standalone mode for other platforms and versions:
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "150px" }}>
-            Platform
-          </th>
+    # Table
 
-          <th>
-            Directions
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Unix or macOS with 6.x EAP or 7.0.x AS and above
-          </td>
-
-          <td>
-            At the bottom of `bin/standalone.conf`, add:
+| Platform | Directions |
+| - | - |
+| Unix or macOS with 6.x EAP or 7.0.x AS and above | At the bottom of `bin/standalone.conf`, add:
 
             ```ini
             JAVA_OPTS="$JAVA_OPTS -javaagent:/full/path/to/newrelic.jar"
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Windows with 6.x EAP or 7.0.x AS or higher
-          </td>
-
-          <td>
-            In `bin/standalone.bat`, before the line:
+            ``` |
+| Windows with 6.x EAP or 7.0.x AS or higher | In `bin/standalone.bat`, before the line:
 
             ```batch
             set JBOSS_ENDORSED_DIRS=%JBOSS_HOME%\lib\endorsed
@@ -181,31 +156,13 @@ To pass the `-javaagent` argument on JBoss:
 
             ```batch
             set "JAVA_OPTS=-javaagent:C:/full/path/to/newrelic.jar %JAVA_OPTS%"
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Unix or macOS with 6.x or earlier
-          </td>
-
-          <td>
-            At the bottom of `bin/run.conf`, add this:
+            ``` |
+| Unix or macOS with 6.x or earlier | At the bottom of `bin/run.conf`, add this:
 
             ```ini
             JAVA_OPTS="$JAVA_OPTS -javaagent:/full/path/to/newrelic.jar"
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Windows with 6.x or earlier
-          </td>
-
-          <td>
-            In `bin/run.bat`, before the line:
+            ``` |
+| Windows with 6.x or earlier | In `bin/run.bat`, before the line:
 
             ```batch
             set JBOSS_CLASSPATH=%RUN_CLASSPATH%
@@ -215,11 +172,8 @@ To pass the `-javaagent` argument on JBoss:
 
             ```batch
             set "JAVA_OPTS=-javaagent:C:/full/path/to/newrelic.jar %JAVA_OPTS%"
-            ```
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            ``` |
+
   </Collapser>
 </CollapserGroup>
 

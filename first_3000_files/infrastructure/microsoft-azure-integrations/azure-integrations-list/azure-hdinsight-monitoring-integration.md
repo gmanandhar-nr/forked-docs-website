@@ -36,178 +36,24 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure HDInsight metrics [#Azure-hdinsight]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `CategorizedGatewayRequests` | Number of Gateway requests by categories (1xx/2xx/3xx/4xx/5xx). |
+| `GatewayRequests` | Number of Gateway requests. |
+| `KafkaRestProxy.ConsumerRequest.m1_delta` | Number of consumer requests to Kafka REST proxy. |
+| `KafkaRestProxy.ConsumerRequestFail.m1_delta` | Consumer request exceptions. |
+| `KafkaRestProxy.ConsumerRequestTime.p95` | Message Latency in a consumer request through Kafka REST proxy. |
+| `KafkaRestProxy.ConsumerRequestWaitingInQueueTime.p95` | Consumer REST proxy queue length. |
+| `KafkaRestProxy.MessagesIn.m1_delta` | Number of producer messages through Kafka REST proxy. |
+| `KafkaRestProxy.MessagesOut.m1_delta` | Number of consumer messages through Kafka REST proxy. |
+| `KafkaRestProxy.OpenConnections` | Number of concurrent connections through Kafka REST proxy. |
+| `KafkaRestProxy.ProducerRequest.m1_delta` | Number of producer requests to Kafka REST proxy. |
+| `KafkaRestProxy.ProducerRequestFail.m1_delta` | Producer request exceptions. |
+| `KafkaRestProxy.ProducerRequestTime.p95` | Message latency in a producer request through Kafka REST proxy. |
+| `KafkaRestProxy.ProducerRequestWaitingInQueueTime.p95` | Producer REST proxy queue length. |
+| `NumActiveWorkers` | Number of active workers. |
+| `PendingCPU` | Pending CPU requests in YARN. |
+| `PendingMemory` | Pending Memory requests in YARN. |
 
-  <tbody>
-    <tr>
-      <td>
-        `CategorizedGatewayRequests`
-      </td>
-
-      <td>
-        Number of Gateway requests by categories (1xx/2xx/3xx/4xx/5xx).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GatewayRequests`
-      </td>
-
-      <td>
-        Number of Gateway requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.ConsumerRequest.m1_delta`
-      </td>
-
-      <td>
-        Number of consumer requests to Kafka REST proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.ConsumerRequestFail.m1_delta`
-      </td>
-
-      <td>
-        Consumer request exceptions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.ConsumerRequestTime.p95`
-      </td>
-
-      <td>
-        Message Latency in a consumer request through Kafka REST proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.ConsumerRequestWaitingInQueueTime.p95`
-      </td>
-
-      <td>
-        Consumer REST proxy queue length.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.MessagesIn.m1_delta`
-      </td>
-
-      <td>
-        Number of producer messages through Kafka REST proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.MessagesOut.m1_delta`
-      </td>
-
-      <td>
-        Number of consumer messages through Kafka REST proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.OpenConnections`
-      </td>
-
-      <td>
-        Number of concurrent connections through Kafka REST proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.ProducerRequest.m1_delta`
-      </td>
-
-      <td>
-        Number of producer requests to Kafka REST proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.ProducerRequestFail.m1_delta`
-      </td>
-
-      <td>
-        Producer request exceptions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.ProducerRequestTime.p95`
-      </td>
-
-      <td>
-        Message latency in a producer request through Kafka REST proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KafkaRestProxy.ProducerRequestWaitingInQueueTime.p95`
-      </td>
-
-      <td>
-        Producer REST proxy queue length.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumActiveWorkers`
-      </td>
-
-      <td>
-        Number of active workers.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PendingCPU`
-      </td>
-
-      <td>
-        Pending CPU requests in YARN.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PendingMemory`
-      </td>
-
-      <td>
-        Pending Memory requests in YARN.
-      </td>
-    </tr>
-  </tbody>
-</table>

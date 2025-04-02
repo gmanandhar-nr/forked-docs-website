@@ -23,103 +23,24 @@ Do you have a PromQL query you'd like to convert to [NRQL](/docs/query-data/nrql
 
 The different metric types supported by Prometheus and New Relic are related to each other:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        New Relic
-      </th>
+# Table
 
-      <th style={{ width: "150px" }}>
-        Prometheus
-      </th>
+| New Relic | Prometheus | Description |
+| - | - | - |
+| Count | Counter | The Prometheus counter is a cumulative sum while the New Relic count is a delta sum.
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Count
-      </td>
-
-      <td>
-        Counter
-      </td>
-
-      <td>
-        The Prometheus counter is a cumulative sum while the New Relic count is a delta sum.
-
-        For example, if you see 2 requests in the first reporting period and 3 requests in the second reporting period. The Prometheus counter will report 2 and then 5, while the New Relic count will report 2 and then 3.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Gauge
-      </td>
-
-      <td>
-        Gauge
-      </td>
-
-      <td>
-        A Prometheus gauge is similar to a New Relic gauge.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Multiple counts
-      </td>
-
-      <td>
-        Histogram
-      </td>
-
-      <td>
-        Prometheus automatically maps a histogram to a set of counters. In New Relic, these counters should be changed to deltas and reported as counts.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Gauges and counts
-      </td>
-
-      <td>
-        Summary
-      </td>
-
-      <td>
-        Prometheus represents a Summary with a given `basename` as the following time series:
+        For example, if you see 2 requests in the first reporting period and 3 requests in the second reporting period. The Prometheus counter will report 2 and then 5, while the New Relic count will report 2 and then 3. |
+| Gauge | Gauge | A Prometheus gauge is similar to a New Relic gauge. |
+| Multiple counts | Histogram | Prometheus automatically maps a histogram to a set of counters. In New Relic, these counters should be changed to deltas and reported as counts. |
+| Gauges and counts | Summary | Prometheus represents a Summary with a given `basename` as the following time series:
 
         * a `basename_sum`
         * a `basename_count`
         * and 0 or more of `basename{quantile=".xx"...}` metrics
 
-          New Relic maps the `_sum` as a Summary, the `_count` as a Counter, and each quantile metric as a Gauge.
-      </td>
-    </tr>
+          New Relic maps the `_sum` as a Summary, the `_count` as a Counter, and each quantile metric as a Gauge. |
+| Summary | (No equivalent in Prometheus) | New Relic has a distinct metric type called a summary that is different than the Prometheus summary. It is designed for reporting aggregated discrete events so that you can query the count, sum, min, max, and average values. |
 
-    <tr>
-      <td>
-        Summary
-      </td>
-
-      <td>
-        (No equivalent in Prometheus)
-      </td>
-
-      <td>
-        New Relic has a distinct metric type called a summary that is different than the Prometheus summary. It is designed for reporting aggregated discrete events so that you can query the count, sum, min, max, and average values.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 To learn how to convert from a PromQL query to an NRQL alert condition that can be used with New Relic, watch this short video (approx. 5:45 minutes).
 

@@ -121,76 +121,26 @@ To edit, disable (or re-enable), or delete host alert information:
 
 [Alerts](/docs/alerts/new-relic-alerts-beta/getting-started/new-relic-alerts) provides a single, coordinated alerting tool across all of your New Relic products. This allows you to manage [alert policies](/docs/alerts/new-relic-alerts-beta/getting-started/alerts-glossary#alert-policy) and [conditions](/docs/alerts/new-relic-alerts-beta/getting-started/alerts-glossary#alert-condition) that focus on the metrics for [entities](/docs/alerts/new-relic-alerts-beta/getting-started/alerts-glossary#alert-entity) that you care about the most, such as Docker containers, JVMs, and more.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Alert features**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Features in infrastructure monitoring**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Alert conditions
-      </td>
-
-      <td>
-        * Create: Use the [Infrastructure](#create-condition) UI.
-        * View, change, disable (or re-enable), or delete: Use the [Infrastructure <DNT>**Settings > Alerts**</DNT>](#maintain-alerts) UI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Information on alerts
-      </td>
-
-      <td>
-        * View summary information about [events](/docs/alerts/new-relic-alerts/getting-started/alerts-glossary#event): Use the [Infrastructure <DNT>**Events**</DNT>](#view-alerts) UI.
-        * View detailed information about [alert incidents](/docs/new-relic-solutions/get-started/glossary/#alert-incident): Use the [alerts](/docs/alerts/new-relic-alerts/reviewing-alert-incidents/explore-incident-history-incidents-index) UI or the [notification channel](#notification) integrated with the associated policy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Alert policies
-      </td>
-
-      <td>
-        View, add, change, disable, or delete:
+| **Alert features** | **Features in infrastructure monitoring** |
+| - | - |
+| Alert conditions | * Create: Use the [Infrastructure](#create-condition) UI.
+        * View, change, disable (or re-enable), or delete: Use the [Infrastructure **Settings > Alerts**](#maintain-alerts) UI. |
+| Information on alerts | * View summary information about [events](/docs/alerts/new-relic-alerts/getting-started/alerts-glossary#event): Use the [Infrastructure **Events**](#view-alerts) UI.
+        * View detailed information about [alert incidents](/docs/new-relic-solutions/get-started/glossary/#alert-incident): Use the [alerts](/docs/alerts/new-relic-alerts/reviewing-alert-incidents/explore-incident-history-incidents-index) UI or the [notification channel](#notification) integrated with the associated policy. |
+| Alert policies | View, add, change, disable, or delete:
 
         * For policies with a variety of notification channels: Use the [alerts](/docs/alerts/new-relic-alerts/updating-alert-policies/change-alert-policies) UI.
-        * For policies only needing [email notifications](#notification): Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > Settings > Alerts > Create a new policy**</DNT>, and add one or more email addresses as needed.
+        * For policies only needing [email notifications](#notification): Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > Settings > Alerts > Create a new policy**, and add one or more email addresses as needed.
 
-          Add host conditions to an existing policy: Use the [Infrastructure](#create-condition) UI.
-      </td>
-    </tr>
+          Add host conditions to an existing policy: Use the [Infrastructure](#create-condition) UI. |
+| Notification channels | To view, add, change, or delete [available notification options](#notification):
 
-    <tr>
-      <td>
-        Notification channels
-      </td>
-
-      <td>
-        To view, add, change, or delete [available notification options](#notification):
-
-        1. Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > Settings > Alerts**</DNT>.
+        1. Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > Settings > Alerts**.
         2. Optional: Search for the condition or policy name.
-        3. From the list of conditions, select the policy link to view notification channel information in the alerts UI.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        3. From the list of conditions, select the policy link to view notification channel information in the alerts UI. |
+
 
 ## Add a description [#description]
 

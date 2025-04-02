@@ -17,65 +17,15 @@ The Ruby agent has built-in instrumentation for MongoDB queries made via the [`m
 
 This summarizes the Ruby agent's support for gems by version.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Gem version**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Gem version** | **Comments** |
+| - | - |
+| `mongo` 1.8 and 1.9 | Supported by New Relic's Ruby agent 3.7.1 or higher |
+| `mongo` 2.0 | Not supported |
+| `mongo` 2.1 or higher | Requires New Relic's Ruby agent 3.13.1 or higher |
+| Other gems | Support for Mongoid 2/3/4 and Moped currently is available only via third-party gems. For links to the relevant projects, see [extends_newrelic_rpm](https://github.com/newrelic/extends_newrelic_rpm). |
 
-  <tbody>
-    <tr>
-      <td>
-        `mongo` 1.8 and 1.9
-      </td>
-
-      <td>
-        Supported by New Relic's Ruby agent 3.7.1 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `mongo` 2.0
-      </td>
-
-      <td>
-        Not supported
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `mongo` 2.1 or higher
-      </td>
-
-      <td>
-        Requires New Relic's Ruby agent 3.13.1 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Other gems
-      </td>
-
-      <td>
-        Support for Mongoid 2/3/4 and Moped currently is available only via third-party gems. For links to the relevant projects, see [extends_newrelic_rpm](https://github.com/newrelic/extends_newrelic_rpm).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Third-party and extends_newrelic_rpm instrumentation [#third_party_instrumentation]
 

@@ -33,49 +33,15 @@ You may be wondering why we're using `NrAiIncident` as the name for the incident
 
 All attributes are available for use in a [description](/docs/alerts/new-relic-alerts/defining-conditions/alert-condition-descriptions). Read about attributes available for [muting rules](/docs/alerts/new-relic-alerts/managing-notification-channels/muting-rules-suppress-notifications).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "205px" }}>
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Attribute | Description |
+| - | - |
+| `accountId` | The [ID of the account](/docs/accounts/install-new-relic/account-setup/account-id) where the incident occurred.
 
-  <tbody>
-    <tr>
-      <td>
-        `accountId`
-      </td>
-
-      <td>
-        The [ID of the account](/docs/accounts/install-new-relic/account-setup/account-id) where the incident occurred.
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `aggregationDuration`
-      </td>
-
-      <td>
-        The active condition's aggregation window.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `closeCause`
-      </td>
-
-      <td>
-        If applicable, what caused the incident to close.
+        Available for muting rules. |
+| `aggregationDuration` | The active condition's aggregation window. |
+| `closeCause` | If applicable, what caused the incident to close.
 
         Available values:
 
@@ -101,403 +67,76 @@ All attributes are available for use in a [description](/docs/alerts/new-relic-a
 
         `TARGET_REMOVED`: The target was removed from the condition.
 
-        `USER`: Closed manually by a user.
-      </td>
-    </tr>
+        `USER`: Closed manually by a user. |
+| `closeTime` | If applicable, the timestamp when the incident was closed. |
+| `closeViolationsOnExpiration` | If true, open incidents on the signal are closed if the signal is lost. Default is false. To use this field, an `expirationDuration` must be specified. |
+| `conditionId` | The ID of the condition that triggered the incident.
 
-    <tr>
-      <td>
-        `closeTime`
-      </td>
+        Available for muting rules. |
+| `conditionName` | The name of the condition that triggered the incident.
 
-      <td>
-        If applicable, the timestamp when the incident was closed.
-      </td>
-    </tr>
+        Available for muting rules. |
+| `degradationTime` | The timestamp when the targeted metric started to breach the active condition's threshold. |
+| `description` | The contents of the active condition's `Violation Description` field.
 
-    <tr>
-      <td>
-        `closeViolationsOnExpiration`
-      </td>
+        NRQL or infrastructure conditions only. Not available for use with alert condition [title](docs/alerts/create-alert/condition-details/title-template) or [description templates](/docs/alerts/create-alert/condition-details/alert-custom-incident-descriptions). |
+| `entity.guid` | The targeted entity's globally unique identifier, if available.
 
-      <td>
-        If true, open incidents on the signal are closed if the signal is lost. Default is false. To use this field, an `expirationDuration` must be specified.
-      </td>
-    </tr>
+        Available for muting rules. |
+| `entity.name` | The targeted entity's name, if available. |
+| `entity.type` | The targeted entity's type, if available. |
+| `evaluationOffsetSeconds` | The active condition's evaluation offset. A time delay (in seconds) to ensure data points are placed in the correct aggregation window.
 
-    <tr>
-      <td>
-        `conditionId`
-      </td>
-
-      <td>
-        The ID of the condition that triggered the incident.
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `conditionName`
-      </td>
-
-      <td>
-        The name of the condition that triggered the incident.
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `degradationTime`
-      </td>
-
-      <td>
-        The timestamp when the targeted metric started to breach the active condition's threshold.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `description`
-      </td>
-
-      <td>
-        The contents of the active condition's `Violation Description` field.
-
-        NRQL or infrastructure conditions only. Not available for use with alert condition [title](docs/alerts/create-alert/condition-details/title-template) or [description templates](/docs/alerts/create-alert/condition-details/alert-custom-incident-descriptions).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `entity.guid`
-      </td>
-
-      <td>
-        The targeted entity's globally unique identifier, if available.
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `entity.name`
-      </td>
-
-      <td>
-        The targeted entity's name, if available.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `entity.type`
-      </td>
-
-      <td>
-        The targeted entity's type, if available.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `evaluationOffsetSeconds`
-      </td>
-
-      <td>
-        The active condition's evaluation offset. A time delay (in seconds) to ensure data points are placed in the correct aggregation window.
-
-        If you use the Delay/timer setting in the UI, it clears `evaluationOffsetSeconds` and uses Delay/timer instead.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `evaluationType`
-      </td>
-
-      <td>
-        The reason the incident was opened. Available values:
+        If you use the Delay/timer setting in the UI, it clears `evaluationOffsetSeconds` and uses Delay/timer instead. |
+| `evaluationType` | The reason the incident was opened. Available values:
 
         * `Threshold` (the condition threshold was breached)
-        * `Expiration` (the entity's signal was lost)
-      </td>
-    </tr>
+        * `Expiration` (the entity's signal was lost) |
+| `event` | The record's event type.
 
-    <tr>
-      <td>
-        `event`
-      </td>
+        Available values: `Open` and `Close`. |
+| `expirationDuration` | The active condition's signal loss time window. |
+| `incidentId` | The unique identifier of the incident. Not available for use with alert condition [title](docs/alerts/create-alert/condition-details/title-template) or [description templates](/docs/alerts/create-alert/condition-details/alert-custom-incident-descriptions). |
+| `muted` | Shows whether the active condition was muted at the time of the incident event. |
+| `mutingRuleId` | The unique identifier of the muting rule that caused the incident to be muted. |
+| `nrqlEventType` | The type of data targeted by a NRQL condition. In this context, this refers to any [NRQL-queryable data type](/docs/query-data/nrql-new-relic-query-language/getting-started/introduction-nrql#what-you-can-query).
 
-      <td>
-        The record's event type.
+        Available for muting rules. |
+| `nrqlQuery` | The full string of the NRQL query. Can be used for sub-string matching on [attributes](/docs/using-new-relic/welcome-new-relic/get-started/glossary#attribute) in the `WHERE` clause.
 
-        Available values: `Open` and `Close`.
-      </td>
-    </tr>
+        Available for muting rules. |
+| `openTime` | The timestamp when the incident was opened. |
+| `operator` | The incident threshold's operator, such as `=`, ``.
 
-    <tr>
-      <td>
-        `expirationDuration`
-      </td>
+        For signal loss incidents, this is an empty string. |
+| `policyId` | The ID of the policy that triggered the incident.
 
-      <td>
-        The active condition's signal loss time window.
-      </td>
-    </tr>
+        Available for muting rules. |
+| `policyName` | The name of the policy that triggered the incident.
 
-    <tr>
-      <td>
-        `incidentId`
-      </td>
+        Available for muting rules. |
+| `priority` | The level of the incident: `warning` or `critical`. |
+| `recoveryTime` | The timestamp when the active condition's targeted metric stops breaching the threshold. |
+| `runbookUrl` | The runbook URL for the condition that triggered the incident.
 
-      <td>
-        The unique identifier of the incident. Not available for use with alert condition [title](docs/alerts/create-alert/condition-details/title-template) or [description templates](/docs/alerts/create-alert/condition-details/alert-custom-incident-descriptions).
-      </td>
-    </tr>
+        Available for muting rules. |
+| `tags.*` | Arbitrary key-value metadata, or tags, associated with the incident. `tags.` is the prefix and `*` is the metadata/tag name. For details on how to use this, see the documentation for [muting rules](/docs/alerts/new-relic-alerts/managing-notification-channels/muting-rules-suppress-notifications) or [description](/docs/alerts/new-relic-alerts/defining-conditions/alert-condition-descriptions).
 
-    <tr>
-      <td>
-        `muted`
-      </td>
+        Available for muting rules. |
+| `targetName` | The name of the incident's target. This can be an entity or a query.
 
-      <td>
-        Shows whether the active condition was muted at the time of the incident event.
-      </td>
-    </tr>
+        Available for muting rules. |
+| `threshold` | The active condition's threshold value. |
+| `thresholdDuration` | The active condition's threshold time window. |
+| `thresholdOccurrences` | Shows whether `for at least` or `at least once in` occurrence values are being used in the active condition's threshold. Available values: `all` or `any`. |
+| `timestamp` | The event's wall clock time using an epoch timestamp. |
+| `title` | The incident's title. |
+| `type` | The incident's type.
 
-    <tr>
-      <td>
-        `mutingRuleId`
-      </td>
+        Available value: `Incident`. |
+| `valueFunction` | The active condition's aggregation function.
 
-      <td>
-        The unique identifier of the muting rule that caused the incident to be muted.
-      </td>
-    </tr>
+        Used in APM, browser, and mobile alert condition types. |
+| `violationTimeLimitSeconds` | The active condition's incident time limit setting. |
+| `violationUuId` | Deprecated. Do not use. |
 
-    <tr>
-      <td>
-        `nrqlEventType`
-      </td>
-
-      <td>
-        The type of data targeted by a NRQL condition. In this context, this refers to any [NRQL-queryable data type](/docs/query-data/nrql-new-relic-query-language/getting-started/introduction-nrql#what-you-can-query).
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `nrqlQuery`
-      </td>
-
-      <td>
-        The full string of the NRQL query. Can be used for sub-string matching on [attributes](/docs/using-new-relic/welcome-new-relic/get-started/glossary#attribute) in the `WHERE` clause.
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `openTime`
-      </td>
-
-      <td>
-        The timestamp when the incident was opened.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `operator`
-      </td>
-
-      <td>
-        The incident threshold's operator, such as `=`, `<`, or `>`.
-
-        For signal loss incidents, this is an empty string.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `policyId`
-      </td>
-
-      <td>
-        The ID of the policy that triggered the incident.
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `policyName`
-      </td>
-
-      <td>
-        The name of the policy that triggered the incident.
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `priority`
-      </td>
-
-      <td>
-        The level of the incident: `warning` or `critical`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `recoveryTime`
-      </td>
-
-      <td>
-        The timestamp when the active condition's targeted metric stops breaching the threshold.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `runbookUrl`
-      </td>
-
-      <td>
-        The runbook URL for the condition that triggered the incident.
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `tags.*`
-      </td>
-
-      <td>
-        Arbitrary key-value metadata, or tags, associated with the incident. `tags.` is the prefix and `*` is the metadata/tag name. For details on how to use this, see the documentation for [muting rules](/docs/alerts/new-relic-alerts/managing-notification-channels/muting-rules-suppress-notifications) or [description](/docs/alerts/new-relic-alerts/defining-conditions/alert-condition-descriptions).
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `targetName`
-      </td>
-
-      <td>
-        The name of the incident's target. This can be an entity or a query.
-
-        Available for muting rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `threshold`
-      </td>
-
-      <td>
-        The active condition's threshold value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `thresholdDuration`
-      </td>
-
-      <td>
-        The active condition's threshold time window.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `thresholdOccurrences`
-      </td>
-
-      <td>
-        Shows whether `for at least` or `at least once in` occurrence values are being used in the active condition's threshold. Available values: `all` or `any`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `timestamp`
-      </td>
-
-      <td>
-        The event's wall clock time using an epoch timestamp.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `title`
-      </td>
-
-      <td>
-        The incident's title.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `type`
-      </td>
-
-      <td>
-        The incident's type.
-
-        Available value: `Incident`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `valueFunction`
-      </td>
-
-      <td>
-        The active condition's aggregation function.
-
-        Used in APM, browser, and mobile alert condition types.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `violationTimeLimitSeconds`
-      </td>
-
-      <td>
-        The active condition's incident time limit setting.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `violationUuId`
-      </td>
-
-      <td>
-        Deprecated. Do not use.
-      </td>
-    </tr>
-  </tbody>
-</table>

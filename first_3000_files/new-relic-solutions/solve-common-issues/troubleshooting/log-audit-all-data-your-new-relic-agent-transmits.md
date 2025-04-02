@@ -24,95 +24,18 @@ If you need to record and view information about <DNT>**all**</DNT> data your ap
 
 For details about the audit logging options for your APM agent's configuration file, see the agent-specific documentation:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "100px" }}>
-        <DNT>
-          **Agent**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Configuration file**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Agent** | **Configuration file** |
+| - | - |
+| Go | Logging is optional with the Go agent. If you are using `newrelic.NewLogger(w)` and want more detailed output, change `newrelic.NewLogger(w)` to `newrelic.NewDebugLogger(w)`. For more information, see the [New Relic Go logging documentation on GitHub](https://github.com/newrelic/go-agent/blob/master/v3/newrelic/log.go). |
+| Java | Set [`audit_mode`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-audit_mode) to `true`. |
+| .NET | Set [`auditLog`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#log-auditLog) to `true`. |
+| Node.js | New Relic's Node.js agent does not use separate audit logs because the payload is already available in the configuration logs. To view increasing levels of detail, use your config file's [logging `level` variables](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#logging_config). |
+| PHP | Use PHP [`newrelic.daemon.auditlog` (for `newrelic.ini`)](/docs/agents/php-agent/configuration/php-agent-configuration#inivar-daemon-auditlog) or [`auditlog` (for `newrelic.cfg`)](/docs/agents/php-agent/configuration/proxy-daemon-newreliccfg-settings#cfgvar-auditlog). |
+| Python | Use Python [`audit_log_file` values](/docs/agents/python-agent/installation-configuration/python-agent-configuration#audit-log-file). |
+| Ruby | Use [`audit_log` values](/docs/apm/agents/ruby-agent/configuration/ruby-agent-configuration/#audit-log). For more information, see [Ruby agent audit log](/docs/agents/ruby-agent/troubleshooting/ruby-agent-audit-log). |
 
-  <tbody>
-    <tr>
-      <td>
-        Go
-      </td>
-
-      <td>
-        Logging is optional with the Go agent. If you are using `newrelic.NewLogger(w)` and want more detailed output, change `newrelic.NewLogger(w)` to `newrelic.NewDebugLogger(w)`. For more information, see the [New Relic Go logging documentation on GitHub](https://github.com/newrelic/go-agent/blob/master/v3/newrelic/log.go).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Java
-      </td>
-
-      <td>
-        Set [`audit_mode`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-audit_mode) to `true`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        .NET
-      </td>
-
-      <td>
-        Set [`auditLog`](/docs/agents/net-agent/installation-configuration/net-agent-configuration#log-auditLog) to `true`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Node.js
-      </td>
-
-      <td>
-        New Relic's Node.js agent does not use separate audit logs because the payload is already available in the configuration logs. To view increasing levels of detail, use your config file's [logging `level` variables](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#logging_config).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PHP
-      </td>
-
-      <td>
-        Use PHP [`newrelic.daemon.auditlog` (for `newrelic.ini`)](/docs/agents/php-agent/configuration/php-agent-configuration#inivar-daemon-auditlog) or [`auditlog` (for `newrelic.cfg`)](/docs/agents/php-agent/configuration/proxy-daemon-newreliccfg-settings#cfgvar-auditlog).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Python
-      </td>
-
-      <td>
-        Use Python [`audit_log_file` values](/docs/agents/python-agent/installation-configuration/python-agent-configuration#audit-log-file).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Ruby
-      </td>
-
-      <td>
-        Use [`audit_log` values](/docs/apm/agents/ruby-agent/configuration/ruby-agent-configuration/#audit-log). For more information, see [Ruby agent audit log](/docs/agents/ruby-agent/troubleshooting/ruby-agent-audit-log).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Infrastructure agent logging [#infrastructure-logging]
 

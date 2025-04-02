@@ -56,79 +56,29 @@ New Relic instrumentation happens before ProGuard obfuscates your code. In order
 
 Here are examples of rules to be applied to preserve these classes. This is not a complete list. Different rules will be needed depending on your library or version.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Library**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Rules**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Apache Http
-      </td>
-
-      <td>
-        ```
+| **Library** | **Rules** |
+| - | - |
+| Apache Http | ```
         -keep class org.apache.http.** { *; }
         -dontwarn org.apache.http.**
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        OkHttp 2
-      </td>
-
-      <td>
-        ```
+        ``` |
+| OkHttp 2 | ```
         -keep class com.squareup.okhttp.* { *; }
         -dontwarn com.squareup.okhttp.**
         -dontwarn okio.**
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        OkHttp 3
-      </td>
-
-      <td>
-        ```
+        ``` |
+| OkHttp 3 | ```
         -keep class okhttp3.** { *; }
         -dontwarn okhttp3.**
         -dontwarn okio.**
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Retrofit 2
-      </td>
-
-      <td>
-        ```
+        ``` |
+| Retrofit 2 | ```
         -keep class retrofit2.** { *; }
         -dontwarn retrofit2.**
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 ## Configure DexGuard [#dexguard]
 

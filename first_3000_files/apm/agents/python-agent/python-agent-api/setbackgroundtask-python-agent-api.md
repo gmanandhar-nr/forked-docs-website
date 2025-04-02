@@ -37,33 +37,14 @@ The agent identifies a monitored transaction as a web transaction or background 
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `flag`
 
-  <tbody>
-    <tr>
-      <td>
-        `flag`
+        _boolean_ | Optional. Default value is `True`. Use `False` to instead classify the transaction to a web transaction. |
 
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Default value is `True`. Use `False` to instead classify the transaction to a web transaction.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

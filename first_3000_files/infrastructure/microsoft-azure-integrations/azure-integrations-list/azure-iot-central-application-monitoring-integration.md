@@ -38,238 +38,30 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure IoT Central Applications metrics [#Azure-iot-central-applications]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `c2d.commands.failure` | The count of all failed command requests initiated from IoT Central. |
+| `c2d.commands.requestSize` | Request size of all command requests initiated from IoT Central. |
+| `c2d.commands.responseSize` | Response size of all command responses initiated from IoT Central. |
+| `c2d.commands.success` | The count of all successful command requests initiated from IoT Central. |
+| `c2d.property.read.failure` | The count of all failed property reads initiated from IoT Central. |
+| `c2d.property.read.success` | The count of all successful property reads initiated from IoT Central. |
+| `c2d.property.update.failure` | The count of all failed property updates initiated from IoT Central. |
+| `c2d.property.update.success` | The count of all successful property updates initiated from IoT Central. |
+| `connectedDeviceCount` | Number of devices connected to IoT Central. |
+| `d2c.property.read.failure` | The count of all failed property reads initiated from devices. |
+| `d2c.property.read.success` | The count of all successful property reads initiated from devices. |
+| `d2c.property.update.failure` | The count of all failed property updates initiated from devices. |
+| `d2c.property.update.success` | The count of all successful property updates initiated from devices. |
+| `d2c.telemetry.ingress.allProtocol` | Number of device-to-cloud telemetry messages attempted to be sent to the IoT Central application. |
+| `d2c.telemetry.ingress.success` | Number of device-to-cloud telemetry messages successfully sent to the IoT Central application. |
+| `dataExport.error` | Number of errors encountered for data export. |
+| `dataExport.messages.filtered` | Number of messages that have passed through filters in data export. |
+| `dataExport.messages.received` | Number of messages incoming to data export, before filtering and enrichment processing. |
+| `dataExport.messages.written` | Number of messages written to a destination. |
+| `dataExport.statusChange` | Number of status changes. |
+| `deviceDataUsage` | Bytes transferred to and from any devices connected to IoT Central application. |
+| `provisionedDeviceCount` | Number of devices provisioned in IoT Central application. |
 
-  <tbody>
-    <tr>
-      <td>
-        `c2d.commands.failure`
-      </td>
-
-      <td>
-        The count of all failed command requests initiated from IoT Central.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `c2d.commands.requestSize`
-      </td>
-
-      <td>
-        Request size of all command requests initiated from IoT Central.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `c2d.commands.responseSize`
-      </td>
-
-      <td>
-        Response size of all command responses initiated from IoT Central.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `c2d.commands.success`
-      </td>
-
-      <td>
-        The count of all successful command requests initiated from IoT Central.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `c2d.property.read.failure`
-      </td>
-
-      <td>
-        The count of all failed property reads initiated from IoT Central.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `c2d.property.read.success`
-      </td>
-
-      <td>
-        The count of all successful property reads initiated from IoT Central.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `c2d.property.update.failure`
-      </td>
-
-      <td>
-        The count of all failed property updates initiated from IoT Central.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `c2d.property.update.success`
-      </td>
-
-      <td>
-        The count of all successful property updates initiated from IoT Central.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `connectedDeviceCount`
-      </td>
-
-      <td>
-        Number of devices connected to IoT Central.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `d2c.property.read.failure`
-      </td>
-
-      <td>
-        The count of all failed property reads initiated from devices.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `d2c.property.read.success`
-      </td>
-
-      <td>
-        The count of all successful property reads initiated from devices.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `d2c.property.update.failure`
-      </td>
-
-      <td>
-        The count of all failed property updates initiated from devices.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `d2c.property.update.success`
-      </td>
-
-      <td>
-        The count of all successful property updates initiated from devices.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `d2c.telemetry.ingress.allProtocol`
-      </td>
-
-      <td>
-        Number of device-to-cloud telemetry messages attempted to be sent to the IoT Central application.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `d2c.telemetry.ingress.success`
-      </td>
-
-      <td>
-        Number of device-to-cloud telemetry messages successfully sent to the IoT Central application.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dataExport.error`
-      </td>
-
-      <td>
-        Number of errors encountered for data export.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dataExport.messages.filtered`
-      </td>
-
-      <td>
-        Number of messages that have passed through filters in data export.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dataExport.messages.received`
-      </td>
-
-      <td>
-        Number of messages incoming to data export, before filtering and enrichment processing.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dataExport.messages.written`
-      </td>
-
-      <td>
-        Number of messages written to a destination.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dataExport.statusChange`
-      </td>
-
-      <td>
-        Number of status changes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deviceDataUsage`
-      </td>
-
-      <td>
-        Bytes transferred to and from any devices connected to IoT Central application.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `provisionedDeviceCount`
-      </td>
-
-      <td>
-        Number of devices provisioned in IoT Central application.
-      </td>
-    </tr>
-  </tbody>
-</table>

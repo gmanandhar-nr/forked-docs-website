@@ -65,71 +65,16 @@ The legacy metadata tag format:
 
 This table describes the locations where you can find and use your EC2 data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "210px" }}>
-        UI page
-      </th>
+# Table
 
-      <th>
-        You can...
-      </th>
-    </tr>
-  </thead>
+| UI page | You can... |
+| - | - |
+| [**System** page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#system) | Examine overall resource usage by CPU, load, and memory. |
+| [**Processes** page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#processes) | Monitor CPU, memory, and I/O read or write processes. |
+| [**Network** page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#network) | View bandwidth and error data to examine saturation levels, compare load balances, and identify other potential performance problems. |
+| [**Storage** page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#storage) | Monitor the capacity and efficiency of overall utilization, disk usage, or I/O operations. |
+| [**Integrations** page](/docs/integrations/new-relic-integrations/getting-started/infrastructure-integration-dashboards-charts) | Find links to several product locations where you can find and use EC2 integration data, including links to [alert condition creation](/docs/infrastructure/new-relic-infrastructure/configuration/infrastructure-alerts-add-edit-or-view-host-alert-information) and [viewing your data in New Relic](/docs/insights/new-relic-insights/using-insights-interface/viewing-your-insights-dashboards). |
 
-  <tbody>
-    <tr>
-      <td>
-        [<DNT>**System**</DNT> page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#system)
-      </td>
-
-      <td>
-        Examine overall resource usage by CPU, load, and memory.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [<DNT>**Processes**</DNT> page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#processes)
-      </td>
-
-      <td>
-        Monitor CPU, memory, and I/O read or write processes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [<DNT>**Network**</DNT> page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#network)
-      </td>
-
-      <td>
-        View bandwidth and error data to examine saturation levels, compare load balances, and identify other potential performance problems.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [<DNT>**Storage**</DNT> page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#storage)
-      </td>
-
-      <td>
-        Monitor the capacity and efficiency of overall utilization, disk usage, or I/O operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [<DNT>**Integrations**</DNT> page](/docs/integrations/new-relic-integrations/getting-started/infrastructure-integration-dashboards-charts)
-      </td>
-
-      <td>
-        Find links to several product locations where you can find and use EC2 integration data, including links to [alert condition creation](/docs/infrastructure/new-relic-infrastructure/configuration/infrastructure-alerts-add-edit-or-view-host-alert-information) and [viewing your data in New Relic](/docs/insights/new-relic-insights/using-insights-interface/viewing-your-insights-dashboards).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Infrastructure also imports your [Amazon EC2 custom tags](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html), typically prefaced by `label.<tag_key>`.
 

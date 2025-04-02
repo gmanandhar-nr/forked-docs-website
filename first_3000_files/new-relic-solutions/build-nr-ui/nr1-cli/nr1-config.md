@@ -11,61 +11,15 @@ Use the commands below to configure your New Relic One CLI preferences. You can 
 
 Run `nr1 config:list` to see all your existing configurations and their keys.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Command
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Command | Description |
+| - | - |
+| [`nr1 config:delete`](#nr1-configdelete) | Removes the value of a specific configuration. |
+| [`nr1 config:get`](#nr1-configget) | Shows a specific configuration. |
+| [`nr1 config:list`](#nr1-configlist) | Lists your configuration choices. |
+| [`nr1 config:set`](#nr1-configset) | Sets a specific configuration value. |
 
-  <tbody>
-    <tr>
-      <td>
-        [`nr1 config:delete`](#nr1-configdelete)
-      </td>
-
-      <td>
-        Removes the value of a specific configuration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 config:get`](#nr1-configget)
-      </td>
-
-      <td>
-        Shows a specific configuration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 config:list`](#nr1-configlist)
-      </td>
-
-      <td>
-        Lists your configuration choices.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 config:set`](#nr1-configset)
-      </td>
-
-      <td>
-        Sets a specific configuration value.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## `nr1 config:delete` [#nr1-configdelete]
 

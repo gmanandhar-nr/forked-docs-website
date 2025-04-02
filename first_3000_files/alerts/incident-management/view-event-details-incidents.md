@@ -62,72 +62,21 @@ Details for individual incident charts include:
 
 From this page, you can take action regarding the incident:
 
-<table>
-  <thead>
-    <tr>
-      <th width={250}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **If you want to...** | **Do this** |
+| - | - |
+| Assume responsibility for the incident | [Acknowledge the incident](/docs/alerts/new-relic-alerts-beta/reviewing-alert-incidents/acknowledge-alert-incidents). There are 2 options: 
+        * From the selected issue row, click the  icon and select **Acknowledge this issue**.
+        * From the incident details page, click the **Acknowledge** button. |
+| View information about events | Mouse over any spot on the blue line in the chart to display event information. |
+| Manually close the incident | Below the chart, select the [Manually close incident](/docs/alerts-applied-intelligence/new-relic-alerts/alert-incidents/how-alert-condition-incidents-are-closed) link.
 
-  <tbody>
-    <tr>
-      <td>
-        Assume responsibility for the incident
-      </td>
+        
+          Anyone in the account who can view the incident can also close it. |
+| Edit the policy or condition | Select the **Settings** gear 
+        icon or select the name of the policy above the chart. |
 
-      <td>
-        [Acknowledge the incident](/docs/alerts/new-relic-alerts-beta/reviewing-alert-incidents/acknowledge-alert-incidents). There are 2 options: 
-        * From the selected issue row, click the <Icon name="fe-more-horizontal"/> icon and select <DNT>**Acknowledge this issue**</DNT>.
-        * From the incident details page, click the <DNT>**Acknowledge**</DNT> button.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View information about events
-      </td>
-
-      <td>
-        Mouse over any spot on the blue line in the chart to display event information.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Manually close the incident
-      </td>
-
-      <td>
-        Below the chart, select the [Manually close incident](/docs/alerts-applied-intelligence/new-relic-alerts/alert-incidents/how-alert-condition-incidents-are-closed) link.
-
-        <Callout variant="tip">
-          Anyone in the account who can view the incident can also close it.
-        </Callout>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Edit the policy or condition
-      </td>
-
-      <td>
-        Select the <DNT>**Settings**</DNT> gear <Icon name="fe-settings"/>
-        icon or select the name of the policy above the chart.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View the events in an incident [#view-log]
 

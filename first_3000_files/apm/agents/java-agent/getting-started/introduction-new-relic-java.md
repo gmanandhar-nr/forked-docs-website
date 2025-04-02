@@ -97,75 +97,25 @@ After installing the Java agent, use any of these methods to extend your instrum
 
 When you make a change to your configuration or to your custom XML, in almost all cases you must restart your JVM. There are only four situations where a restart is **not** necessary:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **JVM restart is not required for...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Log level or audit mode changes
-      </td>
-
-      <td>
-        If you are simply changing the `log_level` or `audit_mode` in the [Java agent configuration file](/docs/agents/java-agent/configuration/java-agent-configuration-config-file), you do not need to restart the JVM.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Custom instrumentation XML file
-      </td>
-
-      <td>
-        JVM restart depends on your Java agent version:
+| **JVM restart is not required for...** | **Comments** |
+| - | - |
+| Log level or audit mode changes | If you are simply changing the `log_level` or `audit_mode` in the [Java agent configuration file](/docs/agents/java-agent/configuration/java-agent-configuration-config-file), you do not need to restart the JVM. |
+| Custom instrumentation XML file | JVM restart depends on your Java agent version:
 
         * 3.15.0 or higher: If you are updating a custom instrumentation XML file in the extensions folder, the updates will be reloaded automatically within a minute.
-        * Java agent versions lower than 3.15.0: If you using an agent version earlier than 3.15.0, you must restart the JVM.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Circuit breaker changes
-      </td>
-
-      <td>
-        If you are [changing the circuit breaker](/docs/agents/java-agent/custom-instrumentation/circuit-breaker-java-custom-instrumentation#troubleshooting) for Java custom instrumentation, a JVM restart is not required.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Ignored or expected errors
-      </td>
-
-      <td>
-        If you are ignoring or expecting errors by configuring the `newrelic.yml` file, a JVM restart is not required. This includes adding status codes or classes to the `newrelic.yml` file when using the Java agent version 3.40.0 or higher. For example:
+        * Java agent versions lower than 3.15.0: If you using an agent version earlier than 3.15.0, you must restart the JVM. |
+| Circuit breaker changes | If you are [changing the circuit breaker](/docs/agents/java-agent/custom-instrumentation/circuit-breaker-java-custom-instrumentation#troubleshooting) for Java custom instrumentation, a JVM restart is not required. |
+| Ignored or expected errors | If you are ignoring or expecting errors by configuring the `newrelic.yml` file, a JVM restart is not required. This includes adding status codes or classes to the `newrelic.yml` file when using the Java agent version 3.40.0 or higher. For example:
 
         * `ignore_status_codes`
         * `expected_status_codes`
         * `ignore_classes`
         * `ignore_messages`
         * `expected_classes`
-        * `expected_messages`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `expected_messages` |
+
 
 All other changes require an agent restart, which means restarting the JVM.
 

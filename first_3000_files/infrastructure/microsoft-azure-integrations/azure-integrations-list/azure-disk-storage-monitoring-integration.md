@@ -36,68 +36,13 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Disk Storage metrics [#Azure-disk-storage]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `Composite Disk Read Bytes/sec` | Bytes per second read from disk during monitoring period. Please note, this metric is in preview and is subject to change before becoming generally available. |
+| `Composite Disk Read Operations/sec` | Number of read IOs performed on a disk during monitoring period. Please note, this metric is in preview and is subject to change before becoming generally available. |
+| `Composite Disk Write Bytes/sec` | Bytes per second written to disk during monitoring period. Please note, this metric is in preview and is subject to change before becoming generally available. |
+| `Composite Disk Write Operations/sec` | Number of write IOs performed on a disk during monitoring period. Please note, this metric is in preview and is subject to change before becoming generally available. |
+| `DiskPaidBurstIOPS` | The accumulated operations of burst transactions used for disks with on-demand burst enabled. Emitted on an hour interval. |
 
-  <tbody>
-    <tr>
-      <td>
-        `Composite Disk Read Bytes/sec`
-      </td>
-
-      <td>
-        Bytes per second read from disk during monitoring period. Please note, this metric is in preview and is subject to change before becoming generally available.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Composite Disk Read Operations/sec`
-      </td>
-
-      <td>
-        Number of read IOs performed on a disk during monitoring period. Please note, this metric is in preview and is subject to change before becoming generally available.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Composite Disk Write Bytes/sec`
-      </td>
-
-      <td>
-        Bytes per second written to disk during monitoring period. Please note, this metric is in preview and is subject to change before becoming generally available.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Composite Disk Write Operations/sec`
-      </td>
-
-      <td>
-        Number of write IOs performed on a disk during monitoring period. Please note, this metric is in preview and is subject to change before becoming generally available.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskPaidBurstIOPS`
-      </td>
-
-      <td>
-        The accumulated operations of burst transactions used for disks with on-demand burst enabled. Emitted on an hour interval.
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -22,96 +22,15 @@ To enable this integration, see how to [connect AWS services to New Relic](/docs
 
 This New Relic infrastructure integration collects the following Amazon WorkMail data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `ComponentTypeCreationFailure` | Count | This metric reports the success of a component type creation. |
+| `ComponentTypeUpdateFailure` | Count | This metric reports the success of a component type update. |
+| `EntityCreationFailure` | Count | This metric reports the success of an entity creation. |
+| `EntityUpdateFailure` | Count | This metric reports the success of an entity update. |
+| `EntityDeletionFailure` | Count | This metric reports the success of an entity deletion. |
 
-      <th>
-        Unit
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `ComponentTypeCreationFailure`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        This metric reports the success of a component type creation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ComponentTypeUpdateFailure`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        This metric reports the success of a component type update.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EntityCreationFailure`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        This metric reports the success of an entity creation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EntityUpdateFailure`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        This metric reports the success of an entity update.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EntityDeletionFailure`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        This metric reports the success of an entity deletion.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `WorkspaceId`

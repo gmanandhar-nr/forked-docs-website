@@ -61,55 +61,14 @@ When you use multiple names to report application data, any <InlinePopover type=
 
 You can give each app up to three names, which New Relic uses to aggregate data from most to least specific. You can then use the New Relic UI to view data for each app name individually, as well as in aggregate for overall application performance. When doing so, the order in which you specify the app names is important.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Using multiple names**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Using multiple names** | **Comments** |
+| - | - |
+| Most specific | A unique rollup name. |
+| [Less specific](#example1) | A shared rollup name to aggregate data in the New Relic UI. This provides more general organization. |
+| Optional, [least specific](#example2) | An additional, shared rollup name. If used, this is the most general name New Relic uses to aggregate data into a single app. |
 
-  <tbody>
-    <tr>
-      <td>
-        Most specific
-      </td>
-
-      <td>
-        A unique rollup name.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Less specific](#example1)
-      </td>
-
-      <td>
-        A shared rollup name to aggregate data in the New Relic UI. This provides more general organization.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Optional, [least specific](#example2)
-      </td>
-
-      <td>
-        An additional, shared rollup name. If used, this is the most general name New Relic uses to aggregate data into a single app.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Name app instances via agent config file [#agent]
 

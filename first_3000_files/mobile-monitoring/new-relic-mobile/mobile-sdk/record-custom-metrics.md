@@ -92,137 +92,19 @@ NewRelic.recordMetric(name: String?, category: String?, value: Double = 1.0)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$name` | `string` | Required. The desired name for the custom metric. |
+| `$category` | `string` | Required. The metric category name, either custom or using a predefined [metric category](/docs/mobile-monitoring/new-relic-mobile-android/install-configure/work-android-sdk-api#cat). |
+| `value` | `double` | Required. The value of the metric. |
+| `count` | `int` | Required. The number of times the metric was recorded. |
+| `totalValue` | `double` | Required. The total value of the metric. |
+| `exclusiveValue` | `double` | Required. The exclusive value of the recording; for example, if the total value contains measurements accounted for elsewhere. |
+| `countUnit` | `MetricUnit` | Required. Unit of measurement for the metric count, including `PERCENT`, `BYTES`, `SECONDS`, `BYTES_PER_SECOND`, or `OPERATIONS`. |
+| `valueUnit` | `MetricUnit` | Required. Unit of measurement for the metric value, including `PERCENT`, `BYTES`, `SECONDS`, `BYTES_PER_SECOND`, or `OPERATIONS`. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$name`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The desired name for the custom metric.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$category`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The metric category name, either custom or using a predefined [metric category](/docs/mobile-monitoring/new-relic-mobile-android/install-configure/work-android-sdk-api#cat).
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `value`
-            </td>
-
-            <td>
-              `double`
-            </td>
-
-            <td>
-              Required. The value of the metric.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `count`
-            </td>
-
-            <td>
-              `int`
-            </td>
-
-            <td>
-              Required. The number of times the metric was recorded.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `totalValue`
-            </td>
-
-            <td>
-              `double`
-            </td>
-
-            <td>
-              Required. The total value of the metric.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `exclusiveValue`
-            </td>
-
-            <td>
-              `double`
-            </td>
-
-            <td>
-              Required. The exclusive value of the recording; for example, if the total value contains measurements accounted for elsewhere.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `countUnit`
-            </td>
-
-            <td>
-              `MetricUnit`
-            </td>
-
-            <td>
-              Required. Unit of measurement for the metric count, including `PERCENT`, `BYTES`, `SECONDS`, `BYTES_PER_SECOND`, or `OPERATIONS`.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `valueUnit`
-            </td>
-
-            <td>
-              `MetricUnit`
-            </td>
-
-            <td>
-              Required. Unit of measurement for the metric value, including `PERCENT`, `BYTES`, `SECONDS`, `BYTES_PER_SECOND`, or `OPERATIONS`.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Examples [#examples]
 

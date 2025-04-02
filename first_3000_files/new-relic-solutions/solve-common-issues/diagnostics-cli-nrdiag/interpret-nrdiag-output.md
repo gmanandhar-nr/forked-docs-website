@@ -26,51 +26,14 @@ After executing the Diagnostics CLI from your terminal, you will see the results
 
 The Diagnostics CLI outputs three files:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Diagnostics output files
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| Diagnostics output files | Comments |
+| - | - |
+| `nrdiag-output.zip` | A flattened folder structure with one or more config files and any existing logs from New Relic. Attach this file to your New Relic account. This archive also contains a copy of `nrdiag-output.json`. |
+| `nrdiag-output.json` | Output of the individual tests. Attach this output to your New Relic account. |
+| `nrdiag-filelist.txt` | A list of files found. The `nrdiag-output.zip` file that you attach to your New Relic account automatically includes this list. You do not need to attach this `.txt` file separately. |
 
-  <tbody>
-    <tr>
-      <td>
-        `nrdiag-output.zip`
-      </td>
-
-      <td>
-        A flattened folder structure with one or more config files and any existing logs from New Relic. Attach this file to your New Relic account. This archive also contains a copy of `nrdiag-output.json`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `nrdiag-output.json`
-      </td>
-
-      <td>
-        Output of the individual tests. Attach this output to your New Relic account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `nrdiag-filelist.txt`
-      </td>
-
-      <td>
-        A list of files found. The `nrdiag-output.zip` file that you attach to your New Relic account automatically includes this list. You do not need to attach this `.txt` file separately.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Result status codes [#status-codes]
 

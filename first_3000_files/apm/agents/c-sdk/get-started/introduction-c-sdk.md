@@ -75,83 +75,28 @@ To use our C SDK agent:
 
 If your app meets the C SDK's [compatibility and requirements in Linux environments](/docs/c-agent-compatibility-requirements), you can customize the generic library to communicate with New Relic, then start with [APM](/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm) to monitor your app's performance.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        What you can do
-      </th>
+# Table
 
-      <th>
-        How to do it
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        See the big picture
-      </td>
-
-      <td>
-        * Start with the [APM <DNT>**Summary**</DNT> page](/docs/apm/applications-menu/monitoring/apm-overview-page) to monitor the throughput, response times, errors, memory and CPU usage transactions in your applications and services, then explore other details with additional [APM dashboards](/docs/apm).
+| What you can do | How to do it |
+| - | - |
+| See the big picture | * Start with the [APM **Summary** page](/docs/apm/applications-menu/monitoring/apm-overview-page) to monitor the throughput, response times, errors, memory and CPU usage transactions in your applications and services, then explore other details with additional [APM dashboards](/docs/apm).
         * With [deployment markers](/docs/apm/new-relic-apm/maintenance/record-deployments), see how code changes impact application performance and health.
-        * Use [infrastructure monitoring](/docs/infrastructure/new-relic-infrastructure/getting-started/introduction-new-relic-infrastructure) to view detailed host and server data. When you install the [infrastructure agent](/docs/infrastructure/install-infrastructure-agent/get-started/install-infrastructure-agent-new-relic) and <InlinePopover type="apm"/> on the same host, they automatically detect one another. You can then [view a list of hosts in the APM UI](/docs/infrastructure/new-relic-infrastructure/data-instrumentation/new-relic-apm-data-infrastructure), and filter your hosts by app in our infrastructure monitoring UI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Identify and fix errors
-      </td>
-
-      <td>
-        * Use [error analytics tools](/docs/apm/applications-menu/error-analytics/introduction-error-analytics) to find bottlenecks by seeing time spent on database calls, external system calls, and key blocks of code.
+        * Use [infrastructure monitoring](/docs/infrastructure/new-relic-infrastructure/getting-started/introduction-new-relic-infrastructure) to view detailed host and server data. When you install the [infrastructure agent](/docs/infrastructure/install-infrastructure-agent/get-started/install-infrastructure-agent-new-relic) and  on the same host, they automatically detect one another. You can then [view a list of hosts in the APM UI](/docs/infrastructure/new-relic-infrastructure/data-instrumentation/new-relic-apm-data-infrastructure), and filter your hosts by app in our infrastructure monitoring UI. |
+| Identify and fix errors | * Use [error analytics tools](/docs/apm/applications-menu/error-analytics/introduction-error-analytics) to find bottlenecks by seeing time spent on database calls, external system calls, and key blocks of code.
         * Get [alert notifications](/docs/alerts/new-relic-alerts/getting-started/introduction-new-relic-alerts) for problems or errors before they affect users.
-        * Create [custom dashboards](/docs/insights/use-insights-ui/explore-data/metric-explorer-search-chart-metrics-sent-new-relic-agents) for important metrics.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View logs for your APM and infrastructure data
-      </td>
-
-      <td>
-        You can bring your logs and application's data together to make troubleshooting easier and faster. No need to switch to another UI page.
+        * Create [custom dashboards](/docs/insights/use-insights-ui/explore-data/metric-explorer-search-chart-metrics-sent-new-relic-agents) for important metrics. |
+| View logs for your APM and infrastructure data | You can bring your logs and application's data together to make troubleshooting easier and faster. No need to switch to another UI page.
 
         * With [logs in context](/docs/logs/logs-context/c-sdk-configure-logs-context/), you can see log messages related to your errors and traces directly in your app's UI.
-        * You can also see logs in context of your [infrastructure data](/docs/logs/forward-logs/forward-your-logs-using-infrastructure-agent/), such as Kubernetes clusters.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Analyze business data
-      </td>
-
-      <td>
-        * [Query](/docs/query-your-data/explore-query-data/query-builder/introduction-query-builder) user-related data and improve business processes.
+        * You can also see logs in context of your [infrastructure data](/docs/logs/forward-logs/forward-your-logs-using-infrastructure-agent/), such as Kubernetes clusters. |
+| Analyze business data | * [Query](/docs/query-your-data/explore-query-data/query-builder/introduction-query-builder) user-related data and improve business processes.
         * Send your own custom data to New Relic.
         * Create [custom queries](/docs/query-data/nrql-new-relic-query-language/getting-started/introduction-nrql) of your application data.
-        * Create and share [visual, interactive displays](/docs/insights/use-insights-ui/manage-dashboards/create-edit-insights-dashboards) of your data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        And more!
-      </td>
-
-      <td>
-        * Monitor and troubleshoot your application users' desktop experience with your application, including page load timing problems, JavaScript errors, session trace timelines, etc., by using [<InlinePopover type="browser"/>](/docs/browser/new-relic-browser/getting-started/introduction-new-relic-browser).
+        * Create and share [visual, interactive displays](/docs/insights/use-insights-ui/manage-dashboards/create-edit-insights-dashboards) of your data. |
+| And more! | * Monitor and troubleshoot your application users' desktop experience with your application, including page load timing problems, JavaScript errors, session trace timelines, etc., by using [](/docs/browser/new-relic-browser/getting-started/introduction-new-relic-browser).
         * Use automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints with [synthetic monitoring](/docs/synthetics/new-relic-synthetics/getting-started/introduction-new-relic-synthetics).
-        * Analyze and fine-tune your Android and iOS application performance, troubleshoot crashes, compare multiple versions, and examine the performance of HTTP and other network components with [<InlinePopover type="mobile"/>](/docs/mobile-monitoring/new-relic-mobile/getting-started/introduction-new-relic-mobile).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * Analyze and fine-tune your Android and iOS application performance, troubleshoot crashes, compare multiple versions, and examine the performance of HTTP and other network components with [](/docs/mobile-monitoring/new-relic-mobile/getting-started/introduction-new-relic-mobile). |
+
 
 ## Architecture: C library and daemon [#architecture]
 

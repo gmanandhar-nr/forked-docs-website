@@ -29,20 +29,9 @@ You can install the New Relic <DNT>dbt Cloud</DNT> integration with <DNT>Airflow
 
 Select the option most suitable for your needs by clicking on its tab:
 
-<Tabs>
-  <TabsBar>
-    <TabsBarItem id="1">
-      Install on existing Airflow environment
-    </TabsBarItem>
+{% tabs %}
 
-    <TabsBarItem id="2">
-      Install with Docker Compose
-    </TabsBarItem>
-  </TabsBar>
-
-  <TabsPages>
-    <TabsPageItem id="1">
-      <Steps>
+{% tab title="Install on existing Airflow environment" %} <Steps>
         <Step>
           Ensure you have the Snowflake provider and then clone the `newrelic-dbt-cloud-integration` repository by running these commands:
 
@@ -62,94 +51,23 @@ Select the option most suitable for your needs by clicking on its tab:
         <Step>
           Create the five Airflow connections needed for the DAG. The following table provides the connection name the info to set it up. Note that for all of these, the type is `http`:
 
-          <table>
-              <thead>
-                  <tr>
-                      <th>
-                          Connection name
-                      </th>
-                      <th>
-                          Description
-                      </th>
-                      <th>
-                          Type
-                      </th>
-                      <th>
-                          Host and password
-                      </th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td class="children-nowrap">
-                          `dbt_cloud_admin_api`
-                      </td>
-                       <td>
-                          Allows you to connect to the dbt Cloud admin API with <span class="children-nowrap">`SimpleHttpHook`</span>
+          # Table
 
-                      </td>
-                      <td>
-                          <span class="children-nowrap">`http`</span>
-                      </td>
-                      <td>
-                          **Host:** https://cloud.getdbt.com/api/v2/accounts/ACCOUNT_ID/ (Replace `ACCOUNT_ID` with your dbt Cloud account id)
+| Connection name | Description | Type | Host and password |
+| - | - | - | - |
+| `dbt_cloud_admin_api` | Allows you to connect to the dbt Cloud admin API with `SimpleHttpHook` | `http` | **Host:** https://cloud.getdbt.com/api/v2/accounts/ACCOUNT_ID/ (Replace `ACCOUNT_ID` with your dbt Cloud account id)
 
-                        **Password:** Your [dbt Cloud api token (Profile settings) or a service account token](https://docs.getdbt.com/docs/dbt-cloud-apis/user-tokens#user-tokens)
-                      </td>
-                      <td>
-
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="children-nowrap">
-                          `dbt_cloud_discovery_api`
-                      </td>
-                      <td>
-                          Allows you to connect to the dbt discovery API
-                      </td>
-                      <td>
-                          <span class="children-nowrap">`http`</span>
-                      </td>
-                      <td>
-                        **Host:** https://metadata.cloud.getdbt.com/graphql
+                        **Password:** Your [dbt Cloud api token (Profile settings) or a service account token](https://docs.getdbt.com/docs/dbt-cloud-apis/user-tokens#user-tokens) |  |
+| `dbt_cloud_discovery_api` | Allows you to connect to the dbt discovery API | `http` | **Host:** https://metadata.cloud.getdbt.com/graphql
                   
-                        **Password:** [Dbt Cloud service account token](https://docs.getdbt.com/docs/dbt-cloud-apis/user-tokens#user-tokens) 
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="children-nowrap">
-                          `nr_insights_insert`
-                      </td>
-                      <td>
-                          Allows you to upload custom events to New Relic
-                      </td>
-                      <td>
-                          <span class="children-nowrap">`http`</span>
-                      </td>
-                      <td>
-                          **Host:** https://insights-collector.newrelic.com/v1/accounts/ACCOUNT_ID/events (Replace `ACCOUNT_ID` with your account id) 
+                        **Password:** [Dbt Cloud service account token](https://docs.getdbt.com/docs/dbt-cloud-apis/user-tokens#user-tokens) |
+| `nr_insights_insert` | Allows you to upload custom events to New Relic | `http` | **Host:** https://insights-collector.newrelic.com/v1/accounts/ACCOUNT_ID/events (Replace `ACCOUNT_ID` with your account id) 
 
-                          **Password:** Your [NR insights insert API key](https://one.newrelic.com/admin-portal/api-keys/insightkeys) 
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="children-nowrap">
-                          `nr_insights_query` 
-                      </td>
-                      <td>
-                          Allows you to query New Relic custom events
-                      </td>
-                      <td>
-                          <span class="children-nowrap">`http`</span>
-                      </td>
-                      <td>
-                        **Host:** https://insights-api.newrelic.com/v1/accounts/ACCOUNT_ID/query (Replace `ACCOUNT_ID` with your account id) 
+                          **Password:** Your [NR insights insert API key](https://one.newrelic.com/admin-portal/api-keys/insightkeys) |
+| `nr_insights_query` | Allows you to query New Relic custom events | `http` | **Host:** https://insights-api.newrelic.com/v1/accounts/ACCOUNT_ID/query (Replace `ACCOUNT_ID` with your account id) 
 
-                        **Password:** Your [NR insights query API key](https://one.newrelic.com/admin-portal/api-keys/insightkeys)
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
+                        **Password:** Your [NR insights query API key](https://one.newrelic.com/admin-portal/api-keys/insightkeys) |
+
 
           Once you've configured the four above, you need to configure the Snowflake connection. Snowflake allows you to query for failed test rows. There are [many ways](https://airflow.apache.org/docs/apache-airflow-providers-snowflake/stable/connections/snowflake.html) to configure a snowflake connection. To configure using a private key pair, fill in the following attributes:
 
@@ -165,11 +83,9 @@ Select the option most suitable for your needs by clicking on its tab:
         <Step>
           Complete the setup by enabling the `new_relic_data_pipeline_observability_get_dbt_run_metadata2` DAG.
         </Step>
-      </Steps>
-    </TabsPageItem>
+      </Steps> {% endtab %}
 
-    <TabsPageItem id="2">
-      <Steps>
+{% tab title="Install with Docker Compose" %} <Steps>
         <Step>
           Run the following command to clone the `newrelic-dbt-cloud-integration` repository:
 
@@ -304,10 +220,9 @@ Select the option most suitable for your needs by clicking on its tab:
         <Step>
           Complete the setup by enabling the `new_relic_data_pipeline_observability_get_dbt_run_metadata2` DAG.
         </Step>
-      </Steps>
-    </TabsPageItem>
-  </TabsPages>
-</Tabs>
+      </Steps> {% endtab %}
+
+{% endtabs %}
 
 ## Find your data [#find-data]
 

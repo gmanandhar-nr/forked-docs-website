@@ -98,348 +98,77 @@ New Relic can parse common log formats according to built-in rules, so that you 
       **Results:**
     </DNT>
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "250px" }}>
-            Field
-          </th>
+    # Table
 
-          <th>
-            Definition
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            `type`
-          </td>
-
-          <td>
-            The type of request or connection. Possible values are:
+| Field | Definition |
+| - | - |
+| `type` | The type of request or connection. Possible values are:
 
             * `http`:  HTTP
             * `https`: HTTP over SSL/TLS
             * `h2`: HTTP/2 over SSL/TLS
             * `ws`: WebSockets
-            * `wss`: WebSockets over SSL/TLS
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `elb`
-          </td>
-
-          <td>
-            The resource ID of the load balancer. If you are parsing access log entries, note that resources IDs can contain forward slashes (`/`).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `client_ip`
-          </td>
-
-          <td>
-            The IP address of the requesting client
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `client_port`
-          </td>
-
-          <td>
-            The IP port of the requesting client
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `target_ip`
-          </td>
-
-          <td>
-            The IP address of the target that processed this request.
+            * `wss`: WebSockets over SSL/TLS |
+| `elb` | The resource ID of the load balancer. If you are parsing access log entries, note that resources IDs can contain forward slashes (`/`). |
+| `client_ip` | The IP address of the requesting client |
+| `client_port` | The IP port of the requesting client |
+| `target_ip` | The IP address of the target that processed this request.
 
             * If the client didn't send a full request, the load balancer can't dispatch the request to a target, and this value is set to `-`.
             * If the target is a Lambda function, this value is set to `-`.
-            * If the request is blocked by AWS WAF, this value is set to `-`, and the value of `elb_status_code` is set to `403`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `target_port`
-          </td>
-
-          <td>
-            The IP port of the target that processed this request.
+            * If the request is blocked by AWS WAF, this value is set to `-`, and the value of `elb_status_code` is set to `403`. |
+| `target_port` | The IP port of the target that processed this request.
 
             * If the client didn't send a full request, the load balancer can't dispatch the request to a target, and this value is set to `-`.
             * If the target is a Lambda function, this value is set to `-`.
-            * If the request is blocked by AWS WAF, this value is set to `-`, and the value of `elb_status_code` is set to `403`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `target_port_list`
-          </td>
-
-          <td>
-            The IP address and port of the target that processed this request.
+            * If the request is blocked by AWS WAF, this value is set to `-`, and the value of `elb_status_code` is set to `403`. |
+| `target_port_list` | The IP address and port of the target that processed this request.
 
             * If the client didn't send a full request, the load balancer can't dispatch the request to a target, and this value is set to `-`.
             * If the target is a Lambda function, this value is set to `-`.
-            * If the request is blocked by AWS WAF, this value is set to `-`, and the value of `elb_status_code` is set to `403`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request_processing_time`
-          </td>
-
-          <td>
-            The total time elapsed (in seconds, with millisecond precision) from the time the load balancer received the request until the time it sent it to a target.
+            * If the request is blocked by AWS WAF, this value is set to `-`, and the value of `elb_status_code` is set to `403`. |
+| `request_processing_time` | The total time elapsed (in seconds, with millisecond precision) from the time the load balancer received the request until the time it sent it to a target.
 
             * This value is set to `-1` if the load balancer can't dispatch the request to a target. This can happen if the target closes the connection before the idle timeout or if the client sends a malformed request.
-            * This value can also be set to `-1` if the registered target does not respond before the idle timeout.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `target_processing_time`
-          </td>
-
-          <td>
-            The total time elapsed (in seconds, with millisecond precision) from the time the load balancer sent the request to a target until the target started to send the response headers.
+            * This value can also be set to `-1` if the registered target does not respond before the idle timeout. |
+| `target_processing_time` | The total time elapsed (in seconds, with millisecond precision) from the time the load balancer sent the request to a target until the target started to send the response headers.
 
             * This value is set to `-1` if the load balancer can't dispatch the request to a target. This can happen if the target closes the connection before the idle timeout or if the client sends a malformed request.
-            * This value can also be set to `-1` if the registered target does not respond before the idle timeout.
-          </td>
-        </tr>
+            * This value can also be set to `-1` if the registered target does not respond before the idle timeout. |
+| `response_processing_time` | The total time elapsed (in seconds, with millisecond precision) from the time the load balancer received the response header from the target until it started to send the response to the client. This includes both the queuing time at the load balancer and the connection acquisition time from the load balancer to the client.
 
-        <tr>
-          <td>
-            `response_processing_time`
-          </td>
-
-          <td>
-            The total time elapsed (in seconds, with millisecond precision) from the time the load balancer received the response header from the target until it started to send the response to the client. This includes both the queuing time at the load balancer and the connection acquisition time from the load balancer to the client.
-
-            This value is set to `-1` if the load balancer can't send the request to a target. This can happen if the target closes the connection before the idle timeout or if the client sends a malformed request.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `elb_status_code`
-          </td>
-
-          <td>
-            The status code of the response from the load balancer
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `target_status_code_list`
-          </td>
-
-          <td>
-            The status code of the response from the target. This value is recorded only if a connection was established to the target and the target sent a response. Otherwise, it is set to `-`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `received_bytes`
-          </td>
-
-          <td>
-            The size of the request, in bytes, received from the client (requester). For HTTP requests, this includes the headers. For WebSockets, this is the total number of bytes received from the client on the connection.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `sent_bytes`
-          </td>
-
-          <td>
-            The size of the response, in bytes, sent to the client (requester). For HTTP requests, this includes the headers. For WebSockets, this is the total number of bytes sent to the client on the connection.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request`
-          </td>
-
-          <td>
-            The HTTP request
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `user_agent`
-          </td>
-
-          <td>
-            User-Agent string that identifies the client that originated the request, enclosed in double quotes. The string consists of one or more product identifiers, product/version. If the string is longer than 8 KB, it is truncated.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `ssl_cipher`
-          </td>
-
-          <td>
-            The SSL cipher. This value is set to `-` if the listener is not an HTTPS listener.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `ssl_protocol`
-          </td>
-
-          <td>
-            The SSL protocol. This value is set to `-` if the listener is not an HTTPS listener.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `target_group_arn`
-          </td>
-
-          <td>
-            The Amazon Resource Name (ARN) of the target group
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `trace_id`
-          </td>
-
-          <td>
-            The contents of the `X-Amzn-Trace-Id header`, enclosed in double quotes
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `domain_name`
-          </td>
-
-          <td>
-            The SNI domain provided by the client during the TLS handshake, enclosed in double quotes. This value is set to `-` if the client doesn't support SNI or the domain doesn't match a certificate and the default certificate is presented to the client.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `chosen_cert_arn`
-          </td>
-
-          <td>
-            The ARN of the certificate presented to the client, enclosed in double quotes.
+            This value is set to `-1` if the load balancer can't send the request to a target. This can happen if the target closes the connection before the idle timeout or if the client sends a malformed request. |
+| `elb_status_code` | The status code of the response from the load balancer |
+| `target_status_code_list` | The status code of the response from the target. This value is recorded only if a connection was established to the target and the target sent a response. Otherwise, it is set to `-`. |
+| `received_bytes` | The size of the request, in bytes, received from the client (requester). For HTTP requests, this includes the headers. For WebSockets, this is the total number of bytes received from the client on the connection. |
+| `sent_bytes` | The size of the response, in bytes, sent to the client (requester). For HTTP requests, this includes the headers. For WebSockets, this is the total number of bytes sent to the client on the connection. |
+| `request` | The HTTP request |
+| `user_agent` | User-Agent string that identifies the client that originated the request, enclosed in double quotes. The string consists of one or more product identifiers, product/version. If the string is longer than 8 KB, it is truncated. |
+| `ssl_cipher` | The SSL cipher. This value is set to `-` if the listener is not an HTTPS listener. |
+| `ssl_protocol` | The SSL protocol. This value is set to `-` if the listener is not an HTTPS listener. |
+| `target_group_arn` | The Amazon Resource Name (ARN) of the target group |
+| `trace_id` | The contents of the `X-Amzn-Trace-Id header`, enclosed in double quotes |
+| `domain_name` | The SNI domain provided by the client during the TLS handshake, enclosed in double quotes. This value is set to `-` if the client doesn't support SNI or the domain doesn't match a certificate and the default certificate is presented to the client. |
+| `chosen_cert_arn` | The ARN of the certificate presented to the client, enclosed in double quotes.
 
             * Set to `session-reused` if the session is reused.
-            * Set to `-` if the listener is not an HTTPS listener.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `matched_rule_priority`
-          </td>
-
-          <td>
-            The priority value of the rule that matched the request.
+            * Set to `-` if the listener is not an HTTPS listener. |
+| `matched_rule_priority` | The priority value of the rule that matched the request.
 
             * If a rule matched, this is a value from `1` to `50000`.
             * If no rule matched and the default action was taken, this value is set to `0`.
             * If an error occurs during rules evaluation, it is set to `-1`.
-            * For any other error, it is set to `-`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request_creation_time`
-          </td>
-
-          <td>
-            The time when the load balancer received the request from the client, in ISO 8601 format.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `actions_executed`
-          </td>
-
-          <td>
-            The actions taken when processing the request, enclosed in double quotes. This value is a comma-separated list that can include the values described in `actions_taken`. If no action was taken, such as for a malformed request, this value is set to `-`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `redirect_url`
-          </td>
-
-          <td>
-            The URL of the redirect target for the location header of the HTTP response, enclosed in double quotes. If no redirect actions were taken, this value is set to `-`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `error_reason`
-          </td>
-
-          <td>
-            The error reason code, enclosed in double quotes.
+            * For any other error, it is set to `-`. |
+| `request_creation_time` | The time when the load balancer received the request from the client, in ISO 8601 format. |
+| `actions_executed` | The actions taken when processing the request, enclosed in double quotes. This value is a comma-separated list that can include the values described in `actions_taken`. If no action was taken, such as for a malformed request, this value is set to `-`. |
+| `redirect_url` | The URL of the redirect target for the location header of the HTTP response, enclosed in double quotes. If no redirect actions were taken, this value is set to `-`. |
+| `error_reason` | The error reason code, enclosed in double quotes.
 
             * If the request failed, this is one of the error codes described in Error Reason Codes.
-            * If the actions taken do not include an authenticate action or the target is not a Lambda function, this value is set to `-`.
-          </td>
-        </tr>
+            * If the actions taken do not include an authenticate action or the target is not a Lambda function, this value is set to `-`. |
+| `classification` | Classification. |
+| `classification_reason` | The classification reason. |
 
-        <tr>
-          <td>
-            `classification`
-          </td>
-
-          <td>
-            Classification.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `classification_reason`
-          </td>
-
-          <td>
-            The classification reason.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

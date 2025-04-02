@@ -72,54 +72,22 @@ If the notification settings for your mobile device are correct, but you still d
   >
     Follow the procedure for your mobile device.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "150px" }}>
-            <DNT>
-              **Device**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **To check notification settings:**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Android
-          </td>
-
-          <td>
-            1. From your Android device's <DNT>**Settings**</DNT>, select <DNT>**Sound and notification**</DNT>.
+| **Device** | **To check notification settings:** |
+| - | - |
+| Android | 1. From your Android device's **Settings**, select **Sound and notification**.
             2. Check the settings for sound volume.
-            3. Optional: Enable <DNT>**Also vibrate for calls**</DNT>.
-            4. Check the settings for <DNT>**Interruptions**</DNT>.
-            5. Check the settings for <DNT>**Notification**</DNT>.
-            6. Check the settings for <DNT>**App notifications**</DNT>: Select the New Relic app, then check the settings for <DNT>**Block**</DNT> and <DNT>**Priority**</DNT>.
-          </td>
-        </tr>
+            3. Optional: Enable **Also vibrate for calls**.
+            4. Check the settings for **Interruptions**.
+            5. Check the settings for **Notification**.
+            6. Check the settings for **App notifications**: Select the New Relic app, then check the settings for **Block** and **Priority**. |
+| iOS | 1. Ensure [Do Not Disturb](http://support.apple.com/kb/HT5463) is off: From the iOS **Settings** app, select **Do Not Disturb**, and check that the **Manual** switch is off.
+            2. Ensure the New Relic app is allowed to send notifications: From the iOS **Settings** app, select **Notifications**, and locate the New Relic app from the app list.
+            3. Ensure that the **Allow Notifications** switch is on.
+            4. Ensure that the alert style is set to **Banners** or **Alerts**.
+            5. Optional: To enable audio alerts, set **Sounds** to on. |
 
-        <tr>
-          <td>
-            iOS
-          </td>
-
-          <td>
-            1. Ensure [Do Not Disturb](http://support.apple.com/kb/HT5463) is off: From the iOS <DNT>**Settings**</DNT> app, select <DNT>**Do Not Disturb**</DNT>, and check that the <DNT>**Manual**</DNT> switch is off.
-            2. Ensure the New Relic app is allowed to send notifications: From the iOS <DNT>**Settings**</DNT> app, select <DNT>**Notifications**</DNT>, and locate the New Relic app from the app list.
-            3. Ensure that the <DNT>**Allow Notifications**</DNT> switch is on.
-            4. Ensure that the alert style is set to <DNT>**Banners**</DNT> or <DNT>**Alerts**</DNT>.
-            5. Optional: To enable audio alerts, set <DNT>**Sounds**</DNT> to on.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

@@ -44,69 +44,23 @@ All deprecated API methods have replacement API methods with equivalent function
   If you continue to use an 8.x or earlier version of the API assembly, and your code uses any of the deprecated APIs listed below, you will not get compile-time errors. However, if you then instrument your app with a 9.x version of the agent, the API methods will have no effect, and you will get run-time warning messages in the agent log file.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Removed API
-      </th>
+# Table
 
-      <th>
-        Replacement API
-      </th>
-    </tr>
-  </thead>
+| Removed API | Replacement API |
+| - | - |
+| [`CreateDistributedTracePayload`](/docs/agents/net-agent/net-agent-api/itransaction/#createdistributedtracepayload) | [`InsertDistributedTraceHeaders`](/docs/agents/net-agent/net-agent-api/itransaction/#insertdistributedtraceheaders)
 
-  <tbody>
-    <tr>
-      <td>
-        [`CreateDistributedTracePayload`](/docs/agents/net-agent/net-agent-api/itransaction/#createdistributedtracepayload)
-      </td>
+        Creates [W3C Trace Context](https://www.w3.org/TR/trace-context/) headers as well as New Relic distributed trace headers. |
+| [`AcceptDistributedTracePayload`](/docs/agents/net-agent/net-agent-api/itransaction/#acceptdistributedtracepayload) | [`AcceptDistributedTraceHeaders`](/docs/agents/net-agent/net-agent-api/itransaction/#acceptdistributedtraceheaders)
 
-      <td>
-        [`InsertDistributedTraceHeaders`](/docs/agents/net-agent/net-agent-api/itransaction/#insertdistributedtraceheaders)
+        Accepts [W3C Trace Context](https://www.w3.org/TR/trace-context/) headers as well as New Relic distributed trace headers. |
+| [`AddCustomParameter`](/docs/agents/net-agent/net-agent-api/addcustomparameter-net-agent-api/) | [`AddCustomAttribute`](/docs/agents/net-agent/net-agent-api/itransaction/#addcustomattribute)
 
-        Creates [W3C Trace Context](https://www.w3.org/TR/trace-context/) headers as well as New Relic distributed trace headers.
-      </td>
-    </tr>
+        `AddCustomAttribute` is a method of the [ITransaction](/docs/agents/net-agent/net-agent-api/itransaction/) interface, so a reference to the current transaction is needed to use this API. |
+| `GetBrowserTimingFooter` | [`GetBrowserTimingHeader`](/docs/agents/net-agent/net-agent-api/getbrowsertimingheader-net-agent-api/)
 
-    <tr>
-      <td>
-        [`AcceptDistributedTracePayload`](/docs/agents/net-agent/net-agent-api/itransaction/#acceptdistributedtracepayload)
-      </td>
+        `GetBrowserTimingFooter` has been marked **Obsolete** since agent version 3.x. |
 
-      <td>
-        [`AcceptDistributedTraceHeaders`](/docs/agents/net-agent/net-agent-api/itransaction/#acceptdistributedtraceheaders)
-
-        Accepts [W3C Trace Context](https://www.w3.org/TR/trace-context/) headers as well as New Relic distributed trace headers.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`AddCustomParameter`](/docs/agents/net-agent/net-agent-api/addcustomparameter-net-agent-api/)
-      </td>
-
-      <td>
-        [`AddCustomAttribute`](/docs/agents/net-agent/net-agent-api/itransaction/#addcustomattribute)
-
-        `AddCustomAttribute` is a method of the [ITransaction](/docs/agents/net-agent/net-agent-api/itransaction/) interface, so a reference to the current transaction is needed to use this API.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GetBrowserTimingFooter`
-      </td>
-
-      <td>
-        [`GetBrowserTimingHeader`](/docs/agents/net-agent/net-agent-api/getbrowsertimingheader-net-agent-api/)
-
-        `GetBrowserTimingFooter` has been marked <DNT>**Obsolete**</DNT> since agent version 3.x.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

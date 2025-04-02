@@ -26,45 +26,13 @@ To use the custom instrumentation editor: Go to <DNT>**[one.newrelic.com > All c
 
 To use the custom instrumentation editor, you must meet the following requirements:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Requirement**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Requirement** | **Comments** |
+| - | - |
+| Agent | Java agent version 3.17.0 or higher |
+| Security | Users of [high-security mode](/docs/accounts-partnerships/accounts/security/high-security) must [export their instrumentation](#manual-deploy) and manually import it to their app server. |
 
-  <tbody>
-    <tr>
-      <td>
-        Agent
-      </td>
-
-      <td>
-        Java agent version 3.17.0 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Security
-      </td>
-
-      <td>
-        Users of [high-security mode](/docs/accounts-partnerships/accounts/security/high-security) must [export their instrumentation](#manual-deploy) and manually import it to their app server.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Define custom instrumentation [#defining]
 

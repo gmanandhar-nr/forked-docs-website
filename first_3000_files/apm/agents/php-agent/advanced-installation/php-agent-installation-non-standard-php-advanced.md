@@ -77,79 +77,24 @@ If you do not want to use the install script, you can perform a fully manual ins
 
 If this process doesn't work for you, you can get the correct information from your `phpinfo()` and pass the appropriate settings to your system as environment variables.
 
-<table>
-  <thead>
-    <tr>
-      <th width={125}>
-        phpinfo()
-      </th>
+# Table
 
-      <th>
-        Notes
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `PHPAPI`
-      </td>
-
-      <td>
-        This is labeled `PHP Extension` in the `phpinfo()` header.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ARCH`
-      </td>
-
-      <td>
-        This can be determined by executing `file /path/to/php`.
+| phpinfo() | Notes |
+| - | - |
+| `PHPAPI` | This is labeled `PHP Extension` in the `phpinfo()` header. |
+| `ARCH` | This can be determined by executing `file /path/to/php`.
 
         * If you see a reference to `ELF-32`, then the `ARCH` is `x86`.
-        * If you see a reference to `ELF-64`, then the `ARCH` is `x64`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MODULEDIR`
-      </td>
-
-      <td>
-        This is labeled `extension_dir` in the PHP Core section.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PHPZTS`
-      </td>
-
-      <td>
-        ZTS options apply only to [PHP agent versions 9.19.0.309 and earlier](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-9200310/). ZTS is not available for PHP agent versions 9.20.0.310 or higher.
+        * If you see a reference to `ELF-64`, then the `ARCH` is `x64`. |
+| `MODULEDIR` | This is labeled `extension_dir` in the PHP Core section. |
+| `PHPZTS` | ZTS options apply only to [PHP agent versions 9.19.0.309 and earlier](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-9200310/). ZTS is not available for PHP agent versions 9.20.0.310 or higher.
 
         To determine whether ZTS is compiled in, look for the `Thread Safety` setting at the top of the `phpinfo()` output.
 
         * If this is disabled, then `PHPZTS` is empty.
-        * If this is enabled, then `PHPZTS` is the string `-zts`, which includes a leading hyphen as noted.
-      </td>
-    </tr>
+        * If this is enabled, then `PHPZTS` is the string `-zts`, which includes a leading hyphen as noted. |
+| `NRBASEDIR` | This is the base directory of the New Relic agent installation directory; for example, `/usr/lib/newrelic-php5` or the directory where you extracted the tar file for tarball installations. |
 
-    <tr>
-      <td>
-        `NRBASEDIR`
-      </td>
-
-      <td>
-        This is the base directory of the New Relic agent installation directory; for example, `/usr/lib/newrelic-php5` or the directory where you extracted the tar file for tarball installations.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Use this information to execute the following commands to install the PHP module. Be sure to adjust the example's values to your actual settings.
 

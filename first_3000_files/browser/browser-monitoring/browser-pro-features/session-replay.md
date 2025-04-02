@@ -313,23 +313,11 @@ You can configure session replay settings using our [NerdGraph API](/docs/apis/n
 
 Here's an example mutation and variables to create a new browser application with default settings:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Mutation
-      </th>
+# Table
 
-      <th>
-        Variables
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        ```graphql
+| Mutation | Variables |
+| - | - |
+| ```graphql
         mutation SessionReplayConfigUpdate($guid: EntityGuid!, $settings: AgentApplicationSettingsUpdateInput!) {
           agentApplicationSettingsUpdate(guid: $guid, settings: $settings) {
             browserSettings {
@@ -369,11 +357,7 @@ Here's an example mutation and variables to create a new browser application wit
             }
           }
         }
-        ```
-      </td>
-
-      <td>
-        ```json
+        ``` | ```json
         {
           "sessionReplay": {
             "enabled": true,
@@ -391,11 +375,8 @@ Here's an example mutation and variables to create a new browser application wit
             "errorSamplingRate": 1.11
           }
         }
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 ## Data consumption [#data-consumption]
 

@@ -33,41 +33,13 @@ You can [query and explore your data](/docs/using-new-relic/data/understand-data
 
 You can see two entities for AWS Rekognition on New Relic as mentioned below, one for custom projects and another for Operations.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
+| Entity | Provider |
+| - | - |
+| Rekognition | `cloudwatch-metric-streams` |
+| Rekognition Operation | `cloudwatch-metric-streams` |
 
-  <tbody>
-    <tr>
-      <td>
-        Rekognition
-      </td>
-
-      <td>
-        `cloudwatch-metric-streams`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Rekognition Operation
-      </td>
-
-      <td>
-        `cloudwatch-metric-streams`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to find and use integration data, see how to [understand integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

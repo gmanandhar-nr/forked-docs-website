@@ -24,221 +24,25 @@ When using the time functions from the table below in NRQL queries, the results 
 
 For the functions that have an optional `format` parameter, the accepted values are `string` and `numeric`. The default format value will be a `string` if omitted.
 
-<table>
-  <thead>
-    <tr>
-      <th width={210}>
-        <DNT>
-          **Time-based function**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
+| **Time-based function** | **Description** | **String format** | **Numeric format** |
+| - | - | - | - |
+| `yearOf(attr [, format])` | Returns the year of a timestamp. | `2023` | `2023` |
+| `quarterOf(attr [, format])` | Returns the quarter of the year. The returned value includes both the quarter and the year when formatted as a string. | `Q1 2014` | `1` |
+| `monthOf(attr [, format])` | Returns the month and year of the timestamp when formatted as a string, or the numeric month when formatted as a number. | `July 2014` | `7` |
+| `weekOf(attr)` | Returns the week the timestamp occurred by naming the month and day of that week's Monday. | `Week of January 15` | N/A |
+| `weekdayOf(attr [, format])` | Returns the day of the week of the timestamp. The returned value loops back at the end of the week, allowing you to look at trends by weekday over time. | `Sunday` | `0` |
+| `dateOf(attr)` | Returns the date of the timestamp. The returned value includes month, day and year. | `July 15, 2014` | N/A |
+| `dayOfMonthOf(attr [, format])` | Returns the numeric date within a single month of the timestamp, a value from 1 to 31. The returned value does not include the month. | `23` | `23` |
+| `daysInMonthOf(attr [, format])` | Returns the number of days in the month of the timestamp. | `30` | `30` |
+| `hourOf(attr [, format])` | Returns the hour of the timestamp.
 
-      <th>
-        <DNT>
-          **String format**
-        </DNT>
-      </th>
+        The returned value does not include a prepended 0 for hours between 1am and 9am. This differs from functions and clauses such as `SINCE`, which accept these hours with a 0 at the start. | `6:00`, `12:00`, `18:00` | `6`, `12`, `18` |
+| `minuteOf(attr [, format])` | Returns the minute of the timestamp.
 
-      <th>
-        <DNT>
-          **Numeric format**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+        The returned value does not include a prepended 0 for minutes between 1 and 9. This differs from functions and clauses such as `SINCE`, which accept these minutes with a 0 at the start. | `0`, `6`, `48` | `0`, `6`, `48` |
 
-  <tbody>
-    <tr>
-      <td nowrap>
-        `yearOf(attr [, format])`
-      </td>
-
-      <td>
-        Returns the year of a timestamp.
-      </td>
-
-      <td nowrap>
-        `2023`
-      </td>
-
-      <td nowrap>
-        `2023`
-      </td>
-    </tr>
-
-    <tr>
-      <td nowrap>
-        `quarterOf(attr [, format])`
-      </td>
-
-      <td>
-        Returns the quarter of the year. The returned value includes both the quarter and the year when formatted as a string.
-      </td>
-
-      <td nowrap>
-        `Q1 2014`
-      </td>
-
-      <td nowrap>
-        `1`
-      </td>
-    </tr>
-
-    <tr>
-      <td nowrap>
-        `monthOf(attr [, format])`
-      </td>
-
-      <td>
-        Returns the month and year of the timestamp when formatted as a string, or the numeric month when formatted as a number.
-      </td>
-
-      <td nowrap>
-        `July 2014`
-      </td>
-
-      <td nowrap>
-        `7`
-      </td>
-    </tr>
-
-    <tr>
-      <td nowrap>
-        `weekOf(attr)`
-      </td>
-
-      <td>
-        Returns the week the timestamp occurred by naming the month and day of that week's Monday.
-      </td>
-
-      <td nowrap>
-        `Week of January 15`
-      </td>
-
-      <td nowrap>
-        N/A
-      </td>
-    </tr>
-
-    <tr>
-      <td nowrap>
-        `weekdayOf(attr [, format])`
-      </td>
-
-      <td>
-        Returns the day of the week of the timestamp. The returned value loops back at the end of the week, allowing you to look at trends by weekday over time.
-      </td>
-
-      <td nowrap>
-        `Sunday`
-      </td>
-
-      <td nowrap>
-        `0`
-      </td>
-    </tr>
-
-    <tr>
-      <td nowrap>
-        `dateOf(attr)`
-      </td>
-
-      <td>
-        Returns the date of the timestamp. The returned value includes month, day and year.
-      </td>
-
-      <td nowrap>
-        `July 15, 2014`
-      </td>
-
-      <td nowrap>
-        N/A
-      </td>
-    </tr>
-
-    <tr>
-      <td nowrap>
-        `dayOfMonthOf(attr [, format])`
-      </td>
-
-      <td>
-        Returns the numeric date within a single month of the timestamp, a value from 1 to 31. The returned value does not include the month.
-      </td>
-
-      <td nowrap>
-        `23`
-      </td>
-
-      <td nowrap>
-        `23`
-      </td>
-    </tr>
-
-    <tr>
-      <td nowrap>
-        `daysInMonthOf(attr [, format])`
-      </td>
-
-      <td>
-        Returns the number of days in the month of the timestamp.
-      </td>
-
-      <td nowrap>
-        `30`
-      </td>
-
-      <td nowrap>
-        `30`
-      </td>
-    </tr>
-
-    <tr>
-      <td nowrap>
-        `hourOf(attr [, format])`
-      </td>
-
-      <td>
-        Returns the hour of the timestamp.
-
-        The returned value does not include a prepended 0 for hours between 1am and 9am. This differs from functions and clauses such as `SINCE`, which accept these hours with a 0 at the start.
-      </td>
-
-      <td nowrap>
-        `6:00`, `12:00`, `18:00`
-      </td>
-
-      <td nowrap>
-        `6`, `12`, `18`
-      </td>
-    </tr>
-
-    <tr>
-      <td nowrap>
-        `minuteOf(attr [, format])`
-      </td>
-
-      <td>
-        Returns the minute of the timestamp.
-
-        The returned value does not include a prepended 0 for minutes between 1 and 9. This differs from functions and clauses such as `SINCE`, which accept these minutes with a 0 at the start.
-      </td>
-
-      <td nowrap>
-        `0`, `6`, `48`
-      </td>
-
-      <td nowrap>
-        `0`, `6`, `48`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Facet your NRQL query time range [#cohorts]
 

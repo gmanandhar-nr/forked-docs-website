@@ -89,81 +89,15 @@ Whether you're adding your visualization to a new dashboard or an existing one, 
 
 Your custom visualization JSON object represents a dashboard widget and consists of the following fields:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Field
-      </th>
+# Table
 
-      <th>
-        Type
-      </th>
+| Field | Type | Description |
+| - | - | - |
+| `title` | String | Title for your dashboard widget |
+| `visualization` | JSON | The metadata for your visualization |
+| `visualization.id` | String | Your visualization's ID |
+| `rawConfiguration` | JSON | A full configuration of your widget |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `title`
-      </td>
-
-      <td>
-        String
-      </td>
-
-      <td>
-        Title for your dashboard widget
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `visualization`
-      </td>
-
-      <td>
-        JSON
-      </td>
-
-      <td>
-        The metadata for your visualization
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `visualization.id`
-      </td>
-
-      <td>
-        String
-      </td>
-
-      <td>
-        Your visualization's ID
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `rawConfiguration`
-      </td>
-
-      <td>
-        JSON
-      </td>
-
-      <td>
-        A full configuration of your widget
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="tip">
   You can also add other types of widgets to dashboards with the steps in this guide, but the fields described here are specific to custom visualization widgets. For other widget types, you need to supply different data.

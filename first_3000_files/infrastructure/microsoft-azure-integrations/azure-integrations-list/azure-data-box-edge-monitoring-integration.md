@@ -36,138 +36,20 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Data Box Edge metrics [#Azure-data-box-edge]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `AvailableCapacity` | The available capacity in bytes during the reporting period. |
+| `BytesUploadedToCloud` | The total number of bytes that is uploaded to Azure from a device during the reporting period. |
+| `BytesUploadedToCloudPerShare` | The total number of bytes that is uploaded to Azure from a share during the reporting period. |
+| `CloudReadThroughput` | The cloud download throughput to Azure during the reporting period. |
+| `CloudReadThroughputPerShare` | The download throughput to Azure from a share during the reporting period. |
+| `CloudUploadThroughput` | The cloud upload throughput to Azure during the reporting period. |
+| `CloudUploadThroughputPerShare` | The upload throughput to Azure from a share during the reporting period. |
+| `HyperVMemoryUtilization` | Amount of RAM in use. |
+| `HyperVVirtualProcessorUtilization` | Percent CPU usage. |
+| `NICReadThroughput` | The read throughput of the Network interface on the device in the reporting period for all volumes in the gateway. |
+| `NICWriteThroughput` | The write throughput of the Network interface on the device in the reporting period for all volumes in the gateway. |
+| `TotalCapacity` | The total capacity of the device in bytes during the reporting period. |
 
-  <tbody>
-    <tr>
-      <td>
-        `AvailableCapacity`
-      </td>
-
-      <td>
-        The available capacity in bytes during the reporting period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesUploadedToCloud`
-      </td>
-
-      <td>
-        The total number of bytes that is uploaded to Azure from a device during the reporting period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesUploadedToCloudPerShare`
-      </td>
-
-      <td>
-        The total number of bytes that is uploaded to Azure from a share during the reporting period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CloudReadThroughput`
-      </td>
-
-      <td>
-        The cloud download throughput to Azure during the reporting period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CloudReadThroughputPerShare`
-      </td>
-
-      <td>
-        The download throughput to Azure from a share during the reporting period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CloudUploadThroughput`
-      </td>
-
-      <td>
-        The cloud upload throughput to Azure during the reporting period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CloudUploadThroughputPerShare`
-      </td>
-
-      <td>
-        The upload throughput to Azure from a share during the reporting period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HyperVMemoryUtilization`
-      </td>
-
-      <td>
-        Amount of RAM in use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HyperVVirtualProcessorUtilization`
-      </td>
-
-      <td>
-        Percent CPU usage.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NICReadThroughput`
-      </td>
-
-      <td>
-        The read throughput of the Network interface on the device in the reporting period for all volumes in the gateway.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NICWriteThroughput`
-      </td>
-
-      <td>
-        The write throughput of the Network interface on the device in the reporting period for all volumes in the gateway.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalCapacity`
-      </td>
-
-      <td>
-        The total capacity of the device in bytes during the reporting period.
-      </td>
-    </tr>
-  </tbody>
-</table>

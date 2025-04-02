@@ -21,241 +21,33 @@ This page describes how New Relic handles OpenTelemetry spans it receives via th
 
 New Relic maps OTLP spans to the `Span` data type. The table below describes how fields from the [trace proto message definitions](https://github.com/open-telemetry/opentelemetry-proto/blob/main/opentelemetry/proto/trace/v1/trace.proto) are interpreted:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        OTLP proto field
-      </th>
+# Table
 
-      <th>
-        New Relic `Span` field
-      </th>
-    </tr>
-  </thead>
+| OTLP proto field | New Relic `Span` field |
+| - | - |
+| `ResourceSpans.Resource.attributes` | Each key/value is an attribute on the `Span` **[1]** |
+| `ScopeSpans.InstrumentationScope.name` | `otel.library.name` |
+| `ScopeSpans.InstrumentationScope.version` | `otel.library.version` |
+| `ScopeSpans.InstrumentationScope.attributes` | Each key/value is an attribute on the `Span` **[1]** |
+| `Span.trace_id` | `trace.id` |
+| `Span.span_id` | `id` |
+| `Span.trace_state` | `w3c.tracestate` |
+| `Span.parent_span_id` | `parent.id` |
+| `Span.name` | `name` |
+| `Span.kind` | `span.kind` |
+| `Span.start_time_unix_nano` | `timestamp` |
+| `Span.end_time_unix_nano` | `duration.ms` (computed with `Span.start_time_unix_nano`) |
+| `Span.attributes` | Each key/value is an attribute on the `Span` **[1]** |
+| `Span.dropped_attribute_count` | `otel.dropped_attributes_count` |
+| `Span.events` | Each event is recorded as a `SpanEvent` with `span.id` / `trace.id` referring to source span, count stored as `nr.spanEventCount` |
+| `Span.events[*].time_unix_nano` | Stored as `timestamp` on `SpanEvent` |
+| `Span.events[*].name` | Stored as `name` on `SpanEvent` |
+| `Span.events[*].attributes` | Each key/value is stored as an attribute on `SpanEvent` |
+| `Span.events[*].dropped_attributes_count` | Stored as `ote.dropped_Attributes_count` on `SpanEvent` |
+| `Span.dropped_events_count` | `otel.dropped_events_count` |
+| `Span.status.message` | `otel.status_description` |
+| `Span.status.code` | `otel.status_code` |
 
-  <tbody>
-    <tr>
-      <td>
-        `ResourceSpans.Resource.attributes`
-      </td>
-
-      <td>
-        Each key/value is an attribute on the `Span` **[1]**
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScopeSpans.InstrumentationScope.name`
-      </td>
-
-      <td>
-        `otel.library.name`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScopeSpans.InstrumentationScope.version`
-      </td>
-
-      <td>
-        `otel.library.version`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScopeSpans.InstrumentationScope.attributes`
-      </td>
-
-      <td>
-        Each key/value is an attribute on the `Span` **[1]**
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.trace_id`
-      </td>
-
-      <td>
-        `trace.id`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.span_id`
-      </td>
-
-      <td>
-        `id`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.trace_state`
-      </td>
-
-      <td>
-        `w3c.tracestate`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.parent_span_id`
-      </td>
-
-      <td>
-        `parent.id`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.name`
-      </td>
-
-      <td>
-        `name`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.kind`
-      </td>
-
-      <td>
-        `span.kind`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.start_time_unix_nano`
-      </td>
-
-      <td>
-        `timestamp`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.end_time_unix_nano`
-      </td>
-
-      <td>
-        `duration.ms` (computed with `Span.start_time_unix_nano`)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.attributes`
-      </td>
-
-      <td>
-        Each key/value is an attribute on the `Span` **[1]**
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.dropped_attribute_count`
-      </td>
-
-      <td>
-        `otel.dropped_attributes_count`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.events`
-      </td>
-
-      <td>
-        Each event is recorded as a `SpanEvent` with `span.id` / `trace.id` referring to source span, count stored as `nr.spanEventCount`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.events[*].time_unix_nano`
-      </td>
-
-      <td>
-        Stored as `timestamp` on `SpanEvent`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.events[*].name`
-      </td>
-
-      <td>
-        Stored as `name` on `SpanEvent`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.events[*].attributes`
-      </td>
-
-      <td>
-        Each key/value is stored as an attribute on `SpanEvent`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.events[*].dropped_attributes_count`
-      </td>
-
-      <td>
-        Stored as `ote.dropped_Attributes_count` on `SpanEvent`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.dropped_events_count`
-      </td>
-
-      <td>
-        `otel.dropped_events_count`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.status.message`
-      </td>
-
-      <td>
-        `otel.status_description`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Span.status.code`
-      </td>
-
-      <td>
-        `otel.status_code`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Table footnotes [#otlp-mapping-notes]
 

@@ -65,65 +65,28 @@ With the `persist` flag, the attribute can also be in stored in the browser, so 
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `name`
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
+        _string_ | Required. Name of the attribute. Appears as column in the `PageView` event. It will also appear as a column in the `PageAction` event if you are using it.
 
-        _string_
-      </td>
+        Avoid using [reserved NRQL words](/docs/insights/new-relic-insights/adding-querying-data/inserting-custom-events-attributes-insights-javascript-api#limits) when you name the attribute/value. |
+| `value`
 
-      <td>
-        Required. Name of the attribute. Appears as column in the `PageView` event. It will also appear as a column in the `PageAction` event if you are using it.
-
-        Avoid using [reserved NRQL words](/docs/insights/new-relic-insights/adding-querying-data/inserting-custom-events-attributes-insights-javascript-api#limits) when you name the attribute/value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `value`
-
-        _string_ OR _integer_ OR _boolean_ OR _null_
-      </td>
-
-      <td>
-        Required. Value of the attribute. Appears as the value in the named attribute column in the `PageView` event. It will appear as a column in the `PageAction` event if you are using it. Custom attribute values cannot be complex objects, only simple types such as Strings, Integers and Booleans.
+        _string_ OR _integer_ OR _boolean_ OR _null_ | Required. Value of the attribute. Appears as the value in the named attribute column in the `PageView` event. It will appear as a column in the `PageAction` event if you are using it. Custom attribute values cannot be complex objects, only simple types such as Strings, Integers and Booleans.
 
         Passing a `null` value unsets any existing attribute of the same name.
 
-        Avoid using [reserved NRQL words](/docs/insights/new-relic-insights/adding-querying-data/inserting-custom-events-attributes-insights-javascript-api#limits) when you name the attribute/value.
-      </td>
-    </tr>
+        Avoid using [reserved NRQL words](/docs/insights/new-relic-insights/adding-querying-data/inserting-custom-events-attributes-insights-javascript-api#limits) when you name the attribute/value. |
+| `persist`
 
-    <tr>
-      <td>
-        `persist`
+        _boolean_ | Optional. If set to `true`, the name-value pair will also be set into the browser's storage API. Then on the following instrumented pages that load within the same session, the pair will be re-applied as a custom attribute.
 
-        _boolean_
-      </td>
+        Defaults to `false`. |
 
-      <td>
-        Optional. If set to `true`, the name-value pair will also be set into the browser's storage API. Then on the following instrumented pages that load within the same session, the pair will be re-applied as a custom attribute.
-
-        Defaults to `false`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

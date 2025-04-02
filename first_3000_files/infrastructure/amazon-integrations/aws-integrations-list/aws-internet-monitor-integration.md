@@ -28,219 +28,24 @@ Metrics data from this integration is attached to the `Metric` data type. To see
 
 ## Metric data [#metric-data]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `TrafficMonitoredPercent` | percentage | Percentage of total application internet traffic for this monitor. |
+| `CityNetworksFor100PercentTraffic` | percentage | The number that you should set your city-networks maximum limit to if you want to monitor 100% of your application internet traffic in Internet Monitor. |
+| `CityNetworksFor99PercentTraffic` | percentage | The number that you should set your city-networks maximum limit to if you want to monitor 99% of your application internet traffic in Internet Monitor. |
+| `CityNetworksFor95PercentTraffic` | percentage | The number that you should set your city-networks maximum limit to if you want to monitor 95% of your application internet traffic in Internet Monitor. |
+| `CityNetworksFor90PercentTraffic` | percentage | The number that you should set your city-networks maximum limit to if you want to monitor 90% of your application internet traffic in Internet Monitor. |
+| `CityNetworksFor75PercentTraffic` | percentage | The number that you should set your city-networks maximum limit to if you want to monitor 75% of your application internet traffic in Internet Monitor. |
+| `CityNetworksFor50PercentTraffic` | percentage | The number that you should set your city-networks maximum limit to if you want to monitor 50% of your application internet traffic in Internet Monitor. |
+| `CityNetworksFor25PercentTraffic` | percentage | The number that you should set your city-networks maximum limit to if you want to monitor 25% of your application internet traffic in Internet Monitor. |
+| `AvailabilityScore` | percentage | Traffic that is not seeing reachability anomalies. |
+| `PerformanceScore` | percentage | Traffic that is not seeing latency anomalies. |
+| `BytesIn` | count | Bytes received. |
+| `BytesOut` | count | Bytes sent. |
+| `RoundTripTime` | ms | How long a request takes. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `TrafficMonitoredPercent`
-      </td>
-
-      <td>
-        percentage  
-
-      </td>
-
-      <td>
-        Percentage of total application internet traffic for this monitor.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CityNetworksFor100PercentTraffic`
-      </td>
-
-      <td>
-        percentage  
-
-      </td>
-
-      <td>
-        The number that you should set your city-networks maximum limit to if you want to monitor 100% of your application internet traffic in Internet Monitor.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CityNetworksFor99PercentTraffic`
-      </td>
-
-      <td>
-        percentage  
-
-      </td>
-
-      <td>
-        The number that you should set your city-networks maximum limit to if you want to monitor 99% of your application internet traffic in Internet Monitor.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CityNetworksFor95PercentTraffic`
-      </td>
-
-      <td>
-        percentage  
-
-      </td>
-
-      <td>
-        The number that you should set your city-networks maximum limit to if you want to monitor 95% of your application internet traffic in Internet Monitor.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CityNetworksFor90PercentTraffic`
-      </td>
-
-      <td>
-        percentage  
-
-      </td>
-
-      <td>
-        The number that you should set your city-networks maximum limit to if you want to monitor 90% of your application internet traffic in Internet Monitor.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CityNetworksFor75PercentTraffic`
-      </td>
-
-      <td>
-        percentage  
-
-      </td>
-
-      <td>
-        The number that you should set your city-networks maximum limit to if you want to monitor 75% of your application internet traffic in Internet Monitor.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CityNetworksFor50PercentTraffic`
-      </td>
-
-      <td>
-        percentage  
-
-      </td>
-
-      <td>
-        The number that you should set your city-networks maximum limit to if you want to monitor 50% of your application internet traffic in Internet Monitor.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CityNetworksFor25PercentTraffic`
-      </td>
-
-      <td>
-        percentage  
-
-      </td>
-
-      <td>
-        The number that you should set your city-networks maximum limit to if you want to monitor 25% of your application internet traffic in Internet Monitor.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AvailabilityScore`
-      </td>
-
-      <td>
-        percentage  
-
-      </td>
-
-      <td>
-        Traffic that is not seeing reachability anomalies.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PerformanceScore`
-      </td>
-
-      <td>
-        percentage
-      </td>
-
-      <td>
-        Traffic that is not seeing latency anomalies.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesIn`
-      </td>
-
-      <td>
-        count  
-
-      </td>
-
-      <td>
-        Bytes received.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesOut`
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        Bytes sent.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RoundTripTime`
-      </td>
-
-      <td>
-        ms
-      </td>
-
-      <td>
-        How long a request takes.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Logs data [#logs-data]
 

@@ -26,161 +26,20 @@ Data from this integration is attached to the `Metric` data type. To find this d
 
 This New Relic infrastructure integration collects the following Amazon Transcribe data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `TotalRequestCount` | count | The number of transactions. |
+| `SuccessfulRequestCount` | count | The number of successful requests. |
+| `SyncServerErrorCount` | count | The number of server errors. |
+| `SyncUserErrorCount` | count | The number of user errors, such as parameters, files, permissions that aren't valid, and throttling errors. |
+| `ThrottledCount` | count | The number of requests that return a `LimitExceededException` resulting from an exceeded transaction rate quota. |
+| `LimitExceededCount` | count | The number of requests that return a `LimitExceededException` resulting from an exceeded non-rate quota. |
+| `AsyncUserErrorCount` | count | The number of asynchronous (backend) user errors, such as: given audio format does not match that detected, invalid sample rate, or customer Amazon S3 access error. |
+| `AsyncServerErrorCount` | count | The number of asynchronous (backend) server errors or, more specifically, automatic speech recognition (ASR) processing errors. |
+| `AudioDurationTime` | count | The length, in seconds, of an audio or video file. |
 
-      <th>
-        Unit
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `TotalRequestCount`
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of transactions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SuccessfulRequestCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of successful requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SyncServerErrorCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of server errors.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SyncUserErrorCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of user errors, such as parameters, files, permissions that aren't valid, and throttling errors.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ThrottledCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of requests that return a `LimitExceededException` resulting from an exceeded transaction rate quota.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LimitExceededCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of requests that return a `LimitExceededException` resulting from an exceeded non-rate quota.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AsyncUserErrorCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of asynchronous (backend) user errors, such as: given audio format does not match that detected, invalid sample rate, or customer Amazon S3 access error.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AsyncServerErrorCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of asynchronous (backend) server errors or, more specifically, automatic speech recognition (ASR) processing errors.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AudioDurationTime`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The length, in seconds, of an audio or video file.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has these dimensions: `Domain`, `ServiceType`, `Operation` and `LanguageCode`.
 

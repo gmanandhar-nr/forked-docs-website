@@ -30,45 +30,17 @@ This endpoint takes in a single input, a callback, which is used to register err
 
 ## Parameters for `set_error_group_callback` [#parameters-set-error-group-callback]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `callback`
 
-  <tbody>
-    <tr>
-      <td>
-        `callback`
+        _callable function_ | Required. The callback function you want to define. Use `None` to unset. |
+| `application`
 
-        _callable function_
-      </td>
+        _Application Instance_ | Optional. If an application instance is not provided, the function will check for the activated application instance. |
 
-      <td>
-        Required. The callback function you want to define. Use `None` to unset.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `application`
-
-        _Application Instance_
-      </td>
-
-      <td>
-        Optional. If an application instance is not provided, the function will check for the activated application instance.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Parameters for customer defined callback function [#parameters-customer-defined-callback-function]
 

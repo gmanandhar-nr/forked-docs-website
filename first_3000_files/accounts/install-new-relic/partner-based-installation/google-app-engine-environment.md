@@ -25,97 +25,18 @@ Some agents allow you to deploy to a standard Docker image using [GAE flexible i
 
 To monitor your applications that reside in a Google App Engine flexible environment, follow the installation instructions for the <InlinePopover type="apm"/> agent that you use:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        <DNT>
-          **APM agent**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **GAE flexible requirements**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **APM agent** | **GAE flexible requirements** |
+| - | - |
+| Go | Our Go agent can run in an App Engine flexible environment that deploys to a Docker image with a custom runtime. For more information, see the [GAE flexible installation example for the Go agent](/docs/agents/go-agent/get-started/install-new-relic-go-agent-gae-flexible-environment). |
+| Java | Our Java agent can run in an App Engine flexible environment that deploys to a Docker image with a custom runtime. For more information, see the [GAE flexible installation example for the Java agent](/docs/agents/java-agent/additional-installation/google-app-engine-flexible-installation-java). |
+| .NET | Currently not supported. |
+| Node.js | Our Node.js agent can be deployed to a prebuilt Docker image by using GAE's [native support](#native-mode) or to a Docker image with a custom runtime. No special configuration is required. For more information, see the [GAE flexible installation example for the Node.js agent](/docs/agents/nodejs-agent/hosting-services/install-new-relic-nodejs-agent-gae-flexible-environment). |
+| PHP | Our PHP agent can run in an App Engine flexible environment that deploys to a Docker image using a custom runtime. For more information, see the [GAE flexible installation example for the PHP agent](/docs/agents/php-agent/advanced-installation/install-new-relic-php-agent-gae-flexible-environment). |
+| Python | Our Python agent can be deployed to a prebuilt Docker image using GAE's [native support](#native-mode) or to a Docker image with a custom runtime. For more information, see the [GAE flexible installation example for the Python agent](/docs/agents/python-agent/hosting-services/install-new-relic-python-agent-gae-flexible-environment). |
+| Ruby | Our Ruby agent can be deployed to a prebuilt Docker image using GAE's [native support](#native-mode) or to a Docker image with a custom runtime. For more information, see the [GAE flexible installation example for the Ruby agent](/docs/agents/ruby-agent/installation/install-new-relic-ruby-agent-gae-flexible-environment). |
 
-  <tbody>
-    <tr>
-      <td id="go">
-        Go
-      </td>
-
-      <td>
-        Our Go agent can run in an App Engine flexible environment that deploys to a Docker image with a custom runtime. For more information, see the [GAE flexible installation example for the Go agent](/docs/agents/go-agent/get-started/install-new-relic-go-agent-gae-flexible-environment).
-      </td>
-    </tr>
-
-    <tr>
-      <td id="java">
-        Java
-      </td>
-
-      <td>
-        Our Java agent can run in an App Engine flexible environment that deploys to a Docker image with a custom runtime. For more information, see the [GAE flexible installation example for the Java agent](/docs/agents/java-agent/additional-installation/google-app-engine-flexible-installation-java).
-      </td>
-    </tr>
-
-    <tr>
-      <td id="net">
-        .NET
-      </td>
-
-      <td>
-        Currently not supported.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="nodejs">
-        Node.js
-      </td>
-
-      <td>
-        Our Node.js agent can be deployed to a prebuilt Docker image by using GAE's [native support](#native-mode) or to a Docker image with a custom runtime. No special configuration is required. For more information, see the [GAE flexible installation example for the Node.js agent](/docs/agents/nodejs-agent/hosting-services/install-new-relic-nodejs-agent-gae-flexible-environment).
-      </td>
-    </tr>
-
-    <tr>
-      <td id="php">
-        PHP
-      </td>
-
-      <td>
-        Our PHP agent can run in an App Engine flexible environment that deploys to a Docker image using a custom runtime. For more information, see the [GAE flexible installation example for the PHP agent](/docs/agents/php-agent/advanced-installation/install-new-relic-php-agent-gae-flexible-environment).
-      </td>
-    </tr>
-
-    <tr>
-      <td id="python">
-        Python
-      </td>
-
-      <td>
-        Our Python agent can be deployed to a prebuilt Docker image using GAE's [native support](#native-mode) or to a Docker image with a custom runtime. For more information, see the [GAE flexible installation example for the Python agent](/docs/agents/python-agent/hosting-services/install-new-relic-python-agent-gae-flexible-environment).
-      </td>
-    </tr>
-
-    <tr>
-      <td id="ruby">
-        <DNT>
-          Ruby
-        </DNT>
-      </td>
-
-      <td>
-        Our <DNT>Ruby</DNT> agent can be deployed to a prebuilt Docker image using GAE's [native support](#native-mode) or to a <DNT>Docker</DNT> image with a custom runtime. For more information, see the [GAE flexible installation example for the <DNT>Ruby</DNT> agent](/docs/agents/ruby-agent/installation/install-new-relic-ruby-agent-gae-flexible-environment).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Infrastructure integration for Google App Engine [#gae-integration]
 

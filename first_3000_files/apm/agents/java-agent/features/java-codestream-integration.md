@@ -22,59 +22,13 @@ First, [install](/docs/codestream/start-here/install-codestream) the New Relic C
 
 The Java agent reports and attaches the following attributes to spans produced by your application:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Name**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
+| **Name** | **Description** | **Example** |
+| - | - | - |
+| `code.function` | The name of the instrumented function (Java method). | retrieveData |
+| `code.namespace` | The namespace (fully qualified class name) in which `code.function` is defined | com.example.MyService |
 
-      <th>
-        <DNT>
-          **Example**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `code.function`
-      </td>
-
-      <td>
-        The name of the instrumented function (Java method).
-      </td>
-
-      <td>
-        retrieveData
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.namespace`
-      </td>
-
-      <td>
-        The namespace (fully qualified class name) in which `code.function` is defined
-      </td>
-
-      <td>
-        com.example.MyService
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="important">
   Spans created using the API method `NewRelic.getAgent().getTransaction().startSegment()` will not contain these attributes. To create a span that contain these attributes annotate a method with `@Trace` or use XML instrumentation.

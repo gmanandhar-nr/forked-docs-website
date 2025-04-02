@@ -442,231 +442,32 @@ The PostgreSQL integration collects the following metrics. Some metric names are
     id="databaseSample"
     title="PostgresqlDatabaseSample metrics"
   >
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "350px" }}>
-            PostgreSQLDatabaseSample attributes
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
+| PostgreSQLDatabaseSample attributes | Description |
+| - | - |
+| `db.connections` | Number of backends currently connected to this database. |
+| `db.maxconnections` | The maximum number of concurrent connections to the database server. |
+| `db.commitsPerSecond` | Committed transactions per second. |
+| `db.rollbacksPerSecond` | Transactions rolled back per second. |
+| `db.readsPerSecond` | Number of disk blocks read in this database per second. |
+| `db.bufferHitsPerSecond` | Number of times disk blocks were found already in the buffer cache, so that a read was not necessary. This only includes hits in the PostgreSQL buffer cache, not the operating system's file system cache. |
+| `db.rowsReturnedPerSecond` | Rows returned by queries per second. |
+| `db.rowsFetchedPerSecond` | Rows fetched by queries per second. |
+| `db.rowsInsertedPerSecond` | Rows inserted per second. |
+| `db.rowsUpdatedPerSecond` | Rows updated per second. |
+| `db.rowsDeletedPerSecond` | Rows deleted per second. |
+| `db.conflicts.tablespacePerSecond` | Number of queries in this database that have been canceled due to dropped tablespaces. |
+| `db.conflicts.locksPerSecond` | Number of queries in this database that have been canceled due to lock timeouts. |
+| `db.conflicts.snapshotPerSecond` | Number of queries in this database that have been canceled due to old snapshots. |
+| `db.conflicts.bufferpinPerSecond` | Number of queries in this database that have been canceled due to pinned buffers. |
+| `db.conflicts.deadlockPerSecond` | Number of queries in this database that have been canceled due to deadlocks. |
+| `db.tempFilesCreatedPerSecond` | Number of temporary files created by queries in this database. All temporary files are counted, regardless of why the temporary file was created (for example, sorting or hashing), and regardless of the `log_temp_files` setting. |
+| `db.tempWrittenInBytesPerSecond` | Total amount of data written to temporary files by queries in this database. All temporary files are counted, regardless of why the temporary file was created, and regardless of the `log_temp_files` setting. |
+| `db.deadlocksPerSecond` | Number of deadlocks detected in this database. |
+| `db.readTimeInMillisecondsPerSecond` | Time spent reading data file blocks by backends in this database, in milliseconds. |
+| `db.writeTimeInMillisecondsPerSecond` | Time spent writing data file blocks by backends in this database, in milliseconds. |
 
-      <tbody>
-        <tr>
-          <td>
-            `db.connections`
-          </td>
-
-          <td>
-            Number of backends currently connected to this database.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.maxconnections`
-          </td>
-
-          <td>
-            The maximum number of concurrent connections to the database server.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.commitsPerSecond`
-          </td>
-
-          <td>
-            Committed transactions per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.rollbacksPerSecond`
-          </td>
-
-          <td>
-            Transactions rolled back per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.readsPerSecond`
-          </td>
-
-          <td>
-            Number of disk blocks read in this database per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.bufferHitsPerSecond`
-          </td>
-
-          <td>
-            Number of times disk blocks were found already in the buffer cache, so that a read was not necessary. This only includes hits in the PostgreSQL buffer cache, not the operating system's file system cache.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.rowsReturnedPerSecond`
-          </td>
-
-          <td>
-            Rows returned by queries per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.rowsFetchedPerSecond`
-          </td>
-
-          <td>
-            Rows fetched by queries per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.rowsInsertedPerSecond`
-          </td>
-
-          <td>
-            Rows inserted per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.rowsUpdatedPerSecond`
-          </td>
-
-          <td>
-            Rows updated per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.rowsDeletedPerSecond`
-          </td>
-
-          <td>
-            Rows deleted per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.conflicts.tablespacePerSecond`
-          </td>
-
-          <td>
-            Number of queries in this database that have been canceled due to dropped tablespaces.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.conflicts.locksPerSecond`
-          </td>
-
-          <td>
-            Number of queries in this database that have been canceled due to lock timeouts.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.conflicts.snapshotPerSecond`
-          </td>
-
-          <td>
-            Number of queries in this database that have been canceled due to old snapshots.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.conflicts.bufferpinPerSecond`
-          </td>
-
-          <td>
-            Number of queries in this database that have been canceled due to pinned buffers.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.conflicts.deadlockPerSecond`
-          </td>
-
-          <td>
-            Number of queries in this database that have been canceled due to deadlocks.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.tempFilesCreatedPerSecond`
-          </td>
-
-          <td>
-            Number of temporary files created by queries in this database. All temporary files are counted, regardless of why the temporary file was created (for example, sorting or hashing), and regardless of the `log_temp_files` setting.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.tempWrittenInBytesPerSecond`
-          </td>
-
-          <td>
-            Total amount of data written to temporary files by queries in this database. All temporary files are counted, regardless of why the temporary file was created, and regardless of the `log_temp_files` setting.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.deadlocksPerSecond`
-          </td>
-
-          <td>
-            Number of deadlocks detected in this database.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.readTimeInMillisecondsPerSecond`
-          </td>
-
-          <td>
-            Time spent reading data file blocks by backends in this database, in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `db.writeTimeInMillisecondsPerSecond`
-          </td>
-
-          <td>
-            Time spent writing data file blocks by backends in this database, in milliseconds.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

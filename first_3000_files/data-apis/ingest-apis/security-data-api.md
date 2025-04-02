@@ -55,31 +55,12 @@ curl -X POST https://security-api.newrelic.com/security/v1 \
 
 ## URL Parameters [#url-params]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `repository` | Optional: The respositiory url for the application with your integration. |
 
-  <tbody>
-    <tr>
-      <td>
-        `repository`
-      </td>
-
-      <td>
-        Optional: The respositiory url for the application with your integration.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Required fields [#req-fields]
 

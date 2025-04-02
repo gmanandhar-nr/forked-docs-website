@@ -50,88 +50,20 @@ Upon installation, the .NET agent's configuration file (`newrelic.config`) appli
 
 Here are details about the configuration methods shown in the diagram, and their precedence levels:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "230px" }}>
-        <DNT>
-          **.NET configuration**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Details and precedence**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `web.config` or `app.config` or `appsettings.json`
-      </td>
-
-      <td>
-        Configuration settings set in these files take highest precedence.
+| **.NET configuration** | **Details and precedence** |
+| - | - |
+| `web.config` or `app.config` or `appsettings.json` | Configuration settings set in these files take highest precedence.
 
         If the agent is disabled in the local or global `newrelic.config`:
 
-        * The `NewRelic.AgentEnabled` settings in `appsettings.json` <DNT>**will enable the agent**</DNT>.
-        * The `NewRelic.AgentEnabled` settings in a `web.config` or `app.config` file <DNT>**will be ignored**</DNT>.
-      </td>
-    </tr>
+        * The `NewRelic.AgentEnabled` settings in `appsettings.json` **will enable the agent**.
+        * The `NewRelic.AgentEnabled` settings in a `web.config` or `app.config` file **will be ignored**. |
+| Environment variables | Second-highest precedence. For more about these, see [.NET environment variables](#environment-variables). |
+| Server-side configuration | Third-highest precedence. A limited number of [server-side configuration](/docs/agents/manage-apm-agents/configuration/server-side-agent-configuration) settings are available; the other settings will come from other configuration sources. |
+| Default (global) `newrelic.config` | Default source and the lowest precedence. Will configure all applications on a host in the absence of other config files. The global config file is located in the New Relic agent home directory: `%PROGRAMDATA%\New Relic\.NET Agent` |
 
-    <tr>
-      <td>
-        Environment variables
-      </td>
-
-      <td>
-        Second-highest precedence. For more about these, see [.NET environment variables](#environment-variables).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Server-side configuration
-      </td>
-
-      <td>
-        Third-highest precedence. A limited number of [server-side configuration](/docs/agents/manage-apm-agents/configuration/server-side-agent-configuration) settings are available; the other settings will come from other configuration sources.
-      </td>
-    </tr>
-
-    <tr id="local">
-      <td>
-        App-local `newrelic.config`
-      </td>
-
-      <td>
-        Fourth-highest precedence. You can create app-local `newrelic.config` files to configure individual apps on a multi-app system. These local configuration files override settings in the global `newrelic.config` file.
-
-        The agent looks for app-local config files in the following directories, in this order:
-
-        * A directory specified in your `web.config` or `app.config` file with the `NewRelic.ConfigFile` property
-        * The web app's root directory (with the `app.config` or `web.config`)
-        * The directory containing your app's executable file
-
-          Note that the app-local config file must be complete and validate against the XSD file (for example, at `C:\ProgramData\New Relic\.NET Agent\newrelic.xsd` for Windows).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Default (global) `newrelic.config`
-      </td>
-
-      <td>
-        Default source and the lowest precedence. Will configure all applications on a host in the absence of other config files. The global config file is located in the New Relic agent home directory: `%PROGRAMDATA%\New Relic\.NET Agent`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Required environment variables [#environment-variables]
 

@@ -181,91 +181,18 @@ After installation of the `ktranslate` network monitoring agent, you're having i
 
             In the main UI for Wireshark, click to select a single `sFlow` packet and then expand the section titled `InMon sFlow`. The following fields should be present:
 
-            <table>
-              <thead>
-                <tr>
-                  <th style={{ width: "350px" }}>
-                    Field
-                  </th>
+            # Table
 
-                  <th>
-                    Description
-                  </th>
-                </tr>
-              </thead>
+| Field | Description |
+| - | - |
+| Datagram version | The version of this sFlow packet. |
+| Agent address type | IPv4 (1) or IPv6 (2) |
+| Agent address | IP address the flows are being exported from. This is where you have your flow exporter configured. |
+| Sub-agent ID | In sFlow v5, you can run multiple exporter processes. This is their unique identifier. |
+| Sequence number | The number of sFlow packets sent by the agent device. |
+| SysUptime | Time since the agent device last rebooted. |
+| NumSamples | The count of sFlow samples contained in the current packet. |
 
-              <tbody>
-                <tr>
-                  <td>
-                    Datagram version
-                  </td>
-
-                  <td>
-                    The version of this sFlow packet.
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    Agent address type
-                  </td>
-
-                  <td>
-                    IPv4 (1) or IPv6 (2)
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    Agent address
-                  </td>
-
-                  <td>
-                    IP address the flows are being exported from. This is where you have your flow exporter configured.
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    Sub-agent ID
-                  </td>
-
-                  <td>
-                    In sFlow v5, you can run multiple exporter processes. This is their unique identifier.
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    Sequence number
-                  </td>
-
-                  <td>
-                    The number of sFlow packets sent by the agent device.
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    SysUptime
-                  </td>
-
-                  <td>
-                    Time since the agent device last rebooted.
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    NumSamples
-                  </td>
-
-                  <td>
-                    The count of sFlow samples contained in the current packet.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
 
             Expanding a sub-group entitled `Flow sample` will show these additional fields:
 

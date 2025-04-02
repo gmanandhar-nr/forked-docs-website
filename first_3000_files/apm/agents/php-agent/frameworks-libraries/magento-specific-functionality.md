@@ -26,49 +26,17 @@ Magento 2 also includes built-in support for [web APIs](http://devdocs.magento.c
 
 As of [PHP agent version 7.0](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-700186), New Relic supports automatically naming transactions that use this functionality. Previous versions of the PHP agent named web API transactions as `unknown` by default.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        <DNT>
-          **Magento 2 web APIs**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Magento 2 web APIs** | **Comments** |
+| - | - |
+| SOAP | SOAP transactions are named based on the service class and method that handled the request. For example, the transaction name `Webapi/Soap/Magento\Catalog\Api\CategoryManagementInterface/getTree` indicates that a SOAP request was handled by the `getTree()` method on the model implementing `Magento\Catalog\Api\CategoryManagementInterface`.
 
-  <tbody>
-    <tr>
-      <td id="soap">
-        SOAP
-      </td>
+        WSDL transactions are also named automatically: `Webapi/Soap/WsdlList` is used for transactions that return the list of available APIs, whereas `Webapi/Soap/Wsdl` is used for transactions that get the WSDL for a specific SOAP API. |
+| REST | From Magento 2.1 onwards, REST transactions are named similarly to [SOAP](#soap) transactions. The only difference is that REST requests are prefixed with `Webapi/Rest` instead of `Webapi/Soap`.
 
-      <td>
-        SOAP transactions are named based on the service class and method that handled the request. For example, the transaction name `Webapi/Soap/Magento\Catalog\Api\CategoryManagementInterface/getTree` indicates that a SOAP request was handled by the `getTree()` method on the model implementing `Magento\Catalog\Api\CategoryManagementInterface`.
+        On Magento 2.0, the PHP agent is unable to automatically name the specific service class and method that handled the transaction. Instead, REST requests currently receive the generic name `FrontController/Magento\Webapi\Controller\Rest\Interceptor`. This may be improved in a future PHP agent release. As a workaround, New Relic recommends using [`newrelic_name_transaction()`](/docs/agents/php-agent/configuration/php-agent-api#api-name-wt) in the service method if greater resolution is required. |
 
-        WSDL transactions are also named automatically: `Webapi/Soap/WsdlList` is used for transactions that return the list of available APIs, whereas `Webapi/Soap/Wsdl` is used for transactions that get the WSDL for a specific SOAP API.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="rest">
-        REST
-      </td>
-
-      <td>
-        From Magento 2.1 onwards, REST transactions are named similarly to [SOAP](#soap) transactions. The only difference is that REST requests are prefixed with `Webapi/Rest` instead of `Webapi/Soap`.
-
-        On Magento 2.0, the PHP agent is unable to automatically name the specific service class and method that handled the transaction. Instead, REST requests currently receive the generic name `FrontController/Magento\Webapi\Controller\Rest\Interceptor`. This may be improved in a future PHP agent release. As a workaround, New Relic recommends using [`newrelic_name_transaction()`](/docs/agents/php-agent/configuration/php-agent-api#api-name-wt) in the service method if greater resolution is required.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## FrontControllerInterface plugins [#front-controller-interface-plugins]
 

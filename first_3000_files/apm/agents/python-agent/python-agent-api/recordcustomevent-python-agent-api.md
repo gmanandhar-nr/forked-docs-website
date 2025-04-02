@@ -41,57 +41,20 @@ For custom machine learning events, see [the record_ml_event page](/docs/apm/age
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `event_type`
 
-  <tbody>
-    <tr>
-      <td>
-        `event_type`
+        _string_ | Required. The `event_type` defines the name (or type) of the custom event, and must be a string. No additional attributes recorded for the transaction are added to custom events. |
+| `params`
 
-        _string_
-      </td>
+        _dict_ | Required. Attaches custom attributes to the event. Only attributes passed in as `params` are added. No additional attributes recorded for the transaction are added to custom events. |
+| `application`
 
-      <td>
-        Required. The `event_type` defines the name (or type) of the custom event, and must be a string. No additional attributes recorded for the transaction are added to custom events.
-      </td>
-    </tr>
+        _object_ | Optional. If you want to record an event outside of the context of a monitored transaction, use this to associate the call with a specific application object. An application object can be obtained using the [`newrelic.agent.application`](/docs/apm/agents/python-agent/python-agent-api/application-python-agent-api/) function. |
 
-    <tr>
-      <td>
-        `params`
-
-        _dict_
-      </td>
-
-      <td>
-        Required. Attaches custom attributes to the event. Only attributes passed in as `params` are added. No additional attributes recorded for the transaction are added to custom events.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `application`
-
-        _object_
-      </td>
-
-      <td>
-        Optional. If you want to record an event outside of the context of a monitored transaction, use this to associate the call with a specific application object. An application object can be obtained using the [`newrelic.agent.application`](/docs/apm/agents/python-agent/python-agent-api/application-python-agent-api/) function.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

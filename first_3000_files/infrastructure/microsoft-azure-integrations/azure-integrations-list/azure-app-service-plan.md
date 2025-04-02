@@ -36,218 +36,28 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure App Service Plan metrics [#Azure-app-service-plan]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `BytesReceived` | The average incoming bandwidth used across all instances of the plan. |
+| `BytesSent` | The average outgoing bandwidth used across all instances of the plan. |
+| `CpuPercentage` | The average CPU usage across all instances of the plan. |
+| `DiskQueueLength` | The average number of both read and write requests that were queued on storage. A high disk queue length is an indication of an app that might be slowing down because of excessive disk I/O. |
+| `HttpQueueLength` | The average number of HTTP requests that had to sit on the queue before being fulfilled. A high or increasing HTTP Queue length is a symptom of a plan under heavy load. |
+| `MemoryPercentage` | The average memory used across all instances of the plan. |
+| `SocketInboundAll` | The average number of sockets used for incoming HTTP requests across all the instances of the plan. |
+| `SocketLoopback` | The average number of sockets used for loopback connections across all the instances of the plan. |
+| `SocketOutboundAll` | The average number of sockets used for outbound connections across all the instances of the plan irrespective of their TCP states. Having too many outbound connections can cause connectivity errors. |
+| `SocketOutboundEstablished` | The average number of sockets in `ESTABLISHED` state used for outbound connections across all the instances of the plan. |
+| `SocketOutboundTimeWait` | The average number of sockets in `TIME_WAIT` state used for outbound connections across all the instances of the plan. High or increasing outbound socket counts in `TIME_WAIT` state can cause connectivity errors. |
+| `TcpCloseWait` | The average number of sockets in `CLOSE_WAIT` state across all the instances of the plan. |
+| `TcpClosing` | The average number of sockets in `CLOSING` state across all the instances of the plan. |
+| `TcpEstablished` | The average number of sockets in `ESTABLISHED` state across all the instances of the plan. |
+| `TcpFinWait1` | The average number of sockets in `FIN_WAIT_1` state across all the instances of the plan. |
+| `TcpFinWait2` | The average number of sockets in `FIN_WAIT_2` state across all the instances of the plan. |
+| `TcpLastAck` | The average number of sockets in `LAST_ACK` state across all the instances of the plan. |
+| `TcpSynReceived` | The average number of sockets in `SYN_RCVD` state across all the instances of the plan. |
+| `TcpSynSent` | The average number of sockets in `SYN_SENT` state across all the instances of the plan. |
+| `TcpTimeWait` | The average number of sockets in `TIME_WAIT` state across all the instances of the plan. |
 
-  <tbody>
-    <tr>
-      <td>
-        `BytesReceived`
-      </td>
-
-      <td>
-        The average incoming bandwidth used across all instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesSent`
-      </td>
-
-      <td>
-        The average outgoing bandwidth used across all instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuPercentage`
-      </td>
-
-      <td>
-        The average CPU usage across all instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskQueueLength`
-      </td>
-
-      <td>
-        The average number of both read and write requests that were queued on storage. A high disk queue length is an indication of an app that might be slowing down because of excessive disk I/O.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HttpQueueLength`
-      </td>
-
-      <td>
-        The average number of HTTP requests that had to sit on the queue before being fulfilled. A high or increasing HTTP Queue length is a symptom of a plan under heavy load.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MemoryPercentage`
-      </td>
-
-      <td>
-        The average memory used across all instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SocketInboundAll`
-      </td>
-
-      <td>
-        The average number of sockets used for incoming HTTP requests across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SocketLoopback`
-      </td>
-
-      <td>
-        The average number of sockets used for loopback connections across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SocketOutboundAll`
-      </td>
-
-      <td>
-        The average number of sockets used for outbound connections across all the instances of the plan irrespective of their TCP states. Having too many outbound connections can cause connectivity errors.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SocketOutboundEstablished`
-      </td>
-
-      <td>
-        The average number of sockets in `ESTABLISHED` state used for outbound connections across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SocketOutboundTimeWait`
-      </td>
-
-      <td>
-        The average number of sockets in `TIME_WAIT` state used for outbound connections across all the instances of the plan. High or increasing outbound socket counts in `TIME_WAIT` state can cause connectivity errors.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TcpCloseWait`
-      </td>
-
-      <td>
-        The average number of sockets in `CLOSE_WAIT` state across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TcpClosing`
-      </td>
-
-      <td>
-        The average number of sockets in `CLOSING` state across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TcpEstablished`
-      </td>
-
-      <td>
-        The average number of sockets in `ESTABLISHED` state across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TcpFinWait1`
-      </td>
-
-      <td>
-        The average number of sockets in `FIN_WAIT_1` state across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TcpFinWait2`
-      </td>
-
-      <td>
-        The average number of sockets in `FIN_WAIT_2` state across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TcpLastAck`
-      </td>
-
-      <td>
-        The average number of sockets in `LAST_ACK` state across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TcpSynReceived`
-      </td>
-
-      <td>
-        The average number of sockets in `SYN_RCVD` state across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TcpSynSent`
-      </td>
-
-      <td>
-        The average number of sockets in `SYN_SENT` state across all the instances of the plan.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TcpTimeWait`
-      </td>
-
-      <td>
-        The average number of sockets in `TIME_WAIT` state across all the instances of the plan.
-      </td>
-    </tr>
-  </tbody>
-</table>

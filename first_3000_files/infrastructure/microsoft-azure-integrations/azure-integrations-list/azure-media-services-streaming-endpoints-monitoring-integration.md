@@ -36,68 +36,13 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Media Services Streaming Endpoints metrics [#Azure-media-services-streaming-endpoints]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `CPU Usage` | CPU usage for premium streaming endpoints. |
+| `Egress` | The amount of egress data. |
+| `EgressBandwidth` | Egress bandwidth. |
+| `Requests` | Requests to a Streaming Endpoint. |
+| `SuccessE2ELatency` | The average latency for successful requests. |
 
-  <tbody>
-    <tr>
-      <td>
-        `CPU Usage`
-      </td>
-
-      <td>
-        CPU usage for premium streaming endpoints.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Egress`
-      </td>
-
-      <td>
-        The amount of egress data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EgressBandwidth`
-      </td>
-
-      <td>
-        Egress bandwidth.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Requests`
-      </td>
-
-      <td>
-        Requests to a Streaming Endpoint.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SuccessE2ELatency`
-      </td>
-
-      <td>
-        The average latency for successful requests.
-      </td>
-    </tr>
-  </tbody>
-</table>

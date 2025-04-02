@@ -35,27 +35,11 @@ By default, the **Sequence** is set to **All**. You can personalize the view by 
   You must add at least two steps to the filter form.
   </Callout>
 
-<table>
-      <thead>
-        <tr>
-          <th style={{ width: "135px" }}>
-            Action
-          </th>
+# Table
 
-          <th style={{ width: "150px" }}>
-            Description
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Attribute
-          </td>
-
-          <td>
-            Select an attribute:
+| Action | Description |
+| - | - |
+| Attribute | Select an attribute:
 
               * **URL viewed**: Filter the data depending on the URL of the page viewed by the user.
               * **Page action**: Filter the data based on the user's interaction with the page.
@@ -63,34 +47,13 @@ By default, the **Sequence** is set to **All**. You can personalize the view by 
                 * **Target**: Select the target element where the keyboard input was made.
                 * **Target ID**: Select the target ID where the keyboard input was made.
                 * **Target Class**: Select the target class where the keyboard input was made.
-              * **User clicks**: Filter the data based on the user's clicks.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Operator
-          </td>
-
-          <td>
-            Select an operator from the below options:
+              * **User clicks**: Filter the data based on the user's clicks. |
+| Operator | Select an operator from the below options:
 
               * **=** : Where the supplied value equals the incident attribute value.
-              * **Like** : Where the supplied value is similar to the incident attribute value.
-          </td>
-        </tr>
+              * **Like** : Where the supplied value is similar to the incident attribute value. |
+| Value | Search or enter a value. |
 
-        <tr>
-          <td>
-            Value
-          </td>
-
-          <td>
-            Search or enter a value.
-          </td>
-        </tr>
-      </tbody>
-    </table>
 </Step>
 
 <Step>

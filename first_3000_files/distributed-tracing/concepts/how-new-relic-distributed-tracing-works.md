@@ -111,70 +111,17 @@ With Infinite Tracing, you can send us 100% of your trace data from your applica
 
     Here are details about each sampler:
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "100px" }}>
-            Sampler
-          </th>
+    # Table
 
-          <th>
-            Matching criteria
-          </th>
-
-          <th>
-            Target percent
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Duration
-          </td>
-
-          <td>
-            Traces with an outlier duration, using two algorithms:
+| Sampler | Matching criteria | Target percent |
+| - | - | - |
+| Duration | Traces with an outlier duration, using two algorithms:
 
             * Gaussian (Assumes a normal distribution and a threshold at the 99th percentile)
-            * Eccentricity (Assumes no distribution and a threshold based on cluster)
-          </td>
+            * Eccentricity (Assumes no distribution and a threshold based on cluster) | 100% |
+| Error | Traces having at least one span with an error | 100% |
+| Random | All traces | 1% (This is configurable. See [Infinite Tracing: Random trace filter](/docs/understand-dependencies/distributed-tracing/other-requirements/infinite-tracing-random-trace-filter)) |
 
-          <td>
-            100%
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Error
-          </td>
-
-          <td>
-            Traces having at least one span with an error
-          </td>
-
-          <td>
-            100%
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Random
-          </td>
-
-          <td>
-            All traces
-          </td>
-
-          <td>
-            1% (This is configurable. See [Infinite Tracing: Random trace filter](/docs/understand-dependencies/distributed-tracing/other-requirements/infinite-tracing-random-trace-filter))
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     If the matching criteria matches the trace, each sampler looks at the trace’s shape. A trace’s shape is the unique combination of the root span’s entity name and span name. This is a simple way to separate traces using the entry point of the request.
 

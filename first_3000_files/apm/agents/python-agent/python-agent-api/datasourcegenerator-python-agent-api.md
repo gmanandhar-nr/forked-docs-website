@@ -29,41 +29,16 @@ The `data_source_generator` decorator is used to wrap a simple metric-data-gener
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `name`
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
+        _string_ | Optional. The name of the data source. This is used only for logging purposes. If not provided, it defaults to the callable name derived from the decorated function. |
+| `properties`
 
-        _string_
-      </td>
-
-      <td>
-        Optional. The name of the data source. This is used only for logging purposes. If not provided, it defaults to the callable name derived from the decorated function.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `properties`
-
-        _dictionary_
-      </td>
-
-      <td>
-        Optional. Any additional properties to pass to the data source factory.
+        _dictionary_ | Optional. Any additional properties to pass to the data source factory.
 
         The possible fields for a dictionary are:
 
@@ -71,11 +46,8 @@ The `data_source_generator` decorator is used to wrap a simple metric-data-gener
         * `total`
         * `min`
         * `max`
-        * `sum_of_squares`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `sum_of_squares` |
+
 
 ## Return values
 

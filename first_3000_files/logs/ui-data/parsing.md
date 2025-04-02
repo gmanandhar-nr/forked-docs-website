@@ -57,57 +57,20 @@ Parsing makes it easier to create [custom queries](/docs/using-new-relic/data/un
 
 Here's an overview of how New Relic implements parsing of logs:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "100px" }}>
-        Log parsing
-      </th>
+# Table
 
-      <th>
-        How it works
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        What
-      </td>
-
-      <td>
-        * Parsing is applied to a specific selected field.  By default, the `message` field is used. However, any field/attribute can be chosen, even one that doesn't currently exist in your data.
+| Log parsing | How it works |
+| - | - |
+| What | * Parsing is applied to a specific selected field.  By default, the `message` field is used. However, any field/attribute can be chosen, even one that doesn't currently exist in your data.
         * Each parsing rule is created by using a NRQL `WHERE` clause that determines which logs the rule will attempt to parse.
-        * To simplify the matching process, we recommend adding a [`logtype`](#logtype) attribute to your logs. However, you are not limited to using `logtype`; one or more attributes can be used as matching criteria in the NRQL `WHERE` clause.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        When
-      </td>
-
-      <td>
-        * Parsing will only be applied once to each log message. If multiple parsing rules match the log, only the first that succeeds will be applied.
+        * To simplify the matching process, we recommend adding a [`logtype`](#logtype) attribute to your logs. However, you are not limited to using `logtype`; one or more attributes can be used as matching criteria in the NRQL `WHERE` clause. |
+| When | * Parsing will only be applied once to each log message. If multiple parsing rules match the log, only the first that succeeds will be applied.
         * Parsing rules are unordered. If more than one parsing rules matches a log, one is chosen at random. Be sure to build your parsing rules so that they do not match the same logs.
         * Parsing takes place during log ingestion, before data is written to NRDB. Once data has been written to storage, it can no longer be parsed.
-        * Parsing occurs in the pipeline <DNT>**before**</DNT> data enrichments take place. Be careful when defining the matching criteria for a parsing rule. If the criteria is based on an attribute that doesn't exist until after parsing or enrichment take place, that data won't be present in the logs when matching occurs. As a result, no parsing will happen.
-      </td>
-    </tr>
+        * Parsing occurs in the pipeline **before** data enrichments take place. Be careful when defining the matching criteria for a parsing rule. If the criteria is based on an attribute that doesn't exist until after parsing or enrichment take place, that data won't be present in the logs when matching occurs. As a result, no parsing will happen. |
+| How | * Rules can be written in [Grok](#grok), regex, or a mixture of the two. Grok is a collection of patterns that abstract away complicated regular expressions.
+        * We support the Java Regex syntax in our Parsing UI. For attribute or field names in capture groups, Java Regex only allows for [A-Za-z0-9]. |
 
-    <tr>
-      <td>
-        How
-      </td>
-
-      <td>
-        * Rules can be written in [Grok](#grok), regex, or a mixture of the two. Grok is a collection of patterns that abstract away complicated regular expressions.
-        * We support the Java Regex syntax in our Parsing UI. For attribute or field names in capture groups, Java Regex only allows for [A-Za-z0-9].
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Parse attributes using Grok [#grok]
 

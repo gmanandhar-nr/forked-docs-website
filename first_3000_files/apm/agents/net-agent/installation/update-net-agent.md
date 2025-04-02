@@ -157,74 +157,31 @@ If you're considering updating a .NET Framework agent version that's lower than 
       To instrument applications targeting .NET Framework 4.0 or earlier, you must use a version of the .NET Framework agent prior to 7.0. See [support for .NET Frameworks 4.0 or earlier](/docs/apm/agents/net-agent/troubleshooting/technical-support-net-framework-40-or-lower/) for more information.
     </Callout>
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "150px" }}>
-            If version is lower than...
-          </th>
+    # Table
 
-          <th>
-            Do this...
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td id="70">
-            7.0
-          </td>
-
-          <td>
-            Version 7.0 and higher of the .NET Framework agent support applications that target .NET Framework 4.5 or higher.
-          </td>
-        </tr>
-
-        <tr>
-          <td id="612">
-            6.12
-          </td>
-
-          <td>
-            Versions 6.12 or higher do not support Windows Server 2003. If you require Windows Server 2003, use versions 6.11 or lower. For more information, get support at [support.newrelic.com](https://support.newrelic.com) or [download the agent](https://download.newrelic.com/).
-          </td>
-        </tr>
-
-        <tr>
-          <td id="611">
-            6.11
-          </td>
-
-          <td>
-            Previously, [database](/docs/apm/apm-ui-pages/monitoring/databases-page-view-operations-throughput-response-time/) and [external](/docs/apm/apm-ui-pages/monitoring/external-services/external-services-intro/) calls that occurred outside of a transaction would generate metrics that you could view in their respective pages in the APM UI. Now these metrics won't be displayed. In a non-web application these calls can be "wrapped" in a [custom transaction](/docs/apm/agents/net-agent/custom-instrumentation/create-transactions-xml-net/) to be able to view their metrics.
-          </td>
-        </tr>
-
-        <tr>
-          <td id="60">
-            6.0
-          </td>
-
-          <td>
-            To get [async support](/docs/apm/agents/net-agent/custom-instrumentation/create-transactions-xml-net/) if your .NET agent version is earlier than 6.0, do the following as applicable:
+| If version is lower than... | Do this... |
+| - | - |
+| 7.0 | Version 7.0 and higher of the .NET Framework agent support applications that target .NET Framework 4.5 or higher. |
+| 6.12 | Versions 6.12 or higher do not support Windows Server 2003. If you require Windows Server 2003, use versions 6.11 or lower. For more information, get support at [support.newrelic.com](https://support.newrelic.com) or [download the agent](https://download.newrelic.com/). |
+| 6.11 | Previously, [database](/docs/apm/apm-ui-pages/monitoring/databases-page-view-operations-throughput-response-time/) and [external](/docs/apm/apm-ui-pages/monitoring/external-services/external-services-intro/) calls that occurred outside of a transaction would generate metrics that you could view in their respective pages in the APM UI. Now these metrics won't be displayed. In a non-web application these calls can be "wrapped" in a [custom transaction](/docs/apm/agents/net-agent/custom-instrumentation/create-transactions-xml-net/) to be able to view their metrics. |
+| 6.0 | To get [async support](/docs/apm/agents/net-agent/custom-instrumentation/create-transactions-xml-net/) if your .NET agent version is earlier than 6.0, do the following as applicable:
 
             1. Remove the following application setting in `newrelic.config` if it exists:
 
                ```xml
-               <appSettings>
-                 <add key="AsyncMode" value="false" />
-               </appSettings>
+               
+                 
+               
                ```
             2. Ensure your app's host has .NET 4.5 or higher installed.
             3. Tell .NET to use the new ASP request processing pipeline by adding the following lines to your `web.config`:
 
                ```xml
-               <configuration>
-                 <appSettings>
-                   <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
-                 </appSettings>
-               <configuration>
+               
+                 
+                   
+                 
+               
                ```
 
                OR
@@ -232,143 +189,12 @@ If you're considering updating a .NET Framework agent version that's lower than 
                Specify the .NET Framework version to be 4.5.2 or higher by adding the following lines to the `web.config`:
 
                ```xml
-               <configuration>
-                 <system.web>
-                   <httpRuntime targetFramework="YOUR_TARGET_NET_VERSION" /> 
-                 </system.web>
-               <configuration>
-               ```
-          </td>
-        </tr>
+               
+                 
+                    
+                 
+               
+               ``` |
 
-        <tr id="50">
-          <td>
-            5.0 (for Web API)
-          </td>
-
-          <td>
-            To see Web API transactions, you must opt in to a [.NET framework bug fix](https://devblogs.microsoft.com/dotnet/all-about-httpruntime-targetframework/) if the following conditions apply:
-
-            * You use ASP.NET Web API v1.
-            * Your app targets .NET Framework agent version 4.0. (This issue does not affect version 4.5 or higher.)
-            * You're upgrading from .NET Framework agent to version 5.0 or higher.
-
-              To apply the fix:
-
-            1. Ensure your app's host has .NET 4.5 installed.
-            2. Add this `appSetting` to your <DNT>**web.config**</DNT>:
-
-               ```xml
-               <configuration>
-                 <appSettings>
-                   <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
-                 </appSettings>
-               <configuration>
-               ```
-
-               For more information about this .NET framework bug, see:
-
-               * [Why is HttpContext.Current null after await?](https://stackoverflow.com/questions/18383923/why-is-httpcontext-current-null-after-await)
-               * [All about httpRuntime targetFramework](https://devblogs.microsoft.com/dotnet/all-about-httpruntime-targetframework/).
-          </td>
-        </tr>
-
-        <tr id="500">
-          <td>
-            5.0 (for metrics)
-          </td>
-
-          <td>
-            Metrics that are not part of a transaction won't be displayed in the UI. <DNT>**Exception:**</DNT> You can view [database](/docs/apm/apm-ui-pages/monitoring/databases-page-view-operations-throughput-response-time/) and [external](/docs/apm/apm-ui-pages/monitoring/external-services/external-services-intro/) metrics in their respective pages in the APM UI. Other such metrics (such as instrumented methods) can be made viewable by "wrapping" them in a [custom transaction](/docs/apm/agents/net-agent/custom-instrumentation/create-transactions-xml-net/).
-
-            Your [custom instrumentation](/docs/apm/agents/net-agent/custom-instrumentation/introduction-net-custom-instrumentation/) may need to be updated to use [custom transactions](/docs/apm/agents/net-agent/custom-instrumentation/create-transactions-xml-net/). For an example of what you'll see in the UI, see this [New Relic Online Technical Community post](https://discuss.newrelic.com/t/change-in-non-web-transaction-reporting-with-version-5-x/28721).
-          </td>
-        </tr>
-
-        <tr id="44">
-          <td>
-            4.4
-          </td>
-
-          <td>
-            New Relic improved transaction naming. However, these changes can affect the transaction names of existing metrics, including [key transactions](/docs/apm/transactions/key-transactions/introduction-key-transactions/), "alert on anything" metrics, and [queries](/docs/query-your-data/explore-query-data/query-builder/use-advanced-nrql-mode-query-data/) based on transaction names. You must recreate these settings using the new transaction name after the update.
-          </td>
-        </tr>
-
-        <tr id="42">
-          <td>
-            4.2
-          </td>
-
-          <td>
-            New Relic dropped the "outer" HTTP transaction ("`.svc`" transactions) for WCF applications hosted with `asp.net` compatibility mode disabled. Now only the WCF transaction is reported.
-
-            This change results in more accurate throughput data. It also prevents HTTP status code errors from being reported for failed WCF transactions.
-          </td>
-        </tr>
-
-        <tr id="41">
-          <td>
-            4.1
-          </td>
-
-          <td>
-            New Relic implemented datastore metrics for SQL traces. Metric names for database activity were updated to report under datastore.
-          </td>
-        </tr>
-
-        <tr id="40">
-          <td>
-            4.0
-          </td>
-
-          <td>
-            MVC2 applications no longer generate MVC-specific segments or have MVC route-based transaction names.
-          </td>
-        </tr>
-
-        <tr id="30">
-          <td>
-            3.0
-          </td>
-
-          <td>
-            The .NET agent of New Relic became dependent on .NET 3.5. Your application can still target .NET 2.0, but you must have .NET 3.5 installed on the computer on which the agent executes.
-          </td>
-        </tr>
-
-        <tr id="220">
-          <td>
-            2.20
-          </td>
-
-          <td>
-            Version 2.19.3.0 was the last .NET agent version that required both the `GetBrowserTimingFooter()` and the `GetBrowserTimingHeader()` API calls for <InlinePopover type="browser"/>. In agent version 2.20.24.0 or higher, you only need to call `GetBrowserTimingHeader()`. `GetBrowserTimingFooter()` has no effect. Recommendation: Remove these references from your code.
-          </td>
-        </tr>
-
-        <tr id="29">
-          <td>
-            2.9
-          </td>
-
-          <td>
-            The configuration file changed from `newrelic.xml` to `newrelic.config`. Installers for newer agents attempt to convert `newrelic.xml` (if present) to `newrelic.config`.
-          </td>
-        </tr>
-
-        <tr id="22">
-          <td>
-            2.2 or earlier
-          </td>
-
-          <td>
-            To update from a .NET agent version lower than 2.2, you must uninstall the old agent before installing the new version. Follow the standard procedures for your Windows version to uninstall the agent. Your operating system may require a restart.
-
-            You may experience `cocreateinstance` errors with <DNT>**services.exe**</DNT> when you update an old installer (2.1.3.494 or lower) or make other changes to environment variables. To resolve this problem, refer to [Microsoft's documentation](https://learn.microsoft.com/en-us/windows/win32/procthread/changing-environment-variables).
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 </CollapserGroup>

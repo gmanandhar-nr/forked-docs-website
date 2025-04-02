@@ -170,56 +170,19 @@ To set up Infinite Tracing:
 
 Here are some tips for finding and querying your trace data in New Relic.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Do this...
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Examine traces originating from end-user experience
-      </td>
-
-      <td>
-        Go to any [distributed tracing page](/docs/distributed-tracing/ui-data/understand-use-distributed-tracing-ui/) in the New Relic UI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View end-user spans
-      </td>
-
-      <td>
-        In the distributed tracing UI, end-user spans are indicated with the <img title="distributed-tracing-browser-span-icon.png" alt="New Relic distributed tracing browser span icon" src="/images/browser_icon_browser-icon.webp" style={{height: "30px", width: "30px"}}/> icon. To see a span's attributes, [select a span](/docs/distributed-tracing/ui-data/understand-use-distributed-tracing-ui/#span-details) in the UI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Query span data
-      </td>
-
-      <td>
-        Spans are reported as [`Span` data](/attribute-dictionary/?event=Span). You can [query span data](/docs/query-your-data/explore-query-data/get-started/introduction-querying-new-relic-data/) in New Relic. For example:
+| If you want to... | Do this... |
+| - | - |
+| Examine traces originating from end-user experience | Go to any [distributed tracing page](/docs/distributed-tracing/ui-data/understand-use-distributed-tracing-ui/) in the New Relic UI. |
+| View end-user spans | In the distributed tracing UI, end-user spans are indicated with the  icon. To see a span's attributes, [select a span](/docs/distributed-tracing/ui-data/understand-use-distributed-tracing-ui/#span-details) in the UI. |
+| Query span data | Spans are reported as [`Span` data](/attribute-dictionary/?event=Span). You can [query span data](/docs/query-your-data/explore-query-data/get-started/introduction-querying-new-relic-data/) in New Relic. For example:
 
         * Query by browser app name by setting `browserApp.name`.
         * Query for traces containing at least one browser app span with `browserApp.name is not null`.
         * Query for traces containing at least one backend app with `appName is not null`.
-        * Query for traces containing both browser and backend spans by combining the two previous conditions.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * Query for traces containing both browser and backend spans by combining the two previous conditions. |
+
 
 ## Troubleshooting [#troubleshooting]
 

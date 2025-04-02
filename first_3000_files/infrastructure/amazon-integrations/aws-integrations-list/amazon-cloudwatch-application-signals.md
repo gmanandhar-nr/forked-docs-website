@@ -27,68 +27,14 @@ To find your integration's metrics, go to <DNT>**[one.newrelic.com](https://one.
 
 This New Relic infrastructure integration collects the following Amazon CloudWatch Application Signals data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Unit  
+| Metric | Unit | Description |
+| - | - | - |
+| `Latency` | Ms | The delay before data transfer begins after the request is made. |
+| `Faults` | Count | A count of both HTTP 5XX server-side faults and OpenTelemetry span status errors. |
+| `Errors` | Count | A count of HTTP 4XX client-side errors. These are considered to be request errors that are not caused by service problems. Therefore, the Availability metric displayed on Application Signals dashboards does not regard these errors as service faults. |
 
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `Latency`
-      </td>
-
-      <td>
-        Ms
-      </td>
-
-      <td>
-        The delay before data transfer begins after the request is made.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Faults`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        A count of both HTTP 5XX server-side faults and OpenTelemetry span status errors.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Errors`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        A count of HTTP 4XX client-side errors. These are considered to be request errors that are not caused by service problems. Therefore, the Availability metric displayed on Application Signals dashboards does not regard these errors as service faults.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Create alerts [#create-alerts]
 

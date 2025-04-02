@@ -36,41 +36,13 @@ New Relic queries your Google App Engine services based on a polling interval of
 
 After [connecting the Google App Engine integration to New Relic](/docs/connect-google-cloud-platform-services-infrastructure) and waiting a few minutes (based on the [polling frequency](#polling)), you can [find and use integration data](/docs/telemetry-data-platform/understand-data/new-relic-data-types/):
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        View Google App Engine integrations data
-      </th>
+# Table
 
-      <th>
-        Here...
-      </th>
-    </tr>
-  </thead>
+| View Google App Engine integrations data | Here... |
+| - | - |
+| and [alerts](/docs/infrastructure/new-relic-infrastructure/infrastructure-alert-conditions/infrastructure-alerts-add-edit-or-view-host-alert-information#integration) | Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > GCP > Google App Engine**. |
+| [Metric data](#metrics) on custom dashboards | [Create custom queries and charts](/docs/using-new-relic/data/understand-data/query-new-relic-data) using `GcpAppEngineServiceSample` and `GcpCloudTasksQueueSample` events. |
 
-  <tbody>
-    <tr>
-      <td>
-        <InlinePopover type="dashboards"/> and [alerts](/docs/infrastructure/new-relic-infrastructure/infrastructure-alert-conditions/infrastructure-alerts-add-edit-or-view-host-alert-information#integration)
-      </td>
-
-      <td>
-        Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure > GCP > Google App Engine**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Metric data](#metrics) on custom dashboards
-      </td>
-
-      <td>
-        [Create custom queries and charts](/docs/using-new-relic/data/understand-data/query-new-relic-data) using `GcpAppEngineServiceSample` and `GcpCloudTasksQueueSample` events.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Metric data [#metrics]
 

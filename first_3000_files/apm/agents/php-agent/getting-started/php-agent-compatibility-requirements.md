@@ -16,73 +16,21 @@ Before you [install the PHP agent](/docs/apm/agents/php-agent/installation), mak
 
 ## PHP agent compatibility [#compatibility]
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        PHP Version
-      </th>
-      <th>
-        Agent Version
-      </th>
-      <th>
-        Currently Supported
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>8.4</td>
-      <td>&ge; [11.5.0.18](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-11-5-0-18/)</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>8.3</td>
-      <td>&ge; [10.15.0.4](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-10-15-0-4/)</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>8.2</td>
-      <td>All Supported Agent Versions</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>8.1</td>
-      <td>All Supported Agent Versions</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>8.0</td>
-      <td>All Supported Agent Versions</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>7.4</td>
-      <td>All Supported Agent Versions</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>7.3</td>
-      <td>All Supported Agent Versions</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>7.2</td>
-      <td>All Supported Agent Versions</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>7.1</td>
-      <td>&le; [10.21.0.11](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-10-21-0-11/)</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>&le; [10.21.0.11](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-10-21-0-11/)</td>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
+# Table
+
+| PHP Version | Agent Version | Currently Supported |
+| - | - | - |
+| 8.4 | &ge; [11.5.0.18](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-11-5-0-18/) | Yes |
+| 8.3 | &ge; [10.15.0.4](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-10-15-0-4/) | Yes |
+| 8.2 | All Supported Agent Versions | Yes |
+| 8.1 | All Supported Agent Versions | Yes |
+| 8.0 | All Supported Agent Versions | Yes |
+| 7.4 | All Supported Agent Versions | Yes |
+| 7.3 | All Supported Agent Versions | Yes |
+| 7.2 | All Supported Agent Versions | Yes |
+| 7.1 | &le; [10.21.0.11](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-10-21-0-11/) | No |
+| 7.0 | &le; [10.21.0.11](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-10-21-0-11/) | No |
+
 
 See [PHP agent release notes](/docs/release-notes/agent-release-notes/php-release-notes/) for the latest PHP agent release.
 

@@ -105,31 +105,11 @@ To verify whether New Relic has the necessary permissions and resolve the proble
   >
     If all the above conditions are present, you have a permissions error. Use any of these options to resolve the permissions error as applicable:
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            <DNT>
-              **Available options**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Resolve permissions errors**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Set permissions for the <DNT>**Everyone**</DNT> group.
-          </td>
-
-          <td>
-            Adjust permissions in the following folders for the <DNT>**Everyone**</DNT> group to give the group all permissions <DNT>**except**</DNT> `Full Control`:
+| **Available options** | **Resolve permissions errors** |
+| - | - |
+| Set permissions for the **Everyone** group. | Adjust permissions in the following folders for the **Everyone** group to give the group all permissions **except** `Full Control`:
 
             ```
             C:\Program Files\New Relic\.NET Agent\
@@ -137,27 +117,9 @@ To verify whether New Relic has the necessary permissions and resolve the proble
 
             ```
             C:\Program Files (x86)\New Relic\.NET Agent\
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Set permissions for individual users.
-          </td>
-
-          <td>
-            If your security policies do not allow adjusting permissions for the <DNT>**Everyone**</DNT> group, then adjust permissions for individual users. Record the users under which your application runs, then adjust permissions for each of those users.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Set permissions using the PowerShell script.
-          </td>
-
-          <td>
-            To add permissions to `HKLM\SOFTWARE\New Relic` by using the PowerShell script:
+            ``` |
+| Set permissions for individual users. | If your security policies do not allow adjusting permissions for the **Everyone** group, then adjust permissions for individual users. Record the users under which your application runs, then adjust permissions for each of those users. |
+| Set permissions using the PowerShell script. | To add permissions to `HKLM\SOFTWARE\New Relic` by using the PowerShell script:
 
             ```shell
             $key = "HKLM:\SOFTWARE\New Relic"
@@ -167,10 +129,7 @@ To verify whether New Relic has the necessary permissions and resolve the proble
             $acl |Set-Acl -Path $key
             ```
 
-            For 32-bit apps, the path would be `HKLM:\SOFTWARE\Wow6432Node\New Relic`
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            For 32-bit apps, the path would be `HKLM:\SOFTWARE\Wow6432Node\New Relic` |
+
   </Collapser>
 </CollapserGroup>

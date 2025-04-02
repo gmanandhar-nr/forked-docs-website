@@ -20,131 +20,27 @@ The iOS agent only monitors your app while it is in the foreground. The agent do
 
 Make sure your iOS app meets these requirements:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Component**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **iOS application requirements**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Component** | **iOS application requirements** |
+| - | - |
+| Operating system | iOS 10 or higher
 
-  <tbody>
-    <tr>
-      <td>
-        Operating system
-      </td>
-
-      <td>
-        iOS 10 or higher
-
-        Apple no longer supports bitcode-based submissions to the App Store. Bitcode is not supported by our iOS agent.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        API/SDK
-      </td>
-
-      <td>
-        * NSURLConnection and AFNetworking are supported.
+        Apple no longer supports bitcode-based submissions to the App Store. Bitcode is not supported by our iOS agent. |
+| API/SDK | * NSURLConnection and AFNetworking are supported.
         * NSURLSession supports `upload` and `data` functions only.
         * URLSession in Swift supports async `upload` and `data` functions only.
-        * Network traffic for UIWebView and WKWebView is supported. However, WKWebView Transfer size and Http errors are not supported.
-      </td>
-    </tr>
+        * Network traffic for UIWebView and WKWebView is supported. However, WKWebView Transfer size and Http errors are not supported. |
+| Languages | * Objective-C
+        * Swift: Works with both network traces and crash reporting, but no interaction traces by default. Interaction traces must be [enabled for Swift](/docs/mobile-monitoring/new-relic-mobile/getting-started/enabling-interaction-tracing-swift). |
+| Devices | Any iOS compatible device: iPhones, iPads, etc. |
+| File sizes | The agent adds about 2 to 12 megabytes to your iOS release app, depending on platform build. |
+| Architectures | ARM 64-bit. |
+| SHA-2 | As a standard [security measure for data collection](/docs/security/new-relic-security/data-privacy/security-controls-privacy), New Relic requires that your application server supports SHA-2 (256-bit). SHA-1 is not supported. |
+| Xcode | To take advantage of New Relic's iOS features, make sure you have the latest version of [Xcode](https://developer.apple.com/documentation/xcode-release-notes). |
+| arm64e support | To be able to properly symbolicate crashes from devices with arm64e architectures, make sure your Xcode settings are enabled for pointer authentication. For more information, see the [Apple developer documentation](https://developer.apple.com/documentation/security/preparing_your_app_to_work_with_pointer_authentication?language=objc). |
+| CocoaPods | In order to use the latest iOS agent, use CocoaPods version 1.10.1 or higher. |
 
-    <tr>
-      <td>
-        Languages
-      </td>
-
-      <td>
-        * Objective-C
-        * Swift: Works with both network traces and crash reporting, but no interaction traces by default. Interaction traces must be [enabled for Swift](/docs/mobile-monitoring/new-relic-mobile/getting-started/enabling-interaction-tracing-swift).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Devices
-      </td>
-
-      <td>
-        Any iOS compatible device: iPhones, iPads, etc.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        File sizes
-      </td>
-
-      <td>
-        The agent adds about 2 to 12 megabytes to your iOS release app, depending on platform build.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Architectures
-      </td>
-
-      <td>
-        ARM 64-bit.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        SHA-2
-      </td>
-
-      <td>
-        As a standard [security measure for data collection](/docs/security/new-relic-security/data-privacy/security-controls-privacy), New Relic requires that your application server supports SHA-2 (256-bit). SHA-1 is not supported.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Xcode
-      </td>
-
-      <td>
-        To take advantage of New Relic's iOS features, make sure you have the latest version of [Xcode](https://developer.apple.com/documentation/xcode-release-notes).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        arm64e support
-      </td>
-
-      <td>
-        To be able to properly symbolicate crashes from devices with arm64e architectures, make sure your Xcode settings are enabled for pointer authentication. For more information, see the [Apple developer documentation](https://developer.apple.com/documentation/security/preparing_your_app_to_work_with_pointer_authentication?language=objc).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        CocoaPods
-      </td>
-
-      <td>
-        In order to use the latest iOS agent, use CocoaPods version 1.10.1 or higher.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## tvOS [#tvos]
 

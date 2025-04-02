@@ -101,89 +101,15 @@ Since this integration is based on a prometheus exporter, settings applicable to
 
 The following configuration options are available:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Setting
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Setting | Description | Default |
+| - | - | - |
+| **powerdns_url** | API URL of the powerdns service | N/A |
+| **exporter_port** | Port to expose scrape endpoint on, If this is not provided a random port will be used to launch the exporter | random-port |
+| **scrape_timeout** | Time until a scrape request times out | 5s |
+| **api_key** | API key used to connect to the PowerDNS server | N/A |
 
-      <th>
-        Default
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <DNT>
-          **powerdns_url**
-        </DNT>
-      </td>
-
-      <td>
-        API URL of the powerdns service
-      </td>
-
-      <td>
-        N/A
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **exporter_port**
-        </DNT>
-      </td>
-
-      <td>
-        Port to expose scrape endpoint on, If this is not provided a random port will be used to launch the exporter
-      </td>
-
-      <td>
-        random-port
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **scrape_timeout**
-        </DNT>
-      </td>
-
-      <td>
-        Time until a scrape request times out
-      </td>
-
-      <td>
-        5s
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **api_key**
-        </DNT>
-      </td>
-
-      <td>
-        API key used to connect to the PowerDNS server
-      </td>
-
-      <td>
-        N/A
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Example configurations [#examples]
 

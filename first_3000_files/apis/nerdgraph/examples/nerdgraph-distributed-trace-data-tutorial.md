@@ -22,71 +22,16 @@ In addition to [span event and transaction event data](/docs/understand-dependen
 
 Additional trace-level data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "180px" }}>
-        Trace-level metadata
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Trace-level metadata | Description |
+| - | - |
+| `durationMs` | The duration of this trace in milliseconds. |
+| `entities` | All [entities](/docs/using-new-relic/welcome-new-relic/get-started/glossary#entity) that are part of this trace. |
+| `entityCount` | The number of entities that are part of this trace. |
+| `spanConnections` | Parent/child IDs that represent all of the span relationships within this trace. |
+| `timestamp` | The trace's start time in milliseconds since the [Unix epoch](https://currentmillis.com/). |
 
-  <tbody>
-    <tr>
-      <td>
-        `durationMs`
-      </td>
-
-      <td>
-        The duration of this trace in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `entities`
-      </td>
-
-      <td>
-        All [entities](/docs/using-new-relic/welcome-new-relic/get-started/glossary#entity) that are part of this trace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `entityCount`
-      </td>
-
-      <td>
-        The number of entities that are part of this trace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `spanConnections`
-      </td>
-
-      <td>
-        Parent/child IDs that represent all of the span relationships within this trace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `timestamp`
-      </td>
-
-      <td>
-        The trace's start time in milliseconds since the [Unix epoch](https://currentmillis.com/).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Additional span-level data:
 

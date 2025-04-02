@@ -247,74 +247,20 @@ The supported relationships are listed below.
   If a relationship is not automatically supported by instrumentation, or if the existing instrumentation does not follow standard conventions, you must manually transmit telemetry to New Relic to establish the relationship. Do this by transmitting a log or span with the attribute `newrelic.aws_metric_streams.arn` that includes the [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) of the resource. Transmitting logs is recommended over spans because spans may be sampled. Keep in mind that these relationships have a 75-minute time-to-live (TTL), so you need to emit telemetry periodically to maintain the relationship.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Supported by instrumentation
-      </th>
-      <th>
-        AWS product
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td></td>
-      <td>
-        [DynamoDB](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-dynamodb-monitoring-integration)
-      </td>
-    </tr>
-    <tr>
-      <td>✅</td>
-      <td>
-        [ElastiCache](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticache-monitoring-integration)
-      </td>
-    </tr>
-    <tr>
-      <td>✅</td>
-      <td>
-        [ElasticSearch](/docs/infrastructure/host-integrations/host-integrations-list/elasticsearch/elasticsearch-integration)
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>
-        [Kinesis Data Firehose](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-kinesis-data-firehose-monitoring-integration)
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>
-        [Kinesis Data Streams](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-kinesis-data-streams-monitoring-integration)
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>
-        [Lambda](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration)
-      </td>
-    </tr>
-    <tr>
-      <td>✅</td>
-      <td>
-        [MQ](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-mq-integration)
-      </td>
-    </tr>
-    <tr>
-      <td>✅</td>
-      <td>
-        [MSK](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-managed-kafka-msk-integration)
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>
-        [SQS](/docs/infrastructure/amazon-integrations/aws-integrations-list/amazon-sqs-monitoring-integration)
-      </td>
-    </tr>
-  </tbody>
-</table>
+# Table
+
+| Supported by instrumentation | AWS product |
+| - | - |
+|  | [DynamoDB](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-dynamodb-monitoring-integration) |
+| ✅ | [ElastiCache](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-elasticache-monitoring-integration) |
+| ✅ | [ElasticSearch](/docs/infrastructure/host-integrations/host-integrations-list/elasticsearch/elasticsearch-integration) |
+|  | [Kinesis Data Firehose](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-kinesis-data-firehose-monitoring-integration) |
+|  | [Kinesis Data Streams](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-kinesis-data-streams-monitoring-integration) |
+|  | [Lambda](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-lambda-monitoring-integration) |
+| ✅ | [MQ](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-mq-integration) |
+| ✅ | [MSK](/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-managed-kafka-msk-integration) |
+|  | [SQS](/docs/infrastructure/amazon-integrations/aws-integrations-list/amazon-sqs-monitoring-integration) |
+
 
 ## Adding custom tags to an entity [#tags]
 

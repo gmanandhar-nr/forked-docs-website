@@ -25,85 +25,17 @@ New Relic stores SLA data forever for [eligible accounts](http://newrelic.com/ap
 
 Browser metrics for the <DNT>**End user**</DNT> [tier](/docs/accounts-partnerships/education/getting-started-new-relic/glossary#tier) are available only if you have [installed the <InlinePopover type="browser"/> agent](/docs/browser/new-relic-browser/getting-started/browser-settings).
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Browser (End user tier)**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **SLA metric name:value (and formula)**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Browser (End user tier)** | **SLA metric name:value (and formula)** |
+| - | - |
+| Page Views thousands | EndUser : call_count |
+| Load time sec | EndUser : average_response_time |
+| Apdex | EndUser/Apdex : score |
+| % Satisfied | EndUser/Apdex : s divided by EndUser : call_count |
+| % Tolerating | EndUser/Apdex : t divided by Enduser : call_count |
+| % Frustrated | EndUser/Apdex : f divided by Enduser : call_count |
 
-  <tbody>
-    <tr>
-      <td>
-        Page Views thousands
-      </td>
-
-      <td>
-        EndUser : call_count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Load time sec
-      </td>
-
-      <td>
-        EndUser : average_response_time
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Apdex
-      </td>
-
-      <td>
-        EndUser/Apdex : score
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        % Satisfied
-      </td>
-
-      <td>
-        EndUser/Apdex : s divided by EndUser : call_count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        % Tolerating
-      </td>
-
-      <td>
-        EndUser/Apdex : t divided by Enduser : call_count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        % Frustrated
-      </td>
-
-      <td>
-        EndUser/Apdex : f divided by Enduser : call_count
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## App server metrics for SLAs [#app-metrics]
 

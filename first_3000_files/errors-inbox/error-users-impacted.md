@@ -75,89 +75,17 @@ To improve the signal to noise ratio of your triggered alerts see [alert creatio
 
 You can use an agent method to identify an end user. See implementation details for each agent below:
 
-<table>
-    <thead>
-        <tr>
-            <th>
-                Agent
-            </th>
-            <th>
-                Method to identify an end user
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                Browser
-            </td>
-            <td>
-                [`newrelic.setUserId(value: string|null)`](/docs/browser/new-relic-browser/browser-apis/setuserid/)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Go
-            </td>
-            <td>
-                [`txn.SetUserID("example user ID")`](/docs/apm/agents/go-agent/api-guides/guide-using-go-agent-api/#user-tracking)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Java
-            </td>
-            <td>
-                [`NewRelic.setUserId(String userId);`](/docs/apm/agents/java-agent/attributes/java-agent-attributes/#user-attributes)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Mobile
-            </td>
-            <td>
-                [`setUserId`](/docs/data-apis/custom-data/custom-events/report-mobile-monitoring-custom-events-attributes/#track-user)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                .NET
-            </td>
-            <td>
-                [`SetUserId`](/docs/apm/agents/net-agent/net-agent-api/itransaction/#setuserid)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Node.js
-            </td>
-            <td>
-                [`setUserID(id)`](https://newrelic.github.io/node-newrelic/API.html#setUserID)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                PHP
-            </td>
-            <td>
-                [`newrelic_set_user_id(string $user_id)`](https://docs.newrelic.com/docs/apm/agents/php-agent/php-agent-api/newrelic_set_user_id/)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Python
-            </td>
-            <td>
-                [`newrelic.agent.set_user_id(user_id)`](https://docs.newrelic.com/docs/apm/agents/python-agent/python-agent-api/setuserid-python-agent-api)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Ruby
-            </td>
-            <td>
-                [`NewRelic::Agent.set_user_id`](/docs/apm/agents/ruby-agent/api-guides/sending-handled-errors-new-relic/#user-tracking)
-            </td>
-        </tr>
-    </tbody>
-</table>
+# Table
+
+| Agent | Method to identify an end user |
+| - | - |
+| Browser | [`newrelic.setUserId(value: string|null)`](/docs/browser/new-relic-browser/browser-apis/setuserid/) |
+| Go | [`txn.SetUserID("example user ID")`](/docs/apm/agents/go-agent/api-guides/guide-using-go-agent-api/#user-tracking) |
+| Java | [`NewRelic.setUserId(String userId);`](/docs/apm/agents/java-agent/attributes/java-agent-attributes/#user-attributes) |
+| Mobile | [`setUserId`](/docs/data-apis/custom-data/custom-events/report-mobile-monitoring-custom-events-attributes/#track-user) |
+| .NET | [`SetUserId`](/docs/apm/agents/net-agent/net-agent-api/itransaction/#setuserid) |
+| Node.js | [`setUserID(id)`](https://newrelic.github.io/node-newrelic/API.html#setUserID) |
+| PHP | [`newrelic_set_user_id(string $user_id)`](https://docs.newrelic.com/docs/apm/agents/php-agent/php-agent-api/newrelic_set_user_id/) |
+| Python | [`newrelic.agent.set_user_id(user_id)`](https://docs.newrelic.com/docs/apm/agents/python-agent/python-agent-api/setuserid-python-agent-api) |
+| Ruby | [`NewRelic::Agent.set_user_id`](/docs/apm/agents/ruby-agent/api-guides/sending-handled-errors-new-relic/#user-tracking) |
+

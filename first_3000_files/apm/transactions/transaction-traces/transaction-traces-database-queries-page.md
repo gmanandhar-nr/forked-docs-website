@@ -63,67 +63,17 @@ Common database query setting changes include:
 
 Here are some tips to improve your app's database performance:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Use database queries**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Use database queries** | **Comments** |
+| - | - |
+| Time | Look for queries where the `TOTAL DURATION` contributes large amounts of time to the overall transaction time. This indicates a good place to try to enhance your database query with an index or some other optimization. |
+| Duplicate queries | Look for queries that repeatedly query the same kind of information; for example, multiple queries to look up individual account IDs. Try rewriting the query to `INCLUDE` the specific values (account IDs 1, 2, 10, 14, 17, etc.) so that a single query can get all the relevant items. |
+| Database overhead | Look at the structure of your queries to see if there are opportunities to combine different types of information into a single call; for example, querying for the account ID, name, etc. This is useful, for example, if your database center is in a different geographical location, because this will reduce overhead.
 
-  <tbody>
-    <tr>
-      <td>
-        Time
-      </td>
+        The amount of time for your database request and response may be very fast. However, by combining requests into fewer calls, you can reduce that time even more. |
+| MySQL | From your app's main [APM **Summary**](/docs/apm/applications-menu/monitoring/apm-overview-page) page, compare the database time on the main chart to other processing time. Sudden spikes or larger amounts of database time compared to other processing times may indicate problems. |
 
-      <td>
-        Look for queries where the `TOTAL DURATION` contributes large amounts of time to the overall transaction time. This indicates a good place to try to enhance your database query with an index or some other optimization.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Duplicate queries
-      </td>
-
-      <td>
-        Look for queries that repeatedly query the same kind of information; for example, multiple queries to look up individual account IDs. Try rewriting the query to `INCLUDE` the specific values (account IDs 1, 2, 10, 14, 17, etc.) so that a single query can get all the relevant items.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Database overhead
-      </td>
-
-      <td>
-        Look at the structure of your queries to see if there are opportunities to combine different types of information into a single call; for example, querying for the account ID, name, etc. This is useful, for example, if your database center is in a different geographical location, because this will reduce overhead.
-
-        The amount of time for your database request and response may be very fast. However, by combining requests into fewer calls, you can reduce that time even more.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        MySQL
-      </td>
-
-      <td>
-        From your app's main [APM <DNT>**Summary**</DNT>](/docs/apm/applications-menu/monitoring/apm-overview-page) page, compare the database time on the main chart to other processing time. Sudden spikes or larger amounts of database time compared to other processing times may indicate problems.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Find other slow queries [#slow-queries]
 

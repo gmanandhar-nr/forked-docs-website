@@ -36,109 +36,17 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 You can [query and explore your data](/docs/using-new-relic/data/understand-data/query-new-relic-data) using the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| StateMachine | `AwsStatesStateMachineSample` | `AwsStatesStateMachine` |
+| Activity | `AwsStatesActivitySample` | `AwsStatesActivity` |
+| LambdaFunction | `AwsStatesLambdaFunctionSample` | `AwsStatesLambdaFunction` |
+| ServiceIntegration | `AwsStatesServiceIntegrationSample` | `AwsStatesServiceIntegration` |
+| Service | `AwsStatesServiceSample` | `AwsStatesService` |
+| ApiUsage | `AwsStatesApiUsageSample` | `AwsStatesApiUsage` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        StateMachine
-      </td>
-
-      <td>
-        `AwsStatesStateMachineSample`
-      </td>
-
-      <td>
-        `AwsStatesStateMachine`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Activity
-      </td>
-
-      <td>
-        `AwsStatesActivitySample`
-      </td>
-
-      <td>
-        `AwsStatesActivity`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        LambdaFunction
-      </td>
-
-      <td>
-        `AwsStatesLambdaFunctionSample`
-      </td>
-
-      <td>
-        `AwsStatesLambdaFunction`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        ServiceIntegration
-      </td>
-
-      <td>
-        `AwsStatesServiceIntegrationSample`
-      </td>
-
-      <td>
-        `AwsStatesServiceIntegration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Service
-      </td>
-
-      <td>
-        `AwsStatesServiceSample`
-      </td>
-
-      <td>
-        `AwsStatesService`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        ApiUsage
-      </td>
-
-      <td>
-        `AwsStatesApiUsageSample`
-      </td>
-
-      <td>
-        `AwsStatesApiUsage`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

@@ -53,135 +53,43 @@ Use the metadata associated with each metric to [filter and facet](/docs/infrast
 
 ### Account [#account-data]
 
-<table>
-  <thead>
-    <tr>
-      <th width={350}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-
-      <th>
-        Metadata
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `transactions`
-      </td>
-
-      <td>
-        Total number of requests made to a storage service or the specified API operation.
-      </td>
-
-      <td>
-        `responseType`
+| Metric | Description | Metadata |
+| - | - | - |
+| `transactions` | Total number of requests made to a storage service or the specified API operation. | `responseType`
 
         `geoType`
 
         `apiName`
 
-        `authentication`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ingressBytes`
-      </td>
-
-      <td>
-        Total amount of ingress data into the storage service, in bytes.
-      </td>
-
-      <td>
-        `geoType`
+        `authentication` |
+| `ingressBytes` | Total amount of ingress data into the storage service, in bytes. | `geoType`
 
         `apiName`
 
-        `authentication`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `egressBytes`
-      </td>
-
-      <td>
-        Total amount of egress data from the storage service, in bytes.
-      </td>
-
-      <td>
-        `geoType`
+        `authentication` |
+| `egressBytes` | Total amount of egress data from the storage service, in bytes. | `geoType`
 
         `apiName`
 
-        `authentication`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `successServerLatencyMilliseconds`
-      </td>
-
-      <td>
-        The average latency used by Azure Storage to process a successful request, in milliseconds.
-      </td>
-
-      <td>
-        `geoType`
+        `authentication` |
+| `successServerLatencyMilliseconds` | The average latency used by Azure Storage to process a successful request, in milliseconds. | `geoType`
 
         `apiName`
 
-        `authentication`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `successE2ELatencyMilliseconds`
-      </td>
-
-      <td>
-        The average end-to-end latency of successful requests made to the storage service, in milliseconds.
-      </td>
-
-      <td>
-        `geoType`
+        `authentication` |
+| `successE2ELatencyMilliseconds` | The average end-to-end latency of successful requests made to the storage service, in milliseconds. | `geoType`
 
         `apiName`
 
-        `authentication`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `availabilityPercent`
-      </td>
-
-      <td>
-        The percentage of availability for the storage service.
-      </td>
-
-      <td>
-        `geoType`
+        `authentication` |
+| `availabilityPercent` | The percentage of availability for the storage service. | `geoType`
 
         `apiName`
 
-        `authentication`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        `authentication` |
+
 
 ### Blobs [#blob-data]
 

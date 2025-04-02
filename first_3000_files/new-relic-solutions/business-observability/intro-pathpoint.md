@@ -208,79 +208,26 @@ When you're developing a flow, you must first focus on the stages that a user or
 
 ### Stage examples [#stage-examples]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Industry
-      </th>
+# Table
 
-      <th style={{ width: "200px" }}>
-        Flow description
-      </th>
-
-      <th>
-        Stages
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Hotel (hospitality)
-      </td>
-
-      <td>
-        Guest booking and stay
-      </td>
-
-      <td>
-        1. Browse available rooms
+| Industry | Flow description | Stages |
+| - | - | - |
+| Hotel (hospitality) | Guest booking and stay | 1. Browse available rooms
         2. Book a room
         3. Check in and stay
-        4. Check out
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Online marketplace
-      </td>
-
-      <td>
-        Basic purchase journey
-      </td>
-
-      <td>
-        1. Browse available products
+        4. Check out |
+| Online marketplace | Basic purchase journey | 1. Browse available products
         2. Add to/manage products in a cart
         3. Complete a purchase
         4. Receive and/or return a purchase
-        5. Manage notifications and marketing
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Rideshare
-      </td>
-
-      <td>
-        Book and take a ride
-      </td>
-
-      <td>
-        1. Book a ride
+        5. Manage notifications and marketing |
+| Rideshare | Book and take a ride | 1. Book a ride
         2. Get assigned a driver
         3. Start a ride start
         4. End a ride
         5. Pay
-        6. Provide feedback
-      </td>
-    </tr>
-  </tbody>
-</table>
+        6. Provide feedback |
+
 
 ### Steps examples [#examples]
 

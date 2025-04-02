@@ -43,45 +43,17 @@ Currently, the Trace API accepts two types of data formats:
 
 The attributes in the table below are restricted in the `newrelic`-format JSON (in the `attributes` block) and in the [`zipkin`](/docs/apm/distributed-tracing/trace-api/report-zipkin-format-traces-trace-api)-format JSON (in the `tags` block). <DNT>**Any values with these keys will be omitted**</DNT>:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "180px" }}>
-        Restricted attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Restricted attribute | Description |
+| - | - |
+| `entityGuid`
 
-  <tbody>
-    <tr>
-      <td>
-        `entityGuid`
+        _string_ | Unique identifier for the entity that created this span. Generated from `service.name`, if available. |
+| `guid`
 
-        _string_
-      </td>
+        _string_ | Used for backwards compatibility with data from  agents. |
 
-      <td>
-        Unique identifier for the entity that created this span. Generated from `service.name`, if available.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `guid`
-
-        _string_
-      </td>
-
-      <td>
-        Used for backwards compatibility with data from <InlinePopover type="apm"/> agents.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The attributes in the table below are used internally to identify entities. Any values submitted with these keys in the attributes section of a metric data point may cause undefined behavior such as missing entities in the UI or telemetry not associating with the expected entities. For more information please refer to [Entity synthesis](/docs/new-relic-one/use-new-relic-one/core-concepts/what-entity-new-relic/#entity-synthesis):
 

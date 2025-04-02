@@ -233,70 +233,23 @@ Here are some additional distributed tracing UI details, rules, and limits:
 
       This table describes how different span errors are handled:
 
-      <table>
-        <thead>
-          <tr>
-            <th style={{ width: "200px" }}>
-              Error type
-            </th>
+      # Table
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              Spans ending in errors
-            </td>
-
-            <td>
-              An error that leaves the boundary of a span results in an error on that span and on any ancestor spans that also exit with an error, until the error is caught or exits the transaction. You can see if an error is caught in an ancestor span.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              Notice errors
-            </td>
-
-            <td>
-              Errors noticed by calls to the agent `noticeError` API or by the automatic agent instrumentation are attached to the currently executing span.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              Response code errors
-            </td>
-
-            <td>
-              Response code errors are attached to the associated span, such as:
+| Error type | Description |
+| - | - |
+| Spans ending in errors | An error that leaves the boundary of a span results in an error on that span and on any ancestor spans that also exit with an error, until the error is caught or exits the transaction. You can see if an error is caught in an ancestor span. |
+| Notice errors | Errors noticed by calls to the agent `noticeError` API or by the automatic agent instrumentation are attached to the currently executing span. |
+| Response code errors | Response code errors are attached to the associated span, such as:
 
               * Client span: External transactions prefixed with `http` or `db`.
               * Entry span: In the case of a transaction ending in a response code error.
 
-                The response code for these spans is captured as an attribute `http.statusCode` and attached to that span.
-            </td>
-          </tr>
+                The response code for these spans is captured as an attribute `http.statusCode` and attached to that span. |
+| OpenTelemetry Errors | The **Error Details** box of the right pane is populated by spans containing `otel.status_code = ERROR` and displays the content of `otel.status_description`.
 
-          <tr>
-            <td>
-              OpenTelemetry Errors
-            </td>
+              
+                OpenTelemetry span events handled by the app/service are displayed independently of span error status and are not necessarily associated with a span error status. You can view span event exceptions and non-exceptions by clicking **View span events** in the right pane. |
 
-            <td>
-              The <DNT>**Error Details**</DNT> box of the right pane is populated by spans containing `otel.status_code = ERROR` and displays the content of `otel.status_description`.
-
-              <Callout variant="tip">
-                OpenTelemetry span events handled by the app/service are displayed independently of span error status and are not necessarily associated with a span error status. You can view span event exceptions and non-exceptions by clicking <DNT>**View span events**</DNT> in the right pane.
-              </Callout>
-            </td>
-          </tr>
-        </tbody>
-      </table>
   </Collapser>
 
   <Collapser

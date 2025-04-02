@@ -43,94 +43,38 @@ If you need different security settings than default or high-security mode, you 
 * [Custom instrumentation](/docs/agents/ruby-agent/customization/ruby-custom-instrumentation)
 * [Custom SSL certificates](/docs/agents/ruby-agent/configuration/custom-ssl-certificates-ruby)
 
-<table>
-  <thead>
-    <tr>
-      <th width="330px">
-        <DNT>
-          **Setting**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Effects on data security**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Setting** | **Effects on data security** |
+| - | - |
+| [`audit_log.enabled`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#audit_log-enabled)
 
-  <tbody>
-    <tr>
-      <td>
-        [`audit_log.enabled`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#audit_log-enabled)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `false`
+        _boolean_ | Default: `false`
 
         By default, the agent does not log all data sent to New Relic in the agent log file.
 
         If you set this to `true`:
 
         * The agent logs data sent to the New Relic collector in the agent log file. You can then evaluate the information that the agent sends by reviewing the agent log file to see if it includes sensitive information.
-        * All endpoints are included in the agent log file. You can specify that only certain endpoints should be included in the audit log by using [`audit_log.endpoints`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#audit_log-endpoints).
-      </td>
-    </tr>
+        * All endpoints are included in the agent log file. You can specify that only certain endpoints should be included in the audit log by using [`audit_log.endpoints`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#audit_log-endpoints). |
+| [`high_security`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#high_security)
 
-    <tr>
-      <td>
-        [`high_security`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#high_security)
+        _boolean_ | Default: `false`
 
-        _boolean_
-      </td>
+        To enable [high-security mode](#restricted), set this to `true` and [enable high security in New Relic](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic. |
+| [`proxy_host`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#proxy_host)
 
-      <td>
-        Default: `false`
+        _string_ | Default: (none)
 
-        To enable [high-security mode](#restricted), set this to `true` and [enable high security in New Relic](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic.
-      </td>
-    </tr>
+        Some proxies default to using HTTP, which is a less secure protocol. |
+| [`attributes.enabled`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#attributes-enabled)
 
-    <tr>
-      <td>
-        [`proxy_host`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#proxy_host)
+        _boolean_ | Default: `true`
 
-        _string_
-      </td>
+        By default, you are sending [attributes](/docs/agents/ruby-agent/attributes/enabling-disabling-attributes-ruby) to New Relic. If you do not want to send attributes to New Relic, set this to `false`. |
+| [`attributes.exclude`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#attributes-exclude)
 
-      <td>
-        Default: (none)
-
-        Some proxies default to using HTTP, which is a less secure protocol.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`attributes.enabled`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#attributes-enabled)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `true`
-
-        By default, you are sending [attributes](/docs/agents/ruby-agent/attributes/enabling-disabling-attributes-ruby) to New Relic. If you do not want to send attributes to New Relic, set this to `false`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`attributes.exclude`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#attributes-exclude)
-
-        _array_
-      </td>
-
-      <td>
-        Default: `[]`
+        _array_ | Default: `[]`
 
         If there are specific attribute keys that you do **not** want to send to New Relic in transaction traces, identify them using `attributes.exclude`. This restricts the information sent to New Relic.
 
@@ -139,42 +83,21 @@ If you need different security settings than default or high-security mode, you 
         * `request.headers.*`: Removes all request headers.
 
           (Note that HTTP headers that contain sensitive data such as `cookie` and `authorization` are never collected.)
-        * `response.headers.*`: Removes all response headers.
-      </td>
-    </tr>
+        * `response.headers.*`: Removes all response headers. |
+| [`transaction_tracer.record_sql`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#transaction_tracer-record_sql)
 
-    <tr>
-      <td>
-        [`transaction_tracer.record_sql`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#transaction_tracer-record_sql)
-
-        _string_
-      </td>
-
-      <td>
-        Default: `obfuscated`
+        _string_ | Default: `obfuscated`
 
         By default, `transaction_tracer.record_sql` is set to `obfuscated`, which strips out the numeric and string literals.
 
         * If you do not want the agent to capture query information, set this to `none`.
         * If you want the agent to capture all query information in its original form, set this to `raw`.
-        * When you enable [high-security mode](#restricted), this is automatically set to `obfuscated`.
-      </td>
-    </tr>
+        * When you enable [high-security mode](#restricted), this is automatically set to `obfuscated`. |
+| [`strip_exception_messages.enabled`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#strip_exception_messages-enabled)
 
-    <tr>
-      <td>
-        [`strip_exception_messages.enabled`](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#strip_exception_messages-enabled)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: the value of the `high_security` configuration option
+        _boolean_ | Default: the value of the `high_security` configuration option
 
         By default, this is set to `false`, which means that the agent sends messages from all exceptions to the New Relic collector. If you enable [high-security mode](#restricted), this is automatically changed to `true`, and the agent strips the messages from exceptions.
 
-        If you are not using high-security mode but still want to strip messages from all exceptions except those in your [allow list](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#strip_exception_messages-whitelist), set this to `true`.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        If you are not using high-security mode but still want to strip messages from all exceptions except those in your [allow list](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#strip_exception_messages-whitelist), set this to `true`. |
+

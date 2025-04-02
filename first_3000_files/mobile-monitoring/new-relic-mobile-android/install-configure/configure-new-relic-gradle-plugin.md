@@ -13,78 +13,22 @@ freshnessValidatedDate: never
 
 The New Relic Gradle plugin extension allows you to configure the behavior of plugin tasks executed during Gradle builds. Create a plugin extension in the Gradle build files that apply the New Relic plugin, then add any of the following configuration options:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Config option
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `variantMapsEnabled`
-      </td>
-
-      <td>
-        Generate unique build IDs for each app variant. Build IDs are unique identifiers assigned to each build of your app. They're helpful for tracking specific builds, especially when you have different versions with multiple builds, such as version 1.1.1 build 0.0.1. Default: `true`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `uploadMapsForVariant`
-      </td>
-
-      <td>
-        Specify which variant build types should report ProGuard maps to New Relic. Default: `Release`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `excludeVariantInstrumentation`
-      </td>
-
-      <td>
-        Exclude specific variants from instrumentation during builds. Default: 'None'
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `excludePackageInstrumentation`
-      </td>
-
-      <td>
-        Exclude specific classes whose package name starts with or includes class name patterns from instrumentation during builds. This feature can help when
+| Config option | Description |
+| - | - |
+| `variantMapsEnabled` | Generate unique build IDs for each app variant. Build IDs are unique identifiers assigned to each build of your app. They're helpful for tracking specific builds, especially when you have different versions with multiple builds, such as version 1.1.1 build 0.0.1. Default: `true`. |
+| `uploadMapsForVariant` | Specify which variant build types should report ProGuard maps to New Relic. Default: `Release` |
+| `excludeVariantInstrumentation` | Exclude specific variants from instrumentation during builds. Default: 'None' |
+| `excludePackageInstrumentation` | Exclude specific classes whose package name starts with or includes class name patterns from instrumentation during builds. This feature can help when
         encountering sensitive or problematic class data.  Default: 'None'
 
-        Supported when used with Gradle 7.4 and higher.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `logInstrumentationEnabled`
-      </td>
-
-      <td>
-          Replaces Android Util Log Classes with NewRelic Log Method for log reporting
+        Supported when used with Gradle 7.4 and higher. |
+| `logInstrumentationEnabled` | Replaces Android Util Log Classes with NewRelic Log Method for log reporting
           * Default: `true`
 
-          Supported when used with Gradle 7.4 and higher.
-      </td>
-    </tr>
+          Supported when used with Gradle 7.4 and higher. |
 
-  </tbody>
-</table>
 
 Here are some simple examples showing how to apply plugin configuration options to the agent:
 

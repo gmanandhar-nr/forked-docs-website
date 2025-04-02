@@ -33,51 +33,14 @@ To instrument your app, New Relic separates each path through your code into its
 
 Use these methods when New Relic is not instrumenting a particular part of your code at all:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Do this...
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Do this... |
+| - | - |
+| Time a method New Relic is not instrumenting automatically | Create a new transaction. See [Tracing transaction entry points](/docs/agents/ruby-agent/customization/ruby-custom-instrumentation#transaction-tracers). |
+| Time something other than a single method call | Use the [Tracer API](/docs/agents/ruby-agent/customization/ruby-custom-instrumentation#advanced-tracing). |
+| Prevent a transaction from reporting to New Relic | [Ignore](/docs/agents/ruby-agent/customization/ignoring-specific-transactions) the transaction. |
 
-  <tbody>
-    <tr>
-      <td>
-        Time a method New Relic is not instrumenting automatically
-      </td>
-
-      <td>
-        Create a new transaction. See [Tracing transaction entry points](/docs/agents/ruby-agent/customization/ruby-custom-instrumentation#transaction-tracers).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Time something other than a single method call
-      </td>
-
-      <td>
-        Use the [Tracer API](/docs/agents/ruby-agent/customization/ruby-custom-instrumentation#advanced-tracing).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Prevent a transaction from reporting to New Relic
-      </td>
-
-      <td>
-        [Ignore](/docs/agents/ruby-agent/customization/ignoring-specific-transactions) the transaction.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Time specific methods using segments [#segments]
 

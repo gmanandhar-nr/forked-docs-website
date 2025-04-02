@@ -12,50 +12,13 @@ freshnessValidatedDate: never
 
 We love open-source software, and use the following in the Microsoft Azure Portal Extension. Thank you, open-source community, for making these fine tools! Some of these are listed under multiple software licenses, and in that case we have listed the license we've chosen to use.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        **Library**
-      </th>
+# Table
 
-      <th>
-        **License**
-      </th>
-    </tr>
-  </thead>
+| **Library** | **License** |
+| - | - |
+| [Antlr](http://www.nuget.org/packages/Antlr/) | [BSD](http://www.antlr3.org/license.html) |
+| [JSON.NET](http://james.newtonking.com/json) | [MIT](https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md) |
+| [PowerArgs](http://www.nuget.org/packages/PowerArgs/) | [MIT](https://github.com/adamabdelhamed/PowerArgs/blob/master/LICENSE.txt) |
 
-  <tbody>
-    <tr>
-      <td>
-        [Antlr](http://www.nuget.org/packages/Antlr/)
-      </td>
-
-      <td>
-        [BSD](http://www.antlr3.org/license.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [JSON.NET](http://james.newtonking.com/json)
-      </td>
-
-      <td>
-        [MIT](https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [PowerArgs](http://www.nuget.org/packages/PowerArgs/)
-      </td>
-
-      <td>
-        [MIT](https://github.com/adamabdelhamed/PowerArgs/blob/master/LICENSE.txt)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The remainder of the code is covered by the New Relic License agreement found in the LICENSE file in the distribution.

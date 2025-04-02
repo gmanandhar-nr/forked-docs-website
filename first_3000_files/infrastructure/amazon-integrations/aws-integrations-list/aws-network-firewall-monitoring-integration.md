@@ -32,265 +32,28 @@ This New Relic infrastructure integration collects the following AWS Network Fir
 
 ### AWS Network Firewall Metric data [#firewall-metric-data]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `DroppedPackets` | Count | Number of packets dropped due to rule actions. Reporting criteria: There is a nonzero value. |
+| `InvalidDroppedPackets` | Count | Number of packets dropped for failing packet validation due to issues with the packet. Reporting criteria: There is a nonzero value. |
+| `OtherDroppedPackets` | Count | Number of packets dropped due to reasons other than those described by `InvalidDroppedPackets` or `DroppedPackets`. Reporting criteria: There is a nonzero value. |
+| `Packets` | Count | Number of packets inspected for a firewall policy or stateless rule group for which a custom action is defined. This metric is only used for the dimension `CustomAction`. Reporting criteria: There is a nonzero value. |
+| `PassedPackets` | Count | Number of packets that the Network Firewall firewall allowed through to their destinations. Reporting criteria: There is a nonzero value. |
+| `ReceivedPackets` | Count | Number of packets received by the Network Firewall firewall. Reporting criteria: There is a nonzero value. |
+| `RejectedPackets` | Count | Number of packets rejected due to Reject stateful rule actions. Reporting criteria: There is a nonzero value. |
+| `StreamExceptionPolicyPackets` | Count | Number of packets matching the firewall policy's stream exception policy. Reporting criteria: There is a nonzero value. |
+| `TLSDroppedPackets` | Count | Number of packets dropped by Network Firewall while inspecting SSL/TLS packets. Reporting criteria: There is a nonzero value. |
+| `TLSErrors` | Count | Number of errors observed by Network Firewall while inspecting SSL/TLS packets. Reporting criteria: There is a nonzero value. |
+| `TLSPassedPackets` | Count | Number of packets passed by Network Firewall while inspecting SSL/TLS packets. Reporting criteria: There is a nonzero value. |
+| `TLSReceivedPackets` | Count | Number of SSL/TLS packets received by the Network Firewall firewall. Reporting criteria: There is a nonzero value. |
+| `TLSRejectedPackets` | Count | Number of packets rejected by Network Firewall while inspecting SSL/TLS packets. Reporting criteria: There is a nonzero value. |
+| `TLSRevocationStatusOKConnections` | Count | The number of SSL/TLS connections to TLS servers whose certificates have been confirmed as not revoked. Reporting criteria: There is a nonzero value. |
+| `TLSRevocationStatusRevokedConnections` | Count | The number of SSL/TLS connections to TLS servers whose certificates have been confirmed as revoked. Reporting criteria: There is a nonzero value. |
+| `TLSRevocationStatusUnknownConnections` | Count | The number of SSL/TLS connections to TLS servers whose certificates revocation status is unknown or could not be determined by the firewall. This can occur when the OCSP responder for a server certificate returns an unknown status, or when the firewall is unable to connect to the CRL or OCSP endpoints provided in the certificate. Reporting criteria: There is a nonzero value. |
+| `TLSTimedOutConnections` | Count | Number of SSL/TLS connections that timed out during SSL/TLS inspection by Network Firewall. Reporting criteria: There is a nonzero value. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `DroppedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets dropped due to rule actions. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InvalidDroppedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets dropped for failing packet validation due to issues with the packet. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OtherDroppedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets dropped due to reasons other than those described by `InvalidDroppedPackets` or `DroppedPackets`. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Packets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets inspected for a firewall policy or stateless rule group for which a custom action is defined. This metric is only used for the dimension `CustomAction`. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PassedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets that the Network Firewall firewall allowed through to their destinations. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReceivedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets received by the Network Firewall firewall. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RejectedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets rejected due to Reject stateful rule actions. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StreamExceptionPolicyPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets matching the firewall policy's stream exception policy. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TLSDroppedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets dropped by Network Firewall while inspecting SSL/TLS packets. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TLSErrors`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of errors observed by Network Firewall while inspecting SSL/TLS packets. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TLSPassedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets passed by Network Firewall while inspecting SSL/TLS packets. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TLSReceivedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of SSL/TLS packets received by the Network Firewall firewall. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TLSRejectedPackets`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of packets rejected by Network Firewall while inspecting SSL/TLS packets. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TLSRevocationStatusOKConnections`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of SSL/TLS connections to TLS servers whose certificates have been confirmed as not revoked. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TLSRevocationStatusRevokedConnections`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of SSL/TLS connections to TLS servers whose certificates have been confirmed as revoked. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TLSRevocationStatusUnknownConnections`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of SSL/TLS connections to TLS servers whose certificates revocation status is unknown or could not be determined by the firewall. This can occur when the OCSP responder for a server certificate returns an unknown status, or when the firewall is unable to connect to the CRL or OCSP endpoints provided in the certificate. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TLSTimedOutConnections`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Number of SSL/TLS connections that timed out during SSL/TLS inspection by Network Firewall. Reporting criteria: There is a nonzero value.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### AWS Network Firewall dimensions
 

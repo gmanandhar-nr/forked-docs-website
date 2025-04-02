@@ -125,82 +125,14 @@ For both https <DNT>**and**</DNT> http webpages, we transmit data via https. Thi
   New Relic requires support of the SHA256 hash function, which some older operating systems do not support. If an end user lacks SHA256, the browser agent will not connect to New Relic and data will not be sent.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        <DNT>
-          **Data transmission**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Frequency**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Data transmission** | **Frequency** |
+| - | - |
+| Fetch the agent script | Once following page load via https |
+| Send page load timing data | Once following page load via https |
+| Send page view timing data (`PageViewTiming`) | Data is sent 10 seconds after the initial page load, and then every 30 seconds afterward. |
+| Send AJAX and JavaScript error data | Once every 10 seconds when there is activity via https |
+| Send session trace data | Every ten seconds when there is activity and a session trace is occurring via https |
+| Send SPA data | At the end of an interaction via https |
 
-  <tbody>
-    <tr>
-      <td>
-        Fetch the agent script
-      </td>
-
-      <td>
-        Once following page load via https
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Send page load timing data
-      </td>
-
-      <td>
-        Once following page load via https
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Send page view timing data (`PageViewTiming`)
-      </td>
-
-      <td>
-        Data is sent 10 seconds after the initial page load, and then every 30 seconds afterward.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Send AJAX and JavaScript error data
-      </td>
-
-      <td>
-        Once every 10 seconds when there is activity via https
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Send session trace data
-      </td>
-
-      <td>
-        Every ten seconds when there is activity and a session trace is occurring via https
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Send SPA data
-      </td>
-
-      <td>
-        At the end of an interaction via https
-      </td>
-    </tr>
-  </tbody>
-</table>

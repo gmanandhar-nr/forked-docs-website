@@ -127,131 +127,22 @@ The Varnish Cache integration collects both metrics(<strong>M</strong>) and inve
   ' '
 }
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: '150px' }}>
-        Setting
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-
-      <th>
-        Default
-      </th>
-
-      <th>
-        Applies To
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <DNT>
-          **INSTANCE_NAME**
-        </DNT>
-      </td>
-
-      <td>
-        User defined name to identify data from this instance in New Relic. <DNT>**Required**</DNT>.
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td style={{ "text-align": "center" }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **PARAMS_CONFIG_FILE**
-        </DNT>
-      </td>
-
-      <td>
-        The location of the `varnish.params` config file. If this argument is omitted, the following locations will be checked:
+| Setting | Description | Default | Applies To |
+| - | - | - | - |
+| **INSTANCE_NAME** | User defined name to identify data from this instance in New Relic. **Required**. | N/A | M/I |
+| **PARAMS_CONFIG_FILE** | The location of the `varnish.params` config file. If this argument is omitted, the following locations will be checked:
 
         * `/etc/default/varnish/varnish.params`
         * `/etc/sysconfig/varnish/varnish.params`
 
           Note: The location and name of the Varnish configuration file may vary. For details, see [Different locations of the Varnish configuration file](https://book.varnish-software.com/4.0/chapters/Getting_Started.html#different-locations-of-the-varnish-configuration-file).
-          For Varnish 6 and above, this parameter is not required and the integration should be set up for metrics collection only. See [the example for Varnish 6](#example6).
-      </td>
+          For Varnish 6 and above, this parameter is not required and the integration should be set up for metrics collection only. See [the example for Varnish 6](#example6). | N/A | I |
+| **VARNISH_NAME** | Name used when executing the `varnishd` daemon with a custom `-n` flag. **Optional**. | N/A | M |
+| **METRICS** | Set to `true` to enable metrics-only collection. | `false` |
+| **INVENTORY** | Set to `true` to enable inventory-only collection. | `false` |
 
-      <td>
-        N/A
-      </td>
-
-      <td style={{ "text-align": "center" }}>
-        I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **VARNISH_NAME**
-        </DNT>
-      </td>
-
-      <td>
-        Name used when executing the `varnishd` daemon with a custom `-n` flag. <DNT>**Optional**</DNT>.
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td style={{ "text-align": "center" }}>
-        M
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **METRICS**
-        </DNT>
-      </td>
-
-      <td>
-        Set to `true` to enable metrics-only collection.
-      </td>
-
-      <td>
-        `false`
-      </td>
-
-      <td style={{ "text-align": "center" }}/>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **INVENTORY**
-        </DNT>
-      </td>
-
-      <td>
-        Set to `true` to enable inventory-only collection.
-      </td>
-
-      <td>
-        `false`
-      </td>
-
-      <td style={{ "text-align": "center" }}/>
-    </tr>
-  </tbody>
-</table>
 
 The `varnish-config.yml` commands accept the following arguments:
 

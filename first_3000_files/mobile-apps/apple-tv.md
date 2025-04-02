@@ -95,75 +95,29 @@ To install and log into the New Relic Apple TV app:
 
 The New Relic Apple TV app is a companion app that enables you to view dashboards created via the New Relic website and create dashboard slideshows. Information updates in real time, so you always have access to the latest events and metrics. Features include:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        Feature
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Run slideshow
-      </td>
-
-      <td>
-        Add any of your dashboards to the slideshow that cycles through each one at user-set intervals.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View your <InlinePopover type="dashboards"/> and drill down
-      </td>
-
-      <td>
-        * Search and view all your account and favorite dashboards.
+| Feature | Description |
+| - | - |
+| Run slideshow | Add any of your dashboards to the slideshow that cycles through each one at user-set intervals. |
+| View your  and drill down | * Search and view all your account and favorite dashboards.
         * Expand any dashboard widget to see full details.
         * Switch to dark mode. To switch from light to dark mode:
 
-          * Activate Siri on the Apple TV and say <DNT>**dark mode**</DNT>.
+          * Activate Siri on the Apple TV and say **dark mode**.
 
           OR
 
-          * Navigate to <DNT>**Settings > General > Appearance**</DNT> and select <DNT>**Dark**</DNT>. tvOS 11 and higher can switch between dark and light modes automatically, based on sunset and sunrise times.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Switch accounts
-      </td>
-
-      <td>
-        You can switch to any account associated with your username. To switch accounts:
+          * Navigate to **Settings > General > Appearance** and select **Dark**. tvOS 11 and higher can switch between dark and light modes automatically, based on sunset and sunrise times. |
+| Switch accounts | You can switch to any account associated with your username. To switch accounts:
 
         1. From the main menu, select your username.
-        2. Select an account from the list.
-      </td>
-    </tr>
+        2. Select an account from the list. |
+| Switch users | All New Relic accounts and dashboards associated with your username appear automatically.
 
-    <tr>
-      <td>
-        Switch users
-      </td>
+        * To log out from the device: **Main menu > (selected username) > Logout**.
+        * To switch users: Log out, then log in with a new account. |
 
-      <td>
-        All New Relic accounts and dashboards associated with your username appear automatically.
-
-        * To log out from the device: <DNT>**Main menu > (selected username) > Logout**</DNT>.
-        * To switch users: Log out, then log in with a new account.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Data privacy [#privacy]
 

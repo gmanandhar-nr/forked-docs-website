@@ -30,171 +30,22 @@ Before you begin, make sure you have the New Relic, Docker, Podman, Meraki, and 
 
 ### Network firewall rules [#prerequisites-network]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: '200px' }}>
-        Direction
-      </th>
+# Table
 
-      <th>
-        Source
-      </th>
-
-      <th>
-        Destination
-      </th>
-
-      <th>
-        Ports
-      </th>
-
-      <th>
-        Protocol
-      </th>
-
-      <th>
-        Required
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Outbound
-      </td>
-
-      <td>
-        Container host
-      </td>
-
-      <td>
-        `ktranslate` image on [Docker Hub](https://hub.docker.com/r/kentik/ktranslate), [Quay.io](https://quay.io/repository/kentik/ktranslate), or your company's internal repository.
-      </td>
-
-      <td>
-        443
-      </td>
-
-      <td>
-        TCP
-      </td>
-
-      <td>
-        ✓
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Outbound
-      </td>
-
-      <td>
-        Container host
-      </td>
-
-      <td>
-        [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/introduction-metric-api/#requirements)
+| Direction | Source | Destination | Ports | Protocol | Required |
+| - | - | - | - | - | - |
+| Outbound | Container host | `ktranslate` image on [Docker Hub](https://hub.docker.com/r/kentik/ktranslate), [Quay.io](https://quay.io/repository/kentik/ktranslate), or your company's internal repository. | 443 | TCP | ✓ |
+| Outbound | Container host | [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/introduction-metric-api/#requirements)
         Endpoint:
-        `https://metric-api.newrelic.com`
-      </td>
-
-      <td>
-        443
-      </td>
-
-      <td>
-        TCP
-      </td>
-
-      <td>
-        ✓
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Outbound
-      </td>
-
-      <td>
-        Container host
-      </td>
-
-      <td>
-        [New Relic Event API](/docs/data-apis/ingest-apis/event-api/introduction-event-api#requirements)
+        `https://metric-api.newrelic.com` | 443 | TCP | ✓ |
+| Outbound | Container host | [New Relic Event API](/docs/data-apis/ingest-apis/event-api/introduction-event-api#requirements)
         Endpoint:
-        `https://insights-collector.newrelic.com`
-      </td>
-
-      <td>
-        443
-      </td>
-
-      <td>
-        TCP
-      </td>
-
-      <td>
-        ✓
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Outbound
-      </td>
-
-      <td>
-        Container host
-      </td>
-
-      <td>
-        [New Relic Log API](/docs/logs/log-management/log-api/introduction-log-api/#endpoint)
+        `https://insights-collector.newrelic.com` | 443 | TCP | ✓ |
+| Outbound | Container host | [New Relic Log API](/docs/logs/log-management/log-api/introduction-log-api/#endpoint)
         Endpoint:
-        `https://log-api.newrelic.com`
-      </td>
+        `https://log-api.newrelic.com` | 443 | TCP |
+| Outbound | Container host | [Meraki Dashboard API](https://documentation.meraki.com/General_Administration/Other_Topics/Cisco_Meraki_Dashboard_API#API_Requests) endpoint: `https://api.meraki.com/api/v1/` | 443 (default) | TCP | ✓ |
 
-      <td>
-        443
-      </td>
-
-      <td>
-        TCP
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Outbound
-      </td>
-
-      <td>
-        Container host
-      </td>
-
-      <td>
-        [Meraki Dashboard API](https://documentation.meraki.com/General_Administration/Other_Topics/Cisco_Meraki_Dashboard_API#API_Requests) endpoint: `https://api.meraki.com/api/v1/`
-      </td>
-
-      <td>
-        443 (default)
-      </td>
-
-      <td>
-        TCP
-      </td>
-
-      <td>
-        ✓
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Installation [#installation]
 

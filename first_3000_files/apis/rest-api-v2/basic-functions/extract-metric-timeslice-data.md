@@ -48,207 +48,31 @@ For example:
 
 Here is a summary of the metric value retrieval for the time ranges available.
 
-<table>
-  <thead>
-    <tr>
-      <th
+# Table
+
+| <th
         rowSpan={2}
         width={150}
       >
-        <DNT>
-          **Between this time range...**
-        </DNT>
-      </th>
-
-      <th
+        
+          **Between this time range...** | <th
         rowSpan={2}
         width={150}
       >
-        <DNT>
-          **and this time range**
-        </DNT>
-      </th>
+        
+          **and this time range** | **Granularity of collected data** |
+| - | - | - |
+| ≤ 3 hours | 1 minute | 10 evenly spaced data points |
+| \> 3 hour | ≤ 6 hours | 2 minutes |
+| \> 6 hours | ≤ 14 hours | 5 minutes |
+| \> 14 hours | ≤ 24 hours | 10 minutes |
+| \> 1 day (24 hrs) | ≤ 4 days (96 hrs) | 30 minutes |
+| \> 4 days | ≤ 7 days | 1 hour | 1 hour |
+| \> 7 days | ≤ 3 weeks | 3 hours | 3 hours |
+| \> 3 weeks | ≤ 6 weeks | 6 hours | 6 hours |
+| \> 6 weeks | ≤ 9 weeks | 12 hours | 12 hours |
+| \> 63 days | 3 days | 3 days |
 
-      <th colSpan={2}>
-        <DNT>
-          **Granularity of collected data**
-        </DNT>
-      </th>
-    </tr>
-
-    <tr>
-      <th style={{ borderRadius: "0", borderLeft: "1px solid #ccc" }}>
-        data age ≤ 8 days
-      </th>
-
-      <th style={{ borderRadius: "0", borderRight: "0" }}>
-        data age > 8 days
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td/>
-
-      <td>
-        ≤ 3 hours
-      </td>
-
-      <td>
-        1 minute
-      </td>
-
-      <td rowSpan={5}>
-        10 evenly spaced data points
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        \> 3 hour
-      </td>
-
-      <td>
-        ≤ 6 hours
-      </td>
-
-      <td>
-        2 minutes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        \> 6 hours
-      </td>
-
-      <td>
-        ≤ 14 hours
-      </td>
-
-      <td>
-        5 minutes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        \> 14 hours
-      </td>
-
-      <td>
-        ≤ 24 hours
-      </td>
-
-      <td>
-        10 minutes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        \> 1 day (24 hrs)
-      </td>
-
-      <td>
-        ≤ 4 days (96 hrs)
-      </td>
-
-      <td>
-        30 minutes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        \> 4 days
-      </td>
-
-      <td>
-        ≤ 7 days
-      </td>
-
-      <td>
-        1 hour
-      </td>
-
-      <td>
-        1 hour
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        \> 7 days
-      </td>
-
-      <td>
-        ≤ 3 weeks
-      </td>
-
-      <td>
-        3 hours
-      </td>
-
-      <td>
-        3 hours
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        \> 3 weeks
-      </td>
-
-      <td>
-        ≤ 6 weeks
-      </td>
-
-      <td>
-        6 hours
-      </td>
-
-      <td>
-        6 hours
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        \> 6 weeks
-      </td>
-
-      <td>
-        ≤ 9 weeks
-      </td>
-
-      <td>
-        12 hours
-      </td>
-
-      <td>
-        12 hours
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        \> 63 days
-      </td>
-
-      <td/>
-
-      <td>
-        3 days
-      </td>
-
-      <td>
-        3 days
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 When the start time for a requested time range is older than eight days, data has been aggregated or averaged to one hour periods due to the data aggregation schedule. This means that for any one hour period, only a single data value is available. Obtaining data at less than an hourly period in the time range would cause oversampling, resulting in duplicate values being returned. Returning only ten values prevents oversampling and presents a smoother chart, which eliminates a possibly misleading "plateau" effect.
 

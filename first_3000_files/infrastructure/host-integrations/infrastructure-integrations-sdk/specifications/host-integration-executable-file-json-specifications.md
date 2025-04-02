@@ -235,71 +235,17 @@ Here's an example of the first part of an on-host integration's [JSON output](#e
 
 A minimal payload would be a JSON object with only the header fields. Recommendation: If there is no data to collect, use the program return code and log messages written to `stderr`.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        JSON header fields
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| JSON header fields | Description |
+| - | - |
+| `name` | Required. Must be identical to the `name` field in the configuration file.
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
-      </td>
+        Recommendation: Use reverse domain names to generate unique integration names. |
+| `integration_version` | Optional. The integration version. Used to track the integration version running on each host.
 
-      <td>
-        Required. Must be identical to the `name` field in the configuration file.
+        An integration can have more than one executable. Therefore this is not simply the executable's version. |
 
-        Recommendation: Use reverse domain names to generate unique integration names.
-      </td>
-    </tr>
-
-    <tr id="protocol">
-      <td>
-        `protocol_version`
-      </td>
-
-      <td>
-        Required. The version number of the exchange protocol between the integration and the agent that the integration executable is using.
-
-        * The current version is 3. This protocol requires infrastructure agent 1.2.25 or higher.
-        * Protocol 2 requires infrastructure agent 1.0.859 or higher.
-        * Protocol 1 is compatible with all agents.
-
-          For more information, see [SDK changes](/docs/integrations/integrations-sdk/getting-started/compatibility-requirements-infrastructure-integrations-sdk#change-log).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `integration_version`
-      </td>
-
-      <td>
-        Optional. The integration version. Used to track the integration version running on each host.
-
-        An integration can have more than one executable. Therefore this is not simply the executable's version.
-      </td>
-    </tr>
-
-    <tr id="data">
-      <td>
-        `data`
-      </td>
-
-      <td>
-        Required for reporting data. A list containing the [data reported from one or more entities](#exec-data).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## JSON: Entities [#entity-json]
 

@@ -18,45 +18,17 @@ We support two different methods to forward your logs from a Google Cloud Platfo
 
 The following may help you decide which option is best for your business needs.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        GCP log forwarding options
-      </th>
+# Table
 
-      <th>
-        Considerations
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Headerless API
-      </td>
-
-      <td>
-        * Best suited for low log volumes, since it performs one API call for each log record it sends.
+| GCP log forwarding options | Considerations |
+| - | - |
+| Headerless API | * Best suited for low log volumes, since it performs one API call for each log record it sends.
         * Does not incur any extra cost to your GCP subscription.
-        * If your log volume increases, this solution might hit the quota limits of your New Relic account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Dataflow job
-      </td>
-
-      <td>
-        * Best suited for larger log volumes, since it groups log records in batches before sending them to New Relic.
+        * If your log volume increases, this solution might hit the quota limits of your New Relic account. |
+| Dataflow job | * Best suited for larger log volumes, since it groups log records in batches before sending them to New Relic.
         * Reduces the number of API calls and allows you to reduce your quota usage.
-        * May incur extra costs at your GCP subscription, due to the execution of a Dataflow job in your premises.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * May incur extra costs at your GCP subscription, due to the execution of a Dataflow job in your premises. |
+
 
 ## Use headerless API [#gcp-headerless-api]
 

@@ -23,41 +23,13 @@ Our custom Linux installation process for infrastructure monitoring allows you t
 
 Before installation, check the [compatibility and requirements](/docs/infrastructure/install-infrastructure-agent/get-started/requirements-infrastructure-agent/).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Additional agent package options
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| Additional agent package options | Comments |
+| - | - |
+| Troubleshooting | The infrastructure agent package includes the additional `newrelic-infra-ctl` binary, which is used to help [troubleshoot a running agent](/docs/infrastructure/install-configure-manage-infrastructure/manage-your-agent/troubleshoot-running-agent). Although this binary is not required to execute the agent, we recommend that you add it in your path. |
+| Daemon process | As of [version 1.5.59](/docs/release-notes/infrastructure-release-notes/infrastructure-agent-release-notes/new-relic-infrastructure-agent-1559), the infrastructure agent package includes the additional `newrelic-infra-service` binary, which is used to safely manage usual agent daemon process `newrelic-infra`. |
 
-  <tbody>
-    <tr>
-      <td>
-        Troubleshooting
-      </td>
-
-      <td>
-        The infrastructure agent package includes the additional `newrelic-infra-ctl` binary, which is used to help [troubleshoot a running agent](/docs/infrastructure/install-configure-manage-infrastructure/manage-your-agent/troubleshoot-running-agent). Although this binary is not required to execute the agent, we recommend that you add it in your path.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Daemon process
-      </td>
-
-      <td>
-        As of [version 1.5.59](/docs/release-notes/infrastructure-release-notes/infrastructure-agent-release-notes/new-relic-infrastructure-agent-1559), the infrastructure agent package includes the additional `newrelic-infra-service` binary, which is used to safely manage usual agent daemon process `newrelic-infra`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 To install the agent:
 

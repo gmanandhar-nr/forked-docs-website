@@ -40,601 +40,69 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 The following table lists the metrics available for the `Microsoft.MachineLearningServices/workspaces` resource type.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
+
+| Metric | Description |
+| - | - |
+| `ActiveCores` | Number of active cores |
+| `ActiveNodes` | Number of active nodes. These are the nodes which are actively running a job. |
+| `CancelRequestedRuns` | Number of runs where cancel was requested for this workspace. |
+| `CancelledRuns` | Number of runs cancelled for this workspace. |
+| `CompletedRuns` | Number of runs completed successfully for this workspace. |
+| `CpuCapacityMillicores` | Maximum capacity of a CPU node in millicores. |
+| `CpuMemoryCapacityMegabytes` | Maximum memory utilization of a CPU node in megabytes. |
+| `CpuMemoryUtilizationMegabytes` | Memory utilization of a CPU node in megabytes. |
+| `CpuMemoryUtilizationPercentage` | Memory utilization percentage of a CPU node. |
+| `CpuUtilization` | Percentage of utilization on a CPU node |
+| `CpuUtilizationMillicores` | Utilization of a CPU node in millicores |
+| `CpuUtilizationPercentage` | Utilization percentage of a CPU node. |
+| `DiskAvailMegabytes` | Available disk space in megabytes. |
+| `DiskReadMegabytes` | Data read from disk in megabytes |
+| `DiskUsedMegabytes` | Used disk space in megabytes |
+| `DiskWriteMegabytes` | Data written into disk in megabytes |
+| `Errors` | Number of run errors in this workspace |
+| `FailedRuns` | Number of runs failed for this workspace |
+| `FinalizingRuns` | Data read from disk in megabytes |
+| `GpuCapacityMilliGPUs` | Maximum capacity of a GPU device in milli-GPUs |
+| `GpuEnergyJoules` | Interval energy in Joules on a GPU node |
+| `GpuMemoryCapacityMegabytes` | Maximum memory capacity of a GPU device in megabytes. |
+| `GpuMemoryUtilization` | Percentage of memory utilization on a GPU node. |
+| `GpuMemoryUtilizationMegabytes` | Memory utilization of a GPU device in megabytes |
+| `GpuMemoryUtilizationPercentage` | Memory utilization percentage of a GPU device |
+| `GpuUtilization` | Percentage of utilization on a GPU node |
+| `GpuUtilizationMilliGPUs` | Utilization of a GPU device in milli-GPUs |
+| `GpuUtilizationPercentage` | Utilization percentage of a GPU device |
+| `IBReceiveMegabytes` | Network data received over InfiniBand in megabytes |
+| `IBTransmitMegabytes` | Network data sent over InfiniBand in megabytes |
+| `IdleCores` | Number of idle cores |
+| `IdleNodes` | Number of idle nodes |
+| `LeavingCores` | Number of leaving cores |
+| `LeavingNodes` | Number of leaving nodes |
+| `ModelDeployFailed` | Number of model deployments that failed in this workspace |
+| `ModelDeployStarted` | Number of model deployments started in this workspace |
+| `ModelDeploySucceeded` | Number of model deployments that succeeded in this workspace |
+| `ModelRegisterFailed` | Number of model registrations that failed in this workspace |
+| `ModelRegisterSucceeded` | Number of model registrations that succeeded in this workspace |
+| `NetworkInputMegabytes` | Network data received in megabytes. Metrics are aggregated in one minute intervals |
+| `NetworkOutputMegabytes` | Network data sent in megabytes. Metrics are aggregated in one minute intervals. |
+| `Not Responding Runs` | Number of runs not responding for this workspace. |
+| `NotStartedRuns` | Number of runs in Not Started state for this workspace |
+| `PreemptedCores` | Number of preempted cores |
+| `PreemptedNodes` | Number of preempted nodes |
+| `PreparingRuns` | Number of runs that are preparing for this workspace. |
+| `Provisioning Runs` | Number of runs that are provisioning for this workspace. |
+| `Queued Runs` | Number of runs that are queued for this workspace |
+| `QuotaUtilizationPercentage` | Percent of quota utilized |
+| `Started Runs` | Number of runs running for this workspace |
+| `Starting Runs` | Number of runs started for this workspace |
+| `StorageAPIFailureCount` | Azure Blob Storage API calls failure count. |
+| `StorageAPISuccessCount` | Azure Blob Storage API calls success count. |
+| `TotalCores` | Number of total cores |
+| `TotalNodes` | Number of total nodes |
+| `UnusableCores` | Number of unusable cores |
+| `UnusableNodes` | Number of unusable nodes |
+| `Warnings` | Number of run warnings in this workspace |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `ActiveCores`
-      </td>
-
-      <td>
-        Number of active cores
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ActiveNodes`
-      </td>
-
-      <td>
-        Number of active nodes. These are the nodes which are actively running a job.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CancelRequestedRuns`
-      </td>
-
-      <td>
-        Number of runs where cancel was requested for this workspace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CancelledRuns`
-      </td>
-
-      <td>
-        Number of runs cancelled for this workspace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CompletedRuns`
-      </td>
-
-      <td>
-        Number of runs completed successfully for this workspace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuCapacityMillicores`
-      </td>
-
-      <td>
-        Maximum capacity of a CPU node in millicores.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuMemoryCapacityMegabytes`
-      </td>
-
-      <td>
-        Maximum memory utilization of a CPU node in megabytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuMemoryUtilizationMegabytes`
-      </td>
-
-      <td>
-        Memory utilization of a CPU node in megabytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuMemoryUtilizationPercentage`
-      </td>
-
-      <td>
-        Memory utilization percentage of a CPU node.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuUtilization`
-      </td>
-
-      <td>
-        Percentage of utilization on a CPU node
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuUtilizationMillicores`
-      </td>
-
-      <td>
-        Utilization of a CPU node in millicores
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuUtilizationPercentage`
-      </td>
-
-      <td>
-        Utilization percentage of a CPU node.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskAvailMegabytes`
-      </td>
-
-      <td>
-        Available disk space in megabytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskReadMegabytes`
-      </td>
-
-      <td>
-        Data read from disk in megabytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskUsedMegabytes`
-      </td>
-
-      <td>
-        Used disk space in megabytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskWriteMegabytes`
-      </td>
-
-      <td>
-        Data written into disk in megabytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Errors`
-      </td>
-
-      <td>
-        Number of run errors in this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FailedRuns`
-      </td>
-
-      <td>
-        Number of runs failed for this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FinalizingRuns`
-      </td>
-
-      <td>
-        Data read from disk in megabytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GpuCapacityMilliGPUs`
-      </td>
-
-      <td>
-        Maximum capacity of a GPU device in milli-GPUs
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GpuEnergyJoules`
-      </td>
-
-      <td>
-        Interval energy in Joules on a GPU node
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GpuMemoryCapacityMegabytes`
-      </td>
-
-      <td>
-        Maximum memory capacity of a GPU device in megabytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GpuMemoryUtilization`
-      </td>
-
-      <td>
-        Percentage of memory utilization on a GPU node.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GpuMemoryUtilizationMegabytes`
-      </td>
-
-      <td>
-        Memory utilization of a GPU device in megabytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GpuMemoryUtilizationPercentage`
-      </td>
-
-      <td>
-        Memory utilization percentage of a GPU device
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GpuUtilization`
-      </td>
-
-      <td>
-        Percentage of utilization on a GPU node
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GpuUtilizationMilliGPUs`
-      </td>
-
-      <td>
-        Utilization of a GPU device in milli-GPUs
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `GpuUtilizationPercentage`
-      </td>
-
-      <td>
-        Utilization percentage of a GPU device
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IBReceiveMegabytes`
-      </td>
-
-      <td>
-        Network data received over InfiniBand in megabytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IBTransmitMegabytes`
-      </td>
-
-      <td>
-        Network data sent over InfiniBand in megabytes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IdleCores`
-      </td>
-
-      <td>
-        Number of idle cores
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IdleNodes`
-      </td>
-
-      <td>
-        Number of idle nodes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LeavingCores`
-      </td>
-
-      <td>
-        Number of leaving cores
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LeavingNodes`
-      </td>
-
-      <td>
-        Number of leaving nodes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ModelDeployFailed`
-      </td>
-
-      <td>
-        Number of model deployments that failed in this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ModelDeployStarted`
-      </td>
-
-      <td>
-        Number of model deployments started in this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ModelDeploySucceeded`
-      </td>
-
-      <td>
-        Number of model deployments that succeeded in this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ModelRegisterFailed`
-      </td>
-
-      <td>
-        Number of model registrations that failed in this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ModelRegisterSucceeded`
-      </td>
-
-      <td>
-        Number of model registrations that succeeded in this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkInputMegabytes`
-      </td>
-
-      <td>
-        Network data received in megabytes. Metrics are aggregated in one minute intervals
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkOutputMegabytes`
-      </td>
-
-      <td>
-        Network data sent in megabytes. Metrics are aggregated in one minute intervals.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Not Responding Runs`
-      </td>
-
-      <td>
-        Number of runs not responding for this workspace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NotStartedRuns`
-      </td>
-
-      <td>
-        Number of runs in Not Started state for this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PreemptedCores`
-      </td>
-
-      <td>
-        Number of preempted cores
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PreemptedNodes`
-      </td>
-
-      <td>
-        Number of preempted nodes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PreparingRuns`
-      </td>
-
-      <td>
-        Number of runs that are preparing for this workspace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Provisioning Runs`
-      </td>
-
-      <td>
-        Number of runs that are provisioning for this workspace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Queued Runs`
-      </td>
-
-      <td>
-        Number of runs that are queued for this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `QuotaUtilizationPercentage`
-      </td>
-
-      <td>
-        Percent of quota utilized
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Started Runs`
-      </td>
-
-      <td>
-        Number of runs running for this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Starting Runs`
-      </td>
-
-      <td>
-        Number of runs started for this workspace
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageAPIFailureCount`
-      </td>
-
-      <td>
-        Azure Blob Storage API calls failure count.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageAPISuccessCount`
-      </td>
-
-      <td>
-        Azure Blob Storage API calls success count.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalCores`
-      </td>
-
-      <td>
-        Number of total cores
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalNodes`
-      </td>
-
-      <td>
-        Number of total nodes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UnusableCores`
-      </td>
-
-      <td>
-        Number of unusable cores
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UnusableNodes`
-      </td>
-
-      <td>
-        Number of unusable nodes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Warnings`
-      </td>
-
-      <td>
-        Number of run warnings in this workspace
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The following table lists the metrics available for the `Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments` resource type.
 

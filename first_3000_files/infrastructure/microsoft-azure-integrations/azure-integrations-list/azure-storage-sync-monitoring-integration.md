@@ -36,128 +36,19 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Storage Sync metrics [#Azure-storage-sync]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `ServerSyncSessionResult` | Metric that logs a value of 1 each time the Server Endpoint successfully completes a Sync Session with the Cloud Endpoint. |
+| `StorageSyncBatchTransferredFileBytes` | Total file size transferred for Sync Sessions. |
+| `StorageSyncComputedCacheHitRate` | Percentage of bytes that were served from the cache. |
+| `StorageSyncRecallComputedSuccessRate` | Percentage of all recalls that were successful. |
+| `StorageSyncRecalledNetworkBytesByApplication` | Size of data recalled by application. |
+| `StorageSyncRecalledTotalNetworkBytes` | Size of data recalled. |
+| `StorageSyncRecallThroughputBytesPerSecond` | Size of data recall throughput. |
+| `StorageSyncServerHeartbeat` | Metric that logs a value of 1 each time the resigtered server successfully records a heartbeat with the Cloud Endpoint. |
+| `StorageSyncSyncSessionAppliedFilesCount` | Count of Files synced. |
+| `StorageSyncSyncSessionPerItemErrorsCount` | Count of files failed to sync. |
+| `StorageSyncTieringCacheSizeBytes` | Size of data cached on the server. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ServerSyncSessionResult`
-      </td>
-
-      <td>
-        Metric that logs a value of 1 each time the Server Endpoint successfully completes a Sync Session with the Cloud Endpoint.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncBatchTransferredFileBytes`
-      </td>
-
-      <td>
-        Total file size transferred for Sync Sessions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncComputedCacheHitRate`
-      </td>
-
-      <td>
-        Percentage of bytes that were served from the cache.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncRecallComputedSuccessRate`
-      </td>
-
-      <td>
-        Percentage of all recalls that were successful.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncRecalledNetworkBytesByApplication`
-      </td>
-
-      <td>
-        Size of data recalled by application.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncRecalledTotalNetworkBytes`
-      </td>
-
-      <td>
-        Size of data recalled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncRecallThroughputBytesPerSecond`
-      </td>
-
-      <td>
-        Size of data recall throughput.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncServerHeartbeat`
-      </td>
-
-      <td>
-        Metric that logs a value of 1 each time the resigtered server successfully records a heartbeat with the Cloud Endpoint.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncSyncSessionAppliedFilesCount`
-      </td>
-
-      <td>
-        Count of Files synced.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncSyncSessionPerItemErrorsCount`
-      </td>
-
-      <td>
-        Count of files failed to sync.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StorageSyncTieringCacheSizeBytes`
-      </td>
-
-      <td>
-        Size of data cached on the server.
-      </td>
-    </tr>
-  </tbody>
-</table>

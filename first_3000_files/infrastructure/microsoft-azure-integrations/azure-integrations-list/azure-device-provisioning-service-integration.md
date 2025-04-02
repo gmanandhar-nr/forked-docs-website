@@ -36,48 +36,11 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Device Provisioning Service metrics [#Azure-device-provisioning-service]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `AttestationAttempts` | Number of device attestations attempted. |
+| `DeviceAssignments` | Number of devices assigned to an IoT hub. |
+| `RegistrationAttempts` | Number of device registrations attempted. |
 
-  <tbody>
-    <tr>
-      <td>
-        `AttestationAttempts`
-      </td>
-
-      <td>
-        Number of device attestations attempted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DeviceAssignments`
-      </td>
-
-      <td>
-        Number of devices assigned to an IoT hub.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RegistrationAttempts`
-      </td>
-
-      <td>
-        Number of device registrations attempted.
-      </td>
-    </tr>
-  </tbody>
-</table>

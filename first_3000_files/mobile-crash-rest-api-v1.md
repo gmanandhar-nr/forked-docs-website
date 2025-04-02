@@ -54,95 +54,23 @@ https://rpm.newrelic.com/accounts/{account_ID}/mobile/{mobile_application_ID}
       **URL parameters:**
     </DNT>
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            <DNT>
-              **Name**
-            </DNT>
-          </th>
+    # Table
 
-          <th style={{ width: "100px" }}>
-            <DNT>
-              **Default**
-            </DNT>
-          </th>
+| **Name** | **Default** | **Example** |
+| - | - | - |
+| `size`
 
-          <th style={{ width: "150px" }}>
-            <DNT>
-              **Example**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+            Optional: The number of crash types to be returned. | 25 | 100 |
+| `sort`
 
-      <tbody>
-        <tr>
-          <td>
-            `size`
+            Optional: The order of the results sorted on a particular property: `recent`, `occurrence-count`, `users-affected`. | `recent` | `occurrence-count` |
+| `startTime`
 
-            Optional: The number of crash types to be returned.
-          </td>
+            Optional: Epoch timestamp in ms. Defines the time window for data retrieval. | 60 minutes ago | 1479592610148 |
+| `endTime`
 
-          <td>
-            25
-          </td>
+            Optional: Epoch timestamp in ms. Defines the time window for data retrieval. | now | 1480530548906 |
 
-          <td>
-            100
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `sort`
-
-            Optional: The order of the results sorted on a particular property: `recent`, `occurrence-count`, `users-affected`.
-          </td>
-
-          <td>
-            `recent`
-          </td>
-
-          <td>
-            `occurrence-count`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `startTime`
-
-            Optional: Epoch timestamp in ms. Defines the time window for data retrieval.
-          </td>
-
-          <td>
-            60 minutes ago
-          </td>
-
-          <td>
-            1479592610148
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `endTime`
-
-            Optional: Epoch timestamp in ms. Defines the time window for data retrieval.
-          </td>
-
-          <td>
-            now
-          </td>
-
-          <td>
-            1480530548906
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

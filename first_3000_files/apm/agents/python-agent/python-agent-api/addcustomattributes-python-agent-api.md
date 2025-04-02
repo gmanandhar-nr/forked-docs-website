@@ -30,33 +30,14 @@ Attributes may be found in APM if the transaction is associated with an error or
 
 ## Attributes
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Attribute | Description |
+| - | - |
+| `items`
 
-  <tbody>
-    <tr>
-      <td>
-        `items`
+        _list_ | Required. Each item in the list must be a `tuple`, with the first element being a _key_, and the second its _value_. Each key is a string representing the name of an attribute, and each corresponding value is the value to add to the current transaction for this attribute. Values can be `int`, `float`, `string`, or `boolean`. Only the first 255 characters are retained for both keys and values. |
 
-        _list_
-      </td>
-
-      <td>
-        Required. Each item in the list must be a `tuple`, with the first element being a _key_, and the second its _value_. Each key is a string representing the name of an attribute, and each corresponding value is the value to add to the current transaction for this attribute. Values can be `int`, `float`, `string`, or `boolean`. Only the first 255 characters are retained for both keys and values.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

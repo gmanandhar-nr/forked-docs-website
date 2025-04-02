@@ -32,55 +32,12 @@ If you don't see data after waiting for at least 10 minutes, try these troublesh
 
    If you see other errors reporting, go to the [AWS IAM console](https://console.aws.amazon.com/iam/home?#/roles) and make sure the settings for your AWS ARN match the following:
 
-   <table>
-     <thead>
-       <tr>
-         <th>
-           Setting
-         </th>
+   # Table
 
-         <th>
-           Value
-         </th>
-       </tr>
-     </thead>
+| Setting | Value |
+| - | - |
+| **Account ID** | `754728514883` |
+| **External ID** | your New Relic [account ID](/docs/accounts-partnerships/accounts/account-setup/account-id) |
+| **Policy** | `ReadOnlyAccess` |
 
-     <tbody>
-       <tr>
-         <td>
-           <DNT>
-             **Account ID**
-           </DNT>
-         </td>
-
-         <td>
-           `754728514883`
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           <DNT>
-             **External ID**
-           </DNT>
-         </td>
-
-         <td>
-           your New Relic [account ID](/docs/accounts-partnerships/accounts/account-setup/account-id)
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           <DNT>
-             **Policy**
-           </DNT>
-         </td>
-
-         <td>
-           `ReadOnlyAccess`
-         </td>
-       </tr>
-     </tbody>
-   </table>
 3. Make sure that you are [looking in the right place](/docs/infrastructure/integrations-getting-started/getting-started/understand-integration-data-data-types#metric) for your data. You can find all integration data in [metrics and events](/docs/query-your-data/explore-query-data/data-explorer/introduction-data-explorer).

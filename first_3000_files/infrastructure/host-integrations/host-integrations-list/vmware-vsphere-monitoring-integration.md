@@ -328,326 +328,64 @@ The vSphere integration provides metric data attached to the following New Relic
 
 ### VSphereHostSample
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `cpu.totalMHz`
-      </td>
-
-      <td>
-        Sum of the MHz for all the individual cores on the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cpu.coreMHz`
-      </td>
-
-      <td>
-        Speed of the CPU cores
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cpu.available`
-      </td>
-
-      <td>
-        Amount of free CPU MHz in the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cpu.overallUsage`
-      </td>
-
-      <td>
-        CPU usage across all cores on the host in MHz
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cpu.percent`
-      </td>
-
-      <td>
-        Percentage of CPU utilization in the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cpu.cores`
-      </td>
-
-      <td>
-        Number of physical CPU cores on the host. Physical CPU cores are the processors contained by a CPU package
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cpu.threads`
-      </td>
-
-      <td>
-        Number of physical CPU threads on the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `disk.totalMiB`
-      </td>
-
-      <td>
-        Total capacity of disks mounted in host, in MiB
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `mem.free`
-      </td>
-
-      <td>
-        Amount of available memory in the host, in MiB
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `mem.usage`
-      </td>
-
-      <td>
-        Amount of used memory in the host, in MiB
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `mem.size`
-      </td>
-
-      <td>
-        Total memory capacity of the host, in MiB
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `vmCount`
-      </td>
-
-      <td>
-        Number of virtual machines in the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `hypervisorHostname`
-      </td>
-
-      <td>
-        Name of the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `uuid`
-      </td>
-
-      <td>
-        The hardware BIOS identification
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `datacenterName`
-      </td>
-
-      <td>
-        Name of the data center related to the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `clusterName`
-      </td>
-
-      <td>
-        Name of the cluster related to the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `resourcePoolNameList`
-      </td>
-
-      <td>
-        List of names of the resource pools related to the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `datastoreNameList`
-      </td>
-
-      <td>
-        List of names of datastores related to the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `datacenterLocation`
-      </td>
-
-      <td>
-        Data center location
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `networkNameList`
-      </td>
-
-      <td>
-        List of names of networks related to the host
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `overallStatus`
-      </td>
-
-      <td>
-        * `gray`: Status is unknown
+| Name | Description |
+| - | - |
+| `cpu.totalMHz` | Sum of the MHz for all the individual cores on the host |
+| `cpu.coreMHz` | Speed of the CPU cores |
+| `cpu.available` | Amount of free CPU MHz in the host |
+| `cpu.overallUsage` | CPU usage across all cores on the host in MHz |
+| `cpu.percent` | Percentage of CPU utilization in the host |
+| `cpu.cores` | Number of physical CPU cores on the host. Physical CPU cores are the processors contained by a CPU package |
+| `cpu.threads` | Number of physical CPU threads on the host |
+| `disk.totalMiB` | Total capacity of disks mounted in host, in MiB |
+| `mem.free` | Amount of available memory in the host, in MiB |
+| `mem.usage` | Amount of used memory in the host, in MiB |
+| `mem.size` | Total memory capacity of the host, in MiB |
+| `vmCount` | Number of virtual machines in the host |
+| `hypervisorHostname` | Name of the host |
+| `uuid` | The hardware BIOS identification |
+| `datacenterName` | Name of the data center related to the host |
+| `clusterName` | Name of the cluster related to the host |
+| `resourcePoolNameList` | List of names of the resource pools related to the host |
+| `datastoreNameList` | List of names of datastores related to the host |
+| `datacenterLocation` | Data center location |
+| `networkNameList` | List of names of networks related to the host |
+| `overallStatus` | * `gray`: Status is unknown
         * `green`: Entity is OK
         * `yellow`: Entity might have a problem
-        * `red`: Entity definitely has a problem
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `connectionState`
-      </td>
-
-      <td>
-        The host connection state:
+        * `red`: Entity definitely has a problem |
+| `connectionState` | The host connection state:
 
         * `connected`: Connected to the server. For ESX Server, this is the default setting.
         * `disconnected`: The user has explicitly taken the host down. VirtualCenter does not expect to receive heartbeats from the host. The next time a heartbeat is received, the host is moved to the connected state again and an event is logged.
-        * `notResponding`: VirtualCenter is not receiving heartbeats from the server. The state automatically changes to connected once heartbeats are received again. This state is typically used to trigger an alarm on the host.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `inMaintenanceMode`
-      </td>
-
-      <td>
-        The flag to indicate whether or not the host is in maintenance mode. This flag is set when the host has entered the maintenance mode. It is not set during the entering phase of maintenance mode.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `inQuarantineMode`
-      </td>
-
-      <td>
-        The flag to indicate whether or not the host is in quarantine mode. `InfraUpdateHa` will recommend to set this flag based on the `HealthUpdates` received by the `HealthUpdateProviders` configured for the cluster.
+        * `notResponding`: VirtualCenter is not receiving heartbeats from the server. The state automatically changes to connected once heartbeats are received again. This state is typically used to trigger an alarm on the host. |
+| `inMaintenanceMode` | The flag to indicate whether or not the host is in maintenance mode. This flag is set when the host has entered the maintenance mode. It is not set during the entering phase of maintenance mode. |
+| `inQuarantineMode` | The flag to indicate whether or not the host is in quarantine mode. `InfraUpdateHa` will recommend to set this flag based on the `HealthUpdates` received by the `HealthUpdateProviders` configured for the cluster.
 
         A host that is reported as degraded will be recommended to enter quarantine mode, while a host that is reported as healthy will be recommended to exit quarantine mode. Execution of these recommended actions will set this flag.
 
-        Hosts in quarantine mode will be avoided by vSphere DRS as long as the increased consolidation in the cluster does not negatively affect VM performance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `powerState`
-      </td>
-
-      <td>
-        The host power state:
+        Hosts in quarantine mode will be avoided by vSphere DRS as long as the increased consolidation in the cluster does not negatively affect VM performance. |
+| `powerState` | The host power state:
 
         * `poweredOff`: The host was specifically powered off by the user through VirtualCenter. This state is not a cetain state, because after VirtualCenter issues the command to power off the host, the host might crash, or kill all the processes but fail to power off.
         * `poweredOn`: The host is powered on. A host that is entering standby mode entering is also in this state.
         * `standBy`: The host was specifically put in standby mode, either explicitly by the user or automatically by DPM. This state is not a certain state, because after VirtualCenter issues the command to put the host in standby state, the host might crash, or kill all the processes but fail to power off. A host that is exiting standby mode s also in this state.
-        * `unknown`: If the host is disconnected or `notResponding`, we know its power state, so the host is marked as `unknown`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `standbyMode`
-      </td>
-
-      <td>
-        The host’s standby mode. The property is only populated by vCenter server. If queried directly from the ESX host, the property is `unset`.
+        * `unknown`: If the host is disconnected or `notResponding`, we know its power state, so the host is marked as `unknown`. |
+| `standbyMode` | The host’s standby mode. The property is only populated by vCenter server. If queried directly from the ESX host, the property is `unset`.
 
         * `entering`: The host is entering standby mode.
         * `exiting`: The host is exiting standby mode.
         * `in`: The host is in standby mode.
-        * `none`: The host is not in standby mode, and it is not in the process of entering or exiting standby mode.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cryptoState`
-      </td>
-
-      <td>
-        Encryption state of the host. Valid values are enumerated by the CryptoState type:
+        * `none`: The host is not in standby mode, and it is not in the process of entering or exiting standby mode. |
+| `cryptoState` | Encryption state of the host. Valid values are enumerated by the CryptoState type:
 
         * `incapable`: The host is not safe for receiving sensitive material.
         * `prepared`: The host is prepared for receiving sensitive material but does not have a host key set yet.
-        * `safe`: The host is crypto safe and has a host key set.
-      </td>
-    </tr>
+        * `safe`: The host is crypto safe and has a host key set. |
+| `bootTime` | The time when the host was booted. |
 
-    <tr>
-      <td>
-        `bootTime`
-      </td>
-
-      <td>
-        The time when the host was booted.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### VSphereVmSample [#vspherevirtualmachine]
 

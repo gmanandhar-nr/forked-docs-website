@@ -48,168 +48,23 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Database sample metrics [#database-sample]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `activeConnections` | Count of active connections. |
+| `backupStorageUsedBytes` | Backup storage used, in bytes. |
+| `connectionsFailed` | Count of failed connections. |
+| `cpuPercent` | Percentage of CPU used. |
+| `ioConsumptionPercent` | Percentage of I/O consumption used. |
+| `memoryPercent` | Percentage of memory used. |
+| `networkEgressBytes` | Network Out across active connections, in bytes. |
+| `networkIngressBytes` | Network In across active connections, in bytes. |
+| `secondsBehindMaster` | Replication lag, in seconds. |
+| `serverlogStorageLimitBytes` | Server log storage limit, in bytes. |
+| `serverlogStoragePercent` | Percentage of server log storage used. |
+| `serverlogStorageUsageBytes` | Server log storage used, in bytes. |
+| `storageLimitBytes` | Amount of storage available, in bytes. |
+| `storagePercent` | Percentage of available storage used. |
+| `storageUsedBytes` | Amount of storage used, in bytes. |
 
-  <tbody>
-    <tr>
-      <td>
-        `activeConnections`
-      </td>
-
-      <td>
-        Count of active connections.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `backupStorageUsedBytes`
-      </td>
-
-      <td>
-        Backup storage used, in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `connectionsFailed`
-      </td>
-
-      <td>
-        Count of failed connections.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cpuPercent`
-      </td>
-
-      <td>
-        Percentage of CPU used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ioConsumptionPercent`
-      </td>
-
-      <td>
-        Percentage of I/O consumption used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `memoryPercent`
-      </td>
-
-      <td>
-        Percentage of memory used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `networkEgressBytes`
-      </td>
-
-      <td>
-        Network Out across active connections, in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `networkIngressBytes`
-      </td>
-
-      <td>
-        Network In across active connections, in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `secondsBehindMaster`
-      </td>
-
-      <td>
-        Replication lag, in seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `serverlogStorageLimitBytes`
-      </td>
-
-      <td>
-        Server log storage limit, in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `serverlogStoragePercent`
-      </td>
-
-      <td>
-        Percentage of server log storage used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `serverlogStorageUsageBytes`
-      </td>
-
-      <td>
-        Server log storage used, in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `storageLimitBytes`
-      </td>
-
-      <td>
-        Amount of storage available, in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `storagePercent`
-      </td>
-
-      <td>
-        Percentage of available storage used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `storageUsedBytes`
-      </td>
-
-      <td>
-        Amount of storage used, in bytes.
-      </td>
-    </tr>
-  </tbody>
-</table>

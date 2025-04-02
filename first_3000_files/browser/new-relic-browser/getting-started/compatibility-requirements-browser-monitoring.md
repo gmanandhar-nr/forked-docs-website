@@ -46,83 +46,24 @@ The browser agent officially supports the following browser versions:
 
 Instrumentation and specific features may be compatible with other browsers or versions.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Exceptions**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td id="paint-timings">
-        Paint timings
-      </td>
-
-      <td>
-        The [`firstPaint`](/attribute-dictionary/?event=BrowserInteraction&attribute=firstPaint) and [`firstContentfulPaint`](/attribute-dictionary/?event=BrowserInteraction&attribute=firstContentfulPaint) attributes in `BrowserInteraction`, `PageView`, and [`PageViewTiming`](/docs/browser/new-relic-browser/page-load-timing-resources/pageviewtiming-async-or-dynamic-page-details) events are [only compatible with](https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming#Browser_compatibility):
+| **Exceptions** | **Comments** |
+| - | - |
+| Paint timings | The [`firstPaint`](/attribute-dictionary/?event=BrowserInteraction&attribute=firstPaint) and [`firstContentfulPaint`](/attribute-dictionary/?event=BrowserInteraction&attribute=firstContentfulPaint) attributes in `BrowserInteraction`, `PageView`, and [`PageViewTiming`](/docs/browser/new-relic-browser/page-load-timing-resources/pageviewtiming-async-or-dynamic-page-details) events are [only compatible with](https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming#Browser_compatibility):
 
         * Chrome 60 or higher for desktop and mobile (Android webview and Chrome for Android)
         * Opera 47 or higher for desktop
         * Opera 44 or higher for Android mobile
-        * Samsung Internet for mobile
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        AJAX
-      </td>
-
-      <td>
-        [AJAX timing features](/docs/browser/new-relic-browser/dashboard-details/ajax-dashboard) are not available with:
+        * Samsung Internet for mobile |
+| AJAX | [AJAX timing features](/docs/browser/new-relic-browser/dashboard-details/ajax-dashboard) are not available with:
 
         * Chrome for iPhone and iPad
-        * IE 7 and 8
-      </td>
-    </tr>
+        * IE 7 and 8 |
+| `PageAction` events | [`PageAction` events](/docs/insights/new-relic-insights/adding-querying-data/inserting-custom-events-attributes-insights-javascript-api) require a browser that fully supports cross-domain `XMLHttpRequests`. Internet Explorer versions 9 and lower cannot record `PageAction` events. Learn more on [querying your data](/docs/using-new-relic/data/understand-data/query-new-relic-data). |
+| Session traces | [Session traces](/docs/browser/new-relic-browser/dashboard-details/session-traces-exploring-webpages-life-cycle) are reported only from browsers that support the [Resource Timing Specification](http://www.w3.org/TR/resource-timing/). |
+| SHA-256 | New Relic can only monitor browsers that are compatible with [SHA-256](https://support.globalsign.com/customer/portal/articles/1499561-sha-256-compatibility). |
 
-    <tr>
-      <td>
-        `PageAction` events
-      </td>
-
-      <td>
-        [`PageAction` events](/docs/insights/new-relic-insights/adding-querying-data/inserting-custom-events-attributes-insights-javascript-api) require a browser that fully supports cross-domain `XMLHttpRequests`. Internet Explorer versions 9 and lower cannot record `PageAction` events. Learn more on [querying your data](/docs/using-new-relic/data/understand-data/query-new-relic-data).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Session traces
-      </td>
-
-      <td>
-        [Session traces](/docs/browser/new-relic-browser/dashboard-details/session-traces-exploring-webpages-life-cycle) are reported only from browsers that support the [Resource Timing Specification](http://www.w3.org/TR/resource-timing/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        SHA-256
-      </td>
-
-      <td>
-        New Relic can only monitor browsers that are compatible with [SHA-256](https://support.globalsign.com/customer/portal/articles/1499561-sha-256-compatibility).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="important">
   When you use browser monitoring with cookies, New Relic's cookies are a third-party cookie on your site, and may not store or work on certain web browsers used by your visitors. See the applicable browser's websites for details about their compatibility with third-party cookies.

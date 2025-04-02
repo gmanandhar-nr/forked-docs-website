@@ -113,68 +113,13 @@ distributed_tracing:
 
 The following methods had been previously deprecated and are now removed.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Removed
-      </th>
+# Table
 
-      <th>
-        Replacement
-      </th>
-    </tr>
-  </thead>
+| Removed | Replacement |
+| - | - |
+| `disable_transaction_tracing` API method | [`disable_all_tracing`](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent:disable_all_tracing) or [`ignore_transaction`](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent:ignore_transaction) API methods |
+| `External.start_segment` API method | [`Tracer#start_external_request_segment`](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent/Tracer.start_external_request_segment) API method |
+| `Transaction.wrap` API method | [`Tracer#in_transaction`](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent/Tracer.in_transaction) API method |
+| Mongo &lt; 2.1 instrumentation | Upgrade to Mongo 2.1 or higher |
+| Excon &lt; 0.19.0 instrumentation | Upgrade to Excon 0.19.0 or higher |
 
-  <tbody>
-    <tr>
-      <td>
-        `disable_transaction_tracing` API method
-      </td>
-
-      <td>
-        [`disable_all_tracing`](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent:disable_all_tracing) or [`ignore_transaction`](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent:ignore_transaction) API methods
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `External.start_segment` API method
-      </td>
-
-      <td>
-        [`Tracer#start_external_request_segment`](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent/Tracer.start_external_request_segment) API method
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Transaction.wrap` API method
-      </td>
-
-      <td>
-        [`Tracer#in_transaction`](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent/Tracer.in_transaction) API method
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Mongo &lt; 2.1 instrumentation
-      </td>
-
-      <td>
-        Upgrade to Mongo 2.1 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Excon &lt; 0.19.0 instrumentation
-      </td>
-
-      <td>
-        Upgrade to Excon 0.19.0 or higher
-      </td>
-    </tr>
-  </tbody>
-</table>

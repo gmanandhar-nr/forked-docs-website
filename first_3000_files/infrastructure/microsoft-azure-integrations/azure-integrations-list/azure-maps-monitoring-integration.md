@@ -36,48 +36,11 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Maps metrics [#Azure-maps]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `Availability` | Availability of the APIs. |
+| `Creator Usage` | Azure Maps Creator usage statistics. |
+| `Usage` | Count of API calls. |
 
-  <tbody>
-    <tr>
-      <td>
-        `Availability`
-      </td>
-
-      <td>
-        Availability of the APIs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Creator Usage`
-      </td>
-
-      <td>
-        Azure Maps Creator usage statistics.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Usage`
-      </td>
-
-      <td>
-        Count of API calls.
-      </td>
-    </tr>
-  </tbody>
-</table>

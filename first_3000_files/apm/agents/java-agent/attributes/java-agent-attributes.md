@@ -263,123 +263,18 @@ Attribute configuration options:
     id="cfg-attributes-enabled"
     title={<>destination.attributes.enabled</>}
   >
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Destination
-          </th>
+    # Table
 
-          <th style={{ width: "400px" }}>
-            Configuration option
-          </th>
+| Destination | Configuration option | Default |
+| - | - | - |
+| All | [`attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-attributes-enabled) | True |
+| Transaction traces | [`transaction_tracer.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-tt-attributes-enabled) | True |
+| Transaction segments | [`transaction_segments.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-ts-attributes-enabled) | True |
+| Error analytics | [`error_collector.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-error-attributes-enabled) | True |
+| APM events | [`transaction_events.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-events-attributes-enabled) | True |
+| Browser events | [`browser_monitoring.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-browser-attributes-enabled) | False |
+| Span events | `span_events.attributes.enabled` | True |
 
-          <th>
-            Default
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            All
-          </td>
-
-          <td>
-            [`attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-attributes-enabled)
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Transaction traces
-          </td>
-
-          <td>
-            [`transaction_tracer.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-tt-attributes-enabled)
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Transaction segments
-          </td>
-
-          <td>
-            [`transaction_segments.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-ts-attributes-enabled)
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Error analytics
-          </td>
-
-          <td>
-            [`error_collector.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-error-attributes-enabled)
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            APM events
-          </td>
-
-          <td>
-            [`transaction_events.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-events-attributes-enabled)
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Browser events
-          </td>
-
-          <td>
-            [`browser_monitoring.attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-browser-attributes-enabled)
-          </td>
-
-          <td>
-            False
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Span events
-          </td>
-
-          <td>
-            `span_events.attributes.enabled`
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     Other resources:
 

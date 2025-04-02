@@ -33,39 +33,12 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 You can [query and explore your data](/docs/using-new-relic/data/understand-data/query-new-relic-data) using the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event type
-      </th>
+| Entity | Event type | Provider |
+| - | - | - |
+| ScaleSet | `AzureVirtualMachineScaleSetSample` | `AzureVirtualMachineScaleSet` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        ScaleSet
-      </td>
-
-      <td>
-        `AzureVirtualMachineScaleSetSample`
-      </td>
-
-      <td>
-        `AzureVirtualMachineScaleSet`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

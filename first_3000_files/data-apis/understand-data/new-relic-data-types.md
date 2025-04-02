@@ -125,65 +125,14 @@ Here are some of the ways metrics are reported and stored across the New Relic p
 
           New Relic tracks a variety of metrics on `ActiveMerchant` transactions which can be used for business analytics as well as performance monitoring. The metrics are summarized by operation as well as by gateway.
 
-          <table>
-            <thead>
-              <tr>
-                <th style={{ width: "150px" }}>
-                  regex
-                </th>
+          # Table
 
-                <th>
-                  sample metric
-                </th>
+| regex | sample metric | legend name |
+| - | - | - |
+| `ActiveMerchant/.*` | `ActiveMerchant/PayJunctionGateway` |
+| `ActiveMerchant/gateway/.*` | `ActiveMerchant/gateway/PayJunctionGateway/purchase` | `PayJunctionGateway` |
+| `ActiveMerchant/operation/.*` | `ActiveMerchant/operation/purchase` | `purchase` |
 
-                <th style={{ width: "150px" }}>
-                  legend name
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>
-                  `ActiveMerchant/.*`
-                </td>
-
-                <td>
-                  `ActiveMerchant/PayJunctionGateway`
-                </td>
-
-                <td/>
-              </tr>
-
-              <tr>
-                <td>
-                  `ActiveMerchant/gateway/.*`
-                </td>
-
-                <td>
-                  `ActiveMerchant/gateway/PayJunctionGateway/purchase`
-                </td>
-
-                <td>
-                  `PayJunctionGateway`
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  `ActiveMerchant/operation/.*`
-                </td>
-
-                <td>
-                  `ActiveMerchant/operation/purchase`
-                </td>
-
-                <td>
-                  `purchase`
-                </td>
-              </tr>
-            </tbody>
-          </table>
 
           For more information, see the [ActiveMerchant website](http://activemerchant.org).
 

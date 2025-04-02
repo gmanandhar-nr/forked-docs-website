@@ -96,201 +96,24 @@ Network flow monitoring supports the four primary types of network flow data and
   id="flow-types"
   title="Network flow types"
 >
-  <table>
-    <thead>
-      <tr>
-        <th style={{ width: '300px' }}>
-          Network flow type
-        </th>
+  # Table
 
-        <th>
-          Enabled with `auto`?
-        </th>
+| Network flow type | Enabled with `auto`? | `-nf.source` value |
+| - | - | - |
+| AppFlow | ✓ | `auto` \| `netflow5` |
+| Argus | ✓ | `auto` \| `netflow5` |
+| Cisco ASA | `asa` |
+| Cisco NBAR | `nbar` |
+| cflowd | ✓ | `auto` \| `netflow5` |
+| IPFIX | ✓ | `auto` \| `ipfix` |
+| J-Flow | ✓ | `auto` \| `netflow5` |
+| NetFlow v5 | ✓ | `auto` \| `netflow5` |
+| NetFlow v9 | ✓ | `auto` \| `netflow9` |
+| NetStream | ✓ | `auto` \| `netflow5` |
+| Palo Alto Networks | `pan` |
+| RFlow | ✓ | `auto` \| `netflow5` |
+| sFlow | ✓ | `auto` \| `sflow` |
 
-        <th>
-          `-nf.source` value
-        </th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>
-          AppFlow
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `netflow5`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Argus
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `netflow5`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Cisco ASA
-        </td>
-
-        <td/>
-
-        <td>
-          `asa`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Cisco NBAR
-        </td>
-
-        <td/>
-
-        <td>
-          `nbar`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          cflowd
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `netflow5`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          IPFIX
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `ipfix`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          J-Flow
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `netflow5`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          NetFlow v5
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `netflow5`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          NetFlow v9
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `netflow9`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          NetStream
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `netflow5`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Palo Alto Networks
-        </td>
-
-        <td/>
-
-        <td>
-          `pan`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          RFlow
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `netflow5`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          sFlow
-        </td>
-
-        <td>
-          ✓
-        </td>
-
-        <td>
-          `auto` \| `sflow`
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </Collapser>
 
 ## When should you scale network flow collection? [#scale]

@@ -57,51 +57,12 @@ Many of the configuration options listed also admit using environment variables 
   >
     Specifies the <InlinePopover type="licenseKey"/> for your New Relic account. The agent uses this key to associate your server's metrics with your New Relic account. This setting is created as part of the standard installation process.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            YML option name
-          </th>
+    # Table
 
-          <th style={{ width: "200px" }}>
-            Environment variable
-          </th>
+| YML option name | Environment variable | Type | Default | Version |
+| - | - | - | - | - |
+| `license_key` | `NRIA_LICENSE_KEY` | string |
 
-          <th>
-            Type
-          </th>
-
-          <th>
-            Default
-          </th>
-
-          <th>
-            Version
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            `license_key`
-          </td>
-
-          <td>
-            `NRIA_LICENSE_KEY`
-          </td>
-
-          <td>
-            string
-          </td>
-
-          <td/>
-
-          <td/>
-        </tr>
-      </tbody>
-    </table>
 
     Example:
 

@@ -47,98 +47,16 @@ When your deployment notification is enabled and you start tracking a change, yo
 
 The following keys and values will be sent, based on the attributes of the deployment and of the APM application entity that was deployed.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Key
-      </th>
+# Table
 
-      <th>
-        Value
-      </th>
-    </tr>
-  </thead>
+| Key | Value |
+| - | - |
+| `created_at` | The timestamp of the deployment in ISO 8601 format |
+| `application_name` | The name of the APM application entity |
+| `account_name` | The name of the account that owns the APM application entity |
+| `changelog` | A list of changes included in the deployment |
+| `description` | A description of the deployment |
+| `revision` | The version of the deployed software |
+| `deployment_url` | A link to the deployments UI for the APM application entity |
+| `deployed_by` | The user who deployed the application |
 
-  <tbody>
-    <tr>
-      <td>
-        `created_at`
-      </td>
-
-      <td>
-        The timestamp of the deployment in ISO 8601 format
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `application_name`
-      </td>
-
-      <td>
-        The name of the APM application entity
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `account_name`
-      </td>
-
-      <td>
-        The name of the account that owns the APM application entity
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `changelog`
-      </td>
-
-      <td>
-        A list of changes included in the deployment
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `description`
-      </td>
-
-      <td>
-        A description of the deployment
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `revision`
-      </td>
-
-      <td>
-        The version of the deployed software
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deployment_url`
-      </td>
-
-      <td>
-        A link to the deployments UI for the APM application entity
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deployed_by`
-      </td>
-
-      <td>
-        The user who deployed the application
-      </td>
-    </tr>
-  </tbody>
-</table>

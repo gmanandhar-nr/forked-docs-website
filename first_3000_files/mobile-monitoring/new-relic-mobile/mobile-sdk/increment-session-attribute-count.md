@@ -82,53 +82,13 @@ NewRelic.incrementAttribute(name: String!, value : Double)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width="30%">
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$name` | `string` | Required. The name of the attribute. |
+| `$value` | `float` | Optional. The attribute is incremented by this float value. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$name`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The name of the attribute.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$value`
-            </td>
-
-            <td>
-              `float`
-            </td>
-
-            <td>
-              Optional. The attribute is incremented by this float value.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Return values [#return-values]
 

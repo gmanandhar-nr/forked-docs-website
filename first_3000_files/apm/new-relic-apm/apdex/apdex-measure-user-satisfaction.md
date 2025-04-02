@@ -113,73 +113,14 @@ Your configuration file's `apdex_f` value is four times your app server's Apdex 
 
 The time calculation will change based on your own app's T setting. In the following example, T = 1.2 seconds.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Level**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Multiplier**
-        </DNT>
-      </th>
+| **Level** | **Multiplier** | **Time (T Example = 1.2)** |
+| - | - | - |
+| Satisfied | T or less | &lt;= 1.2 seconds |
+| Tolerated | \>T, &lt;= 4T | Between 1.2 and 4.8 seconds |
+| Frustrated | \> 4T | Greater than 4.8 seconds |
 
-      <th>
-        <DNT>
-          **Time (T Example = 1.2)**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Satisfied
-      </td>
-
-      <td>
-        T or less
-      </td>
-
-      <td>
-        &lt;= 1.2 seconds
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Tolerated
-      </td>
-
-      <td>
-        \>T, &lt;= 4T
-      </td>
-
-      <td>
-        Between 1.2 and 4.8 seconds
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Frustrated
-      </td>
-
-      <td>
-        \> 4T
-      </td>
-
-      <td>
-        Greater than 4.8 seconds
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 After you define your Apdex levels, use any of New Relic's [resources to help identify and troubleshoot changes](/docs/apm/new-relic-apm/apdex/view-your-apdex-score) that indicate poor customer experiences with your app.
 

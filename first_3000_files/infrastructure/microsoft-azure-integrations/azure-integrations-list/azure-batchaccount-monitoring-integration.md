@@ -38,328 +38,39 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Batch Account metrics [#Azure-batch-account]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `CoreCount` | Total number of dedicated cores in the batch account. |
+| `CreatingNodeCount` | Number of nodes being created. |
+| `IdleNodeCount` | Number of idle nodes. |
+| `JobDeleteCompleteEvent` | Total number of jobs that have been successfully deleted. |
+| `JobDeleteStartEvent` | Total number of jobs that have been requested to be deleted. |
+| `JobDisableCompleteEvent` | Total number of jobs that have been successfully disabled. |
+| `JobDisableStartEvent` | Total number of jobs that have been requested to be disabled. |
+| `JobStartEvent` | Total number of jobs that have been successfully started. |
+| `JobTerminateCompleteEvent` | Total number of jobs that have been successfully terminated. |
+| `JobTerminateStartEvent` | Total number of jobs that have been requested to be terminated. |
+| `LeavingPoolNodeCount` | Number of nodes leaving the pool. |
+| `LowPriorityCoreCount` | Total number of low-priority cores in the batch account. |
+| `OfflineNodeCount` | Number of offline nodes. |
+| `PoolCreateEvent` | Total number of pools that have been created. |
+| `PoolDeleteCompleteEvent` | Total number of pool deletes that have completed. |
+| `PoolDeleteStartEvent` | Total number of pool deletes that have started. |
+| `PoolResizeCompleteEvent` | Total number of pool resizes that have completed. |
+| `PoolResizeStartEvent` | Total number of pool resizes that have started. |
+| `PreemptedNodeCount` | Number of preempted nodes. |
+| `RebootingNodeCount` | Number of rebooting nodes. |
+| `ReimagingNodeCount` | Number of reimaging nodes. |
+| `RunningNodeCount` | Number of running nodes. |
+| `StartingNodeCount` | Number of nodes starting. |
+| `StartTaskFailedNodeCount` | Number of nodes where the start task has failed. |
+| `TaskCompleteEvent` | Total number of tasks that have completed. |
+| `TaskFailEvent` | Total number of tasks that have completed in a failed state. |
+| `TaskStartEvent` | Total number of tasks that have started. |
+| `TotalLowPriorityNodeCount` | Total number of low-priority nodes in the batch account. |
+| `TotalNodeCount` | Total number of dedicated nodes in the batch account. |
+| `UnusableNodeCount` | Number of unusable nodes. |
+| `WaitingForStartTaskNodeCount	` | Number of nodes waiting for the start task to complete. |
 
-  <tbody>
-    <tr>
-      <td>
-        `CoreCount`
-      </td>
-
-      <td>
-        Total number of dedicated cores in the batch account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CreatingNodeCount`
-      </td>
-
-      <td>
-        Number of nodes being created.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IdleNodeCount`
-      </td>
-
-      <td>
-        Number of idle nodes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobDeleteCompleteEvent`
-      </td>
-
-      <td>
-        Total number of jobs that have been successfully deleted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobDeleteStartEvent`
-      </td>
-
-      <td>
-        Total number of jobs that have been requested to be deleted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobDisableCompleteEvent`
-      </td>
-
-      <td>
-        Total number of jobs that have been successfully disabled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobDisableStartEvent`
-      </td>
-
-      <td>
-        Total number of jobs that have been requested to be disabled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobStartEvent`
-      </td>
-
-      <td>
-        Total number of jobs that have been successfully started.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobTerminateCompleteEvent`
-      </td>
-
-      <td>
-        Total number of jobs that have been successfully terminated.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobTerminateStartEvent`
-      </td>
-
-      <td>
-        Total number of jobs that have been requested to be terminated.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LeavingPoolNodeCount`
-      </td>
-
-      <td>
-        Number of nodes leaving the pool.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LowPriorityCoreCount`
-      </td>
-
-      <td>
-        Total number of low-priority cores in the batch account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OfflineNodeCount`
-      </td>
-
-      <td>
-        Number of offline nodes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PoolCreateEvent`
-      </td>
-
-      <td>
-        Total number of pools that have been created.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PoolDeleteCompleteEvent`
-      </td>
-
-      <td>
-        Total number of pool deletes that have completed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PoolDeleteStartEvent`
-      </td>
-
-      <td>
-        Total number of pool deletes that have started.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PoolResizeCompleteEvent`
-      </td>
-
-      <td>
-        Total number of pool resizes that have completed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PoolResizeStartEvent`
-      </td>
-
-      <td>
-        Total number of pool resizes that have started.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PreemptedNodeCount`
-      </td>
-
-      <td>
-        Number of preempted nodes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RebootingNodeCount`
-      </td>
-
-      <td>
-        Number of rebooting nodes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReimagingNodeCount`
-      </td>
-
-      <td>
-        Number of reimaging nodes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RunningNodeCount`
-      </td>
-
-      <td>
-        Number of running nodes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StartingNodeCount`
-      </td>
-
-      <td>
-        Number of nodes starting.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StartTaskFailedNodeCount`
-      </td>
-
-      <td>
-        Number of nodes where the start task has failed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TaskCompleteEvent`
-      </td>
-
-      <td>
-        Total number of tasks that have completed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TaskFailEvent`
-      </td>
-
-      <td>
-        Total number of tasks that have completed in a failed state.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TaskStartEvent`
-      </td>
-
-      <td>
-        Total number of tasks that have started.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalLowPriorityNodeCount`
-      </td>
-
-      <td>
-        Total number of low-priority nodes in the batch account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalNodeCount`
-      </td>
-
-      <td>
-        Total number of dedicated nodes in the batch account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UnusableNodeCount`
-      </td>
-
-      <td>
-        Number of unusable nodes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WaitingForStartTaskNodeCount	`
-      </td>
-
-      <td>
-        Number of nodes waiting for the start task to complete.
-      </td>
-    </tr>
-  </tbody>
-</table>

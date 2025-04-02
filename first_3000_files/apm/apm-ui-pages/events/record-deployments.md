@@ -210,100 +210,21 @@ You can use the New Relic REST API v2 to record deployments and get a list of pa
       UTF-8 4 byte characters, such as Emojis and some non-Latin language glyphs, cannot be used in the deployment text.
     </Callout>
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "135px" }}>
-            Parameter
-          </th>
+    # Table
 
-          <th style={{ width: "150px" }}>
-            Data type
-          </th>
-
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            `revision`
-          </td>
-
-          <td>
-            String, 127 character maximum
-          </td>
-
-          <td>
-            <DNT>**Required**</DNT>. A unique ID for this deployment, visible in the [Summary](/docs/apm/applications-menu/monitoring/apm-overview-page) page and on the [Deployments](/docs/apm/applications-menu/events/deployments-page) page. Can be any string, but is usually a version number or a Git checksum.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `changelog`
-          </td>
-
-          <td>
-            String, 65535 character maximum
-          </td>
-
-          <td>
-            <DNT>**Optional**</DNT>. A summary of what changed in this deployment, visible in the [Deployments](/docs/apm/applications-menu/events/deployments-page) page when you select <DNT>**(selected deployment) > Change log**</DNT>.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `description`
-          </td>
-
-          <td>
-            String, 65535 character maximum
-          </td>
-
-          <td>
-            <DNT>**Optional**</DNT>. A high-level description of this deployment, visible in the [Summary](/docs/apm/applications-menu/monitoring/apm-overview-page) page and on the [Deployments](/docs/apm/applications-menu/events/deployments-page) page when you select an individual deployment.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `user`
-          </td>
-
-          <td>
-            String, 31 character maximum
-          </td>
-
-          <td>
-            <DNT>**Optional**</DNT>. A username to associate with the deployment, visible in the [Summary](/docs/apm/applications-menu/monitoring/apm-overview-page) page and on the [Deployments](/docs/apm/applications-menu/events/deployments-page) page.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `timestamp`
-          </td>
-
-          <td>
-            ISO 8601
-          </td>
-
-          <td>
-            <DNT>**Optional**</DNT>. When the deployment occurred, down to the second. If not specified, the deployment will be recorded at the time when the API call was received. Timestamp requirements:
+| Parameter | Data type | Description |
+| - | - | - |
+| `revision` | String, 127 character maximum | **Required**. A unique ID for this deployment, visible in the [Summary](/docs/apm/applications-menu/monitoring/apm-overview-page) page and on the [Deployments](/docs/apm/applications-menu/events/deployments-page) page. Can be any string, but is usually a version number or a Git checksum. |
+| `changelog` | String, 65535 character maximum | **Optional**. A summary of what changed in this deployment, visible in the [Deployments](/docs/apm/applications-menu/events/deployments-page) page when you select **(selected deployment) > Change log**. |
+| `description` | String, 65535 character maximum | **Optional**. A high-level description of this deployment, visible in the [Summary](/docs/apm/applications-menu/monitoring/apm-overview-page) page and on the [Deployments](/docs/apm/applications-menu/events/deployments-page) page when you select an individual deployment. |
+| `user` | String, 31 character maximum | **Optional**. A username to associate with the deployment, visible in the [Summary](/docs/apm/applications-menu/monitoring/apm-overview-page) page and on the [Deployments](/docs/apm/applications-menu/events/deployments-page) page. |
+| `timestamp` | ISO 8601 | **Optional**. When the deployment occurred, down to the second. If not specified, the deployment will be recorded at the time when the API call was received. Timestamp requirements:
 
             * Must be in UTC time.
             * Must be after the most recent deployment timestamp.
             * Cannot be in the future.
-            * Must be in ISO8601 format; for example, `"2019-10-08T00:15:36Z"`.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            * Must be in ISO8601 format; for example, `"2019-10-08T00:15:36Z"`. |
+
   </Collapser>
 </CollapserGroup>
 

@@ -37,57 +37,23 @@ The priority parameter can generally be ignored unless you are implementing cust
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `name`
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
+        _string_ | Required. Desired name for the current transaction. See the [description](#description) for an example of setting the name. |
+| `group`
 
-        _string_
-      </td>
-
-      <td>
-        Required. Desired name for the current transaction. See the [description](#description) for an example of setting the name.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `group`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. The `group` represents the naming structure for the `name` parameter, which is used to set the [transaction type](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions) in the UI. See the [description](#description) for an example of setting the group.
+        _string_ | Optional. The `group` represents the naming structure for the `name` parameter, which is used to set the [transaction type](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions) in the UI. See the [description](#description) for an example of setting the group.
 
         If not supplied, the group will default to the `Function` name in expectation that the name is of the form `module:class.function` or `module:function` and represents the name of the function being executed. If you are creating a custom group, we recommends you prefix it with `Python/`.
 
-        The naming structure used for naming the transaction. As this value is rendered as part of a URL, non-ASCII encoding should be avoided. Defaults to `Function`. See [Description](#description) for more on using this.
-      </td>
-    </tr>
+        The naming structure used for naming the transaction. As this value is rendered as part of a URL, non-ASCII encoding should be avoided. Defaults to `Function`. See [Description](#description) for more on using this. |
+| `priority`
 
-    <tr>
-      <td>
-        `priority`
-
-        _int_
-      </td>
-
-      <td>
-        Optional. The priority value is used to determine what name is given to a transaction. Higher numbers override lower numbers. The default value is `None`, meaning the transaction name overrides any existing value. If the priority is left as `None`, the new name always overrides any existing value. Here's an example of how priority works:
+        _int_ | Optional. The priority value is used to determine what name is given to a transaction. Higher numbers override lower numbers. The default value is `None`, meaning the transaction name overrides any existing value. If the priority is left as `None`, the new name always overrides any existing value. Here's an example of how priority works:
 
         ```py
         newrelic.agent.set_transaction_name('first', 'Python/CustomGroup')
@@ -104,11 +70,8 @@ The priority parameter can generally be ignored unless you are implementing cust
 
         newrelic.agent.set_transaction_name('fifth', 'Python/CustomGroup')
         # transaction name becomes 'fifth'. The priority remains 15.
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 ## Return values
 

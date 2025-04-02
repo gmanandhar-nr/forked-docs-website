@@ -31,33 +31,14 @@ This call ignores the current transaction. The agent does not report any data fr
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `flag`
 
-  <tbody>
-    <tr>
-      <td>
-        `flag`
+        _boolean_ | Optional. Default is `True`. If the transaction is already ignored, you can un-ignore it by setting the flag to `False`. |
 
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Default is `True`. If the transaction is already ignored, you can un-ignore it by setting the flag to `False`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

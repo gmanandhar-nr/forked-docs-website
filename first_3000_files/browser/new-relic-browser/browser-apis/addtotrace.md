@@ -56,36 +56,17 @@ Note that the number of events shared this way is limited by the Browser agent h
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$custom_object`
 
-  <tbody>
-    <tr>
-      <td>
-        `$custom_object`
-
-        _JavaScript object_
-      </td>
-
-      <td>
-        Required. Supply a JavaScript object with these required and optional name/value pairs:
+        _JavaScript object_ | Required. Supply a JavaScript object with these required and optional name/value pairs:
 
         * Required name/value pairs: `name`, `start`
-        * Optional name/value pairs: `end`, `origin`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * Optional name/value pairs: `end`, `origin` |
+
 
 ## Examples
 

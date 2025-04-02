@@ -140,57 +140,20 @@ To initialize the Python agent:
 3. Refer to the following examples to insert `newrelic-admin run-program` at the start of the command.
 4. Run your Python web application under the control of the the Python agent's admin script.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Hosting mechanism
-      </th>
+# Table
 
-      <th>
-        Example web entry
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Flask with the built-in development host
-      </td>
-
-      <td>
-        ```
+| Hosting mechanism | Example web entry |
+| - | - |
+| Flask with the built-in development host | ```
         web: newrelic-admin run-program python hello.py
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Flask with gunicorn
-      </td>
-
-      <td>
-        ```
+        ``` |
+| Flask with gunicorn | ```
         web: newrelic-admin run-program gunicorn -b "0.0.0.0:$PORT" -w 3 hello:app
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Django with gunicorn listed in `INSTALLED_APPS`
-      </td>
-
-      <td>
-        ```
+        ``` |
+| Django with gunicorn listed in `INSTALLED_APPS` | ```
         web: newrelic-admin run-program python hellodjango/manage.py run_gunicorn -b "0.0.0.0:$PORT" -w 3
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 <Callout variant="caution">
   Avoid using the built-in development hosts of any web framework prior to Python version 2.7.4 or prior to Django 1.4. Instead, use <DNT>**gunicorn**</DNT> or <DNT>**uWSGI**</DNT>.

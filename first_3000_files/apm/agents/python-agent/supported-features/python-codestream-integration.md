@@ -25,87 +25,15 @@ First, [install](/docs/codestream/start-here/install-codestream) the New Relic C
 
 The Python agent reports and attaches the following attributes to spans produced by your application:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Name**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
+| **Name** | **Description** | **Example** |
+| - | - | - |
+| `code.function` | The name of the instrumented function | validate_credentials |
+| `code.filepath` | The absolute path to the source code file in which `code.function` is defined | /usr/local/apps/test-app/main.py |
+| `code.lineno` | The line number where `code.function` is defined in code.filepath | 639 |
+| `code.namespace` | The namespace (class/ module name) in which `code.function` is defined | example.service.MyService |
 
-      <th>
-        <DNT>
-          **Example**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `code.function`
-      </td>
-
-      <td>
-        The name of the instrumented function
-      </td>
-
-      <td>
-        validate_credentials
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.filepath`
-      </td>
-
-      <td>
-        The absolute path to the source code file in which `code.function` is defined
-      </td>
-
-      <td>
-        /usr/local/apps/test-app/main.py
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.lineno`
-      </td>
-
-      <td>
-        The line number where `code.function` is defined in code.filepath
-      </td>
-
-      <td>
-        639
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.namespace`
-      </td>
-
-      <td>
-        The namespace (class/ module name) in which `code.function` is defined
-      </td>
-
-      <td>
-        example.service.MyService
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="important">
   Not every function in your application code will be instrumented with the above attributes. In some cases, the agent will directly wrap base framework code (ie. Django, Flask, etc.) that is invoked within your application and will not display within your IDE.

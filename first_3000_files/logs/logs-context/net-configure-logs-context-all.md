@@ -33,89 +33,23 @@ With our .NET <InlinePopover type="apm"/> agent, you can get <DNT>**logs in cont
 
 You have three options to configure <InlinePopover type="apm"/> logs in context to send your app's logs and linking metadata automatically to New Relic. Supported frameworks for automatic logs in context using in agent forwarding include:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Frameworks
-      </th>
+# Table
 
-      <th>
-        Minimium framework version
-      </th>
+| Frameworks | Minimium framework version | Minimium agent version |
+| - | - | - |
+| Log4Net | For .NET Framework: v1.2.10
 
-      <th>
-        Minimium agent version
-      </th>
-    </tr>
-  </thead>
+        For .NET Core: v2.0.10 | v9.7.0 |
+| Serilog | For .NET Framework: v2.0.0
 
-  <tbody>
-    <tr>
-      <td>
-        Log4Net
-      </td>
+        For .NET Core: v2.5.0 | v9.7.0 |
+| NLog | For .NET Framework: v4.1.0
 
-      <td>
-        For .NET Framework: v1.2.10
+        For .NET Core: v4.5.0 | v9.7.0 |
+| Microsoft.Extensions.Logging | v3.0.0 | For .NET Framework: Agent v9.7.0
 
-        For .NET Core: v2.0.10
-      </td>
+        For .NET Core: Agent v10.0.0 |
 
-      <td>
-        v9.7.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Serilog
-      </td>
-
-      <td>
-        For .NET Framework: v2.0.0
-
-        For .NET Core: v2.5.0
-      </td>
-
-      <td>
-        v9.7.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        NLog
-      </td>
-
-      <td>
-        For .NET Framework: v4.1.0
-
-        For .NET Core: v4.5.0
-      </td>
-
-      <td>
-        v9.7.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Microsoft.Extensions.Logging
-      </td>
-
-      <td>
-        v3.0.0
-      </td>
-
-      <td>
-        For .NET Framework: Agent v9.7.0
-
-        For .NET Core: Agent v10.0.0
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="tip">
   Many versions of Sitecore use Sitecore.Logging, which is based off a fork of log4net, but independent. Support for this library was added in version 10.14.0 of the .NET Agent.

@@ -79,88 +79,20 @@ With New Relic's support for .NET, you can monitor your apps in dynamic or distr
 
 After installing the .NET agent, extend the agent's instrumentation with one or more of these methods:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Instrumentation options**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Details**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [Browser instrumentation](/docs/agents/net-agent/features/page-load-timing-net)
-      </td>
-
-      <td>
-        Integrate the .NET agent with [<InlinePopover type="browser"/>](/docs/browser/new-relic-browser/getting-started/new-relic-browser) to gain visibility into end-user activity.
+| **Instrumentation options** | **Details** |
+| - | - |
+| [Browser instrumentation](/docs/agents/net-agent/features/page-load-timing-net) | Integrate the .NET agent with [](/docs/browser/new-relic-browser/getting-started/new-relic-browser) to gain visibility into end-user activity.
 
         * ASP.NET apps (.NET Framework only): Use any of the available options to [install the browser agent](/docs/browser/new-relic-browser/installation/install-new-relic-browser-agent).
-        * ASP.NET Core apps (targeting .NET Core or .NET Framework): Use either the [API method](/docs/agents/net-agent/net-agent-api/get-browser-timing-header) or the [copy/paste method](/docs/browser/new-relic-browser/installation/install-new-relic-browser-agent#copy-paste-app) to inject the browser agent into your webpages.
-      </td>
-    </tr>
+        * ASP.NET Core apps (targeting .NET Core or .NET Framework): Use either the [API method](/docs/agents/net-agent/net-agent-api/get-browser-timing-header) or the [copy/paste method](/docs/browser/new-relic-browser/installation/install-new-relic-browser-agent#copy-paste-app) to inject the browser agent into your webpages. |
+| [Custom instrumentation](/docs/agents/net-agent/custom-instrumentation/introduction-net-custom-instrumentation) | Instrument transactions not captured as part of New Relic's automatic framework instrumentation. |
+| [Agent API](/docs/agents/net-agent/features/net-agent-api) | See the [.NET agent API guide](/docs/agents/net-agent/api-guides/guide-using-net-agent-api) to learn how to customize the agent's behavior. For example, you can collect custom metrics, flag an error, or ignore a particular transaction entirely. |
+| [Custom attributes](/docs/apm/agents/net-agent/net-agent-api/itransaction/#addcustomattribute) | Customize the [attributes](/docs/agents/manage-apm-agents/agent-metrics/agent-attributes) attached to transactions. Customizing attributes allows you to avoid sending sensitive attributes, or to collect additional attributes for deeper visibility into your transactions. |
+| [Distributed tracing](/docs/apm/distributed-tracing/getting-started/introduction-distributed-tracing) | Enable [distributed tracing](/docs/apm/distributed-tracing/getting-started/introduction-distributed-tracing) to understand activity across a complex, distributed system that uses many services and microservices. |
+| [Open source telemetry](/docs/integrations/open-source-telemetry-integrations/get-started/introduction-new-relics-open-source-telemetry-integrations) | Explore these tools: [OpenTelemetry exporter](/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/new-relics-opentelemetry-integration) and [.NET Telemetry SDK](/docs/data-ingest-apis/get-data-new-relic/new-relic-sdks/telemetry-sdks-send-custom-telemetry-data-new-relic). |
 
-    <tr>
-      <td>
-        [Custom instrumentation](/docs/agents/net-agent/custom-instrumentation/introduction-net-custom-instrumentation)
-      </td>
-
-      <td>
-        Instrument transactions not captured as part of New Relic's automatic framework instrumentation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Agent API](/docs/agents/net-agent/features/net-agent-api)
-      </td>
-
-      <td>
-        See the [.NET agent API guide](/docs/agents/net-agent/api-guides/guide-using-net-agent-api) to learn how to customize the agent's behavior. For example, you can collect custom metrics, flag an error, or ignore a particular transaction entirely.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Custom attributes](/docs/apm/agents/net-agent/net-agent-api/itransaction/#addcustomattribute)
-      </td>
-
-      <td>
-        Customize the [attributes](/docs/agents/manage-apm-agents/agent-metrics/agent-attributes) attached to transactions. Customizing attributes allows you to avoid sending sensitive attributes, or to collect additional attributes for deeper visibility into your transactions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Distributed tracing](/docs/apm/distributed-tracing/getting-started/introduction-distributed-tracing)
-      </td>
-
-      <td>
-        Enable [distributed tracing](/docs/apm/distributed-tracing/getting-started/introduction-distributed-tracing) to understand activity across a complex, distributed system that uses many services and microservices.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Open source telemetry](/docs/integrations/open-source-telemetry-integrations/get-started/introduction-new-relics-open-source-telemetry-integrations)
-      </td>
-
-      <td>
-        Explore these tools: [OpenTelemetry exporter](/docs/integrations/open-source-telemetry-integrations/open-source-telemetry-integration-list/new-relics-opentelemetry-integration) and [.NET Telemetry SDK](/docs/data-ingest-apis/get-data-new-relic/new-relic-sdks/telemetry-sdks-send-custom-telemetry-data-new-relic).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View logs for your APM and infrastructure data [#logs-context]
 

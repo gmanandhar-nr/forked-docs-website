@@ -140,27 +140,11 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
       >
         Here's an overview of the settings.
 
-        <table>
-          <thead>
-            <tr>
-              <th style={{ width: "200px" }}>
-                Type
-              </th>
+        # Table
 
-              <th>
-                Required configuration
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                Infinite Tracing
-              </td>
-
-              <td>
-                Configuration options:
+| Type | Required configuration |
+| - | - |
+| Infinite Tracing | Configuration options:
 
                 * `newrelic.Config` structure:
 
@@ -176,12 +160,9 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
                 * Environment variable:
 
                   ```
-                  NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST=<a href="/docs/understand-dependencies/distributed-tracing/infinite-tracing/set-trace-observer#ui-endpoints">YOUR_TRACE_OBSERVER_HOST</a>
-                  ```
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST=YOUR_TRACE_OBSERVER_HOST
+                  ``` |
+
       </Collapser>
     </CollapserGroup>
 

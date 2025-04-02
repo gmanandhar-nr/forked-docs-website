@@ -91,232 +91,33 @@ Our open source agent and integrations send performance metrics and inventory da
 
 The table below lists the agents and integrations supported by the guided install CLI command. The specific on-host integration commands are provided for your reference:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Integration
-      </th>
+# Table
 
-      <th>
-        Command
-      </th>
-    </tr>
-  </thead>
+| Integration | Command |
+| - | - |
+| Apache | `newrelic install -n apache-open-source-integration` |
+| Cassandra | `newrelic install -n cassandra-open-source-integration` |
+| Couchbase | `newrelic install -n couchbase-open-source-integration` |
+| .NET | `newrelic install -n dotnet-agent-installer` |
+| ElasticSearch | `newrelic install -n elasticsearch-open-source-integration` |
+| HAProxy | `newrelic install -n haproxy-open-source-integration` |
+| HashiCorp Consul | `newrelic install -n hashicorp-consul-open-source-integration` |
+| Infrastructure agent | `newrelic install -n infrastructure-agent-installer` |
+| Java | `newrelic install -n java-agent-installer` |
+| Memcached | `newrelic install -n memcached-open-source-integration` |
+| Microsoft SQL Server
+        (Windows only) | `newrelic install -n mssql-server-integration-installer` |
+| MongoDB | `newrelic install -n mongodb-open-source-integration` |
+| MySQL | `newrelic install -n mysql-open-source-integration` |
+| Nagios | `newrelic install -n nagios-open-source-integration` |
+| Nginx | `newrelic install -n nginx-open-source-integration` |
+| Node.JS | `newrelic install -n node-agent-installer` |
+| PHP | `newrelic install -n php-agent-installer` |
+| PostgreSQL | `newrelic install -n postgres-open-source-integration` |
+| RabbitMQ | `newrelic install -n rabbitmq-open-source-integration` |
+| Redis | `newrelic install -n redis-open-source-integration` |
+| Varnish Cache | `newrelic install -n varnish-cache-open-source-integration` |
 
-  <tbody>
-    <tr>
-      <td>
-        Apache
-      </td>
-
-      <td>
-        `newrelic install -n apache-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Cassandra
-      </td>
-
-      <td>
-        `newrelic install -n cassandra-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Couchbase
-      </td>
-
-      <td>
-        `newrelic install -n couchbase-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        .NET
-      </td>
-
-      <td>
-        `newrelic install -n dotnet-agent-installer`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        ElasticSearch
-      </td>
-
-      <td>
-        `newrelic install -n elasticsearch-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        HAProxy
-      </td>
-
-      <td>
-        `newrelic install -n haproxy-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        HashiCorp Consul
-      </td>
-
-      <td>
-        `newrelic install -n hashicorp-consul-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Infrastructure agent
-      </td>
-
-      <td>
-        `newrelic install -n infrastructure-agent-installer`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Java
-      </td>
-
-      <td>
-        `newrelic install -n java-agent-installer`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Memcached
-      </td>
-
-      <td>
-        `newrelic install -n memcached-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Microsoft SQL Server<br/>
-        (Windows only)
-      </td>
-
-      <td>
-        `newrelic install -n mssql-server-integration-installer`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        MongoDB
-      </td>
-
-      <td>
-        `newrelic install -n mongodb-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        MySQL
-      </td>
-
-      <td>
-        `newrelic install -n mysql-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Nagios
-      </td>
-
-      <td>
-        `newrelic install -n nagios-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Nginx
-      </td>
-
-      <td>
-        `newrelic install -n nginx-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Node.JS
-      </td>
-
-      <td>
-        `newrelic install -n node-agent-installer`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PHP
-      </td>
-
-      <td>
-        `newrelic install -n php-agent-installer`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PostgreSQL
-      </td>
-
-      <td>
-        `newrelic install -n postgres-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        RabbitMQ
-      </td>
-
-      <td>
-        `newrelic install -n rabbitmq-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Redis
-      </td>
-
-      <td>
-        `newrelic install -n redis-open-source-integration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Varnish Cache
-      </td>
-
-      <td>
-        `newrelic install -n varnish-cache-open-source-integration`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Troubleshoot common problems [#troubleshoot]
 

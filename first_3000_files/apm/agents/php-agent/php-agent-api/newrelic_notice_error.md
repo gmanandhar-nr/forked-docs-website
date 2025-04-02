@@ -102,33 +102,14 @@ This function can handle a variable number of parameters. You can pass-in 1, 4 o
 newrelic_notice_error(string $message)
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$message`
 
-  <tbody>
-    <tr>
-      <td>
-        `$message`
+        _string_ | Required. Provide an error message that will be meaningful to you when it displays in [error traces](/docs/apm/applications-menu/error-analytics/error-analytics-explore-events-behind-errors#traces-table). |
 
-        _string_
-      </td>
-
-      <td>
-        Required. Provide an error message that will be meaningful to you when it displays in [error traces](/docs/apm/applications-menu/error-analytics/error-analytics-explore-events-behind-errors#traces-table).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ```php
 newrelic_notice_error(Throwable|Exception $e)

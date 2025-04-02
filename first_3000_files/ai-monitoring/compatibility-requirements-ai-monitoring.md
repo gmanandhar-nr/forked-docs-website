@@ -12,86 +12,22 @@ When you disable distributed tracing or enable high security mode, the agent wil
 
 AI monitoring is compatible with these agent versions and AI libraries:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Agent version
-      </th>
+# Table
 
-      <th>
-        Supported libraries
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [Go version 3.31.0 and above](/docs/apm/agents/go-agent/get-started/go-agent-compatibility-requirements/#digital-intelligence-platform)
-      </td>
-
-      <td>
-        * [Go OpenAI library](https://github.com/sashabaranov/go-openai) versions 1.19.4 and above
-        * [AWS SDK for Go v2](https://github.com/aws/aws-sdk-go-v2) versions 1.6.0 and above
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Java version 8.12.0 and above](/docs/apm/agents/java-agent/getting-started/compatibility-requirements-java-agent/#digital-intelligence-platform)
-      </td>
-
-      <td>
-        * [AWS SDK for Java v2 Bedrock Runtime Client](https://github.com/aws/aws-sdk-java-v2/) versions 2.20.157 and above
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [.NET version 10.23.0 and above](/docs/apm/agents/net-agent/getting-started/net-agent-compatibility-requirements/#large-language-models-core)
-      </td>
-
-      <td>
-        * [AWS Bedrock](https://www.nuget.org/packages/AWSSDK.Bedrock/) version 3.7.200 and above
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Node.js version 11.13.0 and above](/docs/apm/agents/nodejs-agent/getting-started/compatibility-requirements-nodejs-agent/#digital-intelligence-platform)
-      </td>
-
-      <td>
-        * [OpenAI Node.js API library](https://www.npmjs.com/package/openai/v/4.0.0) versions 4.0.0 and above. If your model uses streaming, the Node.js agent supports versions 4.12.2 and above
+| Agent version | Supported libraries |
+| - | - |
+| [Go version 3.31.0 and above](/docs/apm/agents/go-agent/get-started/go-agent-compatibility-requirements/#digital-intelligence-platform) | * [Go OpenAI library](https://github.com/sashabaranov/go-openai) versions 1.19.4 and above
+        * [AWS SDK for Go v2](https://github.com/aws/aws-sdk-go-v2) versions 1.6.0 and above |
+| [Java version 8.12.0 and above](/docs/apm/agents/java-agent/getting-started/compatibility-requirements-java-agent/#digital-intelligence-platform) | * [AWS SDK for Java v2 Bedrock Runtime Client](https://github.com/aws/aws-sdk-java-v2/) versions 2.20.157 and above |
+| [.NET version 10.23.0 and above](/docs/apm/agents/net-agent/getting-started/net-agent-compatibility-requirements/#large-language-models-core) | * [AWS Bedrock](https://www.nuget.org/packages/AWSSDK.Bedrock/) version 3.7.200 and above |
+| [Node.js version 11.13.0 and above](/docs/apm/agents/nodejs-agent/getting-started/compatibility-requirements-nodejs-agent/#digital-intelligence-platform) | * [OpenAI Node.js API library](https://www.npmjs.com/package/openai/v/4.0.0) versions 4.0.0 and above. If your model uses streaming, the Node.js agent supports versions 4.12.2 and above
         * [AWS SDK for JavaScript BedrockRuntime Client](https://www.npmjs.com/package/@aws-sdk/client-bedrock-runtime) versions 3.474.0 and above
-        * [LangChain.js](https://www.npmjs.com/package/langchain/v/0.1.17) versions 0.1.17 and above
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Python version 9.8.0 and above](/docs/apm/agents/python-agent/getting-started/compatibility-requirements-python-agent/#digital-intelligence-platform)
-      </td>
-
-      <td>
-        * [OpenAI](https://pypi.org/project/openai/) library versions 0.28.0 and above.
+        * [LangChain.js](https://www.npmjs.com/package/langchain/v/0.1.17) versions 0.1.17 and above |
+| [Python version 9.8.0 and above](/docs/apm/agents/python-agent/getting-started/compatibility-requirements-python-agent/#digital-intelligence-platform) | * [OpenAI](https://pypi.org/project/openai/) library versions 0.28.0 and above.
         * [Boto3 AWS SDK for Python](https://pypi.org/project/boto3/)  versions 1.28.57 and above.
-        * [LangChain](https://pypi.org/project/langchain/) versions 0.1.0 and above.
-      </td>
-    </tr>
+        * [LangChain](https://pypi.org/project/langchain/) versions 0.1.0 and above. |
+| [Ruby version 9.8.0 and above](/docs/apm/agents/ruby-agent/getting-started/ruby-agent-requirements-supported-frameworks/#digital-intelligence-platform) | * [OpenAI gem](https://github.com/alexrudall/ruby-openai) version 3.4.0 and above |
 
-    <tr>
-      <td>
-        [Ruby version 9.8.0 and above](/docs/apm/agents/ruby-agent/getting-started/ruby-agent-requirements-supported-frameworks/#digital-intelligence-platform)
-      </td>
-
-      <td>
-        * [OpenAI gem](https://github.com/alexrudall/ruby-openai) version 3.4.0 and above
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Monitoring at scale with NVIDIA NIM [#deploy-at-scale]
 

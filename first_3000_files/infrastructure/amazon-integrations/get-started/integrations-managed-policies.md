@@ -241,57 +241,20 @@ The following permissions are used by New Relic to retrieve data for specific AW
       If an integration is not listed on this page, these permissions are all you need.
     </Callout>
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "150px" }}>
-            All integrations
-          </th>
+    # Table
 
-          <th>
-            Permissions
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            CloudWatch
-          </td>
-
-          <td>
-            `cloudwatch:GetMetricStatistics`
+| All integrations | Permissions |
+| - | - |
+| CloudWatch | `cloudwatch:GetMetricStatistics`
 
             `cloudwatch:ListMetrics`
 
-            `cloudwatch:GetMetricData`
-          </td>
-        </tr>
+            `cloudwatch:GetMetricData` |
+| Config API | `config:BatchGetResourceConfig`
 
-        <tr>
-          <td>
-            Config API
-          </td>
+            `config:ListDiscoveredResources` |
+| Resource Tagging API | `tag:GetResources` |
 
-          <td>
-            `config:BatchGetResourceConfig`
-
-            `config:ListDiscoveredResources`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Resource Tagging API
-          </td>
-
-          <td>
-            `tag:GetResources`
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

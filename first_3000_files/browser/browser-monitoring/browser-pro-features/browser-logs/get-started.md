@@ -16,74 +16,17 @@ Browser logs are tracked by default at the `WARN` level for Pro and Pro+SPA agen
 
 Based on logging levels and sampling rates set in the configuration, auto-instrumentation of browser logs will attempt to collect messages from the following methods:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{width: "200px"}}>
-        Method
-      </th>
+# Table
 
-      <th>
-        Level
-      </th>
-    </tr>
-  </thead>
+| Method | Level |
+| - | - |
+| console.log | `INFO` |
+| console.error | `ERROR` |
+| console.warn | `WARN` |
+| console.info | `INFO` |
+| console.debug | `DEBUG` |
+| console.trace | `TRACE` |
 
-  <tbody>
-    <tr>
-      <td>
-        console.log
-      </td>
-      <td>
-        `INFO`
-      </td>
-     </tr>
-    <tr>
-      <td>
-        console.error
-      </td>
-      <td>
-        `ERROR`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        console.warn
-      </td>
-      <td>
-        `WARN`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        console.info
-      </td>
-      <td>
-        `INFO`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        console.debug
-      </td>
-      <td>
-        `DEBUG`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        console.trace
-      </td>
-      <td>
-        `TRACE`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 By default, logging data is stored for 30 days, but actual data retention depends on your account.
 

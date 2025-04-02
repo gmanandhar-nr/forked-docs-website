@@ -40,45 +40,17 @@ There are no restrictions on setting the name, but it's recommended you use a `C
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `metrics`
 
-  <tbody>
-    <tr>
-      <td>
-        `metrics`
+        _iterable object_ | Required. Set of metric values, which can be in the form of any iterable object that yields `(name, value)` tuples. See [`record_custom_metric`](/docs/agents/python-agent/python-agent-api/record_custom_metric) parameters for more information about `name` and `value` rules and suggestions. |
+| `application`
 
-        _iterable object_
-      </td>
+        _string_ | Optional. If the application is the default value of `None`, the agent associates the custom metrics with the parent app of the current transaction. Thus, you should provide the application unless this method is used in code for a web transaction or background task. |
 
-      <td>
-        Required. Set of metric values, which can be in the form of any iterable object that yields `(name, value)` tuples. See [`record_custom_metric`](/docs/agents/python-agent/python-agent-api/record_custom_metric) parameters for more information about `name` and `value` rules and suggestions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `application`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. If the application is the default value of `None`, the agent associates the custom metrics with the parent app of the current transaction. Thus, you should provide the application unless this method is used in code for a web transaction or background task.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

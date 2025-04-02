@@ -50,25 +50,10 @@ The Alert Intelligence tool offers a range of features to help you monitor and a
 
 **To use alert intelligence:**
 
-<table>
-  <thead>
-    <tr>
-      <th>Action</th>
-      <th>Example prompt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>To generate a Alert Intelligence report</td>
-      <td>`@newrelic I just got paged by an alert? What happened`</td>
-    </tr>
-    <tr>
-      <td>To analyze a specific alert</td>
-      <td>`@newrelic analyze alert <alert_id>`</td>
-    </tr>
-    <tr>
-      <td>To focus on a specific service or time frame</td>
-      <td>`@newrelic check for recent alerts related to <service_name> in the past <time frame>`</td>
-    </tr>
-  </tbody>
-</table>
+# Table
+
+| Action | Example prompt |
+| - | - |
+| To generate a Alert Intelligence report | `@newrelic I just got paged by an alert? What happened` |
+| To analyze a specific alert | `@newrelic analyze alert ` |
+| To focus on a specific service or time frame | `@newrelic check for recent alerts related to  in the past ` |

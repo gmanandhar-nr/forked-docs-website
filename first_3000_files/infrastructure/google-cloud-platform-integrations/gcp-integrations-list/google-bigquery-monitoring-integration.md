@@ -43,101 +43,19 @@ To view [metric data](/docs/telemetry-data-platform/understand-data/new-relic-da
 
 Query `GcpBigQueryProjectSample` events in New Relic to view data for the following metrics. Resolution is one data point per minute with an 8-minute delay.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Attribute | Description |
+| - | - |
+| `query.Count` | In-flight queries. |
+| `query.ExecutionTimes` | Distribution of query execution times. |
+| `slots.Allocated` | Number of slots currently allocated for project. |
+| `slots.AllocatedForProject` | Number of slots currently allocated for query jobs in the project. |
+| `slots.AllocatedForProjectAndJobType` | Number of slots currently allocated for the project and job type. |
+| `slots.AllocatedForReservation` | Number of slots currently allocated for project in the reservation. |
+| `slots.TotalAllocatedForReservation` | Number of slots currently allocated across projects in the reservation. |
+| `slots.TotalAvailable` | Total number of slots available for the project. |
 
-  <tbody>
-    <tr>
-      <td>
-        `query.Count`
-      </td>
-
-      <td>
-        In-flight queries.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `query.ExecutionTimes`
-      </td>
-
-      <td>
-        Distribution of query execution times.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `slots.Allocated`
-      </td>
-
-      <td>
-        Number of slots currently allocated for project.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `slots.AllocatedForProject`
-      </td>
-
-      <td>
-        Number of slots currently allocated for query jobs in the project.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `slots.AllocatedForProjectAndJobType`
-      </td>
-
-      <td>
-        Number of slots currently allocated for the project and job type.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `slots.AllocatedForReservation`
-      </td>
-
-      <td>
-        Number of slots currently allocated for project in the reservation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `slots.TotalAllocatedForReservation`
-      </td>
-
-      <td>
-        Number of slots currently allocated across projects in the reservation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `slots.TotalAvailable`
-      </td>
-
-      <td>
-        Total number of slots available for the project.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### GcpBigQueryDatasetSample [#dataset-sample]
 

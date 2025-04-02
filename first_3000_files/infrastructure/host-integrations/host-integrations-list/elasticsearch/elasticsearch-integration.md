@@ -277,101 +277,19 @@ The Elasticsearch integration collects the following metrics. Each metric name i
     id="cluster-metrics"
     title="ElasticsearchClusterSample event"
   >
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "350px" }}>
-            Metric
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
+| Metric | Description |
+| - | - |
+| `cluster.dataNodes` | The number of data nodes in the cluster. |
+| `cluster.nodes` | The number of nodes in the cluster. |
+| `cluster.status` | The Elasticsearch cluster health: `red`, `yellow`, or `green`. |
+| `shards.active` | The number of active shards in the cluster. |
+| `shards.initializing` | The number of shards that are currently initializing. |
+| `shards.primaryActive` | The number of active primary shards in the cluster. |
+| `shards.relocating` | The number of shards that are relocating from one node to another. |
+| `shards.unassigned` | The number of shards that are unassigned to a node. |
 
-      <tbody>
-        <tr>
-          <td>
-            `cluster.dataNodes`
-          </td>
-
-          <td>
-            The number of data nodes in the cluster.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `cluster.nodes`
-          </td>
-
-          <td>
-            The number of nodes in the cluster.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `cluster.status`
-          </td>
-
-          <td>
-            The Elasticsearch cluster health: `red`, `yellow`, or `green`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `shards.active`
-          </td>
-
-          <td>
-            The number of active shards in the cluster.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `shards.initializing`
-          </td>
-
-          <td>
-            The number of shards that are currently initializing.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `shards.primaryActive`
-          </td>
-
-          <td>
-            The number of active primary shards in the cluster.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `shards.relocating`
-          </td>
-
-          <td>
-            The number of shards that are relocating from one node to another.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `shards.unassigned`
-          </td>
-
-          <td>
-            The number of shards that are unassigned to a node.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

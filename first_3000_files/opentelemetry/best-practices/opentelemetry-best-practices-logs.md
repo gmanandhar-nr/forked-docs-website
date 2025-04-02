@@ -37,151 +37,24 @@ Regardless of the chosen collection method, successful integration requires conf
 
 New Relic maps OTLP log records to the `Log` data type. The table below describes how fields from the [`LogRecord` proto message](https://github.com/open-telemetry/opentelemetry-proto/blob/main/opentelemetry/proto/logs/v1/logs.proto) are mapped to New Relic `Log`:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        OTLP `logs.proto` field
-      </th>
+# Table
 
-      <th>
-        New Relic `Log` field
-      </th>
-    </tr>
-  </thead>
+| OTLP `logs.proto` field | New Relic `Log` field |
+| - | - |
+| `ResourceLogs.Resource.attributes` | Each key/value is an attribute on the `Log` field **[1]** |
+| `ScopeLogs.InstrumentationScope.name` | `otel.library.name` |
+| `ScopeLogs.InstrumentationScope.version` | `otel.library.version` |
+| `ScopeLogs.InstrumentationScope.attributes` | Each key/value is an attribute on the `Log` field **[1]** |
+| `LogRecord.time_unix_nanos` | `timestamp` **[2]** |
+| `LogRecord.severity_number` | `severity.number` |
+| `LogRecord.severity_text` | `severity.text` |
+| `LogRecord.body` | `message`, and possibly parsed attributes **[3]** |
+| `LogRecord.attributes` | Each key/value is an attribute on the `Log` field **[1]** |
+| `LogRecord.dropped_attribute_count` | `otel.dropped_attributes_count` |
+| `LogRecord.flags` | `w3c.flags` (integer) |
+| `LogRecord.trace_id` | `trace.id` |
+| `LogRecord.span_id` | `span.id` |
 
-  <tbody>
-    <tr>
-      <td>
-        `ResourceLogs.Resource.attributes`
-      </td>
-
-      <td>
-        Each key/value is an attribute on the `Log` field **[1]**
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScopeLogs.InstrumentationScope.name`
-      </td>
-
-      <td>
-        `otel.library.name`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScopeLogs.InstrumentationScope.version`
-      </td>
-
-      <td>
-        `otel.library.version`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScopeLogs.InstrumentationScope.attributes`
-      </td>
-
-      <td>
-        Each key/value is an attribute on the `Log` field **[1]**
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LogRecord.time_unix_nanos`
-      </td>
-
-      <td>
-        `timestamp` **[2]**
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LogRecord.severity_number`
-      </td>
-
-      <td>
-        `severity.number`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LogRecord.severity_text`
-      </td>
-
-      <td>
-        `severity.text`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LogRecord.body`
-      </td>
-
-      <td>
-        `message`, and possibly parsed attributes **[3]**
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LogRecord.attributes`
-      </td>
-
-      <td>
-        Each key/value is an attribute on the `Log` field **[1]**
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LogRecord.dropped_attribute_count`
-      </td>
-
-      <td>
-        `otel.dropped_attributes_count`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LogRecord.flags`
-      </td>
-
-      <td>
-        `w3c.flags` (integer)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LogRecord.trace_id`
-      </td>
-
-      <td>
-        `trace.id`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LogRecord.span_id`
-      </td>
-
-      <td>
-        `span.id`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Table footnotes [#otlp-mapping-notes]
 

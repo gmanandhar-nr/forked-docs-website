@@ -65,146 +65,28 @@ end
 
 The `default` recipe supplies the following Chef attributes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        IsRequired
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `default['newrelic_install']['NEW_RELIC_API_KEY']`
-      </td>
-
-      <td>
-        Required
-      </td>
-
-      <td>
-        Your New Relic [user key](/docs/apis/intro-apis/new-relic-api-keys).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `default['newrelic_install']['NEW_RELIC_ACCOUNT_ID']`
-      </td>
-
-      <td>
-        Required
-      </td>
-
-      <td>
-        The [New Relic account ID](/docs/accounts/accounts-billing/account-structure/account-id)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `default['newrelic_install']['targets']`
-      </td>
-
-      <td>
-        Required
-      </td>
-
-      <td>
-        List of targeted installs to run on hosts. Available options are:
+| Name | IsRequired | Description |
+| - | - | - |
+| `default['newrelic_install']['NEW_RELIC_API_KEY']` | Required | Your New Relic [user key](/docs/apis/intro-apis/new-relic-api-keys). |
+| `default['newrelic_install']['NEW_RELIC_ACCOUNT_ID']` | Required | The [New Relic account ID](/docs/accounts/accounts-billing/account-structure/account-id) |
+| `default['newrelic_install']['targets']` | Required | List of targeted installs to run on hosts. Available options are:
 
         * `infrastructure-agent-installer`
         * `logs-integration`
-        * `php-agent-installer`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `default['newrelic_install']['NEW_RELIC_REGION']`
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        The [data center region](/docs/accounts/accounts-billing/account-setup/choose-your-data-center) for your organization (`US` or `EU`). Defaults to `US`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `default['newrelic_install']['env']['HTTPS_PROXY']`
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Sets the proxy server the agent should use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `default['newrelic_install']['verbosity']`
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Specifies command output verbosity
+        * `php-agent-installer` |
+| `default['newrelic_install']['NEW_RELIC_REGION']` | Optional | The [data center region](/docs/accounts/accounts-billing/account-setup/choose-your-data-center) for your organization (`US` or `EU`). Defaults to `US`. |
+| `default['newrelic_install']['env']['HTTPS_PROXY']` | Optional | Sets the proxy server the agent should use. |
+| `default['newrelic_install']['verbosity']` | Optional | Specifies command output verbosity
 
         Supported values include
 
         * `debug`
-        * `trace`
-      </td>
-    </tr>
+        * `trace` |
+| `default['newrelic_install']['tags']` | Optional | Key value pair tags added through custom attributes. |
+| `default['newrelic_install']['timeout_seconds']` | Optional | Sets the timeout in seconds for New Relic installations. Defaults to `600`. |
 
-    <tr>
-      <td>
-        `default['newrelic_install']['tags']`
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Key value pair tags added through custom attributes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `default['newrelic_install']['timeout_seconds']`
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Sets the timeout in seconds for New Relic installations. Defaults to `600`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <CollapserGroup>
   <Collapser

@@ -39,53 +39,13 @@ You can [query and explore your data](/docs/using-new-relic/data/understand-data
 
 ### WAF Classic
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| WebACL | `AwsWafWebACLSample` | `AwsWafWebACL` |
+| RuleGroup | `AwsWafRuleGroupSample` | `AwsWafRuleGroup` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        WebACL
-      </td>
-
-      <td>
-        `AwsWafWebACLSample`
-      </td>
-
-      <td>
-        `AwsWafWebACL`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        RuleGroup
-      </td>
-
-      <td>
-        `AwsWafRuleGroupSample`
-      </td>
-
-      <td>
-        `AwsWafRuleGroup`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### WAF V2
 

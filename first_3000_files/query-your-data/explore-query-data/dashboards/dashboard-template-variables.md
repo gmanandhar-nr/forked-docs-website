@@ -129,51 +129,17 @@ First, you'll define a template variable. This is the variable that you'll use i
 
     2. Complete the <DNT>**Add variable**</DNT> workflow. Below are some rules and tips for each of the fields.
 
-    <table>
-      <thead>
-        <tr>
-          <th width={200}>
-            **Field**
-          </th>
+    # Table
 
-          <th>
-            **Details**
-          </th>
-        </tr>
-      </thead>
+| **Field** | **Details** |
+| - | - |
+| Name to use in queries | The name of the variable. This is what you'll use in the query, surrounded by `{{...}}`. For example, if you use `country` here as the name, then when writing a query you'll call the variable with `{{country}}`.
 
-      <tbody>
-        <tr>
-          <td>
-            Name to use in queries
-          </td>
+            Variable names must start with a letter and can contain letters, numbers, and underscores. |
+| Display name | Optional. This is how the variable will display above the dashboard so that dashboard users know what the variable represents. If this is left blank, it will use the main name value. |
+| Type | There are three options:
 
-          <td>
-            The name of the variable. This is what you'll use in the query, surrounded by `{{...}}`. For example, if you use `country` here as the name, then when writing a query you'll call the variable with `{{country}}`.
-
-            Variable names must start with a letter and can contain letters, numbers, and underscores.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Display name
-          </td>
-
-          <td>
-            Optional. This is how the variable will display above the dashboard so that dashboard users know what the variable represents. If this is left blank, it will use the main name value.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Type
-          </td>
-
-          <td>
-            There are three options:
-
-            * <DNT>**Query**</DNT>: You can write a query that will return a dynamic list of options used in the dropdown menu. For example, the following query would return a dynamic list of `country` values:
+            * **Query**: You can write a query that will return a dynamic list of options used in the dropdown menu. For example, the following query would return a dynamic list of `country` values:
 
               ```sql
               SELECT uniques(countryCode) FROM PageAction SINCE 2 days ago
@@ -181,84 +147,26 @@ First, you'll define a template variable. This is the variable that you'll use i
 
               For rules and tips on writing queries, see [Query-type variables](#query-variable-rules).
 
-            * <DNT>**List**</DNT>: A list of comma-separated values that are used to populate the options in the dropdown menu. For example, you could manually define a list of `country` values using a list like: `ES, US, CA.`
+            * **List**: A list of comma-separated values that are used to populate the options in the dropdown menu. For example, you could manually define a list of `country` values using a list like: `ES, US, CA.`
 
-            * <DNT>**Text field**</DNT>: Instead of a dropdown of values to choose from, this allows dashboard users to filter for whatever text they input.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Account
-          </td>
-
-          <td>
-            Only present for `query` type. For organizations with multiple accounts, this sets the account that is queried.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Query
-          </td>
-
-          <td>
-            Write here your query using `uniques(attribute)`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Ignore time picker
-          </td>
-
-          <td>
-            Optional. Only present for query type. By turning this option off, the query will be run using the selected time picker’s value in the dashboard. That way, when the value of the time picker changes, the results of the variable’s dropdown will dynamically respond to the new selected time range.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Multi-select
-          </td>
-
-          <td>
-            Optional. This option allows a dropdown to allow multiple selections at the same time instead of a single selection.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Default values
-          </td>
-
-          <td>
-            Optional. These are the default values that the dashboard will filter on. For example, if you used the `country` query above, you could input `ES` as the default value and the dashboard would automatically filter to that value. You can also select all possibilities.
+            * **Text field**: Instead of a dropdown of values to choose from, this allows dashboard users to filter for whatever text they input. |
+| Account | Only present for `query` type. For organizations with multiple accounts, this sets the account that is queried. |
+| Query | Write here your query using `uniques(attribute)`. |
+| Ignore time picker | Optional. Only present for query type. By turning this option off, the query will be run using the selected time picker’s value in the dashboard. That way, when the value of the time picker changes, the results of the variable’s dropdown will dynamically respond to the new selected time range. |
+| Multi-select | Optional. This option allows a dropdown to allow multiple selections at the same time instead of a single selection. |
+| Default values | Optional. These are the default values that the dashboard will filter on. For example, if you used the `country` query above, you could input `ES` as the default value and the dashboard would automatically filter to that value. You can also select all possibilities.
 
             To use multiple values on a `WHERE` clause you need to use [`IN`](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/#sel-where) instead of `=`.
             
             The ** Include variable** toggle will determine the default configuration, include or exclude, for that variable in the dashboard. This configuration can be modified by the user viewing the dashboard by using the ** Include variable** toggle in the variable dropdown menu. The user selected configuration will be valid for the duration of the session. 
-            <Callout variant="important">
-            Note that you can only configure default values when the toggle is set to include variable. Once you select the default values you can switch the toggle so the variable is not included by default. The default values will be preselected when any user turns the toggle to include the variable from the variable dropdown menu.
-            </Callout>
-          </td>
-        </tr>
+            
+            Note that you can only configure default values when the toggle is set to include variable. Once you select the default values you can switch the toggle so the variable is not included by default. The default values will be preselected when any user turns the toggle to include the variable from the variable dropdown menu. |
+| Output format | This lets you change how the data generated by the variable is handled in the query. The selected option you choose here is related to the query you're going to add later in the widget. The **default** option is string because this is the more common option used in the majority of queries. You can change the **default** option to one of these:
 
-        <tr>
-          <td>
-            Output format
-          </td>
+            * **String**: Use this for non-numeric text values.
+            * **Number**: Use this for numeric values.
+            * **Identifier**: Use this when you want to substitute parts of the query, like event names or facet names. |
 
-          <td>
-            This lets you change how the data generated by the variable is handled in the query. The selected option you choose here is related to the query you're going to add later in the widget. The <DNT>**default**</DNT> option is string because this is the more common option used in the majority of queries. You can change the <DNT>**default**</DNT> option to one of these:
-
-            * <DNT>**String**</DNT>: Use this for non-numeric text values.
-            * <DNT>**Number**</DNT>: Use this for numeric values.
-            * <DNT>**Identifier**</DNT>: Use this when you want to substitute parts of the query, like event names or facet names.
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     See this example of what a template variable for `country` values would look like:
 

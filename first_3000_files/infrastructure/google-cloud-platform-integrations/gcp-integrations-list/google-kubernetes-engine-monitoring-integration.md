@@ -37,179 +37,34 @@ The data New Relic receives from your Google Kubernetes Engine integration inclu
 
 New Relic receives the following data from your GCP Kubernetes Engine integration and it is reported to a `GcpKubernetesContainerSample` event type with the provider value `GcpKubernetesContainer`. The `container/accelerator` metrics are only available the experimental mode on kubernetes is enabled, and gpu has been added to your cluster and container. Query `GcpKubernetesContainerSample` events to view data for the following attributes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "285px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `container.accelerator.dutyCycle` | Percent of time over the past sample period (10 seconds) during which the accelerator was actively processing.
 
-  <tbody>
-    <tr>
-      <td>
-        `container.accelerator.dutyCycle`
-      </td>
+        The `container.accelerator` metrics are only available for Kubernetes Engine cluster nodes with graphics processing unit (GPU) hardware accelerators. |
+| `container.accelerator.memoryTotal` | Total accelerator memory in bytes.
 
-      <td>
-        Percent of time over the past sample period (10 seconds) during which the accelerator was actively processing.
+        The `container.accelerator` metrics are only available for Kubernetes Engine cluster nodes with graphics processing unit (GPU) hardware accelerators. |
+| `container.accelerator.memoryUsed` | Total accelerator memory allocated in bytes.
 
-        The `container.accelerator` metrics are only available for Kubernetes Engine cluster nodes with graphics processing unit (GPU) hardware accelerators.
-      </td>
-    </tr>
+        The `container.accelerator` metrics are only available for Kubernetes Engine cluster nodes with graphics processing unit (GPU) hardware accelerators. |
+| `container.cpu.limitCores` | CPU cores limit of the container. Sampled every 60 seconds. |
+| `container.cpu.usageTime` | Cumulative CPU usage on all cores in seconds. This number divided by the elapsed time represents usage as a number of cores, regardless of any core limit that might be set. |
+| `container.cpu.limitUtilization` | The fraction of the memory limit that is currently in use on the instance. This value cannot exceed 1 as usage cannot exceed the limit. Sampled every 60 seconds. After sampling, data is not visible for up to 60 seconds.
 
-    <tr>
-      <td>
-        `container.accelerator.memoryTotal`
-      </td>
+        This metric is available only when a maximum memory limit has been specified for the container. |
+| `container.cpu.requestCores` | Number of CPU cores requested by the container. Sampled every 60 seconds. |
+| `container.cpu.requestUtilization` | The fraction of the requested CPU that is currently in use on the instance. This value can be greater than 1 as usage can exceed the request. Sampled every 60 seconds. After sampling, data is not visible for up to 180 seconds. |
+| `container.memory.limitBytes` | Memory limit of the container in bytes. Sampled every 60 seconds. |
+| `container.memory.limitUtilization` | The fraction of the memory limit that is currently in use on the instance. This value cannot exceed 1 as usage cannot exceed the limit. Sampled every 60 seconds. After sampling, data is not visible for up to 60 seconds. |
+| `container.memory.requestBytes` | Memory request of the container in bytes. Sampled every 60 seconds. |
+| `container.memory.requestUtilization` | The fraction of the requested memory that is currently in use on the instance. This value can be greater than 1 as usage can exceed the request. Sampled every 60 seconds. After sampling, data is not visible for up to 60 seconds. |
+| `container.memory.usedBytes` | Memory usage in bytes. Sampled every 60 seconds. |
+| `container.restartCount` | Number of times the container has restarted. Sampled every 60 seconds. |
+| `container.uptime` | Time in seconds that the container has been running. Sampled every 60 seconds. |
 
-      <td>
-        Total accelerator memory in bytes.
-
-        The `container.accelerator` metrics are only available for Kubernetes Engine cluster nodes with graphics processing unit (GPU) hardware accelerators.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.accelerator.memoryUsed`
-      </td>
-
-      <td>
-        Total accelerator memory allocated in bytes.
-
-        The `container.accelerator` metrics are only available for Kubernetes Engine cluster nodes with graphics processing unit (GPU) hardware accelerators.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.cpu.limitCores`
-      </td>
-
-      <td>
-        CPU cores limit of the container. Sampled every 60 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.cpu.usageTime`
-      </td>
-
-      <td>
-        Cumulative CPU usage on all cores in seconds. This number divided by the elapsed time represents usage as a number of cores, regardless of any core limit that might be set.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.cpu.limitUtilization`
-      </td>
-
-      <td>
-        The fraction of the memory limit that is currently in use on the instance. This value cannot exceed 1 as usage cannot exceed the limit. Sampled every 60 seconds. After sampling, data is not visible for up to 60 seconds.
-
-        This metric is available only when a maximum memory limit has been specified for the container.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.cpu.requestCores`
-      </td>
-
-      <td>
-        Number of CPU cores requested by the container. Sampled every 60 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.cpu.requestUtilization`
-      </td>
-
-      <td>
-        The fraction of the requested CPU that is currently in use on the instance. This value can be greater than 1 as usage can exceed the request. Sampled every 60 seconds. After sampling, data is not visible for up to 180 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.memory.limitBytes`
-      </td>
-
-      <td>
-        Memory limit of the container in bytes. Sampled every 60 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.memory.limitUtilization`
-      </td>
-
-      <td>
-        The fraction of the memory limit that is currently in use on the instance. This value cannot exceed 1 as usage cannot exceed the limit. Sampled every 60 seconds. After sampling, data is not visible for up to 60 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.memory.requestBytes`
-      </td>
-
-      <td>
-        Memory request of the container in bytes. Sampled every 60 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.memory.requestUtilization`
-      </td>
-
-      <td>
-        The fraction of the requested memory that is currently in use on the instance. This value can be greater than 1 as usage can exceed the request. Sampled every 60 seconds. After sampling, data is not visible for up to 60 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.memory.usedBytes`
-      </td>
-
-      <td>
-        Memory usage in bytes. Sampled every 60 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.restartCount`
-      </td>
-
-      <td>
-        Number of times the container has restarted. Sampled every 60 seconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container.uptime`
-      </td>
-
-      <td>
-        Time in seconds that the container has been running. Sampled every 60 seconds.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### GcpKubernetesNodeSample [#GcpKubernetesNode]
 

@@ -56,80 +56,21 @@ For a quick summary of current conditions, mouse over the app's colored status b
 
 Here are some tips for using the browser applications index.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this...**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **If you want to...** | **Do this...** |
+| - | - |
+| Change the sort order | Select any column heading to sort the list in ascending or descending order. |
+| View a summary of an app's browser monitoring | Select the application's name to go to the [browser **Summary** page](/docs/browser/new-relic-browser/dashboard-details/browser-overview-dashboard) for that app. |
+| Search for specific apps | To narrow the search, type one or more characters in the **Search** filter. To broaden the search, clear the filter. |
+| View browser performance details for an app | Select any of the corresponding links. For example, select the app's **Page load time** or **Page load throughput** link to go directly to the [**Page views** page](/docs/browser/new-relic-browser/dashboard-details/page-views-dashboard).
 
-  <tbody>
-    <tr>
-      <td>
-        Change the sort order
-      </td>
-
-      <td>
-        Select any column heading to sort the list in ascending or descending order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View a summary of an app's browser monitoring
-      </td>
-
-      <td>
-        Select the application's name to go to the [browser <DNT>**Summary**</DNT> page](/docs/browser/new-relic-browser/dashboard-details/browser-overview-dashboard) for that app.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Search for specific apps
-      </td>
-
-      <td>
-        To narrow the search, type one or more characters in the <DNT>**Search**</DNT> filter. To broaden the search, clear the filter.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        View browser performance details for an app
-      </td>
-
-      <td>
-        Select any of the corresponding links. For example, select the app's <DNT>**Page load time**</DNT> or <DNT>**Page load throughput**</DNT> link to go directly to the [<DNT>**Page views**</DNT> page](/docs/browser/new-relic-browser/dashboard-details/page-views-dashboard).
-
-        If page load timing has been enabled (the app's health status is green) but the browser apps index does not show any summary data (0 ppm), this means there has been no traffic recently (up to six minutes).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Return to the browser apps index
-      </td>
-
-      <td>
-        From any page in browser, select <DNT>**Browser applications**</DNT>, located above the name of your application.
+        If page load timing has been enabled (the app's health status is green) but the browser apps index does not show any summary data (0 ppm), this means there has been no traffic recently (up to six minutes). |
+| Return to the browser apps index | From any page in browser, select **Browser applications**, located above the name of your application.
 
         <img
           title="Return to browser index"
           alt="Sreenshot of how to return to the browser index page"
           src="/images/browser_screenshot-crop_return-to-index.webp"
-        />
-      </td>
-    </tr>
-  </tbody>
-</table>
+        /> |
+

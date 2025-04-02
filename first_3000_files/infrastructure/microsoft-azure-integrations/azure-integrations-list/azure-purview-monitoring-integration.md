@@ -36,78 +36,14 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Microsoft Purview metrics [#Azure-purview]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `DataMapCapacityUnits` | Indicates data map capacity units. |
+| `DataMapStorageSize` | Indicates the data map storage size. |
+| `ScanCancelled` | Indicates the number of scans cancelled. |
+| `ScanCompleted` | Indicates the number of scans completed successfully. |
+| `ScanFailed` | Indicates the number of scans failed. |
+| `ScanTimeTaken` | Indicates the total scan time in seconds. |
 
-  <tbody>
-    <tr>
-      <td>
-        `DataMapCapacityUnits`
-      </td>
-
-      <td>
-        Indicates data map capacity units.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DataMapStorageSize`
-      </td>
-
-      <td>
-        Indicates the data map storage size.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScanCancelled`
-      </td>
-
-      <td>
-        Indicates the number of scans cancelled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScanCompleted`
-      </td>
-
-      <td>
-        Indicates the number of scans completed successfully.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScanFailed`
-      </td>
-
-      <td>
-        Indicates the number of scans failed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ScanTimeTaken`
-      </td>
-
-      <td>
-        Indicates the total scan time in seconds.
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -6,53 +6,12 @@ topics:
 freshnessValidatedDate: never
 ---
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Monday
-      </th>
+# Table
 
-      <th>
-        Tuesday
-      </th>
+| Monday | Tuesday | Wednesday | Thursday | Friday |
+| - | - | - | - | - |
+| [Sprint planning](#sprint_planning) | [Team meeting](#team_meeting) | [Sprint review](#sprint_review) | Meeting-free day |
 
-      <th>
-        Wednesday
-      </th>
-
-      <th>
-        Thursday
-      </th>
-
-      <th>
-        Friday
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [Sprint planning](#sprint_planning)
-      </td>
-
-      <td/>
-
-      <td>
-        [Team meeting](#team_meeting)
-      </td>
-
-      <td>
-        [Sprint review](#sprint_review)
-      </td>
-
-      <td>
-        Meeting-free day
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 We break our work into one-week sprints.
 

@@ -59,181 +59,27 @@ The NFS integration collects the following metrics:
 
 These metrics are captured by default:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "350px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `diskTotalBytes` | Total number of available bytes on disk. |
+| `diskUsedBytes` | Total number of bytes used. |
+| `diskUsedPercent` | Percentage of bytes used. |
+| `diskFreeBytes` | Total number of available bytes left on disk. |
+| `diskFreePercent` | Percent of free space available on disk. |
+| `totalReadBytes` | Total number of bytes read. |
+| `totalWriteBytes` | Total number of bytes written. |
+| `readBytesPerSecond` | Number of bytes read per second. |
+| `writeBytesPerSecond` | Number of bytes written per second. |
+| `readsPerSecond` | Number of read operations per second. |
+| `writesPerSecond` | Number of write operations per second. |
+| `totalOpsPerSecond` | Total number of operations per second. |
+| `version` | NFS version (will be either 3.0 or 4.0). |
+| `device` | Device name. |
+| `mountPoint` | Mount point of NFS volume. |
+| `filesystemType` | Filesystem type. |
 
-  <tbody>
-    <tr>
-      <td>
-        `diskTotalBytes`
-      </td>
-
-      <td>
-        Total number of available bytes on disk.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `diskUsedBytes`
-      </td>
-
-      <td>
-        Total number of bytes used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `diskUsedPercent`
-      </td>
-
-      <td>
-        Percentage of bytes used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `diskFreeBytes`
-      </td>
-
-      <td>
-        Total number of available bytes left on disk.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `diskFreePercent`
-      </td>
-
-      <td>
-        Percent of free space available on disk.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `totalReadBytes`
-      </td>
-
-      <td>
-        Total number of bytes read.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `totalWriteBytes`
-      </td>
-
-      <td>
-        Total number of bytes written.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `readBytesPerSecond`
-      </td>
-
-      <td>
-        Number of bytes read per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `writeBytesPerSecond`
-      </td>
-
-      <td>
-        Number of bytes written per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `readsPerSecond`
-      </td>
-
-      <td>
-        Number of read operations per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `writesPerSecond`
-      </td>
-
-      <td>
-        Number of write operations per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `totalOpsPerSecond`
-      </td>
-
-      <td>
-        Total number of operations per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `version`
-      </td>
-
-      <td>
-        NFS version (will be either 3.0 or 4.0).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `device`
-      </td>
-
-      <td>
-        Device name.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `mountPoint`
-      </td>
-
-      <td>
-        Mount point of NFS volume.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `filesystemType`
-      </td>
-
-      <td>
-        Filesystem type.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Extended metrics [#extended]
 

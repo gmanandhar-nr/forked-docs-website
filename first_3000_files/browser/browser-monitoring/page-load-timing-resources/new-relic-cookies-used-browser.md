@@ -28,27 +28,11 @@ This document describes data privacy related to <InlinePopover type="browser"/> 
 
 The default browser agent configuration does not retain any personal data as defined by common privacy laws such as the EU General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). New Relic has taken steps to enable our customers who elect to process personal data in our products to do so in accordance with applicable privacy laws. Use the additional information below to help enable your compliance with such laws:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Data
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        IP addresses
-      </td>
-
-      <td>
-        New Relic briefly collects and leverages the IP address from the end-user as part of the data collection process. The IP is captured when a connection is made between the end user's browser and the [New Relic data collector](/docs/using-new-relic/welcome-new-relic/getting-started/glossary). The IP address is included in the web request, much like a caller ID. New Relic uses the IP, much like you see a phone number when somebody calls you.
+| Data | Description |
+| - | - |
+| IP addresses | New Relic briefly collects and leverages the IP address from the end-user as part of the data collection process. The IP is captured when a connection is made between the end user's browser and the [New Relic data collector](/docs/using-new-relic/welcome-new-relic/getting-started/glossary). The IP address is included in the web request, much like a caller ID. New Relic uses the IP, much like you see a phone number when somebody calls you.
 
         The IP address is used as a lookup value that maps to additional details, allowing New Relic customers to diagnose performance issues.
 
@@ -62,39 +46,18 @@ The default browser agent configuration does not retain any personal data as def
         * [`asnLatitude`](/attribute-dictionary/?event=PageView&attribute=asnLatitude)
         * [`asnLongitude`](/attribute-dictionary/?event=PageView&attribute=asnLongitude)
 
-          The mapping process for the IP address lookup value is typically complete within minutes, but in some extreme cases may take up to 24 hours to process. Once the mapping process is complete, New Relic no longer retains the IP address.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Default cookies (deprecated)
-      </td>
-
-      <td>
-        In browser agent versions v1217 and lower, the agent set third party cookies by default. For those agents, third party cookies are placed by the browser agent and the New Relic collector. The New Relic collector places a third party cookie when the browser agent makes a connection and transmits data.
+          The mapping process for the IP address lookup value is typically complete within minutes, but in some extreme cases may take up to 24 hours to process. Once the mapping process is complete, New Relic no longer retains the IP address. |
+| Default cookies (deprecated) | In browser agent versions v1217 and lower, the agent set third party cookies by default. For those agents, third party cookies are placed by the browser agent and the New Relic collector. The New Relic collector places a third party cookie when the browser agent makes a connection and transmits data.
 
         A cookie consent manager that uses a conditional script loader that only loads tags/snippets when a visitor agrees to a specific type of cookies can be used. By choosing this option there is a risk that page performance will not be captured until the visitor has agreed and the browser agent is running.
 
-        With the release of [browser agent v1169](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1169), you can turn off third party cookie collection ([`JSESSIONID`](#jsessionid) and [`NREUM`](#nreum)) for your browser app by using the <DNT>**Application settings**</DNT> page in the New Relic UI. Once this configuration value is set to false (OFF), you'll no longer see the session information in your event data.
+        With the release of [browser agent v1169](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1169), you can turn off third party cookie collection ([`JSESSIONID`](#jsessionid) and [`NREUM`](#nreum)) for your browser app by using the **Application settings** page in the New Relic UI. Once this configuration value is set to false (OFF), you'll no longer see the session information in your event data.
 
-        By default, the value is set to true (ON) for all existing browser apps as well as newly created ones. For more information, see our [docs on cookie collection and session tracking](/docs/browser/browser-monitoring/page-load-timing-resources/cookie-collection-session-tracking).
-      </td>
-    </tr>
+        By default, the value is set to true (ON) for all existing browser apps as well as newly created ones. For more information, see our [docs on cookie collection and session tracking](/docs/browser/browser-monitoring/page-load-timing-resources/cookie-collection-session-tracking). |
+| Personal data through custom browser configuration | New Relic offers the option to manually configure your agent through the [browser monitoring API](/docs/browser/new-relic-browser/browser-agent-spa-api). This could be used to capture personal data, subject to the restrictions set forth in the Terms of Service with New Relic. (For example, no credit card numbers or sensitive categories of personal data, which are contractually prohibited.) New Relic responds to the instructions specified by the agents, including collecting personal data that may be custom configured.
 
-    <tr>
-      <td>
-        Personal data through custom browser configuration
-      </td>
+        If you (as the data controller) receive a request from one of your own customers and determine that personal data sent to New Relic for processing must be deleted, see [New Relic personal data requests](/docs/using-new-relic/new-relic-security/security/new-relic-personal-data-requests). |
 
-      <td>
-        New Relic offers the option to manually configure your agent through the [browser monitoring API](/docs/browser/new-relic-browser/browser-agent-spa-api). This could be used to capture personal data, subject to the restrictions set forth in the Terms of Service with New Relic. (For example, no credit card numbers or sensitive categories of personal data, which are contractually prohibited.) New Relic responds to the instructions specified by the agents, including collecting personal data that may be custom configured.
-
-        If you (as the data controller) receive a request from one of your own customers and determine that personal data sent to New Relic for processing must be deleted, see [New Relic personal data requests](/docs/using-new-relic/new-relic-security/security/new-relic-personal-data-requests).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Details on deprecated cookie collection [#cookies]
 

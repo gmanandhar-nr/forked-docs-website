@@ -36,138 +36,20 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Relay metrics [#Azure-relay]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `ActiveConnections` | Total active connections for Microsoft Relay. |
+| `ActiveListeners` | Total active listeners for Microsoft Relay. |
+| `BytesTransferred` | Total bytes transferred for Microsoft Relay. |
+| `ListenerConnections-ClientError` | Total client error on listener connections for Microsoft Relay. |
+| `ListenerConnections-ServerError` | Total	server errors on listener connections for Microsoft Relay. |
+| `ListenerConnections-Success` | Total successful listener connections for Microsoft Relay. |
+| `ListenerConnections-TotalRequests` | Total listener connections for Microsoft Relay. |
+| `ListenerDisconnects` | Total listener disconnects for Microsoft Relay. |
+| `SenderConnections-ServerError` | Total server error on sender connections for Microsoft Relay. |
+| `SenderConnections-Success` | Total successful sender connections for Microsoft Relay. |
+| `SenderConnections-TotalRequests` | Total sender connections requests for Microsoft Relay. |
+| `SenderDisconnects` | Total sender disconnects for Microsoft Relay. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ActiveConnections`
-      </td>
-
-      <td>
-        Total active connections for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ActiveListeners`
-      </td>
-
-      <td>
-        Total active listeners for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesTransferred`
-      </td>
-
-      <td>
-        Total bytes transferred for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ListenerConnections-ClientError`
-      </td>
-
-      <td>
-        Total client error on listener connections for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ListenerConnections-ServerError`
-      </td>
-
-      <td>
-        Total	server errors on listener connections for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ListenerConnections-Success`
-      </td>
-
-      <td>
-        Total successful listener connections for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ListenerConnections-TotalRequests`
-      </td>
-
-      <td>
-        Total listener connections for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ListenerDisconnects`
-      </td>
-
-      <td>
-        Total listener disconnects for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SenderConnections-ServerError`
-      </td>
-
-      <td>
-        Total server error on sender connections for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SenderConnections-Success`
-      </td>
-
-      <td>
-        Total successful sender connections for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SenderConnections-TotalRequests`
-      </td>
-
-      <td>
-        Total sender connections requests for Microsoft Relay.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SenderDisconnects`
-      </td>
-
-      <td>
-        Total sender disconnects for Microsoft Relay.
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -74,40 +74,12 @@ New Relic uses the [RFC 5988](http://www.rfc-editor.org/rfc/rfc5988.txt) standar
 
     This indicates there are three pages and you are viewing the first one.
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Parameter
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
+| Parameter | Description |
+| - | - |
+| `...page=2>;rel="next"` | Page 2 is the next page |
+| `...page=3>;rel="last"` | Page 3 is the last page |
 
-      <tbody>
-        <tr>
-          <td>
-            `...page=2>;rel="next"`
-          </td>
-
-          <td>
-            Page 2 is the next page
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `...page=3>;rel="last"`
-          </td>
-
-          <td>
-            Page 3 is the last page
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 </CollapserGroup>

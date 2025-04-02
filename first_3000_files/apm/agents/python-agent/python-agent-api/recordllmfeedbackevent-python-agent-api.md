@@ -36,81 +36,26 @@ In many cases, the endpoint for AI messages are recorded in different places fro
 
 ## Parameters [#parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `trace_id`
 
-  <tbody>
-    <tr>
-      <td>
-        `trace_id`
+        _string_ | Required. ID of the trace where the chat completion(s) related to the feedback occurred. This ID can be obtained via a call to [`current_trace_id`](/docs/apm/agents/python-agent/python-agent-api/currenttraceid-python-agent-api/). |
+| `rating`
 
-        _string_
-      </td>
+        _string_ or _int_ | Required. Rating provided by an end user (ex: “Good/Bad”, “1-10”). |
+| `category`
 
-      <td>
-        Required. ID of the trace where the chat completion(s) related to the feedback occurred. This ID can be obtained via a call to [`current_trace_id`](/docs/apm/agents/python-agent/python-agent-api/currenttraceid-python-agent-api/).
-      </td>
-    </tr>
+        _string_ | Optional. Category of the feedback provided by the end user (ex: “informative”, “inaccurate”). |
+| `message`
 
-    <tr>
-      <td>
-        `rating`
+        _string_ | Optional. Freeform text feedback from an end user. |
+| `metadata`
 
-        _string_ or _int_
-      </td>
+        _dict_ | Optional. Set of key-value pairs to store any other desired data to submit with the feedback event. |
 
-      <td>
-        Required. Rating provided by an end user (ex: “Good/Bad”, “1-10”).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `category`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. Category of the feedback provided by the end user (ex: “informative”, “inaccurate”).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `message`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. Freeform text feedback from an end user.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `metadata`
-
-        _dict_
-      </td>
-
-      <td>
-        Optional. Set of key-value pairs to store any other desired data to submit with the feedback event.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values [#return-values]
 

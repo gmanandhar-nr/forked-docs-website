@@ -26,93 +26,16 @@ In this example, you set up a policy for a Java app with three instances. You wa
 
 During a five-minute time period the three instances have these error rates:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "100px" }}>
-        <DNT>
-          **App instance**
-        </DNT>
-      </th>
+# Table
 
-      <th style={{ width: "100px" }}>
-        <DNT>
-          **4:45pm**
-        </DNT>
-      </th>
+| **App instance** | **4:45pm** | **4:50pm** | **Incident opened?** |
+| - | - | - | - |
+| A | 0.00% | 0.00% | No. This instance remained below the target threshold the entire time. |
+| B | 0.02% | 0.03% | Yes. The alert threshold exceeded the 0.02% threshold for this instance for at least five minutes. |
+| C | 0.10% | 0.00% | No. The threshold value must be breached for [at least five consecutive minutes](/docs/alerts/new-relic-alerts/configuring-alert-policies/define-thresholds-trigger-alert#threshold-triggers) to open an incident.
 
-      <th style={{ width: "100px" }}>
-        <DNT>
-          **4:50pm**
-        </DNT>
-      </th>
+        However, if you had set the threshold for **at least once** in five minutes, then the threshold value must be breached [at least once](/docs/alerts/new-relic-alerts/configuring-alert-policies/minimum-maximum-values#violation) during the five-minute period. |
 
-      <th>
-        <DNT>
-          **Incident opened?**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        A
-      </td>
-
-      <td>
-        0.00%
-      </td>
-
-      <td>
-        0.00%
-      </td>
-
-      <td>
-        No. This instance remained below the target threshold the entire time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        B
-      </td>
-
-      <td>
-        0.02%
-      </td>
-
-      <td>
-        0.03%
-      </td>
-
-      <td>
-        Yes. The alert threshold exceeded the 0.02% threshold for this instance for at least five minutes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        C
-      </td>
-
-      <td>
-        0.10%
-      </td>
-
-      <td>
-        0.00%
-      </td>
-
-      <td>
-        No. The threshold value must be breached for [at least five consecutive minutes](/docs/alerts/new-relic-alerts/configuring-alert-policies/define-thresholds-trigger-alert#threshold-triggers) to open an incident.
-
-        However, if you had set the threshold for <DNT>**at least once**</DNT> in five minutes, then the threshold value must be breached [at least once](/docs/alerts/new-relic-alerts/configuring-alert-policies/minimum-maximum-values#violation) during the five-minute period.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Create instance-based alert condition [#procedure]
 

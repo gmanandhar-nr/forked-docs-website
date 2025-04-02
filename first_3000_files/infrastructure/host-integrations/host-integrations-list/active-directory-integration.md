@@ -103,255 +103,27 @@ To get the most out of this page, select the installation method that fits your 
 
 ## Event details
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **EVENT ATTRIBUTE**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **COUNTER NAME**
-        </DNT>
-      </th>
+| **EVENT ATTRIBUTE** | **COUNTER NAME** | **DESCRIPTION** |
+| - | - | - |
+| `addressBookClientSessions` | `\NTDS\AB Client Sessions` | Number of connected address book client sessions |
+| `inboundFullSyncObjectsRemaining` | `\NTDS\DRA Inbound Full Sync Objects Remaining` | The number of objects remaining until the full synchronization is completed |
+| `draInbound` | `\NTDS\DRA Inbound Values (DNs only)/sec` | The number of object property values received from inbound replication partners that are DNs that reference other objects |
+| `draOutbound` | `\NTDS\DRA Outbound Values (DNs only)/sec` | The number of object property values containing DNs sent to outbound replication partners |
+| `draPendingReplicationSync` | `\NTDS\DRA Pending Replication Synchronizations` | The number of directory synchronizations that are queued for this server but not yet processed |
+| `directoryReadsPerSec` | `\NTDS\DS Directory Reads/sec` | The number of directory reads per second |
+| `directoryWritesPerSec` | `\NTDS\DS Directory Writes/sec` | The number of directory writes per second |
+| `directoryNotifyQueueSize` | `\NTDS\DS Notify Queue Size` | The number of pending update notifications that are queued but not yet transmitted to clients |
+| `directoryThreadsInUse` | `\NTDS\DS Threads in Use` | The current number of threads that the directory service is using |
+| `ldapActiveThreads` | `\NTDS\LDAP Active Threads` | The current number of threads that the LDAP subsytem of the local directory service uses |
+| `ldapBindTime` | `\NTDS\LDAP Bind Time` | The time (in milliseconds) that is taken to complete the last LDAP bind |
+| `ldapClientSessions` | `\NTDS\LDAP Client Sessions` | The number of currently connected LDAP client sessions |
+| `ldapSearchesPerSec` | `\NTDS\LDAP Searches/sec` | The rate at which LDAP clients perform search operations |
+| `ldapSuccessfulBindsPerSec` | `\NTDS\LDAP Successful Binds/sec` | The number of LDAP binds per second |
+| `contextSwitchesPerSec` | `\System\Context Switches/sec` | The combined rate at which all processors on the computer are switched from one thread to another |
+| `processorQueueLength` | `\System\Processor Queue Length` | The number of threads waiting to be executed in queue |
 
-      <th>
-        <DNT>
-          **DESCRIPTION**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `addressBookClientSessions`
-      </td>
-
-      <td>
-        `\NTDS\AB Client Sessions`
-      </td>
-
-      <td>
-        Number of connected address book client sessions
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `inboundFullSyncObjectsRemaining`
-      </td>
-
-      <td>
-        `\NTDS\DRA Inbound Full Sync Objects Remaining`
-      </td>
-
-      <td>
-        The number of objects remaining until the full synchronization is completed
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `draInbound`
-      </td>
-
-      <td>
-        `\NTDS\DRA Inbound Values (DNs only)/sec`
-      </td>
-
-      <td>
-        The number of object property values received from inbound replication partners that are DNs that reference other objects
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `draOutbound`
-      </td>
-
-      <td>
-        `\NTDS\DRA Outbound Values (DNs only)/sec`
-      </td>
-
-      <td>
-        The number of object property values containing DNs sent to outbound replication partners
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `draPendingReplicationSync`
-      </td>
-
-      <td>
-        `\NTDS\DRA Pending Replication Synchronizations`
-      </td>
-
-      <td>
-        The number of directory synchronizations that are queued for this server but not yet processed
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `directoryReadsPerSec`
-      </td>
-
-      <td>
-        `\NTDS\DS Directory Reads/sec`
-      </td>
-
-      <td>
-        The number of directory reads per second
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `directoryWritesPerSec`
-      </td>
-
-      <td>
-        `\NTDS\DS Directory Writes/sec`
-      </td>
-
-      <td>
-        The number of directory writes per second
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `directoryNotifyQueueSize`
-      </td>
-
-      <td>
-        `\NTDS\DS Notify Queue Size`
-      </td>
-
-      <td>
-        The number of pending update notifications that are queued but not yet transmitted to clients
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `directoryThreadsInUse`
-      </td>
-
-      <td>
-        `\NTDS\DS Threads in Use`
-      </td>
-
-      <td>
-        The current number of threads that the directory service is using
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ldapActiveThreads`
-      </td>
-
-      <td>
-        `\NTDS\LDAP Active Threads`
-      </td>
-
-      <td>
-        The current number of threads that the LDAP subsytem of the local directory service uses
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ldapBindTime`
-      </td>
-
-      <td>
-        `\NTDS\LDAP Bind Time`
-      </td>
-
-      <td>
-        The time (in milliseconds) that is taken to complete the last LDAP bind
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ldapClientSessions`
-      </td>
-
-      <td>
-        `\NTDS\LDAP Client Sessions`
-      </td>
-
-      <td>
-        The number of currently connected LDAP client sessions
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ldapSearchesPerSec`
-      </td>
-
-      <td>
-        `\NTDS\LDAP Searches/sec`
-      </td>
-
-      <td>
-        The rate at which LDAP clients perform search operations
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ldapSuccessfulBindsPerSec`
-      </td>
-
-      <td>
-        `\NTDS\LDAP Successful Binds/sec`
-      </td>
-
-      <td>
-        The number of LDAP binds per second
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `contextSwitchesPerSec`
-      </td>
-
-      <td>
-        `\System\Context Switches/sec`
-      </td>
-
-      <td>
-        The combined rate at which all processors on the computer are switched from one thread to another
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `processorQueueLength`
-      </td>
-
-      <td>
-        `\System\Processor Queue Length`
-      </td>
-
-      <td>
-        The number of threads waiting to be executed in queue
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Windows Services [#windows-services]
 

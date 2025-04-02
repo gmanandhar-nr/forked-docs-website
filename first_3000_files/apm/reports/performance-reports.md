@@ -34,75 +34,16 @@ Our performance analysis reports provide simple and pre-defined views of your ap
 
     To view the <DNT>**Background jobs analysis**</DNT> report for your app: Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > APM & services > (select an app) > Reports > Performance > Non-web transactions**</DNT> tab. The default report compares the last 24 hours with the previous 24-hour period, 7 days ago, and averages over the last 7 days.
 
-    <table>
-      <thead>
-        <tr>
-          <th width={200}>
-            <DNT>
-              **If you want to...**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Do this**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| **If you want to...** | **Do this** |
+| - | - |
+| Change the amount of detail shown | Select or clear the time period checkbox options. |
+| Limit the transactions that appear | Use the **Filter** text box. |
+| Change the sort order | Select one of the available options from the **Sort by** dropdown menu. |
+| Select what data appears as a bar chart | Select a **Plotting** option. |
+| View transaction details | Select the transaction's title to go directly to the APM [**Transactions** page](/docs/applications-menu/transactions-dashboard). |
 
-      <tbody>
-        <tr>
-          <td>
-            Change the amount of detail shown
-          </td>
-
-          <td>
-            Select or clear the time period checkbox options.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Limit the transactions that appear
-          </td>
-
-          <td>
-            Use the <DNT>**Filter**</DNT> text box.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Change the sort order
-          </td>
-
-          <td>
-            Select one of the available options from the <DNT>**Sort by**</DNT> dropdown menu.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Select what data appears as a bar chart
-          </td>
-
-          <td>
-            Select a <DNT>**Plotting**</DNT> option.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            View transaction details
-          </td>
-
-          <td>
-            Select the transaction's title to go directly to the APM [<DNT>**Transactions**</DNT> page](/docs/applications-menu/transactions-dashboard).
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

@@ -28,115 +28,24 @@ WHERE instrumentation.provider='pixie'
 FACET service.name
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Event type
-      </th>
+# Table
 
-      <th>
-        Metric
-      </th>
-    </tr>
-  </thead>
+| Event type | Metric |
+| - | - |
+| Metric name | `http.server.duration` |
+| Spec | [OpenTelemetry HTTP metric spec](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/metrics/semantic_conventions/http-metrics.md) |
+| Description | Measures the duration of the inbound HTTP request. |
+| OTEL data type | `MetricDataTypeDoubleSummary` with `min(quantile=0)` and `max(quantile=1)` |
+| Unit | milliseconds |
+| Required attributes | `service.name` |
+| Static attributes | `instrumentation.provider` = `pixie` |
+| HTTP attributes | `http.status_code` |
+| Entity attributes | `service.instance.id` 
+        `k8s.cluster.name` 
+        `k8s.namespace.name` 
+        `k8s.pod.name` 
+        `k8s.container.name` |
 
-  <tbody>
-    <tr>
-      <td>
-        Metric name
-      </td>
-
-      <td>
-        `http.server.duration`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Spec
-      </td>
-
-      <td>
-        [OpenTelemetry HTTP metric spec](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/metrics/semantic_conventions/http-metrics.md)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Description
-      </td>
-
-      <td>
-        Measures the duration of the inbound HTTP request.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        OTEL data type
-      </td>
-
-      <td>
-        `MetricDataTypeDoubleSummary` with `min(quantile=0)` and `max(quantile=1)`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Unit
-      </td>
-
-      <td>
-        milliseconds
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Required attributes
-      </td>
-
-      <td>
-        `service.name`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Static attributes
-      </td>
-
-      <td>
-        `instrumentation.provider` = `pixie`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        HTTP attributes
-      </td>
-
-      <td>
-        `http.status_code`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Entity attributes
-      </td>
-
-      <td>
-        `service.instance.id` <br/>
-        `k8s.cluster.name` <br/>
-        `k8s.namespace.name` <br/>
-        `k8s.pod.name` <br/>
-        `k8s.container.name` <br/>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### JVM metrics
 

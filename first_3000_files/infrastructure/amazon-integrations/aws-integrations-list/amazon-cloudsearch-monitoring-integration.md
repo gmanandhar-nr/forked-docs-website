@@ -33,83 +33,15 @@ This New Relic infrastructure integration collects the following Amazon CloudSea
 
 ### CloudSearch Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `SuccessfulRequests` | Count | The number of search requests successfully processed by a search instance. |
+| `SearchableDocuments` | Count | The number of searchable documents in the domain's search index. |
+| `IndexUtilization` | Percent | The percentage of the search instance's index capacity that has been used. |
+| `Partitions` | Count | The number of partitions the index is distributed across. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `SuccessfulRequests`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of search requests successfully processed by a search instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SearchableDocuments`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of searchable documents in the domain's search index.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IndexUtilization`
-      </td>
-
-      <td>
-        Percent
-      </td>
-
-      <td>
-        The percentage of the search instance's index capacity that has been used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Partitions`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of partitions the index is distributed across.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `DomainName`
 

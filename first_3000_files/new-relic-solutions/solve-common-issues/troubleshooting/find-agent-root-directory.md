@@ -51,53 +51,16 @@ The agent root directory depends on the agent you're using:
   >
     The location of the .NET Core 2.0 agent root directory depends on your system:
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            System
-          </th>
+    # Table
 
-          <th>
-            Location of the agent root directory
-          </th>
-        </tr>
-      </thead>
+| System | Location of the agent root directory |
+| - | - |
+| Windows | Look in the [`CORECLR_NEWRELIC_HOME` environment variable](/docs/agents/net-agent/configuration/net-agent-configuration#environment-variables) for your application to find the location of the agent root directory. |
+| Linux | The location of the agent root directory is `/usr/local/newrelic-netcore20-agent`.
 
-      <tbody>
-        <tr>
-          <td>
-            Windows
-          </td>
+            You can also look in the [`CORECLR_NEWRELIC_HOME` environment variable](/docs/agents/net-agent/configuration/net-agent-configuration#environment-variables) for your application to find the location of the agent root directory. |
+| Docker | In the root directory for your app, look for the agent root directory called `NewRelic`, which you created when you [installed the Core 2.0 agent with Docker](/docs/agents/net-agent/installation/install-net-core-20-agent-docker#windows-prep). |
 
-          <td>
-            Look in the [`CORECLR_NEWRELIC_HOME` environment variable](/docs/agents/net-agent/configuration/net-agent-configuration#environment-variables) for your application to find the location of the agent root directory.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Linux
-          </td>
-
-          <td>
-            The location of the agent root directory is `/usr/local/newrelic-netcore20-agent`.
-
-            You can also look in the [`CORECLR_NEWRELIC_HOME` environment variable](/docs/agents/net-agent/configuration/net-agent-configuration#environment-variables) for your application to find the location of the agent root directory.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Docker
-          </td>
-
-          <td>
-            In the root directory for your app, look for the agent root directory called `NewRelic`, which you created when you [installed the Core 2.0 agent with Docker](/docs/agents/net-agent/installation/install-net-core-20-agent-docker#windows-prep).
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

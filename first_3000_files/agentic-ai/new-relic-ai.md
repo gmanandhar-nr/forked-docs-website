@@ -40,24 +40,9 @@ Our AI assistant has been trained to communicate with engineers using common que
 
 If you need help with where to begin, try out these sample prompts:
 
-<Tabs>
-  <TabsBar>
-    <TabsBarItem id="1">
-      Get started with New Relic
-    </TabsBarItem>
+{% tabs %}
 
-    <TabsBarItem id="2">
-      Improve response time
-    </TabsBarItem>
-
-    <TabsBarItem id="3">
-      Take observability to the next level
-    </TabsBarItem>
-  </TabsBar>
-
-  <TabsPages>
-    <TabsPageItem id="1">
-      Our AI chat experience can help get you started using New Relic. If you need help organizing your data and setting up alerts, New Relic AI can act as a guide throughout your onboarding process. Ask our AI questions like:
+{% tab title="Get started with New Relic" %} Our AI chat experience can help get you started using New Relic. If you need help organizing your data and setting up alerts, New Relic AI can act as a guide throughout your onboarding process. Ask our AI questions like:
 
       ```
       How can I improve my alerts setup?
@@ -65,11 +50,9 @@ If you need help with where to begin, try out these sample prompts:
 
       ```
       How can I instrument AWS?
-      ```
-    </TabsPageItem>
+      ``` {% endtab %}
 
-    <TabsPageItem id="2">
-      If you want to get to the root cause of latency issues for your app, here are some good questions to ask:
+{% tab title="Improve response time" %} If you want to get to the root cause of latency issues for your app, here are some good questions to ask:
 
       ```
       What are some recent incidents in my system?
@@ -77,11 +60,9 @@ If you need help with where to begin, try out these sample prompts:
 
       ```
       Which infrastructure hosts are showing signs of degradation over the past hour?
-      ```
-    </TabsPageItem>
+      ``` {% endtab %}
 
-    <TabsPageItem id="3">
-      New Relic AI can also be your partner in observability maturity. If you're responsible for ensuring that your app can handle planned spikes, such as a big e-commerce sale, it's essential to understand the state of your system so you can improve it _ahead of time_.  Try asking New Relic AI:
+{% tab title="Take observability to the next level" %} New Relic AI can also be your partner in observability maturity. If you're responsible for ensuring that your app can handle planned spikes, such as a big e-commerce sale, it's essential to understand the state of your system so you can improve it _ahead of time_.  Try asking New Relic AI:
 
       ```
       How can I improve the performance of my infrastructure?
@@ -89,10 +70,9 @@ If you need help with where to begin, try out these sample prompts:
 
       ```
       Were unique user sessions up or down last week compared to the week before?
-      ```
-    </TabsPageItem>
-  </TabsPages>
-</Tabs>
+      ``` {% endtab %}
+
+{% endtabs %}
 
 ## Create NRQL queries [#NRQL-console]
 

@@ -25,73 +25,27 @@ PrivateLink requires the [New Relic Data Plus](/docs/accounts/accounts-billing/n
 
 New Relic exposes AWS PrivateLink endpoints for the following:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Region
-      </th>
+# Table
 
-      <th>
-        Zone
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        ` us-east-1 (Virginia)`
-      </td>
-
-      <td>
-        * `use1-az1`
+| Region | Zone |
+| - | - |
+| ` us-east-1 (Virginia)` | * `use1-az1`
         * `use1-az2`
         * `use1-az3`
         * `use1-az4`
         * `use1-az5`
-        * `use1-az6`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `us-east-2 (Ohio)`
-      </td>
-
-      <td>
-        * `use2-az1`
+        * `use1-az6` |
+| `us-east-2 (Ohio)` | * `use2-az1`
         * `use2-az2`
-        * `use2-az3`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `us-west-2 (Oregon)`
-      </td>
-
-      <td>
-        * `usw2-az1`
+        * `use2-az3` |
+| `us-west-2 (Oregon)` | * `usw2-az1`
         * `usw2-az2`
         * `usw2-az3`
-        * `usw2-az4`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `eu-central-1`
-      </td>
-
-      <td>
-        * `euc1-az1`
+        * `usw2-az4` |
+| `eu-central-1` | * `euc1-az1`
         * `euc1-az2`
-        * `euc1-az3`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `euc1-az3` |
+
 
 An endpoint service is available only in the region where it was created ([see the Amazon docs](https://docs.aws.amazon.com/vpc/latest/privatelink/create-endpoint-service.html)), but it can be accessed from other regions using inter-region peering.
 

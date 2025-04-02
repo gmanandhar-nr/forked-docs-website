@@ -57,51 +57,14 @@ This integration collects Amazon RDS data for clusters and also for instances. S
 
 ### RDS cluster metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "285px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `volumeBytesUsed` | Volume bytes used. |
+| `volumeReadIops` | Volume read IOPs. |
+| `volumeWriteIops` | Volume write IOPs. |
 
-  <tbody>
-    <tr>
-      <td>
-        `volumeBytesUsed`
-      </td>
-
-      <td>
-        Volume bytes used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `volumeReadIops`
-      </td>
-
-      <td>
-        Volume read IOPs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `volumeWriteIops`
-      </td>
-
-      <td>
-        Volume write IOPs.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### RDS instance common metric data
 

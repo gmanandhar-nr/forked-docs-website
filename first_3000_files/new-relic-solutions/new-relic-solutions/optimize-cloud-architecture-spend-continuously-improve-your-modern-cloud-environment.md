@@ -51,61 +51,15 @@ In this tutorial, we'll show you how to use the [New Relic platform](https://one
 
 Make sure the following products and integrations are instrumented:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Instrument
-      </th>
+# Table
 
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
+| Instrument | Details |
+| - | - |
+| [Install infrastructure](/docs/infrastructure/new-relic-infrastructure/installation) | Instrument infrastructure: If you haven't already done so, review the requirements for the [infrastructure agent](/docs/infrastructure). Infrastructure comes with several types of integrations, including [Amazon Web Services (AWS)](/docs/infrastructure/amazon-integrations/aws-integrations-list), [Microsoft Azure](/docs/integrations/microsoft-azure-integrations/azure-integrations-list), and [on-host integrations](/docs/infrastructure/host-integrations/host-integrations-list). After you've installed the infrastructure agent on your host(s), you'll immediately have access to the broad spectrum of metrics the agent collects out-of-the-box. |
+| [Install the APM agent](/docs/agents/manage-apm-agents/installation/install-agent) | Instrument your applications with [APM](/docs/apm). Doing so will let you monitor how your applications are performing while you are optimizing the underlying cloud services. That way, you can confirm that your changes to the infrastructure are in fact improving application performance. |
+| [Configure the AWS integration](/docs/integrations/amazon-integrations/get-started/connect-aws-infrastructure) | Infrastructure's Amazon integrations let you monitor your AWS data everywhere in our platform, including infrastructure, dashboards, and alerts. |
+| [Connect AWS Billing](/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration) | If you are hosted in an AWS environment, New Relic can help you monitor your cloud spend with our [AWS Billing](https://docs.aws.amazon.com/account-billing/index.html#lang/en_us) integration. To leverage New Relic's AWS Billing integration, follow the procedures in the [Connect AWS Billing documentation](/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration) |
 
-  <tbody>
-    <tr>
-      <td>
-        [Install infrastructure](/docs/infrastructure/new-relic-infrastructure/installation)
-      </td>
-
-      <td>
-        Instrument infrastructure: If you haven't already done so, review the requirements for the [infrastructure agent](/docs/infrastructure). Infrastructure comes with several types of integrations, including [Amazon Web Services (AWS)](/docs/infrastructure/amazon-integrations/aws-integrations-list), [Microsoft Azure](/docs/integrations/microsoft-azure-integrations/azure-integrations-list), and [on-host integrations](/docs/infrastructure/host-integrations/host-integrations-list). After you've installed the infrastructure agent on your host(s), you'll immediately have access to the broad spectrum of metrics the agent collects out-of-the-box.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Install the APM agent](/docs/agents/manage-apm-agents/installation/install-agent)
-      </td>
-
-      <td>
-        Instrument your applications with [APM](/docs/apm). Doing so will let you monitor how your applications are performing while you are optimizing the underlying cloud services. That way, you can confirm that your changes to the infrastructure are in fact improving application performance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Configure the AWS integration](/docs/integrations/amazon-integrations/get-started/connect-aws-infrastructure)
-      </td>
-
-      <td>
-        Infrastructure's Amazon integrations let you monitor your AWS data everywhere in our platform, including infrastructure, dashboards, and alerts.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Connect AWS Billing](/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration)
-      </td>
-
-      <td>
-        If you are hosted in an AWS environment, New Relic can help you monitor your cloud spend with our [AWS Billing](https://docs.aws.amazon.com/account-billing/index.html#lang/en_us) integration. To leverage New Relic's AWS Billing integration, follow the procedures in the [Connect AWS Billing documentation](/docs/integrations/amazon-integrations/aws-integrations-list/aws-billing-monitoring-integration)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 2. Create dashboards to display anomaly infrastructure metrics; include AWS budgets if available [#create]
 

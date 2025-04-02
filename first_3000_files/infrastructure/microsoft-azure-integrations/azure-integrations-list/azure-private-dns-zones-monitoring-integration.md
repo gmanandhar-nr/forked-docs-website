@@ -36,88 +36,15 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Private DNS Zones metrics [#Azure-private-dns-zones]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `QueryVolume` | Number of queries served for a Private DNS zone. |
+| `RecordSetCapacityUtilization` | Percent of Record Set capacity utilized by a Private DNS zone. |
+| `RecordSetCount` | Number of Record Sets in a Private DNS zone. |
+| `VirtualNetworkLinkCapacityUtilization` | Percent of Virtual Network Link capacity utilized by a Private DNS zone. |
+| `VirtualNetworkLinkCount` | Number of Virtual Networks linked to a Private DNS zone. |
+| `VirtualNetworkWithRegistrationCapacityUtilization` | Percent of Virtual Network Links with auto-registration capacity utilized by a Private DNS zone. |
+| `VirtualNetworkWithRegistrationLinkCount` | Number of Virtual Networks linked to a Private DNS zone with auto-registration enabled. |
 
-  <tbody>
-    <tr>
-      <td>
-        `QueryVolume`
-      </td>
-
-      <td>
-        Number of queries served for a Private DNS zone.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RecordSetCapacityUtilization`
-      </td>
-
-      <td>
-        Percent of Record Set capacity utilized by a Private DNS zone.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RecordSetCount`
-      </td>
-
-      <td>
-        Number of Record Sets in a Private DNS zone.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VirtualNetworkLinkCapacityUtilization`
-      </td>
-
-      <td>
-        Percent of Virtual Network Link capacity utilized by a Private DNS zone.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VirtualNetworkLinkCount`
-      </td>
-
-      <td>
-        Number of Virtual Networks linked to a Private DNS zone.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VirtualNetworkWithRegistrationCapacityUtilization`
-      </td>
-
-      <td>
-        Percent of Virtual Network Links with auto-registration capacity utilized by a Private DNS zone.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VirtualNetworkWithRegistrationLinkCount`
-      </td>
-
-      <td>
-        Number of Virtual Networks linked to a Private DNS zone with auto-registration enabled.
-      </td>
-    </tr>
-  </tbody>
-</table>

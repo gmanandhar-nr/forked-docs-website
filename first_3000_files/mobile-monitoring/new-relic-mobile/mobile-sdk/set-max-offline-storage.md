@@ -83,39 +83,12 @@ NewRelic.setMaxOfflineStorageSize(megaBytes: Int)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$megaBytes` | `int` | Required. Maximum size in megaBytes that can be stored in the file system. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$megaBytes`
-            </td>
-
-            <td>
-              `int`
-            </td>
-
-            <td>
-              Required. Maximum size in megaBytes that can be stored in the file system.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Example [#example]
 

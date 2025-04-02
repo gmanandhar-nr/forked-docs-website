@@ -20,121 +20,18 @@ Whether you're on the [original user model](/docs/accounts/original-accounts-bil
 
 If you're on [our newer user model](/docs/accounts/original-accounts-billing/original-users-roles/overview-user-models), here's how you can interact with Nerdpacks:
 
-<table>
-  <thead>
-    <tr>
-      <th/>
+# Table
 
-      <th>
-        Basic user
-      </th>
+| Basic user | Core or full platform user |
+| - | - |
+| Serve Nerdpacks | yes | yes |
+| Publish Nerdpacks | no | yes |
+| Subscribe to Nerdpacks | no | yes |
+| Tag Nerdpacks | no | yes |
+| Use Nerdlets or visualizations created by your accounts | no | yes |
+| Use Nerdlets created by New Relic | no\* | yes |
+| Use visualizations created by New Relic | no | yes |
 
-      <th>
-        Core or full platform user
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Serve Nerdpacks
-      </td>
-
-      <td>
-        yes
-      </td>
-
-      <td>
-        yes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Publish Nerdpacks
-      </td>
-
-      <td>
-        no
-      </td>
-
-      <td>
-        yes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Subscribe to Nerdpacks
-      </td>
-
-      <td>
-        no
-      </td>
-
-      <td>
-        yes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Tag Nerdpacks
-      </td>
-
-      <td>
-        no
-      </td>
-
-      <td>
-        yes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Use Nerdlets or visualizations created by your accounts
-      </td>
-
-      <td>
-        no
-      </td>
-
-      <td>
-        yes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Use Nerdlets created by New Relic
-      </td>
-
-      <td>
-        no\*
-      </td>
-
-      <td>
-        yes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Use visualizations created by New Relic
-      </td>
-
-      <td>
-        no
-      </td>
-
-      <td>
-        yes
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 There are a few Nerdlets that basic users are allowed to use. See [Basic users](#basic-users-1) for more information.
 

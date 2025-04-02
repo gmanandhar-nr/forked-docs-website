@@ -32,45 +32,17 @@ Attributes may be found in APM if the transaction is associated with an error or
 
 ## Attributes
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Attribute | Description |
+| - | - |
+| `key`
 
-  <tbody>
-    <tr>
-      <td>
-        `key`
+        _string_ | Required. The key name. Only the first 255 characters are retained. |
+| `value`
 
-        _string_
-      </td>
+        _string_, _integer_, _float_, _boolean_ | Required. The string value to add to the current transaction. Only the first 255 characters are retained. |
 
-      <td>
-        Required. The key name. Only the first 255 characters are retained.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `value`
-
-        _string_, _integer_, _float_, _boolean_
-      </td>
-
-      <td>
-        Required. The string value to add to the current transaction. Only the first 255 characters are retained.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

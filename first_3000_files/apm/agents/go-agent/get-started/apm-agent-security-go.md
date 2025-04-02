@@ -39,80 +39,30 @@ When you [enable high-security mode](/docs/agents/go-agent/instrumentation/go-ag
 
 If you need different security settings than default or high-security mode, you can customize these settings:
 
-<table>
-  <thead>
-    <tr>
-      <th width="330px">
-        <DNT>
-          **Setting**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Effects on data security**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Setting** | **Effects on data security** |
+| - | - |
+| [`HighSecurity`](/docs/agents/go-agent/instrumentation/go-agent-configuration#high_security)
 
-  <tbody>
-    <tr>
-      <td>
-        [`HighSecurity`](/docs/agents/go-agent/instrumentation/go-agent-configuration#high_security)
+        _boolean_ | Default: `false`
 
-        _boolean_
-      </td>
+        To enable [high-security mode](#restricted), set this to `true` and [enable high security (V2)](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic. |
+| [`Attributes.Enabled`](https://github.com/newrelic/go-agent/blob/master/config.go#L220)
 
-      <td>
-        Default: `false`
+        _boolean_ | Default: `true`
 
-        To enable [high-security mode](#restricted), set this to `true` and [enable high security (V2)](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic.
-      </td>
-    </tr>
+        By default, you are sending [some attributes](/docs/agents/go-agent/instrumentation/go-agent-attributes#attributes) to New Relic. If you do not want to send these default attributes to New Relic, set `Attributes.Enabled` to `false`. |
+| [`Attributes.Exclude`](/docs/agents/go-agent/instrumentation/go-agent-attributes#turn-attributes-on-off)
 
-    <tr>
-      <td>
-        [`Attributes.Enabled`](https://github.com/newrelic/go-agent/blob/master/config.go#L220)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `true`
-
-        By default, you are sending [some attributes](/docs/agents/go-agent/instrumentation/go-agent-attributes#attributes) to New Relic. If you do not want to send these default attributes to New Relic, set `Attributes.Enabled` to `false`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`Attributes.Exclude`](/docs/agents/go-agent/instrumentation/go-agent-attributes#turn-attributes-on-off)
-
-        _string_
-      </td>
-
-      <td>
-        Default: (none)
+        _string_ | Default: (none)
 
         If there are specific attribute keys that you do **not** want to send to New Relic in transaction traces, identify them using `Attributes.Exclude`. This restricts the information sent to New Relic.
 
-        For examples of how to disable the recording of each attribute, see their descriptions on the [Go agent attributes page](/docs/agents/go-agent/instrumentation/go-agent-attributes#attributes).
-      </td>
-    </tr>
+        For examples of how to disable the recording of each attribute, see their descriptions on the [Go agent attributes page](/docs/agents/go-agent/instrumentation/go-agent-attributes#attributes). |
+| [`CustomInsightsEvents.Enabled`](/docs/agents/go-agent/instrumentation/go-agent-configuration#custom-insights-events-enabled)
 
-    <tr>
-      <td>
-        [`CustomInsightsEvents.Enabled`](/docs/agents/go-agent/instrumentation/go-agent-configuration#custom-insights-events-enabled)
+        _boolean_ | Default: `true`
 
-        _boolean_
-      </td>
+        By default, the agent records events sent to the Event API using [`RecordCustomEvent`](/docs/agents/go-agent/features/create-custom-events-insights-go). If you enable [high-security mode](#restricted), this is automatically set to `false`. |
 
-      <td>
-        Default: `true`
-
-        By default, the agent records events sent to the Event API using [`RecordCustomEvent`](/docs/agents/go-agent/features/create-custom-events-insights-go). If you enable [high-security mode](#restricted), this is automatically set to `false`.
-      </td>
-    </tr>
-  </tbody>
-</table>

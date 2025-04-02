@@ -64,72 +64,20 @@ Lambda function and Alias data is attached to the `ServerlessSample` [event type
 
 Additionally, if you're using [AWS CloudFront](/docs/integrations/amazon-integrations/aws-integrations-list/aws-cloudfront-monitoring-integration) to execute the functions in AWS locations closer to the clients, and have enabled the filter to collect Lambda@Edge metrics, these data will be attached to the `ServerlessSample` event type, with a provider value of `LambdaEdgeFunction`.
 
-<table>
-  <thead>
-    <tr>
-      <th width={285}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `concurrentExecutions`
-      </td>
-
-      <td>
-        Only available for functions that have a custom concurrency limit specified. Not applicable for versions or aliases. Measures the sum of concurrent executions for a given function at a given point in time. Must be viewed as an average metric if aggregated across a time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deadLetterErrors`
-      </td>
-
-      <td>
-        Measures the number of times that a function is unable to write the failed event payload to your configured Dead Letter Queues. This could be due to one of the following:
+| Name | Description |
+| - | - |
+| `concurrentExecutions` | Only available for functions that have a custom concurrency limit specified. Not applicable for versions or aliases. Measures the sum of concurrent executions for a given function at a given point in time. Must be viewed as an average metric if aggregated across a time period. |
+| `deadLetterErrors` | Measures the number of times that a function is unable to write the failed event payload to your configured Dead Letter Queues. This could be due to one of the following:
 
         * Permissions errors
         * Throttles from downstream services
         * Misconfigured resources
-        * Timeouts
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `duration`
-      </td>
-
-      <td>
-        Measures the elapsed wall clock time in milliseconds from when the function code starts executing as a result of an invocation to when it stops executing. (This metric replaces the deprecated Latency metric.) The maximum data point value possible is the function timeout configuration. The billed duration will be rounded up to the nearest 100 milliseconds. Note that AWS Lambda only sends these metrics to CloudWatch if they have a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `edge-region`
-      </td>
-
-      <td>
-        The AWS region where the function is executed. Only for functions that are run by Lambda@Edge service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `errors`
-      </td>
-
-      <td>
-        Measures the number of invocations that failed due to errors in the function (response code 4XX). This replaces the deprecated ErrorCount metric. Failed invocations may trigger a retry attempt that succeeds. This includes:
+        * Timeouts |
+| `duration` | Measures the elapsed wall clock time in milliseconds from when the function code starts executing as a result of an invocation to when it stops executing. (This metric replaces the deprecated Latency metric.) The maximum data point value possible is the function timeout configuration. The billed duration will be rounded up to the nearest 100 milliseconds. Note that AWS Lambda only sends these metrics to CloudWatch if they have a nonzero value. |
+| `edge-region` | The AWS region where the function is executed. Only for functions that are run by Lambda@Edge service. |
+| `errors` | Measures the number of invocations that failed due to errors in the function (response code 4XX). This replaces the deprecated ErrorCount metric. Failed invocations may trigger a retry attempt that succeeds. This includes:
 
         * Handled exceptions (for example, context.fail(error))
         * Unhandled exceptions causing the code to exit
@@ -137,61 +85,13 @@ Additionally, if you're using [AWS CloudFront](/docs/integrations/amazon-integra
         * Timeouts
         * Permissions errors
 
-          This does not include invocations that fail due to invocation rates exceeding default concurrent limits (error code 429) or failures due to internal service errors (error code 500).
-      </td>
-    </tr>
+          This does not include invocations that fail due to invocation rates exceeding default concurrent limits (error code 429) or failures due to internal service errors (error code 500). |
+| `invocations` | Measures the number of times a function is invoked in response to an event or invocation API call. This replaces the deprecated RequestCount metric. This includes successful and failed invocations, but does not include throttled attempts. This equals the billed requests for the function. Note that AWS Lambda only sends these metrics to CloudWatch if they have a nonzero value. |
+| `iteratorAge` | Only available for stream-based invocations (functions triggered by an Amazon DynamoDB stream or Kinesis stream). Measures the age of the last record in milliseconds for each batch of records processed. Age is the difference between the time Lambda received the batch, and the time the last record in the batch was written to the stream. |
+| `streamedOutboundBytes` (Response streaming mode only) | The number of bytes streamed out of Lambda function (the response steaming mode has to design the function). |
+| `streamedOutboundThroughput` (Response streaming mode only) | The throughput of Lambda function in bytes per second. |
+| `throttles` | Measures the number of Lambda function invocation attempts that were throttled due to invocation rates exceeding the customer's concurrent limits (error code 429). Failed invocations may trigger a retry attempt that succeeds. |
 
-    <tr>
-      <td>
-        `invocations`
-      </td>
-
-      <td>
-        Measures the number of times a function is invoked in response to an event or invocation API call. This replaces the deprecated RequestCount metric. This includes successful and failed invocations, but does not include throttled attempts. This equals the billed requests for the function. Note that AWS Lambda only sends these metrics to CloudWatch if they have a nonzero value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `iteratorAge`
-      </td>
-
-      <td>
-        Only available for stream-based invocations (functions triggered by an Amazon DynamoDB stream or Kinesis stream). Measures the age of the last record in milliseconds for each batch of records processed. Age is the difference between the time Lambda received the batch, and the time the last record in the batch was written to the stream.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `streamedOutboundBytes` (Response streaming mode only)
-      </td>
-
-      <td>
-        The number of bytes streamed out of Lambda function (the response steaming mode has to design the function).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `streamedOutboundThroughput` (Response streaming mode only)
-      </td>
-
-      <td>
-        The throughput of Lambda function in bytes per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `throttles`
-      </td>
-
-      <td>
-        Measures the number of Lambda function invocation attempts that were throttled due to invocation rates exceeding the customer's concurrent limits (error code 429). Failed invocations may trigger a retry attempt that succeeds.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Region
 

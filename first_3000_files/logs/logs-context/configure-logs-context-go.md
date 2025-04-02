@@ -26,71 +26,16 @@ With our Go language <InlinePopover type="apm"/> agent, you can get <DNT>**logs 
 
 The following table provides information on all the supported libraries and user-defined attributes.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Supported library
-      </th>
+# Table
 
-      <th>
-        Is user-defined attributes supported?
-      </th>
-    </tr>
-  </thead>
+| Supported library | Is user-defined attributes supported? |
+| - | - |
+| [Standard Library Log](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/logWriter) | No |
+| [Slog](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/nrslog) | Yes |
+| [Logrus](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/nrlogrus) | Yes |
+| [Zap](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/nrzap) | Yes |
+| [ZeroLog](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/zerologWriter) | Coming soon |
 
-  <tbody>
-    <tr>
-      <td>
-        [Standard Library Log](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/logWriter)
-      </td>
-
-      <td>
-        No
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Slog](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/nrslog)
-      </td>
-
-      <td>
-        Yes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Logrus](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/nrlogrus)
-      </td>
-
-      <td>
-        Yes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Zap](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/nrzap)
-      </td>
-
-      <td>
-        Yes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [ZeroLog](https://github.com/newrelic/go-agent/tree/master/v3/integrations/logcontext-v2/zerologWriter)
-      </td>
-
-      <td>
-        Coming soon
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Configuring logs in context in the agent  [#automatic]
 

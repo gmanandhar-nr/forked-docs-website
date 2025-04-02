@@ -55,201 +55,29 @@ There are several sets of metrics reported by the Azure Service Bus integration.
 
 Namespace metrics are only collected if you have the [Service Bus Messaging Premium tier](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "290px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `successfulRequests` | Total successful requests for a namespace. |
+| `serverErrors` | Server errors for Microsoft.ServiceBus. |
+| `userErrors` | User errors for Microsoft.ServiceBus. |
+| `throttledRequests` | Throttled requests for Microsoft.ServiceBus. |
+| `incomingRequests` | Incoming requests for Microsoft.ServiceBus. |
+| `incomingMessages` | Incoming messages for Microsoft.ServiceBus. |
+| `outgoingMessages` | Outgoing messages for Microsoft.ServiceBus. |
+| `activeConnections` | Total active connections for Microsoft.ServiceBus. |
+| `connectionsOpened` | Count of open connections for Microsoft.ServiceBus. |
+| `connectionsClosed` | Count of closed connections for Microsoft.ServiceBus. |
+| `sizeBytes` | Size of a queue/topic in Bytes. |
+| `messages` | Count of messages in a Queue/Topic. |
+| `activeMessages` | Count of active messages in a Queue/Topic that are ready for delivery. |
+| `deadletteredMessages` | The total number of messages that are dead lettered. |
+| `scheduledMessages` | The total number of scheduled messages. |
+| `CPUXNS` | Service Bus premium namespace CPU usage metric indicating maximum percentage used. |
+| `WSXNS` | Service Bus premium namespace memory usage metric indicating maximum percentage used. |
+| `namespaceMemoryUsage` | Service bus premium namespace memory usage percentage. |
 
-  <tbody>
-    <tr>
-      <td>
-        `successfulRequests`
-      </td>
-
-      <td>
-        Total successful requests for a namespace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `serverErrors`
-      </td>
-
-      <td>
-        Server errors for Microsoft.ServiceBus.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `userErrors`
-      </td>
-
-      <td>
-        User errors for Microsoft.ServiceBus.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `throttledRequests`
-      </td>
-
-      <td>
-        Throttled requests for Microsoft.ServiceBus.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incomingRequests`
-      </td>
-
-      <td>
-        Incoming requests for Microsoft.ServiceBus.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incomingMessages`
-      </td>
-
-      <td>
-        Incoming messages for Microsoft.ServiceBus.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoingMessages`
-      </td>
-
-      <td>
-        Outgoing messages for Microsoft.ServiceBus.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `activeConnections`
-      </td>
-
-      <td>
-        Total active connections for Microsoft.ServiceBus.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `connectionsOpened`
-      </td>
-
-      <td>
-        Count of open connections for Microsoft.ServiceBus.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `connectionsClosed`
-      </td>
-
-      <td>
-        Count of closed connections for Microsoft.ServiceBus.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `sizeBytes`
-      </td>
-
-      <td>
-        Size of a queue/topic in Bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `messages`
-      </td>
-
-      <td>
-        Count of messages in a Queue/Topic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `activeMessages`
-      </td>
-
-      <td>
-        Count of active messages in a Queue/Topic that are ready for delivery.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deadletteredMessages`
-      </td>
-
-      <td>
-        The total number of messages that are dead lettered.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `scheduledMessages`
-      </td>
-
-      <td>
-        The total number of scheduled messages.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUXNS`
-      </td>
-
-      <td>
-        Service Bus premium namespace CPU usage metric indicating maximum percentage used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WSXNS`
-      </td>
-
-      <td>
-        Service Bus premium namespace memory usage metric indicating maximum percentage used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `namespaceMemoryUsage`
-      </td>
-
-      <td>
-        Service bus premium namespace memory usage percentage.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Queue sample metrics [#queue]
 

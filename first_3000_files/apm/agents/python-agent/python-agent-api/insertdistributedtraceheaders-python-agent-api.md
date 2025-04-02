@@ -36,33 +36,14 @@ This call is used to implement distributed tracing. It inserts headers into a li
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `headers`
 
-  <tbody>
-    <tr>
-      <td>
-        `headers`
+        _list_ | Required. A list of headers. This list will be mutated by the call (headers will be inserted into the list in the form of `(header_name, header_value)`). |
 
-        _list_
-      </td>
-
-      <td>
-        Required. A list of headers. This list will be mutated by the call (headers will be inserted into the list in the form of `(header_name, header_value)`).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

@@ -31,33 +31,14 @@ When Distributed Tracing is enabled, `newrelic_insert_distributed_trace_headers`
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$headers`
 
-  <tbody>
-    <tr>
-      <td>
-        `$headers`
+        _array_ | Required. An (optionally empty) array of outbound headers. This argument is passed by reference, and therefore must be a variable as opposed to a literal. |
 
-        _array_
-      </td>
-
-      <td>
-        Required. An (optionally empty) array of outbound headers. This argument is passed by reference, and therefore must be a variable as opposed to a literal.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

@@ -36,108 +36,17 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Event Grid Partner Topics metrics [#Azure-event-grid-partner-topics]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `AdvancedFilterEvaluationCount` | Total advanced filters evaluated across event subscriptions for this topic. |
+| `DeadLetteredCount` | Total dead lettered events matching to this event subscription. |
+| `DeliveryAttemptFailCount` | Total events failed to deliver to this event subscription. |
+| `DeliverySuccessCount` | Total events delivered to this event subscription. |
+| `DestinationProcessingDurationInMs` | Destination processing duration in milliseconds. |
+| `DroppedEventCount` | Total dropped events matching to this event subscription. |
+| `MatchedEventCount` | Total events matched to this event subscription. |
+| `PublishSuccessCount` | Total events published to this topic. |
+| `UnmatchedEventCount` | Total events not matching any of the event subscriptions for this topic. |
 
-  <tbody>
-    <tr>
-      <td>
-        `AdvancedFilterEvaluationCount`
-      </td>
-
-      <td>
-        Total advanced filters evaluated across event subscriptions for this topic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DeadLetteredCount`
-      </td>
-
-      <td>
-        Total dead lettered events matching to this event subscription.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DeliveryAttemptFailCount`
-      </td>
-
-      <td>
-        Total events failed to deliver to this event subscription.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DeliverySuccessCount`
-      </td>
-
-      <td>
-        Total events delivered to this event subscription.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DestinationProcessingDurationInMs`
-      </td>
-
-      <td>
-        Destination processing duration in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DroppedEventCount`
-      </td>
-
-      <td>
-        Total dropped events matching to this event subscription.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MatchedEventCount`
-      </td>
-
-      <td>
-        Total events matched to this event subscription.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PublishSuccessCount`
-      </td>
-
-      <td>
-        Total events published to this topic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UnmatchedEventCount`
-      </td>
-
-      <td>
-        Total events not matching any of the event subscriptions for this topic.
-      </td>
-    </tr>
-  </tbody>
-</table>

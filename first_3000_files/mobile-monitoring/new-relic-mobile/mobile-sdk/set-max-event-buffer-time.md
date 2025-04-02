@@ -95,39 +95,12 @@ NewRelic.setMaxEventBufferTime(maxBufferTimeInSec: Int)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$maxBufferTimeInSec` | `int` | Required. The maximum time (in seconds) that the agent should store events in memory. The default value harvest cycle length is 600 seconds. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$maxBufferTimeInSec`
-            </td>
-
-            <td>
-              `int`
-            </td>
-
-            <td>
-              Required. The maximum time (in seconds) that the agent should store events in memory. The default value harvest cycle length is 600 seconds.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Example [#example]
 

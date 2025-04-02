@@ -62,41 +62,16 @@ As soon as possible after your page loads, call `newrelic.addRelease()`. All err
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$release_name`
 
-  <tbody>
-    <tr>
-      <td>
-        `$release_name`
+        _string_ | **Required.** A short description of the component; for example, the name of a project, application, file, or library. |
+| `$release_id`
 
-        _string_
-      </td>
-
-      <td>
-        <DNT>**Required.**</DNT> A short description of the component; for example, the name of a project, application, file, or library.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$release_id`
-
-        _string_
-      </td>
-
-      <td>
-        <DNT>**Required.**</DNT> The ID or version of this release; for example, a version number, build number from your CI environment, GitHub SHA, GUID, or a hash of the contents. Since New Relic converts this value into a string, you can also use `null` or `undefined` if necessary.
+        _string_ | **Required.** The ID or version of this release; for example, a version number, build number from your CI environment, GitHub SHA, GUID, or a hash of the contents. Since New Relic converts this value into a string, you can also use `null` or `undefined` if necessary.
 
         The `$release_name` and `$release_id` combination must be unique; for example:
 
@@ -108,11 +83,8 @@ As soon as possible after your page loads, call `newrelic.addRelease()`. All err
 
         * `'signup', '2.4.0'`
 
-        * `'logout', '2.4.0'`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `'logout', '2.4.0'` |
+
 
 ## Examples
 

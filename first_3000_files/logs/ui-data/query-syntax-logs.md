@@ -32,69 +32,26 @@ You can also combine keywords or phrases with operators to form more complex que
 
 General query rules:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Log query rules
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| Log query rules | Comments |
+| - | - |
+| Case sensitive | The query syntax is case sensitive for attributes values. Attribute names are always case sensitive.
 
-  <tbody>
-    <tr>
-      <td>
-        Case sensitive
-      </td>
-
-      <td>
-        The query syntax is case sensitive for attributes values. Attribute names are always case sensitive.
-
-        Exception: Wildcard searches are case insensitive for attribute values.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Whitespace characters
-      </td>
-
-      <td>
-        When a term contains whitespace characters such as the space or tab character, the term will need to be double-quoted.
+        Exception: Wildcard searches are case insensitive for attribute values. |
+| Whitespace characters | When a term contains whitespace characters such as the space or tab character, the term will need to be double-quoted.
 
         Example: To query for a `status` attribute that contains exactly `POST /log/v1`, quote the term like this:
 
         `status: "POST /log/v1"`
 
-        Note: to query for a `status` attribute that contains `POST /log/v1` somewhere in the attribute, you'll need to add wildcard characters like `status: "*POST /log/v1*"` (see below for details on wildcards)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Special characters
-      </td>
-
-      <td>
-        When a term contains special characters, double-quote the term and escape the special characters using a backslash (`\`). This includes special characters such as `+`, `-`, `&`, `|`, `!`, `(`, `)`, `{`, `}`, `[`, `]`, `^`, `"`, `~`, `*`, `?`, `:`, `/`, or `\`.
+        Note: to query for a `status` attribute that contains `POST /log/v1` somewhere in the attribute, you'll need to add wildcard characters like `status: "*POST /log/v1*"` (see below for details on wildcards) |
+| Special characters | When a term contains special characters, double-quote the term and escape the special characters using a backslash (`\`). This includes special characters such as `+`, `-`, `&`, `|`, `!`, `(`, `)`, `{`, `}`, `[`, `]`, `^`, `"`, `~`, `*`, `?`, `:`, `/`, or `\`.
 
         Example: To query for a `status` attribute containing exactly `"POST /log/v1 HTTP/1.1" 202`, escape the quotes like this:
 
-        `status: "\"POST /log/v1 HTTP/1.1\" 202"`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Wildcard searches
-      </td>
-
-      <td>
-        You can run wildcard searches using an asterisk (`*`) to replace zero or more characters.
+        `status: "\"POST /log/v1 HTTP/1.1\" 202"` |
+| Wildcard searches | You can run wildcard searches using an asterisk (`*`) to replace zero or more characters.
 
         Example: to query for a `status` attribute that contains with `202` somewhere in it, format the query like this:
 
@@ -104,11 +61,8 @@ General query rules:
 
         For example, to query for a `status` attribute that contains `/log/v1 202` somewhere in it, format the query like this:
 
-        `status: "*/log/v1 202*"`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        `status: "*/log/v1 202*"` |
+
 
 ## Search with text [#query-text]
 

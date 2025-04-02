@@ -38,56 +38,19 @@ Infrastructure on-host integrations can be created with any programming language
     id="change-log"
     title="SDK version changes"
   >
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Infrastructure agent version
-          </th>
+    # Table
 
-          <th>
-            Details
-          </th>
-        </tr>
-      </thead>
+| Infrastructure agent version | Details |
+| - | - |
+| 1.13.0 or higher | Changes to integration protocol (v4), including support to dynamically register entities in New Relic and send dimensional metrics.  
+                                                            New metric types. See [SDK v4 release notes](https://github.com/newrelic/infra-integrations-sdk/releases/tag/v4.0.0). |
+| 1.0.888 or higher | Changes to JSON format, including support for multiple entities. The new JSON format is referred to as protocol `2` (described in [JSON output](/docs/integrations/integrations-sdk/file-specifications/integration-executable-file-specifications) documentation and also used in the [definition file](/docs/integrations/integrations-sdk/file-specifications/integration-definition-file-specifications#def-header)).
 
-      <tbody>
-        <tr>
-          <td>
-            1.13.0 or higher
-          </td>
+            Uses newer set of Go language build tools (referenced as [GoSDK v3](https://github.com/newrelic/infra-integrations-sdk/blob/master/docs/v2tov3.md)). |
+| 1.0.726 (for Linux); 1.0.775 (for Windows) | Uses JSON protocol `1` (described in [JSON output](/docs/integrations/integrations-sdk/file-specifications/integration-executable-file-specifications) documentation and also used in the [definition file](/docs/integrations/integrations-sdk/file-specifications/integration-definition-file-specifications#def-header)).
 
-          <td>
-            Changes to integration protocol (v4), including support to dynamically register entities in New Relic and send dimensional metrics.  
-                                                            New metric types. See [SDK v4 release notes](https://github.com/newrelic/infra-integrations-sdk/releases/tag/v4.0.0).
-          </td>
-        </tr>
+            Uses older set of Go language build tools (referenced as [GoSDK v2](https://github.com/newrelic/infra-integrations-sdk/blob/master/docs/v2tov3.md)). |
 
-        <tr>
-          <td>
-            1.0.888 or higher
-          </td>
-
-          <td>
-            Changes to JSON format, including support for multiple entities. The new JSON format is referred to as protocol `2` (described in [JSON output](/docs/integrations/integrations-sdk/file-specifications/integration-executable-file-specifications) documentation and also used in the [definition file](/docs/integrations/integrations-sdk/file-specifications/integration-definition-file-specifications#def-header)).
-
-            Uses newer set of Go language build tools (referenced as [GoSDK v3](https://github.com/newrelic/infra-integrations-sdk/blob/master/docs/v2tov3.md)).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            1.0.726 (for Linux); 1.0.775 (for Windows)
-          </td>
-
-          <td>
-            Uses JSON protocol `1` (described in [JSON output](/docs/integrations/integrations-sdk/file-specifications/integration-executable-file-specifications) documentation and also used in the [definition file](/docs/integrations/integrations-sdk/file-specifications/integration-definition-file-specifications#def-header)).
-
-            Uses older set of Go language build tools (referenced as [GoSDK v2](https://github.com/newrelic/infra-integrations-sdk/blob/master/docs/v2tov3.md)).
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     If you've built an integration using the older Go language build tools and wish to update, see [Upgrade from GoSDK v2 to v3](https://github.com/newrelic/infra-integrations-sdk/blob/master/docs/v2tov3.md) and [Upgrade from v3 to v4](http://github.com/newrelic/infra-integrations-sdk/blob/master/docs/v3tov4.md).
 

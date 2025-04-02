@@ -30,49 +30,21 @@ Start a new transaction manually. Usually used after manually ending a transacti
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$appname`
 
-  <tbody>
-    <tr>
-      <td>
-        `$appname`
+        _string_ | Required. The [application name](/docs/agents/manage-apm-agents/app-naming/name-your-application) to associate with data from this transaction. Uses the same format as [`newrelic.appname`](/docs/agents/php-agent/configuration/php-agent-newrelicini-settings#inivar-appname) and can set multiple application names by separating each with a semicolon `;`.
 
-        _string_
-      </td>
+        While this option is required, you can read the app name from `newrelic.ini` with `ini_get("newrelic.appname")`. |
+| `$license`
 
-      <td>
-        Required. The [application name](/docs/agents/manage-apm-agents/app-naming/name-your-application) to associate with data from this transaction. Uses the same format as [`newrelic.appname`](/docs/agents/php-agent/configuration/php-agent-newrelicini-settings#inivar-appname) and can set multiple application names by separating each with a semicolon `;`.
+        _string_ | Optional. Defaults to the  set in the New Relic agent's `newrelic.ini` file.
 
-        While this option is required, you can read the app name from `newrelic.ini` with `ini_get("newrelic.appname")`.
-      </td>
-    </tr>
+        Provide a different  if you want the transaction to report to a different New Relic account. If set, this license will supersede all per-directory and global default licenses configured in INI files. |
 
-    <tr>
-      <td>
-        `$license`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. Defaults to the <InlinePopover type="licenseKey"/> set in the New Relic agent's `newrelic.ini` file.
-
-        Provide a different <InlinePopover type="licenseKey"/> if you want the transaction to report to a different New Relic account. If set, this license will supersede all per-directory and global default licenses configured in INI files.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

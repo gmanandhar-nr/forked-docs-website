@@ -92,51 +92,14 @@ If you use your own algorithm for hyperparameter tuning, make sure that it sends
 
 We generate `aws-entities` (under the MLOps entity domain) for the detailed namespaces. For these entities, you can get out-of-the-box <InlinePopover type="dashboards"/> and views. You can also create your own dashboard to view metrics that aren't displayed as part of the entities' views.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "350px" }}>
-        New Relic entity
-      </th>
+# Table
 
-      <th>
-        Namespace
-      </th>
-    </tr>
-  </thead>
+| New Relic entity | Namespace |
+| - | - |
+| Machine learning endpoint | `/aws/sagemaker/Endpoints`, `AWS/SageMaker` |
+| Machine learning model data | `aws/sagemaker/Endpoints/data-metrics` |
+| Machine learning model | `aws/sagemaker/Endpoints/model-metrics`, `aws/sagemaker/Endpoints/explainability-metrics` |
 
-  <tbody>
-    <tr>
-      <td>
-        Machine learning endpoint
-      </td>
-
-      <td>
-        `/aws/sagemaker/Endpoints`, `AWS/SageMaker`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Machine learning model data
-      </td>
-
-      <td>
-        `aws/sagemaker/Endpoints/data-metrics`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Machine learning model
-      </td>
-
-      <td>
-        `aws/sagemaker/Endpoints/model-metrics`, `aws/sagemaker/Endpoints/explainability-metrics`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Model performance**</DNT> to view:
 

@@ -36,248 +36,31 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure App Service Environment metrics [#Azure-app-service-environment]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `ActiveRequests` | Number of requests being actively handled by the App Service Environment at any given time. |
+| `AverageResponseTime` | Average time taken for the ASE to serve requests. |
+| `BytesReceived` | Incoming bandwidth used across all front end instances. |
+| `BytesSent` | Outgoing bandwidth used across all front end instances. |
+| `CpuPercentage` | CPU used across all front end instances. |
+| `DiskQueueLength` | Number of both read and write requests that were queued on storage. |
+| `Http101` | Number of requests resulting in an HTTP 101 status code. |
+| `Http2xx` | Number of requests resulting in an HTTP status code `≥ 200` but `< 300`. |
+| `Http3xx` | Number of requests resulting in an HTTP status code `≥ 300` but `< 400`. |
+| `Http401` | Number of requests resulting in an HTTP 401 status code. |
+| `Http403` | Number of requests resulting in an HTTP 403 status code. |
+| `Http404` | Number of requests resulting in an HTTP 404 status code. |
+| `Http406` | Number of requests resulting in an HTTP 406 status code. |
+| `Http4xx` | Number of requests resulting in an HTTP status code `≥ 400` but `< 500`. |
+| `Http5xx` | Number of requests resulting in an HTTP status code `≥ 500` but `< 600`. |
+| `HttpQueueLength` | Number of HTTP requests that had to sit on the queue before being fulfilled. |
+| `HttpResponseTime` | Time taken for the ASE to serve requests. |
+| `LargeAppServicePlanInstances` | Number of large App Service Plan worker instances. |
+| `MediumAppServicePlanInstances` | Number of medium App Service Plan worker instances. |
+| `MemoryPercentage` | Memory used across all front end instances. |
+| `Requests` | Number of web requests served. |
+| `SmallAppServicePlanInstances` | Number of small App Service Plan worker instances. |
+| `TotalFrontEnds` | Number of front end instances. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ActiveRequests`
-      </td>
-
-      <td>
-        Number of requests being actively handled by the App Service Environment at any given time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AverageResponseTime`
-      </td>
-
-      <td>
-        Average time taken for the ASE to serve requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesReceived`
-      </td>
-
-      <td>
-        Incoming bandwidth used across all front end instances.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesSent`
-      </td>
-
-      <td>
-        Outgoing bandwidth used across all front end instances.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CpuPercentage`
-      </td>
-
-      <td>
-        CPU used across all front end instances.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskQueueLength`
-      </td>
-
-      <td>
-        Number of both read and write requests that were queued on storage.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http101`
-      </td>
-
-      <td>
-        Number of requests resulting in an HTTP 101 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http2xx`
-      </td>
-
-      <td>
-        Number of requests resulting in an HTTP status code `≥ 200` but `< 300`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http3xx`
-      </td>
-
-      <td>
-        Number of requests resulting in an HTTP status code `≥ 300` but `< 400`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http401`
-      </td>
-
-      <td>
-        Number of requests resulting in an HTTP 401 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http403`
-      </td>
-
-      <td>
-        Number of requests resulting in an HTTP 403 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http404`
-      </td>
-
-      <td>
-        Number of requests resulting in an HTTP 404 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http406`
-      </td>
-
-      <td>
-        Number of requests resulting in an HTTP 406 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http4xx`
-      </td>
-
-      <td>
-        Number of requests resulting in an HTTP status code `≥ 400` but `< 500`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http5xx`
-      </td>
-
-      <td>
-        Number of requests resulting in an HTTP status code `≥ 500` but `< 600`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HttpQueueLength`
-      </td>
-
-      <td>
-        Number of HTTP requests that had to sit on the queue before being fulfilled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HttpResponseTime`
-      </td>
-
-      <td>
-        Time taken for the ASE to serve requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LargeAppServicePlanInstances`
-      </td>
-
-      <td>
-        Number of large App Service Plan worker instances.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MediumAppServicePlanInstances`
-      </td>
-
-      <td>
-        Number of medium App Service Plan worker instances.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MemoryPercentage`
-      </td>
-
-      <td>
-        Memory used across all front end instances.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Requests`
-      </td>
-
-      <td>
-        Number of web requests served.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SmallAppServicePlanInstances`
-      </td>
-
-      <td>
-        Number of small App Service Plan worker instances.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalFrontEnds`
-      </td>
-
-      <td>
-        Number of front end instances.
-      </td>
-    </tr>
-  </tbody>
-</table>

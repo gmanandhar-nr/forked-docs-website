@@ -53,63 +53,26 @@ newrelic.agent.BackgroundTask(application=None, name=None, group=None)
 
 Parameters for these calls:
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `application`
 
-  <tbody>
-    <tr>
-      <td>
-        `application`
-
-        _Application instance_
-      </td>
-
-      <td>
-        Required. The application under which the data will be reported. Default is `None`. If left without a value, the application specified in the agent [configuration](/docs/agents/python-agent/installation-configuration/python-agent-configuration) (config file or environment variable) will be used.
+        _Application instance_ | Required. The application under which the data will be reported. Default is `None`. If left without a value, the application specified in the agent [configuration](/docs/agents/python-agent/installation-configuration/python-agent-configuration) (config file or environment variable) will be used.
 
         For more on generating an application object, see the [`application()`](/docs/agents/python-agent/python-agent-api/application) method.
 
-        The application, even if specified, can still be overridden if `newrelic.app_name` is defined in the WSGI application per request environ dictionary.
-      </td>
-    </tr>
+        The application, even if specified, can still be overridden if `newrelic.app_name` is defined in the WSGI application per request environ dictionary. |
+| `name`
 
-    <tr>
-      <td>
-        `name`
+        _string_ | Required. The name of the transaction. The default value is `None`. By default, the name will be the name of the function the decorator has been applied to but you can override this by supplying this name. |
+| `group`
 
-        _string_
-      </td>
+        _string_ | Optional. The `group` represents the naming structure for the `name` parameter. This is used in the UI to set the [transaction type](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions).
 
-      <td>
-        Required. The name of the transaction. The default value is `None`. By default, the name will be the name of the function the decorator has been applied to but you can override this by supplying this name.
-      </td>
-    </tr>
+        If not supplied, the group defaults to `Function` in expectation that the name is of the form `module:class.function` or `module:function` and represents the name of the function being executed. If you are creating a custom group, we recommend you prefix it with `Python/`. |
 
-    <tr>
-      <td>
-        `group`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. The `group` represents the naming structure for the `name` parameter. This is used in the UI to set the [transaction type](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions).
-
-        If not supplied, the group defaults to `Function` in expectation that the name is of the form `module:class.function` or `module:function` and represents the name of the function being executed. If you are creating a custom group, we recommend you prefix it with `Python/`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Wrapper parameters: [#wrapper-params]
 

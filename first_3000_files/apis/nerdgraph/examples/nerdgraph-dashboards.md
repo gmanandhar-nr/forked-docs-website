@@ -33,95 +33,16 @@ We have defined a granular GraphQL API that lets you execute different dashboard
 
 Here are operations related to creating, reading, updating, and deleting (CRUD).
 
-<table>
-  <thead>
-    <tr>
-      <th width={325}>
-        Operation
-      </th>
+# Table
 
-      <th>
-        GraphQL operation type
-      </th>
+| Operation | GraphQL operation type | Notes |
+| - | - | - |
+| `actor > entity()` | query | Get dashboard operation. You can get all dashboard and widget data for a given dashboard entity GUID. |
+| `dashboardCreate()` | mutation | Create dashboard operation. You can create a dashboard attached to a specific account by specifying all its elements, from metadata to widget configuration. |
+| `dashboardUpdate()` | mutation | Update dashboard operation. You can update an existing dashboard using the dashboard entity GUID. To do this, you need to include all the elements in that dashboard, even if you're not updating every element. For example, to update only one of several widgets in a dashboard, you'll need to include all the other widgets and dashboard metadata in your mutation. |
+| `dashboardDelete()` | mutation | Delete dashboard operation. You can delete an existing dashboard given a dashboard entity GUID. This operation executes a logical delete that lets you recover your dashboard. |
+| `dashboardUndelete()` | mutation | Undelete dashboard operation. You can recover a previously deleted dashboard given a dashboard entity GUID. Custom tags cannot be recovered. |
 
-      <th>
-        Notes
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `actor > entity()`
-      </td>
-
-      <td>
-        query
-      </td>
-
-      <td>
-        Get dashboard operation. You can get all dashboard and widget data for a given dashboard entity GUID.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dashboardCreate()`
-      </td>
-
-      <td>
-        mutation
-      </td>
-
-      <td>
-        Create dashboard operation. You can create a dashboard attached to a specific account by specifying all its elements, from metadata to widget configuration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dashboardUpdate()`
-      </td>
-
-      <td>
-        mutation
-      </td>
-
-      <td>
-        Update dashboard operation. You can update an existing dashboard using the dashboard entity GUID. To do this, you need to include all the elements in that dashboard, even if you're not updating every element. For example, to update only one of several widgets in a dashboard, you'll need to include all the other widgets and dashboard metadata in your mutation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dashboardDelete()`
-      </td>
-
-      <td>
-        mutation
-      </td>
-
-      <td>
-        Delete dashboard operation. You can delete an existing dashboard given a dashboard entity GUID. This operation executes a logical delete that lets you recover your dashboard.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `dashboardUndelete()`
-      </td>
-
-      <td>
-        mutation
-      </td>
-
-      <td>
-        Undelete dashboard operation. You can recover a previously deleted dashboard given a dashboard entity GUID. Custom tags cannot be recovered.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Dashboard page operations [#page-operations]
 

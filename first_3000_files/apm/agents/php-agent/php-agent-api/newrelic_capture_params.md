@@ -35,37 +35,18 @@ Enable or disable the capture of URL parameters (everything after the `?` in the
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$enable_flag`
 
-  <tbody>
-    <tr>
-      <td>
-        `$enable_flag`
-
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Defaults to `true`.
+        _boolean_ | Optional. Defaults to `true`.
 
         If `true` or omitted, enables the capture of URL parameters.
 
-        If `false`, disables the capture of URL parameters.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        If `false`, disables the capture of URL parameters. |
+
 
 ## Examples
 

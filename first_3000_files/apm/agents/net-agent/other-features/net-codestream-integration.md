@@ -28,50 +28,10 @@ The .NET agent reports and attaches the following attributes to spans produced b
   In some cases, the agent will directly wrap base framework code (data stores, external calls, etc.) that is invoked within your application and will not display within your IDE.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Name | Description | Example |
+| - | - | - |
+| `code.function` | The name of the instrumented function. | Index |
+| `code.namespace` | The namespace (full name of the class type) in which `code.function` is defined. | MyService.Controllers.HomeController |
 
-      <th>
-        Example
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `code.function`
-      </td>
-
-      <td>
-        The name of the instrumented function.
-      </td>
-
-      <td>
-        Index
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.namespace`
-      </td>
-
-      <td>
-        The namespace (full name of the class type) in which `code.function` is defined.
-      </td>
-
-      <td>
-        MyService.Controllers.HomeController
-      </td>
-    </tr>
-  </tbody>
-</table>

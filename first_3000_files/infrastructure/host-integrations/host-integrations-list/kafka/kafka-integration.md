@@ -559,291 +559,38 @@ The Kafka integration collects the following metrics. Each metric name is prefix
     id="broker-sample"
     title="KafkaBrokerSample event"
   >
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "350px" }}>
-            Metric
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
+| Metric | Description |
+| - | - |
+| `broker.bytesWrittenToTopicPerSecond` | Number of bytes written to a topic by the broker per second. |
+| `broker.IOInPerSecond` | Network IO into brokers in the cluster in bytes per second. |
+| `broker.IOOutPerSecond` | Network IO out of brokers in the cluster in bytes per second. |
+| `broker.logFlushPerSecond` | Log flush rate. |
+| `broker.messagesInPerSecond` | Incoming messages per second. |
+| `follower.requestExpirationPerSecond` | Rate of request expiration on followers in evictions per second. |
+| `net.bytesRejectedPerSecond` | Rejected bytes per second. |
+| `replication.isrExpandsPerSecond` | Rate of replicas joining the ISR pool. |
+| `replication.isrShrinksPerSecond` | Rate of replicas leaving the ISR pool. |
+| `replication.leaderElectionPerSecond` | Leader election rate. |
+| `replication.uncleanLeaderElectionPerSecond` | Unclean leader election rate. |
+| `replication.unreplicatedPartitions` | Number of unreplicated partitions. |
+| `request.avgTimeFetch` | Average time per fetch request in milliseconds. |
+| `request.avgTimeMetadata` | Average time for metadata request in milliseconds. |
+| `request.avgTimeMetadata99Percentile` | Time for metadata requests for 99th percentile in milliseconds. |
+| `request.avgTimeOffset` | Average time for an offset request in milliseconds. |
+| `request.avgTimeOffset99Percentile` | Time for offset requests for 99th percentile in milliseconds. |
+| `request.avgTimeProduceRequest` | Average time for a produce request in milliseconds. |
+| `request.avgTimeUpdateMetadata` | Average time for a request to update metadata in milliseconds. |
+| `request.avgTimeUpdateMetadata99Percentile` | Time for update metadata requests for 99th percentile in milliseconds. |
+| `request.clientFetchesFailedPerSecond` | Client fetch request failures per second. |
+| `request.fetchTime99Percentile` | Time for fetch requests for 99th percentile in milliseconds. |
+| `request.handlerIdle` | Average fraction of time the request handler threads are idle. |
+| `request.produceRequestsFailedPerSecond` | Failed produce requests per second. |
+| `request.produceTime99Percentile` | Time for produce requests for 99th percentile. |
+| `topic.diskSize` | Topic disk size per broker and per topic. Only present if `COLLECT_TOPIC_SIZE` is enabled. |
+| `topic.offset` | Topic offset per broker and per topic. Only present if `COLLECT_TOPIC_OFFSET` is enabled. |
 
-      <tbody>
-        <tr>
-          <td>
-            `broker.bytesWrittenToTopicPerSecond`
-          </td>
-
-          <td>
-            Number of bytes written to a topic by the broker per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `broker.IOInPerSecond`
-          </td>
-
-          <td>
-            Network IO into brokers in the cluster in bytes per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `broker.IOOutPerSecond`
-          </td>
-
-          <td>
-            Network IO out of brokers in the cluster in bytes per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `broker.logFlushPerSecond`
-          </td>
-
-          <td>
-            Log flush rate.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `broker.messagesInPerSecond`
-          </td>
-
-          <td>
-            Incoming messages per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `follower.requestExpirationPerSecond`
-          </td>
-
-          <td>
-            Rate of request expiration on followers in evictions per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `net.bytesRejectedPerSecond`
-          </td>
-
-          <td>
-            Rejected bytes per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `replication.isrExpandsPerSecond`
-          </td>
-
-          <td>
-            Rate of replicas joining the ISR pool.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `replication.isrShrinksPerSecond`
-          </td>
-
-          <td>
-            Rate of replicas leaving the ISR pool.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `replication.leaderElectionPerSecond`
-          </td>
-
-          <td>
-            Leader election rate.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `replication.uncleanLeaderElectionPerSecond`
-          </td>
-
-          <td>
-            Unclean leader election rate.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `replication.unreplicatedPartitions`
-          </td>
-
-          <td>
-            Number of unreplicated partitions.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.avgTimeFetch`
-          </td>
-
-          <td>
-            Average time per fetch request in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.avgTimeMetadata`
-          </td>
-
-          <td>
-            Average time for metadata request in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.avgTimeMetadata99Percentile`
-          </td>
-
-          <td>
-            Time for metadata requests for 99th percentile in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.avgTimeOffset`
-          </td>
-
-          <td>
-            Average time for an offset request in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.avgTimeOffset99Percentile`
-          </td>
-
-          <td>
-            Time for offset requests for 99th percentile in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.avgTimeProduceRequest`
-          </td>
-
-          <td>
-            Average time for a produce request in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.avgTimeUpdateMetadata`
-          </td>
-
-          <td>
-            Average time for a request to update metadata in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.avgTimeUpdateMetadata99Percentile`
-          </td>
-
-          <td>
-            Time for update metadata requests for 99th percentile in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.clientFetchesFailedPerSecond`
-          </td>
-
-          <td>
-            Client fetch request failures per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.fetchTime99Percentile`
-          </td>
-
-          <td>
-            Time for fetch requests for 99th percentile in milliseconds.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.handlerIdle`
-          </td>
-
-          <td>
-            Average fraction of time the request handler threads are idle.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.produceRequestsFailedPerSecond`
-          </td>
-
-          <td>
-            Failed produce requests per second.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `request.produceTime99Percentile`
-          </td>
-
-          <td>
-            Time for produce requests for 99th percentile.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `topic.diskSize`
-          </td>
-
-          <td>
-            Topic disk size per broker and per topic. Only present if `COLLECT_TOPIC_SIZE` is enabled.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `topic.offset`
-          </td>
-
-          <td>
-            Topic offset per broker and per topic. Only present if `COLLECT_TOPIC_OFFSET` is enabled.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

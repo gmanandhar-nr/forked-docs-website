@@ -52,130 +52,30 @@ To customize your role you need to:
   >
     For some GCP integrations, New Relic will also need the following permissions, mainly to collect tags and other attributes.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "250px" }}>
-            Integration
-          </th>
+    # Table
 
-          <th>
-            Permissions
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            [Google AppEngine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-app-engine-monitoring-integration)
-          </td>
-
-          <td>
-            n/a; Google App Engine does not require additional permissions.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Google BigQuery](/docs/google-bigquery-integration)
-          </td>
-
-          <td>
-            * `bigquery.datasets.get`
+| Integration | Permissions |
+| - | - |
+| [Google AppEngine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-app-engine-monitoring-integration) | n/a; Google App Engine does not require additional permissions. |
+| [Google BigQuery](/docs/google-bigquery-integration) | * `bigquery.datasets.get`
             * `bigquery.tables.get`
-            * `bigquery.tables.list`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Google Cloud Functions](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-functions-monitoring-integration)
-          </td>
-
-          <td>
-            * `cloudfunctions.functions.list`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Google Cloud Load Balancing](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-load-balancing-monitoring-integration)
-          </td>
-
-          <td>
-            n/a; Google Cloud Load Balancing does not require additional permissions.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Google Cloud Pub/Sub](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-pubsub-monitoring-integration)
-          </td>
-
-          <td>
-            * `pubsub.subscriptions.get`
+            * `bigquery.tables.list` |
+| [Google Cloud Functions](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-functions-monitoring-integration) | * `cloudfunctions.functions.list` |
+| [Google Cloud Load Balancing](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-load-balancing-monitoring-integration) | n/a; Google Cloud Load Balancing does not require additional permissions. |
+| [Google Cloud Pub/Sub](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-pubsub-monitoring-integration) | * `pubsub.subscriptions.get`
             * `pubsub.subscriptions.list`
             * `pubsub.topics.get`
-            * `pubsub.topics.list`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Google Cloud Spanner](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-spanner-monitoring-integration)
-          </td>
-
-          <td>
-            * `spanner.instances.list`
+            * `pubsub.topics.list` |
+| [Google Cloud Spanner](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-spanner-monitoring-integration) | * `spanner.instances.list`
             * `spanner.databases.list`
-            * `spanner.databases.getDdl`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Google Cloud SQL](/docs/google-cloud-sql-monitoring-integration)
-          </td>
-
-          <td>
-            `cloudsql.instances.list`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Google Cloud Storage](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-storage-monitoring-integration)
-          </td>
-
-          <td>
-            `storage.buckets.list`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Google Compute Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-app-engine-monitoring-integration)
-          </td>
-
-          <td>
-            * `compute.instances.list`
+            * `spanner.databases.getDdl` |
+| [Google Cloud SQL](/docs/google-cloud-sql-monitoring-integration) | `cloudsql.instances.list` |
+| [Google Cloud Storage](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-cloud-storage-monitoring-integration) | `storage.buckets.list` |
+| [Google Compute Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-app-engine-monitoring-integration) | * `compute.instances.list`
             * `compute.disks.get`
-            * `compute.disks.list`
-          </td>
-        </tr>
+            * `compute.disks.list` |
+| [Google Kubernetes Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-kubernetes-engine-monitoring-integration) | `container.clusters.list` |
 
-        <tr>
-          <td>
-            [Google Kubernetes Engine](/docs/integrations/google-cloud-platform-integrations/gcp-integrations-list/google-kubernetes-engine-monitoring-integration)
-          </td>
-
-          <td>
-            `container.clusters.list`
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

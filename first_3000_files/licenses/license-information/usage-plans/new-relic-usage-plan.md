@@ -65,32 +65,13 @@ Undefined terms used in this Usage Plan or Order shall have the meaning set fort
 
 "PAYG" at the end of a Product name means your organization is on our PAYG Buying Program. Here are a couple of examples of how a Product name will indicate it has converted from Savings Plan to PAYG pursuant to your Order or the Usage Plan:
 
-<table>
-  <thead>
-    <tr>
-      <th>Savings Plan (From)</th>
-      <th>PAYG (To)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>                 
-        New Relic Savings Plan - Pro Full Platform Users
-      </td>
-      <td>
-        New Relic - Pro Full Platform Users (PAYG)
-      </td>
-    </tr>
-    <tr>
-      <td>
-        New Relic Savings Plan - Data
-      </td>
-      <td>
-        New Relic - Data (PAYG)
-      </td>
-    </tr>
-  </tbody>
-</table>  
+# Table
+
+| Savings Plan (From) | PAYG (To) |
+| - | - |
+| New Relic Savings Plan - Pro Full Platform Users | New Relic - Pro Full Platform Users (PAYG) |
+| New Relic Savings Plan - Data | New Relic - Data (PAYG) |
+  
           
     * Monthly Product Usage will be deducted from the Commitment Fee amounts that are paid in advance. If Monthly Product Usage exceeds any remaining unconsumed amounts, Customer will be invoiced for the difference on a monthly basis.
 

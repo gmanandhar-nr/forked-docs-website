@@ -57,70 +57,15 @@ From here you can also:
 
 The [page load timing process](/docs/browser/new-relic-browser/page-load-timing-resources/page-load-timing-process) shows colored-coded details:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Page load timing process
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Page load timing process | Description |
+| - | - |
+| Request queuing | Wait time between the web server and the application code. Large numbers indicate a busy application server. |
+| Web application | Time spent in the application code. |
+| Network duration | The network latency, or the time it takes for a request to make a round trip over the internet.
 
-  <tbody>
-    <tr>
-      <td>
-        Request queuing
-      </td>
+        For apps that have been deployed using the [copy/paste method](/docs/browser/new-relic-browser/installation-configuration/adding-apps-new-relic-browser), browser monitoring includes web app and queue time in network time. |
+| DOM processing | In the browser, parsing and interpreting the HTML. Measured by the browser's `DOMContent` event. |
+| Page rendering | In the browser, the time to display the HTML, run the inline JavaScript, and load images. Measured by the browser's `Load` event. |
 
-      <td>
-        Wait time between the web server and the application code. Large numbers indicate a busy application server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Web application
-      </td>
-
-      <td>
-        Time spent in the application code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Network duration
-      </td>
-
-      <td>
-        The network latency, or the time it takes for a request to make a round trip over the internet.
-
-        For apps that have been deployed using the [copy/paste method](/docs/browser/new-relic-browser/installation-configuration/adding-apps-new-relic-browser), browser monitoring includes web app and queue time in network time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        DOM processing
-      </td>
-
-      <td>
-        In the browser, parsing and interpreting the HTML. Measured by the browser's `DOMContent` event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Page rendering
-      </td>
-
-      <td>
-        In the browser, the time to display the HTML, run the inline JavaScript, and load images. Measured by the browser's `Load` event.
-      </td>
-    </tr>
-  </tbody>
-</table>

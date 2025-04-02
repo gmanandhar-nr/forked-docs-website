@@ -16,313 +16,42 @@ This integration is open source software. That means you can [browse its source 
 
 The PostgreSQL integration collects both Metrics (<DNT>**M**</DNT>) and Inventory (<DNT>**I**</DNT>) information. The <DNT>**Applies To**</DNT> column in the following table indicates which settings can be used for each specific collection:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Setting
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-
-      <th style={{ width: '150px' }}>
-        Applies To
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `HOSTNAME`
-      </td>
-
-      <td>
-        The hostname for the PostgreSQL connection. Default is localhost.
-      </td>
-
-      <td style={{ "text-align": "center" }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PORT`
-      </td>
-
-      <td>
-        The port where PostgreSQL is running. Default is 5432.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `USERNAME`
-      </td>
-
-      <td>
-        The user name for the PostgreSQL connection. <DNT>**Required.**</DNT>
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PASSWORD`
-      </td>
-
-      <td>
-        The password for the PostgreSQL connection. <DNT>**Required.**</DNT>
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `COLLECTION_LIST`
-      </td>
-
-      <td>
-        JSON array, a JSON object, or the string literal `ALL` that specifies the entities to be collected. The PostgreSQL user can only collect table and index metrics from tables it has `SELECT` permissions for.
+| Setting | Description | Applies To |
+| - | - | - |
+| `HOSTNAME` | The hostname for the PostgreSQL connection. Default is localhost. | M/I |
+| `PORT` | The port where PostgreSQL is running. Default is 5432. | M/I |
+| `USERNAME` | The user name for the PostgreSQL connection. **Required.** | M/I |
+| `PASSWORD` | The password for the PostgreSQL connection. **Required.** | M/I |
+| `COLLECTION_LIST` | JSON array, a JSON object, or the string literal `ALL` that specifies the entities to be collected. The PostgreSQL user can only collect table and index metrics from tables it has `SELECT` permissions for.
 
         Required, except for `PgBouncer`.
 
-        <Callout variant="important">
+        
           This does not apply to custom queries configured either with `CUSTOM_METRICS_QUERY` or `CUSTOM_METRICS_CONFIG`.
-        </Callout>
+        
 
-        For help, see these [examples](/docs/infrastructure/host-integrations/host-integrations-list/postgresql/postgresql-integration#examples).
-      </td>
+        For help, see these [examples](/docs/infrastructure/host-integrations/host-integrations-list/postgresql/postgresql-integration#examples). | M |
+| `COLLECTION_IGNORE_DATABASE_LIST` | JSON array of database names that will be ignored for metrics collection. Typically useful for cases where `COLLECTION_LIST` is set to `ALL` and some databases need to be ignored. Default is `[]`.
 
-      <td style={{ "text-align": "center" }}>
-        M
-      </td>
-    </tr>
+        
+          This does not apply to custom queries configured either with `CUSTOM_METRICS_QUERY` or `CUSTOM_METRICS_CONFIG`. | M |
+| `PGBOUNCER` | Collect `pgbouncer` metrics. Default is `false`. | M |
+| `ENABLE_SSL` | Determines if SSL is enabled. If `true`, `ssl_cert_location` and `ssl_key_location` are required. Default is `false`. | M/I |
+| `TRUST_SERVER_CERTIFICATE` | If `true`, the server certificate is not verified for SSL. If `false`, the server certificate identified in `ssl_root_cert_location` is verified. Default is `false`. | M/I |
+| `SSL_ROOT_CERT_LOCATION` | Absolute path to PEM-encoded root certificate file. Required if `trust_server_certificate` is `false`. | M/I |
+| `SSL_CERT_LOCATION` | Absolute path to PEM-encoded client certificate file. Required if `enable_ssl` is `true`. | M/I |
+| `SSL_KEY_LOCATION` | Absolute path to PEM-encoded client key file. Required if `enable_ssl` is `true`. | M/I |
+| `TIMEOUT` | Maximum wait for connection, in seconds. Set to `0` for no timeout. Default is 10. | M/I |
+| `DATABASE` | The PostgreSQL database to connect to. Default is `postgres`. | M/I |
+| `CUSTOM_METRICS_QUERY` | The SQL query that requires `columns metric_name`, `metric_type`, and `metric_value.metric_type` can be `gauge`, `rate`, `delta`, or `attribute`. Additional columns collected with the query are added to the metric set as attributes. | M |
+| `CUSTOM_METRICS_CONFIG` | A path to a YAML file with a list of custom queries, along with their metric type, database, and sample name overrides. See the [examples](/docs/infrastructure/host-integrations/host-integrations-list/postgresql/postgresql-integration#examples) for details. | M |
+| `COLLECT_DB_LOCK_METRICS` | Enable collecting database lock metrics, which can be performance intensive. Default is `false`. | M |
+| `COLLECT_BLOAT_METRICS` | Enable tablespace bloat metrics, which can be performance intensive. Default is `true`. | M |
+| `METRICS` | Set to `true` to enable Metrics only collection. Default is `false`. |
+| `INVENTORY` | Set to `true` to enable Inventory only collection. Default is `false`. |
 
-    <tr>
-      <td>
-        `COLLECTION_IGNORE_DATABASE_LIST`
-      </td>
-
-      <td>
-        JSON array of database names that will be ignored for metrics collection. Typically useful for cases where `COLLECTION_LIST` is set to `ALL` and some databases need to be ignored. Default is `[]`.
-
-        <Callout variant="important">
-          This does not apply to custom queries configured either with `CUSTOM_METRICS_QUERY` or `CUSTOM_METRICS_CONFIG`.
-        </Callout>
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PGBOUNCER`
-      </td>
-
-      <td>
-        Collect `pgbouncer` metrics. Default is `false`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ENABLE_SSL`
-      </td>
-
-      <td>
-        Determines if SSL is enabled. If `true`, `ssl_cert_location` and `ssl_key_location` are required. Default is `false`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TRUST_SERVER_CERTIFICATE`
-      </td>
-
-      <td>
-        If `true`, the server certificate is not verified for SSL. If `false`, the server certificate identified in `ssl_root_cert_location` is verified. Default is `false`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SSL_ROOT_CERT_LOCATION`
-      </td>
-
-      <td>
-        Absolute path to PEM-encoded root certificate file. Required if `trust_server_certificate` is `false`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SSL_CERT_LOCATION`
-      </td>
-
-      <td>
-        Absolute path to PEM-encoded client certificate file. Required if `enable_ssl` is `true`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SSL_KEY_LOCATION`
-      </td>
-
-      <td>
-        Absolute path to PEM-encoded client key file. Required if `enable_ssl` is `true`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TIMEOUT`
-      </td>
-
-      <td>
-        Maximum wait for connection, in seconds. Set to `0` for no timeout. Default is 10.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DATABASE`
-      </td>
-
-      <td>
-        The PostgreSQL database to connect to. Default is `postgres`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M/I
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CUSTOM_METRICS_QUERY`
-      </td>
-
-      <td>
-        The SQL query that requires `columns metric_name`, `metric_type`, and `metric_value.metric_type` can be `gauge`, `rate`, `delta`, or `attribute`. Additional columns collected with the query are added to the metric set as attributes.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CUSTOM_METRICS_CONFIG`
-      </td>
-
-      <td>
-        A path to a YAML file with a list of custom queries, along with their metric type, database, and sample name overrides. See the [examples](/docs/infrastructure/host-integrations/host-integrations-list/postgresql/postgresql-integration#examples) for details.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `COLLECT_DB_LOCK_METRICS`
-      </td>
-
-      <td>
-        Enable collecting database lock metrics, which can be performance intensive. Default is `false`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `COLLECT_BLOAT_METRICS`
-      </td>
-
-      <td>
-        Enable tablespace bloat metrics, which can be performance intensive. Default is `true`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}>
-        M
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `METRICS`
-      </td>
-
-      <td>
-        Set to `true` to enable Metrics only collection. Default is `false`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}/>
-    </tr>
-
-    <tr>
-      <td>
-        `INVENTORY`
-      </td>
-
-      <td>
-        Set to `true` to enable Inventory only collection. Default is `false`.
-      </td>
-
-      <td style={{ 'text-align': 'center' }}/>
-    </tr>
-  </tbody>
-</table>
 
 The values for these settings can be defined in several ways:
 

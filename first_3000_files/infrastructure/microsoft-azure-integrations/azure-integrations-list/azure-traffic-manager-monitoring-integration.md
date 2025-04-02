@@ -36,38 +36,10 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Traffic Manager metrics [#Azure-traffic-manager]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `ProbeAgentCurrentEndpointStateByProfileResourceId` | Endpoint status by Endpoint. |
+| `QpsByEndpoint` | Queries by Endpoint returned. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ProbeAgentCurrentEndpointStateByProfileResourceId`
-      </td>
-
-      <td>
-        Endpoint status by Endpoint.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `QpsByEndpoint`
-      </td>
-
-      <td>
-        Queries by Endpoint returned.
-      </td>
-    </tr>
-  </tbody>
-</table>

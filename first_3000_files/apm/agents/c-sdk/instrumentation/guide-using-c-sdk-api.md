@@ -37,61 +37,15 @@ Before you manually instrument your code to monitor transactions:
 1. Check the [C SDK compatibility and requirements](/docs/c-agent-compatibility-requirements) for your app.
 2. Make sure you are using the latest version of the C SDK library, and [update](/docs/update-your-c-agent-library) as needed.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Use this method...
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Use this method... |
+| - | - |
+| Start timing a web transaction | [`newrelic_start_web_transaction()`](https://newrelic.github.io/c-sdk/libnewrelic_8h.html#adbf7c1fa57482f6e0a7f291e0b5ec80f) |
+| Start timing a non-web transaction | [`newrelic_start_non_web_transaction()`](https://newrelic.github.io/c-sdk/libnewrelic_8h.html#a88648cc287f8d7e371139dc3809b7afb) |
+| Stop timing a transaction | `newrelic_end_transaction()` |
+| Prevent a transaction from reporting to New Relic | [`newrelic_ignore_transaction()`](https://newrelic.github.io/c-sdk/libnewrelic_8h.html#a7b41f8690c3b2b7e024a16fa4bb59320) |
 
-  <tbody>
-    <tr>
-      <td>
-        Start timing a web transaction
-      </td>
-
-      <td>
-        [`newrelic_start_web_transaction()`](https://newrelic.github.io/c-sdk/libnewrelic_8h.html#adbf7c1fa57482f6e0a7f291e0b5ec80f)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Start timing a non-web transaction
-      </td>
-
-      <td>
-        [`newrelic_start_non_web_transaction()`](https://newrelic.github.io/c-sdk/libnewrelic_8h.html#a88648cc287f8d7e371139dc3809b7afb)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Stop timing a transaction
-      </td>
-
-      <td>
-        `newrelic_end_transaction()`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Prevent a transaction from reporting to New Relic
-      </td>
-
-      <td>
-        [`newrelic_ignore_transaction()`](https://newrelic.github.io/c-sdk/libnewrelic_8h.html#a7b41f8690c3b2b7e024a16fa4bb59320)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Time specific methods using segments [#segments]
 

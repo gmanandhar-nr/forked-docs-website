@@ -83,70 +83,17 @@ Notifications are sent to every notification channel on the policy as well as al
 
 Each issue preference option has its own advantages. You can select any preference for any policy.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Issue preference
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Issue preference | Description | Advantages |
+| - | - | - |
+| [One issue per policy (default)](#preference-policy) | Only one issue will be open at a time for the entire policy. | * Fewest number of notifications
+        * Requires immediate action and closing the issues to be effective |
+| [One issue per condition](#preference-condition) | One issue will be open at a time for each condition in your policy. | * More notifications
+        * Useful for policies containing conditions that focus on [entities](/docs/new-relic-solutions/get-started/glossary/#alert-signal) that perform the same job; for example, hosts that all serve the same application(s) |
+| [One issue per condition and signal](#preference-signal) | This option groups the incidents sharing the same condition and signal into their own issue. | * The most notifications
+        * Useful if you need a notification about any entity that creates an incident or if you have an external system where you want to send alert notifications |
 
-      <th>
-        Advantages
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [One issue per policy (default)](#preference-policy)
-      </td>
-
-      <td>
-        Only one issue will be open at a time for the entire policy.
-      </td>
-
-      <td>
-        * Fewest number of notifications
-        * Requires immediate action and closing the issues to be effective
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [One issue per condition](#preference-condition)
-      </td>
-
-      <td>
-        One issue will be open at a time for each condition in your policy.
-      </td>
-
-      <td>
-        * More notifications
-        * Useful for policies containing conditions that focus on [entities](/docs/new-relic-solutions/get-started/glossary/#alert-signal) that perform the same job; for example, hosts that all serve the same application(s)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [One issue per condition and signal](#preference-signal)
-      </td>
-
-      <td>
-        This option groups the incidents sharing the same condition and signal into their own issue.
-      </td>
-
-      <td>
-        * The most notifications
-        * Useful if you need a notification about any entity that creates an incident or if you have an external system where you want to send alert notifications
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### One issue per policy (default) [#preference-policy]
 

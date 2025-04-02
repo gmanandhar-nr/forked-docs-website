@@ -44,83 +44,19 @@ SINCE 1 day ago TIMESERIES
 
 Here is a breakdown of how the parts of this query work:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "350px" }}>
-        Query segment
-      </th>
+# Table
 
-      <th>
-        What does it do?
-      </th>
-    </tr>
-  </thead>
+| Query segment | What does it do? |
+| - | - |
+| `FROM Metric` | `Metric` is one of our core [data types](/docs/using-new-relic/data/understand-data/new-relic-data-types#dimensional-metrics), and metric timeslice data is stored as this data type. For general tips on querying `Metric` data, see [Metric query examples](/docs/data-ingest-apis/get-data-new-relic/metric-api/view-query-you-metric-data). |
+| `SELECT count(apm.service.error.count) / count(apm.service.transaction.duration)` | This math generates a count of errors out of a total count of transaction metrics. This query uses the [converted metric names](#timeslice-conversion).
 
-  <tbody>
-    <tr>
-      <td>
-        `FROM Metric`
-      </td>
+        Note that you can use other [aggregator functions](#aggregator-functions). |
+| `WHERE (entity.guid = 'AN_ENTITY_GUID')` | You must specify at least one data source. You can select a single entity's GUID, as shown here, or you can [select multiple sources](#multiple-app-names). This query uses `entity.guid`, but you can also use `appId` or `appName`. |
+| `AND (transactionType = 'Web')` | Sets the transaction type to web, meaning that background/non-web transactions won't be counted. |
+| `SINCE 1 day ago` | Selecting a time range. |
+| `TIMESERIES` | This optional clause displays the results in a time-based chart. |
 
-      <td>
-        `Metric` is one of our core [data types](/docs/using-new-relic/data/understand-data/new-relic-data-types#dimensional-metrics), and metric timeslice data is stored as this data type. For general tips on querying `Metric` data, see [Metric query examples](/docs/data-ingest-apis/get-data-new-relic/metric-api/view-query-you-metric-data).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SELECT count(apm.service.error.count) / count(apm.service.transaction.duration)`
-      </td>
-
-      <td>
-        This math generates a count of errors out of a total count of transaction metrics. This query uses the [converted metric names](#timeslice-conversion).
-
-        Note that you can use other [aggregator functions](#aggregator-functions).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WHERE (entity.guid = 'AN_ENTITY_GUID')`
-      </td>
-
-      <td>
-        You must specify at least one data source. You can select a single entity's GUID, as shown here, or you can [select multiple sources](#multiple-app-names). This query uses `entity.guid`, but you can also use `appId` or `appName`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AND (transactionType = 'Web')`
-      </td>
-
-      <td>
-        Sets the transaction type to web, meaning that background/non-web transactions won't be counted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SINCE 1 day ago`
-      </td>
-
-      <td>
-        Selecting a time range.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TIMESERIES`
-      </td>
-
-      <td>
-        This optional clause displays the results in a time-based chart.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For general information on NRQL syntax, including `FROM`, `FACET`, and `TIMESERIES`, see [Intro to NRQL](/docs/query-data/nrql-new-relic-query-language/getting-started/introduction-nrql).
 

@@ -132,72 +132,26 @@ For more help finding your traces in the UI:
 
 For transactions that occur in multiple services, the distributed trace payload contains information that allows New Relic to stitch them together into a complete transaction trace. However, if New Relic-monitored services are not sending trace context to each other, it will result in incomplete trace details. For more information, see the documentation about [passing the distributed tracing API header](/docs/understand-dependencies/distributed-tracing/enable-configure/enable-distributed-tracing#agent-apis) and the [C SDK's distributed tracing documentation on GitHub](https://github.com/newrelic/c-sdk/blob/master/GUIDE.md#distributed-tracing).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Use this
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Create and return a payload to be sent to the called service
-      </td>
-
-      <td>
-        ```
-        <a href="https://newrelic.github.io/c-sdk/libnewrelic_8h.html#ae4a3e1c28f84df02755f04f657ac76b4">newrelic_create_distributed_trace_payload()</a>
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Accept a payload sent from the first service
-      </td>
-
-      <td>
-        ```
-        <a href="https://newrelic.github.io/c-sdk/libnewrelic_8h.html#a83c315034829548ed1e4729a14c6b47a">newrelic_accept_distributed_trace_payload()</a>
+| If you want to... | Use this |
+| - | - |
+| Create and return a payload to be sent to the called service | ```
+        newrelic_create_distributed_trace_payload()
+        ``` |
+| Accept a payload sent from the first service | ```
+        newrelic_accept_distributed_trace_payload()
         ```
 
-        This will link these services together in a trace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Return a base64-encoded JSON string representation of the payload
-      </td>
-
-      <td>
-        ```
-        <a href="https://newrelic.github.io/c-sdk/libnewrelic_8h.html#a2e8a3c3e402a10bd8ffdd48f9c0cea8e">newrelic_create_distributed_trace_payload_httpsafe()</a>
+        This will link these services together in a trace. |
+| Return a base64-encoded JSON string representation of the payload | ```
+        newrelic_create_distributed_trace_payload_httpsafe()
         ```
 
-        This offers the same behavior as `newrelic_create_distributed_trace_payload()`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Accept a base64-encoded string for the payload
-      </td>
-
-      <td>
-        ```
-        <a href="https://newrelic.github.io/c-sdk/libnewrelic_8h.html#a2e8a3c3e402a10bd8ffdd48f9c0cea8e">newrelic_accept_distributed_trace_payload_httpsafe()</a>
+        This offers the same behavior as `newrelic_create_distributed_trace_payload()`. |
+| Accept a base64-encoded string for the payload | ```
+        newrelic_accept_distributed_trace_payload_httpsafe()
         ```
 
-        This offers the same behavior as `newrelic_accept_distributed_trace_payload()`.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        This offers the same behavior as `newrelic_accept_distributed_trace_payload()`. |
+

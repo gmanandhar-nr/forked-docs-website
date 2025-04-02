@@ -22,87 +22,15 @@ First, [install](/docs/codestream/start-here/install-codestream) the New Relic C
 
 The PHP agent reports and attaches the following attributes to spans produced by your application:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Name**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
+| **Name** | **Description** | **Example** |
+| - | - | - |
+| `code.function` | The name of the instrumented function | createProduct |
+| `code.filepath` | The absolute path to the source code file in which `code.function` is defined | /symfony/symfony_app/src/Controller/ProductController.php |
+| `code.lineno` | The line number where `code.function` is defined in code.filepath | 16 |
+| `code.namespace` | The namespace (class/ module name) in which `code.function` is defined | App\\Controller\\ProductController |
 
-      <th>
-        <DNT>
-          **Example**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `code.function`
-      </td>
-
-      <td>
-        The name of the instrumented function
-      </td>
-
-      <td>
-        createProduct
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.filepath`
-      </td>
-
-      <td>
-        The absolute path to the source code file in which `code.function` is defined
-      </td>
-
-      <td>
-        /symfony/symfony_app/src/Controller/ProductController.php
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.lineno`
-      </td>
-
-      <td>
-        The line number where `code.function` is defined in code.filepath
-      </td>
-
-      <td>
-        16
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.namespace`
-      </td>
-
-      <td>
-        The namespace (class/ module name) in which `code.function` is defined
-      </td>
-
-      <td>
-        App\\Controller\\ProductController
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="important">
   Code-level metrics are only supported for PHP version 7.0 or higher.

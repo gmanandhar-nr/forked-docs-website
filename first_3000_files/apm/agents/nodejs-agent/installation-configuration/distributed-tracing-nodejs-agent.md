@@ -129,27 +129,11 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
       >
         Here's an overview of the settings. For more help with configuration, see [Node.js agent configuration](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#distributed-tracing).
 
-        <table>
-          <thead>
-            <tr>
-              <th style={{ width: "200px" }}>
-                Type
-              </th>
+        # Table
 
-              <th>
-                Required configuration
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                Infinite Tracing
-              </td>
-
-              <td>
-                Configuration options:
+| Type | Required configuration |
+| - | - |
+| Infinite Tracing | Configuration options:
 
                 Configuration file (`newrelic.js`):
 
@@ -159,7 +143,7 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
                 }
                 infinite_tracing: {
                   trace_observer: {
-                    host: '<a href="/docs/understand-dependencies/distributed-tracing/infinite-tracing/set-trace-observer#ui-endpoints">YOUR_TRACE_OBSERVER_HOST</a>'
+                    host: 'YOUR_TRACE_OBSERVER_HOST'
                   }
                 }
                 ```
@@ -169,11 +153,8 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
                 ```
                 NEW_RELIC_DISTRIBUTED_TRACING_ENABLED=true
                 NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST="YOUR_TRACE_OBSERVER_HOST"
-                ```
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                ``` |
+
       </Collapser>
     </CollapserGroup>
 

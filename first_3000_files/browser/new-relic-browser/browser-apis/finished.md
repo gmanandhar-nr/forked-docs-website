@@ -56,33 +56,14 @@ You can only call this method once per page load, and it does not change the oth
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$time_stamp`
 
-  <tbody>
-    <tr>
-      <td>
-        `$time_stamp`
+        _integer_ (UNIX time) | Optional. Defaults to the current time of the call. If used, this marks the time that the page is "finished" according to your own criteria. |
 
-        _integer_ (UNIX time)
-      </td>
-
-      <td>
-        Optional. Defaults to the current time of the call. If used, this marks the time that the page is "finished" according to your own criteria.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

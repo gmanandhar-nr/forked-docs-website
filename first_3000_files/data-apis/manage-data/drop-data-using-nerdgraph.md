@@ -196,73 +196,43 @@ Here are some example drop rules:
 
 After you create a drop rule, verify that it is working as expected. The rule should take effect quickly after a successful registration, so try running a `TIMESERIES` version of the query you registered to see that the data drops off.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Drop rule type
-      </th>
+# Table
 
-      <th>
-        NRQL
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `DROP_DATA`
-      </td>
-
-      <td>
-        <DNT>
-          **Drop rule NRQL:**
-        </DNT>
+| Drop rule type | NRQL |
+| - | - |
+| `DROP_DATA` | **Drop rule NRQL:**
+        
 
         ```sql
         SELECT * FROM MyEvent WHERE foo = bar
         ```
 
-        <DNT>
+        
           **Validation NRQL:**
-        </DNT>
+        
 
         ```sql
         SELECT count(*) FROM MyEvent WHERE foo = bar TIMESERIES
         ```
 
-        This should drop to 0. To verify that it did not affect any thing else, invert the `WHERE` clause.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DROP_ATTRIBUTES`
-      </td>
-
-      <td>
-        <DNT>
-          **Drop rule NRQL:**
-        </DNT>
+        This should drop to 0. To verify that it did not affect any thing else, invert the `WHERE` clause. |
+| `DROP_ATTRIBUTES` | **Drop rule NRQL:**
+        
 
         ```sql
         SELECT dropAttr1, dropAttr2 FROM MyEvent WHERE foo = bar
         ```
 
-        <DNT>
+        
           **Validation NRQL:**
-        </DNT>
+        
 
         ```sql
         SELECT count(dropAttr1), count(dropAttr2) FROM MyEvent WHERE foo = bar TIMESERIES
         ```
 
-        Both lines should drop to 0. To verify that it did not affect events that contained these attributes and still should, invert the `WHERE` clause.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        Both lines should drop to 0. To verify that it did not affect events that contained these attributes and still should, invert the `WHERE` clause. |
+
 
 ## View rules [#view]
 

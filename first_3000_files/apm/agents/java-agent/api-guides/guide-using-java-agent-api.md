@@ -51,101 +51,19 @@ You can call the API even without the agent running, but the methods will be a n
 
 To instrument [transactions](/docs/apm/applications-menu/monitoring/transactions-page) in your application, use the following APIs.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "350px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Use this
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Use this |
+| - | - |
+| Create a `Transaction` when New Relic does not create one automatically | [`@Trace(dispatcher = true)`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/Trace.html) on the method that encompasses the work to be reported. When this annotation is used on a method within the context of an existing transaction, this will not start a new transaction, but rather include the method in the existing transaction. |
+| Capture the duration of a method that New Relic does not automatically trace | [`@Trace()`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/Trace.html) on the method you want to time. |
+| Set the name of the current `Transaction` | [`NewRelic.setTransactionName(...)`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html) |
+| Start the timer for the response time of the current `Transaction` and to cause a `Transaction` you create to be reported as a `Web` transaction, rather than as an `Other` transaction | [`NewRelic.setRequestAndReponse(...)`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html) |
+| Add [custom attributes](/docs/agents/manage-apm-agents/agent-data/collect-custom-attributes) to `Transactions` and `TransactionEvents` | [`NewRelic.addCustomParameter(...)`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html) |
+| Adds [user tracking](/docs/apm/agents/java-agent/attributes/java-agent-attributes#user-attributes) to `Transactions` by setting the `enduser.id` agent attribute. | [`NewRelic.setUserId()`](http://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html) |
+| Prevent a `Transaction` from being reported to New Relic | [`NewRelic.ignoreTransaction()`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html) |
+| Exclude a `Transaction` when calculating your app's [Apdex](/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction) score | [`NewRelic.ignoreApdex()`](http://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html) |
 
-  <tbody>
-    <tr>
-      <td>
-        Create a `Transaction` when New Relic does not create one automatically
-      </td>
-
-      <td>
-        [`@Trace(dispatcher = true)`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/Trace.html) on the method that encompasses the work to be reported. When this annotation is used on a method within the context of an existing transaction, this will not start a new transaction, but rather include the method in the existing transaction.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Capture the duration of a method that New Relic does not automatically trace
-      </td>
-
-      <td>
-        [`@Trace()`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/Trace.html) on the method you want to time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Set the name of the current `Transaction`
-      </td>
-
-      <td>
-        [`NewRelic.setTransactionName(...)`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Start the timer for the response time of the current `Transaction` and to cause a `Transaction` you create to be reported as a `Web` transaction, rather than as an `Other` transaction
-      </td>
-
-      <td>
-        [`NewRelic.setRequestAndReponse(...)`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Add [custom attributes](/docs/agents/manage-apm-agents/agent-data/collect-custom-attributes) to `Transactions` and `TransactionEvents`
-      </td>
-
-      <td>
-        [`NewRelic.addCustomParameter(...)`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Adds [user tracking](/docs/apm/agents/java-agent/attributes/java-agent-attributes#user-attributes) to `Transactions` by setting the `enduser.id` agent attribute.
-      </td>
-
-      <td>
-        [`NewRelic.setUserId()`](http://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Prevent a `Transaction` from being reported to New Relic
-      </td>
-
-      <td>
-        [`NewRelic.ignoreTransaction()`](https://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Exclude a `Transaction` when calculating your app's [Apdex](/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction) score
-      </td>
-
-      <td>
-        [`NewRelic.ignoreApdex()`](http://newrelic.github.io/java-agent-api/javadoc/index.html?com/newrelic/api/agent/NewRelic.html)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## See related logs [#logs]
 

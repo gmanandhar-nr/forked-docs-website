@@ -48,71 +48,15 @@ Attributes can be collected in a variety of ways:
 
 Collected attributes appear in these locations:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Collected attributes**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Location**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [Transaction traces](/docs/apm/transactions/transaction-traces/introduction-transaction-traces)
-      </td>
-
-      <td>
-        Each minute transaction traces collect data for your slowest individual HTTP requests. These traces will report attributes collected during the transaction.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Traced errors](/docs/apm/applications-menu/error-analytics/error-analytics-manage-error-traces)
-      </td>
-
-      <td>
-        If a transaction results in an error, these traced errors will be reported to APM. A traced error will contain attributes collected during the transaction.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Transaction events](/docs/insights/insights-data-sources/default-events-attributes/apm-default-event-attributes)
-      </td>
-
-      <td>
-        APM transactions will contain [attributes](/docs/insights/new-relic-insights/decorating-events/insights-attributes) collected during the transaction.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Browser events](/docs/insights/insights-data-sources/default-events-attributes/browser-default-events-attributes-insights)
-      </td>
-
-      <td>
-        Browser monitoring events will contain [attributes](/docs/insights/new-relic-insights/decorating-events/insights-attributes) collected during the transaction. However, attributes collected at the end of a transaction may not appear on `PageView` events. This destination is also called browser monitoring.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Span events](/docs/apm/distributed-tracing/getting-started/introduction-distributed-tracing)
-      </td>
-
-      <td>
-        Span events collected for distributed tracing will contain attributes collected during the span.
+| **Collected attributes** | **Location** |
+| - | - |
+| [Transaction traces](/docs/apm/transactions/transaction-traces/introduction-transaction-traces) | Each minute transaction traces collect data for your slowest individual HTTP requests. These traces will report attributes collected during the transaction. |
+| [Traced errors](/docs/apm/applications-menu/error-analytics/error-analytics-manage-error-traces) | If a transaction results in an error, these traced errors will be reported to APM. A traced error will contain attributes collected during the transaction. |
+| [Transaction events](/docs/insights/insights-data-sources/default-events-attributes/apm-default-event-attributes) | APM transactions will contain [attributes](/docs/insights/new-relic-insights/decorating-events/insights-attributes) collected during the transaction. |
+| [Browser events](/docs/insights/insights-data-sources/default-events-attributes/browser-default-events-attributes-insights) | Browser monitoring events will contain [attributes](/docs/insights/new-relic-insights/decorating-events/insights-attributes) collected during the transaction. However, attributes collected at the end of a transaction may not appear on `PageView` events. This destination is also called browser monitoring. |
+| [Span events](/docs/apm/distributed-tracing/getting-started/introduction-distributed-tracing) | Span events collected for distributed tracing will contain attributes collected during the span.
 
         The following agents support the addition of custom user attributes to span events:
 
@@ -122,21 +66,9 @@ Collected attributes appear in these locations:
         * [Node.js agent 6.10.0 and above](/docs/release-notes/agent-release-notes/nodejs-release-notes/node-agent-6-10-0/)
         * [PHP agent 9.12.0.268 and above](/docs/release-notes/agent-release-notes/php-release-notes/php-agent-9120268)
         * [Python agent 5.8.0.136 and above](/docs/release-notes/agent-release-notes/python-release-notes/python-agent-580136)
-        * [Ruby agent 6.8.0 and above](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-680360)
-      </td>
-    </tr>
+        * [Ruby agent 6.8.0 and above](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-680360) |
+| [Transaction segments](/docs/apm/transactions/transaction-traces/transaction-traces-trace-details-page) | Each segment in a transaction trace will contain attributes recorded for that segment. |
 
-    <tr>
-      <td>
-        [Transaction segments](/docs/apm/transactions/transaction-traces/transaction-traces-trace-details-page)
-      </td>
-
-      <td>
-        Each segment in a transaction trace will contain attributes recorded for that segment.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Viewing request attributes [#viewing]
 

@@ -31,53 +31,13 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data is attached to the following [event types](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Environment | `GcpComposerEnvironmentSample` | `GcpComposerEnvironment` |
+| Workflow | `GcpComposerWorkflowSample` | `GcpComposerWorkflow` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Environment
-      </td>
-
-      <td>
-        `GcpComposerEnvironmentSample`
-      </td>
-
-      <td>
-        `GcpComposerEnvironment`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Workflow
-      </td>
-
-      <td>
-        `GcpComposerWorkflowSample`
-      </td>
-
-      <td>
-        `GcpComposerWorkflow`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

@@ -22,50 +22,25 @@ The Android agent only monitors your app while it is in the foreground. The agen
 
 Make sure your Android app meets these requirements:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        Component
-      </th>
+# Table
 
-      <th>
-        Application requirements
-      </th>
-    </tr>
-  </thead>
+| Component | Application requirements |
+| - | - |
+| Operating system | Android 7.0 or higher |
+| API/SDK | HttpURLConnection, OkHttp2 (except versions 2.0 and 2.4), OkHttp (versions 2.8, 3.5+, 4.0+), OkIO (version 1.11), AndroidHttpClient, Volley (version 1.0.0), and Apache HTTP Client networking APIs
 
-  <tbody>
-    <tr>
-      <td>
-        Operating system
-      </td>
-
-      <td>
-        Android 7.0 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        API/SDK
-      </td>
-
-      <td>
-        HttpURLConnection, OkHttp2 (except versions 2.0 and 2.4), OkHttp (versions 2.8, 3.5+, 4.0+), OkIO (version 1.11), AndroidHttpClient, Volley (version 1.0.0), and Apache HTTP Client networking APIs
-
-        <Callout variant="important">
+        
           AndroidHttpClient was removed from the SDK in version 23, and as such only supported in Android agent version 6.5.0 and lower.
-        </Callout>
+        
 
-        <DNT>**Android agent version 7.0.0 or higher**</DNT> requires:
+        **Android agent version 7.0.0 or higher** requires:
 
         * Android Studio Flamingo
         * Gradle 7.2
         * Android Gradle plugin 7.0.0
         * DexGuard 9.0 and higher
 
-        <DNT>**Android agent version 6.6.0 or higher**</DNT> requires <DNT>**Android SDK Tools version 24 or higher**</DNT>. For Android SDK Tools version 24 or higher, you also need to meet the following requirements:
+        **Android agent version 6.6.0 or higher** requires **Android SDK Tools version 24 or higher**. For Android SDK Tools version 24 or higher, you also need to meet the following requirements:
 
         * Android Studio
         * Gradle 5.1.1
@@ -75,68 +50,19 @@ Make sure your Android app meets these requirements:
 
         For older Android agent versions, your build's Android SDK Tools version must be compatible with your Android agent version:
 
-        * <DNT>**Android agent version 6.0.0 through 6.5.0**</DNT> requires builds to be compiled with <DNT>**Android SDK Tools version 21 or higher**</DNT>.
-        * <DNT>**Android agent version 5.0.0 through 5.9.9**</DNT> requires builds to be compiled with <DNT>**Android SDK Tools version 14 or higher**</DNT>.
+        * **Android agent version 6.0.0 through 6.5.0** requires builds to be compiled with **Android SDK Tools version 21 or higher**.
+        * **Android agent version 5.0.0 through 5.9.9** requires builds to be compiled with **Android SDK Tools version 14 or higher**.
 
         Note: Make sure to upgrade your SDK Tools to the most recent version before you install the Android agent.
 
-        <Callout variant="important">
-          As of May, 2022, Android Gradle plugin version 7.2.1 release breaks the transform API when used along with ASM API, and this has impacted New Relic Android agent functionalities. This issue has been fixed in [Android Gradle plugin version 7.2.2](https://developer.android.com/studio/releases/gradle-plugin#7-2-0)
-        </Callout>
-      </td>
-    </tr>
+        
+          As of May, 2022, Android Gradle plugin version 7.2.1 release breaks the transform API when used along with ASM API, and this has impacted New Relic Android agent functionalities. This issue has been fixed in [Android Gradle plugin version 7.2.2](https://developer.android.com/studio/releases/gradle-plugin#7-2-0) |
+| Languages | Java 1.7 through Java 9. JDK 11 is supported in version 6.2.0 and higher. JDK 17 is supported in version 7.0.0 and higher. |
+| Devices | Any Android compatible device (smartphones, tablets, Android TV, Amazon Fire, etc.) |
+| File sizes | The agent adds less than 500KB to your release APK. |
+| Architectures | ARM, Intel Atom |
+| Signature validation | The agent cannot instrument JARs that use [signature validation](https://docs.oracle.com/javase/7/docs/technotes/guides/jar/jar.html#Signature_Validation) during signing. JARs with manifests containing `SHA1-Digest` or `SHA-256-Digest` attributes will not be modified. |
 
-    <tr>
-      <td>
-        Languages
-      </td>
-
-      <td>
-        Java 1.7 through Java 9. JDK 11 is supported in version 6.2.0 and higher. JDK 17 is supported in version 7.0.0 and higher.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Devices
-      </td>
-
-      <td>
-        Any Android compatible device (smartphones, tablets, Android TV, Amazon Fire, etc.)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        File sizes
-      </td>
-
-      <td>
-        The agent adds less than 500KB to your release APK.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Architectures
-      </td>
-
-      <td>
-        ARM, Intel Atom
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Signature validation
-      </td>
-
-      <td>
-        The agent cannot instrument JARs that use [signature validation](https://docs.oracle.com/javase/7/docs/technotes/guides/jar/jar.html#Signature_Validation) during signing. JARs with manifests containing `SHA1-Digest` or `SHA-256-Digest` attributes will not be modified.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Agent and Gradle compatibility [#agent-gradle]
 

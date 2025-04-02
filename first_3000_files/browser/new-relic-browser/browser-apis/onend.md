@@ -56,33 +56,14 @@ Other methods for modifying the interaction include:
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$callback`
 
-  <tbody>
-    <tr>
-      <td>
-        `$callback`
+        _function_ | Required. This function is called when the interaction ends. It is called with one parameter, which is the interaction context. |
 
-        _function_
-      </td>
-
-      <td>
-        Required. This function is called when the interaction ends. It is called with one parameter, which is the interaction context.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

@@ -81,70 +81,24 @@ A definition file can be broken down into two parts:
 
 Here are explanations of a definition file's header elements:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Definition header field
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Definition header field | Description |
+| - | - |
+| `name` | Required. A unique name `name` to identify the integration for logging, internal metrics, etc. When the agent loads the config file, New Relic uses the `name` to look up the integration in the agent's registry. |
+| `protocol_version` | Required. The version number of the protocol. New Relic uses this to ensure compatibility between the integration and the agent. If the agent does not recognize an integration's version, it will filter out that integration and create a log message.
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
-      </td>
-
-      <td>
-        Required. A unique name `name` to identify the integration for logging, internal metrics, etc. When the agent loads the config file, New Relic uses the `name` to look up the integration in the agent's registry.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `protocol_version`
-      </td>
-
-      <td>
-        Required. The version number of the protocol. New Relic uses this to ensure compatibility between the integration and the agent. If the agent does not recognize an integration's version, it will filter out that integration and create a log message.
-
-        The current version of the JSON protocol is `2`. For more on protocol changes, see [SDK changes](/docs/integrations/integrations-sdk/getting-started/compatibility-requirements-infrastructure-integrations-sdk#change-log).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `description`
-      </td>
-
-      <td>
-        Optional. Human-friendly explanation of what the integration does.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `os`
-      </td>
-
-      <td>
-        Optional. The operating system where the integration runs. New Relic uses this to filter integrations that you intend to run only on specific operating systems.
+        The current version of the JSON protocol is `2`. For more on protocol changes, see [SDK changes](/docs/integrations/integrations-sdk/getting-started/compatibility-requirements-infrastructure-integrations-sdk#change-log). |
+| `description` | Optional. Human-friendly explanation of what the integration does. |
+| `os` | Optional. The operating system where the integration runs. New Relic uses this to filter integrations that you intend to run only on specific operating systems.
 
         Default: Run the integration regardless of the `os` value.
 
         To restrict the integration to a specific operating system, use either of these options:
 
         * `linux`
-        * `windows`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `windows` |
+
 
 ### Definition file commands [#def-commands]
 

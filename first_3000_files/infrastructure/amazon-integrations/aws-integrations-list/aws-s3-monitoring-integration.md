@@ -64,45 +64,13 @@ This integration collects the following Amazon S3 metrics. For more details abou
 
 ### Amazon S3 data for buckets [#provider-S3Bucket]
 
-<table>
-  <thead>
-    <tr>
-      <th width={285}>
-        <DNT>
-          **Metric**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Metric** | **Description** |
+| - | - |
+| `BucketSizeBytes` | The amount of data in bytes stored in a bucket including Standard Storage, Reduced Redundancy Storage, Infrequent Access Storage (IAS), One zone IAS, and Glacier Storage including overheads. |
+| `NumberOfObjects` | The total number of objects stored in a bucket for all storage classes except for the `GLACIER` storage class. |
 
-  <tbody>
-    <tr>
-      <td>
-        `BucketSizeBytes`
-      </td>
-
-      <td>
-        The amount of data in bytes stored in a bucket including Standard Storage, Reduced Redundancy Storage, Infrequent Access Storage (IAS), One zone IAS, and Glacier Storage including overheads.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NumberOfObjects`
-      </td>
-
-      <td>
-        The total number of objects stored in a bucket for all storage classes except for the `GLACIER` storage class.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Amazon S3 data for request metrics [#provider-S3BucketRequests]
 

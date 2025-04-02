@@ -39,47 +39,19 @@ Add a [custom attribute](/docs/agents/manage-apm-agents/agent-data/collect-custo
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$key`
 
-  <tbody>
-    <tr>
-      <td>
-        `$key`
+        _string_ | Required. The name of the custom attribute. Only the first 255 characters are retained. |
+| `$value`
 
-        _string_
-      </td>
+        _scalar_ | Required. The value to associate with this custom attribute.
 
-      <td>
-        Required. The name of the custom attribute. Only the first 255 characters are retained.
-      </td>
-    </tr>
+        If the value given is a **float** with a value of NaN, Infinity, denorm or negative zero, the behavior of this function is undefined. For other floating point values, the agent may discard 1 or more bits of precision (ULPs) from the given value. |
 
-    <tr>
-      <td>
-        `$value`
-
-        _scalar_
-      </td>
-
-      <td>
-        Required. The value to associate with this custom attribute.
-
-        If the value given is a <DNT>**float**</DNT> with a value of NaN, Infinity, denorm or negative zero, the behavior of this function is undefined. For other floating point values, the agent may discard 1 or more bits of precision (ULPs) from the given value.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

@@ -16,51 +16,18 @@ Follow the appropriate procedure to rename your browser app depending on the [de
 
 If you added an app to browser already being monitored by APM, the app name that appears in browser is the same as the app name in the <InlinePopover type="apm"/> UI. To rename the app, use any of these options:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Option**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Option** | **Comments** |
+| - | - |
+| Rename and continue collecting data | This option is useful when you simply want to give an app a different display name (alias).
 
-  <tbody>
-    <tr>
-      <td>
-        Rename and continue collecting data
-      </td>
+        To change the alias that appears in the New Relic UI, use the [app's **Settings** page](/docs/agents/manage-apm-agents/app-naming/rename-your-application#app-alias): Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > APM & services > (select an app) > Settings > Application**. |
+| Stop reporting under the old name | To stop reporting data under the old name and begin collecting data with a new name (app identifer), use the APM agent's [configuration file](/docs/agents/manage-apm-agents/app-naming/rename-your-application#app-identifier). This changes the identifier that New Relic's [data collector](/docs/accounts-partnerships/education/getting-started-new-relic/glossary#collector) uses to distinguish one app from another. Based on the [data retention schedule](/docs/accounts-partnerships/accounts/account-billing-usage/data-retention), New Relic will retain historical data collected under the old name, and will collect and aggregate data under the new name. If [one or more apps share the same name](/docs/agents/manage-apm-agents/app-naming/use-multiple-names-app), then their data will be aggregated in the UI.
 
-      <td>
-        This option is useful when you simply want to give an app a different display name (alias).
+        
+          If you change the app identifier, a new application will appear in our user interface with the new name, and data will stop reporting to the app(s) with the old name. |
 
-        To change the alias that appears in the New Relic UI, use the [app's <DNT>**Settings**</DNT> page](/docs/agents/manage-apm-agents/app-naming/rename-your-application#app-alias): Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > APM & services > (select an app) > Settings > Application**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Stop reporting under the old name
-      </td>
-
-      <td>
-        To stop reporting data under the old name and begin collecting data with a new name (app identifer), use the APM agent's [configuration file](/docs/agents/manage-apm-agents/app-naming/rename-your-application#app-identifier). This changes the identifier that New Relic's [data collector](/docs/accounts-partnerships/education/getting-started-new-relic/glossary#collector) uses to distinguish one app from another. Based on the [data retention schedule](/docs/accounts-partnerships/accounts/account-billing-usage/data-retention), New Relic will retain historical data collected under the old name, and will collect and aggregate data under the new name. If [one or more apps share the same name](/docs/agents/manage-apm-agents/app-naming/use-multiple-names-app), then their data will be aggregated in the UI.
-
-        <Callout variant="caution">
-          If you change the app identifier, a new application will appear in our user interface with the new name, and data will stop reporting to the app(s) with the old name.
-        </Callout>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Rename app via JavaScript snippet [#javascript]
 

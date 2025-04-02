@@ -55,107 +55,19 @@ There is one `Trusted Advisor` category of data: `ServiceLimits`.
 
 Our Amazon integrations collect the following Amazon Service limits data to the provider `ServiceLimits`.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "275px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `awsRegion`
-      </td>
-
-      <td>
-        The AWS region in which the identified resource is located. Can be absent for global services that do not have regions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `checkId`
-      </td>
-
-      <td>
-        The unique identifier of the AWS Trusted Advisor check.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `currentUsage`
-      </td>
-
-      <td>
-        Current usage of service limit in region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `isSuppressed`
-      </td>
-
-      <td>
-        If the item is excluded from the check result. The excluded items appear separately in AWS console.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `limitAmount`
-      </td>
-
-      <td>
-        Current maximum of service limit in region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `limitName`
-      </td>
-
-      <td>
-        Name of the service limit.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `service`
-      </td>
-
-      <td>
-        Name of the service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `serviceLimitUsage`
-      </td>
-
-      <td>
-        Percentage of service limit used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `status`
-      </td>
-
-      <td>
-        Status of the service limit. Can be one of:
+| Metric | Description |
+| - | - |
+| `awsRegion` | The AWS region in which the identified resource is located. Can be absent for global services that do not have regions. |
+| `checkId` | The unique identifier of the AWS Trusted Advisor check. |
+| `currentUsage` | Current usage of service limit in region. |
+| `isSuppressed` | If the item is excluded from the check result. The excluded items appear separately in AWS console. |
+| `limitAmount` | Current maximum of service limit in region. |
+| `limitName` | Name of the service limit. |
+| `service` | Name of the service. |
+| `serviceLimitUsage` | Percentage of service limit used. |
+| `status` | Status of the service limit. Can be one of:
 
         `Green`: Service limit usage is below 80%.
 
@@ -163,18 +75,6 @@ Our Amazon integrations collect the following Amazon Service limits data to the 
 
         `Red`: Service limit usage is 100%.
 
-        `Blue`: Trusted Advisor was unable to retrieve utilization or limits.
-      </td>
-    </tr>
+        `Blue`: Trusted Advisor was unable to retrieve utilization or limits. |
+| `timestamp` | The time of the last refresh of the check. |
 
-    <tr>
-      <td>
-        `timestamp`
-      </td>
-
-      <td>
-        The time of the last refresh of the check.
-      </td>
-    </tr>
-  </tbody>
-</table>

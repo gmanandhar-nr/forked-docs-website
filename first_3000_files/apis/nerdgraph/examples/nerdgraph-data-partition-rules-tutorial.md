@@ -15,143 +15,25 @@ You can use NerdGraph at [api.newrelic.com/graphiql](https://api.newrelic.com/gr
 
 Available data partition rule fields include:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{width: "200px"}}>
-        Fields
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Fields | Description |
+| - | - |
+| `id` | Unique data partition rule identifier. |
+| `targetDataPartition` | The name of the data partition. |
+| `description` | A description of what this data partition rule represents. |
+| `matchingCriteria` | _(deprecated)_ The matching criteria for this data partition rule. Once the rule is enabled, logs matching this criteria will be routed to the specified data partition.
+        This field has been deprecated and will eventually be replaced with the `nrql` field to allow for more flexibility when creating data partitions. If the rule is specified with a [NRQL](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions) `WHERE` clause in the `nrql` field that cannot be parsed into `matchingCriteria`, this field will be null. |
+| `nrql` | The matching criteria for this data partition rule specified using a [NRQL](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions) `WHERE` clause. Once the rule is enabled, logs matching this criteria will be routed to the specified data partition. |
+| `retentionPolicy` | The retention policy of the data partition data. |
+| `createdAt` | The date and time the rule was created. |
+| `createdBy` | The user who created the rule. |
+| `updatedAt` | The date and time the rule was last changed. |
+| `updatedBy` | The user who last updated the rule. |
+| `enabled` | Whether or not this data partition rule is enabled. |
+| `deleted` | Whether or not this data partition rule has been deleted. Deleting a data partition rule does not delete the
+        already routed logs. |
 
-  <tbody>
-    <tr>
-      <td>
-        `id`
-      </td>
-
-      <td>
-        Unique data partition rule identifier.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `targetDataPartition`
-      </td>
-
-      <td>
-        The name of the data partition.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `description`
-      </td>
-
-      <td>
-        A description of what this data partition rule represents.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `matchingCriteria`
-      </td>
-
-      <td>
-        _(deprecated)_ The matching criteria for this data partition rule. Once the rule is enabled, logs matching this criteria will be routed to the specified data partition.
-        This field has been deprecated and will eventually be replaced with the `nrql` field to allow for more flexibility when creating data partitions. If the rule is specified with a [NRQL](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions) `WHERE` clause in the `nrql` field that cannot be parsed into `matchingCriteria`, this field will be null.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `nrql`
-      </td>
-
-      <td>
-        The matching criteria for this data partition rule specified using a [NRQL](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions) `WHERE` clause. Once the rule is enabled, logs matching this criteria will be routed to the specified data partition.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `retentionPolicy`
-      </td>
-
-      <td>
-        The retention policy of the data partition data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `createdAt`
-      </td>
-
-      <td>
-        The date and time the rule was created.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `createdBy`
-      </td>
-
-      <td>
-        The user who created the rule.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `updatedAt`
-      </td>
-
-      <td>
-        The date and time the rule was last changed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `updatedBy`
-      </td>
-
-      <td>
-        The user who last updated the rule.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `enabled`
-      </td>
-
-      <td>
-        Whether or not this data partition rule is enabled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deleted`
-      </td>
-
-      <td>
-        Whether or not this data partition rule has been deleted. Deleting a data partition rule does not delete the
-        already routed logs.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Example query of data partitions rules [#query-data-partition-rules]
 

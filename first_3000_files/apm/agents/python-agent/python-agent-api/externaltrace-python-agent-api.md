@@ -45,57 +45,20 @@ newrelic.agent.external_trace(library, url, method=None)
 
 The `external_trace` decorator uses these parameters:
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `library`
 
-  <tbody>
-    <tr>
-      <td>
-        `library`
+        _string_ or _function_ | Required. The name (or type) of the external library in use. Pass either a string that defines it or a function that returns it. |
+| `url`
 
-        _string_ or _function_
-      </td>
+        _string_ or _function_ | Required. The URL that has been requested by the library call. Pass either a string that defines it or a function that returns it. |
+| `method`
 
-      <td>
-        Required. The name (or type) of the external library in use. Pass either a string that defines it or a function that returns it.
-      </td>
-    </tr>
+        _string_ or _function_ | Optional. The method defining the type of call being made. These are typically `get`, `post`, `put`, or `delete`. |
 
-    <tr>
-      <td>
-        `url`
-
-        _string_ or _function_
-      </td>
-
-      <td>
-        Required. The URL that has been requested by the library call. Pass either a string that defines it or a function that returns it.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `method`
-
-        _string_ or _function_
-      </td>
-
-      <td>
-        Optional. The method defining the type of call being made. These are typically `get`, `post`, `put`, or `delete`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Parameters for ExternalTrace [#context-mgr-parameters]
 

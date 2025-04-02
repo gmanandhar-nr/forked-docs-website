@@ -50,70 +50,20 @@ The API returns an array of data where the element is a browser application and 
 }
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th width={250}>
-        <DNT>
-          **API (v2) output**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **API (v2) output** | **Description** |
+| - | - |
+| Browser app `id` (integer) | This is the unique identification code for each app in New Relic. |
+| App `name` (string) | This is the app's name as it appears in the New Relic. |
+| The `browser_monitoring_key` (string) | This a unique key that is linked to (but is not the same as) the account license key. It is used to indicate the New Relic account where data will be reported. It cannot be used to determine your [New Relic account's license key](/docs/apis/intro-apis/new-relic-api-keys/#ingest-license-key). |
+| Browser monitoring `loader_script` (string) | The returned loader script is a JSON-encoded JavaScript snippet that is configured with the New Relic license key and application ID. The rest of the script is static and is approximately 10k in size.
 
-  <tbody>
-    <tr>
-      <td>
-        Browser app `id` (integer)
-      </td>
+        The loader script **must** be inserted into the user’s HTML pages correctly:
 
-      <td>
-        This is the unique identification code for each app in New Relic.
-      </td>
-    </tr>
+        * It must appear in the page's `` tag before the first script tag. If there are no script tags, put the JavaScript immediately before the `` (end of head) tag.
+        * The entire loader script must be inserted in-line, **not** as a link to the `.js` file. |
 
-    <tr>
-      <td>
-        App `name` (string)
-      </td>
-
-      <td>
-        This is the app's name as it appears in the New Relic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        The `browser_monitoring_key` (string)
-      </td>
-
-      <td>
-        This a unique key that is linked to (but is not the same as) the account license key. It is used to indicate the New Relic account where data will be reported. It cannot be used to determine your [New Relic account's license key](/docs/apis/intro-apis/new-relic-api-keys/#ingest-license-key).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Browser monitoring `loader_script` (string)
-      </td>
-
-      <td>
-        The returned loader script is a JSON-encoded JavaScript snippet that is configured with the New Relic license key and application ID. The rest of the script is static and is approximately 10k in size.
-
-        The loader script <DNT>**must**</DNT> be inserted into the user’s HTML pages correctly:
-
-        * It must appear in the page's `<head>` tag before the first script tag. If there are no script tags, put the JavaScript immediately before the `</head>` (end of head) tag.
-        * The entire loader script must be inserted in-line, **not** as a link to the `.js` file.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## List all browser apps [#list-browser-apps]
 

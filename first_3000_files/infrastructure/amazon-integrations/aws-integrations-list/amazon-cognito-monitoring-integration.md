@@ -49,137 +49,19 @@ This integration collects AWS Cognito data for UserPool.
 
 ### Cognito UserPool data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "275px" }}>
-        Metric
-      </th>
+# Table
 
-      <th style={{ width: "150px" }}>
-        Unit
-      </th>
+| Metric | Unit | Description |
+| - | - | - |
+| `signUpSuccesses` | Count | The total number of successful user registration requests made to the Cognito user pool. To find the percentage of successful user registration requests, use the Average attribute on this metric. To count the total number of user registration requests, use the SampleCount attribute on this metric. To count the total number of successful user registration requests, use the Sum attribute on this metric. To count the total number of failed user registration requests, subtract the Sum attribute from the SampleCount attribute. |
+| `signUpThrottles` | Count | The total number of throttled user registration requests. To count the total number of throttled user registration requests, use the Sum attribute for this metric. |
+| `signInSuccesses` | Count | The total number of successful user authentication requests to the user pool. To find the percentage of successful user authentication requests, use the Average attribute on this metric. To count the total number of user authentication requests, use the SampleCount attribute on this metric. To count the total number of successful user authentication requests, use the Sum attribute on this metric. To count the total number of failed user authentication requests, subtract the Sum attribute from the SampleCount attribute. |
+| `signInThrottles` | Count | The total number of throttled user authentication requests made to the Cognito user pool. To count the total number of throttled user authentication requests, use the Sum attribute for this metric. |
+| `tokenRefreshSuccesses` | Count | The total number of successful requests to refresh a Cognito token to the user pool. To find the percentage of successful requests to refresh a Cognito token, use the Average attribute on this metric. To count the total number of requests to refresh a Cognito token, use the SampleCount attribute on this metric. To count the total number of successful requests to refresh a Cognito token, use the Sum attribute on this metric. To count the total number of failed requests to refresh a Cognito token, subtract the Sum attribute from the SampleCount attribute. |
+| `tokenRefreshThrottles` | Count | The total number of throttled requests to refresh a Cognito token to the user pool. To count the total number of throttled requests to refresh a Cognito token, use the Sum attribute for this metric. |
+| `federationSuccesses` | Count | The total number of successful identity federation requests to the Cognito user pool. To find the percentage of successful identity federation requests, use the Average attribute on this metric. To count the total number of identity federation requests, use the SampleCount attribute on this metric. To count the total number of successful identity federation requests, use the Sum attribute on this metric. To count the total number of failed identity federation requests, subtract the Sum attribute from the SampleCount attribute. |
+| `federationThrottles` | Count | The total number of throttled identity federation requests to the Cognito user pool. To count the total number of throttled identity federation requests, use the Sum attribute for this metric. |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `signUpSuccesses`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of successful user registration requests made to the Cognito user pool. To find the percentage of successful user registration requests, use the Average attribute on this metric. To count the total number of user registration requests, use the SampleCount attribute on this metric. To count the total number of successful user registration requests, use the Sum attribute on this metric. To count the total number of failed user registration requests, subtract the Sum attribute from the SampleCount attribute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `signUpThrottles`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of throttled user registration requests. To count the total number of throttled user registration requests, use the Sum attribute for this metric.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `signInSuccesses`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of successful user authentication requests to the user pool. To find the percentage of successful user authentication requests, use the Average attribute on this metric. To count the total number of user authentication requests, use the SampleCount attribute on this metric. To count the total number of successful user authentication requests, use the Sum attribute on this metric. To count the total number of failed user authentication requests, subtract the Sum attribute from the SampleCount attribute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `signInThrottles`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of throttled user authentication requests made to the Cognito user pool. To count the total number of throttled user authentication requests, use the Sum attribute for this metric.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `tokenRefreshSuccesses`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of successful requests to refresh a Cognito token to the user pool. To find the percentage of successful requests to refresh a Cognito token, use the Average attribute on this metric. To count the total number of requests to refresh a Cognito token, use the SampleCount attribute on this metric. To count the total number of successful requests to refresh a Cognito token, use the Sum attribute on this metric. To count the total number of failed requests to refresh a Cognito token, subtract the Sum attribute from the SampleCount attribute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `tokenRefreshThrottles`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of throttled requests to refresh a Cognito token to the user pool. To count the total number of throttled requests to refresh a Cognito token, use the Sum attribute for this metric.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `federationSuccesses`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of successful identity federation requests to the Cognito user pool. To find the percentage of successful identity federation requests, use the Average attribute on this metric. To count the total number of identity federation requests, use the SampleCount attribute on this metric. To count the total number of successful identity federation requests, use the Sum attribute on this metric. To count the total number of failed identity federation requests, subtract the Sum attribute from the SampleCount attribute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `federationThrottles`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of throttled identity federation requests to the Cognito user pool. To count the total number of throttled identity federation requests, use the Sum attribute for this metric.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Create alerts
 

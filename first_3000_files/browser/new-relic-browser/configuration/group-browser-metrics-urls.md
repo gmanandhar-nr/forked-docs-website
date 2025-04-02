@@ -51,57 +51,16 @@ To add new URL segments to your application's allow list, you can add them progr
 
 Follow these guidelines for creating your URL allow list.
 
-<table>
-  <thead>
-    <tr id="segments">
-      <th width={200}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this...**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+|  |
+|  |
+| Add a segment you do not see to the list | Enter the segment. For example, if you see `/users/*` and you have a path `/users/edit` that you don't see, enter `edit` in the list.
 
-  <tbody>
-    <tr>
-      <td>
-        Add a segment you do not see to the list
-      </td>
+        You cannot list numbers, GUIDs, or extremely long segments (100 or more characters). |
+| List a domain | Enter each segment of the domain. For example, to add `www.newrelic.com` to your allow list, enter `www`, `newrelic`, and `com`. |
+| List a path | Add every term for that path. For example, to see `www.domain1.com/bar/foo`,and you already see `www.domain1.com`, enter `bar` and `foo` as segments. |
 
-      <td>
-        Enter the segment. For example, if you see `/users/*` and you have a path `/users/edit` that you don't see, enter `edit` in the list.
-
-        You cannot list numbers, GUIDs, or extremely long segments (100 or more characters).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        List a domain
-      </td>
-
-      <td>
-        Enter each segment of the domain. For example, to add `www.newrelic.com` to your allow list, enter `www`, `newrelic`, and `com`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        List a path
-      </td>
-
-      <td>
-        Add every term for that path. For example, to see `www.domain1.com/bar/foo`,and you already see `www.domain1.com`, enter `bar` and `foo` as segments.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Maintain URL allow lists [#maintaining]
 

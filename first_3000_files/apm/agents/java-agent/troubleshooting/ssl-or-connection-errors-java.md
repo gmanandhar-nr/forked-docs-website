@@ -49,61 +49,15 @@ keytool -importcert -alias ca_alias -file ca_file.pem -keystore truststore.ts -s
 
 Parameters include:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `ca_alias` | The alias you want to use in your trust store for the imported cert. |
+| `ca_file` | The file containing the cert you are adding. |
+| `truststore.ts` | The trust store to which the cert will be added. |
+| `ts_password` | The password used by `truststore.ts`. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ca_alias`
-      </td>
-
-      <td>
-        The alias you want to use in your trust store for the imported cert.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ca_file`
-      </td>
-
-      <td>
-        The file containing the cert you are adding.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `truststore.ts`
-      </td>
-
-      <td>
-        The trust store to which the cert will be added.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ts_password`
-      </td>
-
-      <td>
-        The password used by `truststore.ts`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Problem B: logs show exception [#log-exception]
 

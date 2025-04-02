@@ -21,128 +21,33 @@ Use the tips below to help you decide which approach is best for you.
 
 The following table outlines the different requirements and capabilities of each approach:
 
-<table>
-  
-    <thead>
-        <tr>
-            <th></th>
-            <th>New Relic .NET agent</th>
-            <th>AWS Distro for OpenTelemetry</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Requires code changes</td>
-            <td>No</td>
-            <td>Yes</td>
-        </tr>
-        <tr>
-            <td>Needs tool for sending data</td>
-            <td>Yes</td>
-            <td>No</td>
-        </tr>
-        <tr>
-            <td>New Relic UI experience</td>
-            <td>[Serverless](/docs/serverless-function-monitoring/aws-lambda-monitoring/ui-data/understand-lambda-monitoring-ui/)</td>
-            <td>[OpenTelemetry](/docs/opentelemetry/get-started/apm-monitoring/opentelemetry-apm-ui/)</td>
-        </tr>
-        <tr>
-            <td>Distributed tracing</td>
-            <td>Yes</td>
-            <td>[Partial](/docs/serverless-function-monitoring/aws-lambda-monitoring/opentelemetry/lambda-opentelemetry-dotnet/#distributed-tracing)</td>
-        </tr>
-        <tr>
-            <td>Metrics</td>
-            <td>No</td>
-            <td>Yes</td>
-        </tr>
-        <tr>
-            <td>Transaction traces</td>
-            <td>Yes</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>Transaction events</td>
-            <td>Yes</td>
-            <td>[Partial](/docs/opentelemetry/get-started/apm-monitoring/opentelemetry-apm-ui/#transactions-page)</td>
-        </tr>
-        <tr>
-            <td>Error events/spans</td>
-            <td>Yes</td>
-            <td>Yes</td>
-        </tr>
-        <tr>
-            <td>Span events or spans</td>
-            <td>Yes</td>
-            <td>Yes</td>
-        </tr>
-        <tr>
-            <td>SQL traces</td>
-            <td>Yes</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>Thread profiling</td>
-            <td>No</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>Vulnerability Management</td>
-            <td>No</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>External calls</td>
-            <td>Yes</td>
-            <td>[Partial](/docs/opentelemetry/get-started/apm-monitoring/opentelemetry-apm-ui/#externals-page)</td>
-        </tr>
-        <tr>
-            <td>Custom instrumentation using XML</td>
-            <td>No</td>
-            <td>No</td>
-        </tr>
-        <tr>
-            <td>Custom instrumentation using API</td>
-            <td>Yes (Agent)</td>
-            <td>Yes (OpenTelemetry)</td>
-        </tr>
-        <tr>
-            <td>Custom metrics</td>
-            <td>No</td>
-            <td>Yes</td>
-        </tr>
-        <tr>
-            <td>Custom events</td>
-            <td>Yes</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>Custom spans</td>
-            <td>Yes</td>
-            <td>Yes</td>
-        </tr>
-        <tr>
-            <td>Custom errors</td>
-            <td>Yes</td>
-            <td>No</td>
-        </tr>
-        <tr>
-            <td>Custom attributes</td>
-            <td>Yes</td>
-            <td>Yes</td>
-        </tr>
-        <tr>
-            <td>Logs</td>
-            <td>Yes</td>
-            <td>Yes</td>
-        </tr>
-        <tr>
-            <td>Legacy Cross application tracing</td>
-            <td>No</td>
-            <td>No</td>
-        </tr>
-    </tbody>
-</table>
+# Table
+
+|  | New Relic .NET agent | AWS Distro for OpenTelemetry |
+| - | - | - |
+| Requires code changes | No | Yes |
+| Needs tool for sending data | Yes | No |
+| New Relic UI experience | [Serverless](/docs/serverless-function-monitoring/aws-lambda-monitoring/ui-data/understand-lambda-monitoring-ui/) | [OpenTelemetry](/docs/opentelemetry/get-started/apm-monitoring/opentelemetry-apm-ui/) |
+| Distributed tracing | Yes | [Partial](/docs/serverless-function-monitoring/aws-lambda-monitoring/opentelemetry/lambda-opentelemetry-dotnet/#distributed-tracing) |
+| Metrics | No | Yes |
+| Transaction traces | Yes | N/A |
+| Transaction events | Yes | [Partial](/docs/opentelemetry/get-started/apm-monitoring/opentelemetry-apm-ui/#transactions-page) |
+| Error events/spans | Yes | Yes |
+| Span events or spans | Yes | Yes |
+| SQL traces | Yes | N/A |
+| Thread profiling | No | N/A |
+| Vulnerability Management | No | N/A |
+| External calls | Yes | [Partial](/docs/opentelemetry/get-started/apm-monitoring/opentelemetry-apm-ui/#externals-page) |
+| Custom instrumentation using XML | No | No |
+| Custom instrumentation using API | Yes (Agent) | Yes (OpenTelemetry) |
+| Custom metrics | No | Yes |
+| Custom events | Yes | N/A |
+| Custom spans | Yes | Yes |
+| Custom errors | Yes | No |
+| Custom attributes | Yes | Yes |
+| Logs | Yes | Yes |
+| Legacy Cross application tracing | No | No |
+
 
  
 <Callout variant="tip" title="Info">

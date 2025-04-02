@@ -16,50 +16,13 @@ freshnessValidatedDate: never
 
 We love open-source software, and use the following in the iOS SDK for <InlinePopover type="mobile"/>. Thank you, open-source community, for making these fine tools! Some of these are listed under multiple software licenses, and in that case we have listed the license we've chosen to use.
 
-<table>
-  <thead>
-    <tr>
-      <th width={250}>
-        **Library**
-      </th>
+# Table
 
-      <th>
-        **License**
-      </th>
-    </tr>
-  </thead>
+| **Library** | **License** |
+| - | - |
+| [Apple Reachability](https://developer.apple.com/library/ios/samplecode/reachability/listings/Reachability_Reachability_h.html "Link opens in a new window") | [Apple Reachability](https://developer.apple.com/library/ios/samplecode/reachability/listings/Reachability_Reachability_h.html "Link opens in a new window") |
+| [JSON++](https://bitbucket.org/tunnuz/json) | [MIT](http://opensource.org/licenses/mit-license.html) |
+| [PLCrashReporter](https://www.plcrashreporter.org/) | [MIT](https://opensource.org/licenses/mit-license.php) |
 
-  <tbody>
-    <tr>
-      <td>
-        [Apple Reachability](https://developer.apple.com/library/ios/samplecode/reachability/listings/Reachability_Reachability_h.html "Link opens in a new window")
-      </td>
-
-      <td>
-        [Apple Reachability](https://developer.apple.com/library/ios/samplecode/reachability/listings/Reachability_Reachability_h.html "Link opens in a new window")
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [JSON++](https://bitbucket.org/tunnuz/json)
-      </td>
-
-      <td>
-        [MIT](http://opensource.org/licenses/mit-license.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [PLCrashReporter](https://www.plcrashreporter.org/)
-      </td>
-
-      <td>
-        [MIT](https://opensource.org/licenses/mit-license.php)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The remainder of the code is covered by the New Relic License agreement found in the LICENSE file in the distribution.

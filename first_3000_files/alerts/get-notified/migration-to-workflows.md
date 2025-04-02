@@ -57,421 +57,66 @@ The following table provides a translation between what the webhook payload name
 
 For many keys, the issue payload may contain a list of values. To provide a one-to-one mapping, only the first value is used in the replacement.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Alerts (classic) name**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Alerts (classic) variable**
-        </DNT>
-      </th>
+| **Alerts (classic) name** | **Alerts (classic) variable** | **Workflow message template replacement** |
+| - | - | - |
+| `account_id` | `$ACCOUNT_ID` | `{{nrAccountId}}` |
+| `account_name` | `$ACCOUNT_NAME` | `{{json accumulations.tag.account.[0]}}` |
+| `closed_violations_count_critical` | `$CLOSED_VIOLATIONS_COUNT_CRITICAL` | `{{closedIncidentsCount}}`
 
-      <th>
-        <DNT>
-          **Workflow message template replacement**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+        The number of closed incidents across all priorities. |
+| `closed_violations_count_warning` | `$CLOSED_VIOLATIONS_COUNT_WARNING` | `0`
 
-  <tbody>
-    <tr>
-      <td>
-        `account_id`
-      </td>
+        There is no replacement for warning counts.  All closed incident counts will be represented as critical to avoid double counting incidents. |
+| `condition_description` | `$DESCRIPTION` | `{{escape accumulations.conditionDescription.[0]}}`
 
-      <td>
-        `$ACCOUNT_ID`
-      </td>
+        The custom incident description, if one is defined. |
+| `condition_id` | `$CONDITION_ID` | `{{accumulations.conditionFamilyId.[0]}}` |
+| `condition_metric_name` | N/A | `{{escape accumulations.evaluationName.[0]}}`
 
-      <td>
-        `{{nrAccountId}}`
-      </td>
-    </tr>
+        Only valid for  conditions. |
+| `condition_metric_value_function` | N/A | `{{escape accumulations.evaluationMetricValueFunction.[0]}}`
 
-    <tr>
-      <td>
-        `account_name`
-      </td>
+        Only valid for  conditions. |
+| `condition_name` | `$CONDITION_NAME` | `{{escape accumulations.conditionName.[0]}}` |
+| `current_state` | `$EVENT_STATE` | `{{#if issueClosedAt}}"closed"{{else if issueAcknowledgedAt}}"acknowledged"{{else}}"open"{{/if}}`
 
-      <td>
-        `$ACCOUNT_NAME`
-      </td>
+        The state of an issue has more states, but doesn't have one for acknowledged. |
+| `details` | `$EVENT_DETAILS` | `{{escape issueTitle}}` |
+| `duration` | `$DURATION` | `{{#if issueDurationMs}}{{issueDurationMs}}{{else}}0{{/if}}`
 
-      <td>
-        `{{json accumulations.tag.account.[0]}}`
-      </td>
-    </tr>
+        `issueDurationMs` is only available when an issue closes |
+| `event_type` | `$EVENT_TYPE` | `"INCIDENT"`
 
-    <tr>
-      <td>
-        `closed_violations_count_critical`
-      </td>
-
-      <td>
-        `$CLOSED_VIOLATIONS_COUNT_CRITICAL`
-      </td>
-
-      <td>
-        `{{closedIncidentsCount}}`
-
-        The number of closed incidents across all priorities.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `closed_violations_count_warning`
-      </td>
-
-      <td>
-        `$CLOSED_VIOLATIONS_COUNT_WARNING`
-      </td>
-
-      <td>
-        `0`
-
-        There is no replacement for warning counts.  All closed incident counts will be represented as critical to avoid double counting incidents.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `condition_description`
-      </td>
-
-      <td>
-        `$DESCRIPTION`
-      </td>
-
-      <td>
-        `{{escape accumulations.conditionDescription.[0]}}`
-
-        The custom incident description, if one is defined.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `condition_id`
-      </td>
-
-      <td>
-        `$CONDITION_ID`
-      </td>
-
-      <td>
-        `{{accumulations.conditionFamilyId.[0]}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `condition_metric_name`
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td>
-        `{{escape accumulations.evaluationName.[0]}}`
-
-        Only valid for <InlinePopover type="apm"/> conditions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `condition_metric_value_function`
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td>
-        `{{escape accumulations.evaluationMetricValueFunction.[0]}}`
-
-        Only valid for <InlinePopover type="apm"/> conditions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `condition_name`
-      </td>
-
-      <td>
-        `$CONDITION_NAME`
-      </td>
-
-      <td>
-        `{{escape accumulations.conditionName.[0]}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `current_state`
-      </td>
-
-      <td>
-        `$EVENT_STATE`
-      </td>
-
-      <td>
-        `{{#if issueClosedAt}}"closed"{{else if issueAcknowledgedAt}}"acknowledged"{{else}}"open"{{/if}}`
-
-        The state of an issue has more states, but doesn't have one for acknowledged.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `details`
-      </td>
-
-      <td>
-        `$EVENT_DETAILS`
-      </td>
-
-      <td>
-        `{{escape issueTitle}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `duration`
-      </td>
-
-      <td>
-        `$DURATION`
-      </td>
-
-      <td>
-        `{{#if issueDurationMs}}{{issueDurationMs}}{{else}}0{{/if}}`
-
-        `issueDurationMs` is only available when an issue closes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `event_type`
-      </td>
-
-      <td>
-        `$EVENT_TYPE`
-      </td>
-
-      <td>
-        `"INCIDENT"`
-
-        There is no matching attribute on the issue level.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incident_acknowledge_url`
-      </td>
-
-      <td>
-        `$INCIDENT_ACKNOWLEDGE_URL`
-      </td>
-
-      <td>
-        `{{json issueAckUrl}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incident_id`
-      </td>
-
-      <td>
-        `$INCIDENT_ID`
-      </td>
-
-      <td>
-        `{{issueId}}`
+        There is no matching attribute on the issue level. |
+| `incident_acknowledge_url` | `$INCIDENT_ACKNOWLEDGE_URL` | `{{json issueAckUrl}}` |
+| `incident_id` | `$INCIDENT_ID` | `{{issueId}}`
         OR
         `{{labels.nrIncidentId.[0]}}`
 
-        Prefer `issueId` since `labels.nrIncidentId` will be removed at some point.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incident_url`
-      </td>
-
-      <td>
-        `$INCIDENT_URL`
-      </td>
-
-      <td>
-        `{{json issuePageUrl}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `issue_id`
-      </td>
-
-      <td>
-        `N/A`
-      </td>
-
-      <td>
-        `{{issueId}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `metadata`
-      </td>
-
-      <td>
-        `METADATA`
-      </td>
-
-      <td>
-        ```handlebars
+        Prefer `issueId` since `labels.nrIncidentId` will be removed at some point. |
+| `incident_url` | `$INCIDENT_URL` | `{{json issuePageUrl}}` |
+| `issue_id` | `N/A` | `{{issueId}}` |
+| `metadata` | `METADATA` | ```handlebars
         {{#if locationStatusesObject}}"location_statuses": {{locationStatusesObject}},{{/if}}
         {{#if accumulations.metadata_entity_type}}"entity.type": {{json accumulations.metadata_entity_type.[0]}},{{/if}}
         {{#if accumulations.metadata_entity_name}}"entity.name": {{json accumulations.metadata_entity_name.[0]}}{{/if}}
-        ```
-      </td>
-    </tr>
+        ``` |
+| `open_violations_count_critical` | `$OPEN_VIOLATIONS_COUNT_CRITICAL` | `{{openIncidentsCount}}`
 
-    <tr>
-      <td>
-        `open_violations_count_critical`
-      </td>
+        Open incident counts of all incident regardless of priority. |
+| `open_violations_count_warning` | `$OPEN_VIOLATIONS_COUNT_WARNING` | `N/A`
 
-      <td>
-        `$OPEN_VIOLATIONS_COUNT_CRITICAL`
-      </td>
+        Open incident counts of all incidents regardless of priority. |
+| `owner` | `$EVENT_OWNER` | `{{escape owner}}` |
+| `policy_name` | `$POLICY_NAME` | `{{escape accumulations.policyName.[0]}}` |
+| `policy_url` | `$POLICY_URL` | `{{json policyUrl}}` |
+| `runbook_url` | `$RUNBOOK_URL` | `{{json accumulations.runbookUrl.[0]}}` |
+| `severity` | `$SEVERITY` | `{{#eq 'HIGH' priority}}WARNING{{else}}{{priority}}{{/eq}}`
 
-      <td>
-        `{{openIncidentsCount}}`
-
-        Open incident counts of all incident regardless of priority.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `open_violations_count_warning`
-      </td>
-
-      <td>
-        `$OPEN_VIOLATIONS_COUNT_WARNING`
-      </td>
-
-      <td>
-        `N/A`
-
-        Open incident counts of all incidents regardless of priority.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `owner`
-      </td>
-
-      <td>
-        `$EVENT_OWNER`
-      </td>
-
-      <td>
-        `{{escape owner}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `policy_name`
-      </td>
-
-      <td>
-        `$POLICY_NAME`
-      </td>
-
-      <td>
-        `{{escape accumulations.policyName.[0]}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `policy_url`
-      </td>
-
-      <td>
-        `$POLICY_URL`
-      </td>
-
-      <td>
-        `{{json policyUrl}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `runbook_url`
-      </td>
-
-      <td>
-        `$RUNBOOK_URL`
-      </td>
-
-      <td>
-        `{{json accumulations.runbookUrl.[0]}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `severity`
-      </td>
-
-      <td>
-        `$SEVERITY`
-      </td>
-
-      <td>
-        `{{#eq 'HIGH' priority}}WARNING{{else}}{{priority}}{{/eq}}`
-
-        An issue has priority, which can have different values than severity.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `targets`
-      </td>
-
-      <td>
-        `$TARGETS`
-      </td>
-
-      <td>
-        ```handlebars
+        An issue has priority, which can have different values than severity. |
+| `targets` | `$TARGETS` | ```handlebars
         [
           {
             "id": "{{labels.targetId.[0]}}",
@@ -482,83 +127,15 @@ For many keys, the issue payload may contain a list of values. To provide a one-
             "labels": { {{#each accumulations.rawTag}}"{{escape @key}}": {{#if this.[0]}}{{json this.[0]}}{{else}}"empty"{{/if}}{{#unless @last}},{{/unless}}{{/each}} }
           }
         ]
-        ```
-      </td>
-    </tr>
+        ``` |
+| `timestamp` | `$TIMESTAMP` | `{{updatedAt}}` |
+| `timestamp_utc_string` | `$TIMESTAMP_UTC_STRING` | `{{issueUpdatedAt}}` |
+| `version` | `$VERSION` | `"1.0"`
 
-    <tr>
-      <td>
-        `timestamp`
-      </td>
+        There is no matching attribute on the issue level. |
+| `violation_callback_url` | `$VIOLATION_CALLBACK_URL` | `{{json issuePageUrl}}` |
+| `violation_chart_url` | `$VIOLATION_CHART_URL` | `{{json violationChartUrl}}` |
 
-      <td>
-        `$TIMESTAMP`
-      </td>
-
-      <td>
-        `{{updatedAt}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `timestamp_utc_string`
-      </td>
-
-      <td>
-        `$TIMESTAMP_UTC_STRING`
-      </td>
-
-      <td>
-        `{{issueUpdatedAt}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `version`
-      </td>
-
-      <td>
-        `$VERSION`
-      </td>
-
-      <td>
-        `"1.0"`
-
-        There is no matching attribute on the issue level.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `violation_callback_url`
-      </td>
-
-      <td>
-        `$VIOLATION_CALLBACK_URL`
-      </td>
-
-      <td>
-        `{{json issuePageUrl}}`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `violation_chart_url`
-      </td>
-
-      <td>
-        `$VIOLATION_CHART_URL`
-      </td>
-
-      <td>
-        `{{json violationChartUrl}}`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <CollapserGroup>
   <Collapser

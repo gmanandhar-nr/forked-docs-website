@@ -155,55 +155,18 @@ The Windows services integration provides the following data:
   This integration creates dimensional metrics, which return the numeric status supplied by the [Win32_Service class](https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-service). Enumeration of these metrics into readable string values is provided under the `start_mode` and `state` attributes.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Metric Name
-      </th>
+# Table
 
-      <th>
-        Enumerated Attribute
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `windows_service_start_mode`
-      </td>
-
-      <td>
-        `start_mode`
-      </td>
-
-      <td>
-        Start mode of the service. Possible values are:
+| Metric Name | Enumerated Attribute | Description |
+| - | - | - |
+| `windows_service_start_mode` | `start_mode` | Start mode of the service. Possible values are:
 
         * `boot`
         * `system`
         * `auto`
         * `manual`
-        * `disabled`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `windows_service_state`
-      </td>
-
-      <td>
-        `state`
-      </td>
-
-      <td>
-        State of the service. Possible values are:
+        * `disabled` |
+| `windows_service_state` | `state` | State of the service. Possible values are:
 
         * `stopped`
         * `start pending`
@@ -212,11 +175,8 @@ The Windows services integration provides the following data:
         * `continue pending`
         * `pause pending`
         * `paused`
-        * `unknown`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `unknown` |
+
 ## Labels [#labels]
 
 You can also decorate your metrics and tags with labels. Labels allow you to add key/value pair attributes to your metrics & tags so that you can query, filter, or group your metrics and use tags for grouping, searching and filtering the data about your entities.

@@ -82,72 +82,35 @@ Here is the basic process you would use to obfuscate the sensitive data in this 
       The examples below show regular expressions you'd use directly in the UI. Later in this document, we discuss how you could use escaped versions of these regular expressions for [NerdGraph](#expressions-create).
     </Callout>
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Obfuscation expression
-          </th>
+    # Table
 
-          <th>
-            Definition
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Credit card number
-          </td>
-
-          <td>
-            We need to capture 4 groups of 4 digits separated by hyphens:
+| Obfuscation expression | Definition |
+| - | - |
+| Credit card number | We need to capture 4 groups of 4 digits separated by hyphens:
 
             ```json
             {
               "name": "Credit Card Number",
               "regex": "((?:(?:4\d{3})|(?:5[1-5]\d{2})|6(?:011|5[0-9]{2}))(?:-?|\040?)(?:\d{4}(?:-?|\040?)){3}|(?:3[4,7]\d{2})(?:-?|\040?)\d{6}(?:-?|\040?)\d{5})"
             }
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Social Security number
-          </td>
-
-          <td>
-            We need to capture 3 groups of 3, 2, and 4 digits separated by hyphens:
+            ``` |
+| Social Security number | We need to capture 3 groups of 3, 2, and 4 digits separated by hyphens:
 
             ```json
             {
               "name": "Social Security Number",
               "regex": "(\d{3}-\d{2}-\d{4})"
             }
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Born date (`loginService` specific)
-          </td>
-
-          <td>
-            In this example, the born date is part of the Login service. We define the portion to obfuscate based on the date information in the surrounding words `"(born on 01/02/2003)"`:
+            ``` |
+| Born date (`loginService` specific) | In this example, the born date is part of the Login service. We define the portion to obfuscate based on the date information in the surrounding words `"(born on 01/02/2003)"`:
 
             ```json
             {
               "name": "Born date - loginService specific",
               "regex": "born on (.*)\)"
             }
-            ```
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            ``` |
+
 
     Each obfuscation expression defines how to capture some sensitive information out of a string (using a regex) and associates it with some friendly name so that you can easily identify it later.
 

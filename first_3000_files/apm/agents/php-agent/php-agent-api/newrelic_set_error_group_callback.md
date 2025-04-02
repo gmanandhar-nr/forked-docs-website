@@ -44,31 +44,12 @@ Using the provided context information, the callback must return a non-empty str
 
 This API accepts a single function-type callback as an argument. The provided callback must accept 2 parameters.
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        API Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| API Parameter | Description |
+| - | - |
+| `$callback` (_function_) | Required. Provide a callback function that will be registered with the PHP agent. |
 
-  <tbody>
-    <tr>
-      <td>
-        `$callback` (_function_)
-      </td>
-
-      <td>
-        Required. Provide a callback function that will be registered with the PHP agent.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <table>
   <thead>

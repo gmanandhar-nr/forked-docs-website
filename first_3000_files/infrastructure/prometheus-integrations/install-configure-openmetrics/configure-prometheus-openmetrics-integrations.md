@@ -207,189 +207,27 @@ The `nri-prometheus-latest.yaml` manifest file includes the `nri-prometheus-cfg`
   >
     Here are some key names and definitions for your Prometheus OpenMetrics config file.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Key name
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
+| Key name | Description |
+| - | - |
+| `worker_threads` | Number of worker threads used for scraping targets. Can be increased on environments with a high number of targets or targets with high latency, but might increase memory consumption.
 
-      <tbody>
-        <tr id="cluster-name">
-          <td>
-            `cluster_name`
+            Default: `4`. It is not recommended to use more than 10. |
+| `require_scrape_enabled_label_for_nodes`
 
-            <DNT>
-              **Required.**
-            </DNT>
-          </td>
+             **Kubernetes** | Whether or not Kubernetes nodes need labels to be scraped.
 
-          <td>
-            The name of the cluster. This value will be included as the `clusterName` attribute for all metrics.
-          </td>
-        </tr>
-
-        <tr id="verbose">
-          <td>
-            `verbose`
-          </td>
-
-          <td>
-            Stringified boolean.
-
-            * `true` (default): Logs debugging information.
-            * `false`: Only logs error messages.
-          </td>
-        </tr>
-
-        <tr id="targets">
-          <td>
-            `targets`
-          </td>
-
-          <td>
-            Configuration of static endpoints to be scraped by the integration. It contains a list of objects. For more information about this structure, see the documentation about [target configuration](#target-config).
-          </td>
-        </tr>
-
-        <tr id="scrape-enabled-label">
-          <td>
-            `scrape_enabled_label`
-
-            <img style={{ width: '30px', height: '25px'}} class="inline" title="img-integration-k8.png" alt="img-integration-k8.png" src="/images/os_icon_k8.webp"/> <DNT>**Kubernetes**</DNT>
-          </td>
-
-          <td>
-            String. The integration will check if the Kubernetes pod and service are annotated or have a label with this value to decide if it has to be scraped.
-
-            This is particularly useful when you want to limit the amount of data by ignoring metrics or including specific metrics that are sent to New Relic. Since by default we use the same label Prometheus uses to discover targets that can be scraped, most exporters that you install automatically set this label.
-
-            To keep a fine-grained control on the targets you want the integration to scrape, you can set this option to some other value (such as `newrelic/scrape`) and then add the annotation or label `newrelic/scrape: "true"` to your Kubernetes objects. If both are set, annotations take precedence over labels.
-
-            Default: `"prometheus.io/scrape"`
-          </td>
-        </tr>
-
-        <tr id="scrape-duration">
-          <td>
-            `scrape_duration`
-          </td>
-
-          <td>
-            How often should the scraper run.
-
-            * To lower memory usage, increase this value.
-            * To raise memory usage, decrease this value.
-
-              The impact on memory usage is due to distributing target fetching over the scrape interval to avoid querying (and buffering) all the data at once.
-
-              Default is `30s`. Valid values include `1s`, `15s`, `30s`, `1m`, `5m`, etc.
-          </td>
-        </tr>
-
-        <tr id="scrape-timeout">
-          <td>
-            `scrape_timeout`
-          </td>
-
-          <td>
-            The HTTP client timeout when fetching data from endpoints.
-
-            Default: `5s`. Valid values include `1s`, `15s`, `30s`, `1m`, `5m`, etc.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `worker_threads`
-          </td>
-
-          <td>
-            Number of worker threads used for scraping targets. Can be increased on environments with a high number of targets or targets with high latency, but might increase memory consumption.
-
-            Default: `4`. It is not recommended to use more than 10.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `require_scrape_enabled_label_for_nodes`
-
-            <img style={{ width: '30px', height: '25px'}} class="inline" title="img-integration-k8.png" alt="img-integration-k8.png" src="/images/os_icon_k8.webp"/> <DNT>**Kubernetes**</DNT>
-          </td>
-
-          <td>
-            Whether or not Kubernetes nodes need labels to be scraped.
-
-            Default: `true`.
-          </td>
-        </tr>
-
-        <tr id="percentiles">
-          <td>
-            `percentiles`
-          </td>
-
-          <td>
-            Histogram support is based on [New Relic's guidelines for higher level metrics abstractions](https://github.com/newrelic/newrelic-exporter-specs/blob/master/Guidelines.md).
-
-            To better support visualization of this data, percentiles are calculated based on the histogram metrics and sent to New Relic. Valid values include `50`, `95`, and `99`.
-          </td>
-        </tr>
-
-        <tr>
-          <td id="emitter-proxy">
-            `emitter_proxy`
-          </td>
-
-          <td>
-            Proxy used by the integration when submitting metrics:
+            Default: `true`. |
+| `emitter_proxy` | Proxy used by the integration when submitting metrics:
 
             `[scheme]://[domain]:[port]`
 
             This proxy won't be used when fetching metrics from the targets.
 
-            By default this is empty, and no proxy will be used.
-          </td>
-        </tr>
+            By default this is empty, and no proxy will be used. |
+| `emitter_ca_file` | Certificate to add to the root CA that the emitter will use when verifying server certificates. If left empty, TLS uses the host's root CA set. |
 
-        <tr>
-          <td id="emitter-ca-file">
-            `emitter_ca_file`
-          </td>
-
-          <td>
-            Certificate to add to the root CA that the emitter will use when verifying server certificates. If left empty, TLS uses the host's root CA set.
-          </td>
-        </tr>
-
-        <tr id="emitter-insecure-skip-verify">
-          <td>
-            `emitter_insecure_skip_verify`
-          </td>
-
-          <td>
-            Whether the emitter should skip TLS verification when submitting data. Default: `false`.
-          </td>
-        </tr>
-
-        <tr id="disable-autodiscovery">
-          <td>
-            `disable_autodiscovery`
-          </td>
-
-          <td>
-            Set to true in order to disable autodiscovery in the k8s cluster. It can be useful when running the Pod with a service account having limited privileges. Default: `false`.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 </CollapserGroup>
 

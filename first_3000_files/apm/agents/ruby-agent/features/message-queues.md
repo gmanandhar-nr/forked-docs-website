@@ -36,47 +36,14 @@ New Relic's Ruby agent shows messages sent and received using the RabbitMQ clien
 
 Supported entry points for queue operations appear as `Put` (publish a message) or `Take` (receive a message) in APM's user interface.
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **Queue operations**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Publish a message (`Put` in UI)**
-        </DNT>
-      </th>
+| **Queue operations** | **Publish a message (`Put` in UI)** | **Receive a message (`Take` in UI)** |
+| - | - | - |
+| RabbitMQ | `publish` | `pop`
 
-      <th>
-        <DNT>
-          **Receive a message (`Take` in UI)**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+        `subscribe (with block)` |
 
-  <tbody>
-    <tr>
-      <td>
-        RabbitMQ
-      </td>
-
-      <td>
-        `publish`
-      </td>
-
-      <td>
-        `pop`
-
-        `subscribe (with block)`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View in New Relic UI [#view-queue]
 

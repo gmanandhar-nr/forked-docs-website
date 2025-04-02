@@ -50,113 +50,19 @@ To get started with API keys:
 
 ## Our main API keys [#overview-keys]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        <DNT>
-          **Key**
-        </DNT>
-      </th>
+# Table
 
-      <th style={{ width: "380px" }}>
-        <DNT>
-          **Details**
-        </DNT>
-      </th>
+| **Key** | **Details** | **To view and manage** | **Read more** |
+| - | - | - | - |
+| **License key**,
+        used for data ingest | License keys are used to report almost all data (except for browser and mobile data, which use their own keys). Each key is tied to a specific account and you can create as many as you want. | Go to the API keys UI ([direct link](https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher)) | [Learn more](#license-key) |
+| **Browser key**,
+        used for data ingest | Browser keys are used to report [browser monitoring](/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring/) data. Each key is tied to a specific account, and you can create as many as you want. | Go to the API keys UI ([direct link](https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher)) | [Learn more](#browser-key) |
+| **Mobile app token**,
+        used for data ingest | Mobile app tokens are used to report [mobile monitoring](/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring) data. Each token is tied to a specific mobile app. | Go to [a monitored app's UI](/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token) | [Learn more](/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token) |
+| **User key**,
+        used for querying and configuration | A user key is required to use [NerdGraph](/docs/apis/nerdgraph/get-started/introduction-new-relic-nerdgraph), our GraphQL API, which is used for querying data and configuring features. Each user key is tied to a specific user. | Go to the API keys UI ([direct link](https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher)) | [Learn more](#user-key) |
 
-      <th>
-        <DNT>
-          **To view and manage**
-        </DNT>
-      </th>
-
-      <th style={{ width: "150px" }}>
-        <DNT>
-          **Read more**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <DNT>**License key**</DNT>,
-        used for data ingest
-      </td>
-
-      <td>
-        License keys are used to report almost all data (except for browser and mobile data, which use their own keys). Each key is tied to a specific account and you can create as many as you want.
-      </td>
-
-      <td>
-        Go to the API keys UI ([direct link](https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher))
-      </td>
-
-      <td>
-        [Learn more](#license-key)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**Browser key**</DNT>,
-        used for data ingest
-      </td>
-
-      <td>
-        Browser keys are used to report [browser monitoring](/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring/) data. Each key is tied to a specific account, and you can create as many as you want.
-      </td>
-
-      <td>
-        Go to the API keys UI ([direct link](https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher))
-      </td>
-
-      <td>
-        [Learn more](#browser-key)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**Mobile app token**</DNT>,
-        used for data ingest
-      </td>
-
-      <td>
-        Mobile app tokens are used to report [mobile monitoring](/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring) data. Each token is tied to a specific mobile app.
-      </td>
-
-      <td>
-        Go to [a monitored app's UI](/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token)
-      </td>
-
-      <td>
-        [Learn more](/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**User key**</DNT>,
-        used for querying and configuration
-      </td>
-
-      <td>
-        A user key is required to use [NerdGraph](/docs/apis/nerdgraph/get-started/introduction-new-relic-nerdgraph), our GraphQL API, which is used for querying data and configuring features. Each user key is tied to a specific user.
-      </td>
-
-      <td>
-        Go to the API keys UI ([direct link](https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher))
-      </td>
-
-      <td>
-        [Learn more](#user-key)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View and manage API keys [#keys-ui]
 

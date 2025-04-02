@@ -57,7 +57,7 @@ function walkDirectory(directoryPath) {
   }
 // Main function
 function main() {
-    const startPath = './src';  
+    const startPath = './first_3000_files';  
     walkDirectory(startPath);
   }
   

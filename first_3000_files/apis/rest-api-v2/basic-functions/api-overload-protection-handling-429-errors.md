@@ -41,61 +41,15 @@ In a case where rate limiting occurs, the following things will happen:
 
 Here are the HTTP headers that will appear in API responses if you have exceeded your API key's individual limit:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Overload header
-      </th>
+# Table
 
-      <th>
-        Meaning
-      </th>
-    </tr>
-  </thead>
+| Overload header | Meaning |
+| - | - |
+| `X-RateLimit-Limit` | Maximum number of requests per minute. |
+| `X-RateLimit-Remaining` | Number of requests remaining in this period. |
+| `X-RateLimit-Reset` | UNIX timestamp (number of seconds since Jan. 1, 1970) when the current reporting period ends. API requests will be responded to after this time. |
+| `X-RateLimit-Docs` | Hyperlink to this document so you immediately have additional information. |
 
-  <tbody>
-    <tr>
-      <td>
-        `X-RateLimit-Limit`
-      </td>
-
-      <td>
-        Maximum number of requests per minute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `X-RateLimit-Remaining`
-      </td>
-
-      <td>
-        Number of requests remaining in this period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `X-RateLimit-Reset`
-      </td>
-
-      <td>
-        UNIX timestamp (number of seconds since Jan. 1, 1970) when the current reporting period ends. API requests will be responded to after this time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `X-RateLimit-Docs`
-      </td>
-
-      <td>
-        Hyperlink to this document so you immediately have additional information.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Here are the HTTP headers that will appear in API responses if there is a general system problem:
 

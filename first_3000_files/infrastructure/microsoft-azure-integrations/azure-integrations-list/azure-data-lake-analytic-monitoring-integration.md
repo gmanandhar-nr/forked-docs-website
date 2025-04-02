@@ -36,88 +36,15 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Data Lake Analytics metrics [#Azure-data-lake-analytics]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `JobAUEndedCancelled` | Total AU time for cancelled jobs. |
+| `JobAUEndedFailure` | Total AU time for failed jobs. |
+| `JobAUEndedSuccess` | Total AU time for successful jobs. |
+| `JobEndedCancelled` | Count of cancelled jobs. |
+| `JobEndedSuccess` | Count of successful jobs. |
+| `JobEndedFailure` | Count of failed jobs. |
+| `JobStage` | Number of jobs in each stage. |
 
-  <tbody>
-    <tr>
-      <td>
-        `JobAUEndedCancelled`
-      </td>
-
-      <td>
-        Total AU time for cancelled jobs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobAUEndedFailure`
-      </td>
-
-      <td>
-        Total AU time for failed jobs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobAUEndedSuccess`
-      </td>
-
-      <td>
-        Total AU time for successful jobs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobEndedCancelled`
-      </td>
-
-      <td>
-        Count of cancelled jobs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobEndedSuccess`
-      </td>
-
-      <td>
-        Count of successful jobs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobEndedFailure`
-      </td>
-
-      <td>
-        Count of failed jobs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobStage`
-      </td>
-
-      <td>
-        Number of jobs in each stage.
-      </td>
-    </tr>
-  </tbody>
-</table>

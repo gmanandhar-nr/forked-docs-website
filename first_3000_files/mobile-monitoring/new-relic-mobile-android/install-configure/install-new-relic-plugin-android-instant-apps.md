@@ -54,46 +54,14 @@ To install the New Relic plugin for Android Instant Apps:
 
 When instrumenting an instant app, be aware of the following considerations with APKs:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Instant apps and APKs**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Instant apps and APKs** | **Comments** |
+| - | - |
+| Instrumentation | * Instrumentation of instant apps behaves the same as instrumentation with a normal APK. The agent will detect when an APK is an instant app. For feature APKs, the agent will inject a unique build ID that instant apps will use when reporting crashes.
+        * The side-loaded (main) activity of every feature must call `NewRelic.start()` when the activity is created (as per normal instructions). |
+| ProGuard and Dexguard support for feature and application APKs | Place the `newrelic.properties` file in the root (main) directory of the project. |
 
-  <tbody>
-    <tr>
-      <td>
-        Instrumentation
-      </td>
-
-      <td>
-        * Instrumentation of instant apps behaves the same as instrumentation with a normal APK. The agent will detect when an APK is an instant app. For feature APKs, the agent will inject a unique build ID that instant apps will use when reporting crashes.
-        * The side-loaded (main) activity of every feature must call `NewRelic.start()` when the activity is created (as per normal instructions).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        ProGuard and Dexguard support for feature and application APKs
-      </td>
-
-      <td>
-        Place the `newrelic.properties` file in the root (main) directory of the project.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## ProGuard and Dexguard support [#proguard]
 

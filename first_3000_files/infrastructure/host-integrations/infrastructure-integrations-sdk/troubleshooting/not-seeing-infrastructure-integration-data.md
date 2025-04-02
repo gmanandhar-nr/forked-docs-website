@@ -34,78 +34,23 @@ To troubleshoot and resolve the problem:
   >
     If you are not receiving data from your custom integration, verify that your integration follows these requirements.
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Integration requirements
-          </th>
+    # Table
 
-          <th>
-            Comments
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Environment
-          </td>
-
-          <td>
-            Make sure your environment meets the [Integrations SDK requirements](/docs/compatibility-requirements-infrastructure-integration-sdk).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Configuration file
-          </td>
-
-          <td>
-            1. Use a validator such as [yamllint](http://www.yamllint.com/) to verify that the configuration file is a valid YAML file.
-            2. Verify that the file is in the [correct location](/docs/infrastructure/integrations-sdk/get-started/create-activate-infrastructure-integration#placement-naming).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Definition file
-          </td>
-
-          <td>
-            1. Use a validator such as [yamllint](http://www.yamllint.com/) to verify that the definition file is a valid YAML file.
+| Integration requirements | Comments |
+| - | - |
+| Environment | Make sure your environment meets the [Integrations SDK requirements](/docs/compatibility-requirements-infrastructure-integration-sdk). |
+| Configuration file | 1. Use a validator such as [yamllint](http://www.yamllint.com/) to verify that the configuration file is a valid YAML file.
+            2. Verify that the file is in the [correct location](/docs/infrastructure/integrations-sdk/get-started/create-activate-infrastructure-integration#placement-naming). |
+| Definition file | 1. Use a validator such as [yamllint](http://www.yamllint.com/) to verify that the definition file is a valid YAML file.
             2. Verify that the header fields have the [required format](/docs/infrastructure/integrations-sdk/file-specifications/integration-definition-file-specifications#def-header).
             3. Verify that the [prefix for inventory](/docs/infrastructure/integrations-sdk/file-specifications/integration-definition-file-specifications#def-commands) set in the definition file is no more than two levels deep.
-            4. Verify that the file is in the [correct location](/docs/infrastructure/integrations-sdk/get-started/create-activate-infrastructure-integration#placement-naming).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Metric sets
-          </td>
-
-          <td>
-            Verify that the integration:
+            4. Verify that the file is in the [correct location](/docs/infrastructure/integrations-sdk/get-started/create-activate-infrastructure-integration#placement-naming). |
+| Metric sets | Verify that the integration:
 
             * Does not generate metric sets with more than 120 key-value pairs.
-            * Does not generate more than 1000 metric sets.
-          </td>
-        </tr>
+            * Does not generate more than 1000 metric sets. |
+| JSON payload | Verify that the integration does not generate a single JSON payload of more than 5 MB. |
 
-        <tr>
-          <td>
-            JSON payload
-          </td>
-
-          <td>
-            Verify that the integration does not generate a single JSON payload of more than 5 MB.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

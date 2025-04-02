@@ -54,41 +54,13 @@ You can [query and explore your data](/docs/using-new-relic/data/understand-data
 
 The integration collects these ECR/ECS definitions:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "240px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `ClusterName` | This dimension filters the data you request for all resources in a specified cluster. All Amazon ECS metrics are filtered by `ClusterName`. |
+| `ServiceName` | This dimension filters the data you request for all resources in a specified service within a specified cluster. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ClusterName`
-      </td>
-
-      <td>
-        This dimension filters the data you request for all resources in a specified cluster. All Amazon ECS metrics are filtered by `ClusterName`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ServiceName`
-      </td>
-
-      <td>
-        This dimension filters the data you request for all resources in a specified service within a specified cluster.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to find and use integration data, see [Understand integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

@@ -58,38 +58,10 @@ Costs are estimates, as Microsoft can make updates to the cost data up until the
 
 Here are the metrics and metadata reported by the Azure Cost Management integration. For more information about how data is structured and reported to New Relic, see [Understand and use integration data](/docs/infrastructure/integrations-getting-started/getting-started/understand-integration-data-data-types#metric).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "290px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `currency` | `USD` |
+| `cost` | Amount spent for the day of the event. |
 
-  <tbody>
-    <tr>
-      <td>
-        `currency`
-      </td>
-
-      <td>
-        `USD`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cost`
-      </td>
-
-      <td>
-        Amount spent for the day of the event.
-      </td>
-    </tr>
-  </tbody>
-</table>

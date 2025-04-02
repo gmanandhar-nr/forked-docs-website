@@ -41,118 +41,27 @@ This New Relic infrastructure integration collects the following Amazon Lex data
   For full descriptions of each metric, see [Amazon's Lex Dimensions and Metrics](https://docs.aws.amazon.com/lex/latest/dg/monitoring-aws-lex-cloudwatch.html).
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        Name
-      </th>
+# Table
 
-      <th width={100}>
-        Data type
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `RuntimeRequestCount`
-      </td>
-
-      <td>
-        integer/count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RuntimeSuccessfulRequestLatency`
-      </td>
-
-      <td>
-        milliseconds
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RuntimeThrottledEvents`
-      </td>
-
-      <td>
-        integer/count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RuntimeSystemErrors`
+| Name | Data type |
+| - | - |
+| `RuntimeRequestCount` | integer/count |
+| `RuntimeSuccessfulRequestLatency` | milliseconds |
+| `RuntimeThrottledEvents` | integer/count |
+| `RuntimeSystemErrors`
         `RuntimeLambdaErrors`
         `RuntimePollyErrors`
-        `RuntimeUserErrors`
-      </td>
-
-      <td>
-        integer/count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RuntimeConcurrency`
-      </td>
-
-      <td>
-        integer/count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BotChannelRequestCount`
-      </td>
-
-      <td>
-        integer/count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BotChannelInboundThrottledEvents`
-        `BotChannelOutboundThrottledEvents`
-      </td>
-
-      <td>
-        integer/count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ConversationLogsAudioDeliverySuccess`
+        `RuntimeUserErrors` | integer/count |
+| `RuntimeConcurrency` | integer/count |
+| `BotChannelRequestCount` | integer/count |
+| `BotChannelInboundThrottledEvents`
+        `BotChannelOutboundThrottledEvents` | integer/count |
+| `ConversationLogsAudioDeliverySuccess`
         `ConversationLogsAudioDeliveryFailure`
         `ConversationLogsTextDeliverySuccess`
-        `ConversationLogsTextDeliveryFailure`
-      </td>
-
-      <td>
-        integer/count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BotChannelAuthErrors`
+        `ConversationLogsTextDeliveryFailure` | integer/count |
+| `BotChannelAuthErrors`
         `BotChannelConfigurationErrors`
         `BotChannelResponseCardErrors`
-        `BotChannelSystemErrors`
-      </td>
+        `BotChannelSystemErrors` | integer/count |
 
-      <td>
-        integer/count
-      </td>
-    </tr>
-  </tbody>
-</table>

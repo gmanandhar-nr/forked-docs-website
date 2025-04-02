@@ -143,65 +143,18 @@ The scriptable installers are ZIP archives containing a PowerShell script for in
 
        If your application is receiving traffic, data should appear within a few minutes. If it doesn't, see [No data appears](/docs/agents/net-agent/troubleshooting/no-data-appears-net).
 
-       <table>
-         <thead>
-           <tr>
-             <th width={150}>
-               Install options
-             </th>
+       # Table
 
-             <th>
-               Description
-             </th>
-           </tr>
-         </thead>
+| Install options | Description |
+| - | - |
+| `LicenseKey` | **Required**. Your . |
+| `NoIISReset` | Optional. Use this option to prevent the installer from initiating an IIS reset.
 
-         <tbody>
-           <tr>
-             <td>
-               `LicenseKey`
-             </td>
+               
+                 If you use this option, you need to do an IIS reset manually before New Relic starts instrumenting any IIS-hosted applications. |
+| `InstrumentAll` | Optional. By default, the .NET agent will instrument all IIS-hosted applications. Use this option to enable instrumentation of other types of .NET applications. |
+| `InstallPath` | Optional. Use this option to choose a different installation location. The default install location is `C:\Program Files\New Relic`. |
 
-             <td>
-               <DNT>**Required**</DNT>. Your <InlinePopover type="licenseKey"/>.
-             </td>
-           </tr>
-
-           <tr>
-             <td>
-               `NoIISReset`
-             </td>
-
-             <td>
-               Optional. Use this option to prevent the installer from initiating an IIS reset.
-
-               <Callout variant="important">
-                 If you use this option, you need to do an IIS reset manually before New Relic starts instrumenting any IIS-hosted applications.
-               </Callout>
-             </td>
-           </tr>
-
-           <tr>
-             <td>
-               `InstrumentAll`
-             </td>
-
-             <td>
-               Optional. By default, the .NET agent will instrument all IIS-hosted applications. Use this option to enable instrumentation of other types of .NET applications.
-             </td>
-           </tr>
-
-           <tr>
-             <td>
-               `InstallPath`
-             </td>
-
-             <td>
-               Optional. Use this option to choose a different installation location. The default install location is `C:\Program Files\New Relic`.
-             </td>
-           </tr>
-         </tbody>
-       </table>
 
        Uninstalling the agent with the scriptable uninstaller:
 

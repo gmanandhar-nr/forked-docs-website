@@ -50,55 +50,14 @@ This method adds a custom attribute to an interaction. If saved, this attribute 
 
 New Relic merges these custom attributes with the custom attributes set by calling [`setCustomAttribute()`](/docs/browser/new-relic-browser/browser-agent-apis/browser-api-newrelicsetcustomattribute) and with custom attributes set by a server-side agent.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Order of precedence**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Custom attributes**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Order of precedence** | **Custom attributes** |
+| - | - |
+| Highest level | `BrowserInteraction` attributes set with the SPA API: These overwrite attributes set in the other two ways. |
+| Next level | Attributes set by `setCustomAttribute()`: These overwrite server-side custom attributes. |
+| Lowest level | Custom attributes set server-side. |
 
-  <tbody>
-    <tr>
-      <td>
-        Highest level
-      </td>
-
-      <td>
-        `BrowserInteraction` attributes set with the SPA API: These overwrite attributes set in the other two ways.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Next level
-      </td>
-
-      <td>
-        Attributes set by `setCustomAttribute()`: These overwrite server-side custom attributes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Lowest level
-      </td>
-
-      <td>
-        Custom attributes set server-side.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Errors for custom attributes will be included in events on the [JS Errors page](/docs/browser/new-relic-browser/browser-pro-features/javascript-errors-page-detect-analyze-errors). To view or log errors for a custom attribute via API, use the browser agent API's [`noticeError`](/docs/browser/new-relic-browser/browser-agent-spa-api/newrelicnoticeerror-browser-agent-api) call.
 

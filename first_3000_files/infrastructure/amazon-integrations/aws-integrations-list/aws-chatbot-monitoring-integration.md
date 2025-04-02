@@ -32,101 +32,16 @@ To find your integration's metrics, go to <DNT>**[one.newrelic.com > All capabil
 
 This New Relic infrastructure integration collects the following Amazon Chatbot data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `EventsThrottled` | count | The number of throttled notifications. |
+| `EventsProcessed` | count | The number of event notifications received by AWS Chatbot. |
+| `UnsupportedEvents` | count | The number of unsupported events or messages attempted. |
+| `MessageDeliverySuccess` | count | The number of messages successfully delivered to the chat client. |
+| `MessageDeliveryFailure` | count | The number of messages that failed to deliver to the chat client. |
 
-      <th>
-        Unit
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `EventsThrottled`
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of throttled notifications.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EventsProcessed`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of event notifications received by AWS Chatbot.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UnsupportedEvents`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of unsupported events or messages attempted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MessageDeliverySuccess`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of messages successfully delivered to the chat client.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MessageDeliveryFailure`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of messages that failed to deliver to the chat client.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `ConfigurationName`.
 

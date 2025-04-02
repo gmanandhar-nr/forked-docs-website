@@ -53,338 +53,40 @@ To [view and use your integration data](/docs/infrastructure/integrations/find-u
 
 ## Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "285" }}>
-        Metric
-      </th>
+# Table
+
+| Metric | Description |
+| - | - |
+| `EnvironmentHealth` | \[Environment] The health status of the environment. The possible values are 0 (OK), 1 (Info), 5 (Unknown), 10 (No data), 15 (Warning), 20 (Degraded) and 25 (Severe). |
+| `InstancesOk` | \[Environment] The number of instances with OK health status. |
+| `InstancesPending` | \[Environment] The number of instances with Pending health status. |
+| `InstancesInfo` | \[Environment] The number of instances with Info health status. |
+| `InstancesUnknown` | \[Environment] The number of instances with Unknown health status. |
+| `InstancesNoData` | \[Environment] The number of instances with no health status data. |
+| `InstancesWarning` | \[Environment] The number of instances with Warning health status. |
+| `InstancesDegraded` | \[Environment] The number of instances with Degraded health status. |
+| `InstancesSevere` | \[Environment] The number of instances with Severe health status. |
+| `ApplicationRequestsTotal` | The number of requests completed by the instance or environment. |
+| `ApplicationRequests2xx` | The number of requests that completed with a 2XX status code. |
+| `ApplicationRequests3xx` | The number of requests that completed with a 3XX status code. |
+| `ApplicationRequests4xx` | The number of requests that completed with a 4XX status code. |
+| `ApplicationRequests5xx` | The number of requests that completed with a 5XX status code. |
+| `ApplicationLatencyP10` | The average time to complete the fastest 10 percent of requests. |
+| `ApplicationLatencyP50` | The average time to complete the fastest 50 percent of requests. |
+| `ApplicationLatencyP75` | The average time to complete the fastest 75 percent of requests. |
+| `ApplicationLatencyP85` | The average time to complete the fastest 85 percent of requests. |
+| `ApplicationLatencyP90` | The average time to complete the fastest 90 percent of requests. |
+| `ApplicationLatencyP95` | The average time to complete the fastest 95 percent of requests. |
+| `ApplicationLatencyP99` | The average time to complete the fastest 99 percent of requests. |
+| `ApplicationLatencyP99.9` | The average time to complete the fastest x percent of requests. |
+| `LoadAverage1min` | \[Instance] The average CPU load over the last minute. |
+| `InstanceHealth` | \[Instance] The health status of the instance. |
+| `RootFilesystemUtil` | \[Instance] The percentage of disk space in use. |
+| `CPUIrq` | \[Instance] The percentage of time the CPU was in this state in the last minute. |
+| `CPUUser` | \[Instance] The percentage of time the CPU was in this state in the last minute. |
+| `CPUIdle` | \[Instance] The percentage of time the CPU was in this state in the last minute. |
+| `CPUSystem` | \[Instance] The percentage of time the CPU was in this state in the last minute. |
+| `CPUSoftirq` | \[Instance] The percentage of time the CPU was in this state in the last minute. |
+| `CPUIowait` | \[Instance] The percentage of time the CPU was in this state in the last minute. |
+| `CPUNice` | \[Instance] The percentage of time the CPU was in this state in the last minute. |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `EnvironmentHealth`
-      </td>
-
-      <td>
-        \[Environment] The health status of the environment. The possible values are 0 (OK), 1 (Info), 5 (Unknown), 10 (No data), 15 (Warning), 20 (Degraded) and 25 (Severe).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstancesOk`
-      </td>
-
-      <td>
-        \[Environment] The number of instances with OK health status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstancesPending`
-      </td>
-
-      <td>
-        \[Environment] The number of instances with Pending health status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstancesInfo`
-      </td>
-
-      <td>
-        \[Environment] The number of instances with Info health status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstancesUnknown`
-      </td>
-
-      <td>
-        \[Environment] The number of instances with Unknown health status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstancesNoData`
-      </td>
-
-      <td>
-        \[Environment] The number of instances with no health status data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstancesWarning`
-      </td>
-
-      <td>
-        \[Environment] The number of instances with Warning health status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstancesDegraded`
-      </td>
-
-      <td>
-        \[Environment] The number of instances with Degraded health status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstancesSevere`
-      </td>
-
-      <td>
-        \[Environment] The number of instances with Severe health status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationRequestsTotal`
-      </td>
-
-      <td>
-        The number of requests completed by the instance or environment.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationRequests2xx`
-      </td>
-
-      <td>
-        The number of requests that completed with a 2XX status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationRequests3xx`
-      </td>
-
-      <td>
-        The number of requests that completed with a 3XX status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationRequests4xx`
-      </td>
-
-      <td>
-        The number of requests that completed with a 4XX status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationRequests5xx`
-      </td>
-
-      <td>
-        The number of requests that completed with a 5XX status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationLatencyP10`
-      </td>
-
-      <td>
-        The average time to complete the fastest 10 percent of requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationLatencyP50`
-      </td>
-
-      <td>
-        The average time to complete the fastest 50 percent of requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationLatencyP75`
-      </td>
-
-      <td>
-        The average time to complete the fastest 75 percent of requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationLatencyP85`
-      </td>
-
-      <td>
-        The average time to complete the fastest 85 percent of requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationLatencyP90`
-      </td>
-
-      <td>
-        The average time to complete the fastest 90 percent of requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationLatencyP95`
-      </td>
-
-      <td>
-        The average time to complete the fastest 95 percent of requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationLatencyP99`
-      </td>
-
-      <td>
-        The average time to complete the fastest 99 percent of requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApplicationLatencyP99.9`
-      </td>
-
-      <td>
-        The average time to complete the fastest x percent of requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `LoadAverage1min`
-      </td>
-
-      <td>
-        \[Instance] The average CPU load over the last minute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InstanceHealth`
-      </td>
-
-      <td>
-        \[Instance] The health status of the instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RootFilesystemUtil`
-      </td>
-
-      <td>
-        \[Instance] The percentage of disk space in use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUIrq`
-      </td>
-
-      <td>
-        \[Instance] The percentage of time the CPU was in this state in the last minute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUUser`
-      </td>
-
-      <td>
-        \[Instance] The percentage of time the CPU was in this state in the last minute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUIdle`
-      </td>
-
-      <td>
-        \[Instance] The percentage of time the CPU was in this state in the last minute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUSystem`
-      </td>
-
-      <td>
-        \[Instance] The percentage of time the CPU was in this state in the last minute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUSoftirq`
-      </td>
-
-      <td>
-        \[Instance] The percentage of time the CPU was in this state in the last minute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUIowait`
-      </td>
-
-      <td>
-        \[Instance] The percentage of time the CPU was in this state in the last minute.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CPUNice`
-      </td>
-
-      <td>
-        \[Instance] The percentage of time the CPU was in this state in the last minute.
-      </td>
-    </tr>
-  </tbody>
-</table>

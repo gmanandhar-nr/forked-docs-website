@@ -31,93 +31,29 @@ This allows for manual instrumentation of machine learning models.
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `model`
 
-  <tbody>
-    <tr>
-      <td>
-        `model`
+        _object_ | Required. `model` is the fitted machine learning model. |
+| `name`
 
-        _object_
-      </td>
+        _string_ | Optional. The name of the custom model. |
+| `version`
 
-      <td>
-        Required. `model` is the fitted machine learning model.
-      </td>
-    </tr>
+        _string_ | Optional.  The release version of the custom model. |
+| `feature_names`
 
-    <tr>
-      <td>
-        `name`
+        _list_ of _string_ | Optional. A list of strings denoting the feature name(s). |
+| `label_names`
 
-        _string_
-      </td>
+        _list_ of _string_ | Optional. A list of strings denoting the label name(s). |
+| `metadata`
 
-      <td>
-        Optional. The name of the custom model.
-      </td>
-    </tr>
+        _dict_ | Optional.  Metadata to attach to the model. |
 
-    <tr>
-      <td>
-        `version`
-
-        _string_
-      </td>
-
-      <td>
-        Optional.  The release version of the custom model.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `feature_names`
-
-        _list_ of _string_
-      </td>
-
-      <td>
-        Optional. A list of strings denoting the feature name(s).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `label_names`
-
-        _list_ of _string_
-      </td>
-
-      <td>
-        Optional. A list of strings denoting the label name(s).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `metadata`
-
-        _dict_
-      </td>
-
-      <td>
-        Optional.  Metadata to attach to the model.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

@@ -37,33 +37,14 @@ If the application hasn't been registered with the data collector when this call
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `name`
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
+        _string_ | Optional. The name of the application. If not set, the name matches the name set in the Python agent configuration for that application. |
 
-        _string_
-      </td>
-
-      <td>
-        Optional. The name of the application. If not set, the name matches the name set in the Python agent configuration for that application.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

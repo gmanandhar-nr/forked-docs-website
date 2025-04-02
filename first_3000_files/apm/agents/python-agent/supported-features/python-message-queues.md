@@ -19,55 +19,14 @@ The New Relic UI will show transactions initiated via message receipt (subscribe
 
 ## Requirements
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **Message Queue**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Python agent version required**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Message Queue** | **Python agent version required** |
+| - | - |
+| Pika RabbitMQ | 2.88.0.72 |
+| Kafka Python | 8.2.0.181 |
+| Confluent Kafka | 8.2.0.181 |
 
-  <tbody>
-    <tr>
-      <td>
-        Pika RabbitMQ
-      </td>
-
-      <td>
-        2.88.0.72
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Kafka Python
-      </td>
-
-      <td>
-        8.2.0.181
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Confluent Kafka
-      </td>
-
-      <td>
-        8.2.0.181
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more information, see [the release notes](/docs/release-notes/agent-release-notes/python-release-notes).
 

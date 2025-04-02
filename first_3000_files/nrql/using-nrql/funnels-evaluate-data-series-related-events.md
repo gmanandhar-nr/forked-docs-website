@@ -54,65 +54,15 @@ This means that for large data sets, there may be occasional "false positives" a
 
 Here's a detailed breakdown of technical details and constraints for funnel queries.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Technical details**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Technical details** | **Comments** |
+| - | - |
+| Order of steps | The order of steps completed is not enforced and does not impact results. |
+| Attributes | You can only run funnel queries on one attribute at a time. |
+| Unique values | For funnel queries that involve 256 or more unique funnel attribute values, the results are approximate. |
+| Maximum steps | You can have a maximum of 10 steps within a single funnel query. |
 
-  <tbody>
-    <tr>
-      <td>
-        Order of steps
-      </td>
-
-      <td>
-        The order of steps completed is not enforced and does not impact results.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Attributes
-      </td>
-
-      <td>
-        You can only run funnel queries on one attribute at a time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Unique values
-      </td>
-
-      <td>
-        For funnel queries that involve 256 or more unique funnel attribute values, the results are approximate.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Maximum steps
-      </td>
-
-      <td>
-        You can have a maximum of 10 steps within a single funnel query.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Funnel example [#example]
 

@@ -44,155 +44,46 @@ The `BrowserInteraction` and `PageView` events end their reporting when they rec
 * Avoid setting an arbitrary timeout.
 * Prevent holding `BrowserInteraction` and `PageView` events indefinitely.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Additional data
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| Additional data | Comments |
+| - | - |
+| `firstPaint` and `firstContentfulPaint` | The [`firstPaint`](/attribute-dictionary/?event=PageViewTiming&attribute=firstPaint) and [`firstContentfulPaint`](/attribute-dictionary/?event=PageViewTiming&attribute=firstContentfulPaint) attributes already are available with `BrowserInteraction` and `PageView` events. However, they are not always reliably captured before the window onload event fires.
 
-  <tbody>
-    <tr>
-      <td>
-        `firstPaint` and `firstContentfulPaint`
-      </td>
-
-      <td>
-        The [`firstPaint`](/attribute-dictionary/?event=PageViewTiming&attribute=firstPaint) and [`firstContentfulPaint`](/attribute-dictionary/?event=PageViewTiming&attribute=firstContentfulPaint) attributes already are available with `BrowserInteraction` and `PageView` events. However, they are not always reliably captured before the window onload event fires.
-
-        Using `PageViewTiming` gives you a way to capture these metrics even if they happen after the original page load time. This gives you a better understanding of the correlation between responsiveness of that load event and the visual rendering of your content.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `largestContentfulPaint`
-      </td>
-
-      <td>
-        The [`largestContentfulPaint`](/attribute-dictionary/?event=PageViewTiming&attribute=largestContentfulPaint) metric is available with [agent version 1163 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1163). It reports the render time of the largest content element visible in the viewport.
+        Using `PageViewTiming` gives you a way to capture these metrics even if they happen after the original page load time. This gives you a better understanding of the correlation between responsiveness of that load event and the visual rendering of your content. |
+| `largestContentfulPaint` | The [`largestContentfulPaint`](/attribute-dictionary/?event=PageViewTiming&attribute=largestContentfulPaint) metric is available with [agent version 1163 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1163). It reports the render time of the largest content element visible in the viewport.
 
         Google's research found that looking at when the largest element was rendered was a more accurate way to measure when the main content of a page is loaded and useful. For more information about this metric, including limitations and considerations, see the [w3c draft](https://wicg.github.io/largest-contentful-paint/).
 
         We also report the cumulative layout shift score attribute with LCP. This attribute is reported as `cumulativeLayoutShift`.
 
-        Largest contentful paint is one of three metrics identified by Google as the [core web vitals](https://web.dev/vitals/). LCP values up to 2.5 seconds are considered "Good," between 2.5 and 4 seconds are considered "Needs Improvement," and above 4 seconds are considered "Poor."
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `firstInteraction` and `interactionToNextPaint`
-      </td>
-
-      <td>
-        With the addition of [`firstInteraction`](/attribute-dictionary/?event=PageViewTiming&attribute=firstInteraction) and [`interactionToNextPaint`](/attribute-dictionary/?event=PageViewTiming&attribute=interactionToNextPaint), you can quickly determine the ways that your users are interacting with that visual content. These metrics tell you not only when they interacted, but what type of interaction (mousedown, pointerdown, etc.) and how long it took for them to receive a response from your site.
+        Largest contentful paint is one of three metrics identified by Google as the [core web vitals](https://web.dev/vitals/). LCP values up to 2.5 seconds are considered "Good," between 2.5 and 4 seconds are considered "Needs Improvement," and above 4 seconds are considered "Poor." |
+| `firstInteraction` and `interactionToNextPaint` | With the addition of [`firstInteraction`](/attribute-dictionary/?event=PageViewTiming&attribute=firstInteraction) and [`interactionToNextPaint`](/attribute-dictionary/?event=PageViewTiming&attribute=interactionToNextPaint), you can quickly determine the ways that your users are interacting with that visual content. These metrics tell you not only when they interacted, but what type of interaction (mousedown, pointerdown, etc.) and how long it took for them to receive a response from your site.
 
         The `interactionToNextPaint` metric lies in the middle of `FirstContentfulPaint` and Time to Interactive (TTI) metrics. It measures the time between when a first input can be made and when the browser's main thread is able to respond to any interactions.
 
         We also report the cumulative layout shift (CLS) score attribute at the moment of the user's first interaction. This attribute is reported as `cumulativeLayoutShift.`
 
-        INP is one of three metrics identified by Google as the [core web vitals](https://web.dev/vitals/). An INP score of 200 ms or less is considered "Good," between 200-500 ms is considered "Needs Improvement," and above 500 ms is considered "Poor."
-      </td>
-    </tr>
+        INP is one of three metrics identified by Google as the [core web vitals](https://web.dev/vitals/). An INP score of 200 ms or less is considered "Good," between 200-500 ms is considered "Needs Improvement," and above 500 ms is considered "Poor." |
+| `cumulativeLayoutShift` | [Cumulative layout shift (CLS)](https://web.dev/cls/) is available with [agent v1177 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1177). CLS is an important, user-centric metric for measuring [visual stability](https://web.dev/user-centric-performance-metrics/#types-of-metrics) because it helps quantify how often users experience unexpected layout shifts. A low CLS helps ensure that the page is [delightful](https://web.dev/user-centric-performance-metrics/#questions).
 
-    <tr>
-      <td>
-        `cumulativeLayoutShift`
-      </td>
+        Cumulative layout shift is one of three metrics identified by Google as the [core web vitals](https://web.dev/vitals/). CLS scores up to 0.1 are considered "Good," between 0.1-0.25 are considered "Needs Improvement," and above 0.25 are considered "Poor." |
+| `interactionToNextPaint` | [Interaction to next paint (INP)](https://web.dev/inp/) is available with [agent v1227 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1227). INP is a newer metric for measuring [runtime responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics) and user-perceived performance. It measures the largest latency between user interactions and page response or repaints. This is an experimental but identified-as-significant metric added in [Web Vitals](https://github.com/GoogleChrome/web-vitals) v3.
 
-      <td>
-        [Cumulative layout shift (CLS)](https://web.dev/cls/) is available with [agent v1177 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1177). CLS is an important, user-centric metric for measuring [visual stability](https://web.dev/user-centric-performance-metrics/#types-of-metrics) because it helps quantify how often users experience unexpected layout shifts. A low CLS helps ensure that the page is [delightful](https://web.dev/user-centric-performance-metrics/#questions).
+        INP scores up to 200 ms are considered "Good," between 200-500 ms are considered "Needs Improvement," and above 500 ms are considered "Poor." |
+| `timingName` | You can review different types of activities with the `timingName` attribute, such as `firstPaint`, `firstContentfulPaint`, `firstInteraction`, `largestContentfulPaint`, `pageHide` and `windowUnload`. For example, a `PageViewTiming` event may have a `timingName` of `firstPaint` and a `firstPaint` value of `.03`. The event will also include all default attributes included with the standard `BrowserInteraction` and `PageView` events. |
+| `elementId` | This is the `Id`, if specified, of the `largestContentfulPaint` element. This value will only be reported with the LCP metric. This value can be `null`. |
+| `elementSize` | This is the reported size of the `largestContentfulPaint` element. This value will only be reported with the LCP metric. |
+| `pageHide` | The `pageHide` event, available with [agent v1177 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1177), is sent when the document becomes hidden to the user. In modern practice, this signals the _potential end_ of a user session most reliably. This event always accompanies `windowUnload` if that occurs, but it can also fire separately when the user switches tab. In that case, the unload isn't fired.
 
-        Cumulative layout shift is one of three metrics identified by Google as the [core web vitals](https://web.dev/vitals/). CLS scores up to 0.1 are considered "Good," between 0.1-0.25 are considered "Needs Improvement," and above 0.25 are considered "Poor."
-      </td>
-    </tr>
+        We also report the cumulative layout shift (CLS) score attribute with `pageHide`. This attribute is reported as `cumulativeLayoutShift.` |
+| `windowLoad` | The `windowLoad` event is available with [agent v1177 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1177). This is fired when the whole page has loaded, including all dependent resources such as stylesheets and images. For supporting documentation and browser compatibility for the `windowLoad` event, see the [MDN Web Docs site](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event).
 
-    <tr>
-      <td>
-        `interactionToNextPaint`
-      </td>
+        We also report the cumulative layout shift (CLS) score attribute with `windowLoad`. This attribute is reported as `cumulativeLayoutShift.` |
+| `windowUnload` | The `windowUnload` event, available with [agent v1163 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1163), is sent when unloading of the page is detected. In modern practice, this is based off the window pagehide event firing and means that the user is navigating away.
 
-      <td>
-        [Interaction to next paint (INP)](https://web.dev/inp/) is available with [agent v1227 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1227). INP is a newer metric for measuring [runtime responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics) and user-perceived performance. It measures the largest latency between user interactions and page response or repaints. This is an experimental but identified-as-significant metric added in [Web Vitals](https://github.com/GoogleChrome/web-vitals) v3.
+        We also report the cumulative layout shift (CLS) score attribute with `windowUnload`. This attribute is reported as `cumulativeLayoutShift`. |
 
-        INP scores up to 200 ms are considered "Good," between 200-500 ms are considered "Needs Improvement," and above 500 ms are considered "Poor."
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `timingName`
-      </td>
-
-      <td>
-        You can review different types of activities with the `timingName` attribute, such as `firstPaint`, `firstContentfulPaint`, `firstInteraction`, `largestContentfulPaint`, `pageHide` and `windowUnload`. For example, a `PageViewTiming` event may have a `timingName` of `firstPaint` and a `firstPaint` value of `.03`. The event will also include all default attributes included with the standard `BrowserInteraction` and `PageView` events.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `elementId`
-      </td>
-
-      <td>
-        This is the `Id`, if specified, of the `largestContentfulPaint` element. This value will only be reported with the LCP metric. This value can be `null`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `elementSize`
-      </td>
-
-      <td>
-        This is the reported size of the `largestContentfulPaint` element. This value will only be reported with the LCP metric.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `pageHide`
-      </td>
-
-      <td>
-        The `pageHide` event, available with [agent v1177 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1177), is sent when the document becomes hidden to the user. In modern practice, this signals the _potential end_ of a user session most reliably. This event always accompanies `windowUnload` if that occurs, but it can also fire separately when the user switches tab. In that case, the unload isn't fired.
-
-        We also report the cumulative layout shift (CLS) score attribute with `pageHide`. This attribute is reported as `cumulativeLayoutShift.`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `windowLoad`
-      </td>
-
-      <td>
-        The `windowLoad` event is available with [agent v1177 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1177). This is fired when the whole page has loaded, including all dependent resources such as stylesheets and images. For supporting documentation and browser compatibility for the `windowLoad` event, see the [MDN Web Docs site](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event).
-
-        We also report the cumulative layout shift (CLS) score attribute with `windowLoad`. This attribute is reported as `cumulativeLayoutShift.`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `windowUnload`
-      </td>
-
-      <td>
-        The `windowUnload` event, available with [agent v1163 or higher](/docs/release-notes/new-relic-browser-release-notes/browser-agent-release-notes/browser-agent-v1163), is sent when unloading of the page is detected. In modern practice, this is based off the window pagehide event firing and means that the user is navigating away.
-
-        We also report the cumulative layout shift (CLS) score attribute with `windowUnload`. This attribute is reported as `cumulativeLayoutShift`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Compatibility and requirements [#requirements]
 

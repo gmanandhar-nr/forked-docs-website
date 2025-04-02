@@ -153,100 +153,18 @@ You have questions about various results calculated by the `ktranslate` network 
 
     Other SNMP metrics are converted based on the existence of the `enum` and `conversion` functions in their respective [SNMP profile](https://github.com/kentik/snmp-profiles/blob/main/profiles/kentik_snmp/_template.yml).
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "450px" }}>
-            Profile Setting
-          </th>
+    # Table
 
-          <th>
-            Usage
-          </th>
-        </tr>
-      </thead>
+| Profile Setting | Usage |
+| - | - |
+| `tag` | Used to override the `name` attribute and present a friendly name that will be sent with the exported payload. |
+| `enum:[]` | Used to handle SNMP enumerations which convert the integer value of a dimensional metric into the enumerated value in an attribute decorated on the dimensional metric (using the same metric name suffix). A common example is the conversion of [kentik.snmp.if_AdminStatus](https://oid-rep.orange-labs.fr/get/1.3.6.1.2.1.2.2.1.7) to the enumerated value of [if_AdminStatus](https://github.com/kentik/snmp-profiles/blob/ccb1df47a5068a59fb3e3765746524e0286252e7/profiles/kentik_snmp/_general/if-mib.yml#L59-L66) as either `up`, `down`, or `testing`. |
+| `conversion: hextoint: : ` | Used to convert hexadecimal values into integer format. Options for **current**: `LittleEndian` \| `BigEndian`. Options for **desired**: `uint16` \| `uint32` \| `uint64` |
+| `conversion: hextoip` | Used to convert hexadecimal values into 4-octet IPv4 strings. |
+| `conversion: hwaddr` | Used to convert hexadecimal values into MAC address strings. |
+| `conversion: powerset_status` | Used for enumeration of the [upsBasicStateOutputState](https://oid-rep.orange-labs.fr/get/1.3.6.1.4.1.318.1.1.1.11.1.1) ASCII string in the `POWERNET-MIB`. |
+| `conversion: regexp` | Places a regex match on the OID output to capture substrings; needs to be wrapped in quotes and have backslashes escaped.Example OID result: `" 5 Secs ( 96.3762%) 60 Secs ( 62.8549%) 300 Secs ( 25.2877%)"`Example conversion: `"regexp:60 Secs.*?(\\d+)"`Final result: `62` |
+| `conversion: to_one` | Used to create a gauge metric with the value of `1` in order to poll non-numeric scalar OIDs that don't have enumeration options. An example is the [tlUpsTestResultsDetail](https://oid-rep.orange-labs.fr/get/1.3.6.1.4.1.850.100.1.7.2) OID which returns a value of the type [DisplayString](https://www.circitor.fr/Mibs/Html/S/SNMPv2-TC.php#DisplayString). |
 
-      <tbody>
-        <tr>
-          <td>
-            `tag`
-          </td>
-
-          <td>
-            Used to override the `name` attribute and present a friendly name that will be sent with the exported payload.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `enum:[]`
-          </td>
-
-          <td>
-            Used to handle SNMP enumerations which convert the integer value of a dimensional metric into the enumerated value in an attribute decorated on the dimensional metric (using the same metric name suffix). A common example is the conversion of [kentik.snmp.if_AdminStatus](https://oid-rep.orange-labs.fr/get/1.3.6.1.2.1.2.2.1.7) to the enumerated value of [if_AdminStatus](https://github.com/kentik/snmp-profiles/blob/ccb1df47a5068a59fb3e3765746524e0286252e7/profiles/kentik_snmp/_general/if-mib.yml#L59-L66) as either `up`, `down`, or `testing`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `conversion: hextoint: <current>: <desired>`
-          </td>
-
-          <td>
-            Used to convert hexadecimal values into integer format. Options for <DNT>**current**</DNT>: `LittleEndian` \| `BigEndian`. Options for <DNT>**desired**</DNT>: `uint16` \| `uint32` \| `uint64`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `conversion: hextoip`
-          </td>
-
-          <td>
-            Used to convert hexadecimal values into 4-octet IPv4 strings.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `conversion: hwaddr`
-          </td>
-
-          <td>
-            Used to convert hexadecimal values into MAC address strings.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `conversion: powerset_status`
-          </td>
-
-          <td>
-            Used for enumeration of the [upsBasicStateOutputState](https://oid-rep.orange-labs.fr/get/1.3.6.1.4.1.318.1.1.1.11.1.1) ASCII string in the `POWERNET-MIB`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `conversion: regexp`
-          </td>
-
-          <td>
-            Places a regex match on the OID output to capture substrings; needs to be wrapped in quotes and have backslashes escaped.<br/>Example OID result: `" 5 Secs ( 96.3762%) 60 Secs ( 62.8549%) 300 Secs ( 25.2877%)"`<br/>Example conversion: `"regexp:60 Secs.*?(\\d+)"`<br/>Final result: `62`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `conversion: to_one`
-          </td>
-
-          <td>
-            Used to create a gauge metric with the value of `1` in order to poll non-numeric scalar OIDs that don't have enumeration options. An example is the [tlUpsTestResultsDetail](https://oid-rep.orange-labs.fr/get/1.3.6.1.4.1.850.100.1.7.2) OID which returns a value of the type [DisplayString](https://www.circitor.fr/Mibs/Html/S/SNMPv2-TC.php#DisplayString).
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 </CollapserGroup>

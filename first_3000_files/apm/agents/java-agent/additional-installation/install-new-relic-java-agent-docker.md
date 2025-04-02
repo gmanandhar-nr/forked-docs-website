@@ -113,45 +113,17 @@ The application name is a configuration you set to identify your application in 
 
 Replace `MY_APP_NAME` with your application name in one of these `Dockerfile` commands:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "125px" }}>
-        Option
-      </th>
+# Table
 
-      <th>
-        Command
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Environment variable
-      </td>
-
-      <td>
-        ```powershell
+| Option | Command |
+| - | - |
+| Environment variable | ```powershell
         ENV NEW_RELIC_APP_NAME="MY_APP_NAME"
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Java system property
-      </td>
-
-      <td>
-        ```powershell
+        ``` |
+| Java system property | ```powershell
         ENV JAVA_OPTS="$JAVA_OPTS -Dnewrelic.config.app_name='MY_APP_NAME'"
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 After you boot the container, your application name appears in New Relic.
 

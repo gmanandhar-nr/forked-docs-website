@@ -36,108 +36,17 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Bing Search metrics [#Azure-bing-search]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `BlockedCalls` | Number of calls that exceeded the rate or quota limit. |
+| `ClientErrors` | Number of calls with any client error (HTTP status code 4xx). |
+| `DataIn` | Incoming request Content-Length in bytes. |
+| `DataOut` | Outgoing response Content-Length in bytes. |
+| `Latency` | Latency in milliseconds. |
+| `ServerErrors` | Number of calls with any server error (HTTP status code 5xx). |
+| `SuccessfulCalls` | Number of successful calls (HTTP status code 2xx). |
+| `TotalCalls` | Total number of calls. |
+| `TotalErrors` | Number of calls with any error (HTTP status code 4xx or 5xx). |
 
-  <tbody>
-    <tr>
-      <td>
-        `BlockedCalls`
-      </td>
-
-      <td>
-        Number of calls that exceeded the rate or quota limit.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ClientErrors`
-      </td>
-
-      <td>
-        Number of calls with any client error (HTTP status code 4xx).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DataIn`
-      </td>
-
-      <td>
-        Incoming request Content-Length in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DataOut`
-      </td>
-
-      <td>
-        Outgoing response Content-Length in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Latency`
-      </td>
-
-      <td>
-        Latency in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ServerErrors`
-      </td>
-
-      <td>
-        Number of calls with any server error (HTTP status code 5xx).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SuccessfulCalls`
-      </td>
-
-      <td>
-        Number of successful calls (HTTP status code 2xx).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalCalls`
-      </td>
-
-      <td>
-        Total number of calls.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalErrors`
-      </td>
-
-      <td>
-        Number of calls with any error (HTTP status code 4xx or 5xx).
-      </td>
-    </tr>
-  </tbody>
-</table>

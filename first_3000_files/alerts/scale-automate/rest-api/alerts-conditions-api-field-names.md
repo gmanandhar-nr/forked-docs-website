@@ -150,57 +150,23 @@ Not every field listed in this glossary is required for every condition type. Th
       >
         The value specified in the [type](#type) field controls which of the parameters may be specified. The [type](#type) field and corresponding available <DNT>**parameter**</DNT> names are listed in the following table. Only one may be specified.
 
-        <table>
-          <thead>
-            <tr>
-              <th width={80}>
-                `type`
-              </th>
+        # Table
 
-              <th width={200}>
-                Parameter
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                apm_app_metric
-              </td>
-
-              <td>
-                * apdex
+| `type` | Parameter |
+| - | - |
+| apm_app_metric | * apdex
                 * error_percentage
                 * response_time_web
                 * response_time_background
                 * throughput_web
                 * throughput_background
-                * user_defined
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                apm_kt_metric
-              </td>
-
-              <td>
-                * apdex
+                * user_defined |
+| apm_kt_metric | * apdex
                 * error_percentage
                 * error_count
                 * response_time
-                * throughput
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                browser_metric
-              </td>
-
-              <td>
-                * end_user_apdex
+                * throughput |
+| browser_metric | * end_user_apdex
                 * total_page_load
                 * page_rendering
                 * web_application
@@ -211,40 +177,19 @@ Not every field listed in this glossary is required for every condition type. Th
                 * page_views_with_js_errors
                 * page_view_throughput
                 * ajax_throughput
-                * user_defined
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                browser_metric_baseline
-              </td>
-
-              <td>
-                * page_view_throughput
+                * user_defined |
+| browser_metric_baseline | * page_view_throughput
                 * average_response_time
                 * ajax_response_time
-                * ajax_application_time
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                mobile_metric
-              </td>
-
-              <td>
-                * database
+                * ajax_application_time |
+| mobile_metric | * database
                 * images
                 * json, network
                 * view_loading
                 * network_error_percentage
                 * status_error_percentage
-                * user_defined
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                * user_defined |
+
       </Collapser>
 
       <Collapser

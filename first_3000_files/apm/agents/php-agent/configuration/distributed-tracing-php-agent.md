@@ -143,39 +143,20 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
       >
         Here's an overview of the settings. For more help with configuration, see [PHP agent configuration](/docs/apm/agents/php-agent/configuration/php-agent-configuration).
 
-        <table>
-          <thead>
-            <tr>
-              <th style={{ width: "200px" }}>
-                Type
-              </th>
+        # Table
 
-              <th>
-                Required configuration
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                Infinite Tracing
-              </td>
-
-              <td>
-                Configuration options:
+| Type | Required configuration |
+| - | - |
+| Infinite Tracing | Configuration options:
 
                 * Configuration file (`newrelic.ini`):
 
                   ```ini
                   newrelic.distributed_tracing_enabled = true
                   newrelic.span_events_enabled = true
-                  newrelic.infinite_tracing.trace_observer.host= "<a href="/docs/understand-dependencies/distributed-tracing/infinite-tracing/set-trace-observer#ui-endpoints">YOUR_TRACE_OBSERVER_HOST</a>"
-                  ```
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  newrelic.infinite_tracing.trace_observer.host= "YOUR_TRACE_OBSERVER_HOST"
+                  ``` |
+
       </Collapser>
     </CollapserGroup>
 

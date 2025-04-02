@@ -33,45 +33,17 @@ This function allows an unsupported datastore to be instrumented in the same way
 
 ## Parameters [#para]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$callback`
 
-  <tbody>
-    <tr>
-      <td>
-        `$callback`
+        _callable_ | Required. The function that should be timed to create the datastore segment. |
+| `$parameters`
 
-        _callable_
-      </td>
+        _array_ | Required. An associative array of parameters describing the datastore call. |
 
-      <td>
-        Required. The function that should be timed to create the datastore segment.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$parameters`
-
-        _array_
-      </td>
-
-      <td>
-        Required. An associative array of parameters describing the datastore call.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The supported keys in the `$parameters` array are as follows:
 

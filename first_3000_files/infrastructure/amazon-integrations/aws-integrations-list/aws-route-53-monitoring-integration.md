@@ -58,78 +58,14 @@ For more on how to use your data, see [Understand integration data](/docs/infras
 
 New Relic supports the following Route 53 health check metrics. For more details on these metrics, see [Amazon's Route 53 documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/r53-metricscollected_shared.html).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "315px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `ChildHealthCheckHealthyCount` | For a calculated health check, the number of health checks that are healthy among the health checks that Amazon Route 53 is monitoring. |
+| `ConnectionTime` | The average time, in milliseconds, that it took Amazon Route 53 health checkers to establish a TCP connection with the endpoint. You can view `ConnectionTime` for a health check either across all regions or for a selected geographic region. |
+| `HealthCheckPercentageHealthy` | The percentage of Amazon Route 53 health checkers that consider the selected endpoint to be healthy. You can view `HealthCheckPercentageHealthy` only across all regions; data is not available for a selected region. |
+| `HealthCheckStatus` | The status of the health check endpoint that CloudWatch is checking. **1** indicates healthy, and **0** indicates unhealthy. You can view `HealthCheckStatus` only across all regions; data is not available for a selected region. |
+| `SSLHandshakeTime` | The average time, in milliseconds, that it took Amazon Route 53 health checkers to complete the SSL handshake. You can view `SSLHandshakeTime` for a health check either across all regions or for a selected geographic region. |
+| `TimeToFirstByte` | The average time, in milliseconds, that it took Amazon Route 53 health checkers to receive the first byte of the response to an HTTP or HTTPS request. You can view `TimeToFirstByte` for a health check either across all regions or for a selected geographic region. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ChildHealthCheckHealthyCount`
-      </td>
-
-      <td>
-        For a calculated health check, the number of health checks that are healthy among the health checks that Amazon Route 53 is monitoring.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ConnectionTime`
-      </td>
-
-      <td>
-        The average time, in milliseconds, that it took Amazon Route 53 health checkers to establish a TCP connection with the endpoint. You can view `ConnectionTime` for a health check either across all regions or for a selected geographic region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HealthCheckPercentageHealthy`
-      </td>
-
-      <td>
-        The percentage of Amazon Route 53 health checkers that consider the selected endpoint to be healthy. You can view `HealthCheckPercentageHealthy` only across all regions; data is not available for a selected region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HealthCheckStatus`
-      </td>
-
-      <td>
-        The status of the health check endpoint that CloudWatch is checking. <DNT>**1**</DNT> indicates healthy, and <DNT>**0**</DNT> indicates unhealthy. You can view `HealthCheckStatus` only across all regions; data is not available for a selected region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SSLHandshakeTime`
-      </td>
-
-      <td>
-        The average time, in milliseconds, that it took Amazon Route 53 health checkers to complete the SSL handshake. You can view `SSLHandshakeTime` for a health check either across all regions or for a selected geographic region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TimeToFirstByte`
-      </td>
-
-      <td>
-        The average time, in milliseconds, that it took Amazon Route 53 health checkers to receive the first byte of the response to an HTTP or HTTPS request. You can view `TimeToFirstByte` for a health check either across all regions or for a selected geographic region.
-      </td>
-    </tr>
-  </tbody>
-</table>

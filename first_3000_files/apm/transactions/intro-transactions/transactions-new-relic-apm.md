@@ -47,41 +47,13 @@ Our agents have these transaction sub-types:
     id="agent-java"
     title="Java"
   >
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Sub-type
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
+| Sub-type | Description |
+| - | - |
+| Custom | The execution of the named custom transaction. Usually recorded via manual instrumentation APIs. |
+| `framework` | The invocation of a framework that is recognized by the agent. |
 
-      <tbody>
-        <tr>
-          <td>
-            Custom
-          </td>
-
-          <td>
-            The execution of the named custom transaction. Usually recorded via manual instrumentation APIs.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `framework`
-          </td>
-
-          <td>
-            The invocation of a framework that is recognized by the agent.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

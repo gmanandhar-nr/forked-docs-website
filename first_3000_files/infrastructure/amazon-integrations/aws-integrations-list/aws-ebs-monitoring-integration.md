@@ -52,104 +52,22 @@ This New Relic infrastructure integration collects the following Amazon EBS data
   For full descriptions of each metric, see [Amazon's EBS Dimensions and Metrics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ebs-metricscollected.html).
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        Name
-      </th>
+# Table
 
-      <th width={100}>
-        Data type
-      </th>
-    </tr>
-  </thead>
+| Name | Data type |
+| - | - |
+| `volumeReadBytes`
 
-  <tbody>
-    <tr>
-      <td>
-        `volumeReadBytes`
+        `volumeWriteBytes` | bytes |
+| `volumeReadOps`
 
-        `volumeWriteBytes`
-      </td>
+        `volumeWriteOps` | integer/count |
+| `volumeTotalReadTime`
 
-      <td>
-        bytes
-      </td>
-    </tr>
+        `volumeTotalWriteTime` | seconds |
+| `volumeIdleTime` | seconds |
+| `volumeQueueLength` | integer/count |
+| `volumeThroughputPercentage` | percent |
+| `volumeConsumedReadWriteOps` | count |
+| `burstBalance` | percent |
 
-    <tr>
-      <td>
-        `volumeReadOps`
-
-        `volumeWriteOps`
-      </td>
-
-      <td>
-        integer/count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `volumeTotalReadTime`
-
-        `volumeTotalWriteTime`
-      </td>
-
-      <td>
-        seconds
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `volumeIdleTime`
-      </td>
-
-      <td>
-        seconds
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `volumeQueueLength`
-      </td>
-
-      <td>
-        integer/count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `volumeThroughputPercentage`
-      </td>
-
-      <td>
-        percent
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `volumeConsumedReadWriteOps`
-      </td>
-
-      <td>
-        count
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `burstBalance`
-      </td>
-
-      <td>
-        percent
-      </td>
-    </tr>
-  </tbody>
-</table>

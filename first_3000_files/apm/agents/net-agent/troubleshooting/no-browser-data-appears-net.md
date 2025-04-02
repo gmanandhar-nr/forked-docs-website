@@ -36,54 +36,22 @@ To troubleshoot missing data:
 
 Here are some additional troubleshooting tips:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Browser problems**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Additional troubleshooting tips for .NET agent**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        IIS exception error
-      </td>
-
-      <td>
-        With IIS, you may receive an `InvalidOperationException` that states:
+| **Browser problems** | **Additional troubleshooting tips for .NET agent** |
+| - | - |
+| IIS exception error | With IIS, you may receive an `InvalidOperationException` that states:
 
         ```
         Post cache substitution is not compatible with modules in the IIS integrated pipeline that modify the response buffers.
         ```
 
-        To solve this problem, you must manually implement the browser agent: Set `browserMonitoring` to `false` in `newrelic.config`, and follow the [manual instrumentation procedures](/docs/agents/net-agent/features/page-load-timing-net#manual_instrumentation).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Razor framework error
-      </td>
-
-      <td>
-        With the Razor framework, you may encounter the following message:
+        To solve this problem, you must manually implement the browser agent: Set `browserMonitoring` to `false` in `newrelic.config`, and follow the [manual instrumentation procedures](/docs/agents/net-agent/features/page-load-timing-net#manual_instrumentation). |
+| Razor framework error | With the Razor framework, you may encounter the following message:
 
         ```
         Parser Error Message: "").pop().split("" is not valid at the start of a code block. Only identifiers, keywords, comments, "(" and "{" are valid.
         ```
 
-        To solve this problem, follow the [browser troubleshooting procedures for Razor frameworks](/docs/browser/new-relic-browser/troubleshooting/troubleshooting-browser-monitoring-installation#dotnet_razor).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        To solve this problem, follow the [browser troubleshooting procedures for Razor frameworks](/docs/browser/new-relic-browser/troubleshooting/troubleshooting-browser-monitoring-installation#dotnet_razor). |
+

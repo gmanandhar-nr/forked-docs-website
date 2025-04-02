@@ -36,67 +36,14 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 You can [query and explore your data](/docs/using-new-relic/data/understand-data/query-new-relic-data) using the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Cluster | `AwsDocDbClusterSample` | `AwsDocDbCluster` |
+| ClusterByRole | `AwsDocDbClusterByRoleSample` | `AwsDocDbClusterByRole` |
+| Instance | `AwsDocDbInstanceSample` | `AwsDocDbInstance` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Cluster
-      </td>
-
-      <td>
-        `AwsDocDbClusterSample`
-      </td>
-
-      <td>
-        `AwsDocDbCluster`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        ClusterByRole
-      </td>
-
-      <td>
-        `AwsDocDbClusterByRoleSample`
-      </td>
-
-      <td>
-        `AwsDocDbClusterByRole`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Instance
-      </td>
-
-      <td>
-        `AwsDocDbInstanceSample`
-      </td>
-
-      <td>
-        `AwsDocDbInstance`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

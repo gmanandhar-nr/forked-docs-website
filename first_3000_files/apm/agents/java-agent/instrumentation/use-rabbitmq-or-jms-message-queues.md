@@ -44,59 +44,13 @@ The Java agent of New Relic shows messages sent and received using the RabbitMQ 
 
 Supported entry points for queue operations appear as `Put` (publish a message) or `Take` (receive a message) in APM's user interface.
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **Queue operations**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Publish a message (`Put` in UI)**
-        </DNT>
-      </th>
+| **Queue operations** | **Publish a message (`Put` in UI)** | **Receive a message (`Take` in UI)** |
+| - | - | - |
+| RabbitMQ | `basicPublish` | `basicGet`, `nextDelivery`, and `handleDelivery` |
+| JMS | `send` | `receive`, `receiveNoWait`, and `onMessage` |
 
-      <th>
-        <DNT>
-          **Receive a message (`Take` in UI)**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        RabbitMQ
-      </td>
-
-      <td>
-        `basicPublish`
-      </td>
-
-      <td>
-        `basicGet`, `nextDelivery`, and `handleDelivery`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        JMS
-      </td>
-
-      <td>
-        `send`
-      </td>
-
-      <td>
-        `receive`, `receiveNoWait`, and `onMessage`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View message queue operations [#view-queue]
 

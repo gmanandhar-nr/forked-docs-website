@@ -90,121 +90,15 @@ The Trace API JSON payload is an array of objects, with each object representing
 
 ### The Span object in the `spans` array
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "180px" }}>
-        field
-      </th>
+# Table
 
-      <th>
-        type
-      </th>
+| field | type | description | required | default |
+| - | - | - | - | - |
+| `id` | _string_ | Unique identifier for this span. | yes | N/A |
+| `trace.id` | _string_ | Unique identifier shared by all spans within a single trace. | yes | N/A |
+| `timestamp` | _long_ | Span start time in [milliseconds since the Unix epoch](https://currentmillis.com/). | no | Current time in UTC time zone |
+| `attributes` | _object_ | Any set of key: value pairs that add more details about a span. `duration.ms` is required, and the `name`, and `parent.id` attributes are strongly recommended to add. | yes | N/A |
 
-      <th>
-        description
-      </th>
-
-      <th>
-        required
-      </th>
-
-      <th>
-        default
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `id`
-      </td>
-
-      <td>
-        _string_
-      </td>
-
-      <td>
-        Unique identifier for this span.
-      </td>
-
-      <td>
-        yes
-      </td>
-
-      <td>
-        N/A
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `trace.id`
-      </td>
-
-      <td>
-        _string_
-      </td>
-
-      <td>
-        Unique identifier shared by all spans within a single trace.
-      </td>
-
-      <td>
-        yes
-      </td>
-
-      <td>
-        N/A
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `timestamp`
-      </td>
-
-      <td>
-        _long_
-      </td>
-
-      <td>
-        Span start time in [milliseconds since the Unix epoch](https://currentmillis.com/).
-      </td>
-
-      <td>
-        no
-      </td>
-
-      <td>
-        Current time in UTC time zone
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `attributes`
-      </td>
-
-      <td>
-        _object_
-      </td>
-
-      <td>
-        Any set of key: value pairs that add more details about a span. `duration.ms` is required, and the `name`, and `parent.id` attributes are strongly recommended to add.
-      </td>
-
-      <td>
-        yes
-      </td>
-
-      <td>
-        N/A
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Requests without the required keys above will be rejected, and an [`NrIntegrationError`](/docs/apm/distributed-tracing/trace-api/trace-api-general-requirements-limits#response-validation) will be generated.
 

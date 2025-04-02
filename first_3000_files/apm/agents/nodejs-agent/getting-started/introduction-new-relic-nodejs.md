@@ -41,65 +41,20 @@ To install our agent, you need to [sign up for New Relic](https://newrelic.com/s
 
 After installing the Node.js agent, extend your instrumentation:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Extend your instrumentation
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Customization
-      </td>
-
-      <td>
-        * Implement [Node.js custom instrumentation](/docs/agents/nodejs-agent/supported-features/nodejs-custom-instrumentation).
+| Extend your instrumentation | Comments |
+| - | - |
+| Customization | * Implement [Node.js custom instrumentation](/docs/agents/nodejs-agent/supported-features/nodejs-custom-instrumentation).
         * [Collect custom metrics via an API call](/docs/agents/nodejs-agent/supported-features/nodejs-custom-metrics).
         * Use our [Node.js agent API](/docs/agents/nodejs-agent/supported-features/nodejs-agent-api) to control, customize, or extend the agent's functionality.
-        * Browse our [example applications](https://github.com/newrelic/newrelic-node-examples) to see various out of the box and custom instrumentation in action.
-      </td>
-    </tr>
+        * Browse our [example applications](https://github.com/newrelic/newrelic-node-examples) to see various out of the box and custom instrumentation in action. |
+| Extend Instrumentation |
+| VM measurements | * Collect [key metric timeslice data](/docs/agents/nodejs-agent/supported-features/node-vm-measurements) from the Node.js virtual machine.
+        * [View detailed VM statistics](/docs/agents/nodejs-agent/supported-features/node-vms-statistics-page) in the New Relic UI. |
+| End-user activity | * Integrate the Node.js agent with [](/docs/browser/new-relic-browser/getting-started/new-relic-browser).
+        * Gain visibility into user activity with [browser monitoring's page load timing process](/docs/agents/nodejs-agent/supported-features/page-load-timing-nodejs). |
 
-    <tr>
-      <td>
-        Extend Instrumentation
-      </td>
-
-      The Node.js agent auto-instruments many different [3rd party packages](/docs/apm/agents/nodejs-agent/getting-started/compatibility-requirements-nodejs-agent/#instrumented-modules). However there are two other modules that are needed if you want telemetry for [Apollo Server](https://github.com/newrelic/newrelic-node-apollo-server-plugin/blob/abfb3ede982169c4e1b1bcf9974ff3f6b01c68ea/README.md) and [Next.js](https://github.com/newrelic/newrelic-node-nextjs/blob/ea20b76a13c84f4f3c48e9544e18e568b8e41c33/README.md).
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        VM measurements
-      </td>
-
-      <td>
-        * Collect [key metric timeslice data](/docs/agents/nodejs-agent/supported-features/node-vm-measurements) from the Node.js virtual machine.
-        * [View detailed VM statistics](/docs/agents/nodejs-agent/supported-features/node-vms-statistics-page) in the New Relic UI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        End-user activity
-      </td>
-
-      <td>
-        * Integrate the Node.js agent with [<InlinePopover type="browser"/>](/docs/browser/new-relic-browser/getting-started/new-relic-browser).
-        * Gain visibility into user activity with [browser monitoring's page load timing process](/docs/agents/nodejs-agent/supported-features/page-load-timing-nodejs).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View logs for your APM and infrastructure data [#logs-context]
 

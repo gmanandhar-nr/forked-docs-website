@@ -9,121 +9,21 @@ freshnessValidatedDate: 2024-04-29
 
 Use the commands below to set up your Nerdpacks. You can click on any command to see its usage options and additional details about the command.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Command
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Command | Description |
+| - | - |
+| [`nr1 nerdpack:build`](#nr1-nerdpackbuild) | Builds a Nerdpack |
+| [`nr1 nerdpack:clean`](#nr1-nerdpackclean) | Removes all built artifacts. |
+| [`nr1 nerdpack:clone`](#nr1-nerdpackclone) | Clones a Nerdpack from a git repository |
+| [`nr1 nerdpack:info`](#nr1-nerdpackinfo) | Shows the state of your Nerdpack in the New Relic's registry |
+| [`nr1 nerdpack:publish`](#nr1-nerdpackpublish) | Publish this Nerdpack |
+| [`nr1 nerdpack:serve`](#nr1-nerdpackserve) | Serves your Nerdpack for testing and development purposes |
+| [`nr1 nerdpack:tag`](#nr1-nerdpacktag) | Tags a specific Nerdpack version |
+| [`nr1 nerdpack:untag`](#nr1-nerdpackuntag) | Removes a tag from the registry |
+| [`nr1 nerdpack:uuid`](#nr1-nerdpackuuid) | Shows or regenerates the UUID of a Nerdpack |
+| [`nr1 nerdpack:validate`](#nr1-nerdpackvalidate) | Validates artifacts inside your Nerdpack |
 
-  <tbody>
-    <tr>
-      <td>
-        [`nr1 nerdpack:build`](#nr1-nerdpackbuild)
-      </td>
-
-      <td>
-        Builds a Nerdpack
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nerdpack:clean`](#nr1-nerdpackclean)
-      </td>
-
-      <td>
-        Removes all built artifacts.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nerdpack:clone`](#nr1-nerdpackclone)
-      </td>
-
-      <td>
-        Clones a Nerdpack from a git repository
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nerdpack:info`](#nr1-nerdpackinfo)
-      </td>
-
-      <td>
-        Shows the state of your Nerdpack in the New Relic's registry
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nerdpack:publish`](#nr1-nerdpackpublish)
-      </td>
-
-      <td>
-        Publish this Nerdpack
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nerdpack:serve`](#nr1-nerdpackserve)
-      </td>
-
-      <td>
-        Serves your Nerdpack for testing and development purposes
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nerdpack:tag`](#nr1-nerdpacktag)
-      </td>
-
-      <td>
-        Tags a specific Nerdpack version
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nerdpack:untag`](#nr1-nerdpackuntag)
-      </td>
-
-      <td>
-        Removes a tag from the registry
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nerdpack:uuid`](#nr1-nerdpackuuid)
-      </td>
-
-      <td>
-        Shows or regenerates the UUID of a Nerdpack
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 nerdpack:validate`](#nr1-nerdpackvalidate)
-      </td>
-
-      <td>
-        Validates artifacts inside your Nerdpack
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## `nr1 nerdpack:build` [#nr1-nerdpackbuild]
 

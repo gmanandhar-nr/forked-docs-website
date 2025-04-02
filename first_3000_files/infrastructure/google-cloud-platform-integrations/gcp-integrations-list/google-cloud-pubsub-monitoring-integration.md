@@ -39,131 +39,22 @@ To view [metric data](/docs/telemetry-data-platform/understand-data/new-relic-da
 
 Query `GcpPubSubTopicSample` events in New Relic to view data for the following attributes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "400px" }}>
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Attribute | Description |
+| - | - |
+| `topic.ByteCost` | Cost of operations, measured in bytes. This is used to measure utilization for quotas. |
+| `topic.ConfigUpdates` | Cumulative count of configuration changes, grouped by operation type and result. |
+| `topic.MessageSizes` | Distribution of publish message sizes (in bytes). |
+| `topic.NumRetainedAckedMessagesByRegion` | Number of acknowledged messages retained in a topic, broken down by Cloud region. |
+| `topic.NumUnackedMessagesByRegion` | Number of unacknowledged messages in a topic, broken down by Cloud region. |
+| `topic.OldestRetainedAckedMessageAgeByRegion` | Age (in seconds) of the oldest acknowledged message retained in a topic, broken down by Cloud region. |
+| `topic.OldestUnackedMessageAgeByRegion` | Age (in seconds) of the oldest unacknowledged message in a topic, broken down by Cloud region. |
+| `topic.RetainedAckedBytesByRegion` | Total byte size of the acknowledged messages retained in a topic, broken down by Cloud region. |
+| `topic.SendMessageOperation` | Cumulative count of publish message operations. |
+| `topic.SendRequest` | Cumulative count of publish requests. |
+| `topic.UnackedBytesByRegion` | Total byte size of the unacknowledged messages in a topic, broken down by Cloud region. |
 
-  <tbody>
-    <tr>
-      <td>
-        `topic.ByteCost`
-      </td>
-
-      <td>
-        Cost of operations, measured in bytes. This is used to measure utilization for quotas.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.ConfigUpdates`
-      </td>
-
-      <td>
-        Cumulative count of configuration changes, grouped by operation type and result.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.MessageSizes`
-      </td>
-
-      <td>
-        Distribution of publish message sizes (in bytes).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.NumRetainedAckedMessagesByRegion`
-      </td>
-
-      <td>
-        Number of acknowledged messages retained in a topic, broken down by Cloud region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.NumUnackedMessagesByRegion`
-      </td>
-
-      <td>
-        Number of unacknowledged messages in a topic, broken down by Cloud region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.OldestRetainedAckedMessageAgeByRegion`
-      </td>
-
-      <td>
-        Age (in seconds) of the oldest acknowledged message retained in a topic, broken down by Cloud region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.OldestUnackedMessageAgeByRegion`
-      </td>
-
-      <td>
-        Age (in seconds) of the oldest unacknowledged message in a topic, broken down by Cloud region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.RetainedAckedBytesByRegion`
-      </td>
-
-      <td>
-        Total byte size of the acknowledged messages retained in a topic, broken down by Cloud region.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.SendMessageOperation`
-      </td>
-
-      <td>
-        Cumulative count of publish message operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.SendRequest`
-      </td>
-
-      <td>
-        Cumulative count of publish requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `topic.UnackedBytesByRegion`
-      </td>
-
-      <td>
-        Total byte size of the unacknowledged messages in a topic, broken down by Cloud region.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### GcpPubSubSubscriptionSample [#gcp-app-engine-service-sample]
 

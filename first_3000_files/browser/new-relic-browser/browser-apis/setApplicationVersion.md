@@ -47,35 +47,16 @@ Setting the `application.version` attribute will help you identify which version
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `value`
 
-  <tbody>
-    <tr>
-      <td>
-        `value`
+        _string_ OR _null_ | Required. A string representing the web application's version, useful for tying all browser events to specific release tags. The `value` parameter does not have to be unique. If IDs should be unique, the caller is responsible for that validation.
 
-        _string_ OR _null_
-      </td>
+        Passing a `null` value unsets any existing application version. |
 
-      <td>
-        Required. A string representing the web application's version, useful for tying all browser events to specific release tags. The `value` parameter does not have to be unique. If IDs should be unique, the caller is responsible for that validation.
-
-        Passing a `null` value unsets any existing application version.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

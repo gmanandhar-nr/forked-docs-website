@@ -684,106 +684,20 @@ The agent follows these rules when determining which attributes to include or ex
 
 The following configuration settings have been deprecated. Switch to the new attributes configuration for these settings when upgrading your Python agent.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Deprecated setting**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **New setting**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Deprecated setting** | **New setting** |
+| - | - |
+| `capture_params` | `attributes.include = request.parameters.*`
 
-  <tbody>
-    <tr>
-      <td>
-        `capture_params`
-      </td>
+        By default, request parameters are not sent. Add `request.parameters.*` to the `attributes.include` list to turn on all request parameters. The `capture_params` property has been deprecated. |
+| `ignored_params` | `attributes.exclude = request.parameters.{name}`
 
-      <td>
-        `attributes.include = request.parameters.*`
+        Add each request parameter key to the `attributes.exclude` list. Be sure to prepend the key with `request.parameters`. The `ignored_params` property has been deprecated. |
+| `analytics_events.enabled` | `transaction_events.enabled` |
+| `analytics_events.capture_attributes` | `transaction_events.capture_attributes` |
+| `analytics_events.max_samples_stored` | `transaction_events.max_samples_stored` |
+| `browser_monitoring.capture_attributes` | `browser_monitoring.attributes.enabled` |
+| `error_collector.capture_attributes` | `error_collector.attributes.enabled` |
+| `transaction_tracer.capture_attributes` | `transaction_tracer.attributes.enabled` |
 
-        By default, request parameters are not sent. Add `request.parameters.*` to the `attributes.include` list to turn on all request parameters. The `capture_params` property has been deprecated.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ignored_params`
-      </td>
-
-      <td>
-        `attributes.exclude = request.parameters.{name}`
-
-        Add each request parameter key to the `attributes.exclude` list. Be sure to prepend the key with `request.parameters`. The `ignored_params` property has been deprecated.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `analytics_events.enabled`
-      </td>
-
-      <td>
-        `transaction_events.enabled`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `analytics_events.capture_attributes`
-      </td>
-
-      <td>
-        `transaction_events.capture_attributes`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `analytics_events.max_samples_stored`
-      </td>
-
-      <td>
-        `transaction_events.max_samples_stored`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `browser_monitoring.capture_attributes`
-      </td>
-
-      <td>
-        `browser_monitoring.attributes.enabled`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `error_collector.capture_attributes`
-      </td>
-
-      <td>
-        `error_collector.attributes.enabled`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `transaction_tracer.capture_attributes`
-      </td>
-
-      <td>
-        `transaction_tracer.attributes.enabled`
-      </td>
-    </tr>
-  </tbody>
-</table>

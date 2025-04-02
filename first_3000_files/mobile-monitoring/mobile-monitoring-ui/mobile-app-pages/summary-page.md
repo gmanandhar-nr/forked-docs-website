@@ -30,73 +30,18 @@ The Summary page provides an operational snapshot of your mobile app. All charts
 
 The Summary page captures five key performance metrics:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| Application crash rate | Number of crashed sessions over time as a percentage of all sessions, broken out by app version. The average crashed session percent, total number of crashes, and count of unique users affected by those crashes during the time window is shown in the upper right. |
+| App launches | Number of app session launches monitored over the time window.
 
-  <tbody>
-    <tr>
-      <td>
-        Application crash rate
-      </td>
+        An app launch is defined by the length of time between the app loading on a screen and when the app is sent to the background. |
+| HTTP errors (network failures) | Number of network requests that result in a `http status code error` (`400` or higher) as a percentage of all completed requests, and the number of `failed network calls` (for example, a connection failure) as a percentage of completed requests. |
+| HTTP response time | Average response time of all completed http requests from each of the top five hosts your app communicates with. The top five hosts are calculated based on count of completed requests to each host. |
+| Frequent interactions | Five most commonly executed user interactions in your app. |
 
-      <td>
-        Number of crashed sessions over time as a percentage of all sessions, broken out by app version. The average crashed session percent, total number of crashes, and count of unique users affected by those crashes during the time window is shown in the upper right.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        App launches
-      </td>
-
-      <td>
-        Number of app session launches monitored over the time window.
-
-        An app launch is defined by the length of time between the app loading on a screen and when the app is sent to the background.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        HTTP errors (network failures)
-      </td>
-
-      <td>
-        Number of network requests that result in a `http status code error` (`400` or higher) as a percentage of all completed requests, and the number of `failed network calls` (for example, a connection failure) as a percentage of completed requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        HTTP response time
-      </td>
-
-      <td>
-        Average response time of all completed http requests from each of the top five hosts your app communicates with. The top five hosts are calculated based on count of completed requests to each host.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Frequent interactions
-      </td>
-
-      <td>
-        Five most commonly executed user interactions in your app.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View the Summary page [#summary-page]
 

@@ -10,112 +10,15 @@ The following are the specific policies and dates for support of our Ruby agent.
 
 Any versions not listed in the following table are no longer supported. Please [update your Ruby agent version](/docs/apm/agents/ruby-agent/installation/update-ruby-agent) to the [latest release](/docs/release-notes/agent-release-notes/ruby-release-notes/).
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        [Ruby agent release](/docs/release-notes/agent-release-notes/ruby-release-notes/)
-      </th>
+# Table
 
-      <th>
-        Start date
-      </th>
+| [Ruby agent release](/docs/release-notes/agent-release-notes/ruby-release-notes/) | Start date | End date |
+| - | - | - |
+| 9.x | 2.4.0 |
+| 8.x | 2.2.0 |
+| 7.x | 2.0.0 |
+| 6.x | 2.0.0 |
+| 5.x | 2.0.0 |
+| 4.x | 2.0.0 |
+| 3.x | 1.8.7 |
 
-      <th>
-        End date
-      </th>
-    </tr>
-  </thead>
-
-  <EolPage agent="ruby"/>
-</table>
-
-## Ruby runtimes [#ruby-runtimes]
-
-The latest version of the New Relic Ruby agent may support a Ruby version outside the [Ruby Maintenance Branches policy](https://www.ruby-lang.org/en/downloads/branches/) set by the Ruby Core community. Support for older Rubies is often dropped during a major agent version release.
-
-<table>
-  <thead>
-    <tr>
-      <th>
-        New Relic Ruby agent version
-      </th>
-
-      <th>
-        Min Ruby version
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        9.x
-      </td>
-
-      <td>
-        2.4.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        8.x
-      </td>
-
-      <td>
-        2.2.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        7.x
-      </td>
-
-      <td>
-        2.0.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        6.x
-      </td>
-
-      <td>
-        2.0.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        5.x
-      </td>
-
-      <td>
-        2.0.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        4.x
-      </td>
-
-      <td>
-        2.0.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        3.x
-      </td>
-
-      <td>
-        1.8.7
-      </td>
-    </tr>
-  </tbody>
-</table>

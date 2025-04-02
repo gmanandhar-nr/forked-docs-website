@@ -122,108 +122,22 @@ To enable the query level monitoring feature, follow these steps:
     id="blockingSession"
     title="Blocking session metrics"
   >
-    <table>
-      <thead>
-      <tr>
-        <th>
-          Metric
-        </th>
-        <th>
-          Description
-        </th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>
-          `blocking_spid`
-        </td>
-        <td>
-          The ID of the blocking session.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `blocking_status`
-        </td>
-        <td>
-          The status of the blocking session.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `blocked_spid`
-        </td>
-        <td>
-          The ID of the blocked session.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `blocked_status`
-        </td>
-        <td>
-          The status of the blocked session.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `wait_type`
-        </td>
-        <td>
-          The type of wait experienced by the blocked session.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `wait_time_in_seconds`
-        </td>
-        <td>
-          The time the session has been waiting in seconds.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `command_type`
-        </td>
-        <td>
-          The type of command being performed.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `database_name`
-        </td>
-        <td>
-          The name of the database where the blocking is occurring.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `blocking_query_text`
-        </td>
-        <td>
-          The text of the query causing the block.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `blocked_query_text`
-        </td>
-        <td>
-          The text of the query being blocked.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          `blocked_query_start_time`
-        </td>
-        <td>
-          The start time of the blocked query.
-        </td>
-      </tr>
-      </tbody>
-    </table>
+    # Table
+
+| Metric | Description |
+| - | - |
+| `blocking_spid` | The ID of the blocking session. |
+| `blocking_status` | The status of the blocking session. |
+| `blocked_spid` | The ID of the blocked session. |
+| `blocked_status` | The status of the blocked session. |
+| `wait_type` | The type of wait experienced by the blocked session. |
+| `wait_time_in_seconds` | The time the session has been waiting in seconds. |
+| `command_type` | The type of command being performed. |
+| `database_name` | The name of the database where the blocking is occurring. |
+| `blocking_query_text` | The text of the query causing the block. |
+| `blocked_query_text` | The text of the query being blocked. |
+| `blocked_query_start_time` | The start time of the blocked query. |
+
   </Collapser>
   <Collapser
     id="executionPlan"

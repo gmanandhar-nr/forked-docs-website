@@ -31,81 +31,26 @@ If you call `initialize` with no arguments, you must have already specified your
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `config_file`
 
-  <tbody>
-    <tr>
-      <td>
-        `config_file`
+        _string_ | Optional. The path to the agent config file. If you supply a configuration file, you can override elements of that config file with the optional `environment` parameter. |
+| `environment`
 
-        _string_
-      </td>
+        _string_ | Optional. Indicates the name of the environment. If you are using a configuration file, you can override the settings in that file with `environment`. |
+| `ignore_errors`
 
-      <td>
-        Optional. The path to the agent config file. If you supply a configuration file, you can override elements of that config file with the optional `environment` parameter.
-      </td>
-    </tr>
+        _boolean_ | Optional. Indicates whether to ignore startup errors. Default is `True`. |
+| `log_file`
 
-    <tr>
-      <td>
-        `environment`
+        _string_ | Optional. Path to the agent log file. Also accepts `stdout` and `stderr` (same as the [`log_file`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#log_file) option in the config file). |
+| `log_level`
 
-        _string_
-      </td>
+        _int_ or applicable logging parameter type | Optional. Sets the logging level. The agent uses [Python's logging module](https://docs.python.org/3.12/library/logging.html#logging-levels). Options are the same as for the [`log_level`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#log_level) option in config file. |
 
-      <td>
-        Optional. Indicates the name of the environment. If you are using a configuration file, you can override the settings in that file with `environment`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ignore_errors`
-
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Indicates whether to ignore startup errors. Default is `True`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `log_file`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. Path to the agent log file. Also accepts `stdout` and `stderr` (same as the [`log_file`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#log_file) option in the config file).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `log_level`
-
-        _int_ or applicable logging parameter type
-      </td>
-
-      <td>
-        Optional. Sets the logging level. The agent uses [Python's logging module](https://docs.python.org/3.12/library/logging.html#logging-levels). Options are the same as for the [`log_level`](/docs/agents/python-agent/installation-configuration/python-agent-configuration#log_level) option in config file.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

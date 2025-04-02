@@ -13,90 +13,17 @@ freshnessValidatedDate: never
 
 We love open-source software, and use the following in the New Relic Node.js agent. Thank you, open-source community, for making these fine tools! Some of these are listed under multiple software licenses, and in that case we have listed the license we've chosen to use.
 
-<table>
-  <thead>
-    <tr>
-      <th width={250}>
-        **Library**
-      </th>
+# Table
 
-      <th>
-        **License**
-      </th>
-    </tr>
-  </thead>
+| **Library** | **License** |
+| - | - |
+| [concat-stream](https://www.npmjs.com/package/concat-stream) | [MIT](http://opensource.org/licenses/MIT) |
+| [https-proxy-agent](https://www.npmjs.com/package/https-proxy-agent) | [MIT](http://opensource.org/licenses/MIT) |
+| [json-stringify-safe](https://www.npmjs.org/package/json-stringify-safe) | [ISC](http://opensource.org/licenses/ISC) |
+| [readable-stream](https://www.npmjs.com/package/readable-stream) | [MIT](http://opensource.org/licenses/MIT) |
+| [semver](https://npmjs.org/package/semver) | [ISC](http://opensource.org/licenses/ISC) |
+| [async](http://github.com/caolan/async) | [MIT](http://opensource.org/licenses/MIT) |
+| [fibonacci-heap](https://github.com/gwtw/ts-fibonacci-heap) | [MIT](http://opensource.org/licenses/MIT) |
 
-  <tbody>
-    <tr>
-      <td>
-        [concat-stream](https://www.npmjs.com/package/concat-stream)
-      </td>
-
-      <td>
-        [MIT](http://opensource.org/licenses/MIT)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [https-proxy-agent](https://www.npmjs.com/package/https-proxy-agent)
-      </td>
-
-      <td>
-        [MIT](http://opensource.org/licenses/MIT)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [json-stringify-safe](https://www.npmjs.org/package/json-stringify-safe)
-      </td>
-
-      <td>
-        [ISC](http://opensource.org/licenses/ISC)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [readable-stream](https://www.npmjs.com/package/readable-stream)
-      </td>
-
-      <td>
-        [MIT](http://opensource.org/licenses/MIT)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [semver](https://npmjs.org/package/semver)
-      </td>
-
-      <td>
-        [ISC](http://opensource.org/licenses/ISC)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [async](http://github.com/caolan/async)
-      </td>
-
-      <td>
-        [MIT](http://opensource.org/licenses/MIT)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [fibonacci-heap](https://github.com/gwtw/ts-fibonacci-heap)
-      </td>
-
-      <td>
-        [MIT](http://opensource.org/licenses/MIT)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Remaining code in versions prior to v6.11.0 is licensed under the [New Relic agent license agreement](/docs/licenses/license-information/other-licenses/new-relic-agent-license). License terms for v6.11.0 and later can be found on [GitHub](https://github.com/newrelic/node-newrelic/blob/main/LICENSE).

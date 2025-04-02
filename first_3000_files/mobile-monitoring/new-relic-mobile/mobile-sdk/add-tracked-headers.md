@@ -65,39 +65,12 @@ NewRelic.addHTTPHeadersTrackingFor(List<String> headers)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width="30%">
-              Parameter
-            </th>
+      # Table
 
-            <th width="30%">
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$headers` | `List` | Required. The HTTP header fields to be added. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$headers`
-            </td>
-
-            <td>
-              `List<String>`
-            </td>
-
-            <td>
-              Required. The HTTP header fields to be added.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Return values [#return-values]
 

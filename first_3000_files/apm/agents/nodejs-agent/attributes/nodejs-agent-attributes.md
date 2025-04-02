@@ -170,95 +170,16 @@ Use the following configuration properties along with the [attribute rules](#att
     id="cfg-attributes-enabled"
     title={<>destination.attributes.enabled</>}
   >
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Destination
-          </th>
+    # Table
 
-          <th style={{ width: "400px" }}>
-            Configuration option
-          </th>
+| Destination | Configuration option | Default |
+| - | - | - |
+| All | [`attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#attributes_enabled) | True |
+| Transaction traces | [`transaction_tracer.attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#tracer_enabled) | True |
+| Error analytics | [`error_collector.attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#error_collector) | True |
+| APM events | [`transaction_events.attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#tx_events_enabled) | True |
+| Browser events | [`browser_monitoring.attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#browser) | False |
 
-          <th>
-            Default
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            All
-          </td>
-
-          <td>
-            [`attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#attributes_enabled)
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Transaction traces
-          </td>
-
-          <td>
-            [`transaction_tracer.attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#tracer_enabled)
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Error analytics
-          </td>
-
-          <td>
-            [`error_collector.attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#error_collector)
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            APM events
-          </td>
-
-          <td>
-            [`transaction_events.attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#tx_events_enabled)
-          </td>
-
-          <td>
-            True
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Browser events
-          </td>
-
-          <td>
-            [`browser_monitoring.attributes.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#browser)
-          </td>
-
-          <td>
-            False
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     Enable or disable attributes entirely. If you set a destination to `false`, no attributes will be sent to that destination regardless of your include/exclude settings. If a destination is enabled, all user attributes are sent to that destination by default.
   </Collapser>

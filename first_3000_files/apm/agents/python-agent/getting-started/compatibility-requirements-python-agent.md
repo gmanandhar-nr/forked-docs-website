@@ -21,37 +21,12 @@ The Python agent supports many of the most common Python web frameworks. Additio
 
 If you don't have one already, [create a New Relic account](https://newrelic.com/signup). It's free, forever.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Resource
-      </th>
+# Table
 
-      <th>
-        Requirements
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Operating systems
-      </td>
-
-      <td>
-        UNIX-like operating systems including Linux, Solaris, FreeBSD, and macOS. The Python agent does not support Windows environments.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Python
-      </td>
-
-      <td>
-        Python (CPython/PyPy) versions supported: 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, and 3.13.
+| Resource | Requirements |
+| - | - |
+| Operating systems | UNIX-like operating systems including Linux, Solaris, FreeBSD, and macOS. The Python agent does not support Windows environments. |
+| Python | Python (CPython/PyPy) versions supported: 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, and 3.13.
 
         Recommendation: Use Python version 3.7 or higher with our agent.
 
@@ -59,84 +34,16 @@ If you don't have one already, [create a New Relic account](https://newrelic.com
         * Python version 3.4 is supported only by Python agent versions 4.20.0.120 or lower.
         * Python version 3.5 is supported only by Python agent versions 5.24.0.153 or lower.
         * Python version 3.6 is supported only by Python agent versions 7.16.0.178 or lower.
-        * Python version 2.7 is supported only by Python agent versions 9.13.0 or lower.
-      </td>
-    </tr>
-
-    <tr id="frameworks">
-      <td>
-        Supported web frameworks
-      </td>
-
-      <td>
-        Supported web frameworks include:
-
-        * AIOHTTP
-        * Bottle
-        * CherryPy
-        * Django
-        * Falcon
-        * FastAPI
-        * Flask
-        * GraphQL
-        * gRPC
-        * Pylons
-        * Pyramid
-        * Sanic
-        * Starlette
-        * Tornado 6
-        * Web2Py
-      </td>
-    </tr>
-
-    <tr id="other-frameworks">
-      <td>
-        Unsupported frameworks
-      </td>
-
-      <td>
-        Some WSGI servers, frameworks, and apps have special requirements. Although a specific Python WSGI web framework may not be supported, you can still use the agent. For unsupported frameworks, a breakout of time spent in key parts of the framework will not appear in web transaction performance breakdowns and transaction traces.
-
-        In addition, the agent will not be able to meaningfully group any web transactions handled by specific handlers in your code that you use to make them more useful and targeted. In these situations you can use the Python agent API to name web transactions or add custom instrumentation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Hosting
-      </td>
-
-      <td>
-        Web hosting mechanisms compliant with WSGI 1.0 (PEP 333).
+        * Python version 2.7 is supported only by Python agent versions 9.13.0 or lower. |
+| Hosting | Web hosting mechanisms compliant with WSGI 1.0 (PEP 333).
         We support these hosting services:
 
         * [Google App Engine flexible environment](/docs/agents/python-agent/hosting-services/install-new-relic-python-agent-gae-flexible-environment).
         * [Heroku](/docs/apm/agents/python-agent/hosting-services/python-agent-heroku/)
-        * [OpenShift](/docs/apm/agents/python-agent/hosting-services/python-agent-openshift/)
-      </td>
-    </tr>
+        * [OpenShift](/docs/apm/agents/python-agent/hosting-services/python-agent-openshift/) |
+| Security requirements | As a standard [security measure for data collection](/docs/accounts-partnerships/accounts/security/data-security), your app server must support SHA-2 (256-bit). SHA-1 is not supported. |
+| Other monitoring software | If your application uses other monitoring software besides ours, we cannot guarantee that our agent will work correctly and we cannot offer technical support. For more information, see [Errors while using other monitoring software](/docs/apm/new-relic-apm/troubleshooting/errors-while-using-new-relic-apm-alongside-other-apm-software). |
 
-    <tr>
-      <td>
-        Security requirements
-      </td>
-
-      <td>
-        As a standard [security measure for data collection](/docs/accounts-partnerships/accounts/security/data-security), your app server must support SHA-2 (256-bit). SHA-1 is not supported.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Other monitoring software
-      </td>
-
-      <td>
-        If your application uses other monitoring software besides ours, we cannot guarantee that our agent will work correctly and we cannot offer technical support. For more information, see [Errors while using other monitoring software](/docs/apm/new-relic-apm/troubleshooting/errors-while-using-new-relic-apm-alongside-other-apm-software).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Python package instrumentation [#python-packages]
 

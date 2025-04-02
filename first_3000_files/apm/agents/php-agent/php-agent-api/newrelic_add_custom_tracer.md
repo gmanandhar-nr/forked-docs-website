@@ -33,33 +33,14 @@ You cannot apply custom tracing to internal PHP functions.
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$function_name`
 
-  <tbody>
-    <tr>
-      <td>
-        `$function_name`
+        _string_ | Required. The name can be formatted either as `function_name` for procedural functions, or as `"ClassName::method"` for methods. Both static and instance methods will be instrumented if the method syntax is used, and the class name must be fully qualified: it must include the full namespace if the class was defined within a namespace. |
 
-        _string_
-      </td>
-
-      <td>
-        Required. The name can be formatted either as `function_name` for procedural functions, or as `"ClassName::method"` for methods. Both static and instance methods will be instrumented if the method syntax is used, and the class name must be fully qualified: it must include the full namespace if the class was defined within a namespace.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

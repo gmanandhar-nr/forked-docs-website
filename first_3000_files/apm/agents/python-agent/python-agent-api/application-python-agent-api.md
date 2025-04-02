@@ -33,33 +33,14 @@ The returned application object does not present any public API, but is required
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `name`
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
+        _string_ | Optional. The name of the application. If set, this overrides the application name set via Python agent configuration. |
 
-        _string_
-      </td>
-
-      <td>
-        Optional. The name of the application. If set, this overrides the application name set via Python agent configuration.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

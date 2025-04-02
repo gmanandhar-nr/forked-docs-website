@@ -37,39 +37,12 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data from this integration is attached to the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Ledger | `AwsQldbLedgerSample` | `AwsQldbLedger` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Ledger
-      </td>
-
-      <td>
-        `AwsQldbLedgerSample`
-      </td>
-
-      <td>
-        `AwsQldbLedger`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

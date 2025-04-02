@@ -17,46 +17,21 @@ Here are some limits, requirements, and recommendations when you create metrics 
 
 Your NRQL query must use one of the following `summary`, `uniqueCount`, or `distribution` functions to aggregate metrics:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Function
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| Function | Comments |
+| - | - |
+| `summary` | Creates a summary metric data point for each time window (currently 1 minute). Use this if your NRQL query uses [aggregator functions](/docs/insights/nrql-new-relic-query-language/nrql-reference/nrql-syntax-components-functions#functions) supported by the summary metric type, such as `average`, `sum`, `min`, or `max`.
 
-  <tbody>
-    <tr>
-      <td>
-        `summary`
-      </td>
-
-      <td>
-        Creates a summary metric data point for each time window (currently 1 minute). Use this if your NRQL query uses [aggregator functions](/docs/insights/nrql-new-relic-query-language/nrql-reference/nrql-syntax-components-functions#functions) supported by the summary metric type, such as `average`, `sum`, `min`, or `max`.
-
-        <DNT>
+        
           **Example rule-creation query:**
-        </DNT>
+        
 
         ```sql
         SELECT summary(duration) AS 'service.responseTime' FROM Transaction 
         WHERE appName = 'Data Points Staging' FACET name, appName, host
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `uniqueCount`
-      </td>
-
-      <td>
-        Creates a `uniqueCount` metric data point for each 1-minute time window. Use this if your NRQL query uses the `uniqueCount` [aggregator type](/docs/insights/nrql-new-relic-query-language/nrql-reference/nrql-syntax-components-functions#functions).
+        ``` |
+| `uniqueCount` | Creates a `uniqueCount` metric data point for each 1-minute time window. Use this if your NRQL query uses the `uniqueCount` [aggregator type](/docs/insights/nrql-new-relic-query-language/nrql-reference/nrql-syntax-components-functions#functions).
 
         Example rule-creation query:
 
@@ -64,38 +39,20 @@ Your NRQL query must use one of the following `summary`, `uniqueCount`, or `dist
         FROM Transaction SELECT uniqueCount(request.headers.userAgent) 
         AS 'server.request.header.userAgent.uniqueCount' 
         WHERE appName = 'Browser Monitoring Router' FACET http.statusCode, name, appName, host
-        ```
-      </td>
-    </tr>
+        ``` |
+| `distribution` | Creates a distribution metric data point for each 1-minute time window. Use this if your NRQL query uses [aggregator functions](/docs/insights/nrql-new-relic-query-language/nrql-reference/nrql-syntax-components-functions#functions) such as `percentile`, `histogram`, `min`, `max`, `average`, `sum`, or `count`. Use only the attribute of interest as the argument, and discard the rest of the arguments from `percentile` or `histogram`. The generated metric supports any argument on `percentile` or `histogram`.
 
-    <tr>
-      <td>
-        `distribution`
-      </td>
-
-      <td>
-        Creates a distribution metric data point for each 1-minute time window. Use this if your NRQL query uses [aggregator functions](/docs/insights/nrql-new-relic-query-language/nrql-reference/nrql-syntax-components-functions#functions) such as `percentile`, `histogram`, `min`, `max`, `average`, `sum`, or `count`. Use only the attribute of interest as the argument, and discard the rest of the arguments from `percentile` or `histogram`. The generated metric supports any argument on `percentile` or `histogram`.
-
-        <DNT>
+        
           **Example of creating a `distribution` rule:**
-        </DNT>
+        
 
         ```sql
         SELECT distribution(duration) AS 'service.responseTime' FROM Transaction 
         WHERE appName = 'Data Points Staging' FACET name, appName, host
-        ```
-      </td>
-    </tr>
+        ``` |
+| Simple count: `summary(1)` and `sum` | If you want a metric that's a simple count of the events, logs, or spans that match a particular `WHERE` clause, use the `summary(1)` metric. This metric type counts the number of specified events, logs, or spans per minute. When querying the created metric, use the `sum` method to see the result.
 
-    <tr>
-      <td>
-        Simple count: `summary(1)` and `sum`
-      </td>
-
-      <td>
-        If you want a metric that's a simple count of the events, logs, or spans that match a particular `WHERE` clause, use the `summary(1)` metric. This metric type counts the number of specified events, logs, or spans per minute. When querying the created metric, use the `sum` method to see the result.
-
-        <DNT>**Example:**</DNT> If you want to create a metric named `foo.count` that counts the transactions named `foo`, the NRQL would look like this:
+        **Example:** If you want to create a metric named `foo.count` that counts the transactions named `foo`, the NRQL would look like this:
 
         ```sql
         FROM Transaction SELECT summary(1) AS 'foo.count' WHERE name = 'foo'
@@ -107,11 +64,8 @@ Your NRQL query must use one of the following `summary`, `uniqueCount`, or `dist
         FROM Metric SELECT sum(foo.count) SINCE 30 minutes ago
         ```
 
-        For more information about metrics, see our documentation about [metric types](/docs/telemetry-data-platform/ingest-manage-data/understand-data/metric-data-type#metric-types).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        For more information about metrics, see our documentation about [metric types](/docs/telemetry-data-platform/ingest-manage-data/understand-data/metric-data-type#metric-types). |
+
 
 ## Rule-creation limits [#limits]
 

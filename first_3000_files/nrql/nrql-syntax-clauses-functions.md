@@ -1814,63 +1814,13 @@ SELECT histogram(duration, 10, 20) FROM PageView SINCE 1 week ago
 
         Here is a breakdown of the buckets:
 
-        <table>
-          <thead>
-            <tr>
-              <th/>
+        # Table
 
-              <th>
-                Bucket 1
-              </th>
+| Bucket 1 | Bucket 2 | Bucket 3 |
+| - | - | - |
+| Bucket range | 1 to 2 | 2 to 3 | 3 to 4 |
+| Values counted | &lt; 2 | ≥ 2 and &lt; 3 | ≥ 3 |
 
-              <th>
-                Bucket 2
-              </th>
-
-              <th>
-                Bucket 3
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                Bucket range
-              </td>
-
-              <td>
-                1 to 2
-              </td>
-
-              <td>
-                2 to 3
-              </td>
-
-              <td>
-                3 to 4
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                Values counted
-              </td>
-
-              <td>
-                &lt; 2
-              </td>
-
-              <td>
-                ≥ 2 and &lt; 3
-              </td>
-
-              <td>
-                ≥ 3
-              </td>
-            </tr>
-          </tbody>
-        </table>
 
         ```sql
         SELECT histogram(duration, 3, 3, 1) 

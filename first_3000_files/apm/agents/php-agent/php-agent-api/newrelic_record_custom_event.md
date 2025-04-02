@@ -40,45 +40,17 @@ Records a [custom event](/docs/using-new-relic/welcome-new-relic/getting-started
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$name`
 
-  <tbody>
-    <tr>
-      <td>
-        `$name`
+        _string_ | Required. Name of the custom event. |
+| `$attributes`
 
-        _string_
-      </td>
+        _array_ | Required. Supply custom attributes as an associative array. Supply the attribute names as keys of up to 255 characters, and supply the values as scalar values. Arrays and objects are not supported. |
 
-      <td>
-        Required. Name of the custom event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$attributes`
-
-        _array_
-      </td>
-
-      <td>
-        Required. Supply custom attributes as an associative array. Supply the attribute names as keys of up to 255 characters, and supply the values as scalar values. Arrays and objects are not supported.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

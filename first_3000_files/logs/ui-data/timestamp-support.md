@@ -49,79 +49,20 @@ We support two timestamp formats:
   >
     The ISO8601 format follows the `yyyy-MM-ddTHH:mm:ss.SSSTZD` pattern (e.g. 2023-11-07T14:20:35+04:00). For example:
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            <DNT>
-              **Key**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Value**
-            </DNT>
-          </th>
-
-          <th style={{ width: "200px" }}>
-            <DNT>
-              **Example**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            yyyy-MM-dd
-          </td>
-
-          <td>
-            * Four digit year
+| **Key** | **Value** | **Example** |
+| - | - | - |
+| yyyy-MM-dd | * Four digit year
             * Two digit month (01 for January, 02 for February, etc.)
-            * Two digit day (01 to 31)
-          </td>
-
-          <td>
-            2023-11-03
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            THH:mm:ss.SSS
-          </td>
-
-          <td>
-            * `T` indicates start of the time element
+            * Two digit day (01 to 31) | 2023-11-03 |
+| THH:mm:ss.SSS | * `T` indicates start of the time element
             * Two digit hour (00 through  23)
             * Two digit minute (00 through 59)
             * Two digit second (00 through 59)
-            * Three digit milliseconds (optional, up to nine digits with only the first three shown)
-          </td>
+            * Three digit milliseconds (optional, up to nine digits with only the first three shown) | T14:20:35 |
+| TZD (timezone designator) | The `+` or `-` indicates how far ahead or behind a timezone is from UTC (Coordinated Universal Timie). UTC is assumed if not provided. | \+04:00 |
 
-          <td>
-            T14:20:35
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            TZD (timezone designator)
-          </td>
-
-          <td>
-            The `+` or `-` indicates how far ahead or behind a timezone is from UTC (Coordinated Universal Timie). UTC is assumed if not provided.
-          </td>
-
-          <td>
-            \+04:00
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     Here are some format examples for ISO8601:
 

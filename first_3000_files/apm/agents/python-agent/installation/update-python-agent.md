@@ -17,31 +17,11 @@ To take full advantage of our latest features, enhancements, and important secur
 
 The Python agent package is listed on PyPi at [http://pypi.python.org/pypi/newrelic](http://pypi.python.org/pypi/newrelic "Link opens in new window"). To update with a specific package, follow the corresponding instructions:
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **Python package**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Installation procedures**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        pip
-      </td>
-
-      <td>
-        To update the `newrelic` package directly from PyPi, run:
+| **Python package** | **Installation procedures** |
+| - | - |
+| pip | To update the `newrelic` package directly from PyPi, run:
 
         ```sh
         pip install --upgrade newrelic
@@ -51,39 +31,17 @@ The Python agent package is listed on PyPi at [http://pypi.python.org/pypi/newre
 
         ```sh
         pip install -r requirements.txt
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        easy_install
-      </td>
-
-      <td>
-        To update using `easy_install`, run:
+        ``` |
+| easy_install | To update using `easy_install`, run:
 
         ```sh
         easy_install --upgrade newrelic
         ```
 
-        <Callout variant="tip">
-          We recommend using `pip` rather than using `easy_install`, because `pip` will correctly remove old versions when updating the agent software.
-        </Callout>
-      </td>
-    </tr>
+        
+          We recommend using `pip` rather than using `easy_install`, because `pip` will correctly remove old versions when updating the agent software. |
+| buildout | Install the package by creating an appropriate section for the `newrelic` package using the `zc.recipe.egg` recipe. |
 
-    <tr>
-      <td>
-        buildout
-      </td>
-
-      <td>
-        Install the package by creating an appropriate section for the `newrelic` package using the `zc.recipe.egg` recipe.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Download package manually [#manual-download]
 

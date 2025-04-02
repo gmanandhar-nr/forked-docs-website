@@ -36,118 +36,18 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure SignalR metrics [#Azure-signalr]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `ConnectionCloseCount` | The count of connections closed by various reasons. |
+| `ConnectionCount` | The amount of user connections. |
+| `ConnectionOpenCount` | The count of new connections opened. |
+| `ConnectionQuotaUtilization` | The percentage of connection connected relative to connection quota. |
+| `InboundTraffic` | The inbound traffic of service. |
+| `MessageCount` | The total amount of messages. |
+| `OutboundTraffic` | The outbound traffic of service. |
+| `ServerLoad` | SignalR server load. |
+| `SystemErrors` | The percentage of system errors. |
+| `UserErrors` | The percentage of user errors. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ConnectionCloseCount`
-      </td>
-
-      <td>
-        The count of connections closed by various reasons.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ConnectionCount`
-      </td>
-
-      <td>
-        The amount of user connections.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ConnectionOpenCount`
-      </td>
-
-      <td>
-        The count of new connections opened.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ConnectionQuotaUtilization`
-      </td>
-
-      <td>
-        The percentage of connection connected relative to connection quota.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InboundTraffic`
-      </td>
-
-      <td>
-        The inbound traffic of service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MessageCount`
-      </td>
-
-      <td>
-        The total amount of messages.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OutboundTraffic`
-      </td>
-
-      <td>
-        The outbound traffic of service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ServerLoad`
-      </td>
-
-      <td>
-        SignalR server load.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SystemErrors`
-      </td>
-
-      <td>
-        The percentage of system errors.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UserErrors`
-      </td>
-
-      <td>
-        The percentage of user errors.
-      </td>
-    </tr>
-  </tbody>
-</table>

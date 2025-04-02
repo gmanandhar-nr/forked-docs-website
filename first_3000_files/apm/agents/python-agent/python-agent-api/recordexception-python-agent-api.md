@@ -39,93 +39,29 @@ If called outside of the context of a monitored web request or background task, 
   In almost all cases, `record_exception` will require no parameters.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `exc`
 
-  <tbody>
-    <tr>
-      <td>
-        `exc`
+        _class object_ | Optional and rarely used. The exception type of the exception being handled (a class object). One of three values (`exc`, `value`, and `tb`) returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info). If you want to pass any of these parameters, all three must be set and and cannot be set to `None`. If you only pass one of these values, the call will not work. |
+| `value`
 
-        _class object_
-      </td>
+        _int, string, other_ | Optional and rarely used. The exception parameter. One of three values (`exc`, `value`, and `tb`) returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info). If you want to pass any of these parameters, all three must be set and and cannot be set to `None`. If you only pass one of these values, the call will not work. |
+| `tb`
 
-      <td>
-        Optional and rarely used. The exception type of the exception being handled (a class object). One of three values (`exc`, `value`, and `tb`) returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info). If you want to pass any of these parameters, all three must be set and and cannot be set to `None`. If you only pass one of these values, the call will not work.
-      </td>
-    </tr>
+        _object_ | Optional and rarely used. A traceback object that encapsulates the call stack at the point where the exception originally occurred. One of three values (`exc`, `value`, and `tb`) returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info). If you want to pass any of these parameters, all three must be set and and cannot be set to `None`. If you only pass one of these values, the call will not work. |
+| `params`
 
-    <tr>
-      <td>
-        `value`
+        _dict_ | Optional. Custom attributes to add to the error event (in addition to any custom attributes already added to the transaction). If [high-security mode](/docs/agents/manage-apm-agents/configuration/high-security-mode) is enabled, this will not work. |
+| `ignore_errors`
 
-        _int, string, other_
-      </td>
+        _string_ | Optional. Errors to ignore can be passed in the form `module:class`. Useful when certain types of exceptions should always be ignored and never recorded. |
+| `application`
 
-      <td>
-        Optional and rarely used. The exception parameter. One of three values (`exc`, `value`, and `tb`) returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info). If you want to pass any of these parameters, all three must be set and and cannot be set to `None`. If you only pass one of these values, the call will not work.
-      </td>
-    </tr>
+        _application object_ | Optional. If called outside of the context of a monitored web request or background task, the call will be ignored unless the [`application` object](/docs/agents/python-agent/python-agent-api/application) is provided. |
 
-    <tr>
-      <td>
-        `tb`
-
-        _object_
-      </td>
-
-      <td>
-        Optional and rarely used. A traceback object that encapsulates the call stack at the point where the exception originally occurred. One of three values (`exc`, `value`, and `tb`) returned from [`sys.exc_info()`](https://docs.python.org/2/library/sys.html#sys.exc_info). If you want to pass any of these parameters, all three must be set and and cannot be set to `None`. If you only pass one of these values, the call will not work.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `params`
-
-        _dict_
-      </td>
-
-      <td>
-        Optional. Custom attributes to add to the error event (in addition to any custom attributes already added to the transaction). If [high-security mode](/docs/agents/manage-apm-agents/configuration/high-security-mode) is enabled, this will not work.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ignore_errors`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. Errors to ignore can be passed in the form `module:class`. Useful when certain types of exceptions should always be ignored and never recorded.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `application`
-
-        _application object_
-      </td>
-
-      <td>
-        Optional. If called outside of the context of a monitored web request or background task, the call will be ignored unless the [`application` object](/docs/agents/python-agent/python-agent-api/application) is provided.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

@@ -31,48 +31,15 @@ As a standard [security measure for data collection](/docs/accounts-partnerships
 
 The New Relic Ruby agent does not support experimental versions. Ruby versions supported by the Ruby agent include:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Ruby versions
-      </th>
+# Table
 
-      <th style={{ width: "150px" }}>
-        Supported
-      </th>
-
-      <th>
-        Deprecated
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        JRuby
-      </td>
-
-      <td>
-        * 9.0.x
+| Ruby versions | Supported | Deprecated |
+| - | - | - |
+| JRuby | * 9.0.x
         * 9.1.x
         * 9.2.x
-        * 9.3.x
-      </td>
-
-      <td>
-        * 1.7.x or earlier: Last supported agent was 3.18.1.330.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        CRuby
-      </td>
-
-      <td>
-        * ~~1.8.7~~
+        * 9.3.x | * 1.7.x or earlier: Last supported agent was 3.18.1.330. |
+| CRuby | * ~~1.8.7~~
         * ~~1.9.x~~
         * ~~2.0.x~~
         * ~~2.1.x~~
@@ -84,18 +51,11 @@ The New Relic Ruby agent does not support experimental versions. Ruby versions s
         * 2.7.x
         * 3.0.x
         * 3.1.x
-        * 3.2.x
-      </td>
-
-      <td>
-        * 2.2.x, 2.3.x Last supported agent: 8.16.0.
+        * 3.2.x | * 2.2.x, 2.3.x Last supported agent: 8.16.0.
         * 2.0.x, 2.1.x Last supported agent: 6.15.0.
         * 1.8.7, 1.9.2, 1.9.3: Last supported agent was 3.18.1.330.
-        * 1.8.6: Last supported agent was 3.6.8.168.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * 1.8.6: Last supported agent was 3.6.8.168. |
+
 
 ## Web servers [#web_servers]
 

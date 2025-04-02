@@ -22,57 +22,17 @@ Not every project gets a liaisonship! For smaller projects, we'll encourage team
 
 ## Liaison responsibilities: Manage project flow [#project-flow]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Activity
-      </th>
+# Table
 
-      <th>
-        Who?
-      </th>
+| Activity | Who? | Notes |
+| - | - | - |
+| Assign a liaison | Tech Docs manager | When a large new project comes up, the manager will do a pre-scope meeting with the requestor. ([Appendix: Project scoping cheatsheet](/docs/agile-handbook/appendices/project-scoping-cheatsheet/) has a list of common questions for this pre-scope meeting.) That conversation helps figure out timeline, complexity, key docs considerations, and which writer will be a good fit as liaison.
 
-      <th>
-        Notes
-      </th>
-    </tr>
-  </thead>
+        Once we know we need a liaison, a manager on our team will figure out who to assign. Some of the factors we use to decide who to assign include bandwidth, familiarity with the product or feature, career goals and writing strengths, and simple interest in the topic. |
+| Manage the project | Liaison | Work with your stakeholders as you define and refine your project plans. As the picture becomes clearer, create tickets in our backlog and schedule them into upcoming sprints. By the time your tickets reach a backlog grooming, you should have a clear sense of scope and resources. (For more on creating a great ticket, see [Ticket best practices](https://docs.newrelic.com/docs/agile-handbook/appendices/ticket-best-practices/).)
 
-  <tbody>
-    <tr>
-      <td>
-        Assign a liaison
-      </td>
+        You're likely to take assignment on many of the tickets for your project, but you may also collaborate with other writers and swarm to complete the work. |
 
-      <td>
-        Tech Docs manager
-      </td>
-
-      <td>
-        When a large new project comes up, the manager will do a pre-scope meeting with the requestor. ([Appendix: Project scoping cheatsheet](/docs/agile-handbook/appendices/project-scoping-cheatsheet/) has a list of common questions for this pre-scope meeting.) That conversation helps figure out timeline, complexity, key docs considerations, and which writer will be a good fit as liaison.
-
-        Once we know we need a liaison, a manager on our team will figure out who to assign. Some of the factors we use to decide who to assign include bandwidth, familiarity with the product or feature, career goals and writing strengths, and simple interest in the topic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Manage the project
-      </td>
-
-      <td>
-        Liaison
-      </td>
-
-      <td>
-        Work with your stakeholders as you define and refine your project plans. As the picture becomes clearer, create tickets in our backlog and schedule them into upcoming sprints. By the time your tickets reach a backlog grooming, you should have a clear sense of scope and resources. (For more on creating a great ticket, see [Ticket best practices](https://docs.newrelic.com/docs/agile-handbook/appendices/ticket-best-practices/).)
-
-        You're likely to take assignment on many of the tickets for your project, but you may also collaborate with other writers and swarm to complete the work.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Liaison responsibilities: Build expertise [#build-expertise]
 

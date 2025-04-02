@@ -9,61 +9,15 @@ freshnessValidatedDate: 2024-04-29
 
 To install and manage your plugins, use the commands below. You can click any command to see its usage options and additional details about the command.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Command
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Command | Description |
+| - | - |
+| [`nr1 plugins:install`](#nr1-pluginsinstall) | Installs a plugin into the CLI. |
+| [`nr1 plugins:link`](#nr1-pluginslink) | Links a plugin into the CLI for development. |
+| [`nr1 plugins:uninstall`](#nr1-pluginsuninstall) | Removes a plugin from the CLI. |
+| [`nr1 plugins:update`](#nr1-pluginsupdate) | Updates your installed plugins. |
 
-  <tbody>
-    <tr>
-      <td>
-        [`nr1 plugins:install`](#nr1-pluginsinstall)
-      </td>
-
-      <td>
-        Installs a plugin into the CLI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 plugins:link`](#nr1-pluginslink)
-      </td>
-
-      <td>
-        Links a plugin into the CLI for development.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 plugins:uninstall`](#nr1-pluginsuninstall)
-      </td>
-
-      <td>
-        Removes a plugin from the CLI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 plugins:update`](#nr1-pluginsupdate)
-      </td>
-
-      <td>
-        Updates your installed plugins.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## `nr1 plugins:install` [#nr1-pluginsinstall]
 

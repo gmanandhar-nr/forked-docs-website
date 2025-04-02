@@ -31,91 +31,18 @@ For general information about adding multiple buildpacks to manifests, see [Clou
 
 The following table provides version support information about the New Relic NGINX integration buildpack for VMware Tanzu.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Element
-      </th>
+# Table
 
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
+| Element | Details |
+| - | - |
+| Tile version | 1.1.2 |
+| Release date | January 06, 2025 |
+| Software component version | New Relic NGINX integration buildpack for VMware Tanzu 1.1.2 |
+| Compatible Ops Manager version(s) | 3.0.x |
+| Compatible VMware Tanzu Application Service for VMs versions | 4.x, 5.x, 6.x, and 10.x |
+| BOSH stemcell version | Ubuntu Jammy |
+| CF Stack | cflinuxfs3, cflinuxfs4 |
 
-  <tbody>
-    <tr>
-      <td>
-        Tile version
-      </td>
-
-      <td>
-        1.1.2
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Release date
-      </td>
-
-      <td>
-        January 06, 2025
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Software component version
-      </td>
-
-      <td>
-        New Relic NGINX integration buildpack for VMware Tanzu 1.1.2
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Compatible Ops Manager version(s)
-      </td>
-
-      <td>
-        3.0.x
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Compatible VMware Tanzu Application Service for VMs versions
-      </td>
-
-      <td>
-        4.x, 5.x, 6.x, and 10.x
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        BOSH stemcell version
-      </td>
-
-      <td>
-        Ubuntu Jammy
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        CF Stack
-      </td>
-
-      <td>
-        cflinuxfs3, cflinuxfs4
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Installation and configuration [#install-and-configure]
 

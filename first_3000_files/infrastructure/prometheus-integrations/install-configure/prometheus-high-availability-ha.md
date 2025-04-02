@@ -20,53 +20,13 @@ If you are using our Prometheus remote write integration in a high-availability 
 
 New Relic requires two external labels to deduplicate data from replicas in a high-availability configuration:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Label name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Label name | Description | Example value |
+| - | - | - |
+| `prometheus` | A label whose value identifies the name of a high-availability cluster or group of Prometheus servers. | `monitoring-cluster` |
+| `prometheus_replica` | A label whose value identifies the unique replica sending this data. | `replica-1` |
 
-      <th>
-        Example value
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `prometheus`
-      </td>
-
-      <td>
-        A label whose value identifies the name of a high-availability cluster or group of Prometheus servers.
-      </td>
-
-      <td>
-        `monitoring-cluster`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `prometheus_replica`
-      </td>
-
-      <td>
-        A label whose value identifies the unique replica sending this data.
-      </td>
-
-      <td>
-        `replica-1`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="caution">
   An account can have up to 1,500 unique Prometheus HA clusters. If this limit is exceeded, data from additional HA clusters will be dropped. In such cases, New Relic generates `PrometheusHAClusterLimit` [`NrIntegrationError`](https://docs.newrelic.com/docs/data-apis/ingest-apis/metric-api/troubleshoot-nrintegrationerror-events/) events.

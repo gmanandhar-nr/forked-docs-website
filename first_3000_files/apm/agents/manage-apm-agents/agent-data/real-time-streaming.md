@@ -44,41 +44,13 @@ Use real time streaming to quickly understand the impact when something has chan
 
 When building charts, include the following in your NRQL query:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        NRQL clause
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| NRQL clause | Comments |
+| - | - |
+| `SINCE 5 minutes ago` | Be sure to add a [`SINCE 5 minutes ago` clause](/docs/query-data/nrql-new-relic-query-language/getting-started/nrql-syntax-components-functions#sel-since) to your NRQL query in order to take advantage of the 5 second chart refresh interval. This is because the [chart's refresh interval](/docs/insights/use-insights-ui/manage-dashboards/insights-chart-refresh-intervals) is based on the time window. |
+| `TIMESERIES` bucket | To set the refresh interval for time series charts, you can also specify the bucket size as an optional argument to the [`TIMESERIES` clause](/docs/query-data/nrql-new-relic-query-language/getting-started/nrql-syntax-components-functions#sel-timeseries). For example, `SINCE 30 minutes ago TIMESERIES 5 seconds` will display a 30 minute window at a 5 second resolution. You can have a maximum of 366 buckets. |
 
-  <tbody>
-    <tr>
-      <td>
-        `SINCE 5 minutes ago`
-      </td>
-
-      <td>
-        Be sure to add a [`SINCE 5 minutes ago` clause](/docs/query-data/nrql-new-relic-query-language/getting-started/nrql-syntax-components-functions#sel-since) to your NRQL query in order to take advantage of the 5 second chart refresh interval. This is because the [chart's refresh interval](/docs/insights/use-insights-ui/manage-dashboards/insights-chart-refresh-intervals) is based on the time window.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TIMESERIES` bucket
-      </td>
-
-      <td>
-        To set the refresh interval for time series charts, you can also specify the bucket size as an optional argument to the [`TIMESERIES` clause](/docs/query-data/nrql-new-relic-query-language/getting-started/nrql-syntax-components-functions#sel-timeseries). For example, `SINCE 30 minutes ago TIMESERIES 5 seconds` will display a 30 minute window at a 5 second resolution. You can have a maximum of 366 buckets.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Create real time streaming charts [#create]
 

@@ -377,191 +377,20 @@ The agent collects [instance details for a variety of databases and database dri
 
 Python agent [version 2.72.0.52 or higher](/docs/release-notes/agent-release-notes/python-release-notes) supports the following:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Database
-      </th>
+# Table
 
-      <th>
-        Python package name
-      </th>
+| Database | Python package name | Minimum package version | Minimum agent version |
+| - | - | - | - |
+| [PostgreSQL](https://www.postgresql.org/) | [psycopg](https://pypi.python.org/pypi/psycopg) | 3.0 | 9.11.0 |
+| [PostgreSQL](https://www.postgresql.org/) | [psycopg2](https://pypi.python.org/pypi/psycopg2) | 2.0.14 | 2.72.0.52 |
+| [MySQL](http://www.mysql.com/) | [MySQLdb](https://pypi.python.org/pypi/MySQL-python/) | 1.2.5 | 2.74.0.54 |
+| [Redis](http://redis.io/) | [redis](https://pypi.python.org/pypi/redis) | 2.6.2 | 2.74.0.54 |
+| [Redis](http://redis.io/) | [aredis](https://pypi.org/project/aredis/) | 1.1.4 | 7.6.0.173 |
+| [Redis](http://redis.io/) | [aioredis](https://pypi.org/project/aioredis/) | 1.3.1 | 7.14.0.177 |
+| [Memcached](https://memcached.org/) | [python-memcached](https://pypi.python.org/pypi/python-memcached) | 1.51 | 2.76.0.55 |
+| [aiomcache](https://github.com/aio-libs/aiomcache) | [aiomcache](https://pypi.org/project/aiomcache/) | 0.8.2 | 9.12.0 |
+| [Elasticsearch](https://www.elastic.co/products/elasticsearch) | [elasticsearch](https://pypi.python.org/pypi/elasticsearch) | 0.45 | 2.78.0.56 |
 
-      <th>
-        Minimum package version
-      </th>
-
-      <th>
-        Minimum agent version
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [PostgreSQL](https://www.postgresql.org/)
-      </td>
-
-      <td>
-        [psycopg](https://pypi.python.org/pypi/psycopg)
-      </td>
-
-      <td>
-        3.0
-      </td>
-
-      <td>
-        9.11.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [PostgreSQL](https://www.postgresql.org/)
-      </td>
-
-      <td>
-        [psycopg2](https://pypi.python.org/pypi/psycopg2)
-      </td>
-
-      <td>
-        2.0.14
-      </td>
-
-      <td>
-        2.72.0.52
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [MySQL](http://www.mysql.com/)
-      </td>
-
-      <td>
-        [MySQLdb](https://pypi.python.org/pypi/MySQL-python/)
-      </td>
-
-      <td>
-        1.2.5
-      </td>
-
-      <td>
-        2.74.0.54
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Redis](http://redis.io/)
-      </td>
-
-      <td>
-        [redis](https://pypi.python.org/pypi/redis)
-      </td>
-
-      <td>
-        2.6.2
-      </td>
-
-      <td>
-        2.74.0.54
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Redis](http://redis.io/)
-      </td>
-
-      <td>
-        [aredis](https://pypi.org/project/aredis/)
-      </td>
-
-      <td>
-        1.1.4
-      </td>
-
-      <td>
-        7.6.0.173
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Redis](http://redis.io/)
-      </td>
-
-      <td>
-        [aioredis](https://pypi.org/project/aioredis/)
-      </td>
-
-      <td>
-        1.3.1
-      </td>
-
-      <td>
-        7.14.0.177
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Memcached](https://memcached.org/)
-      </td>
-
-      <td>
-        [python-memcached](https://pypi.python.org/pypi/python-memcached)
-      </td>
-
-      <td>
-        1.51
-      </td>
-
-      <td>
-        2.76.0.55
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [aiomcache](https://github.com/aio-libs/aiomcache)
-      </td>
-
-      <td>
-        [aiomcache](https://pypi.org/project/aiomcache/)
-      </td>
-
-      <td>
-        0.8.2
-      </td>
-
-      <td>
-        9.12.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Elasticsearch](https://www.elastic.co/products/elasticsearch)
-      </td>
-
-      <td>
-        [elasticsearch](https://pypi.python.org/pypi/elasticsearch)
-      </td>
-
-      <td>
-        0.45
-      </td>
-
-      <td>
-        2.78.0.56
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 To request instance-level information from datastores currently not listed for your agent, get support at [support.newrelic.com](https://support.newrelic.com).
 

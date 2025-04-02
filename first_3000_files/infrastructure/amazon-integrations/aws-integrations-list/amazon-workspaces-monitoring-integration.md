@@ -32,237 +32,26 @@ This New Relic infrastructure integration collects the following Amazon WorkSpac
 
 ### WorkSpaces Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `Available` | Count | The number of WorkSpaces that returned a healthy status. |
+| `Unhealthy` | Count | The number of WorkSpaces that returned an unhealthy status. |
+| `ConnectionAttempt` | Count | The number of connection attempts. |
+| `ConnectionSuccess` | Count | The number of successful connections. |
+| `ConnectionFailure` | Count | The number of failed connections. |
+| `SessionLaunchTime` | Count | The amount of time it takes to initiate a WorkSpaces session. |
+| `InSessionLatency` | Count | The round trip time between the WorkSpaces client and the WorkSpace. |
+| `SessionDisconnect` | Count | The number of connections that were closed, including user-initiated and failed connections. |
+| `UserConnected` | Count | The number of WorkSpaces that have a user connected. |
+| `Stopped` | Count | The number of WorkSpaces that are stopped. |
+| `Maintenance` | Count | The number of WorkSpaces that are under maintenance. |
+| `TrustedDeviceValidationAttempt` | Count | The number of device authentication signature validation attempts. |
+| `TrustedDeviceValidationSuccess` | Count | The number of successful device authentication signature validations. |
+| `TrustedDeviceValidationFailure` | Count | The number of failed device authentication signature validations. |
+| `TrustedDeviceCertificateDaysBeforeExpiration` | Count | Days left before the root certificate associated with the directory is expired. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `Available`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of WorkSpaces that returned a healthy status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Unhealthy`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of WorkSpaces that returned an unhealthy status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ConnectionAttempt`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of connection attempts.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ConnectionSuccess`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of successful connections.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ConnectionFailure`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of failed connections.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SessionLaunchTime`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The amount of time it takes to initiate a WorkSpaces session.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InSessionLatency`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The round trip time between the WorkSpaces client and the WorkSpace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SessionDisconnect`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of connections that were closed, including user-initiated and failed connections.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UserConnected`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of WorkSpaces that have a user connected.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Stopped`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of WorkSpaces that are stopped.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Maintenance`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of WorkSpaces that are under maintenance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TrustedDeviceValidationAttempt`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of device authentication signature validation attempts.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TrustedDeviceValidationSuccess`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of successful device authentication signature validations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TrustedDeviceValidationFailure`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of failed device authentication signature validations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TrustedDeviceCertificateDaysBeforeExpiration`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        Days left before the root certificate associated with the directory is expired.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has these dimensions: `DirectoryId` and `WorkspaceId`.
 

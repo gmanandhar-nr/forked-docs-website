@@ -40,58 +40,17 @@ Choose custom instrumentation in these situations:
 
 You can implement custom instrumentation with one of these methods:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Method**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Method** | **Description** |
+| - | - |
+| The New Relic UI | New Relic for Java includes an option in the UI for custom instrumentation called the [Custom Instrumentation Editor](/docs/agents/java-agent/custom-instrumentation/custom-instrumentation-editor-quickly-customize-your-java-instrumentation). This option doesn't require any direct modification of your application code, so is a good choice if you don't want to or can't modify your code. The editor is, however, fairly limited in functionality compared to the Java agent API. |
+| API annotation | Using the New Relic Java agent API, you can [annotate the methods in your application code](/docs/agents/java-agent/custom-instrumentation/java-instrumentation-annotation) that you want to monitor. The annotation method is robust and easy to troubleshoot. If you are willing to modify your source code, annotation is the recommended method. If you have many methods you want to instrument, you might prefer [XML instrumentation](#xml).
 
-  <tbody>
-    <tr>
-      <td>
-        The New Relic UI
-      </td>
+        For more about the API and its other functions, see [Intro to the Java agent API](/docs/agents/java-agent/custom-instrumentation/java-agent-api). |
+| XML | If you can't modify your code, or if you need to instrument many methods, XML instrumentation is the best custom instrumentation method. With this method, you specify the classes you want to instrument in an external XML file.
 
-      <td>
-        New Relic for Java includes an option in the UI for custom instrumentation called the [Custom Instrumentation Editor](/docs/agents/java-agent/custom-instrumentation/custom-instrumentation-editor-quickly-customize-your-java-instrumentation). This option doesn't require any direct modification of your application code, so is a good choice if you don't want to or can't modify your code. The editor is, however, fairly limited in functionality compared to the Java agent API.
-      </td>
-    </tr>
+        While XML instrumentation is powerful, it is also more difficult to use than the other instrumentation methods. For simpler instrumentation needs, New Relic recommends [annotation](#annotation) or [instrumentation via the UI](#instrument-ui). For more information, see [Java instrumentation by XML](/docs/java/custom-instrumentation-by-xml). |
 
-    <tr>
-      <td>
-        API annotation
-      </td>
-
-      <td>
-        Using the New Relic Java agent API, you can [annotate the methods in your application code](/docs/agents/java-agent/custom-instrumentation/java-instrumentation-annotation) that you want to monitor. The annotation method is robust and easy to troubleshoot. If you are willing to modify your source code, annotation is the recommended method. If you have many methods you want to instrument, you might prefer [XML instrumentation](#xml).
-
-        For more about the API and its other functions, see [Intro to the Java agent API](/docs/agents/java-agent/custom-instrumentation/java-agent-api).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        XML
-      </td>
-
-      <td>
-        If you can't modify your code, or if you need to instrument many methods, XML instrumentation is the best custom instrumentation method. With this method, you specify the classes you want to instrument in an external XML file.
-
-        While XML instrumentation is powerful, it is also more difficult to use than the other instrumentation methods. For simpler instrumentation needs, New Relic recommends [annotation](#annotation) or [instrumentation via the UI](#instrument-ui). For more information, see [Java instrumentation by XML](/docs/java/custom-instrumentation-by-xml).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 You can also monitor Java Management Extensions (JMX) via custom instrumentation. JMX is a way to monitor and manage applications, devices, and services. You can implement JMX monitoring via an [external <DNT>**YAML**</DNT> file](/docs/java/custom-jmx-instrumentation-by-yml).

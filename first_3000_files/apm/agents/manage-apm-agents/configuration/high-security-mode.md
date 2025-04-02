@@ -37,44 +37,15 @@ Before you do this, note that:
 * Once you enable high security for an account, <DNT>**high security cannot be turned off**</DNT> without assistance from [New Relic Support](https://support.newrelic.com).
 * This is a [per-account setting](#requirements), meaning that you must set it for each account you want to grant high-security mode.
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **Setting location**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Setting location** | **Description** |
+| - | - |
+| Set in UI | * For users on [our newer user model](/docs/accounts/original-accounts-billing/original-product-based-pricing/overview-changes-pricing-user-model/#user-model) (almost all customers): Get the [account ID](/docs/accounts/accounts-billing/account-structure/account-id) for the account you want to enable. Then use that to go to this URL: `https://one.newrelic.com/admin-portal/apm-agents/hsm?account=YOUR_ACCOUNT_ID`. On that page, you can configure high-security mode.
+        * For users on [our original user model](/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model): Only the account owner can configure this. Go to **[one.newrelic.com](https://one.newrelic.com/all-capabilities)**, click the [user menu](/docs/accounts/accounts-billing/general-account-settings/intro-account-settings) and click on **Administration**. On that page, select **High-security mode**.
 
-  <tbody>
-    <tr>
-      <td>
-        Set in UI
-      </td>
-
-      <td>
-        * For users on [our newer user model](/docs/accounts/original-accounts-billing/original-product-based-pricing/overview-changes-pricing-user-model/#user-model) (almost all customers): Get the [account ID](/docs/accounts/accounts-billing/account-structure/account-id) for the account you want to enable. Then use that to go to this URL: `https://one.newrelic.com/admin-portal/apm-agents/hsm?account=YOUR_ACCOUNT_ID`. On that page, you can configure high-security mode.
-        * For users on [our original user model](/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model): Only the account owner can configure this. Go to <DNT>**[one.newrelic.com](https://one.newrelic.com/all-capabilities)**</DNT>, click the [user menu](/docs/accounts/accounts-billing/general-account-settings/intro-account-settings) and click on <DNT>**Administration**</DNT>. On that page, select <DNT>**High-security mode**</DNT>.
-
-          If the agent is configured for high security via the UI but not locally, then the agent connections are rejected, and the agent will shut down. However, this won't shut down your application.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Local, via agent
-      </td>
-
-      <td>
-        Enable high-security mode in your agent configuration file. High-security mode is disabled by default, and the exact procedure to enable it varies by agent:
+          If the agent is configured for high security via the UI but not locally, then the agent connections are rejected, and the agent will shut down. However, this won't shut down your application. |
+| Local, via agent | Enable high-security mode in your agent configuration file. High-security mode is disabled by default, and the exact procedure to enable it varies by agent:
 
         * [Go](/docs/agents/go-agent/instrumentation/go-agent-configuration#high_security)
         * [Java](/docs/java/java-agent-configuration#cfg-enable_high_security)
@@ -84,11 +55,8 @@ Before you do this, note that:
         * [Python](/docs/python/python-agent-configuration#high_security)
         * [Ruby](/docs/ruby/ruby-agent-configuration#high_security)
 
-          If the agent is configured for high security locally but not via the UI, then the agent connections will be rejected, and the agent will shut down. This will not shut down your application.
-      </td>
-    </tr>
-  </tbody>
-</table>
+          If the agent is configured for high security locally but not via the UI, then the agent connections will be rejected, and the agent will shut down. This will not shut down your application. |
+
 
 ## Results of enabling high-security mode (version 2) [#version2description]
 

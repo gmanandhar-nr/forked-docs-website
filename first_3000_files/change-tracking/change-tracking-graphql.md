@@ -36,41 +36,13 @@ The fields you'll use in your GraphQL queries fall into these general types:
   >
     To track a change, such as a deployment, you must set the following:
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Attribute
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
+| Attribute | Description |
+| - | - |
+| `entityGuid` | The `entityGuid` value is the unique identifier assigned by New Relic to your system components during instrumentation and setup processes. For more information on New Relic Entities and finding Entity GUIDs, see this [guide](/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/#find). |
+| `version` | The version attribute value can be anything, although we recommend using the version number set during your build process. To see an example of how this can be done, see our [Jenkins deployments plugin documentation](#jenkins-markers) below. If you already report version numbers to New Relic  or by some other means, we recommend using the same here to set yourself up for forthcoming features that will allow you to facet and correlate data by version. |
 
-      <tbody>
-        <tr>
-          <td>
-            `entityGuid`
-          </td>
-
-          <td>
-            The `entityGuid` value is the unique identifier assigned by New Relic to your system components during instrumentation and setup processes. For more information on New Relic Entities and finding Entity GUIDs, see this [guide](/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/#find).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `version`
-          </td>
-
-          <td>
-            The version attribute value can be anything, although we recommend using the version number set during your build process. To see an example of how this can be done, see our [Jenkins deployments plugin documentation](#jenkins-markers) below. If you already report version numbers to New Relic <InlinePopover type="mobile"/> or by some other means, we recommend using the same here to set yourself up for forthcoming features that will allow you to facet and correlate data by version.
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     <Callout variant="tip">
       If you are transitioning away from the legacy REST API, you'll need to start using your application's entity GUID instead of the appID. You can easily find the GUID in NerdGraph with this query:

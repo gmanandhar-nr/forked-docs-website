@@ -103,41 +103,13 @@ You can see the full details of all the switches you can toggle in the [`README.
 
 When you install the Kubernetes integration using `nri-bundle`, these 2 components are installed by default:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Component
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Component | Description |
+| - | - |
+| [newrelic-infrastructure](https://github.com/newrelic/nri-kubernetes/tree/main/charts/newrelic-infrastructure) | Sends metrics about nodes, cluster objects (for example, deployments, pods), and the control plane to New Relic. |
+| [nri-metadata-injection](https://github.com/newrelic/k8s-metadata-injection/tree/main/charts/nri-metadata-injection) | Enriches New Relic-instrumented applications (APM) with Kubernetes information. |
 
-  <tbody>
-    <tr>
-      <td>
-        [newrelic-infrastructure](https://github.com/newrelic/nri-kubernetes/tree/main/charts/newrelic-infrastructure)
-      </td>
-
-      <td>
-        Sends metrics about nodes, cluster objects (for example, deployments, pods), and the control plane to New Relic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [nri-metadata-injection](https://github.com/newrelic/k8s-metadata-injection/tree/main/charts/nri-metadata-injection)
-      </td>
-
-      <td>
-        Enriches New Relic-instrumented applications (APM) with Kubernetes information.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 These are optional components you can either install using `nri-bundle` or separately:
 

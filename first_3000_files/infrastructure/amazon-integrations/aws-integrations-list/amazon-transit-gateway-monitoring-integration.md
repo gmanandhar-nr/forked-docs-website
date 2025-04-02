@@ -44,39 +44,12 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data is attached to the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| TransitGateway | `AwsTransitGatewayTransitGatewaySample` | `AwsTransitGatewayTransitGateway` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        TransitGateway
-      </td>
-
-      <td>
-        `AwsTransitGatewayTransitGatewaySample`
-      </td>
-
-      <td>
-        `AwsTransitGatewayTransitGateway`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

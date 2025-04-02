@@ -20,38 +20,40 @@ For Azure web apps using the `NewRelic.Azure.WebSites.Extension`, and deployed w
 
 To control `newrelic` folder retention, use the following options for WebDeploy:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Basic solutions**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Enable `skipAction=Delete` WebDeploy arguments.
-      </td>
-
-      <td>
-        Explicitly exclude specific folders from deletion, such as the `newrelic` folders, with the following:
+| **Basic solutions** | **Comments** |
+| - | - |
+| Enable `skipAction=Delete` WebDeploy arguments. | Explicitly exclude specific folders from deletion, such as the `newrelic` folders, with the following:
 
         Azure Pipelines UI:
 
-        Add these arguments to the <DNT>**Azure App Service deploy -> Additional Deployment Options -> Additional Arguments**</DNT>
+        Add these arguments to the **Azure App Service deploy -> Additional Deployment Options -> Additional Arguments**
 
         ```
-        -skip:skipAction=Delete,objectName=dirPath,absolutePath='newrelic$' -skip:skipAction=Delete,objectName=dirPath,absolutePath='newrelic_core$'
+        -skip:skipAction=Delete,objectName=dirPath,absolutePath='newrelic
+
+<img
+  title="Screenshot showing skipAction"
+  alt="Screenshot showing skipAction"
+  src="/images/apm_screenshot-crop_skipaction-in-azure-pipeline.webp"
+/>
+
+## Cause
+
+If the `Remove additional files at destination` option is selected for the `AzureRmWebAppDeployment` task in the Azure Pipeline, the `newrelic` and `newrelic_core` directories are deleted from `wwwroot`, but the extension is not considered uninstalled by Azure. As a result, the next time the pipeline runs and attempts to install the extension, the pipeline displays the message `Extension 'NewRelic.Azure.WebSites.Extension' already installed.` The extension cannot run without its folders, and Azure will not re-install it because it considers it still installed.
+ -skip:skipAction=Delete,objectName=dirPath,absolutePath='newrelic_core
+
+<img
+  title="Screenshot showing skipAction"
+  alt="Screenshot showing skipAction"
+  src="/images/apm_screenshot-crop_skipaction-in-azure-pipeline.webp"
+/>
+
+## Cause
+
+If the `Remove additional files at destination` option is selected for the `AzureRmWebAppDeployment` task in the Azure Pipeline, the `newrelic` and `newrelic_core` directories are deleted from `wwwroot`, but the extension is not considered uninstalled by Azure. As a result, the next time the pipeline runs and attempts to install the extension, the pipeline displays the message `Extension 'NewRelic.Azure.WebSites.Extension' already installed.` The extension cannot run without its folders, and Azure will not re-install it because it considers it still installed.
+
         ```
 
         OR
@@ -61,14 +63,33 @@ To control `newrelic` folder retention, use the following options for WebDeploy:
         add the following `input` to the WebDeploy task:
 
         ```yml
-        AdditionalArguments: '-skip:skipAction=Delete,objectName=dirPath,absolutePath=''newrelic$'' -skip:skipAction=Delete,objectName=dirPath,absolutePath=''newrelic_core$'''
+        AdditionalArguments: '-skip:skipAction=Delete,objectName=dirPath,absolutePath=''newrelic
+
+<img
+  title="Screenshot showing skipAction"
+  alt="Screenshot showing skipAction"
+  src="/images/apm_screenshot-crop_skipaction-in-azure-pipeline.webp"
+/>
+
+## Cause
+
+If the `Remove additional files at destination` option is selected for the `AzureRmWebAppDeployment` task in the Azure Pipeline, the `newrelic` and `newrelic_core` directories are deleted from `wwwroot`, but the extension is not considered uninstalled by Azure. As a result, the next time the pipeline runs and attempts to install the extension, the pipeline displays the message `Extension 'NewRelic.Azure.WebSites.Extension' already installed.` The extension cannot run without its folders, and Azure will not re-install it because it considers it still installed.
+' -skip:skipAction=Delete,objectName=dirPath,absolutePath=''newrelic_core
+
+<img
+  title="Screenshot showing skipAction"
+  alt="Screenshot showing skipAction"
+  src="/images/apm_screenshot-crop_skipaction-in-azure-pipeline.webp"
+/>
+
+## Cause
+
+If the `Remove additional files at destination` option is selected for the `AzureRmWebAppDeployment` task in the Azure Pipeline, the `newrelic` and `newrelic_core` directories are deleted from `wwwroot`, but the extension is not considered uninstalled by Azure. As a result, the next time the pipeline runs and attempts to install the extension, the pipeline displays the message `Extension 'NewRelic.Azure.WebSites.Extension' already installed.` The extension cannot run without its folders, and Azure will not re-install it because it considers it still installed.
+''
         ```
 
-        <DNT>**Note**</DNT> the escaped single quotes.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        **Note** the escaped single quotes. |
+
 
 <img
   title="Screenshot showing skipAction"

@@ -37,50 +37,18 @@ For every function that New Relic [automatically instruments](/docs/mobile-monit
 
 After adding the `dynamic` keyword to your method overrides, you can re-enable Swift instrumentation by calling the following method:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        <DNT>
-          **Language**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Procedure**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Objective-C
-      </td>
-
-      <td>
-        Call prior to `[NewRelic startWithApplicationToken:...];`
+| **Language** | **Procedure** |
+| - | - |
+| Objective-C | Call prior to `[NewRelic startWithApplicationToken:...];`
 
         ```objectivec
         [NewRelic enableFeatures:NRFeatureFlag_SwiftInteractionTracing];
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Swift
-      </td>
-
-      <td>
-        Call prior to `NewRelic.start(withApplicationToken:)`
+        ``` |
+| Swift | Call prior to `NewRelic.start(withApplicationToken:)`
 
         ```swift
         NewRelic.enableFeatures(NRMAFeatureFlags.NRFeatureFlag_SwiftInteractionTracing)
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+

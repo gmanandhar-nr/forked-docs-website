@@ -82,53 +82,13 @@ NewRelic. recordHandledException(
 
       ## Parameters [#android-parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width="30%">
-              Parameter
-            </th>
+      # Table
 
-            <th width="30%">
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$exceptionToHandle` | `Exception` | Required. The exception to be recorded. |
+| `$exceptionAttributes` | `Map of String, Object` | Optional. A map of attributes to be associated with the exception. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$exceptionToHandle`
-            </td>
-
-            <td>
-              `Exception`
-            </td>
-
-            <td>
-              Required. The exception to be recorded.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$exceptionAttributes`
-            </td>
-
-            <td>
-              `Map of String, Object`
-            </td>
-
-            <td>
-              Optional. A map of attributes to be associated with the exception.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Return values [#android-return-values]
 

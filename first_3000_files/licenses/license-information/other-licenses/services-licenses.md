@@ -19,121 +19,21 @@ We love open-source software, and use the following in various New Relic service
     id="java-crash-data-api"
     title="Java crash data API"
   >
-    <table>
-      <thead>
-        <tr>
-          <th width="250px">
-            Framework
-          </th>
+    # Table
 
-          <th>
-            License
-          </th>
-        </tr>
-      </thead>
+| Framework | License |
+| - | - |
+| [Apache TomCat](http://tomcat.apache.org/) | [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) |
+| [Bean Validation](http://beanvalidation.org/) | [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) |
+| Cassandra Driver Core | [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) |
+| [ClassMate](http://github.com/cowtowncoder/java-classmate) | [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) |
+| [Hamcrest](https://code.google.com/p/hamcrest/) | [BSD](http://opensource.org/licenses/BSD-3-Clause) |
+| [Mockito](http://mockito.org/) | [MIT](https://code.google.com/p/mockito/wiki/License) |
+| [Netty](http://netty.io/) | [Apache 2.0](https://github.com/netty/netty/blob/3.7/LICENSE.txt) |
+| [Objenesis](http://objenesis.org/) | [MIT](http://objenesis.org/license.html) |
+| [SnakeYAML](http://www.snakeyaml.org/) | [Apache 2.0](//www.apache.org/licenses/LICENSE-2.0) |
+| [Spring Boot](http://projects.spring.io/spring-boot/) | [Apache 2.0](//www.apache.org/licenses/LICENSE-2.0) |
 
-      <tbody>
-        <tr>
-          <td>
-            [Apache TomCat](http://tomcat.apache.org/)
-          </td>
-
-          <td>
-            [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Bean Validation](http://beanvalidation.org/)
-          </td>
-
-          <td>
-            [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Cassandra Driver Core
-          </td>
-
-          <td>
-            [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [ClassMate](http://github.com/cowtowncoder/java-classmate)
-          </td>
-
-          <td>
-            [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Hamcrest](https://code.google.com/p/hamcrest/)
-          </td>
-
-          <td>
-            [BSD](http://opensource.org/licenses/BSD-3-Clause)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Mockito](http://mockito.org/)
-          </td>
-
-          <td>
-            [MIT](https://code.google.com/p/mockito/wiki/License)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Netty](http://netty.io/)
-          </td>
-
-          <td>
-            [Apache 2.0](https://github.com/netty/netty/blob/3.7/LICENSE.txt)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Objenesis](http://objenesis.org/)
-          </td>
-
-          <td>
-            [MIT](http://objenesis.org/license.html)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [SnakeYAML](http://www.snakeyaml.org/)
-          </td>
-
-          <td>
-            [Apache 2.0](//www.apache.org/licenses/LICENSE-2.0)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [Spring Boot](http://projects.spring.io/spring-boot/)
-          </td>
-
-          <td>
-            [Apache 2.0](//www.apache.org/licenses/LICENSE-2.0)
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

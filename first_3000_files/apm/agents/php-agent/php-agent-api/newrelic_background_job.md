@@ -32,37 +32,18 @@ You can also reverse the functionality by setting the optional flag to `false`, 
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$flag`
 
-  <tbody>
-    <tr>
-      <td>
-        `$flag`
-
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Defaults to `true`.
+        _boolean_ | Optional. Defaults to `true`.
 
         If `true` or omitted, the current transaction is marked as a background job.
 
-        If `false`, the transaction is marked as a web transaction.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        If `false`, the transaction is marked as a web transaction. |
+
 
 ## Examples
 

@@ -169,89 +169,17 @@ If you specify many expressions, all those expressions must evaluate to true for
 
 You've got to specify the APM agent and its version within the instrumentation CR. We recommend using the latest version to take advantage of the newest features available.
 
-<table>
-    <thead>
-        <tr>
-            <th>
-                Language
-            </th>
-            <th>
-                Image
-            </th>
-            <th>
-                Available versions
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              dotnet
-            </td>
-            <td>
-              `newrelic-dotnet-init:latest`
-            </td>
-            <td>
-              [.NET](https://hub.docker.com/repository/docker/newrelic/newrelic-dotnet-init/general)
-            </td>
-        </tr>
-        <tr>
-            <td>
-              java
-            </td>
-            <td>
-              `newrelic-java-init:latest`
-            </td>
-            <td>
-              [Java](https://hub.docker.com/repository/docker/newrelic/newrelic-java-init/general)
-            </td>
-        </tr>
-        <tr>
-            <td>
-              nodejs
-            </td>
-            <td>
-              `newrelic-node-init:latest`
-            </td>
-            <td>
-              [Node](https://hub.docker.com/repository/docker/newrelic/newrelic-node-init/general)
-            </td>
-        </tr>
-        <tr>
-            <td>
-              python
-            </td>
-            <td>
-              `newrelic-python-init:latest`
-            </td>
-            <td>
-              [Python](https://hub.docker.com/repository/docker/newrelic/newrelic-python-init/general)
-            </td>
-        </tr>
-        <tr>
-            <td>
-              ruby
-            </td>
-            <td>
-              `newrelic-ruby-init:latest`
-            </td>
-            <td>
-              [Ruby](https://hub.docker.com/repository/docker/newrelic/newrelic-ruby-init/general)
-            </td>
-        </tr>
-        <tr>
-            <td>
-              php
-            </td>
-            <td>
-              `newrelic-php-init:latest`
-            </td>
-            <td>
-              [PHP](https://hub.docker.com/repository/docker/newrelic/newrelic-php-init/general)
-            </td>
-        </tr>
-    </tbody>
-</table>
+# Table
+
+| Language | Image | Available versions |
+| - | - | - |
+| dotnet | `newrelic-dotnet-init:latest` | [.NET](https://hub.docker.com/repository/docker/newrelic/newrelic-dotnet-init/general) |
+| java | `newrelic-java-init:latest` | [Java](https://hub.docker.com/repository/docker/newrelic/newrelic-java-init/general) |
+| nodejs | `newrelic-node-init:latest` | [Node](https://hub.docker.com/repository/docker/newrelic/newrelic-node-init/general) |
+| python | `newrelic-python-init:latest` | [Python](https://hub.docker.com/repository/docker/newrelic/newrelic-python-init/general) |
+| ruby | `newrelic-ruby-init:latest` | [Ruby](https://hub.docker.com/repository/docker/newrelic/newrelic-ruby-init/general) |
+| php | `newrelic-php-init:latest` | [PHP](https://hub.docker.com/repository/docker/newrelic/newrelic-php-init/general) |
+
 
 See this example:
 

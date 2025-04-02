@@ -40,51 +40,14 @@ The XML file format includes root and child nodes.
   >
     The root node of an XML file is `extension`. It can have three different attributes:
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "150px" }}>
-            Value
-          </th>
+    # Table
 
-          <th>
-            Definition
-          </th>
-        </tr>
-      </thead>
+| Value | Definition |
+| - | - |
+| `name` | A unique but descriptive name identifying your XML extension. |
+| `enabled` | Identifies whether the extension will be read by the Java agent. Default is `true`. If `false`, New Relic will ignore the extension. |
+| `version` | The version of the extension. If two extensions have the same name, only the extension with the highest version will be used. |
 
-      <tbody>
-        <tr>
-          <td>
-            `name`
-          </td>
-
-          <td>
-            A unique but descriptive name identifying your XML extension.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `enabled`
-          </td>
-
-          <td>
-            Identifies whether the extension will be read by the Java agent. Default is `true`. If `false`, New Relic will ignore the extension.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `version`
-          </td>
-
-          <td>
-            The version of the extension. If two extensions have the same name, only the extension with the highest version will be used.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

@@ -224,47 +224,15 @@ You can change the polling frequency and filter data using [configuration option
 
 The New Relic infrastructure AWS Billing integration collects the following metric data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        <DNT>
-          **Data**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        AWS Billing metrics
-      </td>
-
-      <td>
-        `EstimatedCharges`: The estimated charges for your AWS usage. This can either be estimated charges for one service or a rollup of estimated charges for all services. The currency is USD.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        AWS Budgets metrics
-      </td>
-
-      <td>
-        * `actualAmount`: The actual cost or usage being tracked by a budget.
+| **Data** | **Description** |
+| - | - |
+| AWS Billing metrics | `EstimatedCharges`: The estimated charges for your AWS usage. This can either be estimated charges for one service or a rollup of estimated charges for all services. The currency is USD. |
+| AWS Budgets metrics | * `actualAmount`: The actual cost or usage being tracked by a budget.
         * `limitAmount`: The total amount of cost or usage that you want to track with a budget as an upper limit.
-        * `forecastedAmount`: The forecasted cost or usage being tracked by a budget.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `forecastedAmount`: The forecasted cost or usage being tracked by a budget. |
+
 
 ## Other system data [#attributes]
 

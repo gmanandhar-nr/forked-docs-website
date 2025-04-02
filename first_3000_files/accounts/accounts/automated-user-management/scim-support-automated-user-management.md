@@ -45,41 +45,13 @@ New Relic uses a subset of the available fields in the SCIM core schema. Other S
 
 `Group`:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        SCIM field name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| SCIM field name | Description |
+| - | - |
+| `displayName` | **Required.** Name of the group. |
+| `members` | List of users in the group. |
 
-  <tbody>
-    <tr>
-      <td>
-        `displayName`
-      </td>
-
-      <td>
-        <DNT>**Required.**</DNT> Name of the group.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `members`
-      </td>
-
-      <td>
-        List of users in the group.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 `User`:
 

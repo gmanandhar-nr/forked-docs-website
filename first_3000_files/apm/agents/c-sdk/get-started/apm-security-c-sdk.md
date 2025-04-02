@@ -27,66 +27,11 @@ For more information about our security measures, see our [security and privacy 
 
 By default, this is how the <DNT>C SDK</DNT> handles the following potentially sensitive data. For more information, including code values and examples, see the [C SDK documentation about data structures on GitHub](https://newrelic.github.io/c-sdk/annotated.html).
 
-<table>
-  <thead>
-    <tr>
-      <th width="200px">
-        Type of information
-      </th>
+# Table
 
-      <th>
-        <DNT>C SDK</DNT> data security
-      </th>
-    </tr>
-  </thead>
+| Type of information | C SDK data security |
+| - | - |
 
-  <tbody>
-    <tr id="name">
-      <td>
-        Datastore instance name or database name
-      </td>
-
-      <td>
-        The [`newrelic_datastore_segment_config_t`](https://newrelic.github.io/c-sdk/structnewrelic__datastore__segment__config__t.html) is a struct that configures whether a datastore's instance name and table name are captured for datastore segment instrumentation.
-
-        * Instance names: By default, the configuration returned by `newrelic_new_config()` enables datastore segments with `instance_reporting` set to `true`.
-        * Database names: By default, the configuration returned by `newrelic_new_config()` enables datastore segments with `database_name_reporting` set to `true`.
-      </td>
-    </tr>
-
-    <tr id="sql">
-      <td>
-        SQL
-      </td>
-
-      <td>
-        The `record_sql` setting in the [`newrelic_transaction_tracer_config_t`](https://newrelic.github.io/c-sdk/structnewrelic__transaction__tracer__config__t.html) controls the SQL format in transaction traces for supported SQL-like products. The default setting, `NEWRELIC_SQL_OBFUSCATED`, sets alphanumeric characters to `?`.
-      </td>
-    </tr>
-
-    <tr id="audit-mode">
-      <td>
-        [Audit mode](/docs/agents/manage-apm-agents/configuration/log-audit-all-data-your-new-relic-agent-transmits)
-      </td>
-
-      <td>
-        The audit log is a plain text logging of all data sent to New Relic by the C SDK. When [starting the C SDK daemon](/docs/agents/c-sdk/install-configure/install-c-sdk-compile-link-your-code#daemon), add `-auditlog <file>` to the daemon configuration file. For example:
-
-        ```sh
-        ./newrelic-daemon -f -logfile stdout -loglevel debug -auditlog audit.log
-        ```
-
-        <Callout variant="tip">
-          To see all of the available options for the C daemon: At the command line, type:
-
-          ```sh
-          ./newrelic-daemon --help
-          ```
-        </Callout>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Customize security settings [#customize]
 

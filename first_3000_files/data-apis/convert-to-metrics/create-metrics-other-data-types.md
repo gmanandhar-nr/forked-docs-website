@@ -147,83 +147,28 @@ To check that the rule was created correctly, you can [run a query to return tha
 
     In this request:
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Request elements
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            `mutation`
-          </td>
-
-          <td>
-            One of the basic [API operation types](/docs/apis/graphql-api/getting-started/introduction-new-relic-graphql-api#tutorials).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `eventsToMetricsCreateRule`
-          </td>
-
-          <td>
-            The method being called to create a rule.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `rules`
-          </td>
-
-          <td>
-            Takes four parameters:
+| Request elements | Description |
+| - | - |
+| `mutation` | One of the basic [API operation types](/docs/apis/graphql-api/getting-started/introduction-new-relic-graphql-api#tutorials). |
+| `eventsToMetricsCreateRule` | The method being called to create a rule. |
+| `rules` | Takes four parameters:
 
             * `name`: The [name of the rule](#naming).
             * `description`: Optional. The description of the rule. We recommend you include information about who created the metric data and who will be using the data.
             * `accountId`: The [New Relic account ID](/docs/accounts/install-new-relic/account-setup/account-id) where the events, logs, or spans live and the metrics will be created.
-            * `nrql`: The NRQL query that creates the rule. For more on this, see [Create NRQL query](#create-nrql).
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `successes` and `submitted` blocks
-          </td>
-
-          <td>
-            Here you define the data returned by a successful or failed response. Available parameters for these blocks include:
+            * `nrql`: The NRQL query that creates the rule. For more on this, see [Create NRQL query](#create-nrql). |
+| `successes` and `submitted` blocks | Here you define the data returned by a successful or failed response. Available parameters for these blocks include:
 
             * `id` (`ruleId` for `submitted`)
             * `name`
             * `description`
             * `nrql`
             * `enabled` (enabled/disabled status)
-            * `accountId`
-          </td>
-        </tr>
+            * `accountId` |
+| `ruleId` and `accountId` | If a failure occurs, then the submitted `ruleId` and `accountId` will be returned along with the error reason and error description. |
 
-        <tr>
-          <td>
-            `ruleId` and `accountId`
-          </td>
-
-          <td>
-            If a failure occurs, then the submitted `ruleId` and `accountId` will be returned along with the error reason and error description.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

@@ -53,29 +53,12 @@ Our Kubernetes integration is [CRI](https://kubernetes.io/docs/concepts/architec
 
 Our integration is compatible and is continuously tested on the following Kubernetes versions:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}/>
+# Table
 
-      <th>
-        Versions
-      </th>
-    </tr>
-  </thead>
+| Versions |
+| - |
+| Kubernetes cluster | 1.27 to 1.31 |
 
-  <tbody>
-    <tr>
-      <td>
-        Kubernetes cluster
-      </td>
-
-      <td>
-        1.27 to 1.31
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="important">
   Starting from Kubernetes version 1.26, `@autoscaling/v2` has replaced the `@autoscaling/v2beta2` API. For continued `HorizontalPodAutoscaling` metric reporting, you must install `kube-state-metrics` version 2.7+ on the Kubernetes version 1.26+ clusters, because only `kube-state-metrics` v2.7+ can support the `@autoscaling/v2` API.

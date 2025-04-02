@@ -45,145 +45,45 @@ newrelic.agent.web_transaction(application=None, name=None, group=None, scheme=N
 
 Parameters for these calls:
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `application`
 
-  <tbody>
-    <tr>
-      <td>
-        `application`
+        _Application instance_ | Optional. The application under which the data will be reported. If left without a value, the application specified in the agent [configuration](/docs/agents/python-agent/installation-configuration/python-agent-configuration) (config file or environment variable) will be used.
 
-        _Application instance_
-      </td>
+        For more on generating an application object, see the [`application()`](/docs/agents/python-agent/python-agent-api/application) method. |
+| `name`
 
-      <td>
-        Optional. The application under which the data will be reported. If left without a value, the application specified in the agent [configuration](/docs/agents/python-agent/installation-configuration/python-agent-configuration) (config file or environment variable) will be used.
+        _string_ | Optional. The name of the transaction. By default, the name will be the name of the function the decorator has been applied to but you can override this by supplying this name. |
+| `group`
 
-        For more on generating an application object, see the [`application()`](/docs/agents/python-agent/python-agent-api/application) method.
-      </td>
-    </tr>
+        _string_ | Optional. The `group` represents the naming structure for the `name` parameter. This is used in the UI to set the [transaction type](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions).
 
-    <tr>
-      <td>
-        `name`
+        If not supplied, the group defaults to `Function` in expectation that the name is of the form `module:class.function` or `module:function` and represents the name of the function being executed. If you are creating a custom group, we recommends you prefix it with `Python/`. |
+| `scheme`
 
-        _string_
-      </td>
+        _string_ | Optional. The scheme portion of the request URL |
+| `host`
 
-      <td>
-        Optional. The name of the transaction. By default, the name will be the name of the function the decorator has been applied to but you can override this by supplying this name.
-      </td>
-    </tr>
+        _string_ | Optional. The host portion of the request URL |
+| `port`
 
-    <tr>
-      <td>
-        `group`
+        _integer_ | Optional. The port portion of the request URL |
+| `request_method`
 
-        _string_
-      </td>
+        _string_ | Optional. The HTTP request method, such as GET or POST |
+| `request_path`
 
-      <td>
-        Optional. The `group` represents the naming structure for the `name` parameter. This is used in the UI to set the [transaction type](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions).
+        _string_ | Optional. The remainder of the request URL's path |
+| `query_string`
 
-        If not supplied, the group defaults to `Function` in expectation that the name is of the form `module:class.function` or `module:function` and represents the name of the function being executed. If you are creating a custom group, we recommends you prefix it with `Python/`.
-      </td>
-    </tr>
+        _string_ | Optional. The portion of the request URL that follows the question mark |
+| `headers`
 
-    <tr>
-      <td>
-        `scheme`
+        _iterable or dict_ | Optional. The HTTP request headers An iterable of \[name, value] two-item iterables or dict of `{name:value}`, where name is the header name, and value is the header value |
 
-        _string_
-      </td>
-
-      <td>
-        Optional. The scheme portion of the request URL
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `host`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. The host portion of the request URL
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `port`
-
-        _integer_
-      </td>
-
-      <td>
-        Optional. The port portion of the request URL
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `request_method`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. The HTTP request method, such as GET or POST
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `request_path`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. The remainder of the request URL's path
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `query_string`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. The portion of the request URL that follows the question mark
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `headers`
-
-        _iterable or dict_
-      </td>
-
-      <td>
-        Optional. The HTTP request headers An iterable of \[name, value] two-item iterables or dict of `{name:value}`, where name is the header name, and value is the header value
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Wrapper parameters: [#wrapper-params]
 

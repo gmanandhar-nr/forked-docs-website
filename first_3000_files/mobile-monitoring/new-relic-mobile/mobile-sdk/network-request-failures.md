@@ -74,109 +74,17 @@ NewRelic.noticeNetworkFailure(
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$url` | `string` | Required. The URL of the request. |
+| `$httpMethod` | `string` | Required. The HTTP method used, such as GET or POST. |
+| `$startTime` | `long` | Required. The start time of the request in milliseconds since the epoch. |
+| `$endTime` | `long` | Required. The end time of the request in milliseconds since the epoch. |
+| `$exception` | `string` | Either this or `$failure` parameter is required. This is the exception that occurred. New Relic can automatically translate many common exceptions into network failure types. |
+| `$failure` | `enum` | Either this or `$exception` parameter is required. The type of network failure that occurred. If an exception cannot be resolved to a network failure automatically, this method can be used to categorize the failure accurately. The values are defined by the `NetworkFailure` enum. Valid values include `Unknown`, `BadURL`, `TimedOut`, `CannotConnectToHost`, `DNSLookupFailed`, `BadServerResponse`, and `SecureConnectionFailed`. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$url`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The URL of the request.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$httpMethod`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The HTTP method used, such as GET or POST.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$startTime`
-            </td>
-
-            <td>
-              `long`
-            </td>
-
-            <td>
-              Required. The start time of the request in milliseconds since the epoch.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$endTime`
-            </td>
-
-            <td>
-              `long`
-            </td>
-
-            <td>
-              Required. The end time of the request in milliseconds since the epoch.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$exception`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Either this or `$failure` parameter is required. This is the exception that occurred. New Relic can automatically translate many common exceptions into network failure types.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$failure`
-            </td>
-
-            <td>
-              `enum`
-            </td>
-
-            <td>
-              Either this or `$exception` parameter is required. The type of network failure that occurred. If an exception cannot be resolved to a network failure automatically, this method can be used to categorize the failure accurately. The values are defined by the `NetworkFailure` enum. Valid values include `Unknown`, `BadURL`, `TimedOut`, `CannotConnectToHost`, `DNSLookupFailed`, `BadServerResponse`, and `SecureConnectionFailed`.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Examples [#examples]
 

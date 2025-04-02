@@ -32,33 +32,14 @@ This will allow a user to gain insight about individual end users, such as the i
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$user_id` (_string_) | Required.
 
-  <tbody>
-    <tr>
-      <td>
-        `$user_id` (_string_)
-      </td>
+        Should be a unique value (such as a UUID) that will be assigned to the current transaction. |
 
-      <td>
-        Required.
-
-        Should be a unique value (such as a UUID) that will be assigned to the current transaction.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

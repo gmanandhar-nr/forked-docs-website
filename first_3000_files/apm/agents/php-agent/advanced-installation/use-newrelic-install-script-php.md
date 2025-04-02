@@ -35,45 +35,13 @@ The installer script location depends on how you installed the New Relic PHP age
 
 For `newrelic-install` to correctly detect multiple installations, ensure your `PATH` environment variable is correctly set. The `newrelic-install` script can only install the agent for versions it can find.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **If you want to...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this...**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **If you want to...** | **Do this...** |
+| - | - |
+| Specify additional directories | Use the `NR_INSTALL_PATH` environment variable with a colon-separated list. |
+| Override `NR_INSTALL_PATH` and `PATH` | Specify a set of directories in the `NR_INSTALL_PHPLIST` environment variable as a colon-separated list. These directories must contain either the command line version of PHP or the `php-config` script. |
 
-  <tbody>
-    <tr>
-      <td>
-        Specify additional directories
-      </td>
-
-      <td>
-        Use the `NR_INSTALL_PATH` environment variable with a colon-separated list.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Override `NR_INSTALL_PATH` and `PATH`
-      </td>
-
-      <td>
-        Specify a set of directories in the `NR_INSTALL_PHPLIST` environment variable as a colon-separated list. These directories must contain either the command line version of PHP or the `php-config` script.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Invoke the installer script [#invocation]
 

@@ -24,137 +24,19 @@ The Kubernetes Navigator UI is a Kubernetes version of our [New Relic Navigator]
 
 The Navigator supports visualizing the following Kubernetes entity types:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity Type
-      </th>
+# Table
 
-      <th>
-        Metrics
-      </th>
+| Entity Type | Metrics | Group By |
+| - | - | - |
+| Pod | Pod Status, CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Alert Status, Filesystem Used (%), Warning Events, Start Time, Created At | Namespace, Deployment, StatefulSet, DaemonSet, Job, CronJob, Pod, Node |
+| Deployment | CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Pods Missing (#), Pods Missing (%), Alert Status, Created At | Namespace, Deployment |
+| Statefulset | CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Pods Missing (#), Pods Missing (%), Alert Status, Created At | Namespace, Statefulset |
+| Daemonset | CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Pods Missing (#), Pods Missing (%), Alert Status, Created At | Namespace, Daemonset |
+| Job | CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Alert Status, Created At | Namespace, Job |
+| CronJob | CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Alert Status, Created At | Namespace, CronJob |
+| Node | Allocatable CPU Used %, Allocatable Memory Used %, FS Capacity Used %, Pending Pods, Failed Pods, Alert Status | All Nodes, Node |
+| Container | CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Alert Status | Namespace, Pod, Deployment, StatefulSet, Daemonset, Job, CronJob, Node, Container |
 
-      <th>
-        Group By
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Pod
-      </td>
-
-      <td>
-        Pod Status, CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Alert Status, Filesystem Used (%), Warning Events, Start Time, Created At
-      </td>
-
-      <td>
-        Namespace, Deployment, StatefulSet, DaemonSet, Job, CronJob, Pod, Node
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Deployment
-      </td>
-
-      <td>
-        CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Pods Missing (#), Pods Missing (%), Alert Status, Created At
-      </td>
-
-      <td>
-        Namespace, Deployment
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Statefulset
-      </td>
-
-      <td>
-        CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Pods Missing (#), Pods Missing (%), Alert Status, Created At
-      </td>
-
-      <td>
-        Namespace, Statefulset
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Daemonset
-      </td>
-
-      <td>
-        CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Pods Missing (#), Pods Missing (%), Alert Status, Created At
-      </td>
-
-      <td>
-        Namespace, Daemonset
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Job
-      </td>
-
-      <td>
-        CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Alert Status, Created At
-      </td>
-
-      <td>
-        Namespace, Job
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        CronJob
-      </td>
-
-      <td>
-        CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Network Rx (bytes/s), Network Tx (bytes/s), Alert Status, Created At
-      </td>
-
-      <td>
-        Namespace, CronJob
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Node
-      </td>
-
-      <td>
-        Allocatable CPU Used %, Allocatable Memory Used %, FS Capacity Used %, Pending Pods, Failed Pods, Alert Status
-      </td>
-
-      <td>
-        All Nodes, Node
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Container
-      </td>
-
-      <td>
-        CPU Utilization (limit), CPU Utilization (request), CPU Used (cores), Memory Utilization (limit), Memory Utilization (request), Memory Used (bytes), Container Restarts (delta), Container Restarts (cumulative), CPU Throttled (%), Alert Status
-      </td>
-
-      <td>
-        Namespace, Pod, Deployment, StatefulSet, Daemonset, Job, CronJob, Node, Container
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Use the dropdown filters to select an <DNT>**Entity type**</DNT>, <DNT>**Metric**</DNT>, and <DNT>**Group by**</DNT>. These give you control over the visualization.
 

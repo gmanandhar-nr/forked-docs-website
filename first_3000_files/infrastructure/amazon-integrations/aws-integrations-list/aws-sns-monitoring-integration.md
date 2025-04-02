@@ -57,88 +57,15 @@ This integration collects the following metrics. For full descriptions of some o
   Metrics indicated with an asterisk `*` are only fetched if [extended inventory collection](/docs/integrations/new-relic-integrations/getting-started/configure-polling-frequency-data-collection-cloud-integrations#extended) is on.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th width={385}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `numberOfMessagesPublished` | The number of messages published. |
+| `numberOfNotificationsDelivered` | The number of messages successfully delivered. |
+| `numberOfNotificationsFailed` | The number of messages that Amazon SNS failed to deliver. For more info, see [Amazon SNS metrics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/sns-metricscollected.html). |
+| `publishSize` | The size (in bytes) of messages published, includes Minimum, Maximum, Average and Count. |
+| `SubscriptionsPending`\* | The number of subscriptions pending confirmation on this topic. |
+| `SubscriptionsConfirmed`\* | The number of confirmed subscriptions on this topic. |
+| `SubscriptionsDeleted`\* | The number of deleted subscriptions on this topic. |
 
-  <tbody>
-    <tr>
-      <td>
-        `numberOfMessagesPublished`
-      </td>
-
-      <td>
-        The number of messages published.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `numberOfNotificationsDelivered`
-      </td>
-
-      <td>
-        The number of messages successfully delivered.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `numberOfNotificationsFailed`
-      </td>
-
-      <td>
-        The number of messages that Amazon SNS failed to deliver. For more info, see [Amazon SNS metrics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/sns-metricscollected.html).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `publishSize`
-      </td>
-
-      <td>
-        The size (in bytes) of messages published, includes Minimum, Maximum, Average and Count.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SubscriptionsPending`\*
-      </td>
-
-      <td>
-        The number of subscriptions pending confirmation on this topic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SubscriptionsConfirmed`\*
-      </td>
-
-      <td>
-        The number of confirmed subscriptions on this topic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SubscriptionsDeleted`\*
-      </td>
-
-      <td>
-        The number of deleted subscriptions on this topic.
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -31,51 +31,14 @@ For example, you might schedule something to run periodically on your server to 
 
 Some non-web transactions from supported frameworks or services are detected automatically by New Relic; others may be created using custom instrumentation. We intentionally separate your web and non-web transactions in the UI.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Non-web vs. web transactions
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| Non-web vs. web transactions | Comments |
+| - | - |
+| Less directly important | Non-web transactions are often background processes and tasks, and they are less directly important to your application's users when compared to web transactions. |
+| Long running | Non-web transactions are often long-running processes. Separating them from web transactions prevents those results from skewing your customer-facing response times. |
+| Omitted from Apdex score | Combining your non-web transactions with your web transactions would hurt your [Apdex score](/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction) (a measure of satisfaction with load times). This is why Apdex data for non-web transactions does not appear in the UI. |
 
-  <tbody>
-    <tr>
-      <td>
-        Less directly important
-      </td>
-
-      <td>
-        Non-web transactions are often background processes and tasks, and they are less directly important to your application's users when compared to web transactions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Long running
-      </td>
-
-      <td>
-        Non-web transactions are often long-running processes. Separating them from web transactions prevents those results from skewing your customer-facing response times.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Omitted from Apdex score
-      </td>
-
-      <td>
-        Combining your non-web transactions with your web transactions would hurt your [Apdex score](/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction) (a measure of satisfaction with load times). This is why Apdex data for non-web transactions does not appear in the UI.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Create non-web transactions [#create]
 

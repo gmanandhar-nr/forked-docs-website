@@ -40,55 +40,17 @@ The infrastructure inventory is a qualified namespace (structured like a directo
   src="/images/infrastructure_screenshot-full_inventory-name-source-path.webp"
 />
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Element
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Element | Description |
+| - | - |
+| Category | Basic, top level type of data source, typically based on its role in the system. Common examples include config, package, kernel, user session, services, and modules. |
+| Source | The specific data source for the inventory item. |
+| Label | The name of the specific inventory item; for example, the filename, package name, or system setting name.
 
-  <tbody>
-    <tr>
-      <td>
-        Category
-      </td>
+        
+          Use [tagging](/docs/new-relic-one/use-new-relic-one/core-concepts/tagging-use-tags-organize-group-what-you-monitor#attributes) for detailed metadata and other information about your hosts . |
 
-      <td>
-        Basic, top level type of data source, typically based on its role in the system. Common examples include config, package, kernel, user session, services, and modules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Source
-      </td>
-
-      <td>
-        The specific data source for the inventory item.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Label
-      </td>
-
-      <td>
-        The name of the specific inventory item; for example, the filename, package name, or system setting name.
-
-        <Callout variant="tip">
-          Use [tagging](/docs/new-relic-one/use-new-relic-one/core-concepts/tagging-use-tags-organize-group-what-you-monitor#attributes) for detailed metadata and other information about your hosts .
-        </Callout>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Page functions [#page-functions]
 

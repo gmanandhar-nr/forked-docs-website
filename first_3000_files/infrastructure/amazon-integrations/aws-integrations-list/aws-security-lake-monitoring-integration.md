@@ -48,65 +48,15 @@ Here's an overview of the steps you'll be doing:
 
 5. Fill out the remaining details as described below:
 
-   <table>
-     <thead>
-       <tr>
-         <th style={{ width: "200px" }}>
-           Field
-         </th>
+   # Table
 
-         <th>
-           Value
+| Field | Value |
+| - | - |
+| `Data access method` | S3 |
+| `Account ID` | Insert the AWS `account ID` where you plan on installing the New Relic-provided serverless application. |
+| `External ID` | Insert your New Relic `AccountID`. For more info, see [externalID](https://docs.aws.amazon.com/security-lake/latest/userguide/subscriber-data-access.html#subscriber-external-id) |
+| `Notification details` | SQS queue |
 
-         </th>
-       </tr>
-     </thead>
-
-     <tbody>
-       <tr>
-         <td>
-           `Data access method`
-         </td>
-
-         <td>
-           S3
-
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           `Account ID`
-
-         </td>
-
-         <td>
-           Insert the AWS `account ID` where you plan on installing the New Relic-provided serverless application.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           `External ID`
-         </td>
-
-         <td>
-           Insert your New Relic `AccountID`. For more info, see [externalID](https://docs.aws.amazon.com/security-lake/latest/userguide/subscriber-data-access.html#subscriber-external-id)
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           `Notification details`
-         </td>
-
-         <td>
-           SQS queue
-
-         </td>
-       </tr>
-     </tbody>
-   </table>
 
 6. Select <DNT>**Create**</DNT>.
 

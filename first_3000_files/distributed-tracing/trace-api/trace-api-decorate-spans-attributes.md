@@ -28,115 +28,31 @@ Decorating your spans to show specific properties in our UI can help you:
 
 This table explains how to get spans sent to the Trace API to show up with specific properties in the UI. For property descriptions, see [span properties](/docs/apm/distributed-tracing/ui-data/understand-use-distributed-tracing-data#span-types).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "120px" }}>
-        Desired span property
-      </th>
+# Table
 
-      <th style={{ width: "100px" }}>
-        UI indicator
-      </th>
-
-      <th>
-        How to add property
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Errors
-      </td>
-
-      <td>
-        <img
+| Desired span property | UI indicator | How to add property |
+| - | - | - |
+| Errors | <img
           title="new-relic-distributed-tracing-error-icon.png"
           alt="New Relic distributed tracing error icon"
           src="/images/distributed-tracing_icon_error-icon.webp"
-        />
-      </td>
-
-      <td>
-        Use an attribute with an `error.` prefix. For example: `error.message`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        External
-      </td>
-
-      <td>
-        <img
+        /> | Use an attribute with an `error.` prefix. For example: `error.message`. |
+| External | <img
           title="new-relic-distributed-tracing-external-span-icon.png"
           alt="New Relic distributed tracing external span icon"
           src="/images/distributed-tracing_icon_external-icon.webp"
-        />
-      </td>
-
-      <td>
-        Use an attribute with an `http.` prefix. For example: `http.method`. A span will also appear as an external if it has a child that comes from a different entity. In order to be indexed on the [External services page](/docs/apm/apm-ui-pages/monitoring/external-services/external-services-intro), either `http.url` or `net.peer.name` must be provided.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Datastore
-      </td>
-
-      <td>
-        <img
+        /> | Use an attribute with an `http.` prefix. For example: `http.method`. A span will also appear as an external if it has a child that comes from a different entity. In order to be indexed on the [External services page](/docs/apm/apm-ui-pages/monitoring/external-services/external-services-intro), either `http.url` or `net.peer.name` must be provided. |
+| Datastore | <img
           title="new-relic-distributed-tracing-database-span-icon.png"
           alt="New Relic distributed tracing datastore span icon"
           src="/images/distributed-tracing_icon_databases-icon.webp"
-        />
-      </td>
-
-      <td>
-        Use an attribute with an `db.` prefix. For example: `db.statement`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Service
-      </td>
-
-      <td>
-        <img
+        /> | Use an attribute with an `db.` prefix. For example: `db.statement`. |
+| Service | <img
           title="new-relic-distributed-tracing-service-span-icon.png"
           alt="New Relic distributed tracing service icon"
           src="/images/distributed-tracing_icon_service-icon.webp"
-        />
-      </td>
+        /> | This cannot be done with an attribute. A span is classified as a service span if it's the root span, or if its parent is from a different entity. If a span has several properties, service span classification takes precedence in the UI. |
 
-      <td>
-        This cannot be done with an attribute. A span is classified as a service span if it's the root span, or if its parent is from a different entity. If a span has several properties, service span classification takes precedence in the UI.
-      </td>
-    </tr>
-
-    <tr id="in-process">
-      <td>
-        In-process
-      </td>
-
-      <td>
-        <img
-          title="new-relic-distributed-tracing-in-process-span-icon.png"
-          alt="New Relic distributed tracing in-process span icon "
-          src="/images/distributed-tracing_icon_in-process-icon.webp"
-        />
-      </td>
-
-      <td>
-        This cannot be done with an attribute. A span is classified as in-process if it hasn't been classified as a service span, datastore span, or external span.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how these span properties are determined and stored, see [Trace structure](/docs/understand-dependencies/distributed-tracing/get-started/how-new-relic-distributed-tracing-works).
 

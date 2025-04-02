@@ -37,121 +37,17 @@ To install the iOS agent, follow our [guided install](https://onenr.io/0qwLv87gk
 
 After you install the iOS agent, you can extend its default instrumentation with various types of custom data:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "125px" }}>
-        To access:
-      </th>
+# Table
 
-      <th>
-        In the mobile UI:
-      </th>
+| To access: | In the mobile UI: | In New Relic dashboards: |
+| - | - | - |
+| **Custom data** | Create and record [custom events, interaction traces, and attributes](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile) to add details to your existing data and traces. | Query the [custom events that you created](/docs/insights/insights-data-sources/custom-events/insert-custom-events-attributes-mobile-data) in New Relic dashboards and NRQL. |
+| **Network requests** | Enable the [MobileRequest event](/docs/mobile-monitoring/mobile-monitoring-ui/network-pages/analyze-network-requests-using-mobilerequest-event-data) feature so you can perform a full network analysis. | To further investigate network request error rates and response times, query [MobileRequest and MobileRequestError events](/docs/insights/nrql-new-relic-query-language/nrql-query-examples/insights-query-examples-new-relic-mobile#mobilerequest-examples). |
+| **Crash analysis** | Review detailed information [using groups and filters](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/crash-analysis-group-filter-your-crashes) to analyze trends that lead to crashes. | To view more information about crashes, [create NRQL queries](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/crash-analysis-group-filter-your-crashes#insights) related to crash data. |
+| **Mobile SDK** | Use the [mobile SDK API](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/mobile-sdk-api-guide) to customize the default agent instrumentation. | Then, view those [custom events and attributes](/docs/insights/insights-data-sources/custom-events/insert-custom-events-attributes-mobile-data). |
+| **Handled exceptions** | Report [exceptions](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/introduction-mobile-handled-exceptions) so you can identify factors creating a poor mobile app experience. | To further improve performance, review [MobileHandledException](/docs/insights/insights-data-sources/default-data/mobile-events-attributes#mobilehandledexception-attributes) event records. |
+| **Breadcrumbs** | Boost the level of detail in [crash event trails](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/mobile-crash-event-trail) by adding [breadcrumbs](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile#custom-breadcrumbs). | Then, query [MobileBreadcrumbs](/docs/insights/insights-data-sources/default-data/mobile-events-attributes#event-types) events to see all breadcrumbs or just breadcrumbs related to crashes. |
 
-      <th>
-        In New Relic dashboards:
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <DNT>
-          **Custom data**
-        </DNT>
-      </td>
-
-      <td>
-        Create and record [custom events, interaction traces, and attributes](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile) to add details to your existing data and traces.
-      </td>
-
-      <td>
-        Query the [custom events that you created](/docs/insights/insights-data-sources/custom-events/insert-custom-events-attributes-mobile-data) in New Relic dashboards and NRQL.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Network requests**
-        </DNT>
-      </td>
-
-      <td>
-        Enable the [MobileRequest event](/docs/mobile-monitoring/mobile-monitoring-ui/network-pages/analyze-network-requests-using-mobilerequest-event-data) feature so you can perform a full network analysis.
-      </td>
-
-      <td>
-        To further investigate network request error rates and response times, query [MobileRequest and MobileRequestError events](/docs/insights/nrql-new-relic-query-language/nrql-query-examples/insights-query-examples-new-relic-mobile#mobilerequest-examples).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Crash analysis**
-        </DNT>
-      </td>
-
-      <td>
-        Review detailed information [using groups and filters](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/crash-analysis-group-filter-your-crashes) to analyze trends that lead to crashes.
-      </td>
-
-      <td>
-        To view more information about crashes, [create NRQL queries](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/crash-analysis-group-filter-your-crashes#insights) related to crash data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Mobile SDK**
-        </DNT>
-      </td>
-
-      <td>
-        Use the [mobile SDK API](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/mobile-sdk-api-guide) to customize the default agent instrumentation.
-      </td>
-
-      <td>
-        Then, view those [custom events and attributes](/docs/insights/insights-data-sources/custom-events/insert-custom-events-attributes-mobile-data).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Handled exceptions**
-        </DNT>
-      </td>
-
-      <td>
-        Report [exceptions](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/introduction-mobile-handled-exceptions) so you can identify factors creating a poor mobile app experience.
-      </td>
-
-      <td>
-        To further improve performance, review [MobileHandledException](/docs/insights/insights-data-sources/default-data/mobile-events-attributes#mobilehandledexception-attributes) event records.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Breadcrumbs**
-        </DNT>
-      </td>
-
-      <td>
-        Boost the level of detail in [crash event trails](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/mobile-crash-event-trail) by adding [breadcrumbs](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile#custom-breadcrumbs).
-      </td>
-
-      <td>
-        Then, query [MobileBreadcrumbs](/docs/insights/insights-data-sources/default-data/mobile-events-attributes#event-types) events to see all breadcrumbs or just breadcrumbs related to crashes.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Troubleshoot your installation [#troubleshooting]
 

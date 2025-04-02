@@ -32,69 +32,23 @@ This document is a quick reference for using some basic configuration options wi
 
 Here are examples of some available configuration options you can change, as defined in the C SDK's public header, [`libnewrelic.h`](https://newrelic.github.io/c-sdk/libnewrelic_8h.html).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        C SDK configuration options
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| C SDK configuration options | Comments |
+| - | - |
+| General configuration settings | To set or change the app name, set the , logging level, transaction tracing, datastore tracing, etc., use:
 
-  <tbody>
-    <tr>
-      <td>
-        General configuration settings
-      </td>
+        `newrelic_app_config_t` |
+| Additional transaction tracing configuration | To enable the transaction tracer and to configure what transaction durations are considered for reporting a trace to New Relic, use:
 
-      <td>
-        To set or change the app name, set the <InlinePopover type="licenseKey"/>, logging level, transaction tracing, datastore tracing, etc., use:
+        `newrelic_transaction_tracer_config_t` |
+| Datastore segments | To configure whether a database name and datastore instance name are reported, use:
 
-        `newrelic_app_config_t`
-      </td>
-    </tr>
+        [`newrelic_datastore_segment_config_t`](https://newrelic.github.io/c-sdk/structnewrelic__datastore__segment__config__t.html) |
+| Communication with the C SDK | To set the socket endpoint for agent-to-daemon communications, use:
 
-    <tr>
-      <td>
-        Additional transaction tracing configuration
-      </td>
+        `newrelic_init` |
 
-      <td>
-        To enable the transaction tracer and to configure what transaction durations are considered for reporting a trace to New Relic, use:
-
-        `newrelic_transaction_tracer_config_t`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Datastore segments
-      </td>
-
-      <td>
-        To configure whether a database name and datastore instance name are reported, use:
-
-        [`newrelic_datastore_segment_config_t`](https://newrelic.github.io/c-sdk/structnewrelic__datastore__segment__config__t.html)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Communication with the C SDK
-      </td>
-
-      <td>
-        To set the socket endpoint for agent-to-daemon communications, use:
-
-        `newrelic_init`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Change app name (alias) in UI [#change-ui]
 

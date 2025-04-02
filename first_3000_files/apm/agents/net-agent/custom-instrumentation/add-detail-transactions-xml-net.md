@@ -100,51 +100,14 @@ In some cases, asynchronous work can be tracked as a separate transaction by app
 </tracerFactory>
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Async usage considerations
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| Async usage considerations | Comments |
+| - | - |
+| Instrumented method | The instrumented method must be invoked using `Task.Run`, `Task.Factory.StartNew`, or `new Thread()`. It cannot be invoked using the `await` keyword. |
+| Return type | The instrumented method is not required to be `async`. However, if it is `async`, it must have a return type of `Task` or `Task`. It cannot have a `void` return type. |
+| Attribute instrumentation | The instrumented method cannot have attribute instrumentation applied to it. It cannot be decorated with the `[Transaction]` or `[Trace]` attributes. |
 
-  <tbody>
-    <tr>
-      <td>
-        Instrumented method
-      </td>
-
-      <td>
-        The instrumented method must be invoked using `Task.Run`, `Task.Factory.StartNew`, or `new Thread()`. It cannot be invoked using the `await` keyword.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Return type
-      </td>
-
-      <td>
-        The instrumented method is not required to be `async`. However, if it is `async`, it must have a return type of `Task` or `Task<T>`. It cannot have a `void` return type.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Attribute instrumentation
-      </td>
-
-      <td>
-        The instrumented method cannot have attribute instrumentation applied to it. It cannot be decorated with the `[Transaction]` or `[Trace]` attributes.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <CollapserGroup>
   <Collapser

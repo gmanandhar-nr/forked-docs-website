@@ -23,51 +23,14 @@ The following list includes third party libraries and modules downloaded from th
 
 ## PHP libraries
 
-<table>
-  <thead>
-    <tr>
-      <th width={260}>
-        PHP
-      </th>
+# Table
 
-      <th>
-        License
-      </th>
-    </tr>
-  </thead>
+| PHP | License |
+| - | - |
+| [PHP](//php.net/license/) | [PHP license v3.01](//php.net/license/) |
+| [PHP SAML](//github.com/onelogin/php-saml) | [MIT](//github.com/onelogin/php-saml/blob/master/LICENSE) |
+| [PHP SASS](https://github.com/richthegeek/phpsass) | [BSD](http://opensource.org/licenses/bsd-license.php) |
 
-  <tbody>
-    <tr>
-      <td>
-        [PHP](//php.net/license/)
-      </td>
-
-      <td>
-        [PHP license v3.01](//php.net/license/)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [PHP SAML](//github.com/onelogin/php-saml)
-      </td>
-
-      <td>
-        [MIT](//github.com/onelogin/php-saml/blob/master/LICENSE)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [PHP SASS](https://github.com/richthegeek/phpsass)
-      </td>
-
-      <td>
-        [BSD](http://opensource.org/licenses/bsd-license.php)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## JavaScript libraries
 

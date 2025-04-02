@@ -45,155 +45,28 @@ You can [query and explore your data](/docs/using-new-relic/data/understand-data
 
 This integration collects the following Amazon EMR data. For use cases and additional information, see [Amazon's EMR documentation](https://docs.aws.amazon.com/emr/latest/ManagementGuide/UsingEMR_ViewingMetrics.html#UsingEMR_ViewingMetrics_MetricsReported).
 
-<table>
-  <thead>
-    <tr>
-      <th width={300}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `isIdle` | Indicates that a cluster is no longer performing work, but is still alive and accruing charges. It is set to 1 if no tasks are running and no jobs are running, and set to 0 otherwise.
 
-  <tbody>
-    <tr>
-      <td>
-        `isIdle`
-      </td>
+        This value is checked at five-minute intervals, and a value of 1 indicates only that the cluster was idle when checked, not that it was idle for the entire five minutes. Recommendation: To avoid false positives, raise an alerting threshold when this value has been 1 for more than one consecutive five-minute check. For example, raise an alert on this value if it has been 1 for thirty minutes or longer. |
+| `coreNodesRunning` | The number of core nodes working. Data points for this metric are reported only when a corresponding instance group exists. |
+| `coreNodesPending` | The number of core nodes waiting to be assigned. All of the core nodes requested may not be immediately available; this metric reports the pending requests. Data points for this metric are reported only when a corresponding instance group exists. |
+| `liveDataNodesPercentage` | The percentage of data nodes that are receiving work from Hadoop. |
+| `s3WrittenBytes` | The number of bytes written to Amazon S3. This metric aggregates MapReduce jobs only. It does not apply for other workloads on EMR. |
+| `s3ReadBytes` | The number of bytes read from Amazon S3. This metric aggregates MapReduce jobs only, and does not apply for other workloads on EMR. |
+| `hdfsUtilizationPercentage` | The percentage of HDFS storage currently used. |
+| `hdfsReadBytes` | The number of bytes read from HDFS. |
+| `hdfsWrittenBytes` | The number of bytes written to HDFS. |
+| `missingBlocks` | The number of blocks in which HDFS has no replicas. These might be corrupt blocks. |
+| `totalLoad` | The current, total number of readers and writers reported by all DataNodes in a cluster. |
+| `mostRecentBackupDurationMinutes` | The amount of time it took the previous backup to complete. This metric is set regardless of whether the last completed backup succeeded or failed.
 
-      <td>
-        Indicates that a cluster is no longer performing work, but is still alive and accruing charges. It is set to 1 if no tasks are running and no jobs are running, and set to 0 otherwise.
+        While the backup is ongoing, this metric returns the number of minutes after the backup started. This metric is only reported for HBase clusters. |
+| `timeSinceLastSuccessfulBackupMinutes` | The number of elapsed minutes after the last successful HBase backup started on your cluster. This metric is only reported for HBase clusters. |
 
-        This value is checked at five-minute intervals, and a value of 1 indicates only that the cluster was idle when checked, not that it was idle for the entire five minutes. Recommendation: To avoid false positives, raise an alerting threshold when this value has been 1 for more than one consecutive five-minute check. For example, raise an alert on this value if it has been 1 for thirty minutes or longer.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `coreNodesRunning`
-      </td>
-
-      <td>
-        The number of core nodes working. Data points for this metric are reported only when a corresponding instance group exists.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `coreNodesPending`
-      </td>
-
-      <td>
-        The number of core nodes waiting to be assigned. All of the core nodes requested may not be immediately available; this metric reports the pending requests. Data points for this metric are reported only when a corresponding instance group exists.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `liveDataNodesPercentage`
-      </td>
-
-      <td>
-        The percentage of data nodes that are receiving work from Hadoop.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `s3WrittenBytes`
-      </td>
-
-      <td>
-        The number of bytes written to Amazon S3. This metric aggregates MapReduce jobs only. It does not apply for other workloads on EMR.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `s3ReadBytes`
-      </td>
-
-      <td>
-        The number of bytes read from Amazon S3. This metric aggregates MapReduce jobs only, and does not apply for other workloads on EMR.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `hdfsUtilizationPercentage`
-      </td>
-
-      <td>
-        The percentage of HDFS storage currently used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `hdfsReadBytes`
-      </td>
-
-      <td>
-        The number of bytes read from HDFS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `hdfsWrittenBytes`
-      </td>
-
-      <td>
-        The number of bytes written to HDFS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `missingBlocks`
-      </td>
-
-      <td>
-        The number of blocks in which HDFS has no replicas. These might be corrupt blocks.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `totalLoad`
-      </td>
-
-      <td>
-        The current, total number of readers and writers reported by all DataNodes in a cluster.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `mostRecentBackupDurationMinutes`
-      </td>
-
-      <td>
-        The amount of time it took the previous backup to complete. This metric is set regardless of whether the last completed backup succeeded or failed.
-
-        While the backup is ongoing, this metric returns the number of minutes after the backup started. This metric is only reported for HBase clusters.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `timeSinceLastSuccessfulBackupMinutes`
-      </td>
-
-      <td>
-        The number of elapsed minutes after the last successful HBase backup started on your cluster. This metric is only reported for HBase clusters.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The following metrics appear in the sample depending on the Hadoop version of the resource.
 

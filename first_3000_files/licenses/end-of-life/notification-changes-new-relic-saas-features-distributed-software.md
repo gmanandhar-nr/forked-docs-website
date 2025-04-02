@@ -36,126 +36,19 @@ In communicating changes, we strive to:
 
 EOL changes are classified into the following categories:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "80px" }}>
-        Tier
-      </th>
+# Table
 
-      <th style={{ width: "240px" }}>
-        Impact to customer
-      </th>
+| Tier | Impact to customer | Risk of customer not acting | Impact | Notification lead time |
+| - | - | - | - | - |
+| Tier 3 | None or Cosmetic only (cannot affect customer workflow or platform usage) | None | Low (Bulk) | None |
+| Tier 2 | Customer workflow may be impacted | None | Moderate (Bulk) | Minimum of 90 days |
+| Tier 1 | Customer configuration/coding changes required.
 
-      <th style={{ width: "240px" }}>
-        Risk of customer not acting
-      </th>
+        Capability being replaced (including APIs, agents, and integrations). | Data integrity will be affected including partial or full data loss.
 
-      <th style={{ width: "80px" }}>
-        Impact
-      </th>
+        Alerts impacted including false positive and false negatives. | High | Minimum of 180 days |
+| Tier 1A | There is third party dependency, security issue, reliability concern, or other critical risk that causes an urgent need to change or remove functionality on an accelerated timeline. | N/A | Critical | Notified as soon as reasonabily practical |
 
-      <th style={{ width: "115px" }}>
-        Notification lead time
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Tier 3
-      </td>
-
-      <td>
-        None or Cosmetic only (cannot affect customer workflow or platform usage)
-      </td>
-
-      <td>
-        None
-      </td>
-
-      <td>
-        Low (Bulk)
-      </td>
-
-      <td>
-        None
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Tier 2
-      </td>
-
-      <td>
-        Customer workflow may be impacted
-      </td>
-
-      <td>
-        None
-      </td>
-
-      <td>
-        Moderate (Bulk)
-      </td>
-
-      <td>
-        Minimum of 90 days
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Tier 1
-      </td>
-
-      <td>
-        Customer configuration/coding changes required.
-
-        Capability being replaced (including APIs, agents, and integrations).
-      </td>
-
-      <td>
-        Data integrity will be affected including partial or full data loss.
-
-        Alerts impacted including false positive and false negatives.
-      </td>
-
-      <td>
-        High
-      </td>
-
-      <td>
-        Minimum of 180 days
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Tier 1A
-      </td>
-
-      <td>
-        There is third party dependency, security issue, reliability concern, or other critical risk that causes an urgent need to change or remove functionality on an accelerated timeline.  
-
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td>
-        Critical
-      </td>
-
-      <td>
-        Notified as soon as reasonabily practical
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## EOL lead times: impact on distributed software [#impact]
 

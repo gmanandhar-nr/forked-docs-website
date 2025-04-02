@@ -446,51 +446,14 @@ These are the primary events to query for understanding your usage:
 
 Here are some of the most important attributes attached to usage-related events.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Attribute | Description |
+| - | - |
+| `productLine` | The category of usage. There are three options: `DataPlatform`, `FullStackObservability`, and `ProactiveDetection`. (Starting November 1, 2021, `IncidentIntelligence` is no longer a billing factor.) For more details about these categories, see [New Relic platform](https://newrelic.com/platform). |
+| `metric` | This consolidates multiple categories of usage into a single metric. Helpful when faceting by `productLine`. It's an enum with possible values of `BasicUsers`, `FullPlatformUsers`, and `GigabytesIngested`. Values for the [core user release](#user-queries) include `FullPlatformUsers` and `CoreUsers`. |
+| `consumingAccountId` | ID of the New Relic account directly responsible for the stored events, as determined from the  used. |
 
-  <tbody>
-    <tr>
-      <td>
-        `productLine`
-      </td>
-
-      <td>
-        The category of usage. There are three options: `DataPlatform`, `FullStackObservability`, and `ProactiveDetection`. (Starting November 1, 2021, `IncidentIntelligence` is no longer a billing factor.) For more details about these categories, see [New Relic platform](https://newrelic.com/platform).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `metric`
-      </td>
-
-      <td>
-        This consolidates multiple categories of usage into a single metric. Helpful when faceting by `productLine`. It's an enum with possible values of `BasicUsers`, `FullPlatformUsers`, and `GigabytesIngested`. Values for the [core user release](#user-queries) include `FullPlatformUsers` and `CoreUsers`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `consumingAccountId`
-      </td>
-
-      <td>
-        ID of the New Relic account directly responsible for the stored events, as determined from the <InlinePopover type="licenseKey"/> used.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Byte count estimate [#byte-count-estimate]
 

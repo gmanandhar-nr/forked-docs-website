@@ -39,33 +39,14 @@ This call must be called for every web request where you want to inject the Java
 
 ## Parameters [#parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `nonce`
 
-  <tbody>
-    <tr>
-      <td>
-        `nonce`
+        _string_ | Optional. The per-request, cryptographic nonce used by Content Security Policy (CSP) policies. |
 
-        _string_
-      </td>
-
-      <td>
-        Optional. The per-request, cryptographic nonce used by Content Security Policy (CSP) policies.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values [#return-values]
 

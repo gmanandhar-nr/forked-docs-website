@@ -127,65 +127,12 @@ Our cloud integrations collect data from cloud platform services and accounts. T
 
 ## Infrastructure service integrations [#on-host]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        <DNT>
-          **Integrations**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Integrations** | **Description** |
+| - | - |
+| [Kubernetes integration](/docs/integrations/kubernetes-integration/getting-started/getting-started) | Connect your account to [gain visibility of your Kubernetes environment](/docs/integrations/kubernetes-integration/understand-use-data/understand-use-data), [explore your clusters](/docs/integrations/kubernetes-integration/cluster-explorer/kubernetes-cluster-explorer), and [manage alerts](/docs/integrations/kubernetes-integration/understand-use-data/understand-use-data#alerts). |
 
-  <tbody>
-    <tr>
-      <td>
-        [Kubernetes integration](/docs/integrations/kubernetes-integration/getting-started/getting-started)
-      </td>
-
-      <td>
-        Connect your account to [gain visibility of your Kubernetes environment](/docs/integrations/kubernetes-integration/understand-use-data/understand-use-data), [explore your clusters](/docs/integrations/kubernetes-integration/cluster-explorer/kubernetes-cluster-explorer), and [manage alerts](/docs/integrations/kubernetes-integration/understand-use-data/understand-use-data#alerts).
-      </td>
-    </tr>
-
-    <tr id="prometheus">
-      <td>
-        Prometheus integrations
-      </td>
-
-      <td>
-        [Monitor and report data from Prometheus](/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic) with one of several options.
-      </td>
-    </tr>
-
-    <tr id="on-host">
-      <td>
-        Assorted on-host infrastructure integrations
-      </td>
-
-      <td>
-        Monitor and report data from many popular services, including NGINX, MySQL, Redis, Apache, RabbitMQ, and more. [Start enabling them](/docs/infrastructure/host-integrations/installation/install-infrastructure-host-integrations).
-      </td>
-    </tr>
-
-    <tr id="custom-on-host">
-      <td>
-        Build your own
-      </td>
-
-      <td>
-        To create your own lightweight infrastructure integration, use our [Flex integration](/docs/integrations/host-integrations/host-integrations-list/flex-integration-tool-build-your-own-integration).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Reduce MTTR with actionable data [#why-it-matters]
 

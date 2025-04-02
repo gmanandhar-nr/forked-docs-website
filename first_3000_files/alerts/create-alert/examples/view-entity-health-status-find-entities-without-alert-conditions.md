@@ -34,68 +34,18 @@ The health status indicator doesn't apply for:
 
 Entities in New Relic are automatically color-coded with their health status. For example, to view the health of your <InlinePopover type="apm"/> apps, go to <DNT>**[one.newrelic.com](https://one.newrelic.com/all-capabilities)**</DNT>, then click <DNT>**APM**</DNT>. The <DNT>**Applications**</DNT> index lists all <InlinePopover type="apm"/> product entities and their current health status.
 
-<table>
-  <thead>
-    <tr>
-      <th width={250}>
-        <DNT>
-          **Color**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Health status**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <img title="Alerts v3: alert icons" alt="icon-alerts-green.png" src="/images/accounts_icon_alerts-green.webp"/> Green
-      </td>
-
-      <td>
-        The entity is operational. We are collecting data that you can view in the appropriate UI. No alert incidents are currently reported for it.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img title="Alerts v3: alert icons" alt="icon-alerts-yellow.png" src="/images/accounts_icon_alerts-yellow.webp"/> Yellow
-      </td>
-
-      <td>
-        The entity is degraded. A [warning threshold](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-thresholds-trigger-alert) has been breached.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img title="Alerts v3: alert icons" alt="icon-alerts-red.png" src="/images/accounts_icon_alerts-red.webp"/> Red
-      </td>
-
-      <td>
-        A [critical threshold](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-thresholds-trigger-alert) has been breached:
+| **Color** | **Health status** |
+| - | - |
+| Green | The entity is operational. We are collecting data that you can view in the appropriate UI. No alert incidents are currently reported for it. |
+| Yellow | The entity is degraded. A [warning threshold](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-thresholds-trigger-alert) has been breached. |
+| Red | A [critical threshold](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-thresholds-trigger-alert) has been breached:
 
         * [Notifications](/docs/alerts/new-relic-alerts-beta/managing-notification-channels/notification-channels-controlling-where-send-alerts) have been sent based on the selected [incident rollup preference](/docs/alerts/organize-alerts/specify-when-alerts-create-incidents/).
-        * The incident appears in the [<DNT>**Incidents**</DNT> index](/docs/alerts/new-relic-alerts-beta/reviewing-alert-incidents/explore-incident-history).
-      </td>
-    </tr>
+        * The incident appears in the [**Incidents** index](/docs/alerts/new-relic-alerts-beta/reviewing-alert-incidents/explore-incident-history). |
+| Gray | The entity's status is unknown. We're not receiving alerts data for the entity. This could mean alerts are not set up for the entity, the reporting system is down, or the entity's alert conditions are not consistently reporting a signal for the entity. |
 
-    <tr>
-      <td>
-        <img title="Alerts v3: alert icons" alt="icon-alerts-gray.png" src="/images/accounts_logo_alerts-gray.webp"/> Gray
-      </td>
-
-      <td>
-        The entity's status is unknown. We're not receiving alerts data for the entity. This could mean alerts are not set up for the entity, the reporting system is down, or the entity's alert conditions are not consistently reporting a signal for the entity.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Health status transitions [#health-status-tranistions]
 

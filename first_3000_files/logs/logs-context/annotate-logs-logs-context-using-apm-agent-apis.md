@@ -26,100 +26,27 @@ To get properly annotated logs for logs in context, use the following API calls 
 
 APM agent APIs:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        <InlinePopover type="apm"/> agent
-      </th>
+# Table
 
-      <th>
-        API calls
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Go
-      </td>
-
-      <td>
-        * [GetTraceMetadata](https://pkg.go.dev/github.com/newrelic/go-agent/v3/newrelic#Transaction.GetTraceMetadata)
-        * [GetLinkingMetadata](https://pkg.go.dev/github.com/newrelic/go-agent/v3/newrelic#Transaction.GetLinkingMetadata)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Java
-      </td>
-
-      <td>
-        * [getTraceMetadata](http://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Agent.html#getTraceMetadata())
-        * [getLinkingMetadata](http://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Agent.html#getLinkingMetadata())
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        .NET
-      </td>
-
-      <td>
-        * [TraceMetadata](/docs/apm/agents/net-agent/net-agent-api/net-agent-api/#TraceMetadata)
-        * [GetLinkingMetadata](/docs/apm/agents/net-agent/net-agent-api/net-agent-api/#GetLinkingMetadata)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Node.js
-      </td>
-
-      <td>
-        * [newrelic.getTraceMetadata](https://newrelic.github.io/node-newrelic/API.html#getTraceMetadata)
-        * [newrelic.getLinkingMetadata](https://newrelic.github.io/node-newrelic/API.html#getLinkingMetadata)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PHP
-      </td>
-
-      <td>
-        * [newrelic_get_trace_metadata](/docs/apm/agents/php-agent/php-agent-api/newrelicgettracemetadata/)
+| agent | API calls |
+| - | - |
+| Go | * [GetTraceMetadata](https://pkg.go.dev/github.com/newrelic/go-agent/v3/newrelic#Transaction.GetTraceMetadata)
+        * [GetLinkingMetadata](https://pkg.go.dev/github.com/newrelic/go-agent/v3/newrelic#Transaction.GetLinkingMetadata) |
+| Java | * [getTraceMetadata](http://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Agent.html#getTraceMetadata())
+        * [getLinkingMetadata](http://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Agent.html#getLinkingMetadata()) |
+| .NET | * [TraceMetadata](/docs/apm/agents/net-agent/net-agent-api/net-agent-api/#TraceMetadata)
+        * [GetLinkingMetadata](/docs/apm/agents/net-agent/net-agent-api/net-agent-api/#GetLinkingMetadata) |
+| Node.js | * [newrelic.getTraceMetadata](https://newrelic.github.io/node-newrelic/API.html#getTraceMetadata)
+        * [newrelic.getLinkingMetadata](https://newrelic.github.io/node-newrelic/API.html#getLinkingMetadata) |
+| PHP | * [newrelic_get_trace_metadata](/docs/apm/agents/php-agent/php-agent-api/newrelicgettracemetadata/)
         * [newrelic_get_linking_metadata](/docs/apm/agents/php-agent/php-agent-api/newrelicgetlinkingmetadata/)
 
-          For PHP, logs in context is only supported from the distributed tracing UI, not in the <DNT>**Logs**</DNT> tab of the <InlinePopover type="apm"/> UI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Python
-      </td>
-
-      <td>
-        * [get_linking_metadata](/docs/apm/agents/python-agent/python-agent-api/getlinkingmetadata-python-agent-api/)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Ruby
-      </td>
-
-      <td>
-        * [linking_metadata](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent#linking_metadata-instance_method)
+          For PHP, logs in context is only supported from the distributed tracing UI, not in the **Logs** tab of the  UI. |
+| Python | * [get_linking_metadata](/docs/apm/agents/python-agent/python-agent-api/getlinkingmetadata-python-agent-api/) |
+| Ruby | * [linking_metadata](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent#linking_metadata-instance_method)
         * [current_trace_id](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent/Tracer#current_trace_id-class_method)
-        * [current_span_id](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent/Tracer#current_span_id-class_method)
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * [current_span_id](https://www.rubydoc.info/gems/newrelic_rpm/NewRelic/Agent/Tracer#current_span_id-class_method) |
+
 
 <InstallFeedback/>
 

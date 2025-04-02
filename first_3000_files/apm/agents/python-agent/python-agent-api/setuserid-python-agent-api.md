@@ -32,33 +32,14 @@ This call is used within the context of a transaction to attach an end user to a
 
 ## Parameters [#parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `user_id`
 
-  <tbody>
-    <tr>
-      <td>
-        `user_id`
+        _string_ | Required. |
 
-        _string_
-      </td>
-
-      <td>
-        Required.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values [#return-values]
 

@@ -27,81 +27,22 @@ This function records the given error and passes it through the normal error fil
 
 The `exception` is the exception to be recorded, or an error message. If needed, you can also include `options = { }`. The following parameters will receive special treatment, and any other parameters you supply will be treated as custom parameters.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **options = &#x7B; }**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **options = &#x7B; }** | **Comments** |
+| - | - |
+| `:expected` | [Only records the error trace](/docs/agents/manage-apm-agents/agent-data/manage-errors-apm-collect-ignore-mark-expected#expected-links). This does not affect the error rate or Apdex status. For information on expected errors in the UI, see [View expected errors](/docs/agents/manage-apm-agents/agent-data/manage-errors-apm-collect-ignore-or-mark-expected#expected).
 
-  <tbody>
-    <tr>
-      <td>
-        `:expected`
-      </td>
+        Replaces the `:trace_only` option, which was deprecated in version [4.3.x](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-430335) of the Ruby agent. |
+| `:custom_params` | Custom parameters. |
+| `:uri` | The request path, minus any request parameters or query string.
 
-      <td>
-        [Only records the error trace](/docs/agents/manage-apm-agents/agent-data/manage-errors-apm-collect-ignore-mark-expected#expected-links). This does not affect the error rate or Apdex status. For information on expected errors in the UI, see [View expected errors](/docs/agents/manage-apm-agents/agent-data/manage-errors-apm-collect-ignore-or-mark-expected#expected).
+        Usually not needed. Include this only if you are calling `notice_error` outside a transaction. |
+| `:metric` | The metric name associated with the transaction.
 
-        Replaces the `:trace_only` option, which was deprecated in version [4.3.x](/docs/release-notes/agent-release-notes/ruby-release-notes/ruby-agent-430335) of the <DNT>Ruby</DNT> agent.
-      </td>
-    </tr>
+        Usually not needed. Include this only if you are calling `notice_error` outside a transaction. |
+| `:request_params` (deprecated) | Older Ruby agent versions allowed passing a `:request_params` option, but those are now ignored. If you need to record the request parameters, call this method inside a transaction, or pass the information in `:custom_params`. |
 
-    <tr>
-      <td>
-        `:custom_params`
-      </td>
-
-      <td>
-        Custom parameters.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `:uri`
-      </td>
-
-      <td>
-        The request path, minus any request parameters or query string.
-
-        Usually not needed. Include this only if you are calling `notice_error` outside a transaction.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `:metric`
-      </td>
-
-      <td>
-        The metric name associated with the transaction.
-
-        Usually not needed. Include this only if you are calling `notice_error` outside a transaction.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `:request_params` (deprecated)
-      </td>
-
-      <td>
-        Older <DNT>Ruby</DNT> agent versions allowed passing a `:request_params` option, but those are now ignored. If you need to record the request parameters, call this method inside a transaction, or pass the information in `:custom_params`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Error fingerprinting: Dynamically apply an error group to each noticed error [#error-fingerprinting]
 

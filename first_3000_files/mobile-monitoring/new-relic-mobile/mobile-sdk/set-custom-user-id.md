@@ -99,39 +99,12 @@ NewRelic.setUserId(userId: String?)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$userID` | `string` | Required. Sets the user ID. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$userID`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. Sets the user ID.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Return values [#return-values]
 

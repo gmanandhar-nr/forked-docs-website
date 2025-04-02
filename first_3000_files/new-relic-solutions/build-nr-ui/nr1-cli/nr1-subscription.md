@@ -9,51 +9,14 @@ freshnessValidatedDate: 2024-04-29
 
 To manage your Nerdpack subscriptions, use the commands below. You can click any command to see its usage options and additional details about the command.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Command
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Command | Description |
+| - | - |
+| [`nr1 subscription:list`](#nr1-subscriptionlist) | Lists all the Nerdpacks your account is subscribed to. |
+| [`nr1 subscription:set`](#nr1-subscriptionset) | Subscribes your account to a Nerdpack and channel. |
+| [`nr1 subscription:unset`](#nr1-subscriptionunset) | Unsubscribes your account from a Nerdpack. |
 
-  <tbody>
-    <tr>
-      <td>
-        [`nr1 subscription:list`](#nr1-subscriptionlist)
-      </td>
-
-      <td>
-        Lists all the Nerdpacks your account is subscribed to.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 subscription:set`](#nr1-subscriptionset)
-      </td>
-
-      <td>
-        Subscribes your account to a Nerdpack and channel.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 subscription:unset`](#nr1-subscriptionunset)
-      </td>
-
-      <td>
-        Unsubscribes your account from a Nerdpack.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## `nr1 subscription:list` [#nr1-subscriptionlist]
 

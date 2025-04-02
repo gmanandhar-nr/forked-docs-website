@@ -36,128 +36,19 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure CDN profile [#Azure-cdn-profile]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `ByteHitRatio` | This is the ratio of the total bytes served from the cache compared to the total response bytes. |
+| `OriginHealthPercentage` | The percentage of successful health probes from AFDX to backends. |
+| `OriginLatency` | The time calculated from when the request was sent by AFDX edge to the backend until AFDX received the last response byte from the backend. |
+| `OriginRequestCount` | The number of requests sent from AFDX to origin. |
+| `Percentage4XX` | The percentage of all the client requests for which the response status code is 4XX. |
+| `Percentage5XX` | The percentage of all the client requests for which the response status code is 5XX. |
+| `RequestCount` | The number of client requests served by the HTTP/S proxy. |
+| `RequestSize` | The number of bytes sent as requests from clients to AFDX. |
+| `ResponseSize` | The number of bytes sent as responses from HTTP/S proxy to clients. |
+| `TotalLatency` | The time calculated from when the client request was received by the HTTP/S proxy until the client acknowledged the last response byte from the HTTP/S proxy. |
+| `WebApplicationFirewallRequestCount` | The number of client requests processed by the Web Application Firewall. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ByteHitRatio`
-      </td>
-
-      <td>
-        This is the ratio of the total bytes served from the cache compared to the total response bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OriginHealthPercentage`
-      </td>
-
-      <td>
-        The percentage of successful health probes from AFDX to backends.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OriginLatency`
-      </td>
-
-      <td>
-        The time calculated from when the request was sent by AFDX edge to the backend until AFDX received the last response byte from the backend.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OriginRequestCount`
-      </td>
-
-      <td>
-        The number of requests sent from AFDX to origin.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Percentage4XX`
-      </td>
-
-      <td>
-        The percentage of all the client requests for which the response status code is 4XX.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Percentage5XX`
-      </td>
-
-      <td>
-        The percentage of all the client requests for which the response status code is 5XX.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RequestCount`
-      </td>
-
-      <td>
-        The number of client requests served by the HTTP/S proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RequestSize`
-      </td>
-
-      <td>
-        The number of bytes sent as requests from clients to AFDX.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ResponseSize`
-      </td>
-
-      <td>
-        The number of bytes sent as responses from HTTP/S proxy to clients.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalLatency`
-      </td>
-
-      <td>
-        The time calculated from when the client request was received by the HTTP/S proxy until the client acknowledged the last response byte from the HTTP/S proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WebApplicationFirewallRequestCount`
-      </td>
-
-      <td>
-        The number of client requests processed by the Web Application Firewall.
-      </td>
-    </tr>
-  </tbody>
-</table>

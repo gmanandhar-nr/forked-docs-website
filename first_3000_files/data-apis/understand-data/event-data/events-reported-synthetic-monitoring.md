@@ -18,67 +18,21 @@ freshnessValidatedDate: never
 
 [Synthetic monitoring in New Relic](/docs/synthetics/new-relic-synthetics/getting-started/introduction-new-relic-synthetics) reports [event data](/docs/using-new-relic/data/understand-data/new-relic-data-types#event-data) that is displayed in some UI displays and is also available for [querying and charting](/docs/using-new-relic/data/understand-data/query-new-relic-data). Select an event name in the following table to see its attributes.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Event
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Event | Description |
+| - | - |
+| [`SyntheticCheck`](/attribute-dictionary/?event=SyntheticCheck) | `SyntheticCheck` returns metrics from one run of a specific monitor. These metrics include duration information for the monitor, location of the monitor check, size of the request and response headers, the type of monitor, and a timestamp.
 
-  <tbody>
-    <tr>
-      <td id="syntheticcheck-error">
-        [`SyntheticCheck`](/attribute-dictionary/?event=SyntheticCheck)
-      </td>
+        Each time a synthetic monitor runs a check, details about the check are captured in the`SyntheticCheck` event type. `SyntheticCheck` events contain details specific to the check to provide visibility such as the status, type of monitor, and size of request and response headers. |
+| [`SyntheticRequest`](/attribute-dictionary/?event=SyntheticRequest) | `SyntheticRequest` returns results from individual HTTP requests made during a check. The data gathered include job information, location, type of content for request, duration information, request size, and page load information.
 
-      <td>
-        `SyntheticCheck` returns metrics from one run of a specific monitor. These metrics include duration information for the monitor, location of the monitor check, size of the request and response headers, the type of monitor, and a timestamp.
+        With each simple or scripted monitor check, we capture each individual HTTP request made during the check. The HTTP details are captured at a more granular level than the `SyntheticCheck` event type. |
+| [`SyntheticPrivateLocationStatus`](/attribute-dictionary/?event=SyntheticsPrivateLocationStatus) | Every monitor check running on a private location triggers capacity details for that private location. These details are captured in a `SyntheticPrivateLocationStatus` event. This provides visibility into the capacity of a private location and whether additional minions are required to support the workload. |
+| [`SyntheticPrivateMinion`](/attribute-dictionary/?event=SyntheticsPrivateMinion) | If you have private locations, such as those inside your firewall, you can view information regarding those locations with the `SyntheticPrivateMinion` event.
 
-        Each time a synthetic monitor runs a check, details about the check are captured in the`SyntheticCheck` event type. `SyntheticCheck` events contain details specific to the check to provide visibility such as the status, type of monitor, and size of request and response headers.
-      </td>
-    </tr>
+        Each private minion running sends health details to `SyntheticPrivateMinion` every 30 seconds. This allows you to understand the health of the private minion running at the location. |
 
-    <tr>
-      <td id="syntheticrequest">
-        [`SyntheticRequest`](/attribute-dictionary/?event=SyntheticRequest)
-      </td>
-
-      <td>
-        `SyntheticRequest` returns results from individual HTTP requests made during a check. The data gathered include job information, location, type of content for request, duration information, request size, and page load information.
-
-        With each simple or scripted monitor check, we capture each individual HTTP request made during the check. The HTTP details are captured at a more granular level than the `SyntheticCheck` event type.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`SyntheticPrivateLocationStatus`](/attribute-dictionary/?event=SyntheticsPrivateLocationStatus)
-      </td>
-
-      <td>
-        Every monitor check running on a private location triggers capacity details for that private location. These details are captured in a `SyntheticPrivateLocationStatus` event. This provides visibility into the capacity of a private location and whether additional minions are required to support the workload.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="synthetic-private-minion">
-        [`SyntheticPrivateMinion`](/attribute-dictionary/?event=SyntheticsPrivateMinion)
-      </td>
-
-      <td>
-        If you have private locations, such as those inside your firewall, you can view information regarding those locations with the `SyntheticPrivateMinion` event.
-
-        Each private minion running sends health details to `SyntheticPrivateMinion` every 30 seconds. This allows you to understand the health of the private minion running at the location.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Related documentation:
 

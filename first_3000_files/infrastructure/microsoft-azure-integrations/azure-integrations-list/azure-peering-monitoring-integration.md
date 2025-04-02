@@ -36,88 +36,15 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Peering metrics [#Azure-peering]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `AverageCustomerPrefixLatency	` | Average of median Customer prefix latency. |
+| `EgressTrafficRate` | Egress traffic rate in bits per second. |
+| `FlapCounts` | Flap Events Count in all the connection. |
+| `IngressTrafficRate` | Ingress traffic rate in bits per second. |
+| `PacketDropRate` | Packets Drop rate in bits per second. |
+| `RegisteredPrefixLatency` | Median prefix latency. |
+| `SessionAvailability` | Availability of the peering session. |
 
-  <tbody>
-    <tr>
-      <td>
-        `AverageCustomerPrefixLatency	`
-      </td>
-
-      <td>
-        Average of median Customer prefix latency.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `EgressTrafficRate`
-      </td>
-
-      <td>
-        Egress traffic rate in bits per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FlapCounts`
-      </td>
-
-      <td>
-        Flap Events Count in all the connection.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngressTrafficRate`
-      </td>
-
-      <td>
-        Ingress traffic rate in bits per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PacketDropRate`
-      </td>
-
-      <td>
-        Packets Drop rate in bits per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RegisteredPrefixLatency`
-      </td>
-
-      <td>
-        Median prefix latency.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SessionAvailability`
-      </td>
-
-      <td>
-        Availability of the peering session.
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -90,51 +90,14 @@ If you are using a MySQL, PostgreSQL, or SQLite database driver, the easiest way
   >
     There is an integration package for each database driver that we support:
 
-    <table>
-      <thead>
-        <tr>
-          <th width={250}>
-            Database library supported
-          </th>
+    # Table
 
-          <th>
-            Integration package
-          </th>
-        </tr>
-      </thead>
+| Database library supported | Integration package |
+| - | - |
+| [go-sql-driver/mysql](https://github.com/go-sql-driver/mysql) | [v3/integrations/nrmysql](https://godoc.org/github.com/newrelic/go-agent/v3/integrations/nrmysql) |
+| [lib/pq](https://github.com/lib/pq) | [v3/integrations/nrpq](https://godoc.org/github.com/newrelic/go-agent/v3/integrations/nrpq) |
+| [mattn/go-sqlite3](https://github.com/mattn/go-sqlite3) | [v3/integrations/nrsqlite3](https://godoc.org/github.com/newrelic/go-agent/v3/integrations/nrsqlite3) |
 
-      <tbody>
-        <tr>
-          <td>
-            [go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
-          </td>
-
-          <td>
-            [v3/integrations/nrmysql](https://godoc.org/github.com/newrelic/go-agent/v3/integrations/nrmysql)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [lib/pq](https://github.com/lib/pq)
-          </td>
-
-          <td>
-            [v3/integrations/nrpq](https://godoc.org/github.com/newrelic/go-agent/v3/integrations/nrpq)
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            [mattn/go-sqlite3](https://github.com/mattn/go-sqlite3)
-          </td>
-
-          <td>
-            [v3/integrations/nrsqlite3](https://godoc.org/github.com/newrelic/go-agent/v3/integrations/nrsqlite3)
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     To use one of these integrations, first replace the driver with our integration version:
 

@@ -1094,126 +1094,15 @@ attributes.exclude: uri
 
 The following properties have been deprecated or removed. Switch to the new attributes configuration for these properties when upgrading your Ruby agent.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Deprecated property**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **New property**
-        </DNT>
-      </th>
+| **Deprecated property** | **New property** | **Removed Version** |
+| - | - | - |
+| `capture_params` | `attributes.include: request.parameters.*` | N/A |
+| `resque.capture_params` | `attributes.include: job.resque.args.*` | 9.0.0 |
+| `sidekiq.capture_params` | `attributes.include: job.sidekiq.args.*` | 9.0.0 |
+| `transaction_tracer.capture_attributes` | `transaction_tracer.attributes.enabled` | 9.0.0 |
+| `error_collector.capture_attributes` | `error_collector.attributes.enabled` | 9.0.0 |
+| `browser_monitoring.capture_attributes` | `browser_monitoring.attributes.enabled` | 9.0.0 |
+| `analytics_events.capture_attributes` | `transaction_events.attributes.enabled` | 9.0.0 |
 
-      <th>
-        <DNT>
-          **Removed Version**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `capture_params`
-      </td>
-
-      <td>
-        `attributes.include: request.parameters.*`
-      </td>
-
-      <td>
-        N/A
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `resque.capture_params`
-      </td>
-
-      <td>
-        `attributes.include: job.resque.args.*`
-      </td>
-
-      <td>
-        9.0.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `sidekiq.capture_params`
-      </td>
-
-      <td>
-        `attributes.include: job.sidekiq.args.*`
-      </td>
-
-      <td>
-        9.0.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `transaction_tracer.capture_attributes`
-      </td>
-
-      <td>
-        `transaction_tracer.attributes.enabled`
-      </td>
-
-      <td>
-        9.0.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `error_collector.capture_attributes`
-      </td>
-
-      <td>
-        `error_collector.attributes.enabled`
-      </td>
-
-      <td>
-        9.0.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `browser_monitoring.capture_attributes`
-      </td>
-
-      <td>
-        `browser_monitoring.attributes.enabled`
-      </td>
-
-      <td>
-        9.0.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `analytics_events.capture_attributes`
-      </td>
-
-      <td>
-        `transaction_events.attributes.enabled`
-      </td>
-
-      <td>
-        9.0.0
-      </td>
-    </tr>
-  </tbody>
-</table>

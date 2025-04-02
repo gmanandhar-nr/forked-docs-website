@@ -36,639 +36,70 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Notification Hubs metrics [#Azure-notification-hubs]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
+
+| Metric | Description |
+| - | - |
+| `incoming` | The count of all successful send API calls.. |
+| `incoming.all.failedrequests` | Total incoming failed requests for a notification hub. |
+| `incoming.all.requests` | Total incoming requests for a notification hub. |
+| `incoming.scheduled` | Scheduled push notifications sent. |
+| `incoming.scheduled.cancel` | Scheduled push notifications cancelled. |
+| `installation.all` | Installation management Operations. |
+| `installation.delete` | Delete installation operations. |
+| `installation.get` | Get installation operations. |
+| `installation.patch` | Patch installation operations. |
+| `installation.upsert` | Create or Update installation operations. |
+| `notificationhub.pushes` | All outgoing notifications of the notification hub. |
+| `outgoing.allpns.badorexpiredchannel` | The count of pushes that failed because the channel/token/registrationId in the registration was expired or invalid. |
+| `outgoing.allpns.channelerror` | The count of pushes that failed because the channel was invalid not associated with the correct app throttled or expired.. |
+| `outgoing.allpns.invalidpayload` | The count of pushes that failed because the PNS returned a bad payload error. |
+| `outgoing.allpns.pnserror` | The count of pushes that failed because there was a problem communicating with the PNS (excludes authentication problems). |
+| `outgoing.allpns.success` | The count of all successful notifications. |
+| `outgoing.apns.badchannel` | The count of pushes that failed because the token is invalid (APNS status code: 8). |
+| `outgoing.apns.expiredchannel` | The count of token that were invalidated by the APNS feedback channel. |
+| `outgoing.apns.invalidcredentials` | The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked. |
+| `outgoing.apns.invalidnotificationsize` | The count of pushes that failed because the payload was too large (APNS status code: 7). |
+| `outgoing.apns.pnserror` | The count of pushes that failed because of errors communicating with APNS. |
+| `outgoing.apns.success` | The count of all successful notifications. |
+| `outgoing.gcm.authenticationerror` | The count of pushes that failed because the PNS did not accept the provided credentials the credentials are blocked or the SenderId is not correctly configured in the app (GCM result: MismatchedSenderId). |
+| `outgoing.gcm.badchannel` | The count of pushes that failed because the registrationId in the registration was not recognized (GCM result: Invalid Registration). |
+| `outgoing.gcm.expiredchannel` | The count of pushes that failed because the registrationId in the registration was expired (GCM result: NotRegistered). |
+| `outgoing.gcm.invalidcredentials` | The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked. |
+| `outgoing.gcm.invalidnotificationformat` | The count of pushes that failed because the payload was not formatted correctly (GCM result: InvalidDataKey or InvalidTtl). |
+| `outgoing.gcm.invalidnotificationsize` | The count of pushes that failed because the payload was too large (GCM result: MessageTooBig). |
+| `outgoing.gcm.pnserror` | The count of pushes that failed because of errors communicating with GCM. |
+| `outgoing.gcm.success` | The count of all successful notifications. |
+| `outgoing.gcm.throttled` | The count of pushes that failed because GCM throttled this app (GCM status code: 501-599 or result:Unavailable). |
+| `outgoing.gcm.wrongchannel` | The count of pushes that failed because the registrationId in the registration is not associated to the current app (GCM result: InvalidPackageName). |
+| `outgoing.mpns.authenticationerror` | The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked. |
+| `outgoing.mpns.badchannel` | The count of pushes that failed because the ChannelURI in the registration was not recognized (MPNS status: 404 not found). |
+| `outgoing.mpns.channeldisconnected` | The count of pushes that failed because the ChannelURI in the registration was disconnected (MPNS status: 412 not found). |
+| `outgoing.mpns.dropped` | The count of pushes that were dropped by MPNS (MPNS response header: X-NotificationStatus: QueueFull or Suppressed). |
+| `outgoing.mpns.invalidcredentials` | The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked. |
+| `outgoing.mpns.invalidnotificationformat` | The count of pushes that failed because the payload of the notification was too large. |
+| `outgoing.mpns.pnserror` | The count of pushes that failed because of errors communicating with MPNS. |
+| `outgoing.mpns.success` | The count of all successful notifications. |
+| `outgoing.mpns.throttled` | The count of pushes that failed because MPNS is throttling this app (WNS MPNS: 406 Not Acceptable). |
+| `outgoing.wns.authenticationerror` | Notification not delivered because of errors communicating with Windows Live invalid credentials or wrong token. |
+| `outgoing.wns.badchannel` | The count of pushes that failed because the ChannelURI in the registration was not recognized (WNS status: 404 not found). |
+| `outgoing.wns.channeldisconnected` | The notification was dropped because the ChannelURI in the registration is throttled (WNS response header: X-WNS-DeviceConnectionStatus: disconnected). |
+| `outgoing.wns.channelthrottled` | The notification was dropped because the ChannelURI in the registration is throttled (WNS response header: X-WNS-NotificationStatus:channelThrottled). |
+| `outgoing.wns.dropped` | The notification was dropped because the ChannelURI in the registration is throttled (X-WNS-NotificationStatus: dropped but not X-WNS-DeviceConnectionStatus: disconnected). |
+| `outgoing.wns.expiredchannel` | The count of pushes that failed because the ChannelURI is expired (WNS status: 410 Gone). |
+| `outgoing.wns.invalidcredentials` | The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked. (Windows Live does not recognize the credentials). |
+| `outgoing.wns.invalidnotificationformat` | The format of the notification is invalid (WNS status: 400). Note that WNS does not reject all invalid payloads. |
+| `outgoing.wns.invalidnotificationsize` | The notification payload is too large (WNS status: 413). |
+| `outgoing.wns.invalidtoken` | The token provided to WNS is not valid (WNS status: 401 Unauthorized). |
+| `outgoing.wns.pnserror` | Notification not delivered because of errors communicating with WNS. |
+| `outgoing.wns.success` | The count of all successful notifications. |
+| `outgoing.wns.throttled` | The count of pushes that failed because WNS is throttling this app (WNS status: 406 Not Acceptable). |
+| `outgoing.wns.tokenproviderunreachable` | Windows Live is not reachable. |
+| `outgoing.wns.wrongtoken` | The token provided to WNS is valid but for another application (WNS status: 403 Forbidden). This can happen if the ChannelURI in the registration is associated with another app. Check that the client app is associated with the same app whose credentials are in the notification hub. |
+| `registration.all` | The count of all successful registration operations (creations updates queries and deletions). |
+| `registration.create` | The count of all successful registration creations. |
+| `registration.delete` | The count of all successful registration deletions. |
+| `registration.get` | The count of all successful registration queries. |
+| `registration.update` | The count of all successful registration updates. |
+| `scheduled.pending` | Pending Scheduled Notifications |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `incoming`
-      </td>
-
-      <td>
-        The count of all successful send API calls..
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incoming.all.failedrequests`
-      </td>
-
-      <td>
-        Total incoming failed requests for a notification hub.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incoming.all.requests`
-      </td>
-
-      <td>
-        Total incoming requests for a notification hub.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incoming.scheduled`
-      </td>
-
-      <td>
-        Scheduled push notifications sent.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incoming.scheduled.cancel`
-      </td>
-
-      <td>
-        Scheduled push notifications cancelled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `installation.all`
-      </td>
-
-      <td>
-        Installation management Operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `installation.delete`
-      </td>
-
-      <td>
-        Delete installation operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `installation.get`
-      </td>
-
-      <td>
-        Get installation operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `installation.patch`
-      </td>
-
-      <td>
-        Patch installation operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `installation.upsert`
-      </td>
-
-      <td>
-        Create or Update installation operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `notificationhub.pushes`
-      </td>
-
-      <td>
-        All outgoing notifications of the notification hub.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.allpns.badorexpiredchannel`
-      </td>
-
-      <td>
-        The count of pushes that failed because the channel/token/registrationId in the registration was expired or invalid.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.allpns.channelerror`
-      </td>
-
-      <td>
-        The count of pushes that failed because the channel was invalid not associated with the correct app throttled or expired..
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.allpns.invalidpayload`
-      </td>
-
-      <td>
-        The count of pushes that failed because the PNS returned a bad payload error.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.allpns.pnserror`
-      </td>
-
-      <td>
-        The count of pushes that failed because there was a problem communicating with the PNS (excludes authentication problems).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.allpns.success`
-      </td>
-
-      <td>
-        The count of all successful notifications.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.apns.badchannel`
-      </td>
-
-      <td>
-        The count of pushes that failed because the token is invalid (APNS status code: 8).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.apns.expiredchannel`
-      </td>
-
-      <td>
-        The count of token that were invalidated by the APNS feedback channel.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.apns.invalidcredentials`
-      </td>
-
-      <td>
-        The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.apns.invalidnotificationsize`
-      </td>
-
-      <td>
-        The count of pushes that failed because the payload was too large (APNS status code: 7).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.apns.pnserror`
-      </td>
-
-      <td>
-        The count of pushes that failed because of errors communicating with APNS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.apns.success`
-      </td>
-
-      <td>
-        The count of all successful notifications.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.authenticationerror`
-      </td>
-
-      <td>
-        The count of pushes that failed because the PNS did not accept the provided credentials the credentials are blocked or the SenderId is not correctly configured in the app (GCM result: MismatchedSenderId).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.badchannel`
-      </td>
-
-      <td>
-        The count of pushes that failed because the registrationId in the registration was not recognized (GCM result: Invalid Registration).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.expiredchannel`
-      </td>
-
-      <td>
-        The count of pushes that failed because the registrationId in the registration was expired (GCM result: NotRegistered).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.invalidcredentials`
-      </td>
-
-      <td>
-        The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.invalidnotificationformat`
-      </td>
-
-      <td>
-        The count of pushes that failed because the payload was not formatted correctly (GCM result: InvalidDataKey or InvalidTtl).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.invalidnotificationsize`
-      </td>
-
-      <td>
-        The count of pushes that failed because the payload was too large (GCM result: MessageTooBig).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.pnserror`
-      </td>
-
-      <td>
-        The count of pushes that failed because of errors communicating with GCM.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.success`
-      </td>
-
-      <td>
-        The count of all successful notifications.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.throttled`
-      </td>
-
-      <td>
-        The count of pushes that failed because GCM throttled this app (GCM status code: 501-599 or result:Unavailable).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.gcm.wrongchannel`
-      </td>
-
-      <td>
-        The count of pushes that failed because the registrationId in the registration is not associated to the current app (GCM result: InvalidPackageName).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.mpns.authenticationerror`
-      </td>
-
-      <td>
-        The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.mpns.badchannel`
-      </td>
-
-      <td>
-        The count of pushes that failed because the ChannelURI in the registration was not recognized (MPNS status: 404 not found).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.mpns.channeldisconnected`
-      </td>
-
-      <td>
-        The count of pushes that failed because the ChannelURI in the registration was disconnected (MPNS status: 412 not found).
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.mpns.dropped`
-      </td>
-
-      <td>
-        The count of pushes that were dropped by MPNS (MPNS response header: X-NotificationStatus: QueueFull or Suppressed).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.mpns.invalidcredentials`
-      </td>
-
-      <td>
-        The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.mpns.invalidnotificationformat`
-      </td>
-
-      <td>
-        The count of pushes that failed because the payload of the notification was too large.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.mpns.pnserror`
-      </td>
-
-      <td>
-        The count of pushes that failed because of errors communicating with MPNS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.mpns.success`
-      </td>
-
-      <td>
-        The count of all successful notifications.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.mpns.throttled`
-      </td>
-
-      <td>
-        The count of pushes that failed because MPNS is throttling this app (WNS MPNS: 406 Not Acceptable).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.authenticationerror`
-      </td>
-
-      <td>
-        Notification not delivered because of errors communicating with Windows Live invalid credentials or wrong token.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.badchannel`
-      </td>
-
-      <td>
-        The count of pushes that failed because the ChannelURI in the registration was not recognized (WNS status: 404 not found).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.channeldisconnected`
-      </td>
-
-      <td>
-        The notification was dropped because the ChannelURI in the registration is throttled (WNS response header: X-WNS-DeviceConnectionStatus: disconnected).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.channelthrottled`
-      </td>
-
-      <td>
-        The notification was dropped because the ChannelURI in the registration is throttled (WNS response header: X-WNS-NotificationStatus:channelThrottled).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.dropped`
-      </td>
-
-      <td>
-        The notification was dropped because the ChannelURI in the registration is throttled (X-WNS-NotificationStatus: dropped but not X-WNS-DeviceConnectionStatus: disconnected).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.expiredchannel`
-      </td>
-
-      <td>
-        The count of pushes that failed because the ChannelURI is expired (WNS status: 410 Gone).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.invalidcredentials`
-      </td>
-
-      <td>
-        The count of pushes that failed because the PNS did not accept the provided credentials or the credentials are blocked. (Windows Live does not recognize the credentials).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.invalidnotificationformat`
-      </td>
-
-      <td>
-        The format of the notification is invalid (WNS status: 400). Note that WNS does not reject all invalid payloads.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.invalidnotificationsize`
-      </td>
-
-      <td>
-        The notification payload is too large (WNS status: 413).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.invalidtoken`
-      </td>
-
-      <td>
-        The token provided to WNS is not valid (WNS status: 401 Unauthorized).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.pnserror`
-      </td>
-
-      <td>
-        Notification not delivered because of errors communicating with WNS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.success`
-      </td>
-
-      <td>
-        The count of all successful notifications.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.throttled`
-      </td>
-
-      <td>
-        The count of pushes that failed because WNS is throttling this app (WNS status: 406 Not Acceptable).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.tokenproviderunreachable`
-      </td>
-
-      <td>
-        Windows Live is not reachable.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `outgoing.wns.wrongtoken`
-      </td>
-
-      <td>
-        The token provided to WNS is valid but for another application (WNS status: 403 Forbidden). This can happen if the ChannelURI in the registration is associated with another app. Check that the client app is associated with the same app whose credentials are in the notification hub.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `registration.all`
-      </td>
-
-      <td>
-        The count of all successful registration operations (creations updates queries and deletions).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `registration.create`
-      </td>
-
-      <td>
-        The count of all successful registration creations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `registration.delete`
-      </td>
-
-      <td>
-        The count of all successful registration deletions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `registration.get`
-      </td>
-
-      <td>
-        The count of all successful registration queries.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `registration.update`
-      </td>
-
-      <td>
-        The count of all successful registration updates.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `scheduled.pending`
-      </td>
-
-      <td>
-        Pending Scheduled Notifications
-      </td>
-    </tr>
-  </tbody>
-</table>

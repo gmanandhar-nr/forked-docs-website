@@ -47,527 +47,176 @@ To view JVM metrics:
 
 This table lists which tabs appear on the JVM page for app servers. If your app server does not report a particular type of metric data, the tab does not appear on your JVM page.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        App server
-      </th>
+# Table
 
-      <th>
-        Memory
-      </th>
-
-      <th>
-        Thread pools
-      </th>
-
-      <th>
-        HTTP sessions
-      </th>
-
-      <th>
-        App server transactions
-      </th>
-
-      <th>
-        Data sources
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Glassfish
-      </td>
-
-      <td>
-        <Icon
+| App server | Memory | Thread pools | HTTP sessions | App server transactions | Data sources |
+| - | - | - | - | - | - |
+| Glassfish | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        JBoss 5AS
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| JBoss 5AS | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        JBoss 6AS
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| JBoss 6AS | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        JBoss 6EAP
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| JBoss 6EAP | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        JBoss 7EAP
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| JBoss 7EAP | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td/>
-
-      <td/>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        JBoss 7AS
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| JBoss 7AS | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Jetty
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| Jetty | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td/>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Resin 3
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| Resin 3 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Resin 4
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| Resin 4 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Tomcat
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| Tomcat | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        TomEE
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| TomEE | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        WebLogic
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| WebLogic | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Websphere Liberty
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| Websphere Liberty | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Websphere Traditional
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| Websphere Traditional | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        WildFly
-      </td>
-
-      <td>
-        <Icon
+        /> |
+| WildFly | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
+        /> |
 
-      <td/>
-    </tr>
-  </tbody>
-</table>
 
 ## Metrics available by tab [#tab-metrics]
 

@@ -130,35 +130,19 @@ Before you start, first ensure you meet [the requirements](/docs/distributed-tra
       >
         Here's an overview of the settings. For more help with configuration, see [Python agent configuration](/docs/apm/agents/python-agent/configuration/python-agent-configuration/#dt-main)
 
-        <table>
-          <thead>
-            <tr>
-              <th style={{ width: "200px" }}>
-                Type
-              </th>
+        # Table
 
-              <th>
-                Required configuration
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                Infinite Tracing
-              </td>
-
-              <td>
-                Pull down the libraries with this installation command, and then set up the configuration file or environment variables:
+| Type | Required configuration |
+| - | - |
+| Infinite Tracing | Pull down the libraries with this installation command, and then set up the configuration file or environment variables:
 
                 ```bash
                 pip install newrelic[infinite-tracing]
                 ```
 
-                <DNT>
+                
                   **General configuration options:**
-                </DNT>
+                
 
                 Configuration file (`newrelic.ini`):
 
@@ -174,9 +158,9 @@ Before you start, first ensure you meet [the requirements](/docs/distributed-tra
                 NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST = "YOUR_TRACE_OBSERVER_HOST"
                 ```
 
-                <DNT>
+                
                   **Batching and compression configuration options:**
-                </DNT>
+                
 
                 As of v8.7.0, the Python agent supports both batching and compression. Both settings are defaulted to true and can be toggled with the following options:
 
@@ -192,11 +176,8 @@ Before you start, first ensure you meet [the requirements](/docs/distributed-tra
                 ```ini
                 NEW_RELIC_INFINITE_TRACING_BATCHING = true
                 NEW_RELIC_INFINITE_TRACING_COMPRESSION = true
-                ```
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                ``` |
+
       </Collapser>
     </CollapserGroup>
 

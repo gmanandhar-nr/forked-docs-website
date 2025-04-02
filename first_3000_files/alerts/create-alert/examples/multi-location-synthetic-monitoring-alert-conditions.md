@@ -29,61 +29,15 @@ With multi-location conditions, you can set the number of locations that must si
 
 ## Rules
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Rule
-      </th>
+# Table
 
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
+| Rule | Details |
+| - | - |
+| Required check frequency | 15 minutes or less. |
+| Maximum monitors per condition | 50 |
+| Conditions per account | This feature has a limit of 1000 conditions per account, but some types of infrastructure alert conditions also count towards this limit. If you get a notification that you've exceeded your limit, contact your New Relic representative or [Support](https://support.newrelic.com/) for assistance. |
+| Status between checks | A failed location check will be considered failed until it performs a successful check. For example: a location may fail and then immediately become available, but we'll consider it failed until a scheduled check is reported as successful. |
 
-  <tbody>
-    <tr>
-      <td>
-        Required check frequency
-      </td>
-
-      <td>
-        15 minutes or less.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Maximum monitors per condition
-      </td>
-
-      <td>
-        50
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Conditions per account
-      </td>
-
-      <td>
-        This feature has a limit of 1000 conditions per account, but some types of infrastructure alert conditions also count towards this limit. If you get a notification that you've exceeded your limit, contact your New Relic representative or [Support](https://support.newrelic.com/) for assistance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Status between checks
-      </td>
-
-      <td>
-        A failed location check will be considered failed until it performs a successful check. For example: a location may fail and then immediately become available, but we'll consider it failed until a scheduled check is reported as successful.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Here's a diagram that shows how a four-location condition will be triggered for non-simultaneous failures:
 

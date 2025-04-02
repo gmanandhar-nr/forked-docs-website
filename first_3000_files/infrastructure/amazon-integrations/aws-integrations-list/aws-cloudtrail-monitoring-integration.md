@@ -51,121 +51,21 @@ For general information about how to find and use integration data, see [Underst
 
 Here are attributes that can be reported with CloudTrail events:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Metadata
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metadata | Description |
+| - | - |
+| `awsRegion` | The AWS region the request was made of. |
+| `cloudTrailEventType` | Identifies the type of event that generated the event record. This can be the one of the following values: `AwsApiCall`, `AwsServiceEvent`, `ConsoleSignin`. |
+| `errorCode` | The AWS service error (if the request returns an error). For a list of the most common errors, see the [AWS CloudTrail documentation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/CommonErrors.html). |
+| `errorMessage` | If the request returns an error, the description of the error. |
+| `eventId` | The unique identifier of the event. |
+| `eventName` | The requested action. |
+| `eventSource` | The AWS service the request was made of. |
+| `sourceIpAddress` | The IP address from which the request was made. |
+| `userAgent` | The agent through which the request was made, such as the AWS Management Console, an AWS service, the AWS SDKs, or the AWS CLI. |
+| `userName` | The user name or role name of the requester that called the API in the event returned. |
 
-  <tbody>
-    <tr>
-      <td>
-        `awsRegion`
-      </td>
-
-      <td>
-        The AWS region the request was made of.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cloudTrailEventType`
-      </td>
-
-      <td>
-        Identifies the type of event that generated the event record. This can be the one of the following values: `AwsApiCall`, `AwsServiceEvent`, `ConsoleSignin`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `errorCode`
-      </td>
-
-      <td>
-        The AWS service error (if the request returns an error). For a list of the most common errors, see the [AWS CloudTrail documentation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/CommonErrors.html).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `errorMessage`
-      </td>
-
-      <td>
-        If the request returns an error, the description of the error.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `eventId`
-      </td>
-
-      <td>
-        The unique identifier of the event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `eventName`
-      </td>
-
-      <td>
-        The requested action.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `eventSource`
-      </td>
-
-      <td>
-        The AWS service the request was made of.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `sourceIpAddress`
-      </td>
-
-      <td>
-        The IP address from which the request was made.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `userAgent`
-      </td>
-
-      <td>
-        The agent through which the request was made, such as the AWS Management Console, an AWS service, the AWS SDKs, or the AWS CLI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `userName`
-      </td>
-
-      <td>
-        The user name or role name of the requester that called the API in the event returned.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Query examples [#example-queries]
 

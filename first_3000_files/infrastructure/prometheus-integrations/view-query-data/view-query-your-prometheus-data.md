@@ -22,94 +22,19 @@ All metrics for Docker and Kubernetes are stored in the `Metric` type.
 
 By default, the following attributes will be added to all metrics for Docker and Kubernetes integrations:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Default attributes  
-                                        (all integrations)
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Default attributes  
+                                        (all integrations) | Description |
+| - | - |
+| `clusterName` | The name of the cluster provided in the scraper configuration. |
+| `integrationName` | The name of this integration (`nri-prometheus`). |
+| `integrationVersion` | The version of the integration; for example, `0.2.0`. |
+| `metricName` | The name of the metric itself. |
+| `nrMetricType` | The type of the New Relic `Metric` type; for example, `Gauges`. |
+| `promMetricType` | The metric type of the Prometheus metric |
+| `scrapedEndpoint` | The URL of the endpoint is being scraped. |
 
-  <tbody>
-    <tr>
-      <td>
-        `clusterName`
-      </td>
-
-      <td>
-        The name of the cluster provided in the scraper configuration.
-      </td>
-    </tr>
-  </tbody>
-
-  <tbody>
-    <tr>
-      <td>
-        `integrationName`
-      </td>
-
-      <td>
-        The name of this integration (`nri-prometheus`).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `integrationVersion`
-      </td>
-
-      <td>
-        The version of the integration; for example, `0.2.0`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `metricName`
-      </td>
-
-      <td>
-        The name of the metric itself.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `nrMetricType`
-      </td>
-
-      <td>
-        The type of the New Relic `Metric` type; for example, `Gauges`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `promMetricType`
-      </td>
-
-      <td>
-        The metric type of the Prometheus metric
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `scrapedEndpoint`
-      </td>
-
-      <td>
-        The URL of the endpoint is being scraped.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <img style={{ width: '40px', height: '35px'}} class="inline" title="img-integration-k8.png" alt="img-integration-k8.png" src="/images/os_icon_k8.webp"/> <DNT>**Kubernetes:**</DNT> If the scraper is running in Kubernetes, New Relic also adds the following attributes to all the metrics:
 

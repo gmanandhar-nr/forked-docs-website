@@ -31,33 +31,14 @@ This call disables [browser monitoring](/docs/browser/new-relic-browser/getting-
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `flag`
 
-  <tbody>
-    <tr>
-      <td>
-        `flag`
+        _boolean_ | Optional. Default is `True`. Set to `False` to instead allow browser agent injection. |
 
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Default is `True`. Set to `False` to instead allow browser agent injection.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

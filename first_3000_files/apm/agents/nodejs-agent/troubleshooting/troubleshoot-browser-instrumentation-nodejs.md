@@ -23,88 +23,20 @@ If you've problems [instrumenting browser applications](/docs/nodejs/page-load-t
 
 Error codes will automatically appear in the site source code and in your Node.js agent logs. Search for [`NREUM`](/docs/new-relic-browser/troubleshooting-page-view-monitoring#javascript) to find these codes.
 
-<table>
-  <thead>
-    <tr>
-      <th width={100}>
-        <DNT>
-          **Error code**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        0
-      </td>
-
-      <td>
-        Browser monitoring has been explicitly disabled. This was done either in the `newrelic.js` or with an environment variable. (`NEW_RELIC_BROWSER_MONITOR_ENABLE` defaults to `true`.)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        1
-      </td>
-
-      <td>
-        The browser agent was called outside of a web transaction. This may occur if you tried to generate the browser data once and then cache it, or if you called it in a background task.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        2
-      </td>
-
-      <td>
-        Something unexpected occurred.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        3
-      </td>
-
-      <td>
-        The transaction is unnamed. If you are not using Express or Restify and you did not explicitly name the transaction, this error appears. This is to avoid rolling the transaction name into <DNT>\*\*/\*\*</DNT>\*. For more information, see [naming your transactions](/docs/nodejs/nodejs-agent-api).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        4
-      </td>
-
-      <td>
-        The Node.js agent has not yet done a "handshake" with the collector. The app was started and a user hit the site before the collector could talk to the agent. This may occur because:
+| **Error code** | **Description** |
+| - | - |
+| 0 | Browser monitoring has been explicitly disabled. This was done either in the `newrelic.js` or with an environment variable. (`NEW_RELIC_BROWSER_MONITOR_ENABLE` defaults to `true`.) |
+| 1 | The browser agent was called outside of a web transaction. This may occur if you tried to generate the browser data once and then cache it, or if you called it in a background task. |
+| 2 | Something unexpected occurred. |
+| 3 | The transaction is unnamed. If you are not using Express or Restify and you did not explicitly name the transaction, this error appears. This is to avoid rolling the transaction name into \*\*/\*\*\*. For more information, see [naming your transactions](/docs/nodejs/nodejs-agent-api). |
+| 4 | The Node.js agent has not yet done a "handshake" with the collector. The app was started and a user hit the site before the collector could talk to the agent. This may occur because:
 
         * The browser page loaded before the agent made its initial connection to New Relic.
         * The license key is invalid.
         * Some other problem occurred that would prevent the application ID from being available.
 
-          If these errors persist longer than 1 minute, check your <InlinePopover type="licenseKey"/>. Otherwise, the errors should disappear on their own.
-      </td>
-    </tr>
+          If these errors persist longer than 1 minute, check your . Otherwise, the errors should disappear on their own. |
+| 5 | Browser monitoring has been disabled on the collector side. For example, the collector did not return enough data for browser monitoring to be enabled. This is a collector issue, because [some server-side configuration settings](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#methods-and-precedence) for Node.js currently are not available. |
 
-    <tr>
-      <td>
-        5
-      </td>
-
-      <td>
-        Browser monitoring has been disabled on the collector side. For example, the collector did not return enough data for browser monitoring to be enabled. This is a collector issue, because [some server-side configuration settings](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#methods-and-precedence) for Node.js currently are not available.
-      </td>
-    </tr>
-  </tbody>
-</table>

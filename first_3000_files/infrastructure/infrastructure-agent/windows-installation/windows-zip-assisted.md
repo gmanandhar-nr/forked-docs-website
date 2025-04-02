@@ -47,147 +47,65 @@ To install the agent:
 
 You can configure the following parameters during the assisted install for Windows:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Variable
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Variable | Description |
+| - | - |
+| `NRIA_AGENT_DIR`
 
-  <tbody>
-    <tr>
-      <td>
-        `NRIA_AGENT_DIR`
-
-        Required at agent startup.
-      </td>
-
-      <td>
-        The agent home directory.
+        Required at agent startup. | The agent home directory.
 
         Default:
 
         ```
         C:\Program Files\New Relic\newrelic-infra
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NRIA_APP_DATA_DIR`
-      </td>
-
-      <td>
-        This configures the data directory to store inventory and other agent files.
+        ``` |
+| `NRIA_APP_DATA_DIR` | This configures the data directory to store inventory and other agent files.
 
         Default:
 
         ```
         C:\%ProgramData%\New Relic\newrelic-infra
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_CONFIG_FILE`
 
-    <tr>
-      <td>
-        `NRIA_CONFIG_FILE`
-
-        Required at installation.
-      </td>
-
-      <td>
-        The agent configuration file's location.
+        Required at installation. | The agent configuration file's location.
 
         Default:
 
         ```
         C:\Program Files\New Relic\newrelic-infra\newrelic-infra.yml
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_LICENSE_KEY`
 
-    <tr>
-      <td>
-        `NRIA_LICENSE_KEY`
+        Only configuration option required at startup. | The New Relic . |
+| `NRIA_LOG_FILE`
 
-        Only configuration option required at startup.
-      </td>
-
-      <td>
-        The New Relic <InlinePopover type="licenseKey"/>.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NRIA_LOG_FILE`
-
-        Required at agent startup.
-      </td>
-
-      <td>
-        The location where the agent will log.
+        Required at agent startup. | The location where the agent will log.
 
         Default:
 
         ```
         C:\Program Files\New Relic\newrelic-infra\newrelic-infra.log
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NRIA_OVERWRITE`
-      </td>
-
-      <td>
-        By default and for security reasons, Windows does not install a service if there's another service with the same name already installed. To bypass this check, make sure this setting `NRIA_OVERWRITE` is `TRUE`.
+        ``` |
+| `NRIA_OVERWRITE` | By default and for security reasons, Windows does not install a service if there's another service with the same name already installed. To bypass this check, make sure this setting `NRIA_OVERWRITE` is `TRUE`.
 
         Default:
 
         ```
         TRUE
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_PLUGIN_DIR`
 
-    <tr>
-      <td>
-        `NRIA_PLUGIN_DIR`
-
-        Required at agent startup.
-      </td>
-
-      <td>
-        The directory containing the configuration files of the integrations.
+        Required at agent startup. | The directory containing the configuration files of the integrations.
 
         Default:
 
         ```
         C:\Program Files\New Relic\newrelic-infra\integrations.d
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_SERVICE_NAME` | This provides the name for the Windows service. |
 
-    <tr>
-      <td>
-        `NRIA_SERVICE_NAME`
-      </td>
-
-      <td>
-        This provides the name for the Windows service.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## What's next? [#what-next]
 

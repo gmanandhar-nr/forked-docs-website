@@ -34,129 +34,59 @@ The Kubernetes integration relies on the [`kubeadm`](https://kubernetes.io/docs/
 
 The control plane components should have either the `k8s-app` or the `tier` and `component` labels. See this table for accepted label combinations and values:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "110px" }}>
-        Component
-      </th>
+# Table
 
-      <th>
-        Label
-      </th>
-
-      <th style={{ width: "200px" }}>
-        Endpoint
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        API server
-      </td>
-
-      <td>
-        <DNT>
-          **Kubeadm / Kops / ClusterAPI**
-        </DNT>
+| Component | Label | Endpoint |
+| - | - | - |
+| API server | **Kubeadm / Kops / ClusterAPI**
+        
 
         `k8s-app=kube-apiserver`
 
         `tier=control-plane component=kube-apiserver`
 
-        <DNT>
+        
           **OpenShift**
-        </DNT>
+        
 
-        `app=openshift-kube-apiserver apiserver=true`
-      </td>
-
-      <td>
-        `localhost:443/metrics` by default (can be configured) if the request fails falls back to `localhost:8080/metrics`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        etcd
-      </td>
-
-      <td>
-        <DNT>
-          **Kubeadm / Kops / ClusterAPI**
-        </DNT>
+        `app=openshift-kube-apiserver apiserver=true` | `localhost:443/metrics` by default (can be configured) if the request fails falls back to `localhost:8080/metrics` |
+| etcd | **Kubeadm / Kops / ClusterAPI**
+        
 
         `k8s-app=etcd-manager-main`
 
         `tier=control-plane component=etcd`
 
-        <DNT>
+        
           **OpenShift**
-        </DNT>
+        
 
-        `k8s-app=etcd`
-      </td>
-
-      <td>
-        `localhost:4001/metrics`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Scheduler
-      </td>
-
-      <td>
-        <DNT>
-          **Kubeadm / Kops / ClusterAPI**
-        </DNT>
+        `k8s-app=etcd` | `localhost:4001/metrics` |
+| Scheduler | **Kubeadm / Kops / ClusterAPI**
+        
 
         `k8s-app=kube-scheduler`
 
         `tier=control-plane component=kube-scheduler`
 
-        <DNT>
+        
           **OpenShift**
-        </DNT>
+        
 
-        `app=openshift-kube-scheduler scheduler=true`
-      </td>
-
-      <td>
-        `localhost:10251/metrics`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Controller manager
-      </td>
-
-      <td>
-        <DNT>
-          **Kubeadm / Kops / ClusterAPI**
-        </DNT>
+        `app=openshift-kube-scheduler scheduler=true` | `localhost:10251/metrics` |
+| Controller manager | **Kubeadm / Kops / ClusterAPI**
+        
 
         `k8s-app=kube-controller-manager`
 
         `tier=control-plane component=kube-controller-manager​`
 
-        <DNT>
+        
           **OpenShift**
-        </DNT>
+        
 
-        `app=kube-controller-manager kube-controller-manager=true`
-      </td>
+        `app=kube-controller-manager kube-controller-manager=true` | `localhost:10252/metrics` |
 
-      <td>
-        `localhost:10252/metrics`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 When the integration detects that it's running inside a control plane node, it tries to find which components are running on the node by looking for pods that match the labels listed in the table above. For every running component, the integration makes a request to its metrics endpoint.
 

@@ -32,41 +32,12 @@ This integration collects the following Amazon Certificate Manager data:
 
 ### Certificate Manager Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `DaysToExpiry` | count | Number of days until a certificate expires. ACM stops publishing this metric after a certificate expires. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `DaysToExpiry`
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        Number of days until a certificate expires. ACM stops publishing this metric after a certificate expires.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has the dimension: `CertificateArn`.
 

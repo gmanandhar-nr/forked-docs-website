@@ -45,57 +45,20 @@ All three parameters are required, but they may be empty strings.
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$user_value`
 
-  <tbody>
-    <tr>
-      <td>
-        `$user_value`
+        _string_ | Required (can be empty string). Specify a name or username to associate with this page view. This value is assigned to the `user` key. |
+| `$account_value`
 
-        _string_
-      </td>
+        _string_ | Required (can be empty string). Specify the name of a user account to associate with this page view. This value is assigned to the `account` key. |
+| `$product_value`
 
-      <td>
-        Required (can be empty string). Specify a name or username to associate with this page view. This value is assigned to the `user` key.
-      </td>
-    </tr>
+        _string_ | Required (can be empty string). Specify the name of a product to associate with this page view. This value is assigned to the `product` key. |
 
-    <tr>
-      <td>
-        `$account_value`
-
-        _string_
-      </td>
-
-      <td>
-        Required (can be empty string). Specify the name of a user account to associate with this page view. This value is assigned to the `account` key.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$product_value`
-
-        _string_
-      </td>
-
-      <td>
-        Required (can be empty string). Specify the name of a product to associate with this page view. This value is assigned to the `product` key.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

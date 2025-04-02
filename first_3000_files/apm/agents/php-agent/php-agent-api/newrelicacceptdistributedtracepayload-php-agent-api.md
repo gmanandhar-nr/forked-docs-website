@@ -47,33 +47,14 @@ Requires PHP agent [version 8.4 or higher](/docs/release-notes/agent-release-not
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$payload`
 
-  <tbody>
-    <tr>
-      <td>
-        `$payload`
+        _string_ | Required: a JSON formatted string created by using `newrelic_create_distributed_trace_payload`. |
 
-        _string_
-      </td>
-
-      <td>
-        Required: a JSON formatted string created by using `newrelic_create_distributed_trace_payload`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

@@ -18,148 +18,74 @@ icon and then <DNT>**Create alert**</DNT>.
 Here are some examples of how to create alert conditions within the context of the infrastructure monitoring UI page you are currently viewing. To create an alerts condition from any chart, select the ellipses <Icon name="fe-more-horizontal"/>
 icon and then <DNT>**Create alert**</DNT>. New Relic will automatically select the appropriate <DNT>**Alert type**</DNT>.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Example**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Problem and solution**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td id="cpu-usage">
-        High CPU usage
-      </td>
-
-      <td>
-        <DNT>
-          **Problem:**
-        </DNT>
+| **Example** | **Problem and solution** |
+| - | - |
+| High CPU usage | **Problem:**
+        
 
         Your Ops team monitors a filtered set of host clusters in your eastern region and notices that the CPU usage is constantly high.
 
-        <DNT>
+        
           **Solution:**
-        </DNT>
+        
 
-        Use the <DNT>**CPU**</DNT> chart on our [<DNT>**Hosts**</DNT> page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page) to create an alert condition for system metrics.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="virtual-memory">
-        Virtual memory capacity
-      </td>
-
-      <td>
-        <DNT>
-          **Problem:**
-        </DNT>
+        Use the **CPU** chart on our [**Hosts** page](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page) to create an alert condition for system metrics. |
+| Virtual memory capacity | **Problem:**
+        
 
         Your night shift needs to be alerted when virtual memory for a set of background workers reaches an average of 10G for at least two minutes.
 
-        <DNT>
+        
           **Solution:**
-        </DNT>
+        
 
-        Use the <DNT>**Top memory consumers**</DNT> chart on our [<DNT>**Processes**</DNT> page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-processes-page-inspect-process-performance) to create an alert condition for process metrics.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="network-bandwidth">
-        Limited bandwidth
-      </td>
-
-      <td>
-        <DNT>
-          **Problem:**
-        </DNT>
+        Use the **Top memory consumers** chart on our [**Processes** page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-processes-page-inspect-process-performance) to create an alert condition for process metrics. |
+| Limited bandwidth | **Problem:**
+        
 
         You want to monitor performance based on the average number of errors received or transmitted.
 
-        <DNT>
+        
           **Solution:**
-        </DNT>
+        
 
-        Use the <DNT>**Top bandwidth**</DNT> chart on our [<DNT>**Network**</DNT> page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-network-page-measure-compare-capacity) to create an alert condition for network metrics.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="io-rw">
-        I/O read and write operations
-      </td>
-
-      <td>
-        <DNT>
-          **Problem:**
-        </DNT>
+        Use the **Top bandwidth** chart on our [**Network** page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-network-page-measure-compare-capacity) to create an alert condition for network metrics. |
+| I/O read and write operations | **Problem:**
+        
 
         You are testing a new set of hosts in your staging environment, and you want to be notified when their read or write capacity rises above your test threshold level.
 
-        <DNT>
+        
           **Solution:**
-        </DNT>
+        
 
-        Use the <DNT>**Top I/O operations**</DNT> chart on our [<DNT>**Storage**</DNT> page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-storage-page-evaluate-disk-usage-efficiency) to create an alert condition for storage metrics.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="reporting">
-        Host not reporting
-      </td>
-
-      <td>
-        <DNT>
-          **Problem:**
-        </DNT>
+        Use the **Top I/O operations** chart on our [**Storage** page](/docs/infrastructure/new-relic-infrastructure/infrastructure-ui-pages/infrastructure-storage-page-evaluate-disk-usage-efficiency) to create an alert condition for storage metrics. |
+| Host not reporting | **Problem:**
+        
 
         You want to be notified when we have stopped receiving data from an infrastructure agent.
 
-        <DNT>
+        
           **Solution:**
-        </DNT>
+        
 
-        From the [<DNT>**Hosts**</DNT>](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#system) UI, create a [host not reporting](/docs/infrastructure/new-relic-infrastructure/configuration/create-infrastructure-host-not-reporting-condition) alert condition.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="process-running">
-        Processes not running as expected
-      </td>
-
-      <td>
-        <DNT>
-          **Problem:**
-        </DNT>
+        From the [**Hosts**](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#system) UI, create a [host not reporting](/docs/infrastructure/new-relic-infrastructure/configuration/create-infrastructure-host-not-reporting-condition) alert condition. |
+| Processes not running as expected | **Problem:**
+        
 
         * You want to be notified if any of the processes on your hosts stop reporting.
 
           OR
         * A process you expected to start on a host (such as a new program) is not actually running.
 
-          <DNT>
+          
             **Solution:**
-          </DNT>
+          
 
-          From the [<DNT>**Processes**</DNT> UI](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#processes), create a [process running](/docs/infrastructure/new-relic-infrastructure/infrastructure-alert-conditions/alert-infrastructure-processes) alert condition.
-      </td>
-    </tr>
-  </tbody>
-</table>
+          From the [**Processes** UI](/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page#processes), create a [process running](/docs/infrastructure/new-relic-infrastructure/infrastructure-alert-conditions/alert-infrastructure-processes) alert condition. |
+
 
 ## Examples: Threshold options [#examples-infra-pages]
 

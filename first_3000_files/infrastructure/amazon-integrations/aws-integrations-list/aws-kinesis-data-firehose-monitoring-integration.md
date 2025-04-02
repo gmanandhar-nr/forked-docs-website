@@ -53,168 +53,23 @@ For more on how to use your data, see [Understand and use integration data](/doc
 
 This integration collects the following metrics:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "315" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `deliveryToElasticsearchBytes` | The number of bytes indexed to Amazon ES over the specified time period. |
+| `deliveryToElasticsearchRecords` | The number of records indexed to Amazon ES over the specified time period. |
+| `deliveryToElasticsearchSuccess` | The sum of the successfully indexed records over the sum of records that were attempted. |
+| `deliveryToRedshiftBytes` | The number of bytes copied to Amazon Redshift over the specified time period. |
+| `deliveryToRedshiftRecords` | The number of records copied to Amazon Redshift over the specified time period. |
+| `deliveryToRedshiftSuccess` | The sum of successful Amazon Redshift COPY commands over the sum of all Amazon Redshift COPY commands. |
+| `deliveryToS3Bytes` | The number of bytes delivered to Amazon S3 over the specified time period. |
+| `deliveryToS3DataFreshness` | The age (from getting into Kinesis Firehose to now) in seconds of the oldest record in Kinesis Firehose. Any record older than this age has been delivered to the S3 bucket. |
+| `deliveryToS3Records` | The number of records delivered to Amazon S3 over the specified time period. |
+| `deliveryToS3Success` | The sum of successful Amazon S3 put commands over the sum of all Amazon S3 put commands. |
+| `incomingBytes` | The number of bytes ingested into the Kinesis Firehose stream over the specified time period. |
+| `incomingRecords` | The number of records ingested into the Kinesis Firehose stream over the specified time period. |
+| `putRecordBatchLatency` | The time taken in milliseconds per `PutRecordBatch` operation, measured over the specified time period. |
+| `putRecordBytes` | The number of bytes put to the Kinesis Firehose delivery stream using `PutRecord` over the specified time period. |
+| `putRecordLatency` | The time taken in milliseconds per `PutRecord` operation, measured over the specified time period. |
 
-  <tbody>
-    <tr>
-      <td>
-        `deliveryToElasticsearchBytes`
-      </td>
-
-      <td>
-        The number of bytes indexed to Amazon ES over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deliveryToElasticsearchRecords`
-      </td>
-
-      <td>
-        The number of records indexed to Amazon ES over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deliveryToElasticsearchSuccess`
-      </td>
-
-      <td>
-        The sum of the successfully indexed records over the sum of records that were attempted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deliveryToRedshiftBytes`
-      </td>
-
-      <td>
-        The number of bytes copied to Amazon Redshift over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deliveryToRedshiftRecords`
-      </td>
-
-      <td>
-        The number of records copied to Amazon Redshift over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deliveryToRedshiftSuccess`
-      </td>
-
-      <td>
-        The sum of successful Amazon Redshift COPY commands over the sum of all Amazon Redshift COPY commands.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deliveryToS3Bytes`
-      </td>
-
-      <td>
-        The number of bytes delivered to Amazon S3 over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deliveryToS3DataFreshness`
-      </td>
-
-      <td>
-        The age (from getting into Kinesis Firehose to now) in seconds of the oldest record in Kinesis Firehose. Any record older than this age has been delivered to the S3 bucket.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deliveryToS3Records`
-      </td>
-
-      <td>
-        The number of records delivered to Amazon S3 over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deliveryToS3Success`
-      </td>
-
-      <td>
-        The sum of successful Amazon S3 put commands over the sum of all Amazon S3 put commands.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incomingBytes`
-      </td>
-
-      <td>
-        The number of bytes ingested into the Kinesis Firehose stream over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incomingRecords`
-      </td>
-
-      <td>
-        The number of records ingested into the Kinesis Firehose stream over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordBatchLatency`
-      </td>
-
-      <td>
-        The time taken in milliseconds per `PutRecordBatch` operation, measured over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordBytes`
-      </td>
-
-      <td>
-        The number of bytes put to the Kinesis Firehose delivery stream using `PutRecord` over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordLatency`
-      </td>
-
-      <td>
-        The time taken in milliseconds per `PutRecord` operation, measured over the specified time period.
-      </td>
-    </tr>
-  </tbody>
-</table>

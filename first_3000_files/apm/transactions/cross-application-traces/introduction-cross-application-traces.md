@@ -39,64 +39,23 @@ Cross application tracing relies on three HTTP headers in order to exchange info
 
 New Relic obfuscates all of these headers using an obfuscation scheme identical to what we use for <InlinePopover type="browser"/>, but with a different key.
 
-<table>
-  <thead>
-    <tr>
-      <th width={250}>
-        <DNT>
-          **HTTP header**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **HTTP header** | **Description** |
+| - | - |
+| `X-NewRelic-ID`
 
-  <tbody>
-    <tr>
-      <td>
-        `X-NewRelic-ID`
+        (in request header) | Contains the account ID and application ID of the application making the call |
+| `X-NewRelic-Transaction`
 
-        (in request header)
-      </td>
+        (in request header) | Contains information about an individual transaction created by the call (a GUID unique to the calling transaction, along with information about upstream calls that spawned the transaction) |
+| `X-NewRelic-App-Data`
 
-      <td>
-        Contains the account ID and application ID of the application making the call
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `X-NewRelic-Transaction`
-
-        (in request header)
-      </td>
-
-      <td>
-        Contains information about an individual transaction created by the call (a GUID unique to the calling transaction, along with information about upstream calls that spawned the transaction)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `X-NewRelic-App-Data`
-
-        (in the response if applicable)
-      </td>
-
-      <td>
-        Contains information about the called application, including:
+        (in the response if applicable) | Contains information about the called application, including:
 
         * Account ID
         * Application ID
         * Name of the called transaction
         * Timing information for the called transaction
-        * GUID of the called transaction
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * GUID of the called transaction |
+

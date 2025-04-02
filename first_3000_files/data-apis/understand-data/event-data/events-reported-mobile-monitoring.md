@@ -21,134 +21,33 @@ freshnessValidatedDate: never
 
 Our [<InlinePopover type="mobile"/>](/docs/mobile-monitoring/new-relic-mobile/getting-started/introduction-new-relic-mobile) reports [event data](/docs/using-new-relic/data/understand-data/new-relic-data-types#event-data) that is displayed in some UI displays and is also available for [querying and charting](/docs/using-new-relic/data/understand-data/query-new-relic-data). Select an event name in the following table to see its attributes.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Event
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Event | Description |
+| - | - |
+| [`Mobile`](/attribute-dictionary/?event=Mobile) | A `Mobile` event is created when a crash occurs, when an interaction ends or has run for 1 second, or if a session completes after the app is closed, backgrounded, or has run for 10 minutes. `Mobile` events were once the only event type and were generated for every event, but now there are several specialized event types. |
+| [`MobileApplicationExit`](/attribute-dictionary/?event=mobileApplicationExit) | A `MobileApplicationExit` event is generated when an app terminates, either due to a crash or other reasons such as low memory, ANRs, etc. This event provides valuable insights into the circumstances surrounding the app's termination and includes attributes such as the reason, exit code, and description for an app’s termination.
 
-  <tbody>
-    <tr>
-      <td>
-        [`Mobile`](/attribute-dictionary/?event=Mobile)
-      </td>
+        Currently, the `MobileApplicationExit` event is reported only for Android mobile applications. It leverages Android’s `ApplicationExitInfo` API to monitor and report on the different reasons for your app’s termination. |
+| `MobileBreadcrumb` | There are no attributes listed for this event; attributes will include the [session attributes](#session-list) and any [custom attributes added](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile). |
+| [`MobileCrash`](/attribute-dictionary/?event=MobileCrash) | The `MobileCrash` event is created when an app crashes. `MobileCrash` includes attributes such as crash line number, class, and crash message. |
+| [`MobileHandledException`](/attribute-dictionary/?event=MobileHandledException) | `MobileHandledException` is sent when an exception is caught and is used for non-fatal exceptions reported to New Relic using the [`recordHandledException` API call](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-handled-exceptions/).
 
-      <td>
-        A `Mobile` event is created when a crash occurs, when an interaction ends or has run for 1 second, or if a session completes after the app is closed, backgrounded, or has run for 10 minutes. `Mobile` events were once the only event type and were generated for every event, but now there are several specialized event types.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`MobileApplicationExit`](/attribute-dictionary/?event=mobileApplicationExit)
-      </td>
-
-      <td>
-        A `MobileApplicationExit` event is generated when an app terminates, either due to a crash or other reasons such as low memory, ANRs, etc. This event provides valuable insights into the circumstances surrounding the app's termination and includes attributes such as the reason, exit code, and description for an app’s termination.
-
-        Currently, the `MobileApplicationExit` event is reported only for Android mobile applications. It leverages Android’s `ApplicationExitInfo` API to monitor and report on the different reasons for your app’s termination.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MobileBreadcrumb`
-      </td>
-
-      <td>
-        There are no attributes listed for this event; attributes will include the [session attributes](#session-list) and any [custom attributes added](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`MobileCrash`](/attribute-dictionary/?event=MobileCrash)
-      </td>
-
-      <td>
-        The `MobileCrash` event is created when an app crashes. `MobileCrash` includes attributes such as crash line number, class, and crash message.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`MobileHandledException`](/attribute-dictionary/?event=MobileHandledException)
-      </td>
-
-      <td>
-        `MobileHandledException` is sent when an exception is caught and is used for non-fatal exceptions reported to New Relic using the [`recordHandledException` API call](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-handled-exceptions/).
-
-        The exceptions will be visible in queries of this event and on the [<DNT>**Handled exceptions**</DNT> UI page](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/handled-exceptions-analyze-trends-prevent-crashes), including stack traces.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`MobileRequest`](/attribute-dictionary/?event=MobileRequest)
-      </td>
-
-      <td>
-        A `MobileRequest` event is created when an HTTP request successfully completes, resulting in a response code below 400.
+        The exceptions will be visible in queries of this event and on the [**Handled exceptions** UI page](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/handled-exceptions-analyze-trends-prevent-crashes), including stack traces. |
+| [`MobileRequest`](/attribute-dictionary/?event=MobileRequest) | A `MobileRequest` event is created when an HTTP request successfully completes, resulting in a response code below 400.
 
         New Relic `MobileRequest` data is enabled by default for:
 
         * [Android version 5.15.2](/docs/release-notes/mobile-release-notes/android-release-notes/android-5152) or higher
         * [iOS version 6.0.0](/docs/release-notes/mobile-release-notes/ios-release-notes/ios-agent-600) or higher
 
-          For earlier versions, starting with Android version 5.14.0 or iOS version 5.14.0, you must enable the feature. Upgrade to the latest [Android](/docs/mobile-monitoring/new-relic-mobile-android/install-configure/upgrade-android-agent) or [iOS](/docs/mobile-monitoring/new-relic-mobile-ios/installation/upgrade-ios-agent) version, or enable the `NetworkRequests` feature flag by using the [Android](/docs/mobile-monitoring/new-relic-mobile-android/install-configure/android-agent-configuration-feature-flags) or [iOS](/docs/mobile-monitoring/new-relic-mobile-ios/install-configure/ios-agent-configuration-feature-flags#networkRequest) configuration settings.
-      </td>
-    </tr>
+          For earlier versions, starting with Android version 5.14.0 or iOS version 5.14.0, you must enable the feature. Upgrade to the latest [Android](/docs/mobile-monitoring/new-relic-mobile-android/install-configure/upgrade-android-agent) or [iOS](/docs/mobile-monitoring/new-relic-mobile-ios/installation/upgrade-ios-agent) version, or enable the `NetworkRequests` feature flag by using the [Android](/docs/mobile-monitoring/new-relic-mobile-android/install-configure/android-agent-configuration-feature-flags) or [iOS](/docs/mobile-monitoring/new-relic-mobile-ios/install-configure/ios-agent-configuration-feature-flags#networkRequest) configuration settings. |
+| [`MobileRequestError`](/attribute-dictionary/?event=MobileRequestError) | A `MobileRequestError` is used for HTTP errors or network failures. HTTP errors are HTTP requests that have a status code greater than 400. A network failure is an HTTP request that results in no response. The event is sent when the HTTP request completes. |
+| `MobileUserAction` | There are no attributes listed for this event; attributes will include the [session attributes](#session-list) and any [custom attributes added](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile).
 
-    <tr>
-      <td>
-        [`MobileRequestError`](/attribute-dictionary/?event=MobileRequestError)
-      </td>
+        This event is recorded when assuming some user action caused the agent to start/return to foreground or stop/return to background when distributed tracing feature is enabled. |
+| Custom events | There is no attribute list for this event type because it is a custom event; attributes will include the [session attributes](#session-list) and any [custom attributes](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile) that you add. |
 
-      <td>
-        A `MobileRequestError` is used for HTTP errors or network failures. HTTP errors are HTTP requests that have a status code greater than 400. A network failure is an HTTP request that results in no response. The event is sent when the HTTP request completes.
-      </td>
-    </tr>
-
-    <tr id="session-list">
-      <td>
-        [`MobileSession`](/attribute-dictionary/?event=MobileSession)
-      </td>
-
-      <td>
-        A `MobileSession` event is sent when an app is closed, backgrounded, or when 10 minutes of active use has elapsed. This is the source of the general session data used by the other mobile monitoring events. `MobileSession` captures attributes such as device type, device OS, and geographical information.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MobileUserAction`
-      </td>
-
-      <td>
-        There are no attributes listed for this event; attributes will include the [session attributes](#session-list) and any [custom attributes added](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile).
-
-        This event is recorded when assuming some user action caused the agent to start/return to foreground or stop/return to background when distributed tracing feature is enabled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Custom events
-      </td>
-
-      <td>
-        There is no attribute list for this event type because it is a custom event; attributes will include the [session attributes](#session-list) and any [custom attributes](/docs/mobile-monitoring/new-relic-mobile/maintenance/add-custom-data-new-relic-mobile) that you add.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Related documentation:
 

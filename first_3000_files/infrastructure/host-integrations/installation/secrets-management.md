@@ -73,87 +73,23 @@ When using environment variables in on-host integration configuration files the 
 
 Define secrets in each configuration under a `variables` section. Each entry is a user-defined secret name that will store the properties of the retrieved secrets. Each variable can contain the following properties:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        YAML key
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| YAML key | Description |
+| - | - |
+| `ttl`
 
-  <tbody>
-    <tr>
-      <td>
-        `ttl`
-
-        Type: String
-      </td>
-
-      <td>
-        Amount of time before a secret is refreshed. This can be a number followed by a time unit (`s`, `m` or `h`).
+        Type: String | Amount of time before a secret is refreshed. This can be a number followed by a time unit (`s`, `m` or `h`).
 
         Examples: `30s`, `10m`, `1h`
 
-        Default: `1h`
-      </td>
-    </tr>
+        Default: `1h` |
+| `aws-kms` | [AWS KMS secret retrieval configuration](#aws-kms-secrets) |
+| `vault` | [Vault secret retrieval configuration](#vault-secrets) |
+| `cyberark-cli` | CyberArk command line interface configuration |
+| `cyberark-api` | [CyberArk REST API configuration](#cyberark-api) |
+| `obfuscated` | [New Relic CLI obfuscation](#newrelic-cli-obfuscation) |
 
-    <tr>
-      <td>
-        `aws-kms`
-      </td>
-
-      <td>
-        [AWS KMS secret retrieval configuration](#aws-kms-secrets)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `vault`
-      </td>
-
-      <td>
-        [Vault secret retrieval configuration](#vault-secrets)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cyberark-cli`
-      </td>
-
-      <td>
-        CyberArk command line interface configuration
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cyberark-api`
-      </td>
-
-      <td>
-        [CyberArk REST API configuration](#cyberark-api)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `obfuscated`
-      </td>
-
-      <td>
-        [New Relic CLI obfuscation](#newrelic-cli-obfuscation)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## AWS KMS secrets
 

@@ -37,51 +37,14 @@ After activating the integration and waiting a few minutes (based on the [pollin
 
 ### GcpVirtualMachineSample [#GcpVirtualMachineSample]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "285px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `firewall.DroppedBytes` | Delta count of incoming bytes dropped by the firewall. |
+| `firewall.DroppedPackets` | Delta count of incoming packets dropped by the firewall. |
+| `instance.cpu.ReservedCores` | Total number of cores reserved on the host of the instance. |
 
-  <tbody>
-    <tr>
-      <td>
-        `firewall.DroppedBytes`
-      </td>
-
-      <td>
-        Delta count of incoming bytes dropped by the firewall.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `firewall.DroppedPackets`
-      </td>
-
-      <td>
-        Delta count of incoming packets dropped by the firewall.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.cpu.ReservedCores`
-      </td>
-
-      <td>
-        Total number of cores reserved on the host of the instance.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### GcpVirtualMachineDiskSample [#GcpVirtualMachineDiskSample]
 

@@ -20,45 +20,17 @@ Better understanding the details of the `Metric` structure will help you underst
 
 The metric `type` determines how the data is aggregated over longer time windows and determines what [fields](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/#func-getfield) and functions are available to analyze and query.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric types
-      </th>
+# Table
 
-      <th style={{ width: "300px" }}>
-        Supported APIs
-      </th>
-
-      <th>
-        Description
-      </th>
-
-      <th style={{ width: "150px" }}>
-        Available query functions
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `count`
-      </td>
-
-      <td>
-        ✅ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
+| Metric types | Supported APIs | Description | Available query functions |
+| - | - | - | - |
+| `count` | ✅ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
 
         ❌ [New Relic Events to Metrics](/docs/data-apis/convert-to-metrics/analyze-monitor-data-trends-metrics)
 
         ✅ [Prometheus Remote Write](/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic)
 
-        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics)
-      </td>
-
-      <td>
-        Measures the number of occurrences of an event. The count should be reset to `0` every time the metric is reported. Examples include cache hits per reporting interval and the number of threads created per reporting interval.
+        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics) | Measures the number of occurrences of an event. The count should be reset to `0` every time the metric is reported. Examples include cache hits per reporting interval and the number of threads created per reporting interval.
 
         You must specify a value for `interval.ms` when reporting the `count` metric type using the [Metric API](/docs/telemetry-data-platform/get-data/apis/introduction-metric-api).
 
@@ -68,163 +40,70 @@ The metric `type` determines how the data is aggregated over longer time windows
 
         ```sql
         FROM Metric SELECT rate(sum(myMetric), 1 minute`) . . .
-        ```
-      </td>
-
-      <td>
-        * [`sum`](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions#func-sum)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cumulativeCount`
-      </td>
-
-      <td>
-        ❌ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
+        ``` | * [`sum`](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions#func-sum) |
+| `cumulativeCount` | ❌ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
 
         ❌ [New Relic Events to Metrics](/docs/data-apis/convert-to-metrics/analyze-monitor-data-trends-metrics)
 
         ✅ [Prometheus Remote Write](/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic)
 
-        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics)
-      </td>
-
-      <td>
-        Equivalent to the `count` type described above, but in addition this gives access to cumulative metric fields. For more on this, see [Cumulative metrics](/docs/data-apis/understand-data/metric-data/cumulative-metrics).
-        <Callout variant="important">
-          This type is slightly larger than a typical `count`, and therefore can add to [data ingest](/docs/accounts/accounts-billing/new-relic-one-pricing-billing/data-ingest-billing).
-        </Callout>
-      </td>
-
-      <td>
-        * [sum](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions#func-sum)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `distribution`
-      </td>
-
-      <td>
-        ❌ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
+        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics) | Equivalent to the `count` type described above, but in addition this gives access to cumulative metric fields. For more on this, see [Cumulative metrics](/docs/data-apis/understand-data/metric-data/cumulative-metrics).
+        
+          This type is slightly larger than a typical `count`, and therefore can add to [data ingest](/docs/accounts/accounts-billing/new-relic-one-pricing-billing/data-ingest-billing). | * [sum](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions#func-sum) |
+| `distribution` | ❌ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
 
         ✅ [New Relic Events to Metrics](/docs/data-apis/convert-to-metrics/analyze-monitor-data-trends-metrics) (delta only)
 
         ✅ [Prometheus Remote Write](/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic)
 
-        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics)
-      </td>
-
-      <td>
-        Tracks the statistical distribution on a numeric attribute. This metric is re-aggregatable. For example, 1-minute data points from 60 minutes can be aggregated into a 1-hour data point, without degradation on accuracy.
+        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics) | Tracks the statistical distribution on a numeric attribute. This metric is re-aggregatable. For example, 1-minute data points from 60 minutes can be aggregated into a 1-hour data point, without degradation on accuracy.
 
         This type:
 
         * Supports statistical functions like percentile and histogram, and all functions supported by the summary type.
-        * Uses the same algorithm as the percentile function.
-      </td>
-
-      <td>
-        * `percentile`
+        * Uses the same algorithm as the percentile function. | * `percentile`
         * `histogram`
         * `min`
         * `max`
         * `sum`
         * `count`
-        * `average`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `gauge`
-      </td>
-
-      <td>
-        ✅ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
+        * `average` |
+| `gauge` | ✅ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
 
         ❌ [New Relic Events to Metrics](/docs/data-apis/convert-to-metrics/analyze-monitor-data-trends-metrics)
 
         ✅ [Prometheus Remote Write](/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic)
 
-        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics)
-      </td>
-
-      <td>
-        Represents a value that can increase or decrease with time. Examples of gauges include the temperature, CPU usage, and memory.
+        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics) | Represents a value that can increase or decrease with time. Examples of gauges include the temperature, CPU usage, and memory.
 
         For example, there is always a temperature, but you are periodically taking the temperature and reporting it.
 
-        The value must fit into the range of a Java double.
-      </td>
-
-      <td>
-        * `latest`
+        The value must fit into the range of a Java double. | * `latest`
         * `min`
         * `max`
         * `sum`
         * `count`
-        * `average`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `summary`
-      </td>
-
-      <td>
-        ✅ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
+        * `average` |
+| `summary` | ✅ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
 
         ✅ [New Relic Events to Metrics](/docs/data-apis/convert-to-metrics/analyze-monitor-data-trends-metrics)
 
         ✅ [Prometheus Remote Write](/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic)
 
-        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics) (legacy)
-      </td>
+        ✅ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics) (legacy) | Used to report pre-aggregated data, or information on aggregated discrete events. A summary includes a `count`, `sum` value, `min` value, and `max` value. The `count` value must be positive. Examples include transaction count/durations and queue count/ durations.
 
-      <td>
-        Used to report pre-aggregated data, or information on aggregated discrete events. A summary includes a `count`, `sum` value, `min` value, and `max` value. The `count` value must be positive. Examples include transaction count/durations and queue count/ durations.
-
-        You must specify a value for `interval.ms` when reporting the `summary` metric type using the [Metric API](/docs/telemetry-data-platform/get-data/apis/introduction-metric-api).
-      </td>
-
-      <td>
-        * `min`
+        You must specify a value for `interval.ms` when reporting the `summary` metric type using the [Metric API](/docs/telemetry-data-platform/get-data/apis/introduction-metric-api). | * `min`
         * `max`
         * `sum`
         * `count`
-        * `average`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `uniqueCount`
-      </td>
-
-      <td>
-        ❌ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
+        * `average` |
+| `uniqueCount` | ❌ [New Relic Metric API](/docs/data-apis/ingest-apis/metric-api/report-metrics-metric-api)
 
         ✅ [New Relic Events to Metrics](/docs/data-apis/convert-to-metrics/analyze-monitor-data-trends-metrics)
 
         ❌ [Prometheus Remote Write](/docs/infrastructure/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic)
 
-        ❌ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics) (legacy)
-      </td>
+        ❌ [OpenTelemetry](/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/best-practices/opentelemetry-best-practices-metrics) (legacy) | Tracks the number of unique values on a string or numeric attribute. This metric is re-aggregatable. For example, 1-minute data points from 60 minutes can be aggregated into a 1-hour data point, without degradation on accuracy.
 
-      <td>
-        Tracks the number of unique values on a string or numeric attribute. This metric is re-aggregatable. For example, 1-minute data points from 60 minutes can be aggregated into a 1-hour data point, without degradation on accuracy.
+        This type is generated only via the [event-to-metrics service](/docs/accounts/accounts/data-management/introduction-events-metrics-service). | * [`uniqueCount`](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions#func-uniqueCount) |
 
-        This type is generated only via the [event-to-metrics service](/docs/accounts/accounts/data-management/introduction-events-metrics-service).
-      </td>
-
-      <td>
-        * [`uniqueCount`](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions#func-uniqueCount)
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -41,115 +41,23 @@ FACET category, message LIMIT 100 SINCE 24 hours ago
 
 The `category` indicates the type of error and the `message` provides more detailed information about the error. If the `category` is `rateLimit`, then you should also examine the `rateLimitType` field for more information on the type of rate limiting.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Category
-      </th>
+# Table
 
-      <th>
-        rateLimitType
-      </th>
+| Category | rateLimitType | Description and solution |
+| - | - | - |
+| `BadRequest` | (not set) | There is an issue with the JSON payload. These include JSON syntax errors, attribute names, or values that are too long.
 
-      <th>
-        Description and solution
-      </th>
-    </tr>
-  </thead>
+        Check the `message` field to determine the exact issue. Then review the JSON payload, and update it to ensure it meets the proper semantic guidelines. |
+| `RateLimit` | `DatapointsPerMinute` | You are sending too many datapoints per minute. If you get this error, you can either send data less frequently, or request changes to your metric rate limits by contacting your New Relic account representative, or visiting our [Support portal](https://support.newrelic.com/). |
+| `RateLimit` | `UniqueTimeseriesPerDay` | You have an attribute with a high number of unique values, like `containerId` or `URI`. To resolve this error, review any attributes that may be causing the issue and remove them. If desired, you can use a [data dropping rule](/docs/accounts/accounts/data-management/drop-data-using-nerdgraph) to remove attributes at ingest time. |
+| `RateLimit` | `UniquePrometheusTimeseries` | You have Prometheus servers reporting too many unique time series via [New Relic's remote_write endpoint](/docs/integrations/prometheus-integrations/get-started/monitor-prometheus-new-relic#remote-write).
 
-  <tbody>
-    <tr>
-      <td>
-        `BadRequest`
-      </td>
+        Reduce the number of unique time series reported by modifying your [Prometheus server configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration/) to reduce the number of targets being scraped, or by using [relabel rules](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config) in the [remote_write section](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_write) of your server configuration to drop time series or highly unique labels. |
+| `RateLimit` | `RequestsPerMinute` | Too many requests per minute are being sent. To resolve this, put more datapoints in each request, and send them less frequently. |
+| `RateLimit` | `ErrorGroupsPerDay` | You have exceeded your daily error group limit. Incoming error groups will be dropped for the remainder of the day and will continue as normal after UTC midnight.
 
-      <td>
-        (not set)
-      </td>
+        To resolve this, reduce the amount of unique error messages collected by New Relic. |
 
-      <td>
-        There is an issue with the JSON payload. These include JSON syntax errors, attribute names, or values that are too long.
-
-        Check the `message` field to determine the exact issue. Then review the JSON payload, and update it to ensure it meets the proper semantic guidelines.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RateLimit`
-      </td>
-
-      <td>
-        `DatapointsPerMinute`
-      </td>
-
-      <td>
-        You are sending too many datapoints per minute. If you get this error, you can either send data less frequently, or request changes to your metric rate limits by contacting your New Relic account representative, or visiting our [Support portal](https://support.newrelic.com/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RateLimit`
-      </td>
-
-      <td>
-        `UniqueTimeseriesPerDay`
-      </td>
-
-      <td>
-        You have an attribute with a high number of unique values, like `containerId` or `URI`. To resolve this error, review any attributes that may be causing the issue and remove them. If desired, you can use a [data dropping rule](/docs/accounts/accounts/data-management/drop-data-using-nerdgraph) to remove attributes at ingest time.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RateLimit`
-      </td>
-
-      <td>
-        `UniquePrometheusTimeseries`
-      </td>
-
-      <td>
-        You have Prometheus servers reporting too many unique time series via [New Relic's remote_write endpoint](/docs/integrations/prometheus-integrations/get-started/monitor-prometheus-new-relic#remote-write).
-
-        Reduce the number of unique time series reported by modifying your [Prometheus server configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration/) to reduce the number of targets being scraped, or by using [relabel rules](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config) in the [remote_write section](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_write) of your server configuration to drop time series or highly unique labels.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RateLimit`
-      </td>
-
-      <td>
-        `RequestsPerMinute`
-      </td>
-
-      <td>
-        Too many requests per minute are being sent. To resolve this, put more datapoints in each request, and send them less frequently.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RateLimit`
-      </td>
-
-      <td>
-        `ErrorGroupsPerDay`
-      </td>
-
-      <td>
-        You have exceeded your daily error group limit. Incoming error groups will be dropped for the remainder of the day and will continue as normal after UTC midnight.
-
-        To resolve this, reduce the amount of unique error messages collected by New Relic.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Match errors to ingested payloads [#errors-payloads]
 

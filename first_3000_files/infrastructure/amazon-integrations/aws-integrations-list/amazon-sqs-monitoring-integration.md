@@ -53,111 +53,20 @@ For more on how to use your data, see [Understand integration data](/docs/infras
 
 This integration collects the following Amazon SQS metrics. For full metric descriptions, see [Amazon's SQS documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/sqs-metricscollected.html).
 
-<table>
-  <thead>
-    <tr>
-      <th width={360}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Name | Description |
+| - | - |
+| `approximateAgeOfOldestMessage` | The approximate age of the oldest non-deleted message in the queue, in seconds. For dead letter queues, this value is the longest time that a message has been in the queue. |
+| `approximateNumberOfMessagesDelayed` | The approximate number of messages in the queue that are delayed and not available for reading immediately. This can happen when the queue is configured as a delay queue or when a message has been sent with a delay parameter. |
+| `approximateNumberOfMessagesNotVisible` | The approximate number of messages that are "in flight." Messages are considered in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window. |
+| `ApproximateNumberOfMessagesVisible` | The approximate number of messages available for retrieval from the queue. |
+| `numberOfEmptyReceives` | The number of `ReceiveMessage` API calls that did not return a message. |
+| `numberOfMessagesDeleted` | The number of messages deleted from the queue. |
+| `numberOfMessagesReceived` | The number of messages returned by calls to the `ReceiveMessage` API action. |
+| `numberOfMessagesSent` | The number of messages added to a queue. |
+| `sentMessagesSize` | The size in bytes of messages added to a queue. |
 
-  <tbody>
-    <tr>
-      <td>
-        `approximateAgeOfOldestMessage`
-      </td>
-
-      <td>
-        The approximate age of the oldest non-deleted message in the queue, in seconds. For dead letter queues, this value is the longest time that a message has been in the queue.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `approximateNumberOfMessagesDelayed`
-      </td>
-
-      <td>
-        The approximate number of messages in the queue that are delayed and not available for reading immediately. This can happen when the queue is configured as a delay queue or when a message has been sent with a delay parameter.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `approximateNumberOfMessagesNotVisible`
-      </td>
-
-      <td>
-        The approximate number of messages that are "in flight." Messages are considered in flight if they have been sent to a client but have not yet been deleted or have not yet reached the end of their visibility window.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ApproximateNumberOfMessagesVisible`
-      </td>
-
-      <td>
-        The approximate number of messages available for retrieval from the queue.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `numberOfEmptyReceives`
-      </td>
-
-      <td>
-        The number of `ReceiveMessage` API calls that did not return a message.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `numberOfMessagesDeleted`
-      </td>
-
-      <td>
-        The number of messages deleted from the queue.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `numberOfMessagesReceived`
-      </td>
-
-      <td>
-        The number of messages returned by calls to the `ReceiveMessage` API action.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `numberOfMessagesSent`
-      </td>
-
-      <td>
-        The number of messages added to a queue.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `sentMessagesSize`
-      </td>
-
-      <td>
-        The size in bytes of messages added to a queue.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Create alerts
 

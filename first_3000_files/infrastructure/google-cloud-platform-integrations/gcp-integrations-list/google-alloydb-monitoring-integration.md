@@ -26,67 +26,14 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data is attached to the following [event types](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Cluster | `GcpAlloydbClusterSample` | `GcpAlloydbCluster` |
+| Database | `GcpAlloydbDatabaseSample` | `GcpAlloydbDatabase` |
+| Instance | `GcpAlloydbInstanceSample` | `GcpAlloydbInstance` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Cluster
-      </td>
-
-      <td>
-        `GcpAlloydbClusterSample`
-      </td>
-
-      <td>
-        `GcpAlloydbCluster`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Database
-      </td>
-
-      <td>
-        `GcpAlloydbDatabaseSample`
-      </td>
-
-      <td>
-        `GcpAlloydbDatabase`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Instance
-      </td>
-
-      <td>
-        `GcpAlloydbInstanceSample`
-      </td>
-
-      <td>
-        `GcpAlloydbInstance`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

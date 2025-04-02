@@ -35,98 +35,16 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Cloud Services metrics [#Azure-cloud-services]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `AvailableMemoryBytes	` | Amount of physical memory, in bytes, immediately available for allocation to a process or for system use in the Virtual Machine. |
+| `DiskReadBytes` | Bytes read from disk during monitoring period. |
+| `DiskReadOperations/Sec` | Disk Read IOPS. |
+| `DiskWriteBytes` | Bytes written to disk during monitoring period. |
+| `DiskWriteOperations/Sec` | Disk Write IOPS. |
+| `NetworkInTotal` | The number of bytes received on all network interfaces by the Virtual Machine(s) (Incoming Traffic). |
+| `NetworkOutTotal` | The number of bytes out on all network interfaces by the Virtual Machine(s) (Outgoing Traffic). |
+| `PercentageCPU` | The percentage of allocated compute units that are currently in use by the Virtual Machine(s). |
 
-  <tbody>
-    <tr>
-      <td>
-        `AvailableMemoryBytes	`
-      </td>
-
-      <td>
-        Amount of physical memory, in bytes, immediately available for allocation to a process or for system use in the Virtual Machine.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskReadBytes`
-      </td>
-
-      <td>
-        Bytes read from disk during monitoring period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskReadOperations/Sec`
-      </td>
-
-      <td>
-        Disk Read IOPS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskWriteBytes`
-      </td>
-
-      <td>
-        Bytes written to disk during monitoring period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DiskWriteOperations/Sec`
-      </td>
-
-      <td>
-        Disk Write IOPS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkInTotal`
-      </td>
-
-      <td>
-        The number of bytes received on all network interfaces by the Virtual Machine(s) (Incoming Traffic).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkOutTotal`
-      </td>
-
-      <td>
-        The number of bytes out on all network interfaces by the Virtual Machine(s) (Outgoing Traffic).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PercentageCPU`
-      </td>
-
-      <td>
-        The percentage of allocated compute units that are currently in use by the Virtual Machine(s).
-      </td>
-    </tr>
-  </tbody>
-</table>

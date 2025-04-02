@@ -28,301 +28,46 @@ Your organization's price per GB of ingested data varies depending on which data
 
 Here's a table with comparisons of the two options. Prices and limits are monthly, and prices are in USD.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "240px" }}>
-        Feature/ability
-      </th>
+# Table
 
-      <th>
-        <DNT>**Original Data**</DNT> option
-      </th>
+| Feature/ability | **Original Data** option | **Data Plus** option | More feature details |
+| - | - | - | - |
+| [Editions](/docs/accounts/accounts-billing/new-relic-one-pricing-billing/new-relic-one-pricing-billing/#editions) | All editions | Requires Standard, Pro, or Enterprise
 
-      <th>
-        <DNT>**Data Plus**</DNT> option
-      </th>
-
-      <th style={{ width: "265px" }}>
-        More feature details
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [Editions](/docs/accounts/accounts-billing/new-relic-one-pricing-billing/new-relic-one-pricing-billing/#editions)
-      </td>
-
-      <td>
-        All editions
-      </td>
-
-      <td>
-        Requires Standard, Pro, or Enterprise
-
-        (We note below if a feature is specific to an edition)
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Data free limit
-      </td>
-
-      <td>
-        100 GB Ingested
-      </td>
-
-      <td>
-        100 GB Ingested
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Data price <br/>
-        (beyond free limit)
-      </td>
-
-      <td>
-        $0.35/GB Ingested
-      </td>
-
-      <td>
-        $0.55/GB Ingested
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Data retention free limit <br/>
-        ([varies by data type](/docs/data-apis/manage-data/manage-data-retention))
-      </td>
-
-      <td>
-        Default of at least 8 days
-      </td>
-
-      <td>
-        90 days extra over default
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Price for each additional 30 days of retention <br/>
-        (beyond free limit)
-      </td>
-
-      <td>
-        \+$0.05/GB
-      </td>
-
-      <td>
-        \+$0.05/GB
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Additional price to store data in [EU data center](/docs/accounts/accounts-billing/account-setup/choose-your-data-center) <br/>
-      </td>
-
-      <td>
-        \+$0.05/GB
-      </td>
-
-      <td>
-        \+$0.05/GB
-      </td>
-
-      <td>
-        Data is stored in the US data center by default.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Max [query limit](/docs/query-your-data/nrql-new-relic-query-language/get-started/rate-limits-nrql-queries/#query-limits)
-      </td>
-
-      <td>
-        Up to 20B data points per minute
-      </td>
-
-      <td>
-        Up to 60B data points per minute
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Maximum [query duration](/docs/query-your-data/nrql-new-relic-query-language/get-started/rate-limits-nrql-queries/#query-duration)
-      </td>
-
-      <td>
-        1 minute
-      </td>
-
-      <td>
-        Up to 10 minutes
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Cloud provider choice
-      </td>
-
-      <td>
-        Single cloud provider
-      </td>
-
-      <td>
-        Azure or multiple cloud providers
-      </td>
-
-      <td>
-        Choose your preferred cloud provider for your observability workloads to align your telemetry storage with your engineering deployment model and cloud preference.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Logs obfuscation](/docs/logs/ui-data/obfuscation-ui/)
-      </td>
-
-      <td>
-        [Automatically](/docs/logs/get-started/new-relics-log-management-security-privacy/#log-obfuscation) mask known credit card and Social Security number patterns in logs.
-      </td>
-
-      <td>
-        Create and track rules directly in the <InlinePopover type="logs"/> UI, and [mask or hash](/docs/logs/ui-data/obfuscation-ui/) sensitive log data.
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        [New Relic Vulnerability Management](/docs/vulnerability-management/overview) <br/>
-        (full platform users only)
-      </td>
-
-      <td>
-        \+$0.10/GB <br/>
-        (beyond free limit)
-      </td>
-
-      <td>
-        Standard, Pro, and Enterprise
-      </td>
-
-      <td>
-        Identify vulnerabilities and address risks at every stage of the software lifecycle.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [FedRAMP Moderate](/docs/security/security-privacy/compliance/fedramp-compliant-endpoints) and [HIPAA](/docs/security/security-privacy/compliance/hipaa-readiness-new-relic) eligibility
-      </td>
-
-      <td style="text-align:center">
-        <Icon
+        (We note below if a feature is specific to an edition) |
+| Data free limit | 100 GB Ingested | 100 GB Ingested |
+| Data price 
+        (beyond free limit) | $0.35/GB Ingested | $0.55/GB Ingested |
+| Data retention free limit 
+        ([varies by data type](/docs/data-apis/manage-data/manage-data-retention)) | Default of at least 8 days | 90 days extra over default |
+| Price for each additional 30 days of retention 
+        (beyond free limit) | \+$0.05/GB | \+$0.05/GB |
+| Additional price to store data in [EU data center](/docs/accounts/accounts-billing/account-setup/choose-your-data-center) | \+$0.05/GB | \+$0.05/GB | Data is stored in the US data center by default. |
+| Max [query limit](/docs/query-your-data/nrql-new-relic-query-language/get-started/rate-limits-nrql-queries/#query-limits) | Up to 20B data points per minute | Up to 60B data points per minute |
+| Maximum [query duration](/docs/query-your-data/nrql-new-relic-query-language/get-started/rate-limits-nrql-queries/#query-duration) | 1 minute | Up to 10 minutes |
+| Cloud provider choice | Single cloud provider | Azure or multiple cloud providers | Choose your preferred cloud provider for your observability workloads to align your telemetry storage with your engineering deployment model and cloud preference. |
+| [Logs obfuscation](/docs/logs/ui-data/obfuscation-ui/) | [Automatically](/docs/logs/get-started/new-relics-log-management-security-privacy/#log-obfuscation) mask known credit card and Social Security number patterns in logs. | Create and track rules directly in the  UI, and [mask or hash](/docs/logs/ui-data/obfuscation-ui/) sensitive log data. |
+| [New Relic Vulnerability Management](/docs/vulnerability-management/overview) 
+        (full platform users only) | \+$0.10/GB 
+        (beyond free limit) | Standard, Pro, and Enterprise | Identify vulnerabilities and address risks at every stage of the software lifecycle. |
+| [FedRAMP Moderate](/docs/security/security-privacy/compliance/fedramp-compliant-endpoints) and [HIPAA](/docs/security/security-privacy/compliance/hipaa-readiness-new-relic) eligibility | <Icon
           style={{color: '#328787'}}
           name="fe-x-circle"
-        />
-      </td>
-
-      <td>
-        Enterprise
-      </td>
-
-      <td>
-        Achieve security compliance through configurations that help you meet your FedRAMP and HIPAA requirements.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Streaming data export](/docs/apis/nerdgraph/examples/nerdgraph-streaming-export)
-      </td>
-
-      <td style="text-align:center">
-        <Icon
+        /> | Enterprise | Achieve security compliance through configurations that help you meet your FedRAMP and HIPAA requirements. |
+| [Streaming data export](/docs/apis/nerdgraph/examples/nerdgraph-streaming-export) | <Icon
           style={{color: '#328787'}}
           name="fe-x-circle"
-        />
-      </td>
-
-      <td>
-        Standard, Pro, and Enterprise
-      </td>
-
-      <td>
-        Configure rules to simultaneously export telemetry data to your AWS or Azure storage of choice. Additional export fees to the cloud provider will apply.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Historical data export](/docs/apis/nerdgraph/examples/nerdgraph-historical-data-export)
-      </td>
-
-      <td style="text-align:center">
-        <Icon
+        /> | Standard, Pro, and Enterprise | Configure rules to simultaneously export telemetry data to your AWS or Azure storage of choice. Additional export fees to the cloud provider will apply. |
+| [Historical data export](/docs/apis/nerdgraph/examples/nerdgraph-historical-data-export) | <Icon
           style={{color: '#328787'}}
           name="fe-x-circle"
-        />
-      </td>
-
-      <td>
-        Standard, Pro, and Enterprise
-      </td>
-
-      <td>
-        Run larger queries with no timeout for historical analysis and modeling, long-term storage, and integration with other data analytics platforms.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Azure Native New Relic Service
-      </td>
-
-      <td style="text-align:center">
-        <Icon
+        /> | Standard, Pro, and Enterprise | Run larger queries with no timeout for historical analysis and modeling, long-term storage, and integration with other data analytics platforms. |
+| Azure Native New Relic Service | <Icon
           style={{color: '#328787'}}
           name="fe-x-circle"
-        />
-      </td>
+        /> | Standard, Pro, and Enterprise 
+        ([with some limitations](#azure-native-data-plus)) |
 
-      <td>
-        Standard, Pro, and Enterprise <br/>
-        ([with some limitations](#azure-native-data-plus))
-      </td>
-
-      <td/>
-    </tr>
-  </tbody>
-</table>
 
 To see a side-by-side comparison of Data Plus and our Original Data option, view [our Data Plus data sheet](https://newrelic.com/resources/datasheets/data-plus).
 

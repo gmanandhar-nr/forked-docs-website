@@ -34,75 +34,16 @@ Some common problems users encounter after installing the New Relic Node.js agen
     id="installation"
     title="Installation problems"
   >
-    <table>
-      <thead>
-        <tr>
-          <th>
-            <DNT>
-              **What to check**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Comments**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| **What to check** | **Comments** |
+| - | - |
+| Run script | Ensure that you `newrelic` module is loaded first by using `-r/--require` flag: `node -r newrelic your-program.js`. |
+| Main module | If you cannot control how your main module is run, ensure that you have added `require('newrelic')` as the first line of the app's main module. If the require is added later, the Node.js agent may not properly instrument your application. |
+| Conditional logic | If you have any conditional logic in your `require`, move the conditional logic to your `newrelic.js` configuration file. |
+| Frameworks | For problems with [supported frameworks](/docs/agents/nodejs-agent/getting-started/new-relic-nodejs#requirements), make sure you are using Connect, Express, Hapi, Kraken, or Restify. There are other Node.js frameworks, but New Relic does not support all of them. |
+| Apdex | For problems with your [Apdex](/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction) results, try adjusting your Apdex score via your [Node.js agent config file](/docs/nodejs/customizing-your-nodejs-config-file#apdex) (`newrelic.js`) or the [New Relic user interface](/docs/site/changing-your-apdex-settings). |
 
-      <tbody>
-        <tr>
-          <td>
-            Run script
-          </td>
-
-          <td>
-            Ensure that you `newrelic` module is loaded first by using `-r/--require` flag: `node -r newrelic your-program.js`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Main module
-          </td>
-
-          <td>
-            If you cannot control how your main module is run, ensure that you have added `require('newrelic')` as the first line of the app's main module. If the require is added later, the Node.js agent may not properly instrument your application.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Conditional logic
-          </td>
-
-          <td>
-            If you have any conditional logic in your `require`, move the conditional logic to your `newrelic.js` configuration file.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Frameworks
-          </td>
-
-          <td>
-            For problems with [supported frameworks](/docs/agents/nodejs-agent/getting-started/new-relic-nodejs#requirements), make sure you are using Connect, Express, Hapi, Kraken, or Restify. There are other Node.js frameworks, but New Relic does not support all of them.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Apdex
-          </td>
-
-          <td>
-            For problems with your [Apdex](/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction) results, try adjusting your Apdex score via your [Node.js agent config file](/docs/nodejs/customizing-your-nodejs-config-file#apdex) (`newrelic.js`) or the [New Relic user interface](/docs/site/changing-your-apdex-settings).
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

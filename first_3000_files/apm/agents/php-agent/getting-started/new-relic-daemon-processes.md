@@ -45,61 +45,24 @@ ps -ef | grep newrelic-daemon
 
 Having two processes running is normal behavior. The first column is the process owner, the second is the process ID (PID), and the third is the parent process ID (PPID).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Daemon processes
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Watchdog (first process)
-      </td>
-
-      <td>
-        The first process, the one owned by PID 1, is the "watchdog" process. It watches the second process, which is the "worker" process.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Worker (second process)
-      </td>
-
-      <td>
-        The worker process does the following:
+| Daemon processes | Comments |
+| - | - |
+| Watchdog (first process) | The first process, the one owned by PID 1, is the "watchdog" process. It watches the second process, which is the "worker" process. |
+| Worker (second process) | The worker process does the following:
 
         * Accepts connections from the PHP agent
         * Gathers metrics
-        * Communicates with the New Relic collector
-      </td>
-    </tr>
+        * Communicates with the New Relic collector |
+| Terminating processes | When the daemon is being gracefully terminated (usually by running `/etc/init.d/newrelic-daemon stop`), it will send a termination signal to the watchdog process. This will cleanly terminate the worker process and give it a chance to send any pending data to New Relic.
 
-    <tr>
-      <td>
-        Terminating processes
-      </td>
-
-      <td>
-        When the daemon is being gracefully terminated (usually by running `/etc/init.d/newrelic-daemon stop`), it will send a termination signal to the watchdog process. This will cleanly terminate the worker process and give it a chance to send any pending data to New Relic.
-
-        <Callout variant="important">
+        
           If you need to manually terminate the daemon, always terminate the watchdog, not the worker.
-        </Callout>
+        
 
-        If the worker process encounters a fatal error and terminates unexpectedly, the watchdog process will immediately re-spawn a new worker process. This helps to ensure that the daemon experiences absolute minimum downtime.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        If the worker process encounters a fatal error and terminates unexpectedly, the watchdog process will immediately re-spawn a new worker process. This helps to ensure that the daemon experiences absolute minimum downtime. |
+
 
 ## Stop the daemon [#killing]
 

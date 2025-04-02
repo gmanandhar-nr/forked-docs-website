@@ -12,30 +12,11 @@ freshnessValidatedDate: never
 
 We love open-source software, and use the following in the New Relic Go agent. Thank you, open-source community, for making these fine tools! Some of these are listed under multiple software licenses, and in that case we have listed the license we've chosen to use.
 
-<table>
-  <thead>
-    <tr>
-      <th width={325}>
-        **Library**
-      </th>
+# Table
 
-      <th>
-        **License**
-      </th>
-    </tr>
-  </thead>
+| **Library** | **License** |
+| - | - |
+| [Go](https://golang.org/) | [Go BSD](https://github.com/golang/go/blob/master/LICENSE) |
 
-  <tbody>
-    <tr>
-      <td>
-        [Go](https://golang.org/)
-      </td>
-
-      <td>
-        [Go BSD](https://github.com/golang/go/blob/master/LICENSE)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The remainder of the code is covered by the [New Relic agent license agreement](/docs/licenses/license-information/other-licenses/new-relic-agent-license).

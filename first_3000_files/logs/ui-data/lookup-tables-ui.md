@@ -58,33 +58,12 @@ When a value is read from a CSV file, the system will attempt to parse the value
     id="CSV Parsing Rules"
     title="CSV Parsing Rules"
   >
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Rule
-          </th>
+    # Table
 
-          <th style={{ width: "200px" }}>
-            CSV value
-          </th>
-
-          <th style={{ width: "200px" }}>
-            Interpreted value
-          </th>
-
-          <th style={{ width: "200px" }}>
-            Interpreted type
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            <b>
-              Value Types
-            </b>
+| Rule | CSV value | Interpreted value | Interpreted type |
+| - | - | - | - |
+| Value Types
+            
 
             * String: This is the default type for any value, unless criteria are met to interpret it as a number or boolean.
             * Boolean: If the value is equal to true or false, case-insensitive, the value is parsed as a boolean.
@@ -98,146 +77,95 @@ When a value is read from a CSV file, the system will attempt to parse the value
               * Signed values:
                 * Values that start with a numeric digit or a plus "+" sign are considered positive numbers.
                 * Values that start with a minus "-" sign or are surrounded in parentheses are considered negative numbers.
-              * Original values are never trimmed. Whitespace at the beginning or end of a value will cause it to be parsed as a string.
-          </td>
-
-          <td>
-            `abc`<br/>
-            `a b c`<br/>
-            `123`<br/>
-            `1.23`<br/>
-            `1.23E-3`<br/>
-            `true`<br/>
-            `    abc    `<br/>
-            `    123    `<br/>
-            `    true   `
-          </td>
-
-          <td>
-            `abc`<br/>
-            `a b c`<br/>
-            `123`<br/>
-            `1.23`<br/>
-            `1.23E-3`<br/>
-            `true`<br/>
-            `    abc    `<br/>
-            `    123    `<br/>
-            `    true   `
-          </td>
-
-          <td>
-            string<br/>
-            string<br/>
-            number<br/>
-            number<br/>
-            number<br/>
-            boolean<br/>
-            string<br/>
-            string<br/>
+              * Original values are never trimmed. Whitespace at the beginning or end of a value will cause it to be parsed as a string. | `abc`
+            `a b c`
+            `123`
+            `1.23`
+            `1.23E-3`
+            `true`
+            `    abc    `
+            `    123    `
+            `    true   ` | `abc`
+            `a b c`
+            `123`
+            `1.23`
+            `1.23E-3`
+            `true`
+            `    abc    `
+            `    123    `
+            `    true   ` | string
             string
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <b>
-              Double quotes
-            </b>
+            number
+            number
+            number
+            boolean
+            string
+            string
+            string |
+| Double quotes
+            
 
             * Any value can be wrapped in double quotes. Double quotes are required if the value contains a comma or starts with a double quote.
             * Within a double-quoted value, two double quotes in a row will parse to a single double quote in the resulting value.
-            * Wrapping a value in double quotes does not force it to be interpreted as a string. Parsing of the value still occurs.
-          </td>
-
-          <td>
-            `"abc"`<br/>
-            `"a,b,c"`<br/>
-            `"a b c"`<br/>
-            `"""abc"""`<br/>
-            `"a,""b"",c"`<br/>
-            `"a ""b"" c"`<br/>
-            `"""123"""`<br/>
-            `"""true"""`<br/>
-            `"123"`<br/>
+            * Wrapping a value in double quotes does not force it to be interpreted as a string. Parsing of the value still occurs. | `"abc"`
+            `"a,b,c"`
+            `"a b c"`
+            `"""abc"""`
+            `"a,""b"",c"`
+            `"a ""b"" c"`
+            `"""123"""`
+            `"""true"""`
+            `"123"`
+            `"true"` | `abc`
+            `a,b,c`
+            `a b c`
+            `"abc"`
+            `"a,"b",c"`
+            `a "b" c`
+            `"123"`
             `"true"`
-          </td>
-
-          <td>
-            `abc`<br/>
-            `a,b,c`<br/>
-            `a b c`<br/>
-            `"abc"`<br/>
-            `"a,"b",c"`<br/>
-            `a "b" c`<br/>
-            `"123"`<br/>
-            `"true"`<br/>
-            `123`<br/>
-            `true`
-          </td>
-
-          <td>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
-            number<br/>
-            boolean
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <b>
-              Forced strings
-            </b>
+            `123`
+            `true` | string
+            string
+            string
+            string
+            string
+            string
+            string
+            string
+            number
+            boolean |
+| Forced strings
+            
 
             * To force a value to be interpreted as a string, prefix the value with a single quote.
               * If the value is double-quoted, the single quote needs to be after the opening double quote.
-              * If the string value needs to start with a single quote, you'll need two single quotes, because the first one forces the value to be interpreted as a string.
-          </td>
-
-          <td>
-            `'abc`<br/>
-            `'123`<br/>
-            `'true`<br/>
-            `"'abc"`<br/>
-            `"'123"`<br/>
-            `"'true"`<br/>
-            `''abc'`<br/>
-            `''123'`<br/>
-            `''true'`
-          </td>
-
-          <td>
-            `abc`<br/>
-            `123`<br/>
-            `true`<br/>
-            `abc`<br/>
-            `123`<br/>
-            `true`<br/>
-            `'abc'`<br/>
-            `'123'`<br/>
-            `'true'`
-          </td>
-
-          <td>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
-            string<br/>
+              * If the string value needs to start with a single quote, you'll need two single quotes, because the first one forces the value to be interpreted as a string. | `'abc`
+            `'123`
+            `'true`
+            `"'abc"`
+            `"'123"`
+            `"'true"`
+            `''abc'`
+            `''123'`
+            `''true'` | `abc`
+            `123`
+            `true`
+            `abc`
+            `123`
+            `true`
+            `'abc'`
+            `'123'`
+            `'true'` | string
             string
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            string
+            string
+            string
+            string
+            string
+            string
+            string |
+
   </Collapser>
 </CollapserGroup>
 

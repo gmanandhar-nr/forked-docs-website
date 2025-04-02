@@ -62,83 +62,28 @@ For more about these fields and some general usage tips, see [Pre-aggregated met
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `source`
 
-  <tbody>
-    <tr>
-      <td>
-        `source`
+        _function_ or _class_ | Required. The data source, which is a function or class that has had the [`data_source_generator`](/docs/agents/python-agent/python-agent-api/data_source_generator) or [`data_source_factory`](/docs/agents/python-agent/python-agent-api/data_source_factory) decorator assigned. |
+| `application`
 
-        _function_ or _class_
-      </td>
+        _application object_ | Optional. The application object corresponding to the New Relic-monitored account to report data to. If set to the default of `None`, the data source will be polled at the end of each harvest cycle for each instrumented app. Alternatively, when an application object is supplied, then the data source will only be polled to generate metrics for that one specific application.
 
-      <td>
-        Required. The data source, which is a function or class that has had the [`data_source_generator`](/docs/agents/python-agent/python-agent-api/data_source_generator) or [`data_source_factory`](/docs/agents/python-agent/python-agent-api/data_source_factory) decorator assigned.
-      </td>
-    </tr>
+        In cases where you need a data source to retain distinct data for each reporting application, you can use a factory pattern to create a separate instance of the data source for each application. |
+| `name`
 
-    <tr>
-      <td>
-        `application`
+        _string_ | Optional. The name of the data source. This is used only for logging purposes and will default to the name provided by the data source itself. |
+| `settings`
 
-        _application object_
-      </td>
+        _string_ | Optional. The settings to pass to a data source factory. |
+| `properties`
 
-      <td>
-        Optional. The application object corresponding to the New Relic-monitored account to report data to. If set to the default of `None`, the data source will be polled at the end of each harvest cycle for each instrumented app. Alternatively, when an application object is supplied, then the data source will only be polled to generate metrics for that one specific application.
+        _string_ | Optional. Any additional properties to pass to the data source factory. |
 
-        In cases where you need a data source to retain distinct data for each reporting application, you can use a factory pattern to create a separate instance of the data source for each application.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `name`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. The name of the data source. This is used only for logging purposes and will default to the name provided by the data source itself.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `settings`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. The settings to pass to a data source factory.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `properties`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. Any additional properties to pass to the data source factory.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

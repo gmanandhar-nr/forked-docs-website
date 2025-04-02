@@ -28,97 +28,33 @@ This records a [log event](/docs/logs/logs-context/configure-logs-context-python
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `message`
 
-  <tbody>
-    <tr>
-      <td>
-        `message`
+        _string_, _dictionary_ | Required. The `message` that defines the log message. For dictionary values, the key `message` will be extracted if available, and any other items will be considered context data attributes under the prefix `message.`.
 
-        _string_, _dictionary_
-      </td>
+        To report these attributes, [enable context data forwarding](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.enabled) and optionally configure [include](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.include) and [exclude](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.exclude) rules. |
+| `level`
 
-      <td>
-        Required. The `message` that defines the log message. For dictionary values, the key `message` will be extracted if available, and any other items will be considered context data attributes under the prefix `message.`.
+        _string_ | Optional. Defines the logging level. Defaults to `UNKNOWN`. |
+| `timestamp`
 
-        To report these attributes, [enable context data forwarding](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.enabled) and optionally configure [include](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.include) and [exclude](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.exclude) rules.
-      </td>
-    </tr>
+        _float_ | Optional. Defines the timestamp of the log message. Defaults to `time.time()`. |
+| `attributes`
 
-    <tr>
-      <td>
-        `level`
+        _dictionary_ | Optional. Items included in this dictionary will be considered context data attributes under the prefix `context.`.
 
-        _string_
-      </td>
+        To report these attributes, [enable context data forwarding](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.enabled) and optionally configure [include](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.include) and [exclude](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.exclude) rules. |
+| `application`
 
-      <td>
-        Optional. Defines the logging level. Defaults to `UNKNOWN`.
-      </td>
-    </tr>
+        _object_ | Optional. If you want to record a log event outside of the context of a monitored transaction, use this to associate the call with a specific application object. An application object can be obtained using the [`newrelic.agent.application`](/docs/agents/python-agent/python-agent-api/application) function. |
+| `priority`
 
-    <tr>
-      <td>
-        `timestamp`
+        _object_ | Optional. Sets the priority of the log event. See [`event_harvest_config.harvest_limits.log_event_data`](/docs/apm/agents/python-agent/configuration/python-agent-configuration#event_harvest_config.harvest_limits.log_event_data) for additional information on how priority affects logging events. |
 
-        _float_
-      </td>
-
-      <td>
-        Optional. Defines the timestamp of the log message. Defaults to `time.time()`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `attributes`
-
-        _dictionary_
-      </td>
-
-      <td>
-        Optional. Items included in this dictionary will be considered context data attributes under the prefix `context.`.
-
-        To report these attributes, [enable context data forwarding](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.enabled) and optionally configure [include](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.include) and [exclude](/docs/agents/python-agent/configuration/python-agent-configuration#application_logging.forwarding.context_data.exclude) rules.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `application`
-
-        _object_
-      </td>
-
-      <td>
-        Optional. If you want to record a log event outside of the context of a monitored transaction, use this to associate the call with a specific application object. An application object can be obtained using the [`newrelic.agent.application`](/docs/agents/python-agent/python-agent-api/application) function.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `priority`
-
-        _object_
-      </td>
-
-      <td>
-        Optional. Sets the priority of the log event. See [`event_harvest_config.harvest_limits.log_event_data`](/docs/apm/agents/python-agent/configuration/python-agent-configuration#event_harvest_config.harvest_limits.log_event_data) for additional information on how priority affects logging events.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="important">
   This setting is disabled when [high security mode](/docs/apm/agents/python-agent/getting-started/apm-agent-security-python/#restricted) is enabled.

@@ -30,35 +30,16 @@ Returns a JavaScript string to inject in the `<head>` of your HTML output. Use t
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$include_tags`
 
-  <tbody>
-    <tr>
-      <td>
-        `$include_tags`
+        _bool_ | Optional. Defaults to `true`.
 
-        _bool_
-      </td>
+        If `true` or omitted, the JavaScript string is enclosed in a `` element for easy inclusion into the page's HTML. |
 
-      <td>
-        Optional. Defaults to `true`.
-
-        If `true` or omitted, the JavaScript string is enclosed in a `<script>` element for easy inclusion into the page's HTML.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

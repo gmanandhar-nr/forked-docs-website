@@ -38,47 +38,19 @@ Then you can:
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$metric_name`
 
-  <tbody>
-    <tr>
-      <td>
-        `$metric_name`
+        _string_ | Required. Name your custom metrics with a **Custom/** prefix (for example, **Custom/MyMetric**). This helps the UI organize your custom metrics in one place, and it makes them easily findable via the Metric Explorer. |
+| `$value`
 
-        _string_
-      </td>
+        _float_ | Required. Records timing in milliseconds. For example: a value of `4` is stored as `.004` seconds in New Relic's systems.
 
-      <td>
-        Required. Name your custom metrics with a <DNT>**Custom/**</DNT> prefix (for example, <DNT>**Custom/MyMetric**</DNT>). This helps the UI organize your custom metrics in one place, and it makes them easily findable via the Metric Explorer.
-      </td>
-    </tr>
+        If the value is NaN, Infinity, denorm or negative zero, the behavior of this function is undefined. New Relic may discard 1 or more bits of precision (ULPs) from the given value. |
 
-    <tr>
-      <td>
-        `$value`
-
-        _float_
-      </td>
-
-      <td>
-        Required. Records timing in milliseconds. For example: a value of `4` is stored as `.004` seconds in New Relic's systems.
-
-        If the value is NaN, Infinity, denorm or negative zero, the behavior of this function is undefined. New Relic may discard 1 or more bits of precision (ULPs) from the given value.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

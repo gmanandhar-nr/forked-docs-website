@@ -210,86 +210,18 @@ Due to resource isolation from the host and other containers via Linux namespace
 
 The infrastructure agent collects data about its host using system files and system calls. For more information about how the infrastructure agent collects data, see our documentation about [infrastructure monitoring and security](/docs/infrastructure/new-relic-infrastructure/getting-started/infrastructure-security). Required privileges include:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "460px" }}>
-        Privilege
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Privilege | Description |
+| - | - |
+| `--network=host` | Sets the container's network namespace to the host's network namespace. This allows the agent to collect the network metrics about the host. |
+| `-v "/:/host:ro"` | Bind mounts the host's root volume to the container. This read-only access to the host's root allows the agent to collect process and storage metrics as well as Inventory data from the host. |
+| `--cap-add=SYS_PTRACE` | Adds the Linux capability to trace system processes. This allows the agent to gather data about processes running on the host. Read more [here](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities). |
+| `--privileged` |
+| `--pid=host` |
+| `--cgroupns=host` |
+| `-v "/var/run/docker.sock:/var/run/docker.sock"` | Bind mounts the host's Docker daemon socket to the container. This allows the agent to connect to the Engine API via the Docker daemon socket to collect the host's container data. If you interact with the `containerd` runtime instead, replace this mount with `/run/containerd/containerd.sock:/run/containerd/containerd.sock`. |
 
-  <tbody>
-    <tr>
-      <td>
-        `--network=host`
-      </td>
-
-      <td>
-        Sets the container's network namespace to the host's network namespace. This allows the agent to collect the network metrics about the host.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `-v "/:/host:ro"`
-      </td>
-
-      <td>
-        Bind mounts the host's root volume to the container. This read-only access to the host's root allows the agent to collect process and storage metrics as well as Inventory data from the host.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `--cap-add=SYS_PTRACE`
-      </td>
-
-      <td>
-        Adds the Linux capability to trace system processes. This allows the agent to gather data about processes running on the host. Read more [here](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `--privileged`
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        `--pid=host`
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        `--cgroupns=host`
-      </td>
-
-      Required when using docker on cgroup v2 as it is private by default. This allows the agent to gather container metrics. It is available [since docker engine API v1.41](https://docs.docker.com/engine/reference/commandline/container_create/).
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        `-v "/var/run/docker.sock:/var/run/docker.sock"`
-      </td>
-
-      <td>
-        Bind mounts the host's Docker daemon socket to the container. This allows the agent to connect to the Engine API via the Docker daemon socket to collect the host's container data. If you interact with the `containerd` runtime instead, replace this mount with `/run/containerd/containerd.sock:/run/containerd/containerd.sock`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <InstallFeedback/>
 

@@ -112,161 +112,25 @@ Our network monitoring container supports all major versions of SNMP (v1, v2c, a
   id="snmpv3-options"
   title="SNMP v3 options"
 >
-  <table>
-    <thead>
-      <tr>
-        <th style={{ width: '300px' }}>
-          Setting
-        </th>
+  # Table
 
-        <th>
-          Protocol
-        </th>
-      </tr>
-    </thead>
+| Setting | Protocol |
+| - | - |
+| Authentication | `NoAuth` |
+| Authentication | `MD5` |
+| Authentication | `SHA` |
+| Authentication | `SHA224` |
+| Authentication | `SHA256` |
+| Authentication | `SHA384` |
+| Authentication | `SHA512` |
+| Privacy | `NoPriv` |
+| Privacy | `DES` |
+| Privacy | `AES` |
+| Privacy | `AES192` |
+| Privacy | `AES256` |
+| Privacy | `AES192C` |
+| Privacy | `AES256C` |
 
-    <tbody>
-      <tr>
-        <td>
-          Authentication
-        </td>
-
-        <td>
-          `NoAuth`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Authentication
-        </td>
-
-        <td>
-          `MD5`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Authentication
-        </td>
-
-        <td>
-          `SHA`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Authentication
-        </td>
-
-        <td>
-          `SHA224`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Authentication
-        </td>
-
-        <td>
-          `SHA256`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Authentication
-        </td>
-
-        <td>
-          `SHA384`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Authentication
-        </td>
-
-        <td>
-          `SHA512`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Privacy
-        </td>
-
-        <td>
-          `NoPriv`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Privacy
-        </td>
-
-        <td>
-          `DES`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Privacy
-        </td>
-
-        <td>
-          `AES`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Privacy
-        </td>
-
-        <td>
-          `AES192`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Privacy
-        </td>
-
-        <td>
-          `AES256`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Privacy
-        </td>
-
-        <td>
-          `AES192C`
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Privacy
-        </td>
-
-        <td>
-          `AES256C`
-        </td>
-      </tr>
-    </tbody>
-  </table>
 
   <Callout variant="tip">
     We recommend using read-only community strings/authentication with SNMP.

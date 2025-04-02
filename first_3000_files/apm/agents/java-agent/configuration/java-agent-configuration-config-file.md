@@ -41,60 +41,19 @@ New Relic applies settings in the `common` section to each of these environments
 
 If you edit `newrelic.yml`, be careful to conform to the [YAML format](https://en.wikipedia.org/wiki/YAML). Use a YAML validator to ensure the syntax is accurate before using the file with New Relic's Java agent, and follow these rules:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Java agent newrelic.yml**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Requirements**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Format
-      </td>
-
-      <td>
-        YML files are case sensitive.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Indentations
-      </td>
-
-      <td>
-        All indentations must be in increments of two characters. Other indentations will result in an `Unable to parse configuration file` error upon agent startup.
+| **Java agent newrelic.yml** | **Requirements** |
+| - | - |
+| Format | YML files are case sensitive. |
+| Indentations | All indentations must be in increments of two characters. Other indentations will result in an `Unable to parse configuration file` error upon agent startup.
 
         * Use the same level of indentation for data in the same section of the file.
-        * Indent any sub-sections by an additional two spaces.
-      </td>
-    </tr>
+        * Indent any sub-sections by an additional two spaces. |
+| Changes to file | You must restart your JVM host process for changes to take effect.
 
-    <tr>
-      <td>
-        Changes to file
-      </td>
+        **Exception:** Property changes to `log_level` and `audit_mode` do not require a restart. Property changes under circuit breaker don't require a restart. |
 
-      <td>
-        You must restart your JVM host process for changes to take effect.
-
-        <DNT>**Exception:**</DNT> Property changes to `log_level` and `audit_mode` do not require a restart. Property changes under circuit breaker don't require a restart.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Configuration settings precedence [#config-options-precedence]
 

@@ -98,35 +98,12 @@ If you used the default install procedure for the infrastructure agent for macOS
 
 To uninstall the infrastructure agent if you used a configuration management tool:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        <DNT>
-          **Config management tools**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Uninstall New Relic infrastructure agent**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Config management tools** | **Uninstall New Relic infrastructure agent** |
+| - | - |
+| [AWS Elastic Beanstalk](/docs/infrastructure/install-infrastructure-agent/config-management-tools/install-infrastructure-agent-aws-elastic-beanstalk) | Remove `newrelic.config` from `.ebextensions`, then deploy. |
 
-  <tbody>
-    <tr>
-      <td>
-        [AWS Elastic Beanstalk](/docs/infrastructure/install-infrastructure-agent/config-management-tools/install-infrastructure-agent-aws-elastic-beanstalk)
-      </td>
-
-      <td>
-        Remove `newrelic.config` from `.ebextensions`, then deploy.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Optional: Purge remaining files [#leftover-files]
 

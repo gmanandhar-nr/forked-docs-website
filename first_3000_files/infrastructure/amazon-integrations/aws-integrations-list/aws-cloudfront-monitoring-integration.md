@@ -50,78 +50,14 @@ For more on how to use your data, see [Understand and use integration data](/doc
 
 The following data is collected for [CloudFront Web distributions](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web.html). Data is not available for [RTMP distributions](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-rtmp.html).
 
-<table>
-  <thead>
-    <tr>
-      <th width={285}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `requests` | The number of requests for all HTTP methods and for both HTTP and HTTPS requests. |
+| `bytesDownloaded` | The number of bytes downloaded by viewers for `GET`, `HEAD`, and `OPTIONS requests`. |
+| `bytesUploaded` | The number of bytes uploaded to your origin with CloudFront using `POST` and `PUT` requests. |
+| `totalErrorRate` | The percentage of all requests for which the HTTP status code is `4xx` or `5xx`. |
+| `4xxErrorRate` | The percentage of all requests for which the HTTP status code is `4xx`. |
+| `5xxErrorRate` | The percentage of all requests for which the HTTP status code is `5xx`. |
 
-  <tbody>
-    <tr>
-      <td>
-        `requests`
-      </td>
-
-      <td>
-        The number of requests for all HTTP methods and for both HTTP and HTTPS requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `bytesDownloaded`
-      </td>
-
-      <td>
-        The number of bytes downloaded by viewers for `GET`, `HEAD`, and `OPTIONS requests`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `bytesUploaded`
-      </td>
-
-      <td>
-        The number of bytes uploaded to your origin with CloudFront using `POST` and `PUT` requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `totalErrorRate`
-      </td>
-
-      <td>
-        The percentage of all requests for which the HTTP status code is `4xx` or `5xx`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `4xxErrorRate`
-      </td>
-
-      <td>
-        The percentage of all requests for which the HTTP status code is `4xx`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `5xxErrorRate`
-      </td>
-
-      <td>
-        The percentage of all requests for which the HTTP status code is `5xx`.
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -12,50 +12,10 @@ We love open-source software, and Auto-telemetry with Pixie is New Relic’s int
 
 Open source software distributed through Community Cloud for Pixie, including [Pixie](https://github.com/pixie-io/pixie), is governed by the applicable third-party licenses provided with the Cloud Native Computing Foundation’s Pixie projects, software, and code available at [https://github.com/pixie-io](https://github.com/pixie-io).
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        **Library**
-      </th>
+# Table
 
-      <th>
-        **Copyright**
-      </th>
+| **Library** | **Copyright** | **License** |
+| - | - | - |
+| [Pixie](https://github.com/pixie-io/pixie) | Copyright © 2018- The Pixie Authors. All Rights Reserved | [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0e) |
+| [pxapi.go](https://github.com/pixie-io/pxapi.go) | Copyright © 2018- The Pixie Authors. All Rights Reserved | [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) |
 
-      <th>
-        **License**
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [Pixie](https://github.com/pixie-io/pixie)
-      </td>
-
-      <td>
-        Copyright © 2018- The Pixie Authors. All Rights Reserved
-      </td>
-
-      <td>
-        [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0e)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [pxapi.go](https://github.com/pixie-io/pxapi.go)
-      </td>
-
-      <td>
-        Copyright © 2018- The Pixie Authors. All Rights Reserved
-      </td>
-
-      <td>
-        [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-      </td>
-    </tr>
-  </tbody>
-</table>

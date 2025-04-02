@@ -77,91 +77,18 @@ Multiple LogMessage filters can be combined to limit event creation. Include fil
 
 The following table provides version and version-support information about New Relic Nozzle for VMware Tanzu.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Element
-      </th>
+# Table
 
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
+| Element | Details |
+| - | - |
+| Tile version | 2.10.0 |
+| Release date | Sep 09, 2024 |
+| Software component version | New Relic Nozzle v2.10.0 |
+| Compatible Ops Manager version(s) | v2.9.x, v2.10.x and v3.0.x |
+| Compatible VMware Tanzu Application Service for VMs versions | v2.10.x, v2.11.x, v2.12.x, v2.13.x, v3.0.x, v4.0.x , v5.0.x , v6.0.x & v10.0.x |
+| BOSH stemcell version | Ubuntu Jammy |
+| IaaS support | AWS, GCP, Azure, and vSphere |
 
-  <tbody>
-    <tr>
-      <td>
-        Tile version
-      </td>
-
-      <td>
-        2.10.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Release date
-      </td>
-
-      <td>
-        Sep 09, 2024
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Software component version
-      </td>
-
-      <td>
-        New Relic Nozzle v2.10.0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Compatible Ops Manager version(s)
-      </td>
-
-      <td>
-        v2.9.x, v2.10.x and v3.0.x
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Compatible VMware Tanzu Application Service for VMs versions
-      </td>
-
-      <td>
-        v2.10.x, v2.11.x, v2.12.x, v2.13.x, v3.0.x, v4.0.x , v5.0.x , v6.0.x & v10.0.x
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        BOSH stemcell version
-      </td>
-
-      <td>
-        Ubuntu Jammy
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        IaaS support
-      </td>
-
-      <td>
-        AWS, GCP, Azure, and vSphere
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Feedback [#feedback]
 

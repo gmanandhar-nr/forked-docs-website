@@ -51,143 +51,16 @@ Before you begin a cloud migration, identify all the tiers of your entire applic
   >
     Here is an example of the list of components in an application stack:
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Component Name
-          </th>
+    # Table
 
-          <th>
-            Owner
-          </th>
+| Component Name | Owner | Language Stack | Accessibility (Internet, Intranet) | Operating System |
+| - | - | - | - | - |
+| Service 1 | John Doe | Java | Internet | RHEL 6 |
+| Service 2 | Maya Wiz | .NET | Intranet | Win2003 R2 |
+| RabbitMQ | John Doe | Java | Intranet | AIX |
+| Website | Maya Wiz | Classic ASP | Internet | Win2000 |
+| MS SQL | Dave Z | NA | Intranet | Win2003 R2 |
 
-          <th>
-            Language Stack
-          </th>
-
-          <th>
-            Accessibility (Internet, Intranet)
-          </th>
-
-          <th>
-            Operating System
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Service 1
-          </td>
-
-          <td>
-            John Doe
-          </td>
-
-          <td>
-            Java
-          </td>
-
-          <td>
-            Internet
-          </td>
-
-          <td>
-            RHEL 6
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Service 2
-          </td>
-
-          <td>
-            Maya Wiz
-          </td>
-
-          <td>
-            .NET
-          </td>
-
-          <td>
-            Intranet
-          </td>
-
-          <td>
-            Win2003 R2
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            RabbitMQ
-          </td>
-
-          <td>
-            John Doe
-          </td>
-
-          <td>
-            Java
-          </td>
-
-          <td>
-            Intranet
-          </td>
-
-          <td>
-            AIX
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Website
-          </td>
-
-          <td>
-            Maya Wiz
-          </td>
-
-          <td>
-            Classic ASP
-          </td>
-
-          <td>
-            Internet
-          </td>
-
-          <td>
-            Win2000
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            MS SQL
-          </td>
-
-          <td>
-            Dave Z
-          </td>
-
-          <td>
-            NA
-          </td>
-
-          <td>
-            Intranet
-          </td>
-
-          <td>
-            Win2003 R2
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 </CollapserGroup>
 

@@ -21,97 +21,29 @@ You use Java agent version 3.16.1 or lower and need to upgrade to the [latest ve
 
 In `newrelic.yml`, edit the configuration properties you use for compatiblity with the latest versions:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Deprecated property**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **New property**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Deprecated property** | **New property** |
+| - | - |
+| `analytics_events` | `transaction_events`
 
-  <tbody>
-    <tr>
-      <td>
-        `analytics_events`
-      </td>
+        The section in the **newrelic.yml** configuration file called `analytics_events` has been deprecated. Use the `transaction_events` section instead. |
+| `capture_params` | `attributes.include: request.parameters.*`
 
-      <td>
-        `transaction_events`
+        By default, request parameters are not sent to New Relic. Add `request.parameters.*` to the `attributes.include` list to turn on all request parameters. The `capture_params` property has been deprecated. |
+| `ignored_params` | `attributes.exclude: request.parameters.{name}`
 
-        The section in the <DNT>**newrelic.yml**</DNT> configuration file called `analytics_events` has been deprecated. Use the `transaction_events` section instead.
-      </td>
-    </tr>
+        Add each request parameter key to the `attributes.exclude` list. Be sure to prepend the key with `request.parameters`. The `ignored_params` property has been deprecated. |
+| `capture_messaging_params` | `attributes.include: message.parameters.*`
 
-    <tr>
-      <td>
-        `capture_params`
-      </td>
+        By default, message queue parameters are not sent to New Relic. Previously, setting `capture_messaging_params` to `true` would enable message queue parameters. Now you must add `message.parameters.*` to the `attributes.include` list. |
+| `ignored_messaging_params` | `attributes.exclude: message.parameters.{name}`
 
-      <td>
-        `attributes.include: request.parameters.*`
+        Previously, you could set `ignored_messaging_params` to a list of message queue parameter keys to exclude. Now you must add each message queue parameter key to the `attributes.exclude` list. Be sure to prepend the key with `message.parameters`. |
+| `capture_attributes` | `attributes.enabled`
 
-        By default, request parameters are not sent to New Relic. Add `request.parameters.*` to the `attributes.include` list to turn on all request parameters. The `capture_params` property has been deprecated.
-      </td>
-    </tr>
+        The old `capture_attributes` flag would turn off user attribute collection. This has been deprecated. Use `attributes.enabled` instead. |
 
-    <tr>
-      <td>
-        `ignored_params`
-      </td>
-
-      <td>
-        `attributes.exclude: request.parameters.{name}`
-
-        Add each request parameter key to the `attributes.exclude` list. Be sure to prepend the key with `request.parameters`. The `ignored_params` property has been deprecated.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `capture_messaging_params`
-      </td>
-
-      <td>
-        `attributes.include: message.parameters.*`
-
-        By default, message queue parameters are not sent to New Relic. Previously, setting `capture_messaging_params` to `true` would enable message queue parameters. Now you must add `message.parameters.*` to the `attributes.include` list.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ignored_messaging_params`
-      </td>
-
-      <td>
-        `attributes.exclude: message.parameters.{name}`
-
-        Previously, you could set `ignored_messaging_params` to a list of message queue parameter keys to exclude. Now you must add each message queue parameter key to the `attributes.exclude` list. Be sure to prepend the key with `message.parameters`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `capture_attributes`
-      </td>
-
-      <td>
-        `attributes.enabled`
-
-        The old `capture_attributes` flag would turn off user attribute collection. This has been deprecated. Use `attributes.enabled` instead.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 In this example, the Java agent collects request parameters and records them to the transaction tracer and error collector destinations. This emulates enabling the legacy [server-side configuration options](/docs/agents/manage-apm-agents/configuration/server-side-agent-configuration) for `Capture attributes` or `Capture parameters`.
 

@@ -23,155 +23,18 @@ This page describes how New Relic handles OpenTelemetry metrics it receives via 
 
 The OpenTelemetry metrics API defines [several instrument kinds](https://opentelemetry.io/docs/specs/otel/metrics/api/#instrument). Instruments record measurements, which are aggregated and exported via OTLP as a particular metric type. The table below describes the default behavior on how each OpenTelemetry instrument aggregates and exports. See [OTLP Metric Mapping](#otlp-mapping) for details on how each metric type is treated in New Relic.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Instrument kind
-      </th>
+# Table
 
-      <th>
-        Example usage
-      </th>
+| Instrument kind | Example usage | Default aggregation | Exported metric type |
+| - | - | - | - |
+| [`Counter`](https://opentelemetry.io/docs/specs/otel/metrics/api/#counter) | Bytes processed | [Sum](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#sum-aggregation) | [`Sum` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L217-L226), with `is_monotonic=true` |
+| [Asynchronous Counter](https://opentelemetry.io/docs/specs/otel/metrics/api/#asynchronous-counter) | Observe total process CPU time | [Sum](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#sum-aggregation) | [`Sum` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L217-L226), with `is_monotonic=true` |
+| [`UpDownCounter`](https://opentelemetry.io/docs/specs/otel/metrics/api/#updowncounter) | Items in a queue | [Sum](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#sum-aggregation) | [`Sum` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L217-L226), with `is_monotonic=false` |
+| [Asynchronous UpDownCounter](https://opentelemetry.io/docs/specs/otel/metrics/api/#asynchronous-updowncounter) | Observe current memory usage | [Sum](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#sum-aggregation) | [`Sum` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L217-L226), with `is_monotonic=false` |
+| [`Histogram`](https://opentelemetry.io/docs/specs/otel/metrics/api/#histogram) | Duration of http requests | [Explicit Bucket Histogram](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#explicit-bucket-histogram-aggregation) | [`Histogram` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L230-L236) **[1]** |
+| [`Gauge`](https://opentelemetry.io/docs/specs/otel/metrics/api/#gauge) | Change events for CPU fan speed | [Last Value](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#last-value-aggregation) | [`Gauge` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L211-L213) |
+| [Asynchronous Gauge](https://opentelemetry.io/docs/specs/otel/metrics/api/#asynchronous-gauge) | Observe current room temperature | [Last value](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#last-value-aggregation) | [`Gauge` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L211-L213) |
 
-      <th>
-        Default aggregation
-      </th>
-
-      <th>
-        Exported metric type
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [`Counter`](https://opentelemetry.io/docs/specs/otel/metrics/api/#counter)
-      </td>
-
-      <td>
-        Bytes processed
-      </td>
-
-      <td>
-        [Sum](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#sum-aggregation)
-      </td>
-
-      <td>
-        [`Sum` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L217-L226), with `is_monotonic=true`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Asynchronous Counter](https://opentelemetry.io/docs/specs/otel/metrics/api/#asynchronous-counter)
-      </td>
-
-      <td>
-        Observe total process CPU time
-      </td>
-
-      <td>
-        [Sum](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#sum-aggregation)
-      </td>
-
-      <td>
-        [`Sum` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L217-L226), with `is_monotonic=true`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`UpDownCounter`](https://opentelemetry.io/docs/specs/otel/metrics/api/#updowncounter)
-      </td>
-
-      <td>
-        Items in a queue
-      </td>
-
-      <td>
-        [Sum](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#sum-aggregation)
-      </td>
-
-      <td>
-        [`Sum` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L217-L226), with `is_monotonic=false`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Asynchronous UpDownCounter](https://opentelemetry.io/docs/specs/otel/metrics/api/#asynchronous-updowncounter)
-      </td>
-
-      <td>
-        Observe current memory usage
-      </td>
-
-      <td>
-        [Sum](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#sum-aggregation)
-      </td>
-
-      <td>
-        [`Sum` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L217-L226), with `is_monotonic=false`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`Histogram`](https://opentelemetry.io/docs/specs/otel/metrics/api/#histogram)
-      </td>
-
-      <td>
-        Duration of http requests
-      </td>
-
-      <td>
-        [Explicit Bucket Histogram](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#explicit-bucket-histogram-aggregation)
-      </td>
-
-      <td>
-        [`Histogram` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L230-L236) **[1]**
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`Gauge`](https://opentelemetry.io/docs/specs/otel/metrics/api/#gauge)
-      </td>
-
-      <td>
-        Change events for CPU fan speed
-      </td>
-
-      <td>
-        [Last Value](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#last-value-aggregation)
-      </td>
-
-      <td>
-        [`Gauge` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L211-L213)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Asynchronous Gauge](https://opentelemetry.io/docs/specs/otel/metrics/api/#asynchronous-gauge)
-      </td>
-
-      <td>
-        Observe current room temperature
-      </td>
-
-      <td>
-        [Last value](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#last-value-aggregation)
-      </td>
-
-      <td>
-        [`Gauge` metric](https://github.com/open-telemetry/opentelemetry-proto/blob/a05597bff803d3d9405fcdd1e1fb1f42bed4eb7a/opentelemetry/proto/metrics/v1/metrics.proto#L211-L213)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 See [OpenTelemetry metrics supplementary guidelines](https://opentelemetry.io/docs/specs/otel/metrics/supplementary-guidelines/) for details on choosing the correct instrument type.
 

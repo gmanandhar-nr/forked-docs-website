@@ -27,65 +27,28 @@ This call records a single [custom metric](/docs/agents/manage-apm-agents/agent-
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `name`
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
+        _string_ | Required. Name of the metric.
 
-        _string_
-      </td>
+        There are no restrictions on naming formats, but we recommend you use a `Custom/` prefix for your custom metric names. This helps you differentiate custom metrics from default-monitored metrics in the our UI, and also helps you troubleshoot if necessary. |
+| `value`
 
-      <td>
-        Required. Name of the metric.
-
-        There are no restrictions on naming formats, but we recommend you use a `Custom/` prefix for your custom metric names. This helps you differentiate custom metrics from default-monitored metrics in the our UI, and also helps you troubleshoot if necessary.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `value`
-
-        _int_ or _dict_
-      </td>
-
-      <td>
-        Required. The numeric value of the metric. Can be an integer, a float, or a dictionary of values. The possible fields for a dictionary are:
+        _int_ or _dict_ | Required. The numeric value of the metric. Can be an integer, a float, or a dictionary of values. The possible fields for a dictionary are:
 
         * `count`
         * `total`
         * `min`
         * `max`
-        * `sum_of_squares`
-      </td>
-    </tr>
+        * `sum_of_squares` |
+| `application`
 
-    <tr>
-      <td>
-        `application`
+        _application object_ | Optional. The [application object](/docs/agents/python-agent/python-agent-api/application) corresponding to the app with which you want to associate the metrics. If the application is the default value of `None`, the agent records the custom metrics to the app associated with the current transaction. Thus, you should provide the application unless this method is used in code for a web transaction or background task. |
 
-        _application object_
-      </td>
-
-      <td>
-        Optional. The [application object](/docs/agents/python-agent/python-agent-api/application) corresponding to the app with which you want to associate the metrics. If the application is the default value of `None`, the agent records the custom metrics to the app associated with the current transaction. Thus, you should provide the application unless this method is used in code for a web transaction or background task.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

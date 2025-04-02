@@ -18,48 +18,20 @@ When you install New Relic, our <InlinePopover type="mobile"/> capabilities beco
 
 Our mobile SDK agent collects and sends specific data to the New Relic [collector](/docs/using-new-relic/welcome-new-relic/getting-started/glossary#collector), including:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Mobile data collected
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Devices
-      </td>
-
-      <td>
-        * Length of application session
+| Mobile data collected | Comments |
+| - | - |
+| Devices | * Length of application session
         * Wireless carrier's name
         * The device's model name and manufacturer, and its operating system version
         * Certain package, class, method, and thread names
-        * A unique [instance identifier](#identifiers)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Requests and responses
-      </td>
-
-      <td>
-        * URLs of HTTP requests, along with HTTP status code, response time, and size of the request and response body
+        * A unique [instance identifier](#identifiers) |
+| Requests and responses | * URLs of HTTP requests, along with HTTP status code, response time, and size of the request and response body
         * Operating system error code for network failures (HTTP requests that fail to complete)
         * The first 2KB of the response body when the HTTP request receives a `4xx` or `5xx` response status code
-        * Android only: A stack trace when the HTTP request receives a `4xx` or `5xx` response status code
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * Android only: A stack trace when the HTTP request receives a `4xx` or `5xx` response status code |
+
 
 The agent sends all data using HTTPS encryption and validates the collector's SSL certificate. This prevents common data sniffing and server spoofing attacks. The agent also removes the query string, fragment identifier, username, and password from each URL before sending the data.
 

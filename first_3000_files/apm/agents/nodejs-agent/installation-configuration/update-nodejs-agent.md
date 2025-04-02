@@ -24,88 +24,24 @@ Recommendation: Test your updated version before moving it into production. If y
 
 Before upgrading to Node.js version 11, review this information for major changes.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        <DNT>
-          **Major changes with Node.js agent v11**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Added official parity support for Node.js 20.
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**BREAKING**</DNT>: Dropped Node.js 14 support.
-      </td>
-
-      <td>
-        * For further information see our [support policy](/docs/agents/nodejs-agent/getting-started/compatibility-requirements-nodejs-agent).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**BREAKING**</DNT>: Updated ESM loader to support Node.js 20.
-      </td>
-
-      <td>
-        * You must now use both the `--experimental-loader` and `-r` args when running an application.
-        * `node --experimental-loader newrelic/esm-loader.mjs -r newrelic path/to/app.js`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**BREAKING**</DNT>: Updated the default context manager to be AsyncLocalContextManager.
-      </td>
-
-      <td>
-        * The previous default LegacyContextManager can be restored by setting the feature flag of `config.feature_flag.legacy_context_manager` to `true`.
+| **Major changes with Node.js agent v11** | **Comments** |
+| - | - |
+| Added official parity support for Node.js 20. |
+| **BREAKING**: Dropped Node.js 14 support. | * For further information see our [support policy](/docs/agents/nodejs-agent/getting-started/compatibility-requirements-nodejs-agent). |
+| **BREAKING**: Updated ESM loader to support Node.js 20. | * You must now use both the `--experimental-loader` and `-r` args when running an application.
+        * `node --experimental-loader newrelic/esm-loader.mjs -r newrelic path/to/app.js` |
+| **BREAKING**: Updated the default context manager to be AsyncLocalContextManager. | * The previous default LegacyContextManager can be restored by setting the feature flag of `config.feature_flag.legacy_context_manager` to `true`.
         * If you prefer environment variables you can set `NEW_RELIC_FEATURE_FLAG_LEGACY_CONTEXT_MANAGER` to `true`.
-        * Please note this context manager will be removed in future versions.  If you find you must revert to using this legacy context manager, please raise this with [New Relic Support](https://support.newrelic.com/s/) or a [GitHub issue](https://github.com/newrelic/node-newrelic/issues/new?assignees=&labels=bug%2C+needs-triage&projects=&template=bug_report.md&title=).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>**BREAKING**</DNT>: Renamed `shim.handleCATHeaders` to `shim.handleMqTracingHeaders`.
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Update New Relic dependencies to versions with updated Node.js version support
-      </td>
-
-      <td>
-        * @newrelic/aws-sdk v7.0.0
+        * Please note this context manager will be removed in future versions.  If you find you must revert to using this legacy context manager, please raise this with [New Relic Support](https://support.newrelic.com/s/) or a [GitHub issue](https://github.com/newrelic/node-newrelic/issues/new?assignees=&labels=bug%2C+needs-triage&projects=&template=bug_report.md&title=). |
+| **BREAKING**: Renamed `shim.handleCATHeaders` to `shim.handleMqTracingHeaders`. |
+| Update New Relic dependencies to versions with updated Node.js version support | * @newrelic/aws-sdk v7.0.0
         * @newrelic/koa v8.0.0
         * @newrelic/native-metrics v10.0.0
         * @newrelic/superagent v7.0.0
-        * @newrelic/test-utilities v8.0.0
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * @newrelic/test-utilities v8.0.0 |
+
 
 ## Node.js version support [#node-support-v11]
 

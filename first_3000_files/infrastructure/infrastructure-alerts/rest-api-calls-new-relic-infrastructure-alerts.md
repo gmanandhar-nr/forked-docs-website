@@ -18,57 +18,20 @@ Use the infrastructure REST API to add, update, delete, and list alerting condit
 
 REST API calls for infrastructure alerts are not available in the [API Explorer](/docs/apis/rest-api-v2/api-explorer-v2/getting-started-new-relics-api-explorer).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Why use the API
-      </th>
+# Table
 
-      <th>
-        Examples
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Consistency
-      </td>
-
-      <td>
-        * Define the same set of conditions for every cluster without having to set up identical conditions in the infrastructure UI each time.
-        * Manage multiple conditions quickly, without having to update them one by one using the UI.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Flexibility
-      </td>
-
-      <td>
-        * Create conditions for an arbitrary group of hosts.
+| Why use the API | Examples |
+| - | - |
+| Consistency | * Define the same set of conditions for every cluster without having to set up identical conditions in the infrastructure UI each time.
+        * Manage multiple conditions quickly, without having to update them one by one using the UI. |
+| Flexibility | * Create conditions for an arbitrary group of hosts.
         * Disable or delete conditions for hosts taken offline anytime.
         * Create a condition with exclusionary filtering (for instance, `environment NOT LIKE x`). For more on this, see [this post on exclusion filtering](https://discuss.newrelic.com/t/how-to-use-the-infrastructure-alerts-rest-api-to-get-around-ui-ux-limitations-part-1-exclusion-filtering/60658).
         * For AWS Cloud integrations, select attributes that haven't been sent up by AWS yet.
         * Create compound alert conditions by using the `where_clause`, which allows you to specify the limits on a secondary or tertiary metric.
-        * Exceed the 500-facet limitation on NRQL alert conditions.
-      </td>
-    </tr>
+        * Exceed the 500-facet limitation on NRQL alert conditions. |
+| Reliability | * Audit when a condition was last updated. |
 
-    <tr>
-      <td>
-        Reliability
-      </td>
-
-      <td>
-        * Audit when a condition was last updated.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Requirements
 

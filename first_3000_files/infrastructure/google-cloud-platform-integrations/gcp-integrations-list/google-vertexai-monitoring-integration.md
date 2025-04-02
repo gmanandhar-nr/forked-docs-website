@@ -30,109 +30,17 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data is attached to the following [event types](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Endpoint | `GcpVertexAiEndpointSample` | `GcpVertexAiEndpoint` |
+| Feature store | `GcpVertexAiFeaturestoreSample` | `GcpVertexAiFeaturestore` |
+| Feature Online Store | `GcpVertexAiFeatureOnlineStoreSample` | `GcpVertexAiFeatureOnlineStore` |
+| Location | `GcpVertexAiLocationSample` | `GcpVertexAiLocation` |
+| Index | `GcpVertexAiIndexSample` | `GcpVertexAiIndex` |
+| PipelineJob | `GcpVertexAiPipelineJobSample` | `GcpVertexAiPipelineJob` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Endpoint
-      </td>
-
-      <td>
-        `GcpVertexAiEndpointSample`
-      </td>
-
-      <td>
-        `GcpVertexAiEndpoint`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Feature store
-      </td>
-
-      <td>
-        `GcpVertexAiFeaturestoreSample`
-      </td>
-
-      <td>
-        `GcpVertexAiFeaturestore`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Feature Online Store
-      </td>
-
-      <td>
-        `GcpVertexAiFeatureOnlineStoreSample`
-      </td>
-
-      <td>
-        `GcpVertexAiFeatureOnlineStore`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Location
-      </td>
-
-      <td>
-        `GcpVertexAiLocationSample`
-      </td>
-
-      <td>
-        `GcpVertexAiLocation`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Index
-      </td>
-
-      <td>
-        `GcpVertexAiIndexSample`
-      </td>
-
-      <td>
-        `GcpVertexAiIndex`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PipelineJob
-      </td>
-
-      <td>
-        `GcpVertexAiPipelineJobSample`
-      </td>
-
-      <td>
-        `GcpVertexAiPipelineJob`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

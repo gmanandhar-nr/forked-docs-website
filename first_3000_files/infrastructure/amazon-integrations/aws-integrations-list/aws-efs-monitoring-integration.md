@@ -49,27 +49,11 @@ For more on how to find and use integration data, see [Understand integration da
 
 This integration collects the following Amazon EFS metrics:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `BurstCreditBalance`
-      </td>
-
-      <td>
-        The number of burst credits that a file system has.
+| Metric | Description |
+| - | - |
+| `BurstCreditBalance` | The number of burst credits that a file system has.
 
         Burst credits allow a file system to burst to throughput levels above a file system’s baseline level for periods of time. For more information, see [Throughput scaling in Amazon EFS](http://docs.aws.amazon.com/efs/latest/ug/performance.html#bursting).
 
@@ -77,33 +61,15 @@ This integration collects the following Amazon EFS metrics:
 
         Units: Bytes
 
-        Valid statistics: `Minimum, Maximum, Average`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ClientConnections`
-      </td>
-
-      <td>
-        The number of client connections to a file system. When using a standard client, there is one connection per mounted Amazon EC2 instance.
+        Valid statistics: `Minimum, Maximum, Average` |
+| `ClientConnections` | The number of client connections to a file system. When using a standard client, there is one connection per mounted Amazon EC2 instance.
 
         Note: To calculate the average `ClientConnections` for periods greater than one minute, divide the `Sum` statistic by the number of minutes in the period.
 
         Units: Count of client connections
 
-        Valid statistics: `Sum`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DataReadIOBytes`
-      </td>
-
-      <td>
-        The number of bytes for each file system read operation.
+        Valid statistics: `Sum` |
+| `DataReadIOBytes` | The number of bytes for each file system read operation.
 
         The `Sum` statistic is the total number of bytes associated with read operations. The `Minimum` statistic is the size of the smallest read operation during the period. The `Maximum` statistic is the size of the largest read operation during the period. The `Average` statistic is the average size of read operations during the period. The `SampleCount` statistic provides a count of read operations.
 
@@ -112,17 +78,8 @@ This integration collects the following Amazon EFS metrics:
         * Bytes for `Minimum, Maximum, Average,` and `Sum`.
         * Count for `SampleCount`.
 
-          Valid statistics: `Minimum, Maximum, Average, Sum, SampleCount`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DataWriteIOBytes`
-      </td>
-
-      <td>
-        The number of bytes for each file system write operation.
+          Valid statistics: `Minimum, Maximum, Average, Sum, SampleCount` |
+| `DataWriteIOBytes` | The number of bytes for each file system write operation.
 
         The `Sum` statistic is the total number of bytes associated with write operations. The `Minimum` statistic is the size of the smallest write operation during the period. The `Maximum` statistic is the size of the largest write operation during the period. The `Average` statistic is the average size of write operations during the period. The `SampleCount` statistic provides a count of write operations.
 
@@ -131,17 +88,8 @@ This integration collects the following Amazon EFS metrics:
         * Bytes are the units for the `Minimum, Maximum, Average`, and `Sum` statistics.
         * Count for `SampleCount`.
 
-          Valid statistics: `Minimum, Maximum, Average, Sum, SampleCount`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MetadataIOBytes`
-      </td>
-
-      <td>
-        The number of bytes for each metadata operation.
+          Valid statistics: `Minimum, Maximum, Average, Sum, SampleCount` |
+| `MetadataIOBytes` | The number of bytes for each metadata operation.
 
         The `Sum` statistic is the total number of bytes associated with metadata operations. The `Minimum` statistic is the size of the smallest metadata operation during the period. The `Maximum` statistic is the size of the largest metadata operation during the period. The `Average` statistic is the size of the average metadata operation during the period. The `SampleCount` statistic provides a count of metadata operations.
 
@@ -150,47 +98,20 @@ This integration collects the following Amazon EFS metrics:
         * Bytes are the units for the `Minimum, Maximum, Average,` and `Sum` statistics.
         * Count for `SampleCount`.
 
-          Valid statistics: `Minimum, Maximum, Average, Sum, SampleCount`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PercentIOLimit`
-      </td>
-
-      <td>
-        Shows how close a file system is to reaching the I/O limit of the General Purpose performance mode. If this metric is at 100% more often than not, consider moving your application to a file system using the Max I/O performance mode.
+          Valid statistics: `Minimum, Maximum, Average, Sum, SampleCount` |
+| `PercentIOLimit` | Shows how close a file system is to reaching the I/O limit of the General Purpose performance mode. If this metric is at 100% more often than not, consider moving your application to a file system using the Max I/O performance mode.
 
         Note: This metric is only submitted for file systems using the General Purpose performance mode.
 
-        Units: Percent
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PermittedThroughput`
-      </td>
-
-      <td>
-        The maximum amount of throughput a file system is allowed, given the file system size and `BurstCreditBalance`. For more information, see [Amazon EFS Performance](http://docs.aws.amazon.com/efs/latest/ug/performance.html).
+        Units: Percent |
+| `PermittedThroughput` | The maximum amount of throughput a file system is allowed, given the file system size and `BurstCreditBalance`. For more information, see [Amazon EFS Performance](http://docs.aws.amazon.com/efs/latest/ug/performance.html).
 
         The `Minimum` statistic is the smallest throughput permitted for any minute during the period. The `Maximum` statistic is the highest throughput permitted for any minute during the period. The `Average` statistic is the average throughput permitted during the period.
 
         Units: Bytes per second
 
-        Valid statistics: `Minimum, Maximum, Average`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalIOBytes`
-      </td>
-
-      <td>
-        The number of bytes for each file system operation, including data read, data write, and metadata operations.
+        Valid statistics: `Minimum, Maximum, Average` |
+| `TotalIOBytes` | The number of bytes for each file system operation, including data read, data write, and metadata operations.
 
         The `Sum` statistic is the total number of bytes associated with all file system operations. The `Minimum` statistic is the size of the smallest operation during the period. The `Maximum` statistic is the size of the largest operation during the period. The `Average` statistic is the average size of an operation during the period. The `SampleCount` statistic provides a count of all operations.
 
@@ -201,8 +122,5 @@ This integration collects the following Amazon EFS metrics:
         * Bytes for `Minimum, Maximum, Average,` and `Sum` statistics.
         * Count for `SampleCount`.
 
-          Valid statistics: `Minimum, Maximum, Average, Sum, SampleCount`
-      </td>
-    </tr>
-  </tbody>
-</table>
+          Valid statistics: `Minimum, Maximum, Average, Sum, SampleCount` |
+

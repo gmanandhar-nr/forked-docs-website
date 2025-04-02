@@ -116,27 +116,11 @@ If you are using a Python web framework for which the agent provides automatic w
 
 For others, you must modify the Python code file with your WSGI application entry point to wrap the WSGI application object with a WSGI application wrapper. This will initiate the timing for the web requests received by your application.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Entry point
-      </th>
+# Table
 
-      <th>
-        Example code
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Enty point is a function
-      </td>
-
-      <td>
-        Wrap it in a decorator.
+| Entry point | Example code |
+| - | - |
+| Enty point is a function | Wrap it in a decorator.
 
         ```py
         import newrelic.agent
@@ -144,28 +128,16 @@ For others, you must modify the Python code file with your WSGI application entr
         @newrelic.agent.wsgi_application()
         def application(environ, start_response):
             ...
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Enty point is a function or object imported from a different module.
-      </td>
-
-      <td>
-        Wrap it in pre decorator style.
+        ``` |
+| Enty point is a function or object imported from a different module. | Wrap it in pre decorator style.
 
         ```py
         import myapp
 
         application = myapp.WSGIHandler()
         application = newrelic.agent.WSGIApplicationWrapper(application)
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 ## Override the application name [#overriding-the-application-name]
 

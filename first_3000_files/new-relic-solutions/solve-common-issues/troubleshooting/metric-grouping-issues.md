@@ -54,111 +54,20 @@ To help prevent metric grouping issues from occurring in your app:
 
 If the problem persists, follow the procedures for your agent:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Agent
-      </th>
+# Table
 
-      <th>
-        Preventing MGIs
-      </th>
-    </tr>
-  </thead>
+| Agent | Preventing MGIs |
+| - | - |
+| All agents | Review the information about [what causes metric grouping issues](#what). |
+| Browser | [Add URL groupings](/docs/browser/new-relic-browser/configuration/url-whitelists-grouping-browser-metrics#adding). |
+| Go | Rename your [Go transactions](/docs/agents/go-agent/instrumentation/instrument-go-transactions). |
+| Java | See [Java metric grouping issues](/docs/agents/java-agent/troubleshooting/resolve-metric-grouping-issues-java). |
+| .NET | Rename metrics with [`SetTransactionName`](/docs/agents/net-agent/net-agent-api/set-transaction-name). For more information about using XML to add details, see [Name transactions](/docs/agents/net-agent/custom-instrumentation/add-detail-transactions-xml-net#name-transactions). |
+| Node.js | Rename transactions with [Request API calls](/docs/agents/nodejs-agent/api-guides/nodejs-agent-api#request-api). |
+| PHP | [Rename your PHP transactions](/docs/agents/php-agent/frameworks-libraries/php-frameworks-integrating-support-new-relic#dev). |
+| Python | Rename your Python transactions with [`set_transaction_name`](/docs/agents/python-agent/python-agent-api/set_transaction_name). |
+| Ruby | [Rename your Ruby transactions](/docs/agents/ruby-agent/api-guides/ruby-custom-instrumentation#naming-transactions). |
 
-  <tbody>
-    <tr>
-      <td>
-        All agents
-      </td>
-
-      <td>
-        Review the information about [what causes metric grouping issues](#what).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Browser
-      </td>
-
-      <td>
-        [Add URL groupings](/docs/browser/new-relic-browser/configuration/url-whitelists-grouping-browser-metrics#adding).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Go
-      </td>
-
-      <td>
-        Rename your [Go transactions](/docs/agents/go-agent/instrumentation/instrument-go-transactions).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Java
-      </td>
-
-      <td>
-        See [Java metric grouping issues](/docs/agents/java-agent/troubleshooting/resolve-metric-grouping-issues-java).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        .NET
-      </td>
-
-      <td>
-        Rename metrics with [`SetTransactionName`](/docs/agents/net-agent/net-agent-api/set-transaction-name). For more information about using XML to add details, see [Name transactions](/docs/agents/net-agent/custom-instrumentation/add-detail-transactions-xml-net#name-transactions).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Node.js
-      </td>
-
-      <td>
-        Rename transactions with [Request API calls](/docs/agents/nodejs-agent/api-guides/nodejs-agent-api#request-api).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PHP
-      </td>
-
-      <td>
-        [Rename your PHP transactions](/docs/agents/php-agent/frameworks-libraries/php-frameworks-integrating-support-new-relic#dev).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Python
-      </td>
-
-      <td>
-        Rename your Python transactions with [`set_transaction_name`](/docs/agents/python-agent/python-agent-api/set_transaction_name).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Ruby
-      </td>
-
-      <td>
-        [Rename your Ruby transactions](/docs/agents/ruby-agent/api-guides/ruby-custom-instrumentation#naming-transactions).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 You can also edit and create metric normalization rules in the UI. For more details, see [Metric normalization](/docs/new-relic-solutions/new-relic-one/ui-data/metric-normalization-rules).
 

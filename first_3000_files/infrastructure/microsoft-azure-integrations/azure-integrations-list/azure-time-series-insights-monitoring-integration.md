@@ -36,108 +36,17 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Time Series Insights metrics [#Azure-time-series-insights]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `IngressReceivedBytes` | Count of bytes read from all event sources. |
+| `IngressReceivedInvalidMessages` | Count of invalid messages read from all Event hub or IoT hub event sources. |
+| `IngressReceivedMessages` | Count of messages read from all Event hub or IoT hub event sources. |
+| `IngressReceivedMessagesCountLag` | Difference between the sequence number of last enqueued message in the event source partition and sequence number of messages being processed in Ingress. |
+| `IngressReceivedMessagesTimeLag` | Difference between the time that the message is enqueued in the event source and the time it is processed in Ingress. |
+| `IngressStoredBytes` | Total size of events successfully processed and available for query. |
+| `IngressStoredEvents` | Count of flattened events successfully processed and available for query |
+| `WarmStorageMaxProperties` | Maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU. |
+| `WarmStorageUsedProperties` | Number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU. |
 
-  <tbody>
-    <tr>
-      <td>
-        `IngressReceivedBytes`
-      </td>
-
-      <td>
-        Count of bytes read from all event sources.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngressReceivedInvalidMessages`
-      </td>
-
-      <td>
-        Count of invalid messages read from all Event hub or IoT hub event sources.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngressReceivedMessages`
-      </td>
-
-      <td>
-        Count of messages read from all Event hub or IoT hub event sources.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngressReceivedMessagesCountLag`
-      </td>
-
-      <td>
-        Difference between the sequence number of last enqueued message in the event source partition and sequence number of messages being processed in Ingress.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngressReceivedMessagesTimeLag`
-      </td>
-
-      <td>
-        Difference between the time that the message is enqueued in the event source and the time it is processed in Ingress.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngressStoredBytes`
-      </td>
-
-      <td>
-        Total size of events successfully processed and available for query.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IngressStoredEvents`
-      </td>
-
-      <td>
-        Count of flattened events successfully processed and available for query
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WarmStorageMaxProperties`
-      </td>
-
-      <td>
-        Maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WarmStorageUsedProperties`
-      </td>
-
-      <td>
-        Number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU.
-      </td>
-    </tr>
-  </tbody>
-</table>

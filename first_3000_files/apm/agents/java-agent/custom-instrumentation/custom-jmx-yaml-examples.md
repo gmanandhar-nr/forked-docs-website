@@ -43,55 +43,14 @@ jmx:
     id="properties"
     title="Properties"
   >
-    <table>
-      <thead>
-        <tr>
-          <th width={150}>
-            <DNT>
-              **Value**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Definition**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| **Value** | **Definition** |
+| - | - |
+| `name` | A descriptive name identifying your YAML custom instrumentation file, using one space before the property name. In the above example, the name is `TomcatCustom`. |
+| `version` | The version of the extension file. Use a double. If two extensions have the same name, only the extension with the highest version will be used. Use one space before the property version. In the above example, the version is `1.0`. |
+| `enabled` | If `true`, the Java agent will read the extension. If `false`, the Java agent will ignore the extension. Use one space before the property enabled. The above example is enabled. |
 
-      <tbody>
-        <tr>
-          <td>
-            `name`
-          </td>
-
-          <td>
-            A descriptive name identifying your YAML custom instrumentation file, using one space before the property name. In the above example, the name is `TomcatCustom`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `version`
-          </td>
-
-          <td>
-            The version of the extension file. Use a double. If two extensions have the same name, only the extension with the highest version will be used. Use one space before the property version. In the above example, the version is `1.0`.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `enabled`
-          </td>
-
-          <td>
-            If `true`, the Java agent will read the extension. If `false`, the Java agent will ignore the extension. Use one space before the property enabled. The above example is enabled.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

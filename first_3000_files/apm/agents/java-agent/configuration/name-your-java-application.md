@@ -20,89 +20,34 @@ APM differentiates applications by the name they report as. Data continuity brea
 
 Here are the ways to change your Java application's name:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Naming method
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Recommended: Configure `app_name` in `newrelic.yml`
-      </td>
-
-      <td>
-        [Configure your `newrelic.yml` file](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-app_name) to set your app name. This is the recommended and most commonly used option:
+| Naming method | Description |
+| - | - |
+| Recommended: Configure `app_name` in `newrelic.yml` | [Configure your `newrelic.yml` file](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-app_name) to set your app name. This is the recommended and most commonly used option:
 
         ```yml
         app_name: My Application
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Configure `app_name` using JVM arguments
-      </td>
-
-      <td>
-        [Set a system property with JVM arguments](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#System_Properties) to set unique app names for multiple applications that report to the same Java agent:
+        ``` |
+| Configure `app_name` using JVM arguments | [Set a system property with JVM arguments](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#System_Properties) to set unique app names for multiple applications that report to the same Java agent:
 
         ```ini
         -Dnewrelic.config.app_name="My App"
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Set app name using environment variables
-      </td>
-
-      <td>
-        [Set an environment variable](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#Environment_Variables) to easily set app names during the deployment of containers, or to ensure an app name stays the same through multiple iterations of a `newrelic.yml` file:
+        ``` |
+| Set app name using environment variables | [Set an environment variable](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#Environment_Variables) to easily set app names during the deployment of containers, or to ensure an app name stays the same through multiple iterations of a `newrelic.yml` file:
 
         ```sh
         export NEW_RELIC_APP_NAME="My App"
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Automatic application naming
-      </td>
-
-      <td>
-        [Enable automatic application naming](/docs/agents/java-agent/configuration/automatic-application-naming) in your `newrelic.yml` file if you want applications named for their context, filter, servlet, or request attribute:
+        ``` |
+| Automatic application naming | [Enable automatic application naming](/docs/agents/java-agent/configuration/automatic-application-naming) in your `newrelic.yml` file if you want applications named for their context, filter, servlet, or request attribute:
 
         ```yml
         enable_auto_app_naming: true
-        ```
-      </td>
-    </tr>
+        ``` |
+| Change alias via UI | [Change an application's alias](/docs/agents/manage-apm-agents/app-naming/name-your-application#app-alias) to change only the displayed name in the UI. This does not change the name the application reports as.
 
-    <tr>
-      <td>
-        Change alias via UI
-      </td>
+        This does not break data continuity, unlike all other options. |
 
-      <td>
-        [Change an application's alias](/docs/agents/manage-apm-agents/app-naming/name-your-application#app-alias) to change only the displayed name in the UI. This does not change the name the application reports as.
-
-        This does not break data continuity, unlike all other options.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="tip">
   Note that some methods [take precedence over others](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#config-options-precedence).

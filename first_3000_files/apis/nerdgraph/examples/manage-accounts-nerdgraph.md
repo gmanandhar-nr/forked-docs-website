@@ -132,60 +132,19 @@ mutation {
 
 Here are some errors and what they mean:
 
-<table>
-  <thead>
-    <tr>
-      <th className="fcenter">
-        <DNT>
-          **Error message**
-        </DNT>
-      </th>
+# Table
 
-      <th className="fcenter">
-        <DNT>
-          **Likely cause**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        ```
+| **Error message** | **Likely cause** |
+| - | - |
+| ```
         "unauthorized", {
           extensions: { nerdGraphExtensions: { errorClass: "ACCESS_DENIED" } }
         }
-        ```
-      </td>
-
-      <td>
-        This points to a problem with your organization structure (for example, an account that is outside the boundaries of an organization). If you get this message, contact [support](/docs/new-relic-solutions/solve-common-issues/find-help-use-support-portal) or your account representative.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        ```
+        ``` | This points to a problem with your organization structure (for example, an account that is outside the boundaries of an organization). If you get this message, contact [support](/docs/new-relic-solutions/solve-common-issues/find-help-use-support-portal) or your account representative. |
+| ```
         "cannot create subaccount -- multiple parent account ids found. Please use Partnership API.", {
           extensions: { nerdGraphExtensions: { errorClass: "SERVER_ERROR" } }
         }
-        ```
-      </td>
+        ``` | This is a message returned when your organization has more than one "parent account," which is an indicator that your organization has a complex account structure that was set up with the [Partnership API](/docs/new-relic-partnerships/partner-integration-guide/partner-account-maintenance/partner-api) and requires the use of that API. Have questions? Contact [support](/docs/new-relic-solutions/solve-common-issues/find-help-use-support-portal) or your account representative. |
+| Other errors | Contact [support](/docs/new-relic-solutions/solve-common-issues/find-help-use-support-portal) or your account representative. |
 
-      <td>
-        This is a message returned when your organization has more than one "parent account," which is an indicator that your organization has a complex account structure that was set up with the [Partnership API](/docs/new-relic-partnerships/partner-integration-guide/partner-account-maintenance/partner-api) and requires the use of that API. Have questions? Contact [support](/docs/new-relic-solutions/solve-common-issues/find-help-use-support-portal) or your account representative.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Other errors
-      </td>
-
-      <td>
-        Contact [support](/docs/new-relic-solutions/solve-common-issues/find-help-use-support-portal) or your account representative.
-      </td>
-    </tr>
-  </tbody>
-</table>

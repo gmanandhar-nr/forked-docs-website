@@ -14,7 +14,83 @@ freshnessValidatedDate: never
 
 We love open-source software, and use the following in New Relic Synthetics. Thank you, open-source community, for making these fine tools! Some of these are listed under multiple software licenses, and in that case we have listed the license we've chosen to use.
 
-<table>
+# Table
+
+| **Library** | **Version** | **License** | **Copyright** |
+| - | - | - | - |
+| [angular](https://github.com/angular/bower-angular) | 1.4.7 | [MIT](https://github.com/angular/bower-angular/blob/master/README.md#license) | Copyright © 2010-2015 Google, Inc. |
+| [angular-resource](https://github.com/angular/bower-angular-resource) | 1.4.7 | [MIT](https://github.com/angular/bower-angular-resource/blob/master/README.md#license) | Copyright © 2010-2015 Google, Inc. |
+| [angular-route](https://github.com/angular/bower-angular-route) | 1.4.7 | [MIT](https://github.com/angular/bower-angular-route/blob/master/README.md#license) | Copyright © 2010-2015 Google, Inc. |
+| [ant](https://ant.apache.org/) | 1.10.1 | [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) | Copyright © 1999-2020 The Apache Software Foundation |
+| [atob](https://git.coolaj86.com/coolaj86/atob.js) | 2.0.3 | [Apache 2.0](https://git.coolaj86.com/coolaj86/atob.js#license) | Copyright © 2012-2018 AJ ONeal |
+| [aws-java-sdk-cloudwatch](https://github.com/aws/aws-sdk-java) | 1.11.849 | [Apache 2.0](https://github.com/aws/aws-sdk-java/blob/master/LICENSE.txt) | Copyright © 2016-2021, Amazon Web Services, Inc. |
+| [aws-java-sdk-cloudwatchmetrics](https://github.com/aws/aws-sdk-java) | 1.11.849 | [Apache 2.0](https://github.com/aws/aws-sdk-java/blob/master/LICENSE.txt) | Copyright © 2014-2021, Amazon Web Services, Inc. |
+| [aws-java-sdk-core](https://github.com/aws/aws-sdk-java) | 1.11.849 | [Apache 2.0](https://github.com/aws/aws-sdk-java/blob/master/LICENSE.txt) | Copyright © 2010-2021, Amazon Web Services, Inc. |
+| [aws-java-sdk-ec2](https://github.com/aws/aws-sdk-java) | 1.11.849 | [Apache 2.0](https://github.com/aws/aws-sdk-java/blob/master/LICENSE.txt) | Copyright © 2010-2021, Amazon Web Services, Inc. |
+| [aws-java-sdk-elasticache](https://github.com/aws/aws-sdk-java) | 1.11.849 | [Apache 2.0](https://github.com/aws/aws-sdk-java/blob/master/LICENSE.txt) | Copyright © 2016-2021, Amazon Web Services, Inc. |
+| [aws-java-sdk-elasticsearch](https://github.com/aws/aws-sdk-java) | 1.11.849 | [Apache 2.0](https://github.com/aws/aws-sdk-java/blob/master/LICENSE.txt) | Copyright © 2016-2021, Amazon Web Services, Inc. |
+| [aws-java-sdk-s3](https://github.com/aws/aws-sdk-java) | 1.11.849 | [Apache 2.0](https://github.com/aws/aws-sdk-java/blob/master/LICENSE.txt) | Copyright © 2010-2021, Amazon Web Services, Inc. |
+| [aws-java-sdk-sns](https://github.com/aws/aws-sdk-java) | 1.11.849 | [Apache 2.0](https://github.com/aws/aws-sdk-java/blob/master/LICENSE.txt) | Copyright © 2011-2021, Amazon Web Services, Inc. |
+| [aws-java-sdk-sqs](https://github.com/aws/aws-sdk-java) | 1.11.849 | [Apache 2.0](https://github.com/aws/aws-sdk-java/blob/master/LICENSE.txt) | Copyright © 2016-2021, Amazon Web Services, Inc. |
+| [aws-sdk](https://github.com/aws/aws-sdk-js) | 2.465.0 | [Apache 2.0](https://github.com/aws/aws-sdk-js/blob/master/LICENSE.txt) | Copyright © 2012-2017 Amazon.com, Inc. or its affiliates. |
+| [aws-signing-request-interceptor](https://github.com/inreachventures/aws-signing-request-interceptor) | 0.0.20 | [MIT](https://github.com/inreachventures/aws-signing-request-interceptor/blob/master/LICENSE) | Copyright © 2015 inreachventures |
+| [basic-ftp](https://github.com/patrickjuchli/basic-ftp) | 4.6.2 | [MIT](https://github.com/patrickjuchli/basic-ftp/blob/master/LICENSE.txt) | Copyright © 2019 Patrick Juchli |
+| [bcprov-ext-jdk15on](http://bouncycastle.org/) | 1.55 | [MIT](http://bouncycastle.org/license.html) | Copyright © 2000 - 2021 The Legion of the Bouncy Castle Inc. |
+| [bcprov-jdk15on](http://bouncycastle.org/) | 1.60 | [MIT](http://bouncycastle.org/license.html) | Copyright © 2000 - 2020 The Legion of the Bouncy Castle Inc. |
+| [bourbon](https://github.com/thoughtbot/bourbon) | 4.2.7 | [MIT](https://github.com/thoughtbot/bourbon/blob/master/LICENSE.md) | Copyright © 2011-2020 thoughtbot, inc. |
+| [bourbon-neat](https://github.com/thoughtbot/neat) | 1.8.0 | [MIT](https://github.com/thoughtbot/neat/blob/master/LICENSE.md) | Copyright © 2012 thoughtbot, inc. |
+| [btoa](https://git.coolaj86.com/coolaj86/btoa.js) | 1.1.2 | [Apache 2.0](https://git.coolaj86.com/coolaj86/btoa.js/src/branch/master/LICENSE) | Copyright © 2012-2018 AJ ONeal |
+| [buildnumber-maven-plugin](http://www.mojohaus.org/buildnumber-maven-plugin/) | 1.4 | [MIT](http://www.mojohaus.org/buildnumber-maven-plugin/license.html) | Copyright © 2007–2015 MojoHaus. All rights reserved. |
+| [chai](https://github.com/chaijs/chai) | 2.3.0 | [MIT](https://github.com/chaijs/chai/blob/master/LICENSE) | Copyright © 2017 Chai.js Assertion Library |
+| [chai-webdriver](https://github.com/goodeggs/chai-webdriver) | 0.9.3 | [MIT](https://github.com/goodeggs/chai-webdriver/blob/master/LICENSE) | Copyright © 2014 Good Eggs |
+| [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin) | 0.1.13 | [MIT](https://github.com/johnagan/clean-webpack-plugin/blob/master/LICENSE) | Copyright © 2015 John Agan |
+| [clippy2](https://github.com/yurks/clippy2) | \-- | [MIT](https://github.com/yurks/clippy2/blob/master/LICENSE) | Copyright © 2008 Tom Preston-Werner, © 2014 Yurk Shapkin. |
+| [colors](https://github.com/Marak/colors.js) | 1.1.2 | [MIT](https://github.com/Marak/colors.js/blob/master/LICENSE) | Original Library - Copyright © Marak Squires. Additional Functionality - Copyright © Sindre Sorhus. (sindresorhus.com) |
+| [commons-collections](https://commons.apache.org/proper/commons-collections/) | 3.2.2 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2001-2019 The Apache Software Foundation. All Rights Reserved. |
+| [commons-compress](http://commons.apache.org/proper/commons-compress/) | 1.19 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2020 The Apache Software Foundation. All Rights Reserved. |
+| [commons-email](http://commons.apache.org/proper/commons-email/) | 1.5 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2001-2018 The Apache Software Foundation. All Rights Reserved. |
+| [commons-exec](https://commons.apache.org/proper/commons-exec/) | 1.3 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2014 The Apache Software Foundation. All Rights Reserved. |
+| [commons-io](http://commons.apache.org/proper/commons-io/) | 2.6 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2002-2020 The Apache Software Foundation. All Rights Reserved. |
+| [commons-lang3](https://commons.apache.org/proper/commons-lang/) | 3.7 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2001-2021 The Apache Software Foundation. All Rights Reserved. |
+| [commons-math3](http://commons.apache.org/proper/commons-math/) | 3.6.1 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2003-2016 The Apache Software Foundation. All Rights Reserved. |
+| [commons-net](http://commons.apache.org/proper/commons-net/) | 3.6 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2001-2021 The Apache Software Foundation. All Rights Reserved. |
+| [commons-pool2](https://commons.apache.org/proper/commons-pool/) | 2.4.1 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2001-2020 The Apache Software Foundation. All Rights Reserved. |
+| [commons-text](http://commons.apache.org/proper/commons-text/) | 1.2 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2014-2020 The Apache Software Foundation. All Rights Reserved. |
+| [commons-validator](https://commons.apache.org/proper/commons-validator/) | 1.6 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2002-2020 The Apache Software Foundation. All Rights Reserved. |
+| [compress-lzf](https://github.com/ning/compress) | 1.0.3 | [Apache 2.0](https://github.com/ning/compress/blob/master/LICENSE) | Copyright © 2009-2010 Ning, Inc. |
+| [consoleplusplus](https://github.com/detro/consoleplusplus) | 1.4.1 | [BSD](https://github.com/detro/consoleplusplus/blob/master/LICENSE.BSD) | Copyright © 2021, Ivan De Marino. All rights reserved. |
+| [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin) | 4.0.1 | [MIT](https://github.com/kevlened/copy-webpack-plugin/blob/master/LICENSE) | Copyright © JS Foundation and other contributors |
+| [crypto-js](https://github.com/brix/crypto-js) | 3.1.5 | [MIT](https://github.com/brix/crypto-js/blob/develop/LICENSE) | Copyright © 2009-2013 Jeff Mott. Copyright © 2013-2016 Evan Vosberg |
+| [css-loader](https://github.com/webpack/css-loader) | 0.25.0 | [MIT](https://github.com/webpack-contrib/css-loader/blob/master/LICENSE) | Copyright © JS Foundation and other contributors |
+| [curator-recipes](https://curator.apache.org/) | 4.2.0 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2019 The Apache Software Foundation |
+| [dnsjava](http://www.xbill.org/dnsjava/) | 2.1.8 | [BSD](https://github.com/dnsjava/dnsjava/blob/master/LICENSE) | Copyright © 1998-2011, Brian Wellington. |
+| [docker-client](https://github.com/spotify/docker-client) | 8.15.3 | [Apache 2.0](https://github.com/spotify/docker-client/blob/master/LICENSE) | Copyright © 2016 Spotify AB |
+| [dropwizard-assets](https://github.com/dropwizard/dropwizard) | 1.3.23 | [Apache 2.0](https://github.com/dropwizard/dropwizard/blob/master/LICENSE) | Copyright © 2010-2013 Coda Hale and Yammer, Inc., © 2014-2020 Dropwizard Team |
+| [dropwizard-auth](https://github.com/dropwizard/dropwizard) | 1.3.23 | [Apache 2.0](https://github.com/dropwizard/dropwizard/blob/master/LICENSE) | Copyright © 2010-2013 Coda Hale and Yammer, Inc., © 2014-2020 Dropwizard Team |
+| [dropwizard-core](https://github.com/dropwizard/dropwizard) | 1.3.23 | [Apache 2.0](https://github.com/dropwizard/dropwizard/blob/master/LICENSE) | Copyright © 2010-2013 Coda Hale and Yammer, Inc., © 2014-2020 Dropwizard Team |
+| [dropwizard-forms](https://github.com/dropwizard/dropwizard) | 1.3.23 | [Apache 2.0](https://github.com/dropwizard/dropwizard/blob/master/LICENSE) | Copyright © 2010-2013 Coda Hale and Yammer, Inc., © 2014-2020 Dropwizard Team |
+| [dropwizard-testing](https://github.com/dropwizard/dropwizard) | 1.3.23 | [Apache 2.0](https://github.com/dropwizard/dropwizard/blob/master/LICENSE) | Copyright © 2010-2013 Coda Hale and Yammer, Inc., © 2014-2020 Dropwizard Team |
+| [dropwizard-views-freemarker](https://github.com/dropwizard/dropwizard) | 1.3.23 | [Apache 2.0](https://github.com/dropwizard/dropwizard/blob/master/LICENSE) | Copyright © 2010-2013 Coda Hale and Yammer, Inc., © 2014-2020 Dropwizard Team |
+| [elasticsearch-rest-high-level-client](https://github.com/elastic/elasticsearch) | 6.8.4 | [Apache 2.0](https://github.com/elastic/elasticsearch/blob/master/LICENSE.txt) | Copyright © Elasticsearch B.V. |
+| [extract-text-webpack-plugin](https://github.com/webpack/extract-text-webpack-plugin) | 1.0.1 | [MIT](https://github.com/webpack-contrib/extract-text-webpack-plugin/blob/master/LICENSE) | Copyright © JS Foundation and other contributors |
+| [faker](https://github.com/Marak/Faker.js) | 3.0.1 | [MIT](https://github.com/Marak/faker.js/blob/master/MIT-LICENSE.txt) | Copyright © 2020 Marak Squires |
+| [file-loader](https://github.com/webpack/file-loader) | 0.9.0 | [MIT](https://github.com/webpack-contrib/file-loader/blob/master/LICENSE) | Copyright © JS Foundation and other contributors |
+| [findbugs-maven-plugin](http://gleclaire.github.io/findbugs-maven-plugin/) | 3.0.3 | [Apache 2.0](http://gleclaire.github.io/findbugs-maven-plugin/license.html) | Copyright © 2005–2018 MojoHaus. All rights reserved. |
+| [galimatias](https://github.com/smola/galimatias) | 0.2.1 | [MIT](https://raw.githubusercontent.com/smola/galimatias/master/LICENSE) | Copyright © 2013-2014 Santiago M. Mola |
+| [glob](https://github.com/isaacs/node-glob) | 5.0.15 | [ISC](https://github.com/isaacs/node-glob/blob/master/LICENSE) | Copyright © Isaac Z. Schlueter and Contributors |
+| [got](https://github.com/sindresorhus/got) | 11.8.3 | [MIT](https://github.com/sindresorhus/got/blob/main/license) | Copyright © Sindre Sorhus |
+| [groovy-all](http://groovy-lang.org/download.html) | 2.4.3 | [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) | Copyright © 2003-2020 the Apache Groovy project. |
+| [guava](https://code.google.com/p/guava-libraries/) | 21.0 | [Apache 2.0](https://github.com/google/guava/blob/master/COPYING) | Copyright © 2010 The Guava Authors |
+| [guava-retrying](https://github.com/rholder/guava-retrying) | 2.0.0 | [Apache 2.0](https://github.com/rholder/guava-retrying/blob/master/LICENSE) | Copyright © 2012-2015 Ray Holder |
+| [guice](https://github.com/google/guice) | 4.2.2 | [Apache 2.0](https://github.com/google/guice/blob/master/COPYING) | Copyright © 2006 Google Inc. |
+| [guice-persist](https://github.com/google/guice) | 4.2.2 | [Apache 2.0](https://github.com/google/guice/blob/master/COPYING) | Copyright © 2006 Google Inc. |
+| [guice-servlet](https://github.com/google/guice) | 4.2.2 | [Apache 2.0](https://github.com/google/guice/blob/master/COPYING) | Copyright © 2006 Google Inc. |
+| [h2](http://www.h2database.com/html/main.html) | 1.4.193 | [EPL](http://www.h2database.com/html/license.html) |
+| [hibernate-entitymanager](https://github.com/hibernate/hibernate-orm) | 5.4.9.Final | [LGPLv2.1](https://github.com/hibernate/hibernate-orm/blob/master/lgpl.txt) | Copyright © 1991, 1999 Free Software Foundation, Inc. |
+| [HikariCP](https://github.com/brettwooldridge/HikariCP) | 2.6.1 | [Apache 2.0](https://github.com/brettwooldridge/HikariCP/blob/2.3.x/LICENSE) | Copyright © 2013 Brett Wooldridge |
+| [http-request](https://github.com/kevinsawicki/http-request) | 6.0 | [MIT](https://github.com/kevinsawicki/http-request/blob/master/LICENSE.md) | Copyright © 2014 Kevin Sawicki. |
+| [httpasyncclient](https://hc.apache.org/httpcomponents-asyncclient-4.1.x/index.html) | 4.1.3 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2005–2021 The Apache Software Foundation |
+| [httpclient](https://hc.apache.org/httpcomponents-client-ga/index.html) | <table>
   <thead>
     <tr>
       <th width={250}>
@@ -2864,6 +2940,92 @@ We love open-source software, and use the following in New Relic Synthetics. Tha
       </td>
     </tr>
   </tbody>
-</table>
+</table>#x7B;httpcomponents.httpclient.version} | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2005–2021 The Apache Software Foundation |
+| [httpcore](https://hc.apache.org/httpcomponents-core-ga/httpcore/project-reports.html) | 4.4.4 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2005–2021 The Apache Software Foundation |
+| [httpcore-nio](https://hc.apache.org/httpcomponents-core-4.4.x/current/httpcore-nio/apidocs/) | 4.4.12 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2019 The Apache Software Foundation |
+| [httpmime](https://hc.apache.org/httpcomponents-client-ga/httpmime/project-reports.html) | 4.5.5 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2019 The Apache Software Foundation |
+| [jackson-databind](https://github.com/FasterXML/jackson-databind/) | 2.10.1 | [Apache 2.0](https://github.com/FasterXML/jackson-databind/blob/master/LICENSE) | Copyright © 2019 The Apache Software Foundation |
+| [jackson-datatype-jsr310](https://github.com/FasterXML/jackson-datatype-jsr310/) | 2.10.1 | [Apache 2.0](https://github.com/FasterXML/jackson-datatype-jsr310/wiki) |
+| [jade](https://github.com/pugjs/pug) | 1.11.0 | [MIT](http://www.opensource.org/licenses/mit-license.php) |
+| [jade-html-loader](https://github.com/bline/jade-html-loader) | 0.0.3 | [MIT](https://github.com/bline/jade-html-loader/blob/master/LICENSE) | Copyright © 2013 Scott Beck |
+| [jade-loader](https://github.com/pugjs/pug-loader) | 0.8.0 | [MIT](https://github.com/pugjs/pug-loader/blob/master/LICENSE.md) | Copyright © 2012-2015 Tobias Koppers @sokra. Copyright © 2016 Tiancheng "Timothy" Gu. |
+| [jasmine-node](https://github.com/mhevery/jasmine-node) | 1.14.5 | [MIT](https://github.com/mhevery/jasmine-node/blob/master/LICENSE) | Copyright © 2018-present Christopher J. Brody and other contributors. Copyright © 2010 Adam Abrons and Misko Hevery. |
+| [joi](https://github.com/hapijs/joi) | 6.6.1 | [BSD](https://github.com/hapijs/joi/blob/master/LICENSE.md) | Copyright © 2012-2020, Sideway Inc, and project contributors. Copyright © 2012-2014, Walmart. All rights reserved. |
+| [jquery](https://github.com/jquery/jquery/) | 2.1.3 | [MIT](https://github.com/jquery/jquery/blob/master/LICENSE.txt) | Copyright © JS Foundation and other contributors |
+| [json-simple](https://code.google.com/archive/p/json-simple/) | 1.1.1 | [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) | Copyright © 2019 The Apache Software Foundation |
+| [jsr305](https://code.google.com/p/jsr-305/) | 3.0.1 | [BSD](https://opensource.org/licenses/BSD-3-Clause) |
+| [junit](https://github.com/junit-team/junit) | 4.12 | [EPL](https://github.com/junit-team/junit/blob/master/LICENSE-junit.txt) | Copyright © 2002-2020 JUnit. All Rights Reserved. |
+| [junit-jupiter-engine](https://github.com/junit-team/junit5/) | 5.6.2 | [EPL 2.0](https://github.com/junit-team/junit5/blob/master/LICENSE.md) | Copyright © 2020 The JUnit Team |
+| [junit-jupiter-migrationsupport](https://github.com/junit-team/junit5/) | 5.6.2 | [EPL 2.0](https://github.com/junit-team/junit5/blob/master/LICENSE.md) | Copyright © 2020 The JUnit Team |
+| [kubernetes-client](https://github.com/fabric8io/kubernetes-client) | 4.10.2 | [Apache 2.0](https://github.com/fabric8io/kubernetes-client/blob/master/license.txt) | Copyright © 2015 Red Hat, Inc. |
+| [kubernetes-server-mock](https://github.com/fabric8io/kubernetes-client) | 4.10.2 | [Apache 2.0](https://github.com/fabric8io/kubernetes-client/blob/master/license.txt) | Copyright © 2015 Red Hat, Inc. |
+| [ldapauth-fork](https://github.com/vesse/node-ldapauth-fork) | 4.3.3 | [MIT](https://github.com/vesse/node-ldapauth-fork/blob/master/LICENSE) | Modified Work Copyright © 2013 Vesa Poikajärvi. Original Work Copyright © 2011 Trent Mick. |
+| [line-reader](https://github.com/nickewing/line-reader) | 0.2.4 | [MPL](https://github.com/nickewing/line-reader/blob/master/LICENSE) | Copyright © 2012 by Nick Ewing |
+| [liquibase-core](https://github.com/liquibase/liquibase) | 3.1.1 | [Apache 2.0](https://github.com/liquibase/liquibase/blob/master/LICENSE.txt) | Copyright © 2019 The Apache Software Foundation |
+| [liquibase-javalogger](https://github.com/liquibase/liquibase-javalogger) | 3.0 | [Apache 2.0](https://github.com/liquibase/liquibase-javalogger/blob/master/LICENSE) | Copyright © 2019 The Apache Software Foundation |
+| [littleproxy](https://github.com/newrelic-forks/LittleProxy/) | 1.2.1-NewRelic-20141105.092905-1 | [Apache 2.0](https://github.com/newrelic-forks/LittleProxy/blob/master/LICENSE.txt) | Copyright © 2009 Last Bamboo LLC |
+| [lodash](https://github.com/lodash/lodash) | 2.4.2 | [MIT](https://github.com/lodash/lodash/blob/master/LICENSE) | Copyright © JS Foundation and other contributors |
+| [log4j-core](https://logging.apache.org/log4j/2.0/log4j-core/index.html) | 2.12.1 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 1999-2021 The Apache Software Foundation. All Rights Reserved. |
+| [logback-classic](https://logback.qos.ch) | 1.2.3 | [EPL](https://logback.qos.ch/license.html) | Copyright © 2019 QOS.ch. All rights reserved. |
+| [logback-core](https://logback.qos.ch) | 1.2.3 | [EPL](https://logback.qos.ch/license.html) | Copyright © 2019 QOS.ch. All rights reserved. |
+| [maven-clean-plugin](http://maven.apache.org/plugins/maven-clean-plugin) | 3.1.0 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2001–2018 The Apache Software Foundation. All rights reserved. |
+| [maven-compiler-plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) | 3.6.1 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2001–2019 The Apache Software Foundation. All rights reserved. |
+| [maven-dependency-plugin](https://maven.apache.org/plugins/maven-dependency-plugin/) | 2.10 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2002–2020 The Apache Software Foundation. All rights reserved. |
+| [maven-enforcer-plugin](http://maven.apache.org/enforcer/maven-enforcer-plugin/) | 1.4.1 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2007–2019 The Apache Software Foundation. All rights reserved. |
+| [maven-failsafe-plugin](http://maven.apache.org/surefire/maven-failsafe-plugin/) | 2.20 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2019 The Apache Software Foundation |
+| [maven-jar-plugin](https://maven.apache.org/plugins/maven-jar-plugin/) | 2.6 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright ©2002–2019 The Apache Software Foundation. All rights reserved. |
+| [maven-resources-plugin](https://maven.apache.org/plugins/maven-resources-plugin) | 3.0.2 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright ©2001–2020 The Apache Software Foundation. All rights reserved. |
+| [maven-shade-plugin](https://maven.apache.org/plugins/maven-shade-plugin/) | 3.1.1 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright ©2002–2020 The Apache Software Foundation. All rights reserved. |
+| [maven-surefire-plugin](http://maven.apache.org/surefire/maven-surefire-plugin/) | 2.20 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2019 The Apache Software Foundation |
+| [maven-surefire-report-plugin](http://maven.apache.org/surefire/maven-surefire-report-plugin/) | 2.20 | [Apache 2.0](http://www.apache.org/licenses/) | Copyright © 2019 The Apache Software Foundation |
+| [minimist](https://github.com/substack/minimist) | 1.1.3 | [MIT](https://github.com/substack/minimist/blob/master/LICENSE) |
+| [mockito-core](https://github.com/mockito/mockito/) | 3.1.0 | [MIT](https://github.com/mockito/mockito/blob/release/3.x/LICENSE) | Copyright © 2007 Mockito contributors |
+| [mockwebserver](https://github.com/fabric8io/mockwebserver) | 0.1.8 | [Apache 2.0](https://github.com/fabric8io/mockwebserver/blob/master/license.txt) | Copyright © 2015 Red Hat, Inc. |
+| [moment](https://github.com/moment/moment) | 2.15.1 | [MIT](https://github.com/moment/moment/blob/develop/LICENSE) | Copyright © JS Foundation and other contributors |
+| [multibit-website](https://github.com/bitcoin-solutions/multibit-website/tree/master) | \-- | [MIT](https://github.com/bitcoin-solutions/multibit-website/blob/master/MIT-LICENSE) | Copyright © 2013 MultiBit |
+| [net](https://github.com/sleeplessinc/net) | 1.0.2 | [MIT](https://github.com/sleeplessinc/net/blob/master/LICENSE) | Copyright © 2016 Sleepless Software Inc. All rights reserved. |
+| [net-ping](https://github.com/stephenwvickers/node-net-ping) | 1.1.12 | [MIT](https://github.com/stephenwvickers/node-net-ping#license) | Copyright © 2018 NoSpaceships Ltd. Copyright © 2013 Stephen Vickers. |
+| [net-snmp](https://github.com/stephenwvickers/node-net-snmp) | 1.1.14 | [MIT](https://github.com/stephenwvickers/node-net-snmp#license) | Copyright © 2020 Mark Abrahams. Copyright © 2018 NoSpaceships Ltd. Copyright © 2013 Stephen Vickers. |
+| [node-sass](https://github.com/sass/node-sass) | 3.8.0 | [MIT](https://github.com/sass/node-sass/blob/master/LICENSE) | Copyright © 2013-2016 Andrew Nesbitt |
+| [node-uuid](https://github.com/broofa/node-uuid) | 1.4.3 | [MIT](https://github.com/broofa/node-uuid/blob/master/LICENSE.md) | Copyright © 2010-2016 Robert Kieffer and other contributors |
+| [nodejs-traceroute](https://github.com/zulhilmizainuddin/nodejs-traceroute#readme) | 1.1.1 | [MIT](https://github.com/zulhilmizainuddin/nodejs-traceroute/blob/master/LICENSE) | Copyright © 2016 Zulhilmi Mohamed Zainuddin |
+| [nodemailer](https://github.com/nodemailer/nodemailer/) | 6.4.13 | [MIT](https://github.com/nodemailer/nodemailer/blob/master/LICENSE) | Copyright © 2011-2019 Andris Reinman |
+| [okhttp](https://github.com/square/okhttp) | 3.14.4 | [Apache 2.0](https://github.com/square/okhttp/blob/master/LICENSE.txt) | Copyright © 2019 Square, Inc. |
+| [oshi-core](http://oshi.github.io/oshi/) | 3.4.3 | [EPL](http://oshi.github.io/oshi/licenses.html) | Copyright © 2010–2021 oshi. All rights reserved. |
+| [owasp-java-html-sanitizer](https://github.com/OWASP/java-html-sanitizer) | 20160413.1 | [Apache 2.0](https://raw.githubusercontent.com/OWASP/java-html-sanitizer/master/COPYING) | Copyright © 2015, Mike Samuel |
+| [postgresql](https://github.com/pgjdbc/pgjdbc) | 42.2.5 | [BSD](https://github.com/pgjdbc/pgjdbc/blob/master/LICENSE) | Copyright © 1997, PostgreSQL Global Development Group. All rights reserved. |
+| [protocol-buffers](https://github.com/google/protobuf) | 3.1.6 | [MIT](https://github.com/google/protobuf/blob/master/LICENSE) | Copyright © 2008 Google Inc. All rights reserved. |
+| [q](https://github.com/kriskowal/q) | 1.4.1 | [MIT](https://github.com/kriskowal/q/blob/v1/LICENSE) | Copyright © 2009–2017 Kristopher Michael Kowal. All rights reserved. |
+| [raw-socket](https://github.com/nospaceships/node-raw-socket#readme) | 1.6.4 | [MIT](https://github.com/nospaceships/node-raw-socket#license) | Copyright © 2018 NoSpaceships Ltd. Copyright © 2013 Stephen Vickers. |
+| [redisson](http://redisson.org/) | 3.11.6 | [Apache 2.0](https://github.com/redisson/redisson/blob/master/LICENSE.txt) | COPYRIGHT © 2021 Nikita Koksharov |
+| [request](https://github.com/request/request) | 2.60.0 | [Apache 2.0](https://github.com/jquery/jquery/blob/master/LICENSE.txt) | Copyright © OpenJS Foundation and other contributors |
+| [resolve-url-loader](https://github.com/bholloway/resolve-url-loader) | 1.6.0 | [MIT](https://opensource.org/licenses/mit-license.php) |
+| [rimraf](https://github.com/isaacs/rimraf#readme) | 2.6.3 | [ISC](https://github.com/isaacs/rimraf/blob/master/LICENSE) | Copyright © Isaac Z. Schlueter and Contributors |
+| [sass-loader](https://github.com/jtangelder/sass-loader) | 4.0.2 | [MIT](https://github.com/jtangelder/sass-loader/blob/master/LICENSE) | Copyright © JS Foundation and other contributors |
+| [selenium-webdriver](https://github.com/SeleniumHQ/selenium) | 4.1.0 | [Apache 2.0](https://github.com/SeleniumHQ/selenium/blob/master/LICENSE) | Copyright © 2019 Software Freedom Conservancy (SFC) |
+| [should](https://github.com/shouldjs/should.js) | 7.0.3 | [MIT](https://github.com/shouldjs/should.js/blob/master/LICENSE) | Copyright © 2010-2013 TJ Holowaychuk. Copyright © 2013-2017 Denis Bardadym. |
+| [ssh2-sftp-client](https://github.com/theophilusx/ssh2-sftp-client) | 5.3.1 | [Apache 2.0](https://github.com/theophilusx/ssh2-sftp-client/blob/master/LICENSE) | Copyright © 2020 Tim Cross |
+| [ssl-checker](https://github.com/dyaa/ssl-checker) | 2.0.5 | [MIT](https://github.com/dyaa/ssl-checker/blob/master/LICENSE) | Copyright © 8008 Dyaa Eldin Moustafa |
+| [text-encoding](https://github.com/inexorabletash/text-encoding) | 0.6.4 | [Apache 2.0](https://github.com/inexorabletash/text-encoding/blob/master/LICENSE.md) | Copyright © 2019 The Apache Software Foundation |
+| [thrift](https://git-wip-us.apache.org/repos/asf?p=thrift.git) | 0.9.2 | [Apache 2.0](https://git-wip-us.apache.org/repos/asf?p=thrift.git;a=blob_plain;f=LICENSE;hb=HEAD) | Copyright © 2007 Thomas Porschberg |
+| [tough-cookie](https://github.com/goinstant/tough-cookie) | 2.0.0 | [MPL](https://github.com/goinstant/tough-cookie/blob/master/LICENSE) | Copyright © 2015, Salesforce.com, Inc. |
+| [underscore](https://github.com/jashkenas/underscore) | 1.8.3 | [MIT](https://github.com/jashkenas/underscore/blob/master/LICENSE) | Copyright © 2009-2018 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors |
+| [url-loader](https://github.com/webpack/url-loader) | 0.5.7 | [MIT](https://github.com/webpack-contrib/url-loader/blob/master/LICENSE) | Copyright © JS Foundation and other contributors |
+| [url-parse](https://github.com/unshiftio/url-parse) | 1.1.9 | [MIT](https://github.com/unshiftio/url-parse/blob/master/LICENSE) | Copyright © 2015 Unshift.io, Arnout Kazemier, the Contributors. |
+| [urllib](https://github.com/node-modules/urllib) | 2.3.11 | [MIT](https://github.com/node-modules/urllib/blob/master/LICENSE.txt) | Copyright © 2011 - 2014 fengmk2 and other contributors. Copyright © 2015 - present node-modules and other contributors. |
+| [urllib-sync](https://github.com/node-modules/urllib-sync) | 1.1.4 | [MIT](https://github.com/node-modules/urllib-sync#license) | Copyright © 2014 dead_horse |
+| [UserAgentUtils](https://github.com/HaraldWalker/user-agent-utils) | 1.20 | [BSD](https://raw.githubusercontent.com/HaraldWalker/user-agent-utils/trunk/LICENSE.txt) | Copyright © 2013, Harald Walker |
+| [uuid](https://github.com/uuidjs/uuid#readme) | 3.1.0 | [MIT](https://github.com/uuidjs/uuid/blob/master/LICENSE.md) | Copyright © 2010-2020 Robert Kieffer and other contributors |
+| [validator](https://github.com/chriso/validator.js) | 3.18.1 | [MIT](https://github.com/chriso/validator.js/blob/master/LICENSE) | Copyright © 2018 Chris O'Hara |
+| [webdriver-sizzle](https://github.com/goodeggs/webdriver-sizzle) | 0.2.2 | [MIT](https://github.com/goodeggs/webdriver-sizzle/blob/master/LICENSE) | Copyright © 2014 Good Eggs Inc |
+| [webpack](https://github.com/webpack/webpack) | 1.14.0 | [MIT](https://github.com/webpack/webpack/blob/master/LICENSE) | Copyright © JS Foundation and other contributors |
+| [wiremock-standalone](https://github.com/tomakehurst/wiremock) | 2.19.0 | [Apache 2.0](https://github.com/tomakehurst/wiremock/blob/master/LICENSE.txt) | Copyright © 2011 Thomas Akehurst |
+| [ws](https://github.com/websockets/ws) | 1.1.4 | [MIT](https://github.com/websockets/ws/blob/master/LICENSE) | Copyright © 2011 Einar Otto Stangvik |
+| [wtfnode](https://github.com/myndzi/wtfnode#readme) | 0.5.4 | [ISC](https://opensource.org/licenses/ISC) |
+| [xml-apis](https://xerces.apache.org/xml-commons/) | 1.4.01 | [Apache 2.0](https://xerces.apache.org/xml-commons/licenses.html) | Copyright © 2001-2009 The Apache Software Foundation. |
+| [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js) | 0.4.17 | [MPL](https://github.com/Leonidas-from-XIV/node-xml2js/blob/master/LICENSE) | Copyright © 2010, 2011, 2012, 2013. All rights reserved. |
+| [xz](https://tukaani.org/xz/java.html) | 1.6 | [Public Domain](https://tukaani.org/xz/java.html) |
+| [zookeeper](https://zookeeper.apache.org) | 3.5.6 | [Apache 2.0](https://www.apache.org/licenses/) | Copyright © 2010-2020 The Apache Software Foundation |
+
 
 The remainder of the code is covered by the New Relic License agreement.

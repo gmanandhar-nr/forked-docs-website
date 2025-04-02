@@ -18,87 +18,19 @@ To monitor your tvOS mobile app, you'll use our iOS agent.
 
 ## tvOS requirements [#requirements]
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Mobile monitoring**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **tvOS requirements**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Mobile monitoring** | **tvOS requirements** |
+| - | - |
+| Operating system | tvOS 9 or higher |
+| API/SDK | NSURLConnection, AFNetworking, and ASIHttpRequest networking APIs |
+| Languages | Objective-C
 
-  <tbody>
-    <tr>
-      <td>
-        Operating system
-      </td>
+        Swift: Works with both network traces and crash reporting, but no interaction traces by default. To enable this, see [Enabling interaction tracing in Swift](/docs/mobile-monitoring/new-relic-mobile/getting-started/enabling-interaction-tracing-swift). |
+| Devices | Any tvOS compatible device (Apple TV 4th generation or higher) |
+| File sizes | The iOS adds about 270K to your tvOS release app. |
+| Architectures | ARM 64-bit |
 
-      <td>
-        tvOS 9 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        API/SDK
-      </td>
-
-      <td>
-        NSURLConnection, AFNetworking, and ASIHttpRequest networking APIs
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Languages
-      </td>
-
-      <td>
-        Objective-C
-
-        Swift: Works with both network traces and crash reporting, but no interaction traces by default. To enable this, see [Enabling interaction tracing in Swift](/docs/mobile-monitoring/new-relic-mobile/getting-started/enabling-interaction-tracing-swift).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Devices
-      </td>
-
-      <td>
-        Any tvOS compatible device (Apple TV 4th generation or higher)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        File sizes
-      </td>
-
-      <td>
-        The iOS adds about 270K to your tvOS release app.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Architectures
-      </td>
-
-      <td>
-        ARM 64-bit
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Install [#install]
 

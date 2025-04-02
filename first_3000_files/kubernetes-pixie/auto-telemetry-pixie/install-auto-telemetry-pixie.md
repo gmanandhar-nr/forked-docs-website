@@ -31,107 +31,41 @@ Tips before getting started:
 
 Use the following table to find out where to start installing Auto-telemetry with Pixie. Where you start the installation depends on whether you already have a New Relic or Pixie account, or both.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        New Relic
-      </th>
+# Table
 
-      <th>
-        Pixie
-      </th>
-
-      <th>
-        Next steps
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td className="fcenter">
-        <Icon
+| New Relic | Pixie | Next steps |
+| - | - | - |
+| <Icon
           style={{color: 'green'}}
           name="fe-check"
-        />
-      </td>
-
-      <td className="fcenter">
-        <Icon
+        /> | <Icon
           style={{color: 'red'}}
           name="fe-x-circle"
-        />
-      </td>
-
-      <td>
-        Start the guided install at the [beginning of the process](#install-beginning).
-      </td>
-    </tr>
-
-    <tr>
-      <td className="fcenter">
-        <Icon
+        /> | Start the guided install at the [beginning of the process](#install-beginning). |
+| <Icon
           style={{color: 'green'}}
           name="fe-check"
-        />
-      </td>
-
-      <td className="fcenter">
-        <Icon
+        /> | <Icon
           style={{color: 'green'}}
           name="fe-check"
-        />
-      </td>
+        /> | If you already have both types of accounts and used the same email address for each of them, click the New Relic icon in the Pixie UI. This brings you to the [Configure the HELM command/manifest (yaml) file](#install-helm-command-manifest) section of the guided install. Then, follow the steps.
 
-      <td>
-        If you already have both types of accounts and used the same email address for each of them, click the New Relic icon in the Pixie UI. This brings you to the [Configure the HELM command/manifest (yaml) file](#install-helm-command-manifest) section of the guided install. Then, follow the steps.
-
-        If you're using different email addresses in Pixie and New Relic, create a new account for either Pixie or New Relic to match email addresses across both products. You can also contact New Relic support to manually link your existing New Relic account with your Pixie account.
-      </td>
-    </tr>
-
-    <tr>
-      <td className="fcenter">
-        <Icon
+        If you're using different email addresses in Pixie and New Relic, create a new account for either Pixie or New Relic to match email addresses across both products. You can also contact New Relic support to manually link your existing New Relic account with your Pixie account. |
+| <Icon
           style={{color: 'red'}}
           name="fe-x-circle"
-        />
-      </td>
-
-      <td className="fcenter">
-        <Icon
+        /> | <Icon
           style={{color: 'green'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        If you follow a link to New Relic from the Pixie UI and don't have a New Relic account, you must first create one. Click the New Relic icon in the Pixie UI, and follow the steps to create a New Relic account. When you do so, your Pixie account is linked to it. Then, [continue the guided install process](#install-helm-command-manifest).
-      </td>
-    </tr>
-
-    <tr>
-      <td className="fcenter">
-        <Icon
+        /> | If you follow a link to New Relic from the Pixie UI and don't have a New Relic account, you must first create one. Click the New Relic icon in the Pixie UI, and follow the steps to create a New Relic account. When you do so, your Pixie account is linked to it. Then, [continue the guided install process](#install-helm-command-manifest). |
+| <Icon
           style={{color: 'red'}}
           name="fe-x-circle"
-        />
-      </td>
-
-      <td className="fcenter">
-        <Icon
+        /> | <Icon
           style={{color: 'red'}}
           name="fe-x-circle"
-        />
-      </td>
+        /> | Sign up for a free [New Relic account](https://www.newrelic.org/signup). Then, start the guided install at the [beginning of the process](#install-beginning). |
 
-      <td>
-        Sign up for a free [New Relic account](https://www.newrelic.org/signup). Then, start the guided install at the [beginning of the process](#install-beginning).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Install using the guided install process [#install-beginning]
 

@@ -26,35 +26,12 @@ export NEW_RELIC_ML_INSIGHTS_EVENTS_MAX_SAMPLES_STORED=${desired_value}
 
 ## Currently Instrumented Machine Learning Frameworks [#ml-frameworks]
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **ML Library**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Version Available**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **ML Library** | **Version Available** |
+| - | - |
+| [scikit learn](https://pypi.org/project/scikit-learn/) | 9.1.0 |
 
-  <tbody>
-    <tr>
-      <td>
-        [scikit learn](https://pypi.org/project/scikit-learn/)
-      </td>
-
-      <td>
-        9.1.0
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Machine Learning APIs [#ml-apis]
 

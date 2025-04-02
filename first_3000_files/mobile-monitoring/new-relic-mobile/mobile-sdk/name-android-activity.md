@@ -35,39 +35,12 @@ By default, the New Relic Android agent calculates the cold time and hot time wh
 
 ## Parameters [#parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Type
-      </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$activityName` | String | Required. String indicating the target activity name to calculate cold time and hot time |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `$activityName`
-      </td>
-
-      <td>
-        String
-      </td>
-
-      <td>
-        Required. String indicating the target activity name to calculate cold time and hot time
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples [#examples]
 

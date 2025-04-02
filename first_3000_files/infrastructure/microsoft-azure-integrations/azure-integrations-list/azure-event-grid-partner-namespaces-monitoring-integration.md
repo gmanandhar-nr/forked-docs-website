@@ -36,58 +36,12 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Event Grid Partner Namespaces metrics [#Azure-event-grid-partner-namespaces]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `PublishFailCount` | Total events failed to publish to this partner namespace. |
+| `PublishSuccessCount` | Total events published to this partner namespace. |
+| `PublishSuccessLatencyInMs` | Publish success latency in milliseconds. |
+| `UnmatchedEventCount` | Total events not matching any of the partner topics. |
 
-  <tbody>
-    <tr>
-      <td>
-        `PublishFailCount`
-      </td>
-
-      <td>
-        Total events failed to publish to this partner namespace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PublishSuccessCount`
-      </td>
-
-      <td>
-        Total events published to this partner namespace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PublishSuccessLatencyInMs`
-      </td>
-
-      <td>
-        Publish success latency in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UnmatchedEventCount`
-      </td>
-
-      <td>
-        Total events not matching any of the partner topics.
-      </td>
-    </tr>
-  </tbody>
-</table>

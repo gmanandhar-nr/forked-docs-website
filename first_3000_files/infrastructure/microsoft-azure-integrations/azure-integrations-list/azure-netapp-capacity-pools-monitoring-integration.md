@@ -36,78 +36,14 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure NetApp Capacity Pools metrics [#Azure-netapp-capacity-pools]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `VolumePoolAllocatedSize` | Provisioned size of this pool. |
+| `VolumePoolAllocatedToVolumeThroughput` | Sum of the throughput of all the volumes belonging to the pool. |
+| `VolumePoolAllocatedUsed` | Allocated used size of the pool. |
+| `VolumePoolProvisionedThroughput` | Provisioned throughput of this pool. |
+| `VolumePoolTotalLogicalSize` | Sum of the logical size of all the volumes belonging to the pool. |
+| `VolumePoolTotalSnapshotSize` | Sum of snapshot size of all volumes in this pool. |
 
-  <tbody>
-    <tr>
-      <td>
-        `VolumePoolAllocatedSize`
-      </td>
-
-      <td>
-        Provisioned size of this pool.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumePoolAllocatedToVolumeThroughput`
-      </td>
-
-      <td>
-        Sum of the throughput of all the volumes belonging to the pool.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumePoolAllocatedUsed`
-      </td>
-
-      <td>
-        Allocated used size of the pool.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumePoolProvisionedThroughput`
-      </td>
-
-      <td>
-        Provisioned throughput of this pool.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumePoolTotalLogicalSize`
-      </td>
-
-      <td>
-        Sum of the logical size of all the volumes belonging to the pool.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumePoolTotalSnapshotSize`
-      </td>
-
-      <td>
-        Sum of snapshot size of all volumes in this pool.
-      </td>
-    </tr>
-  </tbody>
-</table>

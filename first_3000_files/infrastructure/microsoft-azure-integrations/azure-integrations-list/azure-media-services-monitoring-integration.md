@@ -36,188 +36,25 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Media Services metrics [#Azure-media-services]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `AssetCount` | Number of already created assests in current media service account. |
+| `AssetQuota` | Number of assets allowed for current media service account. |
+| `AssetQuotaUsedPercentage` | Asset used percentage in current media service account. |
+| `ChannelsAndLiveEventsCount` | The total number of live events in the current media services account. |
+| `ContentKeyPolicyCount` | Number of content key policies already created in current media service account. |
+| `ContentKeyPolicyQuota` | How many content key polices are allowed for current media service account. |
+| `ContentKeyPolicyQuotaUsedPercentage` | Content Key Policy used percentage in current media service account. |
+| `JobQuota` | The Job quota for the current media service account. |
+| `JobsScheduled` | The number of jobs in the `Scheduled` state. |
+| `KeyDeliveryRequests` | The key delivery request status and latency in milliseconds for the current Media Service account. |
+| `MaxChannelsAndLiveEventsCount` | The maximum number of live events allowed in the current media services account. |
+| `MaxRunningChannelsAndLiveEventsCount` | The maximum number of running live events allowed in the current media services account. |
+| `RunningChannelsAndLiveEventsCount` | The total number of running live events in the current media services account. |
+| `StreamingPolicyCount` | The number of streaming policies already created in the current media service account. |
+| `StreamingPolicyQuota` | The number of streaming policies allowed for current media service accounts. |
+| `StreamingPolicyQuotaUsedPercentage` | Streaming Policy used percentage in current media service account. |
+| `TransformQuota` | The `Transform` quota for the current media service account. |
 
-  <tbody>
-    <tr>
-      <td>
-        `AssetCount`
-      </td>
-
-      <td>
-        Number of already created assests in current media service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AssetQuota`
-      </td>
-
-      <td>
-        Number of assets allowed for current media service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AssetQuotaUsedPercentage`
-      </td>
-
-      <td>
-        Asset used percentage in current media service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ChannelsAndLiveEventsCount`
-      </td>
-
-      <td>
-        The total number of live events in the current media services account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ContentKeyPolicyCount`
-      </td>
-
-      <td>
-        Number of content key policies already created in current media service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ContentKeyPolicyQuota`
-      </td>
-
-      <td>
-        How many content key polices are allowed for current media service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ContentKeyPolicyQuotaUsedPercentage`
-      </td>
-
-      <td>
-        Content Key Policy used percentage in current media service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobQuota`
-      </td>
-
-      <td>
-        The Job quota for the current media service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobsScheduled`
-      </td>
-
-      <td>
-        The number of jobs in the `Scheduled` state.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `KeyDeliveryRequests`
-      </td>
-
-      <td>
-        The key delivery request status and latency in milliseconds for the current Media Service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MaxChannelsAndLiveEventsCount`
-      </td>
-
-      <td>
-        The maximum number of live events allowed in the current media services account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MaxRunningChannelsAndLiveEventsCount`
-      </td>
-
-      <td>
-        The maximum number of running live events allowed in the current media services account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RunningChannelsAndLiveEventsCount`
-      </td>
-
-      <td>
-        The total number of running live events in the current media services account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StreamingPolicyCount`
-      </td>
-
-      <td>
-        The number of streaming policies already created in the current media service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StreamingPolicyQuota`
-      </td>
-
-      <td>
-        The number of streaming policies allowed for current media service accounts.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StreamingPolicyQuotaUsedPercentage`
-      </td>
-
-      <td>
-        Streaming Policy used percentage in current media service account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TransformQuota`
-      </td>
-
-      <td>
-        The `Transform` quota for the current media service account.
-      </td>
-    </tr>
-  </tbody>
-</table>

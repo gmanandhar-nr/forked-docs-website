@@ -36,48 +36,11 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure DNS Zones metrics [#Azure-dns-zones]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `QueryVolume` | Number of queries served for a DNS zone |
+| `RecordSetCapacityUtilization` | Percent of record set capacity utilized by a DNS zone. |
+| `RecordSetCount` | Number of record sets in a DNS zone. |
 
-  <tbody>
-    <tr>
-      <td>
-        `QueryVolume`
-      </td>
-
-      <td>
-        Number of queries served for a DNS zone
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RecordSetCapacityUtilization`
-      </td>
-
-      <td>
-        Percent of record set capacity utilized by a DNS zone.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RecordSetCount`
-      </td>
-
-      <td>
-        Number of record sets in a DNS zone.
-      </td>
-    </tr>
-  </tbody>
-</table>

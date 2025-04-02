@@ -30,28 +30,9 @@ If you haven't done so, you may want to check that your browser app meets our [c
 
 There are four ways to install the browser agent. Depending on your specific needs, you can:
 
-<Tabs>
-  <TabsBar>
-    <TabsBarItem id="1">
-      Get JavaScript via UI
-    </TabsBarItem>
+{% tabs %}
 
-    <TabsBarItem id="2">
-      Install with APM
-    </TabsBarItem>
-
-    <TabsBarItem id="3">
-      Create JavaScript via NerdGraph
-    </TabsBarItem>
-
-    <TabsBarItem id="4">
-      Install via NerdGraph and npm
-    </TabsBarItem>
-  </TabsBar>
-
-  <TabsPages>
-    <TabsPageItem id="1">
-      Go to <DNT>**[one.newrelic.com](https://one.newrelic.com) > Integrations & Agents > Browser and mobile > Browser monitoring**</DNT> and follow the instructions to generate the browser JavaScript snippet in the UI.
+{% tab title="Get JavaScript via UI" %} Go to <DNT>**[one.newrelic.com](https://one.newrelic.com) > Integrations & Agents > Browser and mobile > Browser monitoring**</DNT> and follow the instructions to generate the browser JavaScript snippet in the UI.
 
       <ButtonGroup>
         <ButtonLink
@@ -98,11 +79,9 @@ There are four ways to install the browser agent. Depending on your specific nee
             }
           });
           ```
-      </Collapser>
-    </TabsPageItem>
+      </Collapser> {% endtab %}
 
-    <TabsPageItem id="2">
-      With an APM agent, you can deploy browser monitoring without manually adding the snippet to your code. When you restart the agent, it automatically uses the latest version of the browser agent.
+{% tab title="Install with APM" %} With an APM agent, you can deploy browser monitoring without manually adding the snippet to your code. When you restart the agent, it automatically uses the latest version of the browser agent.
 
       If you're using an APM (application performance monitoring) agent to monitor the backend of your browser app and you've got a non-[SPA](/docs/browser/single-page-app-monitoring/get-started/introduction-single-page-app-monitoring) app, then we recommend using this method.
 
@@ -114,24 +93,19 @@ There are four ways to install the browser agent. Depending on your specific nee
       * [Node.js](/docs/agents/nodejs-agent/supported-features/page-load-timing-nodejs)
       * [PHP](/docs/agents/php-agent/features/page-load-timing-php)
       * [Python](/docs/agents/python-agent/supported-features/page-load-timing-python)
-      * [Ruby](/docs/agents/ruby-agent/features/page-load-timing-ruby)
-    </TabsPageItem>
+      * [Ruby](/docs/agents/ruby-agent/features/page-load-timing-ruby) {% endtab %}
 
-    <TabsPageItem id="3">
-      If you'd prefer to create your browser snippet programmatically, you can do so via our NerdGraph, our GraphQL API.
+{% tab title="Create JavaScript via NerdGraph" %} If you'd prefer to create your browser snippet programmatically, you can do so via our NerdGraph, our GraphQL API.
 
       For more on this, see our [NerdGraph tutorial](/docs/apis/nerdgraph/examples/browser-monitoring-config-nerdgraph/) to create a browser snippet and configure it.
 
-      Once you have the snippet, add it to the `<head>` tag of your app.
-    </TabsPageItem>
+      Once you have the snippet, add it to the `<head>` tag of your app. {% endtab %}
 
-    <TabsPageItem id="4">
-      If you want to automate browser monitoring deployment across multiple web apps, you can use NerdGraph and our browser agent npm package to configure and deploy the agent as part of your application build process.
+{% tab title="Install via NerdGraph and npm" %} If you want to automate browser monitoring deployment across multiple web apps, you can use NerdGraph and our browser agent npm package to configure and deploy the agent as part of your application build process.
 
-      For more on this, see [instrument multiple apps with npm and NerdGraph](/docs/apis/nerdgraph/examples/combining-npm-nerdgraph/).
-    </TabsPageItem>
-  </TabsPages>
-</Tabs>
+      For more on this, see [instrument multiple apps with npm and NerdGraph](/docs/apis/nerdgraph/examples/combining-npm-nerdgraph/). {% endtab %}
+
+{% endtabs %}
 
 ## What's next? [#whats-next]
 

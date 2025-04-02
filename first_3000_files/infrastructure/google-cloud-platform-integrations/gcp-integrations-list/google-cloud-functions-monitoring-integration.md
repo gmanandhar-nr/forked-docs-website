@@ -38,48 +38,11 @@ After activating the integration and then waiting a few minutes (based on the [p
 
 [Metric data](/docs/infrastructure/introduction-infra-monitoring#data-types) we receive from your GCP Cloud Functions integration includes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Attribute | Description |
+| - | - |
+| `function.Executions` | Count of functions that executed, by status. |
+| `function.ExecutionTimeNanos` | Time for each function to execute, in nanoseconds. |
+| `function.UserMemoryBytes` | Memory used for each function, in bytes. |
 
-  <tbody>
-    <tr>
-      <td>
-        `function.Executions`
-      </td>
-
-      <td>
-        Count of functions that executed, by status.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `function.ExecutionTimeNanos`
-      </td>
-
-      <td>
-        Time for each function to execute, in nanoseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `function.UserMemoryBytes`
-      </td>
-
-      <td>
-        Memory used for each function, in bytes.
-      </td>
-    </tr>
-  </tbody>
-</table>

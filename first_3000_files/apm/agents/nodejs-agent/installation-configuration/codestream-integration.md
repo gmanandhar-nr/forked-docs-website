@@ -26,78 +26,12 @@ The Node.js agent reports and attaches the following attributes to most spans pr
   In some cases, the agent will directly wrap base framework code that's invoked within your application and won't display within your IDE.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Name | Description | Example |
+| - | - | - |
+| `code.function` | The name of the instrumented function. It will be `(anonymous)` for both anonymous and arrow functions. | routeHandler |
+| `code.filepath` | The absolute path to the source code file where `code.function` is defined. | /usr/local/app/sample-node-app/index.js |
+| `code.lineno` | The line number where `code.function` is defined in `code.filepath`. | 639 |
+| `code.lineno` | The column number where `code.function` is defined in `code.filepath`. | 47 |
 
-      <th>
-        Example
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `code.function`
-      </td>
-
-      <td>
-        The name of the instrumented function. It will be `(anonymous)` for both anonymous and arrow functions.
-      </td>
-
-      <td>
-        routeHandler
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.filepath`
-      </td>
-
-      <td>
-        The absolute path to the source code file where `code.function` is defined.
-      </td>
-
-      <td>
-        /usr/local/app/sample-node-app/index.js
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.lineno`
-      </td>
-
-      <td>
-        The line number where `code.function` is defined in `code.filepath`.
-      </td>
-
-      <td>
-        639
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.lineno`
-      </td>
-
-      <td>
-        The column number where `code.function` is defined in `code.filepath`.
-      </td>
-
-      <td>
-        47
-      </td>
-    </tr>
-  </tbody>
-</table>

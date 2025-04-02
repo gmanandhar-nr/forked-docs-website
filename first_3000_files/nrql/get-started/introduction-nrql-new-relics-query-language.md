@@ -223,92 +223,26 @@ If you're already familiar with writing SQL queries, you'll be happy to know tha
 
 Here are the rules that NRQL follows:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **NRQL rule**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Required values
-      </td>
-
-      <td>
-        The [`SELECT`](#state-select) clause and [`FROM`](#sel-from) clause are required. All other clauses are optional. You can start your query with either `SELECT` or `FROM`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Query string size
-      </td>
-
-      <td>
-        The query string must be less than 4 KB.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Case sensitivity
-      </td>
-
-      <td>
-        * The data type names and attribute names are case sensitive.
-        * [NRQL clauses](/docs/insights/new-relic-insights/using-new-relic-query-language/nrql-reference#clauses) and [functions](/docs/insights/new-relic-insights/using-new-relic-query-language/nrql-reference#functions) are not case sensitive.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Syntax for strings
-      </td>
-
-      <td>
-        NRQL uses single quotes to designate strings. For example:
+| **NRQL rule** | Details |
+| - | - |
+| Required values | The [`SELECT`](#state-select) clause and [`FROM`](#sel-from) clause are required. All other clauses are optional. You can start your query with either `SELECT` or `FROM`. |
+| Query string size | The query string must be less than 4 KB. |
+| Case sensitivity | * The data type names and attribute names are case sensitive.
+        * [NRQL clauses](/docs/insights/new-relic-insights/using-new-relic-query-language/nrql-reference#clauses) and [functions](/docs/insights/new-relic-insights/using-new-relic-query-language/nrql-reference#functions) are not case sensitive. |
+| Syntax for strings | NRQL uses single quotes to designate strings. For example:
 
         ```sql
         ... WHERE traceId = '030a573f0df02c57'
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Non-standard custom event and attribute names
-      </td>
-
-      <td>
-        Events that we report by default have names that contain alphanumeric characters, colons (`:`), and underscores (`_`). Attribute names can have those characters and periods (`.`). Default-reported names start with a letter. Custom names that don't follow these guidelines must be enclosed with backticks in NRQL queries. For example:
+        ``` |
+| Non-standard custom event and attribute names | Events that we report by default have names that contain alphanumeric characters, colons (`:`), and underscores (`_`). Attribute names can have those characters and periods (`.`). Default-reported names start with a letter. Custom names that don't follow these guidelines must be enclosed with backticks in NRQL queries. For example:
 
         ```sql
         ... FACET `Logged-in user`
-        ```
-      </td>
-    </tr>
+        ``` |
+| Data type coercion | We don't support data type "coercion." For more information, see [Data type conversion](/docs/insights/nrql-new-relic-query-language/nrql-reference/nrql-syntax-components-functions#type-conversion). |
 
-    <tr>
-      <td>
-        Data type coercion
-      </td>
-
-      <td>
-        We don't support data type "coercion." For more information, see [Data type conversion](/docs/insights/nrql-new-relic-query-language/nrql-reference/nrql-syntax-components-functions#type-conversion).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 If you need any more information, you can check out our [NRQL reference](/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/) to help you build your queries.
 

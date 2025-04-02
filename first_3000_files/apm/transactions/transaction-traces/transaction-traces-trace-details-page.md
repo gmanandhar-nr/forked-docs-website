@@ -288,71 +288,16 @@ For performance reasons, APM only captures the first 2,000 segments of a transac
 
 The APM agents have differing rules for when to truncate segments.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        APM agent
-      </th>
+# Table
 
-      <th>
-        Truncate segment rules
-      </th>
-    </tr>
-  </thead>
+| APM agent | Truncate segment rules |
+| - | - |
+| Go | The segment duration must be greater than the [`TransactionTracer.SegmentThreshold`](/docs/agents/go-agent/configuration/go-agent-configuration#txn-tracer-segment-threshold) value set in your Go segment configuration. |
+| Java, .NET, Ruby | These agents truncate traces chronologically. For more information, see the transaction tracer documentation for [Java](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#h2-transaction-segments), [.NET](/docs/agents/net-agent/configuration/net-agent-configuration#transaction_tracer), or [Ruby](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#transaction_tracer) as applicable. |
+| Node.js | The Node.js agent only captures the first 900 segments of a transaction trace. For more information, see [Node.js transaction tracer configuration](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#tx_tracer_config). |
+| PHP | Truncates based on segment duration; the slowest 2,000 segments are captured for the trace. For more information, see [PHP transaction tracer configuration](/docs/apm/transactions/transaction-traces/transaction-traces-trace-details-page/). |
+| Python | Truncates based on segment duration; the slowest 2,000 segments are captured for the trace. For more information, see [Python transaction tracer configuration](/docs/agents/python-agent/configuration/python-agent-configuration#txn-tracer-settings). |
 
-  <tbody>
-    <tr>
-      <td>
-        Go
-      </td>
-
-      <td>
-        The segment duration must be greater than the [`TransactionTracer.SegmentThreshold`](/docs/agents/go-agent/configuration/go-agent-configuration#txn-tracer-segment-threshold) value set in your Go segment configuration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Java, .NET, Ruby
-      </td>
-
-      <td>
-        These agents truncate traces chronologically. For more information, see the transaction tracer documentation for [Java](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#h2-transaction-segments), [.NET](/docs/agents/net-agent/configuration/net-agent-configuration#transaction_tracer), or [Ruby](/docs/agents/ruby-agent/configuration/ruby-agent-configuration#transaction_tracer) as applicable.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Node.js
-      </td>
-
-      <td>
-        The Node.js agent only captures the first 900 segments of a transaction trace. For more information, see [Node.js transaction tracer configuration](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#tx_tracer_config).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PHP
-      </td>
-
-      <td>
-        Truncates based on segment duration; the slowest 2,000 segments are captured for the trace. For more information, see [PHP transaction tracer configuration](/docs/apm/transactions/transaction-traces/transaction-traces-trace-details-page/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Python
-      </td>
-
-      <td>
-        Truncates based on segment duration; the slowest 2,000 segments are captured for the trace. For more information, see [Python transaction tracer configuration](/docs/agents/python-agent/configuration/python-agent-configuration#txn-tracer-settings).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Distributed traces [#distributed-traces]
 

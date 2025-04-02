@@ -52,33 +52,14 @@ This context is also provided by the [`onEnd`](/docs/browser/new-relic-browser/b
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$callback`
 
-  <tbody>
-    <tr>
-      <td>
-        `$callback`
+        _function_ | Required. A function that accepts the interaction context object as its only argument. |
 
-        _function_
-      </td>
-
-      <td>
-        Required. A function that accepts the interaction context object as its only argument.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

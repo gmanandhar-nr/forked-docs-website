@@ -47,57 +47,20 @@ You can pass the optional configurations along with these captured logs using th
 
 ## Parameters [#wrap-parameters]
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `parent`
 
-  <tbody>
-    <tr>
-      <td>
-        `parent`
+        _Object_ | Required. An object which contains the target function to be wrapped. |
+| `functionName`
 
-        _Object_
-      </td>
+        _string_ | Required. The name of the target function to be wrapped. This function must exist in the `parent` object and match the type of "function". |
+| `options`
 
-      <td>
-        Required. An object which contains the target function to be wrapped.
-      </td>
-    </tr>
+        _Object_ | Optional. An object used for supplying optional configurations for every log captured by the wrapper. `options.customAttributes` is an object of key:val pairs that assigns a top-level property and value to the created log for each attribute supplied. The enum `options.level` assigns a log level to the created log event.  The `level` must be one of: `debug | error | info | trace | warn`.  The log level defaults to `info` if not supplied. |
 
-    <tr>
-      <td>
-        `functionName`
-
-        _string_
-      </td>
-
-      <td>
-        Required. The name of the target function to be wrapped. This function must exist in the `parent` object and match the type of "function".
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `options`
-
-        _Object_
-      </td>
-
-      <td>
-        Optional. An object used for supplying optional configurations for every log captured by the wrapper. `options.customAttributes` is an object of key:val pairs that assigns a top-level property and value to the created log for each attribute supplied. The enum `options.level` assigns a log level to the created log event.  The `level` must be one of: `debug | error | info | trace | warn`.  The log level defaults to `info` if not supplied.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples [#wrap-examples]
 

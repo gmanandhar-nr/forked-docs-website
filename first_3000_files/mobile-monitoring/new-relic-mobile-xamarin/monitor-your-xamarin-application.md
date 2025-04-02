@@ -144,69 +144,17 @@ Need to customize your agent instrumentation? Our public mobile SDK API methods 
 
 The following customizations are available for the Xamarin agent.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Use this method
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Use this method |
+| - | - |
+| Record breadcrumbs to track app activity that may be helpful for troubleshooting crashes. | [Record breadcrumbs](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-breadcrumb) |
+| Track a method as an interaction. | [Start interactions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/start-interaction)
 
-  <tbody>
-    <tr>
-      <td id="crash-analysis">
-        Record breadcrumbs to track app activity that may be helpful for troubleshooting crashes.
-      </td>
-
-      <td>
-        [Record breadcrumbs](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-breadcrumb)
-      </td>
-    </tr>
-
-    <tr>
-      <td id="creating">
-        Track a method as an interaction.
-      </td>
-
-      <td>
-        [Start interactions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/start-interaction)
-
-        [Stop interactions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/stop-interaction)
-      </td>
-    </tr>
-
-    <tr>
-      <td id="create-custom">
-        Record custom metrics.
-      </td>
-
-      <td>
-        [Record custom metrics](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-custom-metrics/)
-      </td>
-    </tr>
-
-    <tr>
-      <td id="create-custom">
-        Record handled exceptions.
-      </td>
-
-      <td>
-        [Record handled exceptions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-handled-exceptions)
-      </td>
-    </tr>
-
-    <tr>
-      <td id="attributes-events-insights">
-        Record custom attributes and events.
-      </td>
-
-      <td>
-        There are several ways to report custom attributes and events:
+        [Stop interactions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/stop-interaction) |
+| Record custom metrics. | [Record custom metrics](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-custom-metrics/) |
+| Record handled exceptions. | [Record handled exceptions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-handled-exceptions) |
+| Record custom attributes and events. | There are several ways to report custom attributes and events:
 
         * [Record custom attributes](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/create-attribute)
         * [Increment session attribute count](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/increment-session-attribute-count)
@@ -218,53 +166,14 @@ The following customizations are available for the Xamarin agent.
         * [Get a current session's ID](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/current-session-id)
         * [Set a custom user ID to associate with events and attributes](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/set-custom-user-id)
 
-          For more about which would be the best method to use and why, see [Report mobile monitoring custom events and attributes](/docs/data-apis/custom-data/custom-events/report-mobile-monitoring-custom-events-attributes/).
-      </td>
-    </tr>
+          For more about which would be the best method to use and why, see [Report mobile monitoring custom events and attributes](/docs/data-apis/custom-data/custom-events/report-mobile-monitoring-custom-events-attributes/). |
+| Track custom network requests and failures. | [Track HTTP requests](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/network-request-success)
 
-    <tr>
-      <td id="track-custom">
-        Track custom network requests and failures.
-      </td>
+        [Track failing HTTP requests](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/network-request-failures) |
+| Shut down the agent. | [Shut down the agent](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/shut-down-agent) |
+| Enable/disable default mobile monitoring settings. | [Enable/disable monitoring features](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/configure-settings) |
+| Run a test crash report. | [Test crash reporting](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/test-crash-reporting) |
 
-      <td>
-        [Track HTTP requests](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/network-request-success)
-
-        [Track failing HTTP requests](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/network-request-failures)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Shut down the agent.
-      </td>
-
-      <td>
-        [Shut down the agent](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/shut-down-agent)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Enable/disable default mobile monitoring settings.
-      </td>
-
-      <td>
-        [Enable/disable monitoring features](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/configure-settings)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Run a test crash report.
-      </td>
-
-      <td>
-        [Test crash reporting](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/test-crash-reporting)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Troubleshoot HTTP errors [#http-errors]
 

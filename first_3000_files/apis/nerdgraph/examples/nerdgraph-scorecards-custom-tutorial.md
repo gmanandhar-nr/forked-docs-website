@@ -55,24 +55,12 @@ New Relic provides various NerdGraph mutations to create custom role for Scoreca
 
     #### Input parameters
 
-    <table>
-      <thead>
-        <tr>
-          <th>Parameter</th>
-          <th>Data Type</th>
-          <th>Is it Required?</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>`eq`</td>
-          <td>String</td>
-          <td>Yes</td>
-          <td>Set the value to `organization` to retrieve role for Scorecards.</td>
-        </tr>
-      </tbody>
-    </table>
+    # Table
+
+| Parameter | Data Type | Is it Required? | Description |
+| - | - | - | - |
+| `eq` | String | Yes | Set the value to `organization` to retrieve role for Scorecards. |
+
 
     #### Sample request
 

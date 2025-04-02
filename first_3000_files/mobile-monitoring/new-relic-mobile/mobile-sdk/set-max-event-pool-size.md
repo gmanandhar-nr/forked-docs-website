@@ -92,39 +92,12 @@ NewRelic.setMaxEventPoolSize(maxSize: Int)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$maxSize` | `int` | Required. Maximum size of event pool. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$maxSize`
-            </td>
-
-            <td>
-              `int`
-            </td>
-
-            <td>
-              Required. Maximum size of event pool.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Example [#example]
 

@@ -120,284 +120,71 @@ For Windows Server, the commands in this document use the Windows command prompt
 
 For Linux, the infrastructure agent selects an init system appropriate for your distribution:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px", textAlign: "right" }}>
-        Distribution
-      </th>
+# Table
 
-      <th style={{ width: "110px", textAlign: "center" }}>
-        SystemD
-      </th>
-
-      <th style={{ width: "110px", textAlign: "center" }}>
-        System V
-      </th>
-
-      <th style={{ width: "110px", textAlign: "center" }}>
-        Upstart
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        Amazon Linux
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+| Distribution | SystemD | System V | Upstart |
+| - | - | - | - |
+| Amazon Linux | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        Amazon Linux 2
-      </td>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| Amazon Linux 2 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        CentOS 7
-      </td>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| CentOS 7 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        CentOS 8
-      </td>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| CentOS 8 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        Debian 7 ("Wheezy")
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| Debian 7 ("Wheezy") | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        Debian 8 ("Jessie")
-      </td>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| Debian 8 ("Jessie") | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        Debian 9 ("Stretch")
-      </td>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| Debian 9 ("Stretch") | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        RHEL 5
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| RHEL 5 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        RHEL 6
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| RHEL 6 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        RHEL 7
-      </td>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| RHEL 7 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        RHEL 8
-      </td>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| RHEL 8 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        Ubuntu, 14.04 or lower
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| Ubuntu, 14.04 or lower | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        Ubuntu, 16.04 or higher
-      </td>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| Ubuntu, 16.04 or higher | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        SLES 12
-      </td>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| SLES 12 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "right" }}>
-        SLES 11
-      </td>
-
-      <td style={{ textAlign: "center" }}/>
-
-      <td style={{ textAlign: "center" }}>
-        <Icon
+        /> |
+| SLES 11 | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
+        /> |
 
-      <td style={{ textAlign: "center" }}/>
-    </tr>
-  </tbody>
-</table>
 
 ## Configuration management tools [#config-mgmt]
 

@@ -123,83 +123,19 @@ If Capistrano is running the deployment notification recipe on a remote build ma
 
 You can customize some deployment information by using Capistrano variables. If defined, these will override the defaults. These apply to both Capistrano 2 and 3.
 
-<table>
-  <thead>
-    <tr>
-      <th width={230}>
-        Capistrano 2 and 3 variables
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Capistrano 2 and 3 variables | Description |
+| - | - |
+| `newrelic_appname` | The app where the deployment will appear. By default this comes from the definition in the `newrelic.yml` file for the given `rails_env`.
 
-  <tbody>
-    <tr>
-      <td>
-        `newrelic_appname`
-      </td>
+        If you set this value from the command line, you can only specify one application name. If you set this value in `newrelic.yml`, only the first application name will be used. |
+| `newrelic_changelog` | The change log, which is determined by running the svn/git `log` command from the local working directory where the Capistrano command was issued. |
+| `newrelic_desc` | Descriptive text that appears with the deployment. Default is empty. |
+| `newrelic_license_key` | The New Relic  to use. By default this comes from the definition in the `newrelic.yml` file for the given `rails_env`. This is **not** the same as your [API key](/docs/apis/getting-started/intro-apis/access-rest-api-keys). |
+| `newrelic_revision` | The revision recorded for the deployment. Recommendation: If you are using Subversion, consider including the tag or branch name in addition to the revision. |
+| `newrelic_user` | The user to associate with the deployment. |
 
-      <td>
-        The app where the deployment will appear. By default this comes from the definition in the `newrelic.yml` file for the given `rails_env`.
-
-        If you set this value from the command line, you can only specify one application name. If you set this value in `newrelic.yml`, only the first application name will be used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `newrelic_changelog`
-      </td>
-
-      <td>
-        The change log, which is determined by running the svn/git `log` command from the local working directory where the Capistrano command was issued.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `newrelic_desc`
-      </td>
-
-      <td>
-        Descriptive text that appears with the deployment. Default is empty.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `newrelic_license_key`
-      </td>
-
-      <td>
-        The New Relic <InlinePopover type="licenseKey"/> to use. By default this comes from the definition in the `newrelic.yml` file for the given `rails_env`. This is **not** the same as your [API key](/docs/apis/getting-started/intro-apis/access-rest-api-keys).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `newrelic_revision`
-      </td>
-
-      <td>
-        The revision recorded for the deployment. Recommendation: If you are using Subversion, consider including the tag or branch name in addition to the revision.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `newrelic_user`
-      </td>
-
-      <td>
-        The user to associate with the deployment.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Override Capistrano settings [#override]
 

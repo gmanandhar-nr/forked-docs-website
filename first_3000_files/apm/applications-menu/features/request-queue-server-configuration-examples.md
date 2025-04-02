@@ -31,43 +31,14 @@ Configuring with Nginx 1.2.6 or higher uses the `${msec}` variable, which is a n
 
 Add the appropriate information to your Nginx config:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Nginx configuration**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Values**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        General Nginx use
-      </td>
-
-      <td>
-        ```
+| **Nginx configuration** | **Values** |
+| - | - |
+| General Nginx use | ```
         proxy_set_header X-Request-Start "t=${msec}";
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Passenger
-      </td>
-
-      <td>
-        Version 5 or higher:
+        ``` |
+| Passenger | Version 5 or higher:
 
         ```
         >passenger_set_header X-REQUEST-START "t=${msec}";
@@ -77,35 +48,14 @@ Add the appropriate information to your Nginx config:
 
         ```
         passenger_set_cgi_param X_REQUEST_START "t=${msec}";
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        fastcgi
-      </td>
-
-      <td>
-        ```
+        ``` |
+| fastcgi | ```
         fastcgi_param HTTP_X_REQUEST_START "t=${msec}";
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        uWSGI
-      </td>
-
-      <td>
-        ```
+        ``` |
+| uWSGI | ```
         uwsgi_param HTTP_X_REQUEST_START "t=${msec}";
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 ## F5 load balancers [#f5]
 

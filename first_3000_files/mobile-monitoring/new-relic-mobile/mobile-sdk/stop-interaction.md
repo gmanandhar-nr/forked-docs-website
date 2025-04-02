@@ -83,40 +83,13 @@ NewRelic. endInteraction(id : String!)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `interactionID` | `string` | Required. The value returned by `startInteraction`.
+              It is required to pass this string to manually complete the interaction trace. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `interactionID`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The value returned by `startInteraction`.
-              It is required to pass this string to manually complete the interaction trace.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Example [#example]
 

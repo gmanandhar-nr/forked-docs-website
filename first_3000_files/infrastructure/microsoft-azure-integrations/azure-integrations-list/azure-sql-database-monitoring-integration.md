@@ -43,85 +43,17 @@ To [explore your integration data](/docs/infrastructure/integrations/find-use-in
 
 Data is organized like this:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Azure SQL Database data**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Organized in New Relic**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Azure SQL Database data** | **Organized in New Relic** |
+| - | - |
+| Single database | * Data about a single database is attached to `AzureSqlDatabaseSample` event type. |
+| Elastic pool | * Data about an elastic pool is attached to `AzureSqlElasticPoolSample`event type. |
+| Firewall | * Data about a firewall is attached to `AzureSqlFirewallSample` event type. |
+| Database replication link | * Data about a database replication link is attached to `AzureSqlReplicationLinkSample` event type. |
+| Database restore point | * Data about a database restore point is attached to `AzureSqlRestorePointSample` event type. |
+| Logical server | * Data about a logical server is attached to `AzureSqlServerSample` event type. |
 
-  <tbody>
-    <tr>
-      <td>
-        Single database
-      </td>
-
-      <td>
-        * Data about a single database is attached to `AzureSqlDatabaseSample` event type.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Elastic pool
-      </td>
-
-      <td>
-        * Data about an elastic pool is attached to `AzureSqlElasticPoolSample`event type.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Firewall
-      </td>
-
-      <td>
-        * Data about a firewall is attached to `AzureSqlFirewallSample` event type.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Database replication link
-      </td>
-
-      <td>
-        * Data about a database replication link is attached to `AzureSqlReplicationLinkSample` event type.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Database restore point
-      </td>
-
-      <td>
-        * Data about a database restore point is attached to `AzureSqlRestorePointSample` event type.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Logical server
-      </td>
-
-      <td>
-        * Data about a logical server is attached to `AzureSqlServerSample` event type.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Metric data [#metrics]
 

@@ -41,71 +41,25 @@ newrelic.agent.asgi_application(application=None, name=None, group=None, framewo
 
 The `asgi_application` decorator uses these parameters:
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `application`
 
-  <tbody>
-    <tr>
-      <td>
-        `application`
+        _string_, or _application object_ | Optional. The application name to associate with this data. Default is `None`. If left without a value, the agent uses the application name [specified in the agent configuration](/docs/agents/python-agent/installation-configuration/python-agent-configuration#app_name).
 
-        _string_, or _application object_
-      </td>
+        If a string is provided, it must be the exact application name and cannot be a list of application names. For more on generating an application object, see the [`application`](/docs/agents/python-agent/python-agent-api/application) method. |
+| `name`
 
-      <td>
-        Optional. The application name to associate with this data. Default is `None`. If left without a value, the agent uses the application name [specified in the agent configuration](/docs/agents/python-agent/installation-configuration/python-agent-configuration#app_name).
+        _string_ | Optional, rarely used. Sets a transaction name for all requests captured via the ASGI entry point. Generally not used, because you usually would not want all transactions to have the same name (see also [Metric grouping issue](/docs/agents/manage-apm-agents/troubleshooting/metric-grouping-issues)). |
+| `group`
 
-        If a string is provided, it must be the exact application name and cannot be a list of application names. For more on generating an application object, see the [`application`](/docs/agents/python-agent/python-agent-api/application) method.
-      </td>
-    </tr>
+        _string_ | Optional, rarely used. The `group` represents the naming structure for the `name` parameter. Setting this creates a [transaction type subcategory](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions). Similar to `name`, this should be rarely used because you usually do not want the entire application to report as one transaction name or category. |
+| `framework`
 
-    <tr>
-      <td>
-        `name`
+        _tuple_ | Optional. A tuple with two strings representing the name of the framework and the version number. For example: `('Flask', '0.12.2')` |
 
-        _string_
-      </td>
-
-      <td>
-        Optional, rarely used. Sets a transaction name for all requests captured via the ASGI entry point. Generally not used, because you usually would not want all transactions to have the same name (see also [Metric grouping issue](/docs/agents/manage-apm-agents/troubleshooting/metric-grouping-issues)).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `group`
-
-        _string_
-      </td>
-
-      <td>
-        Optional, rarely used. The `group` represents the naming structure for the `name` parameter. Setting this creates a [transaction type subcategory](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions). Similar to `name`, this should be rarely used because you usually do not want the entire application to report as one transaction name or category.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `framework`
-
-        _tuple_
-      </td>
-
-      <td>
-        Optional. A tuple with two strings representing the name of the framework and the version number. For example: `('Flask', '0.12.2')`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Wrapper parameters
 

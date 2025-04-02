@@ -69,36 +69,17 @@ If no data appears after you enable our <InlinePopover type="logs"/> capabilitie
 
 When creating your HTTP headers, use these guidelines:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Header
-      </th>
+# Table
 
-      <th>
-        Supported values
-      </th>
-    </tr>
-  </thead>
+| Header | Supported values |
+| - | - |
+| `Content-Type`
 
-  <tbody>
-    <tr>
-      <td>
-        `Content-Type`
-
-        Required
-      </td>
-
-      <td>
-        * `application/json`
+        Required | * `application/json`
         * `json`
         * `application/gzip`
-        * `gzip`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `gzip` |
+
 
 Gzipped JSON formatting is accepted. If sending compressed JSON, please include the `Content-Type: application/json` and `Content-Encoding: gzip` headers.
 

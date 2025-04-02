@@ -20,61 +20,15 @@ The [New Relic Go agent](/docs/agents/go-agent/get-started/introduction-new-reli
 
 Before you manually instrument your code to monitor [transactions](/docs/apm/transactions/intro-transactions/transactions-new-relic-apm), make sure that you meet the [compatibility and requirements](/docs/agents/go-agent/get-started/go-agent-compatibility-requirements) and that you are using the [latest version of the Go agent](/docs/release-notes/agent-release-notes/go-release-notes).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "350px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Use this method...
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Use this method... |
+| - | - |
+| Start timing a transaction | [`StartTransaction()`](/docs/agents/go-agent/get-started/instrument-go-transactions#go-txn) |
+| Stop timing a transaction | [`txn.End()`](/docs/agents/go-agent/get-started/instrument-go-transactions#go-txn) |
+| Prevent a transaction from reporting to New Relic | [`Ignore()`](https://godoc.org/github.com/newrelic/go-agent/v3/newrelic#Transaction.Ignore) |
+| Use the standard HTTP library package to monitor transactions | [HTTP request wrapping](/docs/agents/go-agent/get-started/instrument-go-transactions#http-handler-txns) |
 
-  <tbody>
-    <tr>
-      <td>
-        Start timing a transaction
-      </td>
-
-      <td>
-        [`StartTransaction()`](/docs/agents/go-agent/get-started/instrument-go-transactions#go-txn)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Stop timing a transaction
-      </td>
-
-      <td>
-        [`txn.End()`](/docs/agents/go-agent/get-started/instrument-go-transactions#go-txn)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Prevent a transaction from reporting to New Relic
-      </td>
-
-      <td>
-        [`Ignore()`](https://godoc.org/github.com/newrelic/go-agent/v3/newrelic#Transaction.Ignore)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Use the standard HTTP library package to monitor transactions
-      </td>
-
-      <td>
-        [HTTP request wrapping](/docs/agents/go-agent/get-started/instrument-go-transactions#http-handler-txns)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Time specific methods using segments [#segments]
 

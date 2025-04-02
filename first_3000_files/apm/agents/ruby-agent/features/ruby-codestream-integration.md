@@ -22,87 +22,15 @@ First, [install](/docs/codestream/start-here/install-codestream) the New Relic C
 
 The Ruby agent reports and attaches the following attributes to spans produced by your application:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Name**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
+| **Name** | **Description** | **Example** |
+| - | - | - |
+| `code.function` | The name of the instrumented function (Ruby method). Note that class methods will be prefixed by `self.`. | create |
+| `code.filepath` | The absolute path to the source code file in which `code.function` is defined | /app/app/controllers/widgets_controller.rb |
+| `code.lineno` | The line number where `code.function` is defined in code.filepath | 1138 |
+| `code.namespace` | The namespace (class or module name) in which `code.function` is defined | WidgetsController |
 
-      <th>
-        <DNT>
-          **Example**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `code.function`
-      </td>
-
-      <td>
-        The name of the instrumented function (Ruby method). Note that class methods will be prefixed by `self.`.
-      </td>
-
-      <td>
-        create
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.filepath`
-      </td>
-
-      <td>
-        The absolute path to the source code file in which `code.function` is defined
-      </td>
-
-      <td>
-        /app/app/controllers/widgets_controller.rb
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.lineno`
-      </td>
-
-      <td>
-        The line number where `code.function` is defined in code.filepath
-      </td>
-
-      <td>
-        1138
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `code.namespace`
-      </td>
-
-      <td>
-       The namespace (class or module name) in which `code.function` is defined
-      </td>
-
-      <td>
-        WidgetsController
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="important">
   Not every method in your application code will be instrumented with the above attributes. As of version 8.10.0, the Ruby agent will provide code-level metrics for Rails controller methods, `ActiveJob` methods, and any Ruby method which has been configured to be manually traced.

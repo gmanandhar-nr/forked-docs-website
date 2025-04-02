@@ -17,137 +17,19 @@ Labels are metadata or attributes, and there are a few sources of metric labels.
     id="all-targets"
     title="All targets"
   >
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "300px" }}>
-            Label
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
+| Label | Description | Example |
+| - | - | - |
+| `prometheus_server` | Name of the Prometheus instance that scraped the metric. When you install it in Kubernetes, it's the name of the pod. | `prometheus_server: newrelic-prometheus-agent-0` |
+| `instance` | Host and Port of the scraped target. | `instance: 172.17.0.5:8083` |
+| `job` | Name of the scrape job that discovered the target. | `job: kubernetes-job-pod` |
+| `instrumentation.name` | Name of the New Relic instrumentation. | `instrumentation.name: remote-write` |
+| `instrumentation.provider` | Name of the New Relic instrumentation provider. | `instrumentation.provider: prometheus` |
+| `instrumentation.source` | It matches the name in `prometheus_server`. | `instrumentation.source: newrelic-prometheus-agent-0` |
+| `instrumentation.version` | Version of the New Relic remote-write endpoint API. | `instrumentation.version: 0.0.2` |
+| `newrelic.source` | Name of the New Relic instrumentation source. | `newrelic.source: prometheusAPI` |
 
-          <th>
-            Example
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            `prometheus_server`
-          </td>
-
-          <td>
-            Name of the Prometheus instance that scraped the metric. When you install it in Kubernetes, it's the name of the pod.
-          </td>
-
-          <td>
-            `prometheus_server: newrelic-prometheus-agent-0`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `instance`
-          </td>
-
-          <td>
-            Host and Port of the scraped target.
-          </td>
-
-          <td>
-            `instance: 172.17.0.5:8083`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `job`
-          </td>
-
-          <td>
-            Name of the scrape job that discovered the target.
-          </td>
-
-          <td>
-            `job: kubernetes-job-pod`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `instrumentation.name`
-          </td>
-
-          <td>
-            Name of the New Relic instrumentation.
-          </td>
-
-          <td>
-            `instrumentation.name: remote-write`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `instrumentation.provider`
-          </td>
-
-          <td>
-            Name of the New Relic instrumentation provider.
-          </td>
-
-          <td>
-            `instrumentation.provider: prometheus`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `instrumentation.source`
-          </td>
-
-          <td>
-            It matches the name in `prometheus_server`.
-          </td>
-
-          <td>
-            `instrumentation.source: newrelic-prometheus-agent-0`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `instrumentation.version`
-          </td>
-
-          <td>
-            Version of the New Relic remote-write endpoint API.
-          </td>
-
-          <td>
-            `instrumentation.version: 0.0.2`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `newrelic.source`
-          </td>
-
-          <td>
-            Name of the New Relic instrumentation source.
-          </td>
-
-          <td>
-            `newrelic.source: prometheusAPI`
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

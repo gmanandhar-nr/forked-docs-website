@@ -113,59 +113,22 @@ To learn more:
 
 These attributes are meant to be synthesized from the telemetry we receive. Do not set them unless you're aware of the implications and consequences.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Attribute | Description |
+| - | - |
+| `entity.guid` | Generally, you should not set this attribute field on your telemetry data. New Relic may add this field to ingested data to store a unique identifier for the entity associated with the data point. If telemetry arrives with the `entity.guid` attribute already present, then New Relic will not change the value. However, it may cause undefined behavior such as missing entities in the UI, or telemetry not associating with the expected entities.
 
-  <tbody>
-    <tr>
-      <td>
-        `entity.guid`
-      </td>
+        One use case for passing this attribute is to associate ingested telemetry with an entity that we already monitor. When the `entity.guid` attribute is sent, the value will override our entity identification system (such as entity synthesis definitions) and instead will use the attribute as the data. |
+| `entity.name` | This attribute shouldn't be put on ingested telemetry data unless you're trying to override the entity name that would have been selected by our entity identification system. While we won't change the value if it's already present on the data, we may add the attribute to your data. Therefore invalid or unexpected values may cause undefined behavior such as missing entities in the UI, or telemetry not associating with the expected entities.
 
-      <td>
-        Generally, you should not set this attribute field on your telemetry data. New Relic may add this field to ingested data to store a unique identifier for the entity associated with the data point. If telemetry arrives with the `entity.guid` attribute already present, then New Relic will not change the value. However, it may cause undefined behavior such as missing entities in the UI, or telemetry not associating with the expected entities.
-
-        One use case for passing this attribute is to associate ingested telemetry with an entity that we already monitor. When the `entity.guid` attribute is sent, the value will override our entity identification system (such as entity synthesis definitions) and instead will use the attribute as the data.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `entity.name`
-      </td>
-
-      <td>
-        This attribute shouldn't be put on ingested telemetry data unless you're trying to override the entity name that would have been selected by our entity identification system. While we won't change the value if it's already present on the data, we may add the attribute to your data. Therefore invalid or unexpected values may cause undefined behavior such as missing entities in the UI, or telemetry not associating with the expected entities.
-
-        If this field is present on ingested telemetry, its value will be used to name the entity associated with the data point. This name will be used instead of the name selected by our entity identification system (for example, [entity synthesis definitions](https://github.com/newrelic/entity-definitions#entity-definitions)). Note that many entities use the name as part of their identification, so changing this field may result in the generation of a new entity.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `entity.type`
-      </td>
-
-      <td>
-        This attribute shouldn't be put on ingested telemetry data except for certain legacy cases where it's required to distinguish entity types. Passing this field may interfere with entity detection, particularly if unrecognized values are sent in this field.
+        If this field is present on ingested telemetry, its value will be used to name the entity associated with the data point. This name will be used instead of the name selected by our entity identification system (for example, [entity synthesis definitions](https://github.com/newrelic/entity-definitions#entity-definitions)). Note that many entities use the name as part of their identification, so changing this field may result in the generation of a new entity. |
+| `entity.type` | This attribute shouldn't be put on ingested telemetry data except for certain legacy cases where it's required to distinguish entity types. Passing this field may interfere with entity detection, particularly if unrecognized values are sent in this field.
 
         While New Relic won't change the value if already present on the data, the field is not guaranteed to provide unambiguous filtering of telemetry at query-time. Existing entity definitions already have overlapping values, and we recommend avoiding `entity.type` in favor of other fields for filtering telemetry queries.
 
-        This field is used by New Relic, meaning that invalid or unexpected values may cause undefined behavior such as missing entities in the UI, or telemetry not associating with the expected entities.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        This field is used by New Relic, meaning that invalid or unexpected values may cause undefined behavior such as missing entities in the UI, or telemetry not associating with the expected entities. |
+
 
 To learn how to do the work of modifying existing entity types or creating new ones, see [our GitHub repo on entity synthesis](https://github.com/newrelic/entity-definitions#entity-definitions).
 

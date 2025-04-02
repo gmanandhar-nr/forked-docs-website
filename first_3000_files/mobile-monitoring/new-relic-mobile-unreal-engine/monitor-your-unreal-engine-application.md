@@ -94,69 +94,17 @@ Need to customize your agent instrumentation? Our public mobile SDK API methods 
 
 The following customizations are available for the Unreal Engine Plugin.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Use this method
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Use this method |
+| - | - |
+| Record breadcrumbs to track app activity that may be helpful for troubleshooting crashes. | [Record breadcrumbs](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-breadcrumb/#unreal) |
+| Track a method as an interaction. | [Start interactions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/start-interaction/#unreal)
 
-  <tbody>
-    <tr>
-      <td id="crash-analysis">
-        Record breadcrumbs to track app activity that may be helpful for troubleshooting crashes.
-      </td>
-
-      <td>
-        [Record breadcrumbs](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-breadcrumb/#unreal)
-      </td>
-    </tr>
-
-    <tr>
-      <td id="creating">
-        Track a method as an interaction.
-      </td>
-
-      <td>
-        [Start interactions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/start-interaction/#unreal)
-
-        [Stop interactions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/stop-interaction/#unreal)
-      </td>
-    </tr>
-
-    <tr>
-      <td id="create-custom">
-        Record custom metrics.
-      </td>
-
-      <td>
-        [Record custom metrics](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-custom-metrics//#unreal)
-      </td>
-    </tr>
-
-    <tr>
-      <td id="create-custom">
-        Record an exception.
-      </td>
-
-      <td>
-        [Record errors](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-handled-exceptions/#unreal)
-      </td>
-    </tr>
-
-    <tr>
-      <td id="attributes-events-insights">
-        Record custom attributes and events.
-      </td>
-
-      <td>
-        There are several ways to report custom attributes and events:
+        [Stop interactions](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/stop-interaction/#unreal) |
+| Record custom metrics. | [Record custom metrics](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-custom-metrics//#unreal) |
+| Record an exception. | [Record errors](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-handled-exceptions/#unreal) |
+| Record custom attributes and events. | There are several ways to report custom attributes and events:
 
         * [Record custom attributes](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/create-attribute/#unreal)
         * [Increment session attribute count](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/increment-session-attribute-count/#unreal)
@@ -168,31 +116,10 @@ The following customizations are available for the Unreal Engine Plugin.
         * [Get a current session's ID](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/current-session-id/#unreal)
         * [Set a custom user ID to associate with events and attributes](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/set-custom-user-id/#unreal)
 
-        To determine which method to use, see [Report mobile monitoring custom events and attributes](/docs/data-apis/custom-data/custom-events/report-mobile-monitoring-custom-events-attributes/).
-      </td>
-    </tr>
+        To determine which method to use, see [Report mobile monitoring custom events and attributes](/docs/data-apis/custom-data/custom-events/report-mobile-monitoring-custom-events-attributes/). |
+| Shut down the agent. | [Shut down the agent](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/shut-down-agent/#unreal) |
+| Run a test crash report. | [Test crash reporting](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/test-crash-reporting/#unreal) |
 
-    <tr>
-      <td>
-        Shut down the agent.
-      </td>
-
-      <td>
-        [Shut down the agent](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/shut-down-agent/#unreal)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Run a test crash report.
-      </td>
-
-      <td>
-        [Test crash reporting](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/test-crash-reporting/#unreal)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Monitor C++ errors [#monitor-errors]
 

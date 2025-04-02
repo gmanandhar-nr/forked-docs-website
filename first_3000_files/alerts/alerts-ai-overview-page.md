@@ -21,91 +21,18 @@ The <DNT>**Overview**</DNT> and <DNT>**Issues & activity**</DNT> pages provide a
 
 The overview page shows a high-level view of recent and current alerts incidents. With this page, you'll get quick insight into how many critical incidents you have, how many have been closed, and which policies are creating the most incidents. This page also shows the top sources of your muted incidents.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Dashboard title
-      </th>
+# Table
 
-      <th>
-        What it is
-      </th>
-    </tr>
-  </thead>
+| Dashboard title | What it is |
+| - | - |
+| Opened incidents by priority (time series) | A time series view that counts the number of incidents opened during a time period. This chart only tracks open events. It doesn't track the open or closed state of the incident. |
+| Opened incidents by priority (pie) | This chart uses the same data as the time series chart of the same name. It quickly shows you the breakdown between warning and critical incidents. Click the pie chart to filter the whole page by warning or critical incidents. |
+| Closed incident durations | A distribution of how long each incident was open (duration), before being closed. Generally, it's better to have shorter durations for your incidents. If you're seeing a lot of long duration incidents, you may want to write a custom filter to investigate those more deeply. |
+| Muted incidents | If you've written some muting rules, you'll see them here. If you're not using any muting rules, you'll see 100% “Not muted” incidents. Click this chart to filter by muted incidents to quickly see where they're coming from. |
+| Top policies creating incidents | A chart of the top five policies generating the most incidents. Click a policy name to filter the whole page by that policy's incidents. |
+| Top conditions creating incidents | A chart of the top five conditions generating the most incidents. Click a policy name to filter the whole page by that condition's incidents. |
+| Top sources of incidents | A chart of the entities generating the most incidents. If available, it uses the entity name. Otherwise, it will use the event type. Click an entity to filter the whole page by that entity's incidents. |
 
-  <tbody>
-    <tr>
-      <td>
-        Opened incidents by priority (time series)
-      </td>
-
-      <td>
-        A time series view that counts the number of incidents opened during a time period. This chart only tracks open events. It doesn't track the open or closed state of the incident.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Opened incidents by priority (pie)
-      </td>
-
-      <td>
-        This chart uses the same data as the time series chart of the same name. It quickly shows you the breakdown between warning and critical incidents. Click the pie chart to filter the whole page by warning or critical incidents.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Closed incident durations
-      </td>
-
-      <td>
-        A distribution of how long each incident was open (duration), before being closed. Generally, it's better to have shorter durations for your incidents. If you're seeing a lot of long duration incidents, you may want to write a custom filter to investigate those more deeply.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Muted incidents
-      </td>
-
-      <td>
-        If you've written some muting rules, you'll see them here. If you're not using any muting rules, you'll see 100% “Not muted” incidents. Click this chart to filter by muted incidents to quickly see where they're coming from.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Top policies creating incidents
-      </td>
-
-      <td>
-        A chart of the top five policies generating the most incidents. Click a policy name to filter the whole page by that policy's incidents.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Top conditions creating incidents
-      </td>
-
-      <td>
-        A chart of the top five conditions generating the most incidents. Click a policy name to filter the whole page by that condition's incidents.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Top sources of incidents
-      </td>
-
-      <td>
-        A chart of the entities generating the most incidents. If available, it uses the entity name. Otherwise, it will use the event type. Click an entity to filter the whole page by that entity's incidents.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Issues
 

@@ -31,95 +31,16 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data is attached to the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Port | `AzureExpressRoutePortSample` | `AzureExpressRoutePort` |
+| Circuit | `AzureExpressRouteCircuitSample` | `AzureExpressRouteCircuit` |
+| Peering | `AzureExpressRoutePeeringSample` | `AzureExpressRoutePeering` |
+| Connection | `AzureExpressRouteConnectionSample` | `AzureExpressRouteConnection` |
+| Gateway | `AzureExpressRouteGatewaySample` | `AzureExpressRouteGateway` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Port
-      </td>
-
-      <td>
-        `AzureExpressRoutePortSample`
-      </td>
-
-      <td>
-        `AzureExpressRoutePort`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Circuit
-      </td>
-
-      <td>
-        `AzureExpressRouteCircuitSample`
-      </td>
-
-      <td>
-        `AzureExpressRouteCircuit`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Peering
-      </td>
-
-      <td>
-        `AzureExpressRoutePeeringSample`
-      </td>
-
-      <td>
-        `AzureExpressRoutePeering`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Connection
-      </td>
-
-      <td>
-        `AzureExpressRouteConnectionSample`
-      </td>
-
-      <td>
-        `AzureExpressRouteConnection`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Gateway
-      </td>
-
-      <td>
-        `AzureExpressRouteGatewaySample`
-      </td>
-
-      <td>
-        `AzureExpressRouteGateway`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

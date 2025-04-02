@@ -25,55 +25,14 @@ Our <DNT>**Instrumentation**</DNT> editor allows .NET app users to implement cus
 
 To use the <DNT>**Instrumentation**</DNT> editor, you must meet the following requirements:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Requirements**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Requirements** | **Comments** |
+| - | - |
+| Agent | .NET agent version 7.0.2 or higher |
+| [Account role](/docs/accounts-partnerships/accounts/roles-permissions/users-roles#roles) | Owner or Admin |
+| Security | Users of [high-security mode](/docs/agents/manage-apm-agents/configuration/high-security-mode) cannot use the **Instrumentation** editor to update instrumentation of their app. |
 
-  <tbody>
-    <tr>
-      <td>
-        Agent
-      </td>
-
-      <td>
-        .NET agent version 7.0.2 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Account role](/docs/accounts-partnerships/accounts/roles-permissions/users-roles#roles)
-      </td>
-
-      <td>
-        Owner or Admin
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Security
-      </td>
-
-      <td>
-        Users of [high-security mode](/docs/agents/manage-apm-agents/configuration/high-security-mode) cannot use the <DNT>**Instrumentation**</DNT> editor to update instrumentation of their app.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Define custom instrumentation [#defining]
 

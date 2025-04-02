@@ -54,263 +54,28 @@ For more on how to use your data, see [Understand and use integration data](/doc
 
 New Relic collects the following Amazon Redshift data. For full descriptions of each metric, see Amazon's [Redshift documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/rs-metricscollected.html).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "275px" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Data type
-      </th>
+| Name | Data type | Dimension |
+| - | - | - |
+| `CPUUtilization` | percent | `NodeID, ClusterIdentifier` |
+| `DatabaseConnections` | count | `ClusterIdentifier` |
+| `HealthStatus` | 1/0 (`HEALTHY`/`UNHEALTHY` in the Amazon CloudWatch console) | `ClusterIdentifier` |
+| `MaintenanceMode` | 1/0 (`ON`/`OFF` in the Amazon CloudWatch console) | `ClusterIdentifier` |
+| `NetworkReceiveThroughput` | bytes/seconds (`MB/s` in the Amazon CloudWatch console) | `NodeID`, `ClusterIdentifier` |
+| `NetworkTransmitThroughput` | bytes/seconds (`MB/s` in the Amazon CloudWatch console) | `NodeID`, `ClusterIdentifier` |
+| `PercentageDiskSpaceUsed` | percent | `NodeID`, `ClusterIdentifier` |
+| `QueriesCompletedPerSecond` | count/second (for multi-node clusters) | `latency`, `ClusterIdentifier` |
+| `QueryDuration` | microseconds (for multi-node clusters) | `latency`, `ClusterIdentifier` |
+| `ReadIOPS` | count/second | `NodeID`, `ClusterIdentifier` |
+| `ReadLatency` | seconds | `NodeID` |
+| `ReadThroughput` | bytes (`GB/s` in the Amazon CloudWatch console) | `NodeID` |
+| `WLMQueriesCompletedPerSecond` | count/second (for multi-node clusters) | `ClusterIdentifier` |
+| `WLMQueryDuration` | Microseconds (for multi-node clusters) | `ClusterIdentifier` |
+| `WriteIOPS` | count/seconds | `NodeID` |
+| `WriteLatency` | seconds | `NodeID` |
+| `WriteThroughput` | bytes (`GB/s` in the Amazon CloudWatch console) | `NodeID` |
 
-      <th>
-        Dimension
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `CPUUtilization`
-      </td>
-
-      <td>
-        percent
-      </td>
-
-      <td>
-        `NodeID, ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DatabaseConnections`
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HealthStatus`
-      </td>
-
-      <td>
-        1/0 (`HEALTHY`/`UNHEALTHY` in the Amazon CloudWatch console)
-      </td>
-
-      <td>
-        `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MaintenanceMode`
-      </td>
-
-      <td>
-        1/0 (`ON`/`OFF` in the Amazon CloudWatch console)
-      </td>
-
-      <td>
-        `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkReceiveThroughput`
-      </td>
-
-      <td>
-        bytes/seconds (`MB/s` in the Amazon CloudWatch console)
-      </td>
-
-      <td>
-        `NodeID`, `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NetworkTransmitThroughput`
-      </td>
-
-      <td>
-        bytes/seconds (`MB/s` in the Amazon CloudWatch console)
-      </td>
-
-      <td>
-        `NodeID`, `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PercentageDiskSpaceUsed`
-      </td>
-
-      <td>
-        percent
-      </td>
-
-      <td>
-        `NodeID`, `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `QueriesCompletedPerSecond`
-      </td>
-
-      <td>
-        count/second (for multi-node clusters)
-      </td>
-
-      <td>
-        `latency`, `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `QueryDuration`
-      </td>
-
-      <td>
-        microseconds (for multi-node clusters)
-      </td>
-
-      <td>
-        `latency`, `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReadIOPS`
-      </td>
-
-      <td>
-        count/second
-      </td>
-
-      <td>
-        `NodeID`, `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReadLatency`
-      </td>
-
-      <td>
-        seconds
-      </td>
-
-      <td>
-        `NodeID`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReadThroughput`
-      </td>
-
-      <td>
-        bytes (`GB/s` in the Amazon CloudWatch console)
-      </td>
-
-      <td>
-        `NodeID`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WLMQueriesCompletedPerSecond`
-      </td>
-
-      <td>
-        count/second (for multi-node clusters)
-      </td>
-
-      <td>
-        `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WLMQueryDuration`
-      </td>
-
-      <td>
-        Microseconds (for multi-node clusters)
-      </td>
-
-      <td>
-        `ClusterIdentifier`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WriteIOPS`
-      </td>
-
-      <td>
-        count/seconds
-      </td>
-
-      <td>
-        `NodeID`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WriteLatency`
-      </td>
-
-      <td>
-        seconds
-      </td>
-
-      <td>
-        `NodeID`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WriteThroughput`
-      </td>
-
-      <td>
-        bytes (`GB/s` in the Amazon CloudWatch console)
-      </td>
-
-      <td>
-        `NodeID`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Dimensions Amazon Redshift metrics [#dimensions]
 

@@ -150,43 +150,14 @@ Here is the structure for rules in New Relic's Node.js agent.
 
     Additional optional attributes are available:
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            <DNT>
-              **Optional rules attributes**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Description**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| **Optional rules attributes** | **Description** |
+| - | - |
+| `terminate_chain` | Default: `true`
 
-      <tbody>
-        <tr>
-          <td>
-            `terminate_chain`
-          </td>
-
-          <td>
-            Default: `true`
-
-            When set to `true` (default), no further rules will be evaluated if this rule is a match. Setting this to false is useful when multiple rules should be used together. For example, one rule could be replacing a common pattern in many different URLs, while subsequent rule(s) would be more specific.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `replace_all`
-          </td>
-
-          <td>
-            Default: `false`
+            When set to `true` (default), no further rules will be evaluated if this rule is a match. Setting this to false is useful when multiple rules should be used together. For example, one rule could be replacing a common pattern in many different URLs, while subsequent rule(s) would be more specific. |
+| `replace_all` | Default: `false`
 
             When set to `true`, all matches of the pattern will be replaced. Otherwise, only the first match will be replaced. Using the `g` flag with regular expression literal will have the same effect. For example:
 
@@ -195,23 +166,11 @@ Here is the structure for rules in New Relic's Node.js agent.
             replace_all: true
             ```
 
-            This has the same effect as `pattern: /[0-9]+/g`.
-          </td>
-        </tr>
+            This has the same effect as `pattern: /[0-9]+/g`. |
+| `precedence` | By default the rules are evaluated in order, from first to last. If you prefer to have complete control over the order, you can give each rule a `precedence` attribute. The precedence is an integer number, and rules are evaluated in ascending order. If `precedence` is not explicitly defined, it will be set to 500 by default.
 
-        <tr>
-          <td>
-            `precedence`
-          </td>
+            Additional attributes are ignored. |
 
-          <td>
-            By default the rules are evaluated in order, from first to last. If you prefer to have complete control over the order, you can give each rule a `precedence` attribute. The precedence is an integer number, and rules are evaluated in ascending order. If `precedence` is not explicitly defined, it will be set to 500 by default.
-
-            Additional attributes are ignored.
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     ## Testing your naming rules [#testing-naming-rules]
 

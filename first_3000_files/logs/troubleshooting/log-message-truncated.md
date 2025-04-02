@@ -23,47 +23,13 @@ This occurs because the logs datastore in New Relic limits the field length to 4
 
 If you have values exceeding the character limit, here are some options to try:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Troubleshooting tips
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Parse long messages
-      </td>
-
-      <td>
-        Parse your log message into shorter key/value pairs. A common example is a single log line from an NGINX access log. That log message can be parsed using built-in parsing via [Logstash](https://www.elastic.co/guide/en/logstash/7.9/logstash-config-for-filebeat-modules.html), [Fluentd](https://docs.fluentd.org/parser/nginx), or [Fluent Bit](https://fluentbit.io/documentation/0.12/parser/). For more information, see our documentation about [parsing log data](/docs/logs/log-management/ui-data/parsing/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Use JSON output
-      </td>
-
-      <td>
-        Use JSON as an output format instead of plain text. JSON log messages will automatically be parsed into key/value pairs, which makes it much less likely to hit the character limit.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Expand blob data
-      </td>
-
-      <td>
-        The first 4,094 characters in a log message are stored as a string. The next 128,000 bytes are stored as a `blob`.
+| Troubleshooting tips | Comments |
+| - | - |
+| Parse long messages | Parse your log message into shorter key/value pairs. A common example is a single log line from an NGINX access log. That log message can be parsed using built-in parsing via [Logstash](https://www.elastic.co/guide/en/logstash/7.9/logstash-config-for-filebeat-modules.html), [Fluentd](https://docs.fluentd.org/parser/nginx), or [Fluent Bit](https://fluentbit.io/documentation/0.12/parser/). For more information, see our documentation about [parsing log data](/docs/logs/log-management/ui-data/parsing/). |
+| Use JSON output | Use JSON as an output format instead of plain text. JSON log messages will automatically be parsed into key/value pairs, which makes it much less likely to hit the character limit. |
+| Expand blob data | The first 4,094 characters in a log message are stored as a string. The next 128,000 bytes are stored as a `blob`.
 
         To query for logs that have likely exceeded this storage limit in New Relic, run the following query:
 
@@ -78,8 +44,5 @@ If you have values exceeding the character limit, here are some options to try:
         FROM Log
         ```
 
-        For more information, see our documentation about [long messages stored as blobs](/docs/logs/log-management/ui-data/long-logs-blobs/).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        For more information, see our documentation about [long messages stored as blobs](/docs/logs/log-management/ui-data/long-logs-blobs/). |
+

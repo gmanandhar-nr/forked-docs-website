@@ -62,54 +62,17 @@ To forward your logs to New Relic with our [Logstash plugin](https://github.com/
 
 After you install and configure the Logstash plugin, you can use the following attributes to configure how the plugin sends data to New Relic. For more information on adding or configuring attributes, see our [Logstash configuration examples in GitHub](https://github.com/newrelic/logstash-examples/blob/master/README.md#example-configurations-for-logstash).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Property
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `concurrent_requests`
-      </td>
-
-      <td>
-        The number of threads to make requests from. Default: `1`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `base_uri`
-      </td>
-
-      <td>
-        The New Relic ingestion endpoint.
+| Property | Description |
+| - | - |
+| `concurrent_requests` | The number of threads to make requests from. Default: `1` |
+| `base_uri` | The New Relic ingestion endpoint.
 
         * US endpoint: `https://log-api.newrelic.com/log/v1`
-        * EU endpoint: `https://log-api.eu.newrelic.com/log/v1`
-      </td>
-    </tr>
+        * EU endpoint: `https://log-api.eu.newrelic.com/log/v1` |
+| `max_retries` | Maximum number attempts to retry to send a message. If set to `0`, no re-attempts will be made. Default: `3` |
 
-    <tr>
-      <td>
-        `max_retries`
-      </td>
-
-      <td>
-        Maximum number attempts to retry to send a message. If set to `0`, no re-attempts will be made. Default: `3`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Test the Logstash plugin [#test-plugin]
 

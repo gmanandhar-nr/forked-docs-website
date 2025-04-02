@@ -41,31 +41,11 @@ New Relic <InlinePopover type="alerts"/> policies help organize alert conditions
 
 We recommend three common organizational patterns for structuring alert policies and conditions:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Policies organized by...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Architecture
-      </td>
-
-      <td>
-        Targets or resources in your organization may have different people responsible for their well-being. Common segments may include the <DNT>**environment**</DNT> type (production, staging, integration, development) or the <DNT>**target or resource**</DNT> type (app server code, client-side code, databases, hosts, etc.).
+| **Policies organized by...** | **Comments** |
+| - | - |
+| Architecture | Targets or resources in your organization may have different people responsible for their well-being. Common segments may include the **environment** type (production, staging, integration, development) or the **target or resource** type (app server code, client-side code, databases, hosts, etc.).
 
         To make these types of policies easier to identify, you can give them names based on your architecture. For example:
 
@@ -73,33 +53,12 @@ We recommend three common organizational patterns for structuring alert policies
         * Product B website (staging)
         * Mobile product app (iOS)
         * Hosts (production)
-        * Databases (production)
-      </td>
-    </tr>
+        * Databases (production) |
+| Teams | Specific teams may be responsible for parts of your architecture. For example, you may want to name their policy `Team: Site engineering`, `Team: Website development`, etc. |
+| Individuals | Policies set up for specific individuals may be useful when they want to personally keep an eye on a particular resource or metric. This provides them the freedom to add and remove conditions as well as adjust thresholds whenever they want, without having to communicate those changes to others.
 
-    <tr>
-      <td>
-        Teams
-      </td>
+        To make these policies easier to identify, you can include the person's name; for example, `User: John Doe's metrics`, `User: Jane Doe (production)`, etc. |
 
-      <td>
-        Specific teams may be responsible for parts of your architecture. For example, you may want to name their policy `Team: Site engineering`, `Team: Website development`, etc.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Individuals
-      </td>
-
-      <td>
-        Policies set up for specific individuals may be useful when they want to personally keep an eye on a particular resource or metric. This provides them the freedom to add and remove conditions as well as adjust thresholds whenever they want, without having to communicate those changes to others.
-
-        To make these policies easier to identify, you can include the person's name; for example, `User: John Doe's metrics`, `User: Jane Doe (production)`, etc.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Create an alert policy [#alert-policy-name]
 

@@ -28,181 +28,21 @@ These Support Plans apply only to your paid service subscription under an existi
   >
     The New Relic usaged-based pricing Support Plan below applies only to a customer's paid subscription on the [New Relic usage-based pricing model](/docs/accounts/accounts-billing/new-relic-one-pricing-billing/new-relic-one-pricing-billing).
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}/>
+    # Table
 
-          <th/>
+| Standard | Pro | Enterprise |
+| - | - | - |
+| **BENEFITS** |
+| Support Forum Community |  |  |  |
+| Documentation |  |  |  |
+| Support Portal Access at support.newrelic.com |  |  |  |
+| Communication Method | Community Forum | Community Forum, Case, Chat | Community Forum, Case, Chat, Phone, Slack |
+| On-Boarding | On-demand video Training | Webinar/Virtual Training | Technical Account Manager |
+| Designated Support Customer Experience Manager |  |
+| Priority Case Routing |  |
+| Critical Date/Event Support |  |
+| Support Escalation 1-Click Away |  |
 
-          <th>
-            Standard
-          </th>
-
-          <th>
-            Pro
-          </th>
-
-          <th>
-            Enterprise
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td colSpan={5}>
-            **BENEFITS**
-          </td>
-        </tr>
-
-        <tr>
-          <td colSpan={2}>
-            Support Forum Community
-          </td>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-        </tr>
-
-        <tr>
-          <td colSpan={2}>
-            Documentation
-          </td>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-        </tr>
-
-        <tr>
-          <td colSpan={2}>
-            Support Portal Access at support.newrelic.com
-          </td>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-        </tr>
-
-        <tr>
-          <td colSpan={2}>
-            Communication Method
-          </td>
-
-          <td>
-            Community Forum
-          </td>
-
-          <td>
-            Community Forum, Case, Chat
-          </td>
-
-          <td>
-            Community Forum, Case, Chat, Phone, Slack
-          </td>
-        </tr>
-
-        <tr>
-          <td colSpan={2}>
-            On-Boarding
-          </td>
-
-          <td>
-            On-demand video Training
-          </td>
-
-          <td>
-            Webinar/Virtual Training
-          </td>
-
-          <td>
-            Technical Account Manager
-          </td>
-        </tr>
-
-        <tr>
-          <td colSpan={2}>
-            Designated Support Customer Experience Manager
-          </td>
-
-          <td/>
-
-          <td/>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-        </tr>
-
-        <tr>
-          <td colSpan={2}>
-            Priority Case Routing
-          </td>
-
-          <td/>
-
-          <td/>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-        </tr>
-
-        <tr>
-          <td colSpan={2}>
-            Critical Date/Event Support
-          </td>
-
-          <td/>
-
-          <td/>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-        </tr>
-
-        <tr>
-          <td colSpan={2}>
-            Support Escalation 1-Click Away
-          </td>
-
-          <td/>
-
-          <td/>
-
-          <td>
-            <Icon name="fe-check"/>
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     ### Response times
 

@@ -33,33 +33,14 @@ To un-suppress a previously suppressed transaction, set the flag to `False`.
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `flag`
 
-  <tbody>
-    <tr>
-      <td>
-        `flag`
+        _boolean_ | Optional. Default is `True`. If a transaction's Apdex has been previously suppressed, you can un-suppress it by setting the flag to `False`. |
 
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Default is `True`. If a transaction's Apdex has been previously suppressed, you can un-suppress it by setting the flag to `False`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

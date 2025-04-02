@@ -71,60 +71,19 @@ Bring your logs and application's data together to make troubleshooting easier a
 
 Other helpful tools include:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Tools**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Browser monitoring
-      </td>
-
-      <td>
-        Integrate the Python agent with [<InlinePopover type="browser"/>](/docs/browser/new-relic-browser/getting-started/new-relic-browser) to gain visibility into end-user browser activity.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Simple scripts and background tasks
-      </td>
-
-      <td>
-        Monitor [job-based or task queuing systems](/docs/agents/python-agent/supported-features/python-background-tasks), like [Celery](/docs/agents/python-agent/back-end-services/python-agent-celery), or other standalone non-web functions.
-      </td>
-    </tr>
-
-    <tr>
-      <td id="business-data">
-        Business data analysis with [data exploration](/docs/query-your-data/explore-query-data/data-explorer/introduction-data-explorer).
-      </td>
-
-      <td>
-        Use the Python agent with [metrics and events](/docs/query-your-data/explore-query-data/data-explorer/introduction-data-explorer) to organize, query, and visualize your data to answer key questions about application performance and customer experience.
+| **Tools** | **Description** |
+| - | - |
+| Browser monitoring | Integrate the Python agent with [](/docs/browser/new-relic-browser/getting-started/new-relic-browser) to gain visibility into end-user browser activity. |
+| Simple scripts and background tasks | Monitor [job-based or task queuing systems](/docs/agents/python-agent/supported-features/python-background-tasks), like [Celery](/docs/agents/python-agent/back-end-services/python-agent-celery), or other standalone non-web functions. |
+| Business data analysis with [data exploration](/docs/query-your-data/explore-query-data/data-explorer/introduction-data-explorer). | Use the Python agent with [metrics and events](/docs/query-your-data/explore-query-data/data-explorer/introduction-data-explorer) to organize, query, and visualize your data to answer key questions about application performance and customer experience.
 
         * Use [default transaction attributes](/docs/insights/new-relic-insights/decorating-events/apm-default-attributes-insights), or [add your own](/docs/insights/new-relic-insights/decorating-events/insights-custom-attributes).
         * Query your data using the [New Relic Query Language (NRQL)](/docs/using-new-relic/data/understand-data/query-new-relic-data).
         * Send [your own event data](/docs/insights/new-relic-insights/adding-querying-data/inserting-custom-events-new-relic-apm-agents#python-att).
-        * Create and share customizable, interactive [dashboards](/docs/query-your-data/explore-query-data/dashboards/introduction-new-relic-one-dashboards).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * Create and share customizable, interactive [dashboards](/docs/query-your-data/explore-query-data/dashboards/introduction-new-relic-one-dashboards). |
+
 
 ## Install the Python agent [#installation]
 

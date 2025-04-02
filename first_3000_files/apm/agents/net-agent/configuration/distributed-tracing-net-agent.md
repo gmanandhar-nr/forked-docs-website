@@ -130,48 +130,29 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
       >
         Here's an overview of the settings. For more help with configuration, see [.NET agent configuration](/docs/agents/net-agent/configuration/net-agent-configuration#distributed_tracing).
 
-        <table>
-          <thead>
-            <tr>
-              <th style={{ width: "200px" }}>
-                Type
-              </th>
+        # Table
 
-              <th>
-                Required configuration
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                Infinite Tracing
-              </td>
-
-              <td>
-                Configuration options:
+| Type | Required configuration |
+| - | - |
+| Infinite Tracing | Configuration options:
 
                 * Configuration file (`newrelic.config`):
 
                   ```xml
-                  <configuration . . . >
-                    <distributedTracing enabled="true" />
-                    <infiniteTracing>
-                        <trace_observer host="<a href='/docs/understand-dependencies/distributed-tracing/infinite-tracing/set-trace-observer#ui-endpoints'>YOUR_TRACE_OBSERVER_HOST</a>" />
-                    </infiniteTracing>
-                  </configuration>
+                  
+                    
+                    
+                        YOUR_TRACE_OBSERVER_HOST" />
+                    
+                  
                   ```
                 * Environment variables:
 
                   ```
                   NEW_RELIC_DISTRIBUTED_TRACING_ENABLED=true
-                  NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST="<a href="/docs/understand-dependencies/distributed-tracing/infinite-tracing/set-trace-observer#ui-endpoints">YOUR_TRACE_OBSERVER_HOST</a>"
-                  ```
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST="YOUR_TRACE_OBSERVER_HOST"
+                  ``` |
+
       </Collapser>
     </CollapserGroup>
 

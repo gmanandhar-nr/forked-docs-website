@@ -24,32 +24,12 @@ This New Relic infrastructure integration collects the following AWS Storage Gat
 
 ### AWS Storage Gateway dimensions
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Dimension  
+# Table
 
-      </th>
+| Dimension | Description |
+| - | - |
+| `GatewayId, GatewayName` | These dimensions filter the data that you request to gateway-specific metrics. |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `GatewayId, GatewayName`
-      </td>
-
-      <td>
-        These dimensions filter the data that you request to gateway-specific metrics.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### AWS Storage Gateway Metric data [#storage-gateway-metric-data]
 

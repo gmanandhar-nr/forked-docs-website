@@ -589,67 +589,21 @@ Here are technical details on the similarity algorithms we use:
   >
     This measure is useful for comparing short strings with static schema and fixed length, like host names. Levenshtein distance is also known as edit distance.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Details
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
+| Details | Description |
+| - | - |
+| How it works | The Levenshtein distance between two strings is the minimum number of single-character edits to get from one string to the other. Allowed edit operations are deletion, insertion, and substitution.
 
-      <tbody>
-        <tr>
-          <td>
-            How it works
-          </td>
-
-          <td>
-            The Levenshtein distance between two strings is the minimum number of single-character edits to get from one string to the other. Allowed edit operations are deletion, insertion, and substitution.
-
-            The default similarity threshold for alert decisions is an edit distance of 3. You can change this in the <DNT>**Advanced mode**</DNT> of the decision builder.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            When to use it
-          </td>
-
-          <td>
-            This measure is most useful for comparing relatively short strings with static schema and fixed length. Common applications include spell checkers, computational biology, and speech recognition.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Examples
-          </td>
-
-          <td>
-            `number/bumble: 3 (number → bumber → bumblr → bumble)`
+            The default similarity threshold for alert decisions is an edit distance of 3. You can change this in the **Advanced mode** of the decision builder. |
+| When to use it | This measure is most useful for comparing relatively short strings with static schema and fixed length. Common applications include spell checkers, computational biology, and speech recognition. |
+| Examples | `number/bumble: 3 (number → bumber → bumblr → bumble)`
 
             `trying/lying: 2 (trying → rying → lying)`
 
-            `strong/through: 4 (strong → htrong → throng → throug → through)`
-          </td>
-        </tr>
+            `strong/through: 4 (strong → htrong → throng → throug → through)` |
+| Potential drawbacks | The levenshtein distance algorithm is not normalized by default to take into account string lengths. |
 
-        <tr>
-          <td>
-            Potential drawbacks
-          </td>
-
-          <td>
-            The levenshtein distance algorithm is not normalized by default to take into account string lengths.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

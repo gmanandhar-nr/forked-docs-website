@@ -16,67 +16,21 @@ Our <InlinePopover type="browser"/> <DNT>**AJAX**</DNT> UI shows recent AJAX req
 
 Here are some troubleshooting tips for identifying performance problems with your app:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Troubleshooting AJAX calls
-      </th>
+# Table
 
-      <th>
-        Examples
-      </th>
-    </tr>
-  </thead>
+| Troubleshooting AJAX calls | Examples |
+| - | - |
+| Problems across the entire request | If you're not sure where the problem is, or if you want to trace your requests from start to finish, click the [distributed tracing](/docs/browser/new-relic-browser/browser-pro-features/browser-data-distributed-tracing) link in the **AJAX** UI. |
+| Timing problems | Total [time percentages](#time-percentage-example), throughput requests per minute (rpm), and average data transfer rates per request can help identify timing problems.
 
-  <tbody>
-    <tr>
-      <td>
-        Problems across the entire request
-      </td>
+        * Look for large spikes in the **AJAX** summary page's **Average data transfer per request** chart.
+        * Analyze the trends of your data using the **Group By** drop-down to evaluate your AJAX performance by request URL, GraphQL operation names, and many other fields.
+        * From the individual call's **AJAX performance** tab, look for correlations between high callback time values and data transfer rates. |
+| Endpoint problems | Look for any outlier endpoints, and investigate individual requests made from them.
 
-      <td>
-        If you're not sure where the problem is, or if you want to trace your requests from start to finish, click the [distributed tracing](/docs/browser/new-relic-browser/browser-pro-features/browser-data-distributed-tracing) link in the <DNT>**AJAX**</DNT> UI.
-      </td>
-    </tr>
+        The **Status codes** chart on the **AJAX** summary page provides information about the return behavior from the call. If you see a large number of status codes outside the `200` range, this may indicate a problem with your AJAX endpoints. |
+| Specific webpage location problems | Examine potential AJAX problems within the context of the page where they load. Select an AJAX transaction, then select any trace from the [**Session traces with AJAX**](/docs/browser/browser-monitoring/browser-pro-features/session-traces-explore-webpages-life-cycle) table. |
 
-    <tr>
-      <td>
-        Timing problems
-      </td>
-
-      <td>
-        Total [time percentages](#time-percentage-example), throughput requests per minute (rpm), and average data transfer rates per request can help identify timing problems.
-
-        * Look for large spikes in the <DNT>**AJAX**</DNT> summary page's <DNT>**Average data transfer per request**</DNT> chart.
-        * Analyze the trends of your data using the <DNT>**Group By**</DNT> drop-down to evaluate your AJAX performance by request URL, GraphQL operation names, and many other fields.
-        * From the individual call's <DNT>**AJAX performance**</DNT> tab, look for correlations between high callback time values and data transfer rates.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Endpoint problems
-      </td>
-
-      <td>
-        Look for any outlier endpoints, and investigate individual requests made from them.
-
-        The <DNT>**Status codes**</DNT> chart on the <DNT>**AJAX**</DNT> summary page provides information about the return behavior from the call. If you see a large number of status codes outside the `200` range, this may indicate a problem with your AJAX endpoints.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Specific webpage location problems
-      </td>
-
-      <td>
-        Examine potential AJAX problems within the context of the page where they load. Select an AJAX transaction, then select any trace from the [<DNT>**Session traces with AJAX**</DNT>](/docs/browser/browser-monitoring/browser-pro-features/session-traces-explore-webpages-life-cycle) table.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## How to do it [#ajax-dashboard]
 

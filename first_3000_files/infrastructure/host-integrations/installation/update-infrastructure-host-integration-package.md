@@ -17,59 +17,30 @@ Our on-host integrations do not update themselves automatically. To update them,
 
 Use either of these options to check whether your on-host integration is up to date:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Option**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Option** | **Comments** |
+| - | - |
+| New Relic UI | To use the infrastructure UI to check for on-host integration versions:
 
-  <tbody>
-    <tr>
-      <td>
-        New Relic UI
-      </td>
-
-      <td>
-        To use the infrastructure UI to check for on-host integration versions:
-
-        1. Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure**</DNT>.
+        1. Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Infrastructure**.
         2. In the search bar, type the name of the integration file that was installed (for example, `nri-cassandra`).
-        3. Select the relevant dropdown to see the agent versions.
-      </td>
-    </tr>
+        3. Select the relevant dropdown to see the agent versions. |
+| Server | To manually check for on-host integration versions, connect to a server. Then invoke the OS package manager and grep the integration's file name (for example, `nri-cassandra`):
 
-    <tr>
-      <td>
-        Server
-      </td>
-
-      <td>
-        To manually check for on-host integration versions, connect to a server. Then invoke the OS package manager and grep the integration's file name (for example, `nri-cassandra`):
-
-        * <DNT>**Debian**</DNT> or <DNT>**Ubuntu**</DNT>:
+        * **Debian** or **Ubuntu**:
 
           ```
           dpkg -l | grep INTEGRATION_FILE_NAME
           ```
-        * <DNT>**Amazon Linux, CentOS, SLES, or RHEL**</DNT>:
+        * **Amazon Linux, CentOS, SLES, or RHEL**:
 
           ```
           rpm -qa | grep INTEGRATION_FILE_NAME
           ```
-        * <DNT>
+        * 
             **Windows Server**
-          </DNT>
+          
 
           In PowerShell:
 
@@ -81,11 +52,8 @@ Use either of these options to check whether your on-host integration is up to d
 
           ```
           get-package -name "*nri-mssql*" | select name, version
-          ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+          ``` |
+
 
 To find the file name for a specific integration, see the [integration docs](/docs/infrastructure/host-integrations).
 

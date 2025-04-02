@@ -82,37 +82,12 @@ After you've published your Nerdpack to the [Instant observability](https://newr
     [output] README.md         additionalInfo.md config.json       documentation.md  {blue}screenshots
     ```
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            File
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            README.md
-          </td>
-
-          <td>
-            A markdown file that instructs you how to use the information and metadata in catalog
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            config.json
-          </td>
-
-          <td>
-            A JSON file that contains the following fields:
+| File | Description |
+| - | - |
+| README.md | A markdown file that instructs you how to use the information and metadata in catalog |
+| config.json | A JSON file that contains the following fields:
 
             * `tagline`: A brief headline for the application. This cannot exceed 30 characters.
             * `repository`: The URL for the Nerdpack's remote repository. This cannot exceed 1000 characters.
@@ -128,46 +103,16 @@ After you've published your Nerdpack to the [Instant observability](https://newr
               * `community`: A URL for a support thread, forum, or website for troubleshooting and usage support.
             * `whatsNew`: A bulleted list of changes in the current release version. This cannot exceed 500 characters. Use newlines for formatting, and don't include markdown or HTML.
 
-            Check out our [Pageview Map application's `config.json`](https://github.com/newrelic/nr1-pageview-map/blob/main/catalog/config.json) to see a real-life implementation.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            documentation.md
-          </td>
-
-          <td>
-            A markdown file that tells users how to use the Nerdpack's Nerdlets or visualizations. This shows in the detail view's **Documentation** tab.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            additionalInfo.md
-          </td>
-
-          <td>
-            An optional markdown file for any additional information about using your application
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            screenshots
-          </td>
-
-          <td>
-            A directory that contains screenshots showcasing your Nerdpack, such as select images of Nerdlets or visualizations. This can contain no more than 6 images. All screenshots must meet the following criteria:
+            Check out our [Pageview Map application's `config.json`](https://github.com/newrelic/nr1-pageview-map/blob/main/catalog/config.json) to see a real-life implementation. |
+| documentation.md | A markdown file that tells users how to use the Nerdpack's Nerdlets or visualizations. This shows in the detail view's **Documentation** tab. |
+| additionalInfo.md | An optional markdown file for any additional information about using your application |
+| screenshots | A directory that contains screenshots showcasing your Nerdpack, such as select images of Nerdlets or visualizations. This can contain no more than 6 images. All screenshots must meet the following criteria:
 
             * 3:2 aspect ratio
             * PNG format
             * landscape orientation
-            * 1600 to 2400 pixels wide
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            * 1600 to 2400 pixels wide |
+
 
     This command also generates a `catalog` directory for each launcher, Nerdlet, and visualization in your Nerdpack. Inside you'll find a directory that allows you to add screenshots for each Nerdpack item.
 

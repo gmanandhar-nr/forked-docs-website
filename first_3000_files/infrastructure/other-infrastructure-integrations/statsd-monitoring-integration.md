@@ -158,60 +158,23 @@ Here are examples of Kubernetes manifests for deployment and service objects:
 
 In the [install procedure](#install), you run `nri-statsd` with environment variables, and this generates a TOML configuration file. Additionally, you can set these configuration options:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Configuration options
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Configuration options | Description |
+| - | - |
+| `expiry-interval`
 
-  <tbody>
-    <tr>
-      <td>
-        `expiry-interval`
+        _string_ | If a metric is not updated for this amount of time, we stop reporting that metric. Default is `5m`.
 
-        _string_
-      </td>
+        If you want to send the metrics only if the value was updated between the flush intervals, configure this to `1ms`. To never expire metrics, set it to `0`. |
+| `percent-threshold`
 
-      <td>
-        If a metric is not updated for this amount of time, we stop reporting that metric. Default is `5m`.
+        _list of integers_ | Specifies the percentiles used for metrics aggregation. Default: `90`. |
+| `metrics-addr`
 
-        If you want to send the metrics only if the value was updated between the flush intervals, configure this to `1ms`. To never expire metrics, set it to `0`.
-      </td>
-    </tr>
+        _string_ | Indicates address on which to listen for metrics. Default: `:8125`.
+        From nri-statsd `v2.3.0` (goStatsD `v34.2.1`), connection via Unix Domain Socket (UDS) is supported. Use `metrics-addr=/some/path/newrelic-statsd.socket` instead of `[host]:port` in the configuration. |
 
-    <tr>
-      <td>
-        `percent-threshold`
-
-        _list of integers_
-      </td>
-
-      <td>
-        Specifies the percentiles used for metrics aggregation. Default: `90`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `metrics-addr`
-
-        _string_
-      </td>
-
-      <td>
-        Indicates address on which to listen for metrics. Default: `:8125`.
-        From nri-statsd `v2.3.0` (goStatsD `v34.2.1`), connection via Unix Domain Socket (UDS) is supported. Use `metrics-addr=/some/path/newrelic-statsd.socket` instead of `[host]:port` in the configuration.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <Callout variant="tip">
   To ensure FedRAMP compliance when using the StatsD integration you must define the following endpoints in the custom configuration:

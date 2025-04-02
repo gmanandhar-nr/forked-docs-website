@@ -38,47 +38,13 @@ For an overview of our various logging solutions, see [Introduction to logs](/do
 
 Here are some details on how to accomplish specific use cases:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        If you want to do this...
-      </th>
+# Table
 
-      <th>
-        Use one of these log forwarding options
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Collect logs that are written to a local file on disk
-      </td>
-
-      <td>
-        Use our solutions to [forward logs from operating systems](#forward-infra), including our infrastructure agent, <DNT>Fluent Bit</DNT>, <DNT>Fluentd</DNT>, <DNT>Logstash</DNT>, and <DNT>syslog/TCP</DNT>. Use our [guided install for infrastructure monitoring](/docs/logs/forward-logs/forward-your-logs-using-infrastructure-agent) as a lightweight data collector for your apps' and hosts' logs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Use your cloud forwarding platform
-      </td>
-
-      <td>
-        Collect service-level logs, application logs, infrastructure logs, or all of the above from your cloud platform, including [Amazon AWS](#forward-amazon), [Google Cloud Platform](/docs/logs/forward-logs/google-cloud-platform-log-forwarding), [Microsoft Azure](/docs/logs/forward-logs/azure-log-forwarding), and [Heroku](/docs/logs/forward-logs/heroku-log-forwarding/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Collect logs from apps running in Docker containers, either standalone or when using Kubernetes
-      </td>
-
-      <td>
-        For Kubernetes environments, use our [Kubernetes plugin](/docs/logs/forward-logs/kubernetes-plugin-log-forwarding/).
+| If you want to do this... | Use one of these log forwarding options |
+| - | - |
+| Collect logs that are written to a local file on disk | Use our solutions to [forward logs from operating systems](#forward-infra), including our infrastructure agent, Fluent Bit, Fluentd, Logstash, and syslog/TCP. Use our [guided install for infrastructure monitoring](/docs/logs/forward-logs/forward-your-logs-using-infrastructure-agent) as a lightweight data collector for your apps' and hosts' logs. |
+| Use your cloud forwarding platform | Collect service-level logs, application logs, infrastructure logs, or all of the above from your cloud platform, including [Amazon AWS](#forward-amazon), [Google Cloud Platform](/docs/logs/forward-logs/google-cloud-platform-log-forwarding), [Microsoft Azure](/docs/logs/forward-logs/azure-log-forwarding), and [Heroku](/docs/logs/forward-logs/heroku-log-forwarding/). |
+| Collect logs from apps running in Docker containers, either standalone or when using Kubernetes | For Kubernetes environments, use our [Kubernetes plugin](/docs/logs/forward-logs/kubernetes-plugin-log-forwarding/).
 
         For Docker environments, we offer a few options:
 
@@ -89,35 +55,14 @@ Here are some details on how to accomplish specific use cases:
             - name: Docker-logs
               file: /var/log/containers/*.log # Path to Docker log files
           ```
-        * Use our [Standalone Docker image](https://hub.docker.com/r/newrelic/newrelic-fluentbit-output)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Collect logs directly from your apps, regardless of where they are hosted
-      </td>
-
-      <td>
-        Use our <InlinePopover type="apm"/> agent and infrastructure agent. Let your app's APM agent forward log data directly to New Relic with [APM logs in context](/docs/apm/new-relic-apm/getting-started/get-started-logs-context). No need to install or maintain additional third-party software!
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Do something else
-      </td>
-
-      <td>
-        If our log forwarding options don't meet your needs, you can:
+        * Use our [Standalone Docker image](https://hub.docker.com/r/newrelic/newrelic-fluentbit-output) |
+| Collect logs directly from your apps, regardless of where they are hosted | Use our  agent and infrastructure agent. Let your app's APM agent forward log data directly to New Relic with [APM logs in context](/docs/apm/new-relic-apm/getting-started/get-started-logs-context). No need to install or maintain additional third-party software! |
+| Do something else | If our log forwarding options don't meet your needs, you can:
 
         * Use our [Log API](/docs/logs/log-api/introduction-log-api) to forward your logs via HTTP.
-        * Use <DNT>syslog</DNT> protocols to forward your logs via a [TCP endpoint](/docs/logs/log-api/use-tcp-endpoint-forward-logs-new-relic).
-        * Use any of our [other available options](#forward-other).
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * Use syslog protocols to forward your logs via a [TCP endpoint](/docs/logs/log-api/use-tcp-endpoint-forward-logs-new-relic).
+        * Use any of our [other available options](#forward-other). |
+
 
 ## Get started with log forwarders [#compatibility-requirements]
 

@@ -36,68 +36,13 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Cognitive Search metrics [#Azure-cognitive-search]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `DocumentsProcessedCount` | Number of documents processed. |
+| `SearchLatency` | Average search Latency for the Search service. |
+| `SearchQueriesPerSecond` | Search queries per second for the Search service. |
+| `SkillExecutionCount` | Number of skill executions. |
+| `ThrottledSearchQueriesPercentage` | Percentage of Search queries that were throttled for the Search service. |
 
-  <tbody>
-    <tr>
-      <td>
-        `DocumentsProcessedCount`
-      </td>
-
-      <td>
-        Number of documents processed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SearchLatency`
-      </td>
-
-      <td>
-        Average search Latency for the Search service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SearchQueriesPerSecond`
-      </td>
-
-      <td>
-        Search queries per second for the Search service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SkillExecutionCount`
-      </td>
-
-      <td>
-        Number of skill executions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ThrottledSearchQueriesPercentage`
-      </td>
-
-      <td>
-        Percentage of Search queries that were throttled for the Search service.
-      </td>
-    </tr>
-  </tbody>
-</table>

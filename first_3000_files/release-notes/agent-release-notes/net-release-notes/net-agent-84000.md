@@ -17,131 +17,22 @@ version: 8.40.0.0
 
 ### Checksums
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        File
-      </th>
+# Table
 
-      <th>
-        SHA - 256 Hash
-      </th>
-    </tr>
-  </thead>
+| File | SHA - 256 Hash |
+| - | - |
+| newrelic-agent-win-8.40.0.0-scriptable-installer.zip | 1C752F5BAF8B1A13F0276BDE70522E08B92D34215A556C45AC8AF4AABBE0B87A |
+| newrelic-agent-win-x64-8.40.0.0.msi | 68A5C3C9CA6B8F35DD3F4FA4B97B7560CFADAE3D25790C33245CA69AF92F0BD0 |
+| newrelic-agent-win-x64-8.40.0.0.zip | 93F1FE590F8D74483110250BBD94B7967BFADDB4C79241E9725B4FDEE8A85F6B |
+| newrelic-agent-win-x86-8.40.0.0.msi | 50E1C40F68CA7058D4491D994D3BCC31FF5EFB32C2EBB2F4E3EE9B391900CEEF |
+| newrelic-agent-win-x86-8.40.0.0.zip | 543C1473C7FE73B470B99A749A0E48B887116B82AAE784C0A195B5A88175AB1D |
+| newrelic-netcore20-agent-8.40.0.0-1.x86_64.rpm | FCE857338C2ED7E740AEA6A57B506567AF8255C804CFDCD78BF4F6392B228893 |
+| newrelic-netcore20-agent-win-8.40.0.0-scriptable-installer.zip | 3E12577B34CF8DE4E118D191B2C0EAA948AFC9AF15CEA4983A9C4AE5DBC74DA7 |
+| newrelic-netcore20-agent-win-x64-8.40.0.0.zip | 34038A364C6B213F5CFD13D7785F925F244460DE995F02309CEA370F1A5E3BC4 |
+| newrelic-netcore20-agent-win-x86-8.40.0.0.zip | B52A6AAB8F24F2ECEAAD0589AE7A2B1CD71E28790627908B3DF9DE671C0D5E70 |
+| newrelic-netcore20-agent_8.40.0.0_amd64.deb | 59188974CFECB5C7F8CB291D4669C48B7AA3FB936C3AF456EB1387D3CE99A4FA |
+| newrelic-netcore20-agent_8.40.0.0_amd64.tar.gz | CF99691E1E6DF2B0ABDFB6C8740FBDC5FBA557BC248447E33D87214D167D217B |
 
-  <tbody>
-    <tr>
-      <td>
-        newrelic-agent-win-8.40.0.0-scriptable-installer.zip
-      </td>
-
-      <td>
-        1C752F5BAF8B1A13F0276BDE70522E08B92D34215A556C45AC8AF4AABBE0B87A
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-agent-win-x64-8.40.0.0.msi
-      </td>
-
-      <td>
-        68A5C3C9CA6B8F35DD3F4FA4B97B7560CFADAE3D25790C33245CA69AF92F0BD0
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-agent-win-x64-8.40.0.0.zip
-      </td>
-
-      <td>
-        93F1FE590F8D74483110250BBD94B7967BFADDB4C79241E9725B4FDEE8A85F6B
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-agent-win-x86-8.40.0.0.msi
-      </td>
-
-      <td>
-        50E1C40F68CA7058D4491D994D3BCC31FF5EFB32C2EBB2F4E3EE9B391900CEEF
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-agent-win-x86-8.40.0.0.zip
-      </td>
-
-      <td>
-        543C1473C7FE73B470B99A749A0E48B887116B82AAE784C0A195B5A88175AB1D
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-netcore20-agent-8.40.0.0-1.x86_64.rpm
-      </td>
-
-      <td>
-        FCE857338C2ED7E740AEA6A57B506567AF8255C804CFDCD78BF4F6392B228893
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-netcore20-agent-win-8.40.0.0-scriptable-installer.zip
-      </td>
-
-      <td>
-        3E12577B34CF8DE4E118D191B2C0EAA948AFC9AF15CEA4983A9C4AE5DBC74DA7
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-netcore20-agent-win-x64-8.40.0.0.zip
-      </td>
-
-      <td>
-        34038A364C6B213F5CFD13D7785F925F244460DE995F02309CEA370F1A5E3BC4
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-netcore20-agent-win-x86-8.40.0.0.zip
-      </td>
-
-      <td>
-        B52A6AAB8F24F2ECEAAD0589AE7A2B1CD71E28790627908B3DF9DE671C0D5E70
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-netcore20-agent_8.40.0.0_amd64.deb
-      </td>
-
-      <td>
-        59188974CFECB5C7F8CB291D4669C48B7AA3FB936C3AF456EB1387D3CE99A4FA
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        newrelic-netcore20-agent_8.40.0.0_amd64.tar.gz
-      </td>
-
-      <td>
-        CF99691E1E6DF2B0ABDFB6C8740FBDC5FBA557BC248447E33D87214D167D217B
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Support statement
 

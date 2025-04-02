@@ -2375,103 +2375,17 @@ Whether you're creating or modifying a profile, make sure you have the following
                 allow_duplicate: true
           ```
 
-          <table>
-            <thead>
-              <tr>
-                <th style={{ width: "325px" }}>
-                  Key Name
-                </th>
+          # Table
 
-                <th>
-                  Required
-                </th>
+| Key Name | Required | Description |
+| - | - | - |
+| `metrics.MIB` | ✓ | The name of the MIB file being referenced. |
+| `metrics.symbol.name` | ✓ | The name of the target scalar OID. |
+| `metrics.symbol.OID` | ✓ | The target OID string. |
+| `metrics.symbol.tag` | The optional friendly name replacement for the target OID. |
+| `metrics.symbol.poll_time_sec` | The optional override of the global and device poll times, specifically for this OID. |
+| `metrics.symbol.allow_duplicate` | An optional setting that allows multiple OIDs of the same name in a single profile. `ktranslate` will return the value of the first one that responds. Default: `false`. |
 
-                <th>
-                  Description
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>
-                  `metrics.MIB`
-                </td>
-
-                <td>
-                  ✓
-                </td>
-
-                <td>
-                  The name of the MIB file being referenced.
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  `metrics.symbol.name`
-                </td>
-
-                <td>
-                  ✓
-                </td>
-
-                <td>
-                  The name of the target scalar OID.
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  `metrics.symbol.OID`
-                </td>
-
-                <td>
-                  ✓
-                </td>
-
-                <td>
-                  The target OID string.
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  `metrics.symbol.tag`
-                </td>
-
-                <td/>
-
-                <td>
-                  The optional friendly name replacement for the target OID.
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  `metrics.symbol.poll_time_sec`
-                </td>
-
-                <td/>
-
-                <td>
-                  The optional override of the global and device poll times, specifically for this OID.
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  `metrics.symbol.allow_duplicate`
-                </td>
-
-                <td/>
-
-                <td>
-                  An optional setting that allows multiple OIDs of the same name in a single profile. `ktranslate` will return the value of the first one that responds. Default: `false`.
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </TabsPageItem>
 
         <TabsPageItem id="tab-oids">

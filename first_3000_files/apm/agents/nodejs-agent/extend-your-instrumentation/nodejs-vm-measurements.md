@@ -26,51 +26,14 @@ The native module can be used with:
 
 To compile the native module on your deployment platform, follow the [`node-gyp` package](https://www.npmjs.com/package/node-gyp) procedures. Prerequisites to install native Node.js modules include:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Platform
-      </th>
+# Table
 
-      <th>
-        Prerequisites
-      </th>
-    </tr>
-  </thead>
+| Platform | Prerequisites |
+| - | - |
+| Unix/Linux | Python (v2.7 recommended, v3.x.x not supported), make, C/C++ compiler (such as GCC) |
+| macOS | Python (v2.7 recommended, v3.x.x not supported), Xcode |
+| Windows | Python (v2.7 recommended, v3.x.x not supported), Visual C++ Build Environment |
 
-  <tbody>
-    <tr>
-      <td>
-        Unix/Linux
-      </td>
-
-      <td>
-        Python (v2.7 recommended, v3.x.x not supported), make, C/C++ compiler (such as GCC)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        macOS
-      </td>
-
-      <td>
-        Python (v2.7 recommended, v3.x.x not supported), Xcode
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Windows
-      </td>
-
-      <td>
-        Python (v2.7 recommended, v3.x.x not supported), Visual C++ Build Environment
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 If you have problems installing our Node.js agent, follow the [installation troubleshooting](/docs/agents/nodejs-agent/troubleshooting/troubleshooting-your-nodejs-installation) procedures.
 

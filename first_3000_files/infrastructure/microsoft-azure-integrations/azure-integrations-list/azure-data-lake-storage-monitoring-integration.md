@@ -36,68 +36,13 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Data Lake Storage metrics [#Azure-data-lake-storage]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `DataRead` | Total amount of data read from the account. |
+| `DataWritten` | Total amount of data written to the account. |
+| `ReadRequests` | Count of data read requests to the account. |
+| `TotalStorage` | Total amount of data stored in the account. |
+| `Write Requests` | Count of data write requests to the account. |
 
-  <tbody>
-    <tr>
-      <td>
-        `DataRead`
-      </td>
-
-      <td>
-        Total amount of data read from the account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DataWritten`
-      </td>
-
-      <td>
-        Total amount of data written to the account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReadRequests`
-      </td>
-
-      <td>
-        Count of data read requests to the account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalStorage`
-      </td>
-
-      <td>
-        Total amount of data stored in the account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Write Requests`
-      </td>
-
-      <td>
-        Count of data write requests to the account.
-      </td>
-    </tr>
-  </tbody>
-</table>

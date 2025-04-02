@@ -34,35 +34,16 @@ Returns a JavaScript string to inject at the very end of the HTML output. Use th
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$include_tags`
 
-  <tbody>
-    <tr>
-      <td>
-        `$include_tags`
+        _boolean_ | Optional. Defaults to `true`.
 
-        _boolean_
-      </td>
+        If `true` or omitted, the string is enclosed in a `` element for easy inclusion in the page's HTML. |
 
-      <td>
-        Optional. Defaults to `true`.
-
-        If `true` or omitted, the string is enclosed in a `<script>` element for easy inclusion in the page's HTML.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

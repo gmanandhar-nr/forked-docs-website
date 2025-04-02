@@ -27,55 +27,14 @@ Here are some examples:
     id="uninstall-apache"
     title="Apache"
   >
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "250px" }}>
-            <DNT>
-              **Package manager**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Uninstall instructions**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| **Package manager** | **Uninstall instructions** |
+| - | - |
+| apt (Debian or Ubuntu) | `sudo apt-get remove nri-apache` |
+| yum (Amazon Linux, CentOS, or RHEL) | `sudo yum remove nri-apache` |
+| zypper (SLES) | `sudo zypper -n remove nri-apache` |
 
-      <tbody>
-        <tr>
-          <td id="uninstall-apache-apt">
-            apt (Debian or Ubuntu)
-          </td>
-
-          <td>
-            `sudo apt-get remove nri-apache`
-          </td>
-        </tr>
-
-        <tr>
-          <td id="uninstall-apache-yum">
-            yum (Amazon Linux, CentOS, or RHEL)
-          </td>
-
-          <td>
-            `sudo yum remove nri-apache`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            zypper (SLES)
-          </td>
-
-          <td>
-            `sudo zypper -n remove nri-apache`
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

@@ -132,27 +132,11 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
 
         For more help with configuration, see [Java agent configuration: Config file](/docs/agents/java-agent/configuration/java-agent-configuration-config-file).
 
-        <table>
-          <thead>
-            <tr>
-              <th style={{ width: "200px" }}>
-                Type
-              </th>
+        # Table
 
-              <th>
-                Required configuration
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                Infinite Tracing
-              </td>
-
-              <td>
-                Configuration options:
+| Type | Required configuration |
+| - | - |
+| Infinite Tracing | Configuration options:
 
                 * Configuration file (`newrelic.yml`) (indented 2 spaces under the `common` section):
 
@@ -176,11 +160,8 @@ Before you start, first ensure you meet [the requirements](/docs/understand-depe
                   ```ini
                   NEW_RELIC_DISTRIBUTED_TRACING_ENABLED=true
                   NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST="YOUR_TRACE_OBSERVER_HOST"
-                  ```
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  ``` |
+
       </Collapser>
     </CollapserGroup>
 

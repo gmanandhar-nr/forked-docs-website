@@ -140,33 +140,14 @@ The following list contains the different calls you can make with the API, inclu
 
     ### Parameters
 
-    <table>
-      <thead>
-        <tr>
-          <th width="25%">
-            Parameter
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
+| Parameter | Description |
+| - | - |
+| `$override`
 
-      <tbody>
-        <tr>
-          <td>
-            `$override`
+            _boolean_ | Optional. When `true`, disables all injection of browser scripts. This flag affects both manual and automatic injection. This also overrides the [`GetBrowserTimingHeader()`](/docs/apm/agents/net-agent/net-agent-api/net-agent-api/#GetBrowserTimingHeader) call. |
 
-            _boolean_
-          </td>
-
-          <td>
-            Optional. When `true`, disables all injection of browser scripts. This flag affects both manual and automatic injection. This also overrides the [`GetBrowserTimingHeader()`](/docs/apm/agents/net-agent/net-agent-api/net-agent-api/#GetBrowserTimingHeader) call.
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     ### Examples
 

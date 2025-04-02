@@ -90,59 +90,31 @@ NewRelic.withApplicationToken(NEW_RELIC_TOKEN)
 
       ## Data endpoint settings [#android-data-endpoint-settings]
 
-      <table>
-        <thead>
-          <tr>
-            <th style={{ width: "800px" }}>
-              Description
-            </th>
+      # Table
 
-            <th>
-              Example
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              Enable or disable crash reporting, which appears on the [<DNT>**Crash analysis**</DNT> page](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/crash-analysis-group-filter-your-crashes).
+| Description | Example |
+| - | - |
+| Enable or disable crash reporting, which appears on the [**Crash analysis** page](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/crash-analysis-group-filter-your-crashes).
 
               Specifies the URI authority component of the harvest data upload endpoint. This endpoint is also used for handled exception uploads.
 
-              To replace data endpoint the agent will use when reporting data harvests, add `andCollectorAddress:` to your `NewRelic.withApplicationToken(“<TOKEN>”)` method call.
+              To replace data endpoint the agent will use when reporting data harvests, add `andCollectorAddress:` to your `NewRelic.withApplicationToken(“”)` method call.
 
-              Default value is `mobile-collector.newrelic.com`.
-            </td>
-
-            <td>
-```java
-NewRelic.withApplicationToken(“<TOKEN>”)
+              Default value is `mobile-collector.newrelic.com`. | ```java
+NewRelic.withApplicationToken(“”)
         .usingCollectorAddress("harvest-upload.domain.com")
         .usingCrashCollectorAddress("crash-upload.domain.com")
-```
-            </td>
-          </tr>
+``` |
+| Specifies the authority component of the crash data upload URI.
 
-          <tr>
-            <td>
-              Specifies the authority component of the crash data upload URI.
+              To replace data endpoint the agent will use when reporting crashes, add `andCrashCollectorAddress:` to your `NewRelic.withApplicationToken(“”)` method call.
 
-              To replace data endpoint the agent will use when reporting crashes, add `andCrashCollectorAddress:` to your `NewRelic.withApplicationToken(“<TOKEN>”)` method call.
-
-              Default value is `mobile-crash.newrelic.com`.
-            </td>
-
-            <td>
-```java
-NewRelic.withApplicationToken(“<TOKEN>”)
+              Default value is `mobile-crash.newrelic.com`. | ```java
+NewRelic.withApplicationToken(“”)
         .usingCollectorAddress("harvest-upload.domain.com")
         .usingCrashCollectorAddress("crash-upload.domain.com")
-```
-            </td>
-          </tr>
-        </tbody>
-      </table>
+``` |
+
 
 
       ## Analytics settings [#android-analytics-settings]

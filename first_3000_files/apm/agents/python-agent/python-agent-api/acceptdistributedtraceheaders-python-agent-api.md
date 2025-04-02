@@ -34,45 +34,17 @@ This call is used to link transactions by parsing the distributed tracing header
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `headers`
 
-  <tbody>
-    <tr>
-      <td>
-        `headers`
+        _dictionary or list_ | Required. The headers to be accepted. May be provided as an iterable of (`header_name`, `header_value`) or as a dictionary. |
+| `transport_type`
 
-        _dictionary or list_
-      </td>
+        _string_ | Optional, defaults to `HTTP`. The type of transport that sent this payload. Must be one of the following: `HTTP`, `HTTPS`, `Kafka`, `JMS`, `IronMQ`, `AMQP`, `Queue`, or `Other`. |
 
-      <td>
-        Required. The headers to be accepted. May be provided as an iterable of (`header_name`, `header_value`) or as a dictionary.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `transport_type`
-
-        _string_
-      </td>
-
-      <td>
-        Optional, defaults to `HTTP`. The type of transport that sent this payload. Must be one of the following: `HTTP`, `HTTPS`, `Kafka`, `JMS`, `IronMQ`, `AMQP`, `Queue`, or `Other`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

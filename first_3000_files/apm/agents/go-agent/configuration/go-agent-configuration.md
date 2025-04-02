@@ -682,1055 +682,123 @@ Not all possible configuration options may be set via environment variables. The
     * If a configuration function is listed, you can use that function to set the corresponding option instead of using `ConfigFromEnvironment()`. Keep in mind that the configuration functions listed in the program, including `ConfigFromEnvironment()`, are resolved in the order they appear in the code. This means that if you create an environment variable and call the function `ConfigFromEnvironment()`, it will overwrite corresponding configurations you may have set previously using a specific function. Subsequent configuration options after `ConfigFromEnvironment()` will override previous configuration functions and environment variables.
     * See the documentation here and at [the Go documentation site](https://pkg.go.dev/github.com/newrelic/go-agent/v3@v3.20.0/newrelic#ConfigOption) for more information about how to use each function.
 
-      <table>
-        <thead>
-          <tr>
-            <th>
-              Configuration field
-            </th>
+      # Table
 
-            <th>
-              Configuration functions
-            </th>
-
-            <th>
-              Environment variables
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `AppName`
-            </td>
-
-            <td>
-              `ConfigAppName`
-            </td>
-
-            <td>
-              `NEW_RELIC_APP_NAME`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `ApplicationLogging.Enabled`
-            </td>
-
-            <td>
-              `ConfigAppLogForwardingEnabled`
+| Configuration field | Configuration functions | Environment variables |
+| - | - | - |
+| `AppName` | `ConfigAppName` | `NEW_RELIC_APP_NAME` |
+| `ApplicationLogging.Enabled` | `ConfigAppLogForwardingEnabled`
 
               `ConfigAppLogEnabled`
 
-              (See [note 1](#table-note-one) below)
-            </td>
-
-            <td>
-              `NEW_RELIC_APPLICATION_LOGGING_ENABLED`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `ApplicationLogging.Forwarding.Enabled`
-            </td>
-
-            <td>
-              `ConfigAppLogForwardingEnabled`
+              (See [note 1](#table-note-one) below) | `NEW_RELIC_APPLICATION_LOGGING_ENABLED` |
+| `ApplicationLogging.Forwarding.Enabled` | `ConfigAppLogForwardingEnabled`
 
               `ConfigAppLogDecoratingEnabled`
 
               `ConfigAppLogMetricsEnabled`
 
-              (See [note 1](#table-note-one) below)
-            </td>
-
-            <td>
-              `NEW_RELIC_APPLICATION_LOGGING_FORWARDING_ENABLED`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `ApplicationLogging.Forwarding.MaxSamplesStored`
-            </td>
-
-            <td>
-              `ConfigAppLogForwardingEnabled`
+              (See [note 1](#table-note-one) below) | `NEW_RELIC_APPLICATION_LOGGING_FORWARDING_ENABLED` |
+| `ApplicationLogging.Forwarding.MaxSamplesStored` | `ConfigAppLogForwardingEnabled`
 
               `ConfigAppLogForwardingMaxSamplesStored`
 
-              (See [note 1](#table-note-one) below)
-            </td>
-
-            <td>
-              `NEW_RELIC_APPLICATION_LOGGING_FORWARDING_MAX_SAMPLES_STORED`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `ApplicationLogging.LocalDecorating.Enabled`
-            </td>
-
-            <td>
-              `ConfigAppLogDecoratingEnabled`
-            </td>
-
-            <td>
-              `NEW_RELIC_APPLICATION_LOGGING_LOCAL_DECORATING_ENABLED`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `ApplicationLogging.Metrics.Enabled`
-            </td>
-
-            <td>
-              `ConfigAppLogMetricsEnabled`
-            </td>
-
-            <td>
-              `NEW_RELIC_APPLICATION_LOGGING_METRICS_ENABLED`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `Attributes.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Attributes.Exclude`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_ATTRIBUTES_EXCLUDE`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `Attributes.Include`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_ATTRIBUTES_INCLUDE`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `BrowserMonitoring.Attributes.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `BrowserMonitoring.Attributes.Exclude`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `BrowserMonitoring.Attributes.Include`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `BrowserMonitoring.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `CodeLevelMetrics.Enabled`
-            </td>
-
-            <td>
-              `ConfigCodeLevelMetricsEnabled`
-            </td>
-
-            <td>
-              `NEW_RELIC_CODE_LEVEL_METRICS_ENABLED`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `CodeLevelMetrics.IgnoredPrefixes`
-            </td>
-
-            <td>
-              `ConfigCodeLevelMetricsIngoredPrefixes`
-            </td>
-
-            <td>
-              `NEW_RELIC_CODE_LEVEL_METRICS_IGNORED_PREFIXES`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `CodeLevelMetrics.PathPrefixes`
-            </td>
-
-            <td>
-              `ConfigCodeLevelMetricsPathPrefixes`
-            </td>
-
-            <td>
-              `NEW_RELIC_CODE_LEVEL_METRICS_PATH_PREFIXES`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `CodeLevelMetrics.RedactIgnoredPrefixes`
-            </td>
-
-            <td>
-              `ConfigCodeLevelMetricsRedactIgnoredPrefixes`
-            </td>
-
-            <td>
-              `NEW_RELIC_CODE_LEVEL_METRICS_REDACT_IGNORED_PREFIXES`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `CodeLevelMetrics.RedactPathPrefixes`
-            </td>
-
-            <td>
-              `ConfigCodeLevelMetricsRedactPathPrefixes`
-            </td>
-
-            <td>
-              `NEW_RELIC_CODE_LEVEL_METRICS_REDACT_PATH_PREFIXES`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `CodeLevelMetrics.Scope`
-            </td>
-
-            <td>
-              `ConfigCodeLevelMetricsScope`
-            </td>
-
-            <td>
-              `NEW_RELIC_CODE_LEVEL_METRICS_SCOPE`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `CrossApplicationTracer.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `CustomInsightsEvents.Enabled`
-            </td>
-
-            <td>
-              `ConfigCustomInsightsEventsEnabled`
-            </td>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `CustomInsightsEvents.MaxSamplesStored`
-            </td>
-
-            <td>
-              `ConfigCustomInsightsEventsMaxSamplesStored`
-            </td>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `DatastoreTracer.DatabaseNameReporting.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `DatastoreTracer.InstanceReporting.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `DatastoreTracer.QueryParameters.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `DatastoreTracer.SlowQuery.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `DatastoreTracer.SlowQuery.Threshold`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `DistributedTracer.Enabled`
-            </td>
-
-            <td>
-              `ConfigDistributedTracerEnabled`
-            </td>
-
-            <td>
-              `NEW_RELIC_DISTRIBUTED_TRACING_ENABLED`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `DistributedTracer.ExcludeNewRelicHeader`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `DistributedTracer.ReservoirLimit`
-            </td>
-
-            <td>
-              `ConfigDistributedTracerReservoirLimit`
-            </td>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Enabled`
-            </td>
-
-            <td>
-              `ConfigEnabled`
-            </td>
-
-            <td>
-              `NEW_RELIC_ENABLED`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `ErrorCollector.Attributes.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ErrorCollector.Attributes.Exclude`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ErrorCollector.Attributes.Include`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ErrorCollector.CaptureEvents`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ErrorCollector.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ErrorCollector.IgnoreStatusCodes`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ErrorCollector.RecordPanics`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Error`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Heroku.DynoNamePrefixesToShorten`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Heroku.UseDynoNames`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `HighSecurity`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_HIGH_SECURITY`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `HostDisplayName`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_PROCESS_HOST_DISPLAY_NAME`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `Host`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_HOST`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `InfiniteTracing.SpanEvents.QueueSize`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_INFINITE_TRACING_SPAN_EVENTS_QUEUE_SIZE`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `InfiniteTracing.TraceObserver.Host`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `InfiniteTracing.TraceObserver.Port`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_PORT`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `Labels`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_LABELS`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `License`
-            </td>
-
-            <td>
-              `ConfigLicense`
-            </td>
-
-            <td>
-              `NEW_RELIC_LICENSE_KEY`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `Logger`
-            </td>
-
-            <td>
-              `ConfigLogger`
+              (See [note 1](#table-note-one) below) | `NEW_RELIC_APPLICATION_LOGGING_FORWARDING_MAX_SAMPLES_STORED` |
+| `ApplicationLogging.LocalDecorating.Enabled` | `ConfigAppLogDecoratingEnabled` | `NEW_RELIC_APPLICATION_LOGGING_LOCAL_DECORATING_ENABLED` |
+| `ApplicationLogging.Metrics.Enabled` | `ConfigAppLogMetricsEnabled` | `NEW_RELIC_APPLICATION_LOGGING_METRICS_ENABLED` |
+| `Attributes.Enabled` |
+| `Attributes.Exclude` | `NEW_RELIC_ATTRIBUTES_EXCLUDE` |
+| `Attributes.Include` | `NEW_RELIC_ATTRIBUTES_INCLUDE` |
+| `BrowserMonitoring.Attributes.Enabled` |
+| `BrowserMonitoring.Attributes.Exclude` |
+| `BrowserMonitoring.Attributes.Include` |
+| `BrowserMonitoring.Enabled` |
+| `CodeLevelMetrics.Enabled` | `ConfigCodeLevelMetricsEnabled` | `NEW_RELIC_CODE_LEVEL_METRICS_ENABLED` |
+| `CodeLevelMetrics.IgnoredPrefixes` | `ConfigCodeLevelMetricsIngoredPrefixes` | `NEW_RELIC_CODE_LEVEL_METRICS_IGNORED_PREFIXES` |
+| `CodeLevelMetrics.PathPrefixes` | `ConfigCodeLevelMetricsPathPrefixes` | `NEW_RELIC_CODE_LEVEL_METRICS_PATH_PREFIXES` |
+| `CodeLevelMetrics.RedactIgnoredPrefixes` | `ConfigCodeLevelMetricsRedactIgnoredPrefixes` | `NEW_RELIC_CODE_LEVEL_METRICS_REDACT_IGNORED_PREFIXES` |
+| `CodeLevelMetrics.RedactPathPrefixes` | `ConfigCodeLevelMetricsRedactPathPrefixes` | `NEW_RELIC_CODE_LEVEL_METRICS_REDACT_PATH_PREFIXES` |
+| `CodeLevelMetrics.Scope` | `ConfigCodeLevelMetricsScope` | `NEW_RELIC_CODE_LEVEL_METRICS_SCOPE` |
+| `CrossApplicationTracer.Enabled` |
+| `CustomInsightsEvents.Enabled` | `ConfigCustomInsightsEventsEnabled` |
+| `CustomInsightsEvents.MaxSamplesStored` | `ConfigCustomInsightsEventsMaxSamplesStored` |
+| `DatastoreTracer.DatabaseNameReporting.Enabled` |
+| `DatastoreTracer.InstanceReporting.Enabled` |
+| `DatastoreTracer.QueryParameters.Enabled` |
+| `DatastoreTracer.SlowQuery.Enabled` |
+| `DatastoreTracer.SlowQuery.Threshold` |
+| `DistributedTracer.Enabled` | `ConfigDistributedTracerEnabled` | `NEW_RELIC_DISTRIBUTED_TRACING_ENABLED` |
+| `DistributedTracer.ExcludeNewRelicHeader` |
+| `DistributedTracer.ReservoirLimit` | `ConfigDistributedTracerReservoirLimit` |
+| `Enabled` | `ConfigEnabled` | `NEW_RELIC_ENABLED` |
+| `ErrorCollector.Attributes.Enabled` |
+| `ErrorCollector.Attributes.Exclude` |
+| `ErrorCollector.Attributes.Include` |
+| `ErrorCollector.CaptureEvents` |
+| `ErrorCollector.Enabled` |
+| `ErrorCollector.IgnoreStatusCodes` |
+| `ErrorCollector.RecordPanics` |
+| `Error` |
+| `Heroku.DynoNamePrefixesToShorten` |
+| `Heroku.UseDynoNames` |
+| `HighSecurity` | `NEW_RELIC_HIGH_SECURITY` |
+| `HostDisplayName` | `NEW_RELIC_PROCESS_HOST_DISPLAY_NAME` |
+| `Host` | `NEW_RELIC_HOST` |
+| `InfiniteTracing.SpanEvents.QueueSize` | `NEW_RELIC_INFINITE_TRACING_SPAN_EVENTS_QUEUE_SIZE` |
+| `InfiniteTracing.TraceObserver.Host` | `NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_HOST` |
+| `InfiniteTracing.TraceObserver.Port` | `NEW_RELIC_INFINITE_TRACING_TRACE_OBSERVER_PORT` |
+| `Labels` | `NEW_RELIC_LABELS` |
+| `License` | `ConfigLicense` | `NEW_RELIC_LICENSE_KEY` |
+| `Logger` | `ConfigLogger`
 
               `ConfigInfoLogger`
 
               `ConfigDebugLogger`
 
-              (See [note 2](#table-note-two) below)
-            </td>
+              (See [note 2](#table-note-two) below) | `NEW_RELIC_LOG`
+
+              `NEW_RELIC_LOG_LEVEL` |
+| `ModuleDependencyMetrics.Enabled` | `ConfigModuleDependencyMetricsEnabled` | `NEW_RELIC_MODULE_DEPENDENCY_METRICS_ENABLED` |
+| `ModuleDependencyMetrics.IgnoredPrefixes` | `ConfigModuleDependencyMetricsIgnoredPrefixes` | `NEW_RELIC_MODULE_DEPENDENCY_METRICS_IGNORED_PREFIXES` |
+| `ModuleDependencyMetrics.RedaceIgnoredPrefixes` | `ConfigModuleDependencyMetricsRedactIgnoredPrefixes` | `NEW_RELIC_MODULE_DEPENDENCY_METRICS_REDACT_IGNORED_PREFIXES` |
+| `RuntimeSampler.Enabled` |
+| `SecurityPoliciesToken` | `NEW_RELIC_SECURITY_POLICIES_TOKEN` |
+| `Segments.Attributes.Enabled` |
+| `Segments.Attributes.Exclude` |
+| `Segments.Attributes.Include` |
+| `Segments.StackTraceThreshold` |
+| `Segments.Threshold` |
+| `ServerlessMode.AccountID` |
+| `ServerlessMode.ApdexThreshold` |
+| `ServerlessMode.Enabled` |
+| `ServerlessMode.PrimaryAppID` |
+| `ServerlessMode.TrustedAccountKey` |
+| `SpanEvents.Attributes.Enabled` |
+| `SpanEvents.Attributes.Exclude` |
+| `SpanEvents.Attributes.Include` |
+| `SpanEvents.Enabled` |
+| `TransactionEvents.Attributes.Enabled` |
+| `TransactionEvents.Attributes.Exclude` |
+| `TransactionEvents.Attributes.Include` |
+| `TransactionEvents.Enabled` |
+| `TransactionEvents.MaxSamplesStored` |
+| `TransactionTracer.Attributes.Enabled` |
+| `TransactionTracer.Attributes.Exclude` |
+| `TransactionTracer.Attributes.Include` |
+| `TransactionTracer.Enabled` |
+| `TransactionTracer.Threshold.Duration` |
+| `TransactionTracer.Threshold.IsApdexFailing` |
+| `Transport` |
+| `Utilization.BillingHostname` | `NEW_RELIC_UTILIZATION_BILLING_HOSTNAME` |
+| `Utilization.DetectAWS` |
+| `Utilization.DetectAzure` |
+| `Utilization.DetectDocker` |
+| `Utilization.DetectGCP` |
+| `Utilization.DetectKubernetes` |
+| `Utilization.DetectPCF` |
+| `Utilization.LocalRAMMIB` | `NEW_RELIC_UTILIZATION_TOTAL_RAM_MIB` |
+| `Utilization.LogicalProcessors` | `NEW_RELIC_UTILIZATION_LOGICAL_PROCESSORS` |
 
-            <td>
-              `NEW_RELIC_LOG`
-
-              `NEW_RELIC_LOG_LEVEL`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `ModuleDependencyMetrics.Enabled`
-            </td>
-
-            <td>
-              `ConfigModuleDependencyMetricsEnabled`
-            </td>
-
-            <td>
-              `NEW_RELIC_MODULE_DEPENDENCY_METRICS_ENABLED`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `ModuleDependencyMetrics.IgnoredPrefixes`
-            </td>
-
-            <td>
-              `ConfigModuleDependencyMetricsIgnoredPrefixes`
-            </td>
-
-            <td>
-              `NEW_RELIC_MODULE_DEPENDENCY_METRICS_IGNORED_PREFIXES`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `ModuleDependencyMetrics.RedaceIgnoredPrefixes`
-            </td>
-
-            <td>
-              `ConfigModuleDependencyMetricsRedactIgnoredPrefixes`
-            </td>
-
-            <td>
-              `NEW_RELIC_MODULE_DEPENDENCY_METRICS_REDACT_IGNORED_PREFIXES`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `RuntimeSampler.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `SecurityPoliciesToken`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_SECURITY_POLICIES_TOKEN`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `Segments.Attributes.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Segments.Attributes.Exclude`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Segments.Attributes.Include`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Segments.StackTraceThreshold`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Segments.Threshold`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ServerlessMode.AccountID`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ServerlessMode.ApdexThreshold`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ServerlessMode.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ServerlessMode.PrimaryAppID`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `ServerlessMode.TrustedAccountKey`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `SpanEvents.Attributes.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `SpanEvents.Attributes.Exclude`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `SpanEvents.Attributes.Include`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `SpanEvents.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionEvents.Attributes.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionEvents.Attributes.Exclude`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionEvents.Attributes.Include`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionEvents.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionEvents.MaxSamplesStored`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionTracer.Attributes.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionTracer.Attributes.Exclude`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionTracer.Attributes.Include`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionTracer.Enabled`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionTracer.Threshold.Duration`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `TransactionTracer.Threshold.IsApdexFailing`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Transport`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Utilization.BillingHostname`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_UTILIZATION_BILLING_HOSTNAME`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `Utilization.DetectAWS`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Utilization.DetectAzure`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Utilization.DetectDocker`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Utilization.DetectGCP`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Utilization.DetectKubernetes`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Utilization.DetectPCF`
-            </td>
-
-            <td/>
-
-            <td/>
-          </tr>
-
-          <tr>
-            <td>
-              `Utilization.LocalRAMMIB`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_UTILIZATION_TOTAL_RAM_MIB`
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `Utilization.LogicalProcessors`
-            </td>
-
-            <td/>
-
-            <td>
-              `NEW_RELIC_UTILIZATION_LOGICAL_PROCESSORS`
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ### Table note 1: [#table-note-one]
 

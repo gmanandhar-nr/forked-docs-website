@@ -21,141 +21,20 @@ The Ruby agent can trace outgoing HTTP requests made by your application or scri
 
 The following HTTP client libraries are currently supported by the Ruby agent:
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        Name
-      </th>
+# Table
 
-      <th width={200}>
-        Minimum supported version
-      </th>
+| Name | Minimum supported version | Notes |
+| - | - | - |
+| [Async::HTTP](https://github.com/socketry/async-http) | 0.59.0 |
+| [Curb](https://github.com/taf2/curb) | 0.9.3 | Curl::Multi requests get partial instrumentation. See [Curb notes](#curb). |
+| [Ethon](https://github.com/typhoeus/ethon) | 0.12.0 | See [Ethon notes](#ethon). |
+| [Excon](https://github.com/geemus/excon) | 0.56.0 | See [Excon notes](#excon). |
+| [HTTPClient](https://github.com/nahi/httpclient) | 2.8.3 | Instrumentation of asynchronous requests is not supported. |
+| [http.rb](https://github.com/httprb/http) | 2.2.2 |
+| [HTTPX](https://honeyryderchuck.gitlab.io/httpx/) | 1.0.0 |
+| Net::HTTP | N/A (part of the Ruby standard library) | Also includes libraries built upon Net::HTTP, such as [httparty](http://johnnunemaker.com/httparty/). |
+| [Typhoeus](https://github.com/typhoeus/typhoeus) | 1.3.0 |
 
-      <th>
-        Notes
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [Async::HTTP](https://github.com/socketry/async-http)
-      </td>
-
-      <td>
-        0.59.0
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        [Curb](https://github.com/taf2/curb)
-      </td>
-
-      <td>
-        0.9.3
-      </td>
-
-      <td>
-        Curl::Multi requests get partial instrumentation. See [Curb notes](#curb).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Ethon](https://github.com/typhoeus/ethon)
-      </td>
-
-      <td>
-        0.12.0
-      </td>
-
-      <td>
-        See [Ethon notes](#ethon).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Excon](https://github.com/geemus/excon)
-      </td>
-
-      <td>
-        0.56.0
-      </td>
-
-      <td>
-        See [Excon notes](#excon).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [HTTPClient](https://github.com/nahi/httpclient)
-      </td>
-
-      <td>
-        2.8.3
-      </td>
-
-      <td>
-        Instrumentation of asynchronous requests is not supported.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [http.rb](https://github.com/httprb/http)
-      </td>
-
-      <td>
-        2.2.2
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        [HTTPX](https://honeyryderchuck.gitlab.io/httpx/)
-      </td>
-
-      <td>
-        1.0.0
-      </td>
-
-      <td/>
-    </tr>
-
-    <tr>
-      <td>
-        Net::HTTP
-      </td>
-
-      <td>
-        N/A (part of the Ruby standard library)
-      </td>
-
-      <td>
-        Also includes libraries built upon Net::HTTP, such as [httparty](http://johnnunemaker.com/httparty/).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Typhoeus](https://github.com/typhoeus/typhoeus)
-      </td>
-
-      <td>
-        1.3.0
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Ethon notes [#ethon]
 

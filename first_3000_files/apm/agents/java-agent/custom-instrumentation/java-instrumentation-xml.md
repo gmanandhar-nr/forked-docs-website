@@ -93,48 +93,16 @@ The Java agent reads any XML files in the `extensions` directory on process star
 
 There are two ways to specify the XML file location:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **XML file location options**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Procedure**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Create an extensions directory
-      </td>
-
-      <td>
-        1. In the directory where the newrelic.jar and newrelic.yml is located, create a directory named `extensions`.
+| **XML file location options** | **Procedure** |
+| - | - |
+| Create an extensions directory | 1. In the directory where the newrelic.jar and newrelic.yml is located, create a directory named `extensions`.
         2. Put the XML file in this directory with a `.xml` extension.
-        3. In `newrelic.yml`, check that the property `extensions.dir` is not set.
-      </td>
-    </tr>
+        3. In `newrelic.yml`, check that the property `extensions.dir` is not set. |
+| Specify an existing extensions directory | 1. In the `newrelic.yml` configuration file under the common section, use the property `extensions.dir` to specify the directory where the XML file is located.
+        2. Make sure the file is in the specified directory and that the file has a `.xml` extension. |
 
-    <tr>
-      <td>
-        Specify an existing extensions directory
-      </td>
-
-      <td>
-        1. In the `newrelic.yml` configuration file under the common section, use the property `extensions.dir` to specify the directory where the XML file is located.
-        2. Make sure the file is in the specified directory and that the file has a `.xml` extension.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Verify the file was read [#verifying-read]
 

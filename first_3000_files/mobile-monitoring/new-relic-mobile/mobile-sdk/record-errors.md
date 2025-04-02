@@ -65,53 +65,13 @@ NewRelic.recordError(error: $Error, map $eventAttributes);
 
       ### Objective-c
 
-      <table>
-        <thead>
-          <tr>
-            <th width="30%">
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$error`, `error` | `error`, `NSerror` | Required. The exception to be recorded. |
+| `attributes`, `$eventAttributes` | `NSDictionary`, `[AnyHashable, Any]?` | Optional. Dictionary of attributes that give context. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$error`, `error`
-            </td>
-
-            <td>
-              `error`, `NSerror`
-            </td>
-
-            <td>
-              Required. The exception to be recorded.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `attributes`, `$eventAttributes`
-            </td>
-
-            <td>
-              `NSDictionary`, `[AnyHashable, Any]?`
-            </td>
-
-            <td>
-              Optional. Dictionary of attributes that give context.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Examples [#examples]
 

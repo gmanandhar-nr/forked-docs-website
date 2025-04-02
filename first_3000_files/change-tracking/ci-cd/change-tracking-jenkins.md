@@ -84,138 +84,29 @@ To add the New Relic Deployment Notifier as a Post-build Action in your Jenkins 
      src="/images/tracking_screenshot-crop_jenkins--optional.webp"
    />
 
-   <table>
-     <thead>
-       <tr>
-         <th style={{ width: "200px" }}>
-           Field
-         </th>
+   # Table
 
-         <th>
-           Description
-         </th>
-       </tr>
-     </thead>
-
-     <tbody>
-       <tr>
-         <td>
-           Description
-         </td>
-
-         <td>
-           Insert a description of what you are tracking.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           Revision
-         </td>
-
-         <td>
-           Revision for the deployment. `${BUILD_NUMBER}` could be a good value here.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           Changelog
-         </td>
-
-         <td>
-           Reference to the list of changes incurred in the deployment.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           Commit
-         </td>
-
-         <td>
-           A hash to reference the commit ID.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           Deeplink
-         </td>
-
-         <td>
-           A deep link to either the Jenkins job or any other reference to the deployment.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           EntityGuid
-         </td>
-
-         <td>
-           The application entity in reference to the deployment (see [More about the application GUID](#guid)).
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           DeploymentType
-         </td>
-
-         <td>
-           The type of deployment that is being conducted.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           GroupId
-         </td>
-
-         <td>
-           An identifier to reference a cluster of changes.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           Timestamp
-         </td>
-
-         <td>
-           Optional timestamp in Unix Epoch long format. If not provided, then we will set it to the time we received the request, which will be the number of milliseconds since the Unix Epoch.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           Version
-         </td>
-
-         <td>
-           Version of what's being deployed. `${BUILD_NUMBER}` could be a good value here.
-         </td>
-       </tr>
-
-       <tr>
-         <td>
-           User
-         </td>
-
-         <td>
-           The user conducting the deployment. <DNT>**Tip:**</DNT> You can install [Build User Vars Plugin](https://wiki.jenkins.io/display/JENKINS/Build+User+Vars+Plugin) to have environment variables regarding the Jenkins user, and can use them in this field, like `${BUILD_USER}`.
+| Field | Description |
+| - | - |
+| Description | Insert a description of what you are tracking. |
+| Revision | Revision for the deployment. `${BUILD_NUMBER}` could be a good value here. |
+| Changelog | Reference to the list of changes incurred in the deployment. |
+| Commit | A hash to reference the commit ID. |
+| Deeplink | A deep link to either the Jenkins job or any other reference to the deployment. |
+| EntityGuid | The application entity in reference to the deployment (see [More about the application GUID](#guid)). |
+| DeploymentType | The type of deployment that is being conducted. |
+| GroupId | An identifier to reference a cluster of changes. |
+| Timestamp | Optional timestamp in Unix Epoch long format. If not provided, then we will set it to the time we received the request, which will be the number of milliseconds since the Unix Epoch. |
+| Version | Version of what's being deployed. `${BUILD_NUMBER}` could be a good value here. |
+| User | The user conducting the deployment. **Tip:** You can install [Build User Vars Plugin](https://wiki.jenkins.io/display/JENKINS/Build+User+Vars+Plugin) to have environment variables regarding the Jenkins user, and can use them in this field, like `${BUILD_USER}`.
 
            <img
              style={{ align: "left" }}
              title="Screenshot showing User field set to ${BUILD_USER}"
              alt="Screenshot showing User field set to ${BUILD_USER}"
              src="/images/tracking_screenshot-crop_jenkins--user.webp"
-           />
-         </td>
-       </tr>
-     </tbody>
-   </table>
+           /> |
+
 
 5. (Optional) If this Jenkins job affects multiple entities, they can be added to receive notifications as well. Click the <DNT>**Add another notification**</DNT> button to add more apps.
 

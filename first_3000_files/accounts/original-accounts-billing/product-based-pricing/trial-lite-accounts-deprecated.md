@@ -25,91 +25,18 @@ Our products allow you to view and track trends. Pro level [data retention](/doc
 
 Trial lengths depend on the product:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Product
-      </th>
+# Table
 
-      <th>
-        Trial Length
-      </th>
-    </tr>
-  </thead>
+| Product | Trial Length |
+| - | - |
+| Alerts | 30 days |
+| APM | 14 days |
+| Browser | 14 days |
+| Infrastructure | 30 days |
+| Insights | 30 days |
+| Mobile | 30 days |
+| Synthetic monitoring | 14 days |
 
-  <tbody>
-    <tr>
-      <td>
-        Alerts
-      </td>
-
-      <td>
-        30 days
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        APM
-      </td>
-
-      <td>
-        14 days
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Browser
-      </td>
-
-      <td>
-        14 days
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Infrastructure
-      </td>
-
-      <td>
-        30 days
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Insights
-      </td>
-
-      <td>
-        30 days
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Mobile
-      </td>
-
-      <td>
-        30 days
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Synthetic monitoring
-      </td>
-
-      <td>
-        14 days
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## End of trial period [#trial-end]
 

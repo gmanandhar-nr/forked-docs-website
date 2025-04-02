@@ -67,62 +67,22 @@ The two scopes supported for New Relic settings are:
 
 Each can also be set at a more general level. Valid locations for each are:
 
-<table>
-  <thead>
-    <tr>
-      <th width={275}>
-        <DNT>
-          **Can be set for:**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        SYSTEM
-      </th>
-
-      <th>
-        PERDIR
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Set in the global `newrelic.ini` file.
-      </td>
-
-      <td>
-        <Icon
+| **Can be set for:** | SYSTEM | PERDIR |
+| - | - | - |
+| Set in the global `newrelic.ini` file. | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-
-      <td>
-        <Icon
+        /> | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Set on a per-directory basis.
-      </td>
-
-      <td/>
-
-      <td>
-        <Icon
+        /> |
+| Set on a per-directory basis. | <Icon
           style={{color: '#328787'}}
           name="fe-check"
-        />
-      </td>
-    </tr>
-  </tbody>
-</table>
+        /> |
+
 
 <Callout variant="important">
   You cannot use `ini_set()` for New Relic settings.

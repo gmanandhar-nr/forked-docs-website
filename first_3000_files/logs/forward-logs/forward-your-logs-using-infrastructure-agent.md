@@ -514,83 +514,28 @@ Although these configuration parameters aren't required, we still recommend you 
   >
     The infrastructure agent automatically inserts log attributes for your convenience. Some of them are inserted for any log record, while others depend on the configuration parameters you used while setting up the log forwarder.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Attribute name
-          </th>
+    # Table
 
-          <th>
-            Description
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            `entity.guids`
-          </td>
-
-          <td>
-            Always inserted.
+| Attribute name | Description |
+| - | - |
+| `entity.guids` | Always inserted.
 
             The infrastructure agent inserts the [Entity GUID](/attribute-dictionary/?event=Span&attribute=entityGuid) assigned by New Relic to identify the host where it's running. It is available in the `entity.guids` field.
 
-            Note: If the captured logs belong to an application instrumented using APM, the `entity.guids` field contains both the entity GUID of infrastructure, as well as the GUID of APM, separated by a pipe ( | ) delimiter.
-          </td>
-        </tr>
+            Note: If the captured logs belong to an application instrumented using APM, the `entity.guids` field contains both the entity GUID of infrastructure, as well as the GUID of APM, separated by a pipe ( | ) delimiter. |
+| `fb.input` | Always inserted.
 
-        <tr>
-          <td>
-            `fb.input`
-          </td>
+            The underlying [Fluent Bit input plugin type](https://docs.fluentbit.io/manual/pipeline/inputs) used to capture the logs. Currently its values are `tail`, `systemd`, `winlog`, `syslog`, and `tcp`. |
+| `filePath` | Inserted when using the `file` input type.
 
-          <td>
-            Always inserted.
+            Absolute file path of the file being monitored. |
+| `hostname` | Always inserted.
 
-            The underlying [Fluent Bit input plugin type](https://docs.fluentbit.io/manual/pipeline/inputs) used to capture the logs. Currently its values are `tail`, `systemd`, `winlog`, `syslog`, and `tcp`.
-          </td>
-        </tr>
+            The hostname of the machine/VM/container executing the infrastructure agent. |
+| `plugin.type` | Always inserted.
 
-        <tr>
-          <td>
-            `filePath`
-          </td>
+            Indicates the utility used to capture the logs. In this case, it is the infrastructure agent itself, so this attribute always has the value `nri-agent`. |
 
-          <td>
-            Inserted when using the `file` input type.
-
-            Absolute file path of the file being monitored.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `hostname`
-          </td>
-
-          <td>
-            Always inserted.
-
-            The hostname of the machine/VM/container executing the infrastructure agent.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `plugin.type`
-          </td>
-
-          <td>
-            Always inserted.
-
-            Indicates the utility used to capture the logs. In this case, it is the infrastructure agent itself, so this attribute always has the value `nri-agent`.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

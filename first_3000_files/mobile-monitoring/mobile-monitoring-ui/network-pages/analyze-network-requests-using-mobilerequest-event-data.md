@@ -68,48 +68,11 @@ To create custom <InlinePopover type="dashboards"/> for HTTP and network request
 
 To explore `MobileRequest` and `MobileRequestError` data in the UI, go to the following pages:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Page
-      </th>
+# Table
 
-      <th>
-        What you can do here
-      </th>
-    </tr>
-  </thead>
+| Page | What you can do here |
+| - | - |
+| [Mobile crash event trail](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/mobile-crash-event-trail) | The **Mobile crash event trail** shows you the events leading up to a crash of a mobile app, based on your subscription level's [data retention policy](/docs/accounts/original-accounts-billing/product-based-pricing/overview-data-retention-components/#mobile). These events can help you diagnose the cause of the crash. |
+| [HTTP requests](/docs/mobile-monitoring/mobile-monitoring-ui/network-pages/http-requests-page) | The **HTTP requests** page includes charts for your top 20 domains by response time and average throughput. |
+| [HTTP errors](/docs/network-errors-http-error-network-failure-analysis) | The **HTTP errors** page helps you to better understand HTTP errors and network failures associated with your mobile app and to connect errors to services that are causing issues. |
 
-  <tbody>
-    <tr>
-      <td>
-        [Mobile crash event trail](/docs/mobile-monitoring/mobile-monitoring-ui/crashes/mobile-crash-event-trail)
-      </td>
-
-      <td>
-        The <DNT>**Mobile crash event trail**</DNT> shows you the events leading up to a crash of a mobile app, based on your subscription level's [data retention policy](/docs/accounts/original-accounts-billing/product-based-pricing/overview-data-retention-components/#mobile). These events can help you diagnose the cause of the crash.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [HTTP requests](/docs/mobile-monitoring/mobile-monitoring-ui/network-pages/http-requests-page)
-      </td>
-
-      <td>
-        The <DNT>**HTTP requests**</DNT> page includes charts for your top 20 domains by response time and average throughput.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [HTTP errors](/docs/network-errors-http-error-network-failure-analysis)
-      </td>
-
-      <td>
-        The <DNT>**HTTP errors**</DNT> page helps you to better understand HTTP errors and network failures associated with your mobile app and to connect errors to services that are causing issues.
-      </td>
-    </tr>
-  </tbody>
-</table>

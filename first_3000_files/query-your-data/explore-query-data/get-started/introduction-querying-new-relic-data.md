@@ -35,62 +35,15 @@ While we provide you with an out of the box experience to see your data with cur
 
 Regardless of your experience with New Relic, we'll help you discover, understand and visualize your data.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        You...
-      </th>
+# Table
 
-      <th>
-        Then do this...
-      </th>
-    </tr>
-  </thead>
+| You... | Then do this... |
+| - | - |
+| Just installed an agent and want to see your data in New Relic. | [Browse your data](#browse-data) easily without building queries. With [metrics and events](/docs/query-your-data/explore-query-data/data-explorer/introduction-data-explorer), you can understand the data we’ve stored, see its cardinality, or build charts in a few clicks. |
+| Know what data is available, but you want to understand more about what else is coming with that data. | If you're an advanced user, use our [query builder](/docs/chart-builder/use-chart-builder/choose-data/use-advanced-nrql-mode-specify-data) to tailor the data you want to retrieve. |
+| Want to build a dashboard. | Create a [custom dashboard](/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards) from metrics and events or the query builder. |
+| Want more options for querying than the UI query builder provides. | Use [our NerdGraph API](/docs/apis/nerdgraph/examples/nerdgraph-nrql-tutorial), which has more features, such as cross-account querying and historical data export. |
 
-  <tbody>
-    <tr>
-      <td>
-        Just installed an agent and want to see your data in New Relic.
-      </td>
-
-      <td>
-        [Browse your data](#browse-data) easily without building queries. With [metrics and events](/docs/query-your-data/explore-query-data/data-explorer/introduction-data-explorer), you can understand the data we’ve stored, see its cardinality, or build charts in a few clicks.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Know what data is available, but you want to understand more about what else is coming with that data.
-      </td>
-
-      <td>
-        If you're an advanced user, use our [query builder](/docs/chart-builder/use-chart-builder/choose-data/use-advanced-nrql-mode-specify-data) to tailor the data you want to retrieve.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Want to build a dashboard.
-      </td>
-
-      <td>
-        Create a [custom dashboard](/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards) from metrics and events or the query builder.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Want more options for querying than the UI query builder provides.
-      </td>
-
-      <td>
-        Use [our NerdGraph API](/docs/apis/nerdgraph/examples/nerdgraph-nrql-tutorial), which has more features, such as cross-account querying and historical data export.  
-
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Browse your data in the UI [#browse-data]
 

@@ -55,64 +55,23 @@ By comparing the timeline to the charts on the infrastructure page, you can quic
 
 New Relic collects a variety of change events so you can understand each change in your environment:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Events**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Alert incidents
-      </td>
-
-      <td>
-        When an [incident](/docs/new-relic-solutions/get-started/glossary/#alert-incident) is opened or closed, New Relic generates an event indicating the host and associated [alert condition](/docs/infrastructure/new-relic-infrastructure/configuration/infrastructure-alerts-add-edit-or-view-host-alert-information).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Agent connection
-      </td>
-
-      <td>
-        When an infrastructure [agent](/docs/accounts-partnerships/education/getting-started-new-relic/glossary#agent) connects to New Relic, our platform generates an <DNT>**Agent connected**</DNT> event. If New Relic doesn't receive data from an agent for three minutes, the platform generates an <DNT>**Agent disconnected**</DNT> event.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Inventory changes
-      </td>
-
-      <td>
-        These events are generated when [inventory](/docs/infrastructure-inventory-page) data is added, removed, or modified. Select the source <Icon name="fe-filter"/>
+| **Events** | **Comments** |
+| - | - |
+| Alert incidents | When an [incident](/docs/new-relic-solutions/get-started/glossary/#alert-incident) is opened or closed, New Relic generates an event indicating the host and associated [alert condition](/docs/infrastructure/new-relic-infrastructure/configuration/infrastructure-alerts-add-edit-or-view-host-alert-information). |
+| Agent connection | When an infrastructure [agent](/docs/accounts-partnerships/education/getting-started-new-relic/glossary#agent) connects to New Relic, our platform generates an **Agent connected** event. If New Relic doesn't receive data from an agent for three minutes, the platform generates an **Agent disconnected** event. |
+| Inventory changes | These events are generated when [inventory](/docs/infrastructure-inventory-page) data is added, removed, or modified. Select the source 
         icon to to understand which category corresponds to the altered inventory path. For additional details, select an inventory event to see a side-by-side comparison of the old and new state.
 
         Inventory events can include:
 
-        * <DNT>**Kernel**</DNT> (includes modules and configuration): Can be added, modified, or deleted.
-        * <DNT>**Metadata**</DNT> (includes various additional information about hosts): Can be added, modified, or deleted.
-        * <DNT>**Packages**</DNT>: Can be installed, removed, or modified.
-        * <DNT>**Services**</DNT>: Can be started, stopped, or restarted.
-        * <DNT>**Sessions**</DNT> (includes users): Can be connected or disconnected.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * **Kernel** (includes modules and configuration): Can be added, modified, or deleted.
+        * **Metadata** (includes various additional information about hosts): Can be added, modified, or deleted.
+        * **Packages**: Can be installed, removed, or modified.
+        * **Services**: Can be started, stopped, or restarted.
+        * **Sessions** (includes users): Can be connected or disconnected. |
+
 
 ## Filter sets [#filter-set]
 

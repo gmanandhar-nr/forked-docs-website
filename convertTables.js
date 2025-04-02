@@ -68,5 +68,5 @@ function walkDirectory(directoryPath) {
 }
 
 // Specify the root directory of your repository
-const repoRootPath = './src';
+const repoRootPath = './first_3000_files';
 walkDirectory(repoRootPath);

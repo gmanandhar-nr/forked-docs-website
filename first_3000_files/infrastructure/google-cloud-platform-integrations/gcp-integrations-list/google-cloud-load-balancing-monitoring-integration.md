@@ -38,111 +38,20 @@ To view [metric data](/docs/telemetry-data-platform/understand-data/new-relic-da
 
 Query `GcpHttpLoadBalancerSample` events in New Relic to view data for the following attributes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Attribute | Description |
+| - | - |
+| `https.BackendLatencies` | Mean latency (in milliseconds) calculated from when the request was sent by the proxy to the backend until the proxy received from the backend the last byte of response. |
+| `https.BackendRequestBytes` | The number of bytes sent as requests from HTTP/S load balancer to backends. |
+| `https.BackendRequests` | The number of requests served by backends of HTTP/S load balancer. |
+| `https.BackendResponseBytes` | The number of bytes sent as responses from backends (or cache) to HTTP/S load balancer. |
+| `https.FrontendTcpRtt` | Mean of the Round-Trip Time (RTT) measured for each connection between client and proxy. |
+| `https.RequestBytes` | The number of bytes sent as requests from clients to HTTP/S load balancer. |
+| `https.Requests` | The number of requests served by HTTP/S load balancer. |
+| `https.ResponseBytes` | The number of bytes sent as responses from HTTP/S load balancer to clients. |
+| `https.TotalLatencies` | Mean of the latency (in milliseconds) calculated from when the request was received by the proxy until the proxy got ACK from client on last response byte. |
 
-  <tbody>
-    <tr>
-      <td>
-        `https.BackendLatencies`
-      </td>
-
-      <td>
-        Mean latency (in milliseconds) calculated from when the request was sent by the proxy to the backend until the proxy received from the backend the last byte of response.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `https.BackendRequestBytes`
-      </td>
-
-      <td>
-        The number of bytes sent as requests from HTTP/S load balancer to backends.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `https.BackendRequests`
-      </td>
-
-      <td>
-        The number of requests served by backends of HTTP/S load balancer.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `https.BackendResponseBytes`
-      </td>
-
-      <td>
-        The number of bytes sent as responses from backends (or cache) to HTTP/S load balancer.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `https.FrontendTcpRtt`
-      </td>
-
-      <td>
-        Mean of the Round-Trip Time (RTT) measured for each connection between client and proxy.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `https.RequestBytes`
-      </td>
-
-      <td>
-        The number of bytes sent as requests from clients to HTTP/S load balancer.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `https.Requests`
-      </td>
-
-      <td>
-        The number of requests served by HTTP/S load balancer.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `https.ResponseBytes`
-      </td>
-
-      <td>
-        The number of bytes sent as responses from HTTP/S load balancer to clients.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `https.TotalLatencies`
-      </td>
-
-      <td>
-        Mean of the latency (in milliseconds) calculated from when the request was received by the proxy until the proxy got ACK from client on last response byte.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### GcpTcpSslProxyLoadBalancerSample [#gcp-tcp-ssl-proxy-load-balancer-sample]
 

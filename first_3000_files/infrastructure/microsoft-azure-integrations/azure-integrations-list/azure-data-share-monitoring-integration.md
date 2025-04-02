@@ -36,78 +36,14 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Data Share metrics [#Azure-data-share]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `FailedShareSubscriptionSynchronizations` | Number of received share failed snapshots in the account. |
+| `FailedShareSynchronizations` | Number of sent share failed snapshots in the account. |
+| `ShareCount` | Number of sent shares in the account. |
+| `ShareSubscriptionCount` | Number of received shares in the account. |
+| `SucceededShareSubscriptionSynchronizations` | Number of received share succeeded snapshots in the account. |
+| `SucceededShareSynchronizations` | Number of sent share succeeded snapshots in the account. |
 
-  <tbody>
-    <tr>
-      <td>
-        `FailedShareSubscriptionSynchronizations`
-      </td>
-
-      <td>
-        Number of received share failed snapshots in the account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FailedShareSynchronizations`
-      </td>
-
-      <td>
-        Number of sent share failed snapshots in the account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ShareCount`
-      </td>
-
-      <td>
-        Number of sent shares in the account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ShareSubscriptionCount`
-      </td>
-
-      <td>
-        Number of received shares in the account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SucceededShareSubscriptionSynchronizations`
-      </td>
-
-      <td>
-        Number of received share succeeded snapshots in the account.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SucceededShareSynchronizations`
-      </td>
-
-      <td>
-        Number of sent share succeeded snapshots in the account.
-      </td>
-    </tr>
-  </tbody>
-</table>

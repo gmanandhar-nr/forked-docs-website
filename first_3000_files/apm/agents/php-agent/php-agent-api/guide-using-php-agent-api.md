@@ -33,41 +33,13 @@ This guide describes PHP API calls for several common tasks; for example:
 
 Usually, the agent detects errors automatically. However, you can [manually mark an error](/docs/apm/applications-menu/error-analytics/ignoring-errors-new-relic-apm) with the agent.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Do this...
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Do this... |
+| - | - |
+| Report an error the agent does not report automatically | See [`newrelic_notice_error()`](/docs/agents/php-agent/php-agent-api/newrelic_notice_error). |
+| Ignore an error | Edit [`error_collector.ignore_exceptions`](/docs/agents/php-agent/configuration/php-agent-configuration#inivar-err-ignore-exceptions) or [`error_collector.ignore_errors`](/docs/agents/php-agent/configuration/php-agent-configuration#inivar-err-ignore-errors) in the`newrelic.ini` file. |
 
-  <tbody>
-    <tr>
-      <td>
-        Report an error the agent does not report automatically
-      </td>
-
-      <td>
-        See [`newrelic_notice_error()`](/docs/agents/php-agent/php-agent-api/newrelic_notice_error).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Ignore an error
-      </td>
-
-      <td>
-        Edit [`error_collector.ignore_exceptions`](/docs/agents/php-agent/configuration/php-agent-configuration#inivar-err-ignore-exceptions) or [`error_collector.ignore_errors`](/docs/agents/php-agent/configuration/php-agent-configuration#inivar-err-ignore-errors) in the`newrelic.ini` file.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Enhance the metadata of a transaction [#metadata]
 

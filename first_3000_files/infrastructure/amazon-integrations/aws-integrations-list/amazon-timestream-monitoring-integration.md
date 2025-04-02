@@ -26,41 +26,13 @@ To enable this integration, see how to [connect AWS services to New Relic via Cl
 
 To find your integration's metrics, go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Metrics and events**</DNT> and filter by `aws.timestream`.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
+| Entity | Provider |
+| - | - |
+| Database | `cloudwatch-metric-streams` |
+| Table | `cloudwatch-metric-streams` |
 
-  <tbody>
-    <tr>
-      <td>
-        Database
-      </td>
-
-      <td>
-        `cloudwatch-metric-streams`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Table
-      </td>
-
-      <td>
-        `cloudwatch-metric-streams`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Metric data [#metrics]
 

@@ -36,53 +36,13 @@ To find your integration data in Infrastructure, go to <DNT>**[one.newrelic.com 
 
 Data is attached to the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Queue | `AwsMediaConvertQueueSample` | `AwsMediaConvertQueue` |
+| Operation | `AwsMediaConvertOperationSample` | `AwsMediaConvertOperation` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Queue
-      </td>
-
-      <td>
-        `AwsMediaConvertQueueSample`
-      </td>
-
-      <td>
-        `AwsMediaConvertQueue`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Operation
-      </td>
-
-      <td>
-        `AwsMediaConvertOperationSample`
-      </td>
-
-      <td>
-        `AwsMediaConvertOperation`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

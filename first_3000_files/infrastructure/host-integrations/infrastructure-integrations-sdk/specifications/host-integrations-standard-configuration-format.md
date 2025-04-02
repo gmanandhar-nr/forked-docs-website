@@ -57,154 +57,27 @@ Each configuration YAML file can also contain [`discovery`](/docs/integrations/h
 
 This is a list of the general properties used to configure an integration. For more details about using these properties, including example values, see the documentation following the table.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Config
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Config | Description |
+| - | - |
+| [`name`](#name) | Name of the integration. This is the only mandatory configuration property across all on-host integrations. If the `exec` field is not set it will also be the name of the integration executable. |
+| `cli_args` | Optional list of command line arguments when `name` is used to provide the integration executable.
+        _Available since agent version **1.13.0**._ |
+| [`exec`](#exec) | Full path to the integration executable, plus arguments. It may be a single-line string or a string array. If left unspecified, the `exec` field defaults to the `name` field. |
+| [`env`](#env) | YAML map containing the environment variables to be passed to the integration, where `key` is the environment variable name, and `value` is the variable value. |
+| [`config`](#config) | Configuration that is written as an external file and the path that is passed to the integration with the `CONFIG_PATH` environment variable or the `${config.path}` variable placeholder. |
+| [`config_template_path`](#config_template_path) | Any external file whose path is passed to the integration with the `CONFIG_PATH` environment variable or the `${config.path}` variable placeholder. Its usage allows applying discovery and secrets binding to any external configuration. |
+| [`integration_user`](#integration_user) | Name of the user who runs the integration. |
+| [`interval`](#interval) | Time between consecutive executions of the integration. It must be a number followed by a time unit (`s`, `m` or `h`), without spaces. |
+| [`inventory_source`](#inventory_source) | Allows overriding the category and term of the inventory source. |
+| [`labels`](#labels) | Map with labels that decorate the data (metrics, events, inventory) reported by the integration. |
+| [`timeout`](#timeout) | A number followed by a time unit (`ms`, `s`, `m` or `h`). An integration that hasn't responded in this time period is killed and restarted. |
+| [`working_dir`](#working_dir) | Working directory for the integration binary. |
+| [when](#when) | Integration is only executed if the clause evaluates to true.
 
-  <tbody>
-    <tr>
-      <td>
-        [`name`](#name)
-      </td>
+        Conditions are defined [below](#when). |
 
-      <td>
-        Name of the integration. This is the only mandatory configuration property across all on-host integrations. If the `exec` field is not set it will also be the name of the integration executable.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cli_args`
-      </td>
-
-      <td>
-        Optional list of command line arguments when `name` is used to provide the integration executable.
-        _Available since agent version <DNT>**1.13.0**</DNT>._
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`exec`](#exec)
-      </td>
-
-      <td>
-        Full path to the integration executable, plus arguments. It may be a single-line string or a string array. If left unspecified, the `exec` field defaults to the `name` field.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`env`](#env)
-      </td>
-
-      <td>
-        YAML map containing the environment variables to be passed to the integration, where `key` is the environment variable name, and `value` is the variable value.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`config`](#config)
-      </td>
-
-      <td>
-        Configuration that is written as an external file and the path that is passed to the integration with the `CONFIG_PATH` environment variable or the `${config.path}` variable placeholder.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`config_template_path`](#config_template_path)
-      </td>
-
-      <td>
-        Any external file whose path is passed to the integration with the `CONFIG_PATH` environment variable or the `${config.path}` variable placeholder. Its usage allows applying discovery and secrets binding to any external configuration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`integration_user`](#integration_user)
-      </td>
-
-      <td>
-        Name of the user who runs the integration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`interval`](#interval)
-      </td>
-
-      <td>
-        Time between consecutive executions of the integration. It must be a number followed by a time unit (`s`, `m` or `h`), without spaces.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`inventory_source`](#inventory_source)
-      </td>
-
-      <td>
-        Allows overriding the category and term of the inventory source.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`labels`](#labels)
-      </td>
-
-      <td>
-        Map with labels that decorate the data (metrics, events, inventory) reported by the integration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`timeout`](#timeout)
-      </td>
-
-      <td>
-        A number followed by a time unit (`ms`, `s`, `m` or `h`). An integration that hasn't responded in this time period is killed and restarted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`working_dir`](#working_dir)
-      </td>
-
-      <td>
-        Working directory for the integration binary.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [when](#when)
-      </td>
-
-      <td>
-        Integration is only executed if the clause evaluates to true.
-
-        Conditions are defined [below](#when).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The remainder of this document describes config properties grouped by their functionality:
 

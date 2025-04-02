@@ -33,71 +33,8 @@ Using your CloudWatch console's screenshot, New Relic Support will troubleshoot 
 
 Depending on the AWS integration, the infrastructure agent may experience explicit delays or implicit delays in the timing between the API request and the metric data returned.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Metric data delays**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Metric data delays** | **Comments** |
+| - | - |
 
-  <tbody>
-    <tr id="explicit">
-      <td>
-        Explicit delays
-
-        (specifically set)
-      </td>
-
-      <td>
-        Explicit delays are the ones that New Relic sets in the code to get more reliable data. In some cases, the API request to AWS may return one value, but a request for the same metric a minute later returns a different value. To reduce the possibility of this occurring, New Relic sets explicit delays. For example:
-
-        * If New Relic uses an explicit delay of five minutes, an API call at 9:00 requests metrics from 8:50 to 8:55.
-
-        * If New Relic does not use an explicit delay of five minutes, an API call at 9:00 requests metrics from 8:55 to 9:00.
-
-          Explicit delays may come from these Amazon integrations:
-
-        * [ALB](/docs/aws-alb-integration): 5 minutes
-
-        * [ELB](/docs/aws-elb-integration): 5 minutes
-
-        * [CloudFront](/docs/infrastructure/amazon-integrations/amazon-integrations/aws-cloudfront-monitoring-integration): 3 minute
-
-        * [RDS](/docs/infrastructure/amazon-integrations/amazon-integrations/aws-rds-monitoring-integration): 5 minutes
-
-        * [SNS](/docs/infrastructure/amazon-integrations/amazon-integrations/aws-sns-monitoring-integration): 10 minutes
-      </td>
-    </tr>
-
-    <tr id="implicit">
-      <td>
-        Implicit delays
-
-        (expected but not specifically set)
-      </td>
-
-      <td>
-        Implicit delays are patterns that New Relic has experienced with integrations. They are not always present, and they are not exact.
-
-        In general, implicit delays tend to come from requests for AWS CloudWatch metrics, including these Amazon integrations:
-
-        * [DynamoDB](/docs/infrastructure/amazon-integrations/amazon-integrations/aws-dynamodb-monitoring-integration): Approximately 1 minute
-        * [EBS](/docs/infrastructure/amazon-integrations/amazon-integrations/aws-ebs-monitoring-integration): Approximately 15 minutes
-        * [EC2](/docs/infrastructure/amazon-integrations/amazon-integrations/aws-ec2-monitoring-integration): Approximately 5 minutes
-        * [ElastiCache](/docs/infrastructure/amazon-integrations/amazon-integrations/aws-elasticache-monitoring-integration): Approximately 5 minutes
-        * [Lambda](/docs/infrastructure/amazon-integrations/amazon-integrations/aws-lambda-monitoring-integration): Approximately 1 minute
-        * [SQS](/docs/infrastructure/amazon-integrations/amazon-integrations/aws-sqs-monitoring-integration): Approximately 5 minutes
-      </td>
-    </tr>
-  </tbody>
-</table>

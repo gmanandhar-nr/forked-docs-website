@@ -47,35 +47,16 @@ The ID will be attached to JavaScriptError events in particular for [Errors Inbo
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `value`
 
-  <tbody>
-    <tr>
-      <td>
-        `value`
+        _string_ OR _null_ | Required. A string identifier for the end-user, useful for tying all browser events to specific users. The `value` parameter does not have to be unique. If IDs should be unique, the caller is responsible for that validation.
 
-        _string_ OR _null_
-      </td>
+        Passing a `null` value unsets any existing user ID. |
 
-      <td>
-        Required. A string identifier for the end-user, useful for tying all browser events to specific users. The `value` parameter does not have to be unique. If IDs should be unique, the caller is responsible for that validation.
-
-        Passing a `null` value unsets any existing user ID.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

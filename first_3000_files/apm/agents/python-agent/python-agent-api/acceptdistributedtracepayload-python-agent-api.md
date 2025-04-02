@@ -39,45 +39,17 @@ This call is used to link transactions by parsing the distributed tracing payloa
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `payload`
 
-  <tbody>
-    <tr>
-      <td>
-        `payload`
+        _dictionary or string_ | Required. The payload to be accepted. |
+| `transport_type`
 
-        _dictionary or string_
-      </td>
+        _string_ | Optional, defaults to `HTTP`. The type of transport that sent this payload. Must be one of the following: `HTTP`, `HTTPS`, `Kafka`, `JMS`, `IronMQ`, `AMQP`, `Queue`, or `Other`. |
 
-      <td>
-        Required. The payload to be accepted.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `transport_type`
-
-        _string_
-      </td>
-
-      <td>
-        Optional, defaults to `HTTP`. The type of transport that sent this payload. Must be one of the following: `HTTP`, `HTTPS`, `Kafka`, `JMS`, `IronMQ`, `AMQP`, `Queue`, or `Other`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

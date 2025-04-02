@@ -65,71 +65,30 @@ To solve this problem:
 
       You can use configuration variables in your Ruby agent `newrelic.yml` file to customize auto-start behavior for constants, script names, and rake tasks.
 
-      <table>
-        <thead>
-          <tr>
-            <th width={150}>
-              <DNT>
-                **Variable**
-              </DNT>
-            </th>
+      # Table
 
-            <th>
-              <DNT>
-                **Description**
-              </DNT>
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              Constants
-            </td>
-
-            <td>
-              ```
-              <a href="/docs/agents/ruby-agent/configuration/ruby-agent-configuration#autostart-denylisted_constants">autostart.denylisted_constants</a>
+| **Variable** | **Description** |
+| - | - |
+| Constants | ```
+              autostart.denylisted_constants
               ```
 
               * Ruby constants that should prevent the agent from starting. Accepts a comma separated list.
               * Defaults to `"Rails::Console"`.
-              * Set to `""` to tell the agent to start when `Rails::Console` is in the environment.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              Rake tasks
-            </td>
-
-            <td>
-              ```
-              <a href="/docs/agents/ruby-agent/configuration/ruby-agent-configuration#autostart-denylisted_rake_tasks">autostart.denylisted_rake_tasks</a>
+              * Set to `""` to tell the agent to start when `Rails::Console` is in the environment. |
+| Rake tasks | ```
+              autostart.denylisted_rake_tasks
               ```
 
               * Rake tasks you do not want the agent to monitor; for example, `assets:precompile`. Accepts a comma-separated list.
-              * We do not disable the Ruby agent in all rake tasks, because tasks like `resque:work` generally are monitored.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              Executables
-            </td>
-
-            <td>
-              ```
-              <a href="/docs/agents/ruby-agent/configuration/ruby-agent-configuration#autostart-denylisted_executables">autostart.denylisted_executables</a>
+              * We do not disable the Ruby agent in all rake tasks, because tasks like `resque:work` generally are monitored. |
+| Executables | ```
+              autostart.denylisted_executables
               ```
 
               * A list of script names, such as `irb`, that will prevent the agent from starting automatically. Accepts a comma-separated list.
-              * Set this to `"rake"` to prevent the agent from starting in rake tasks, or `"rake,my_ruby_script.rb"` to prevent it from starting in rake and a custom script.
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              * Set this to `"rake"` to prevent the agent from starting in rake tasks, or `"rake,my_ruby_script.rb"` to prevent it from starting in rake and a custom script. |
+
   </Collapser>
 </CollapserGroup>
 

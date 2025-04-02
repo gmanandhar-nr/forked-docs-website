@@ -85,71 +85,21 @@ Use any of New Relic's standard [user interface functions](/docs/new-relic-solut
 
     You can sort by:
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            <DNT>
-              **Sort option**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Comments**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| **Sort option** | **Comments** |
+| - | - |
+| Most time consuming (default) | Highest percentage of the app's total time used.
 
-      <tbody>
-        <tr>
-          <td>
-            Most time consuming (default)
-          </td>
+            This measures which transactions consumed the most time in total. This is calculated by multiplying the number of times the transaction is called by the time the transaction took to complete. A transaction could be short, but if it is frequently called, it would appear at the top of this ranking. |
+| Slowest average response time | Slowest individual transactions for the time period as averaged.
 
-          <td>
-            Highest percentage of the app's total time used.
+            This measures the slowest types of transaction. A transaction could be called only a few times, but if it is one of the longest transactions to finish, it would appear at the top of this ranking. |
+| Apdex most dissatisfying | Transactions with the highest percentages of user dissatisfaction levels for the response time of your web apps and services ([Apdex](/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction)).
 
-            This measures which transactions consumed the most time in total. This is calculated by multiplying the number of times the transaction is called by the time the transaction took to complete. A transaction could be short, but if it is frequently called, it would appear at the top of this ranking.
-          </td>
-        </tr>
+            The [dissatisfaction level](/docs/apm/new-relic-apm/apdex/view-your-apdex-score#apdex-dissat) is the difference between a perfect Apdex score (1.0) and your app's `apdex_t` ("tolerating") score, based on your [Apdex settings](/docs/apm/new-relic-apm/apdex/change-your-apdex-settings). Transactions that have the highest (worst) percentages appear at the top of this ranking. |
+| Highest throughput | This measures the amount of [throughput](/docs/using-new-relic/welcome-new-relic/getting-started/glossary#throughput), in operation requests per minute or **rpm**. (For web throughput, requests per minute is sometimes called pages per minute or **ppm**.) Transactions that have the highest number of requests per minute appear at the top of this ranking. |
 
-        <tr>
-          <td>
-            Slowest average response time
-          </td>
-
-          <td>
-            Slowest individual transactions for the time period as averaged.
-
-            This measures the slowest types of transaction. A transaction could be called only a few times, but if it is one of the longest transactions to finish, it would appear at the top of this ranking.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Apdex most dissatisfying
-          </td>
-
-          <td>
-            Transactions with the highest percentages of user dissatisfaction levels for the response time of your web apps and services ([Apdex](/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction)).
-
-            The [dissatisfaction level](/docs/apm/new-relic-apm/apdex/view-your-apdex-score#apdex-dissat) is the difference between a perfect Apdex score (1.0) and your app's `apdex_t` ("tolerating") score, based on your [Apdex settings](/docs/apm/new-relic-apm/apdex/change-your-apdex-settings). Transactions that have the highest (worst) percentages appear at the top of this ranking.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Highest throughput
-          </td>
-
-          <td>
-            This measures the amount of [throughput](/docs/using-new-relic/welcome-new-relic/getting-started/glossary#throughput), in operation requests per minute or <DNT>**rpm**</DNT>. (For web throughput, requests per minute is sometimes called pages per minute or <DNT>**ppm**</DNT>.) Transactions that have the highest number of requests per minute appear at the top of this ranking.
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     <Callout variant="tip">
       Depending on the transaction type you choose, different sort options may be available.

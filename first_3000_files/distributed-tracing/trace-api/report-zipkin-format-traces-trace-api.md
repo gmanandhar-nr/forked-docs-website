@@ -133,167 +133,23 @@ For an explanation of `Api-Key` and the other metadata, see [Request metadata](/
 
 To create a consistent search/query experience, some Zipkin data will be transformed to match New Relic [attribute](/docs/using-new-relic/welcome-new-relic/get-started/glossary#attribute) naming. For more on how we store and structure trace data, see [How distributed tracing works](/docs/understand-dependencies/distributed-tracing/get-started/how-new-relic-distributed-tracing-works).
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Zipkin tag
-      </th>
+# Table
 
-      <th>
-        Stored in New Relic as...
-      </th>
-
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `traceId`
-      </td>
-
-      <td>
-        `trace.id`
-      </td>
-
-      <td>
-        Unique identifier for a trace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `id`
-      </td>
-
-      <td>
-        `id`
-      </td>
-
-      <td>
-        Unique identifier for a span.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `parentId`
-      </td>
-
-      <td>
-        `parent.id`
-      </td>
-
-      <td>
-        Identifier of the upstream span that called the service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `kind`
-      </td>
-
-      <td>
-        `kind`
-      </td>
-
-      <td>
-        Either `Client` or `Server`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `name`
-      </td>
-
-      <td>
-        `name`
-      </td>
-
-      <td>
-        Name of span.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `duration`
-      </td>
-
-      <td>
-        `duration.ms`
-      </td>
-
-      <td>
-        Zipkin v2 spans must have durations specified in microseconds, and will be converted to milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        localEndpoint: `serviceName`
-      </td>
-
-      <td>
-        `service.name`
-      </td>
-
-      <td>
-        We use the Zipkin v2 service name to identify the entity that created this span.
+| Zipkin tag | Stored in New Relic as... | Details |
+| - | - | - |
+| `traceId` | `trace.id` | Unique identifier for a trace. |
+| `id` | `id` | Unique identifier for a span. |
+| `parentId` | `parent.id` | Identifier of the upstream span that called the service. |
+| `kind` | `kind` | Either `Client` or `Server`. |
+| `name` | `name` | Name of span. |
+| `duration` | `duration.ms` | Zipkin v2 spans must have durations specified in microseconds, and will be converted to milliseconds. |
+| localEndpoint: `serviceName` | `service.name` | We use the Zipkin v2 service name to identify the entity that created this span.
         If no value or an empty string is provided, the span is assigned to an "UNKNOWN" entity and will show as such in the UI.
-        This value should be provided to get a complete experience in the UI.
-      </td>
-    </tr>
+        This value should be provided to get a complete experience in the UI. |
+| localEndpoint: `port` | `localEndpoint.port` | All values in the `localEndpoint` object will be flattened to a span attribute called `localEndpoint.key` |
+| `tags` | reported as [attributes](/docs/using-new-relic/welcome-new-relic/get-started/glossary#attribute) | Key:value pairs in the `tags` object in Zipkin v2 will be written as span attributes. |
+| annotations | not supported | We do not currently support annotations in the Trace API. Spans will not be rejected if they contain annotations, but the annotations data will not be written. |
 
-    <tr>
-      <td>
-        localEndpoint: `port`
-      </td>
-
-      <td>
-        `localEndpoint.port`
-      </td>
-
-      <td>
-        All values in the `localEndpoint` object will be flattened to a span attribute called `localEndpoint.key`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `tags`
-      </td>
-
-      <td>
-        reported as [attributes](/docs/using-new-relic/welcome-new-relic/get-started/glossary#attribute)
-      </td>
-
-      <td>
-        Key:value pairs in the `tags` object in Zipkin v2 will be written as span attributes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        annotations
-      </td>
-
-      <td>
-        not supported
-      </td>
-
-      <td>
-        We do not currently support annotations in the Trace API. Spans will not be rejected if they contain annotations, but the annotations data will not be written.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Add other tags/attributes [#other-tags]
 

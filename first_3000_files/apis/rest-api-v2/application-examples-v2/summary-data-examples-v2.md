@@ -27,69 +27,28 @@ Also, the data presented may correspond to specific metric timeslice data values
 
 New Relic provides summary information for applications as a rolling <DNT>**three- to four-minute average**</DNT>.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **To obtain summary data...**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Do this...**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        For <DNT>**all**</DNT> applications for your account
-      </td>
-
-      <td>
-        ```bash
+| **To obtain summary data...** | **Do this...** |
+| - | - |
+| For **all** applications for your account | ```bash
         curl -X GET 'https://api.newrelic.com/v2/applications.json' \
              -H "Api-Key:$API_KEY" -i
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        For a <DNT>**specific**</DNT> application
-      </td>
-
-      <td>
-        Include a `filter` with the app's name. If the name includes spaces (for example, "My Web Page"), replace them with the `+` symbol. For example:
+        ``` |
+| For a **specific** application | Include a `filter` with the app's name. If the name includes spaces (for example, "My Web Page"), replace them with the `+` symbol. For example:
 
         ```bash
         curl -X GET 'https://api.newrelic.com/v2/applications.json' \
              -H "Api-Key:$API_KEY" -i \
              -d 'filter[name]=My+Web+Page'
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        By using the <DNT>**app ID**</DNT>
-      </td>
-
-      <td>
-        Replace `${APP_ID}` with the ID:
+        ``` |
+| By using the **app ID** | Replace `${APP_ID}` with the ID:
 
         ```bash
         curl -X GET "https://api.newrelic.com/v2/applications/$APP_ID.json" \
              -H "Api-Key:$API_KEY" -i
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 Using any of these methods, the output will be similar to this:
 

@@ -44,83 +44,28 @@ newrelic.agent.profile_trace(name=None, group=None, label=None, params=None, dep
 
 This call includes these parameters:
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `name`
 
-  <tbody>
-    <tr>
-      <td>
-        `name`
+        _string_ | Optional. The function name. If not set, defaults to the captured name of the function. |
+| `group`
 
-        _string_
-      </td>
+        _string_ | Optional. The `group` represents the naming structure for the `name` parameter. This is used in the UI for segregating the [transaction types](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions).
 
-      <td>
-        Optional. The function name. If not set, defaults to the captured name of the function.
-      </td>
-    </tr>
+        If not supplied, the group will default to `Function` in expectation that the name is of the form `module:class.function` or `module:function` and represents the name of the function being executed. If you are creating a custom group, it's recommended you prefix it with `Python/`. |
+| `label`
 
-    <tr>
-      <td>
-        `group`
+        _string_ | Optional. Adds a callout-style flag to the segment in a transaction trace. Default is `None`. |
+| `params`
 
-        _string_
-      </td>
+        _dict_ | Optional. Custom parameters to add to the segment in transaction traces. |
+| `depth`
 
-      <td>
-        Optional. The `group` represents the naming structure for the `name` parameter. This is used in the UI for segregating the [transaction types](/docs/apm/applications-menu/monitoring/transactions-page#tx_functions).
+        _dict_ | Optional. Parameter for maximum function trace depth.  Default is 3. |
 
-        If not supplied, the group will default to `Function` in expectation that the name is of the form `module:class.function` or `module:function` and represents the name of the function being executed. If you are creating a custom group, it's recommended you prefix it with `Python/`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `label`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. Adds a callout-style flag to the segment in a transaction trace. Default is `None`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `params`
-
-        _dict_
-      </td>
-
-      <td>
-        Optional. Custom parameters to add to the segment in transaction traces.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `depth`
-
-        _dict_
-      </td>
-
-      <td>
-        Optional. Parameter for maximum function trace depth.  Default is 3.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Wrapper parameters
 

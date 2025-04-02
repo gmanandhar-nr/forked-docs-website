@@ -17,316 +17,33 @@ freshnessValidatedDate: 2024-10-30
 
 This page describes limits and rules pertaining to New Relic <InlinePopover type="alerts"/>:
 
-<table>
-  <thead>
-    <tr>
-      <th width={275}>
-          **Category**
+# Table
 
-      </th>
-      <th width={275}>
-          **Limited condition**
+| **Category** | **Limited condition** | **Minimum value** | **Maximum value** |
+| - | - | - | - |
+| Alert policies | [Alert policy name](/docs/alerts/organize-alerts/create-edit-or-find-alert-policy/) | 1 character | 128 characters |
+|  | [Policies per account](/docs/alerts/new-relic-alerts-beta/getting-started/best-practices-alert-policies) | N/A | 10K policies |
+| Alert conditions | Matched data points per minute, per account ([learn more](#query-limit)) | N/A | 300M |
+|  | Alert query scan operations per minute, per account ([learn more](#query-scan-limit)) | N/A | 2.5B |
+|  | [Condition name](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-alert-conditions) | 1 character | 128 characters |
+|  | [Conditions per policy](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-alert-conditions) | 0 conditions | 500 conditions |
+|  | [Alert conditions per account](/docs/alerts/create-alert/create-alert-conditioN/Alert-conditions) | 0 conditions | 4K conditions |
+|  | [Targets (product entities)](/docs/new-relic-solutions/get-started/glossary/#alert-target) per condition | 1 target | 5K targets for NRQL conditions
+        1K targets for non-NRQL conditions |
+|  | [Thresholds](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-thresholds-trigger-alert) per condition | 1 Warning or 1 Critical | 1 Warning and 1 Critical |
+| Alert incidents | [Custom incident descriptions](/docs/alerts/create-alert/condition-details/alert-custom-incident-descriptions) | 4K characters |
+|  | [Duration for condition incident](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-thresholds-trigger-alert) | 30 seconds | 2 hours |
+|  | Incidents per issue | 1 incident | 10K incidents
 
-      </th>
+        Incidents beyond this limit will not be persisted. |
+|  | Incident search API: page size | 1 page (less than or equal to 25 incidents) | 1K pages (25K incidents)
 
-      <th>
+        
+          Only use the `only-open` parameter to retrieve all open incidents. If you have more than 25K open incidents and need to retrieve them via the REST API, contact support. |
+| Workflows | [Workflows per account](/docs/alerts-applied-intelligence/applied-intelligence/incident-workflows/incident-workflows) | N/A | Initial limit: 1K |
+|  | Workflow filter size | 1 character | 4,096 characters per workflow |
+| Notification channels (Legacy) | Channel limitations | [Depends on channel](/docs/alerts/get-notified/intro-notifications/#channels) | [Depends on channel](/docs/alerts/get-notified/intro-notifications/#channels) |
 
-          **Minimum value**
-
-      </th>
-
-      <th>
-          **Maximum value**
-
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td id="policy">
-    Alert policies
-
-      </td>
-      <td>
-        [Alert policy name](/docs/alerts/organize-alerts/create-edit-or-find-alert-policy/)
-      </td>
-
-      <td>
-        1 character
-      </td>
-
-      <td>
-        128 characters
-      </td>
-    </tr>
-
-    <tr>
-    <td>
-
-    </td>
-      <td>
-        [Policies per account](/docs/alerts/new-relic-alerts-beta/getting-started/best-practices-alert-policies)
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td>
-        10K policies
-      </td>
-    </tr>
-
-    <tr>
-      <td id="condition">
-        <DNT>
-          Alert conditions
-        </DNT>
-      </td>
-      <td>
-        Matched data points per minute, per account ([learn more](#query-limit))
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td>
-        300M
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        Alert query scan operations per minute, per account ([learn more](#query-scan-limit))
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td>
-        2.5B
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        [Condition name](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-alert-conditions)
-      </td>
-
-      <td>
-        1 character
-      </td>
-
-      <td>
-        128 characters
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        [Conditions per policy](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-alert-conditions)
-      </td>
-
-      <td>
-        0 conditions
-      </td>
-
-      <td>
-        500 conditions
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        [Alert conditions per account](/docs/alerts/create-alert/create-alert-conditioN/Alert-conditions)
-      </td>
-
-      <td>
-        0 conditions
-      </td>
-
-      <td>
-        4K conditions
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        [Targets (product entities)](/docs/new-relic-solutions/get-started/glossary/#alert-target) per condition
-      </td>
-
-      <td>
-        1 target
-      </td>
-
-      <td>
-        5K targets for NRQL conditions
-        1K targets for non-NRQL conditions
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        [Thresholds](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-thresholds-trigger-alert) per condition
-      </td>
-
-      <td>
-        1 Warning or 1 Critical
-      </td>
-
-      <td>
-        1 Warning and 1 Critical
-      </td>
-    </tr>
-
-    <tr>
-      <td id="incidents">
-        <DNT>
-          Alert incidents
-        </DNT>
-      </td>
-      <td>
-        [Custom incident descriptions](/docs/alerts/create-alert/condition-details/alert-custom-incident-descriptions)
-      </td>
-
-      N/A
-      <td/>
-
-      <td>
-        4K characters
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        [Duration for condition incident](/docs/alerts/new-relic-alerts-beta/configuring-alert-policies/define-thresholds-trigger-alert)
-      </td>
-
-      <td>
-        30 seconds
-      </td>
-
-      <td>
-        2 hours
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        Incidents per issue
-      </td>
-
-      <td>
-        1 incident
-      </td>
-
-      <td>
-        10K incidents
-
-        Incidents beyond this limit will not be persisted.
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        Incident search API: page size
-      </td>
-
-      <td>
-        1 page (less than or equal to 25 incidents)
-      </td>
-
-      <td>
-        1K pages (25K incidents)
-
-        <Callout variant="tip">
-          Only use the `only-open` parameter to retrieve all open incidents. If you have more than 25K open incidents and need to retrieve them via the REST API, contact support.
-        </Callout>
-      </td>
-    </tr>
-
-    <tr>
-      <td id="workflows">
-      Workflows
-      </td>
-      <td>
-        [Workflows per account](/docs/alerts-applied-intelligence/applied-intelligence/incident-workflows/incident-workflows)
-      </td>
-
-      <td>
-        N/A
-      </td>
-
-      <td>
-        Initial limit: 1K
-      </td>
-    </tr>
-
-    <tr>
-        <td>
-    
-    </td>
-      <td>
-        Workflow filter size
-      </td>
-
-      <td>
-        1 character
-      </td>
-
-      <td>
-        4,096 characters per workflow
-      </td>
-    </tr>
-
-    <tr>
-      <td id="channel">
-          Notification channels (Legacy)
-      </td>
-      <td>
-        Channel limitations
-      </td>
-
-      <td>
-        [Depends on channel](/docs/alerts/get-notified/intro-notifications/#channels)
-      </td>
-
-      <td>
-        [Depends on channel](/docs/alerts/get-notified/intro-notifications/#channels)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## NRDB alert query matched data points per minute [#query-limit]
 

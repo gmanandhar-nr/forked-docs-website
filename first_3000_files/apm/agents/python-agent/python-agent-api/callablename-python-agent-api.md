@@ -27,45 +27,17 @@ This call returns a string name identifying the supplied object. This is often u
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `object`
 
-  <tbody>
-    <tr>
-      <td>
-        `object`
+        _function_, _class,_ or _member function_ | Required. The type of object supplied. |
+| `separator`
 
-        _function_, _class,_ or _member function_
-      </td>
+        _string_ | Optional. Used for overriding the default `:` separator. By default, the separator between the module path and the object path is `:`. The convention used by the Python agent is `:` so that it is clear which part is the module name and which is the name of the object. |
 
-      <td>
-        Required. The type of object supplied.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `separator`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. Used for overriding the default `:` separator. By default, the separator between the module path and the object path is `:`. The convention used by the Python agent is `:` so that it is clear which part is the module name and which is the name of the object.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

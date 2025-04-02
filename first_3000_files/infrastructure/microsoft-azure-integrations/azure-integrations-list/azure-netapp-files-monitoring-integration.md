@@ -36,308 +36,37 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure NetApp Files metrics [#Azure-netapp-files]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `AverageReadLatency` | Average read latency in milliseconds per operation. |
+| `AverageWriteLatency` | Average write latency in milliseconds per operation. |
+| `CbsVolumeBackupActive` | Is the backup policy suspended for the volume? 0 if yes, 1 if no. |
+| `CbsVolumeLogicalBackupBytes` | Total bytes backed up for this Volume. |
+| `CbsVolumeOperationBackupTransferredBytes` | Total bytes transferred for last backup operation. |
+| `CbsVolumeOperationComplete` | Did the last volume backup or restore operation complete successfully? 1 if yes, 0 if no. |
+| `CbsVolumeOperationRestoreTransferredBytes` | Total bytes transferred for last backup restore operation. |
+| `CbsVolumeOperationTransferredBytes` | Total bytes transferred for last backup or restore operation. |
+| `CbsVolumeProtected` | Is backup enabled for the volume? 1 if yes, 0 if no. |
+| `OtherThroughput` | Other throughput (that is not read or write) in bytes per second. |
+| `ReadIops` | Read in/out operations per second. |
+| `ReadThroughput` | Read throughput in bytes per second |
+| `TotalThroughput` | Sum of all throughput in bytes per second. |
+| `VolumeAllocatedSize` | The provisioned size of a volume. |
+| `VolumeConsumedSizePercentage` | The percentage of the volume consumed including snapshots. |
+| `VolumeCoolTierDataReadSize` | Data read in using GET per volume. |
+| `VolumeCoolTierDataWriteSize` | Data tiered out using PUT per volume. |
+| `VolumeCoolTierSize` | Volume footprint for Cool Tier. |
+| `VolumeLogicalSize` | Logical size of the volume (used bytes). |
+| `VolumeSnapshotSize` | Size of all snapshots in volume |
+| `WriteIops` | Write in/out operations per second. |
+| `WriteThroughput` | Write throughput in bytes per second. |
+| `XregionReplicationHealthy` | Condition of the relationship, 1 or 0. |
+| `XregionReplicationLagTime` | The amount of time in seconds by which the data on the mirror lags behind the source. |
+| `XregionReplicationLastTransferDuration` | The amount of time in seconds it took for the last transfer to complete. |
+| `XregionReplicationLastTransferSize` | The total number of bytes transferred as part of the last transfer. |
+| `XregionReplicationRelationshipProgress` | Total amount of data transferred for the current transfer operation. |
+| `XregionReplicationRelationshipTransferring` | Whether the status of the Volume Replication is 'transferring'. |
+| `XregionReplicationTotalTransferBytes` | Cumulative bytes transferred for the relationship. |
 
-  <tbody>
-    <tr>
-      <td>
-        `AverageReadLatency`
-      </td>
-
-      <td>
-        Average read latency in milliseconds per operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AverageWriteLatency`
-      </td>
-
-      <td>
-        Average write latency in milliseconds per operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CbsVolumeBackupActive`
-      </td>
-
-      <td>
-        Is the backup policy suspended for the volume? 0 if yes, 1 if no.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CbsVolumeLogicalBackupBytes`
-      </td>
-
-      <td>
-        Total bytes backed up for this Volume.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CbsVolumeOperationBackupTransferredBytes`
-      </td>
-
-      <td>
-        Total bytes transferred for last backup operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CbsVolumeOperationComplete`
-      </td>
-
-      <td>
-        Did the last volume backup or restore operation complete successfully? 1 if yes, 0 if no.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CbsVolumeOperationRestoreTransferredBytes`
-      </td>
-
-      <td>
-        Total bytes transferred for last backup restore operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CbsVolumeOperationTransferredBytes`
-      </td>
-
-      <td>
-        Total bytes transferred for last backup or restore operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CbsVolumeProtected`
-      </td>
-
-      <td>
-        Is backup enabled for the volume? 1 if yes, 0 if no.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OtherThroughput`
-      </td>
-
-      <td>
-        Other throughput (that is not read or write) in bytes per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReadIops`
-      </td>
-
-      <td>
-        Read in/out operations per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ReadThroughput`
-      </td>
-
-      <td>
-        Read throughput in bytes per second
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalThroughput`
-      </td>
-
-      <td>
-        Sum of all throughput in bytes per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumeAllocatedSize`
-      </td>
-
-      <td>
-        The provisioned size of a volume.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumeConsumedSizePercentage`
-      </td>
-
-      <td>
-        The percentage of the volume consumed including snapshots.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumeCoolTierDataReadSize`
-      </td>
-
-      <td>
-        Data read in using GET per volume.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumeCoolTierDataWriteSize`
-      </td>
-
-      <td>
-        Data tiered out using PUT per volume.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumeCoolTierSize`
-      </td>
-
-      <td>
-        Volume footprint for Cool Tier.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumeLogicalSize`
-      </td>
-
-      <td>
-        Logical size of the volume (used bytes).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VolumeSnapshotSize`
-      </td>
-
-      <td>
-        Size of all snapshots in volume
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WriteIops`
-      </td>
-
-      <td>
-        Write in/out operations per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WriteThroughput`
-      </td>
-
-      <td>
-        Write throughput in bytes per second.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `XregionReplicationHealthy`
-      </td>
-
-      <td>
-        Condition of the relationship, 1 or 0.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `XregionReplicationLagTime`
-      </td>
-
-      <td>
-        The amount of time in seconds by which the data on the mirror lags behind the source.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `XregionReplicationLastTransferDuration`
-      </td>
-
-      <td>
-        The amount of time in seconds it took for the last transfer to complete.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `XregionReplicationLastTransferSize`
-      </td>
-
-      <td>
-        The total number of bytes transferred as part of the last transfer.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `XregionReplicationRelationshipProgress`
-      </td>
-
-      <td>
-        Total amount of data transferred for the current transfer operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `XregionReplicationRelationshipTransferring`
-      </td>
-
-      <td>
-        Whether the status of the Volume Replication is 'transferring'.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `XregionReplicationTotalTransferBytes`
-      </td>
-
-      <td>
-        Cumulative bytes transferred for the relationship.
-      </td>
-    </tr>
-  </tbody>
-</table>

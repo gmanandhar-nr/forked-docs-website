@@ -111,77 +111,18 @@ We have several account-scoped <DNT>**standard roles**</DNT>, which are roles th
 
 Here's a table with our standard roles. To better understand these roles, go to the access management UI and select a role.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Standard roles
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Standard roles | Description | [User type](/docs/accounts/accounts-billing/new-relic-one-user-management/user-type) guidelines |
+| - | - | - |
+| **All product admin** | This role includes all New Relic platform permissions **except** the ability to manage organization-level settings, users, and billing. It's an admin role in the sense that it allows the configuration of our platform features (for example, the ability to configure  settings), but it doesn't provide organization-level admin permissions (those require [the administrative settings](#admin-settings)).
 
-      <th style={{ width: "200px" }}>
-        [User type](/docs/accounts/accounts-billing/new-relic-one-user-management/user-type) guidelines
-      </th>
-    </tr>
-  </thead>
+        This role is essentially the **Standard user** role, below, with the added ability to configure observability features. | Any. Recommended: core or full platform. |
+| **Standard user** | Provides access to our platform features (for example, APM UI and  UI), but lacks permissions to configure those features and lacks organization-level and user management permissions.
 
-  <tbody>
-    <tr>
-      <td>
-        <DNT>
-          **All product admin**
-        </DNT>
-      </td>
+        Use the access management UI to view the capabilities included in the standard user role across the platform. | Any. Recommended: core or full platform. |
+| **Read only** | Provides read-only access to the New Relic platform (except for [synthetic monitor secure credentials](/docs/synthetics/synthetic-monitoring/using-monitors/store-secure-credentials-scripted-browsers-api-tests/) and [dashboard permissions](/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#dashboards-permissions)). | Any. |
 
-      <td>
-        This role includes all New Relic platform permissions <DNT>**except**</DNT> the ability to manage organization-level settings, users, and billing. It's an admin role in the sense that it allows the configuration of our platform features (for example, the ability to configure <InlinePopover type="apm"/> settings), but it doesn't provide organization-level admin permissions (those require [the administrative settings](#admin-settings)).
-
-        This role is essentially the <DNT>**Standard user**</DNT> role, below, with the added ability to configure observability features.
-      </td>
-
-      <td>
-        Any. Recommended: core or full platform.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Standard user**
-        </DNT>
-      </td>
-
-      <td>
-        Provides access to our platform features (for example, APM UI and <InlinePopover type="browser"/> UI), but lacks permissions to configure those features and lacks organization-level and user management permissions.
-
-        Use the access management UI to view the capabilities included in the standard user role across the platform.
-      </td>
-
-      <td>
-        Any. Recommended: core or full platform.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **Read only**
-        </DNT>
-      </td>
-
-      <td>
-        Provides read-only access to the New Relic platform (except for [synthetic monitor secure credentials](/docs/synthetics/synthetic-monitoring/using-monitors/store-secure-credentials-scripted-browsers-api-tests/) and [dashboard permissions](/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/#dashboards-permissions)).
-      </td>
-
-      <td>
-        Any.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more about how you'd assign roles to groups and create custom roles, see the [user management tutorial](/docs/accounts/accounts-billing/new-relic-one-user-management/tutorial-add-new-user-groups-roles-new-relic-one-user-model).
 

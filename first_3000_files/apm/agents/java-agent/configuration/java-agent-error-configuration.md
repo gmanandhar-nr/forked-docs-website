@@ -24,39 +24,12 @@ For more information on viewing your error data, see [Error analytics](/docs/apm
 
 The Java agent reports errors in the following scenarios:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Error reporting
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Unhandled errors (includes stack trace)
-      </td>
-
-      <td>
-        If an unhandled error occurs within a transaction that the Java agent was tracing, the error will be reported with the full stack trace.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        HTTP status codes (no stack trace)
-      </td>
-
-      <td>
-        When a transaction in your application generates an HTTP status code, for example, `400` for a client error, it reports the error without a stack trace. The reasons for this are:
+| Error reporting | **Comments** |
+| - | - |
+| Unhandled errors (includes stack trace) | If an unhandled error occurs within a transaction that the Java agent was tracing, the error will be reported with the full stack trace. |
+| HTTP status codes (no stack trace) | When a transaction in your application generates an HTTP status code, for example, `400` for a client error, it reports the error without a stack trace. The reasons for this are:
 
         * The application server has detected an error condition and explicitly set the status code.
 
@@ -64,31 +37,10 @@ The Java agent reports errors in the following scenarios:
 
         * The program logic detected the error condition, so there was no exception object or stack.
 
-        In order to include the stack trace with these types of transactions, you must use a `noticeError(...)` API call.
-      </td>
-    </tr>
+        In order to include the stack trace with these types of transactions, you must use a `noticeError(...)` API call. |
+| `noticeError(...)` API calls | If the Java agent makes an explicit call using the `noticeError(...)` API call, the error will be reported regardless of whether or not it occurs within a transaction. The reported information depends on the parameters used in the `noticeError(...)` API call, as described in the [Javadocs](https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/NewRelic.html). |
+| Unscoped errors reporting over 100% | The Java agent can report unscoped errors, which are errors that are not tied to any transaction. Because of this, it is possible to have one transaction in a timeslice and multiple errors in the same timeslice. In this situation, New Relic would then show an error rate **over 100%**. |
 
-    <tr>
-      <td>
-        `noticeError(...)` API calls
-      </td>
-
-      <td>
-        If the Java agent makes an explicit call using the `noticeError(...)` API call, the error will be reported regardless of whether or not it occurs within a transaction. The reported information depends on the parameters used in the `noticeError(...)` API call, as described in the [Javadocs](https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/NewRelic.html).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Unscoped errors reporting over 100%
-      </td>
-
-      <td>
-        The Java agent can report unscoped errors, which are errors that are not tied to any transaction. Because of this, it is possible to have one transaction in a timeslice and multiple errors in the same timeslice. In this situation, New Relic would then show an error rate <DNT>**over 100%**</DNT>.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Configure error reporting [#error-configuration]
 

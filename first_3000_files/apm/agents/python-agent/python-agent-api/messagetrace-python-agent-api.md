@@ -53,81 +53,26 @@ newrelic.agent.message_trace(library, operation, destination_type, destination_n
 
 The `message_trace` decorator uses these parameters:
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `library`
 
-  <tbody>
-    <tr>
-      <td>
-        `library`
+        _string_ or _function_ | Required. The name (or type) of the type of message broker in use. Pass either a string which defines it or a function which returns it. |
+| `operation`
 
-        _string_ or _function_
-      </td>
+        _string_ or _function_ | Required. Either `Produce` or `Consume` as indicated by the operation occurring in the traced function. Pass either a string which defines it or a function which returns it. |
+| `destination_type`
 
-      <td>
-        Required. The name (or type) of the type of message broker in use. Pass either a string which defines it or a function which returns it.
-      </td>
-    </tr>
+        _string_ or _function_ | Required. The type of destination targeted by the operation. Pass either a string which defines it or a function which returns it. This is typically `Exchange` or `Queue`. |
+| `destination_name`
 
-    <tr>
-      <td>
-        `operation`
+        _string_ or _function_ | Required. The name of the destination being targeted by the operation. Pass either a string which defines it or a function which returns it. |
+| `params`
 
-        _string_ or _function_
-      </td>
+        _dictionary_ | Optional. Additional details pertaining to the operation. These are typically `routing_key`, `correlation_id`, `reply_to`, `queue_name`, or `headers`. |
 
-      <td>
-        Required. Either `Produce` or `Consume` as indicated by the operation occurring in the traced function. Pass either a string which defines it or a function which returns it.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `destination_type`
-
-        _string_ or _function_
-      </td>
-
-      <td>
-        Required. The type of destination targeted by the operation. Pass either a string which defines it or a function which returns it. This is typically `Exchange` or `Queue`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `destination_name`
-
-        _string_ or _function_
-      </td>
-
-      <td>
-        Required. The name of the destination being targeted by the operation. Pass either a string which defines it or a function which returns it.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `params`
-
-        _dictionary_
-      </td>
-
-      <td>
-        Optional. Additional details pertaining to the operation. These are typically `routing_key`, `correlation_id`, `reply_to`, `queue_name`, or `headers`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Parameters for MessageTrace [#context-mgr-parameters]
 

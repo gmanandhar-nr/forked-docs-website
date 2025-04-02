@@ -9,41 +9,13 @@ freshnessValidatedDate: 2024-04-29
 
 To manage your catalog, use the commands below. You can click any command to see its usage options and additional details about the command.
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Command
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Command | Description |
+| - | - |
+| [`nr1 catalog:info`](#nr1-cataloginfo) | Shows the Nerdpack info stored in the catalog. |
+| [`nr1 catalog:submit`](#nr1-catalogsubmit) | Gathers and submits the catalog info on the current folder. |
 
-  <tbody>
-    <tr>
-      <td>
-        [`nr1 catalog:info`](#nr1-cataloginfo)
-      </td>
-
-      <td>
-        Shows the Nerdpack info stored in the catalog.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`nr1 catalog:submit`](#nr1-catalogsubmit)
-      </td>
-
-      <td>
-        Gathers and submits the catalog info on the current folder.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## `nr1 catalog:info` [#nr1-cataloginfo]
 

@@ -37,227 +37,37 @@ To view [metric data](/docs/integrations/new-relic-integrations/getting-started/
 
 Query `GcpSpannerInstanceSample` events in New Relic to view data for the following attributes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Attribute
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `instance.autoscaling.HighPriorityCpuUtilizationTarget`
-      </td>
-
-      <td>
-        High priority CPU utilization target used for autoscaling.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.autoscaling.MaxNodes`
-      </td>
-
-      <td>
-        Maximum number of nodes autoscaler is allowed to allocate to the instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.autoscaling.MaxProcessingUnits`
-      </td>
-
-      <td>
-        Maximum number of processing units autoscaler is allowed to allocate to the instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.autoscaling.MinNodes`
-      </td>
-
-      <td>
-        Minimum number of nodes autoscaler is allowed to allocate to the instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.autoscaling.MinProcessingUnits`
-      </td>
-
-      <td>
-        Minimum number of processing units autoscaler is allowed to allocate to the instance.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.autoscaling.StorageUtilizationTarget`
-      </td>
-
-      <td>
-        Storage utilization target used for autoscaling.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.backup.UsedBytes`
-      </td>
-
-      <td>
-        Backup storage used in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.cpu.SmoothedUtilization`
-      </td>
-
-      <td>
-        Twenty-four hour smoothed utilization of provisioned CPU. Values are typically numbers between 0.0 and 1.0 (but might
-        exceed 1.0), charts display the values as a percentage between 0% and 100% (or more).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.cpu.Utilization`
-      </td>
-
-      <td>
-        Percent utilization of provisioned CPU. Values are typically numbers between 0.0 and 1.0 (but might exceed 1.0),
-        charts display the values as a percentage between 0% and 100% (or more).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.cpu.UtilizationByOperationType`
-      </td>
-
-      <td>
-        Percent utilization of provisioned CPU, by operation type. Values are typically numbers between 0.0 and 1.0 (but
+| Attribute | Description |
+| - | - |
+| `instance.autoscaling.HighPriorityCpuUtilizationTarget` | High priority CPU utilization target used for autoscaling. |
+| `instance.autoscaling.MaxNodes` | Maximum number of nodes autoscaler is allowed to allocate to the instance. |
+| `instance.autoscaling.MaxProcessingUnits` | Maximum number of processing units autoscaler is allowed to allocate to the instance. |
+| `instance.autoscaling.MinNodes` | Minimum number of nodes autoscaler is allowed to allocate to the instance. |
+| `instance.autoscaling.MinProcessingUnits` | Minimum number of processing units autoscaler is allowed to allocate to the instance. |
+| `instance.autoscaling.StorageUtilizationTarget` | Storage utilization target used for autoscaling. |
+| `instance.backup.UsedBytes` | Backup storage used in bytes. |
+| `instance.cpu.SmoothedUtilization` | Twenty-four hour smoothed utilization of provisioned CPU. Values are typically numbers between 0.0 and 1.0 (but might
+        exceed 1.0), charts display the values as a percentage between 0% and 100% (or more). |
+| `instance.cpu.Utilization` | Percent utilization of provisioned CPU. Values are typically numbers between 0.0 and 1.0 (but might exceed 1.0),
+        charts display the values as a percentage between 0% and 100% (or more). |
+| `instance.cpu.UtilizationByOperationType` | Percent utilization of provisioned CPU, by operation type. Values are typically numbers between 0.0 and 1.0 (but
         might exceed 1.0), charts display the values as a percentage between 0% and 100% (or more). Currently, it does
-        not include CPU utilization for system tasks.
-      </td>
-    </tr>
+        not include CPU utilization for system tasks. |
+| `instance.cpu.UtilizationByPriority` | Percent utilization of provisioned CPU, by priority. Values are typically numbers between 0.0 and 1.0 (but might
+        exceed 1.0), charts display the values as a percentage between 0% and 100% (or more). |
+| `instance.dataBoost.ProcessingUnitSeconds` | Total processing units used for DataBoost operations. |
+| `instance.LeaderPercentageByRegion` | Percentage of leaders by cloud region. Values are typically numbers between 0.0 and 1.0, charts display the
+        values as a percentage between 0% and 100%. |
+| `instance.nodes` | Total number of nodes. |
+| `instance.ProcessingUnits` | Total number of processing units. |
+| `instance.sessions` | Number of sessions in use. |
+| `instance.storage.LimitBytes` | Storage limit for instance in bytes. |
+| `instance.storage.LimitBytesPerProcessingUnit` | Storage limit per processing unit in bytes. |
+| `instance.storage.UsedBytes` | Storage used in bytes. |
+| `instance.storage.Utilization` | Storage used as a fraction of storage limit. |
 
-    <tr>
-      <td>
-        `instance.cpu.UtilizationByPriority`
-      </td>
-
-      <td>
-        Percent utilization of provisioned CPU, by priority. Values are typically numbers between 0.0 and 1.0 (but might
-        exceed 1.0), charts display the values as a percentage between 0% and 100% (or more).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.dataBoost.ProcessingUnitSeconds`
-      </td>
-
-      <td>
-        Total processing units used for DataBoost operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.LeaderPercentageByRegion`
-      </td>
-
-      <td>
-        Percentage of leaders by cloud region. Values are typically numbers between 0.0 and 1.0, charts display the
-        values as a percentage between 0% and 100%.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.nodes`
-      </td>
-
-      <td>
-        Total number of nodes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.ProcessingUnits`
-      </td>
-
-      <td>
-        Total number of processing units.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.sessions`
-      </td>
-
-      <td>
-        Number of sessions in use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.storage.LimitBytes`
-      </td>
-
-      <td>
-        Storage limit for instance in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.storage.LimitBytesPerProcessingUnit`
-      </td>
-
-      <td>
-        Storage limit per processing unit in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.storage.UsedBytes`
-      </td>
-
-      <td>
-        Storage used in bytes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `instance.storage.Utilization`
-      </td>
-
-      <td>
-        Storage used as a fraction of storage limit.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### GcpSpannerDatabaseSample [#gcp-spanner-database-sample]
 

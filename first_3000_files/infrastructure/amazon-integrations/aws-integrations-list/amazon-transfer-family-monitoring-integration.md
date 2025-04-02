@@ -32,195 +32,23 @@ This New Relic infrastructure integration collects the following Amazon Transfer
 
 ### Transfer Family Metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `BytesIn` | Count | The total number of bytes transferred into the server. |
+| `BytesOut` | Count | The total number of bytes transferred out of the server. |
+| `FilesIn` | Count | The total number of files transferred into the server. |
+| `FilesOut` | Count | The total number of files transferred out of the server. |
+| `InboundMessage` | Count | The total number of AS2 messages successfully received from a trading partner. |
+| `InboundFailedMessage` | Count | The total number of AS2 messages that were unsuccessfully received from a trading partner. |
+| `OnPartialUploadExecutionsStarted` | Count | The total number of on-partial-upload workflow executions started on the server. |
+| `OnPartialUploadExecutionsSuccess` | Count | The total number of successful, on-partial-upload workflow executions on the server. |
+| `OnPartialUploadExecutionsFailed` | Count | The total number of unsuccessful, on-partial-upload workflow executions on the server. |
+| `OnUploadExecutionsStarted` | Count | The total number of workflow executions started on the server. |
+| `OnUploadExecutionsSuccess` | Count | The total number of successful workflow executions on the server. |
+| `OnUploadExecutionsFailed` | Count | The total number of unsuccessful workflow executions on the server. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `BytesIn`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of bytes transferred into the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesOut`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of bytes transferred out of the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FilesIn`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of files transferred into the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FilesOut`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of files transferred out of the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InboundMessage`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of AS2 messages successfully received from a trading partner.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `InboundFailedMessage`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of AS2 messages that were unsuccessfully received from a trading partner.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OnPartialUploadExecutionsStarted`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of on-partial-upload workflow executions started on the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OnPartialUploadExecutionsSuccess`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of successful, on-partial-upload workflow executions on the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OnPartialUploadExecutionsFailed`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of unsuccessful, on-partial-upload workflow executions on the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OnUploadExecutionsStarted`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of workflow executions started on the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OnUploadExecutionsSuccess`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of successful workflow executions on the server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `OnUploadExecutionsFailed`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The total number of unsuccessful workflow executions on the server.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `OrganizationId`
 

@@ -44,69 +44,15 @@ This is the default set of alert conditions installed when you deploy the New Re
     id="cpu-usage"
     title="Container CPU usage % is too high"
   >
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "180px" }}>
-            Setting
-          </th>
+    # Table
 
-          <th>
-            Value
-          </th>
-        </tr>
-      </thead>
+| Setting | Value |
+| - | - |
+| **Event type** | `K8sContainerSample` |
+| **SELECT value** | `(cpuUsedCores/cpuLimitCores)*100` |
+| **Warning threshold** | \>90% for at least 5 minutes |
+| **Critical threshold** | \>95% for at least 5 mins |
 
-      <tbody>
-        <tr>
-          <td>
-            <DNT>
-              **Event type**
-            </DNT>
-          </td>
-
-          <td>
-            `K8sContainerSample`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <DNT>
-              **SELECT value**
-            </DNT>
-          </td>
-
-          <td>
-            `(cpuUsedCores/cpuLimitCores)*100`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <DNT>
-              **Warning threshold**
-            </DNT>
-          </td>
-
-          <td>
-            \>90% for at least 5 minutes
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <DNT>
-              **Critical threshold**
-            </DNT>
-          </td>
-
-          <td>
-            \>95% for at least 5 mins
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

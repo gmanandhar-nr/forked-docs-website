@@ -166,49 +166,21 @@ For headless installations, you need to take steps to preconfigure your <InlineP
 
 These keys are located in the `newrelic-php5` package:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Name
-      </th>
+# Table
 
-      <th width="100px">
-        Type
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        ```
+| Name | Type |
+| - | - |
+| ```
         newrelic-php5/application-name
         ```
 
-        The name of your app. This string sets [`newrelic.appname`](/docs/php/php-agent-phpini-settings#inivar-appname) in your `newrelic.ini`.
-      </td>
-
-      <td>
-        string
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        ```
+        The name of your app. This string sets [`newrelic.appname`](/docs/php/php-agent-phpini-settings#inivar-appname) in your `newrelic.ini`. | string |
+| ```
         newrelic-php5/license-key
         ```
 
-        Your <InlinePopover type="licenseKey"/>. This string sets [`newrelic.license`](/docs/php/php-agent-phpini-settings#inivar-license) in your `newrelic.ini`.
-      </td>
+        Your . This string sets [`newrelic.license`](/docs/php/php-agent-phpini-settings#inivar-license) in your `newrelic.ini`. | string |
 
-      <td>
-        string
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For example, you can run these commands to preconfigure your app name and license key:
 

@@ -75,95 +75,16 @@ https://metric-api.newrelic.com/metric/v1
 
 Include the following HTTP request headers with the POST request. You can send some parameters as query parameters instead of request headers.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "180px" }}>
-        Header
-      </th>
+# Table
 
-      <th style={{ width: "150px" }}>
-        Send as a query parameter?
-      </th>
+| Header | Send as a query parameter? | Details |
+| - | - | - |
+| `Content-Type` | No | **Required**. Must be `application/json`. |
+| `Content-Length` | No | **Required (usually set automatically by the HTTP client)**. The length of the request body in octets (8-bit bytes) unless sent with chunked encoding. This header is generally set by default by the underlying HTTP client sending the data and in most cases should not require any additional effort by the end user. |
+| `Api-Key` | Yes | **Required.** A  for the account you want to report data to. If this is provided as both a header and a query parameter, the values must match. |
+| `Content-Encoding` | No | **Required if GZIP.** The value must be `GZIP` or `Identity.` If no value is present, then `Identity` is assumed. |
+| `x-request-id` | No | **Optional - Reserved for future use.** The value must be a valid `UUID4`. The value is expected to be unique for each request. |
 
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `Content-Type`
-      </td>
-
-      <td>
-        No
-      </td>
-
-      <td>
-        <DNT>**Required**</DNT>. Must be `application/json`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Content-Length`
-      </td>
-
-      <td>
-        No
-      </td>
-
-      <td>
-        <DNT>**Required (usually set automatically by the HTTP client)**</DNT>. The length of the request body in octets (8-bit bytes) unless sent with chunked encoding. This header is generally set by default by the underlying HTTP client sending the data and in most cases should not require any additional effort by the end user.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Api-Key`
-      </td>
-
-      <td>
-        Yes
-      </td>
-
-      <td>
-        <DNT>**Required.**</DNT> A <InlinePopover type="licenseKey"/> for the account you want to report data to. If this is provided as both a header and a query parameter, the values must match.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Content-Encoding`
-      </td>
-
-      <td>
-        No
-      </td>
-
-      <td>
-        <DNT>**Required if GZIP.**</DNT> The value must be `GZIP` or `Identity.` If no value is present, then `Identity` is assumed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `x-request-id`
-      </td>
-
-      <td>
-        No
-      </td>
-
-      <td>
-        <DNT>**Optional - Reserved for future use.**</DNT> The value must be a valid `UUID4`. The value is expected to be unique for each request.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## HTTP request body [#body-format]
 

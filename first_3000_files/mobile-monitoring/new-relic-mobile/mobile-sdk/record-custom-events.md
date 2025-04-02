@@ -100,59 +100,18 @@ NewRelic.recordCustomEvent(
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width="30%">
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
-
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$eventType`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The type of event. Do not use `$eventType` to name your custom events. Instead, use a custom attribute or the optional `name`.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$eventName`
-            </td>
-
-            <td>
-              `dictionary`
-            </td>
-
-            <td>
-              Optional. A map that includes a list of attributes that further designate subcategories to the `$eventType`. You can create attributes for any event descriptors you think will be useful. To name your custom events, create a `name` attribute or use the `eventName` parameter.
+| Parameter | Type | Description |
+| - | - | - |
+| `$eventType` | `string` | Required. The type of event. Do not use `$eventType` to name your custom events. Instead, use a custom attribute or the optional `name`. |
+| `$eventName` | `dictionary` | Optional. A map that includes a list of attributes that further designate subcategories to the `$eventType`. You can create attributes for any event descriptors you think will be useful. To name your custom events, create a `name` attribute or use the `eventName` parameter.
 
               Note: Not all object types are supported. See [setAttribute](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/create-attribute//#parameters) for details on supported types.
 
-              <Callout variant="important">
-                When setting the key for your custom attributes, be aware that there are [default attributes that cannot be overridden](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/create-attribute/#description).
-              </Callout>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              
+                When setting the key for your custom attributes, be aware that there are [default attributes that cannot be overridden](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/create-attribute/#description). |
+
 
       ## Return values [#return-values]
 

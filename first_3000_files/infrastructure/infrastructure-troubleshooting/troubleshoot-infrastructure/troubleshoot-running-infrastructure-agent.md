@@ -33,71 +33,16 @@ The `newrelic-infra-ctl` binary can automatically detect the agent process runni
 
 To change the default settings of `newrelic-infra-ctl`:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        To change...
-      </th>
+# Table
 
-      <th>
-        Execute
-      </th>
-    </tr>
-  </thead>
+| To change... | Execute |
+| - | - |
+| [`pid`](/docs/infrastructure/install-configure-infrastructure/linux-installation/manual-install-infrastructure-linux#change-pid) | `newrelic-infra-ctl -pid 14580` |
+| `cid` (when using a containerized version of the agent) | `newrelic-infra-ctl -cid 8fddbcbb101c` |
+| [`docker-api-version`](/docs/infrastructure/install-configure-infrastructure/configuration/infrastructure-configuration-settings#docker-api-version) | `newrelic-infra-ctl -docker-api-version 1.24` |
+| `container-runtime` (`docker` (default) or `containerd`) | `newrelic-infra-ctl -container-runtime containerd` |
+| `containerd-namespace` (Namespace where the agent container is running) | `newrelic-infra-ctl -containerd-namespace default` |
 
-  <tbody>
-    <tr>
-      <td>
-        [`pid`](/docs/infrastructure/install-configure-infrastructure/linux-installation/manual-install-infrastructure-linux#change-pid)
-      </td>
-
-      <td>
-        `newrelic-infra-ctl -pid 14580`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `cid` (when using a containerized version of the agent)
-      </td>
-
-      <td>
-        `newrelic-infra-ctl -cid 8fddbcbb101c`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`docker-api-version`](/docs/infrastructure/install-configure-infrastructure/configuration/infrastructure-configuration-settings#docker-api-version)
-      </td>
-
-      <td>
-        `newrelic-infra-ctl -docker-api-version 1.24`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `container-runtime` (`docker` (default) or `containerd`)
-      </td>
-
-      <td>
-        `newrelic-infra-ctl -container-runtime containerd`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `containerd-namespace` (Namespace where the agent container is running)
-      </td>
-
-      <td>
-        `newrelic-infra-ctl -containerd-namespace default`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Windows `newrelic-infra-ctl` [#binary-ctl-windows]
 

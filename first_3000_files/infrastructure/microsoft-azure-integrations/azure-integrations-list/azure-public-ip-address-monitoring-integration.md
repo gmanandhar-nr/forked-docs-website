@@ -44,278 +44,34 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Public IP Addresses metrics [#Azure Public IP Addresses]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `ByteCount` | Total number of Bytes transmitted within the time period. |
+| `BytesDroppedDDoS` | Inbound bytes dropped DDoS. |
+| `BytesForwardedDDoS` | Inbound bytes forwarded DDoS. |
+| `BytesInDDoS` | Inbound bytes DDoS. |
+| `DDoSTriggerSYNPackets` | Inbound SYN packets to trigger DDoS mitigation. |
+| `DDoSTriggerTCPPackets` | Inbound TCP packets to trigger DDoS mitigation. |
+| `DDoSTriggerUDPPackets` | Inbound UDP packets to trigger DDoS mitigation. |
+| `IfUnderDDoSAttack` | Under DDoS attack or not. |
+| `PacketCount` | Total number of Packets transmitted within time period. |
+| `PacketsDroppedDDoS` | Inbound packets dropped DDoS. |
+| `PacketsForwardedDDoS` | Inbound packets forwarded DDoS. |
+| `PacketsInDDoS` | Inbound packets DDoS. |
+| `SynCount` | Total number of SYN Packets transmitted within time period. |
+| `TCPBytesDroppedDDoS` | Inbound TCP bytes dropped DDoS. |
+| `TCPBytesForwardedDDoS` | Inbound TCP bytes forwarded DDoS. |
+| `TCPBytesInDDoS` | Inbound TCP bytes DDoS. |
+| `TCPPacketsDroppedDDoS` | Inbound TCP packets dropped DDoS. |
+| `TCPPacketsForwardedDDoS` | Inbound TCP packets forwarded DDoS. |
+| `TCPPacketsInDDoS` | Inbound TCP packets DDoS. |
+| `UDPBytesDroppedDDoS` | Inbound UDP bytes dropped DDoS. |
+| `UDPBytesForwardedDDoS` | Inbound UDP bytes forwarded DDoS. |
+| `UDPBytesInDDoS` | Inbound UDP bytes DDoS. |
+| `UDPPacketsDroppedDDoS` | Inbound UDP packets dropped DDoS. |
+| `UDPPacketsForwardedDDoS` | Inbound UDP packets forwarded DDoS. |
+| `UDPPacketsInDDoS` | Inbound UDP packets DDoS. |
+| `VipAvailability` | Average IP Address availability per time duration. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ByteCount`
-      </td>
-
-      <td>
-        Total number of Bytes transmitted within the time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesDroppedDDoS`
-      </td>
-
-      <td>
-        Inbound bytes dropped DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesForwardedDDoS`
-      </td>
-
-      <td>
-        Inbound bytes forwarded DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesInDDoS`
-      </td>
-
-      <td>
-        Inbound bytes DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DDoSTriggerSYNPackets`
-      </td>
-
-      <td>
-        Inbound SYN packets to trigger DDoS mitigation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DDoSTriggerTCPPackets`
-      </td>
-
-      <td>
-        Inbound TCP packets to trigger DDoS mitigation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DDoSTriggerUDPPackets`
-      </td>
-
-      <td>
-        Inbound UDP packets to trigger DDoS mitigation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IfUnderDDoSAttack`
-      </td>
-
-      <td>
-        Under DDoS attack or not.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PacketCount`
-      </td>
-
-      <td>
-        Total number of Packets transmitted within time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PacketsDroppedDDoS`
-      </td>
-
-      <td>
-        Inbound packets dropped DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PacketsForwardedDDoS`
-      </td>
-
-      <td>
-        Inbound packets forwarded DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PacketsInDDoS`
-      </td>
-
-      <td>
-        Inbound packets DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `SynCount`
-      </td>
-
-      <td>
-        Total number of SYN Packets transmitted within time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TCPBytesDroppedDDoS`
-      </td>
-
-      <td>
-        Inbound TCP bytes dropped DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TCPBytesForwardedDDoS`
-      </td>
-
-      <td>
-        Inbound TCP bytes forwarded DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TCPBytesInDDoS`
-      </td>
-
-      <td>
-        Inbound TCP bytes DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TCPPacketsDroppedDDoS`
-      </td>
-
-      <td>
-        Inbound TCP packets dropped DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TCPPacketsForwardedDDoS`
-      </td>
-
-      <td>
-        Inbound TCP packets forwarded DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TCPPacketsInDDoS`
-      </td>
-
-      <td>
-        Inbound TCP packets DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UDPBytesDroppedDDoS`
-      </td>
-
-      <td>
-        Inbound UDP bytes dropped DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UDPBytesForwardedDDoS`
-      </td>
-
-      <td>
-        Inbound UDP bytes forwarded DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UDPBytesInDDoS`
-      </td>
-
-      <td>
-        Inbound UDP bytes DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UDPPacketsDroppedDDoS`
-      </td>
-
-      <td>
-        Inbound UDP packets dropped DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UDPPacketsForwardedDDoS`
-      </td>
-
-      <td>
-        Inbound UDP packets forwarded DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `UDPPacketsInDDoS`
-      </td>
-
-      <td>
-        Inbound UDP packets DDoS.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `VipAvailability`
-      </td>
-
-      <td>
-        Average IP Address availability per time duration.
-      </td>
-    </tr>
-  </tbody>
-</table>

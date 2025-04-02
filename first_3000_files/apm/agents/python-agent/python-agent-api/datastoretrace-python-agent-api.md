@@ -46,57 +46,20 @@ newrelic.agent.datastore_trace(product, target, operation)
 
 This call includes these parameters:
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `product`
 
-  <tbody>
-    <tr>
-      <td>
-        `product`
+        _string_ | Required. The name of the vendor. Example: `Postgres`, `Redis`. |
+| `target`
 
-        _string_
-      </td>
+        _string_ | Required. The name of the collection or table. If there is no target, `None` should be used. |
+| `operation`
 
-      <td>
-        Required. The name of the vendor. Example: `Postgres`, `Redis`.
-      </td>
-    </tr>
+        _string_ | Required. The name of the datastore operation. Examples: `select`, `get`, `insert`, `rollback`. If not provided, defaults to `other`. |
 
-    <tr>
-      <td>
-        `target`
-
-        _string_
-      </td>
-
-      <td>
-        Required. The name of the collection or table. If there is no target, `None` should be used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `operation`
-
-        _string_
-      </td>
-
-      <td>
-        Required. The name of the datastore operation. Examples: `select`, `get`, `insert`, `rollback`. If not provided, defaults to `other`.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Parameters for context manager [#context-mgr-parameters]
 

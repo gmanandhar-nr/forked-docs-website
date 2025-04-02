@@ -116,285 +116,37 @@ Here are detailed descriptions of each configuration method:
 
     If you're using New Relic CodeStream to monitor performance from your IDE you may also want to [associate repositories with your services](/docs/codestream/observability/repo-association) and [associate build SHAs or release tags with errors](/docs/codestream/observability/error-investigation/#buildsha).
 
-    <table>
-      <thead>
-        <tr>
-          <th width="400px">
-            <DNT>
-              **Environment variable**
-            </DNT>
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Configuration setting**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| **Environment variable** | **Configuration setting** |
+| - | - |
+| `NEW_RELIC_LICENSE_KEY` | `license_key` |
+| `NEW_RELIC_APP_NAME` | `app_name` |
+| `NEW_RELIC_MONITOR_MODE` | `monitor_mode` |
+| `NEW_RELIC_DEVELOPER_MODE` | `developer_mode` |
+| `NEW_RELIC_LOG` | `log_file` |
+| `NEW_RELIC_LOG_LEVEL` | `log_level` |
+| `NEW_RELIC_HIGH_SECURITY` | `high_security` |
+| `NEW_RELIC_PROXY_SCHEME` | `proxy_scheme` |
+| `NEW_RELIC_PROXY_HOST` | `proxy_host` |
+| `NEW_RELIC_PROXY_PORT` | `proxy_port` |
+| `NEW_RELIC_PROXY_USER` | `proxy_user` |
+| `NEW_RELIC_PROXY_PASS` | `proxy_pass` |
+| `NEW_RELIC_AUDIT_LOG` | `audit_log_file` |
+| `NEW_RELIC_STARTUP_TIMEOUT` | `startup_timeout` |
+| `NEW_RELIC_SHUTDOWN_TIMEOUT` | `shutdown_timeout` |
+| `NEW_RELIC_LABELS` | `labels` |
+| `NEW_RELIC_PROCESS_HOST_DISPLAY_NAME` | `process_host.display_name` |
+| `NEW_RELIC_API_KEY` | `api_key` |
+| `NEW_RELIC_CA_BUNDLE_PATH` | `ca_bundle_path` |
+| `NEW_RELIC_DISTRIBUTED_TRACING_ENABLED` | `distributed_tracing.enabled` |
+| `NEW_RELIC_ANALYTICS_EVENTS_MAX_SAMPLES_STORED` | `event_harvest_config.harvest_limits.analytic_event_data` |
+| `NEW_RELIC_CUSTOM_INSIGHTS_EVENTS_MAX_SAMPLES_STORED` | `event_harvest_config.harvest_limits.custom_event_data` |
+| `NEW_RELIC_ML_INSIGHTS_EVENTS_MAX_SAMPLES_STORED` | `event_harvest_config.harvest_limits.ml_event_data` |
+| `NEW_RELIC_SPAN_EVENTS_MAX_SAMPLES_STORED` | `event_harvest_config.harvest_limits.span_event_data` |
+| `NEW_RELIC_ERROR_COLLECTOR_MAX_EVENT_SAMPLES_STORED` | `event_harvest_config.harvest_limits.error_event_data` |
+| `NEW_RELIC_FEATURE_FLAG` | `feature_flag` |
 
-      <tbody>
-        <tr>
-          <td>
-            `NEW_RELIC_LICENSE_KEY`
-          </td>
-
-          <td>
-            `license_key`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_APP_NAME`
-          </td>
-
-          <td>
-            `app_name`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_MONITOR_MODE`
-          </td>
-
-          <td>
-            `monitor_mode`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_DEVELOPER_MODE`
-          </td>
-
-          <td>
-            `developer_mode`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_LOG`
-          </td>
-
-          <td>
-            `log_file`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_LOG_LEVEL`
-          </td>
-
-          <td>
-            `log_level`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_HIGH_SECURITY`
-          </td>
-
-          <td>
-            `high_security`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_PROXY_SCHEME`
-          </td>
-
-          <td>
-            `proxy_scheme`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_PROXY_HOST`
-          </td>
-
-          <td>
-            `proxy_host`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_PROXY_PORT`
-          </td>
-
-          <td>
-            `proxy_port`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_PROXY_USER`
-          </td>
-
-          <td>
-            `proxy_user`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_PROXY_PASS`
-          </td>
-
-          <td>
-            `proxy_pass`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_AUDIT_LOG`
-          </td>
-
-          <td>
-            `audit_log_file`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_STARTUP_TIMEOUT`
-          </td>
-
-          <td>
-            `startup_timeout`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_SHUTDOWN_TIMEOUT`
-          </td>
-
-          <td>
-            `shutdown_timeout`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_LABELS`
-          </td>
-
-          <td>
-            `labels`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_PROCESS_HOST_DISPLAY_NAME`
-          </td>
-
-          <td>
-            `process_host.display_name`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_API_KEY`
-          </td>
-
-          <td>
-            `api_key`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_CA_BUNDLE_PATH`
-          </td>
-
-          <td>
-            `ca_bundle_path`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_DISTRIBUTED_TRACING_ENABLED`
-          </td>
-
-          <td>
-            `distributed_tracing.enabled`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_ANALYTICS_EVENTS_MAX_SAMPLES_STORED`
-          </td>
-
-          <td>
-            `event_harvest_config.harvest_limits.analytic_event_data`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_CUSTOM_INSIGHTS_EVENTS_MAX_SAMPLES_STORED`
-          </td>
-
-          <td>
-            `event_harvest_config.harvest_limits.custom_event_data`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_ML_INSIGHTS_EVENTS_MAX_SAMPLES_STORED`
-          </td>
-
-          <td>
-            `event_harvest_config.harvest_limits.ml_event_data`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_SPAN_EVENTS_MAX_SAMPLES_STORED`
-          </td>
-
-          <td>
-            `event_harvest_config.harvest_limits.span_event_data`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_ERROR_COLLECTOR_MAX_EVENT_SAMPLES_STORED`
-          </td>
-
-          <td>
-            `event_harvest_config.harvest_limits.error_event_data`
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `NEW_RELIC_FEATURE_FLAG`
-          </td>
-
-          <td>
-            `feature_flag`
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

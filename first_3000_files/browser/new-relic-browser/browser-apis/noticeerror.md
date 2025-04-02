@@ -66,43 +66,15 @@ Note: If more than 1000 `JavaScriptError` events is sent in a single request, on
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="30%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$error`
 
-  <tbody>
-    <tr>
-      <td>
-        `$error`
+        _error object_ | Required. Provide a meaningful error message that you can use when analyzing data on browser's [**Errors** page](/docs/errors-inbox/browser-tab). |
+| `$customAttributes` _object_ | Optional. An object containing name/value pairs representing [custom attributes](/docs/data-apis/custom-data/custom-events/report-browser-monitoring-custom-events-attributes/). |
 
-        _error object_
-      </td>
-
-      <td>
-        Required. Provide a meaningful error message that you can use when analyzing data on browser's [<DNT>**Errors**</DNT> page](/docs/errors-inbox/browser-tab).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$customAttributes` _object_
-      </td>
-
-      <td>
-        Optional. An object containing name/value pairs representing [custom attributes](/docs/data-apis/custom-data/custom-events/report-browser-monitoring-custom-events-attributes/).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

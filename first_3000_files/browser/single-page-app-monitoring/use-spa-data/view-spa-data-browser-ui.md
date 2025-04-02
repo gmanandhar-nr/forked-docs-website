@@ -116,38 +116,10 @@ Here are details on the specific performance data displayed for both page loads 
 
 The <DNT>**Historical performance**</DNT> and <DNT>**Breakdown**</DNT> details are similar for both page loads and route changes:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Detail tab
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| Detail tab | Comments |
+| - | - |
+| Historical data | The **Historical performance** tab displays throughput (views per minute) and [response time](/docs/accounts-partnerships/education/getting-started-new-relic/glossary#response-time) charted against the same time period yesterday and last week. |
+| Breakdowns | The **Breakdowns** tab lists the various components individually timed as part of an [interaction](/docs/browser/single-page-app-monitoring/understand-spa-data-structure#browser-interactions). By default, all XHRs are captured and timed. You can also use the [SPA API](/docs/browser/new-relic-browser/browser-agent-spa-api) to include additional elements for a route change or page load. |
 
-  <tbody>
-    <tr>
-      <td>
-        Historical data
-      </td>
-
-      <td>
-        The <DNT>**Historical performance**</DNT> tab displays throughput (views per minute) and [response time](/docs/accounts-partnerships/education/getting-started-new-relic/glossary#response-time) charted against the same time period yesterday and last week.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Breakdowns
-      </td>
-
-      <td>
-        The <DNT>**Breakdowns**</DNT> tab lists the various components individually timed as part of an [interaction](/docs/browser/single-page-app-monitoring/understand-spa-data-structure#browser-interactions). By default, all XHRs are captured and timed. You can also use the [SPA API](/docs/browser/new-relic-browser/browser-agent-spa-api) to include additional elements for a route change or page load.
-      </td>
-    </tr>
-  </tbody>
-</table>

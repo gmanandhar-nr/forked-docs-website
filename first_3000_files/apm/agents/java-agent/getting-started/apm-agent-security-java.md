@@ -54,93 +54,37 @@ If you need different security settings than default or high-security mode, you 
 * [Custom attributes](/docs/agents/java-agent/attributes/enabling-disabling-attributes-java#NRaddCustomParameter)
 * [Java agent API](/docs/agents/java-agent/custom-instrumentation/java-agent-api)
 
-<table>
-  <thead>
-    <tr>
-      <th width="300px">
-        <DNT>
-          **Setting**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Effects on data security**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Setting** | **Effects on data security** |
+| - | - |
+| [`audit_mode`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-audit_mode)
 
-  <tbody>
-    <tr>
-      <td>
-        [`audit_mode`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-audit_mode)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `false`
+        _boolean_ | Default: `false`
 
         By default, the Java agent does not log all data sent to New Relic in the agent log file.
 
-        If you set this to `true`, the agent logs data sent to the New Relic collector in the agent log file. You can then evaluate the information that the agent sends by reviewing the agent log file to see if it includes sensitive information.
-      </td>
-    </tr>
+        If you set this to `true`, the agent logs data sent to the New Relic collector in the agent log file. You can then evaluate the information that the agent sends by reviewing the agent log file to see if it includes sensitive information. |
+| [`high_security`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-enable_high_security)
 
-    <tr>
-      <td>
-        [`high_security`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-enable_high_security)
+        _boolean_ | Default: `false`
 
-        _boolean_
-      </td>
+        To enable [high-security mode](#restricted), set this to `true` and [enable high security in New Relic](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic. |
+| [`proxy_host`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-proxy_user)
 
-      <td>
-        Default: `false`
+        _string_ | Default: (none)
 
-        To enable [high-security mode](#restricted), set this to `true` and [enable high security in New Relic](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic.
-      </td>
-    </tr>
+        Some proxies default to using HTTP, which is a less secure protocol. |
+| [`attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-attributes-enabled)
 
-    <tr>
-      <td>
-        [`proxy_host`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-proxy_user)
-
-        _string_
-      </td>
-
-      <td>
-        Default: (none)
-
-        Some proxies default to using HTTP, which is a less secure protocol.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`attributes.enabled`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-attributes-enabled)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `true`
+        _boolean_ | Default: `true`
 
         Default for the [Custom Instrumentation Editor](/docs/agents/java-agent/custom-instrumentation/custom-instrumentation-editor-instrument-ui#options): `false`
 
-        By default, you are sending [attributes](/docs/agents/java-agent/attributes/enabling-disabling-attributes-java) to New Relic, except for methods instrumented using the Custom Instrumentation Editor. If you do not want to send attributes to New Relic, set this to `false`.
-      </td>
-    </tr>
+        By default, you are sending [attributes](/docs/agents/java-agent/attributes/enabling-disabling-attributes-java) to New Relic, except for methods instrumented using the Custom Instrumentation Editor. If you do not want to send attributes to New Relic, set this to `false`. |
+| [`attributes.exclude`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-attributes-exclude)
 
-    <tr>
-      <td>
-        [`attributes.exclude`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-attributes-exclude)
-
-        _string_
-      </td>
-
-      <td>
-        Default: (none)
+        _string_ | Default: (none)
 
         If there are specific attribute keys that you do **not** want to send to New Relic in transaction traces, identify them using `attributes.exclude`. This restricts the information sent to New Relic.
 
@@ -150,70 +94,31 @@ If you need different security settings than default or high-security mode, you 
 
           (Note that HTTP headers that contain sensitive data such as `cookie` and `authorization` are never collected.)
         * `response.headers.*`: Removes all response headers.
-        * `request_uri`: Removes the path for the transaction's incoming request.
-      </td>
-    </tr>
+        * `request_uri`: Removes the path for the transaction's incoming request. |
+| [`log_sql`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#tt-log_sql)
 
-    <tr>
-      <td>
-        [`log_sql`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#tt-log_sql)
+        _boolean_ | Default: `false`
 
-        _boolean_
-      </td>
+        By default, you are sending queries to New Relic using `record_sql`. If you want to log queries in the agent log file as well as send them to New Relic, set this to `true`. |
+| [`record_sql`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#tt-record_sql)
 
-      <td>
-        Default: `false`
-
-        By default, you are sending queries to New Relic using `record_sql`. If you want to log queries in the agent log file as well as send them to New Relic, set this to `true`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`record_sql`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#tt-record_sql)
-
-        _string_
-      </td>
-
-      <td>
-        Default: `obfuscated`
+        _string_ | Default: `obfuscated`
 
         By default, `record_sql` is set to `obfuscated`, which strips out the numeric and string literals.
 
         * If you do not want the agent to capture query information, set this to `off`.
         * If you want the agent to capture all query information in its original form, set this to `raw`.
-        * When you enable [high-security mode](#restricted), this is automatically set to `obfuscated`.
-      </td>
-    </tr>
+        * When you enable [high-security mode](#restricted), this is automatically set to `obfuscated`. |
+| [`strip_exception_messages`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#strip_exception_messages)
 
-    <tr>
-      <td>
-        [`strip_exception_messages`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#strip_exception_messages)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `false`
+        _boolean_ | Default: `false`
 
         By default, this is set to `false`, which means that the agent sends messages from all exceptions to the New Relic collector. If you enable [high-security mode](#restricted), this is automatically changed to `true`, and the agent strips the messages from exceptions.
 
-        If you are not using high-security mode but still want to strip messages from all exceptions except those in your [allow list](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#strip_exception_messages_whitelist), set this to `true`.
-      </td>
-    </tr>
+        If you are not using high-security mode but still want to strip messages from all exceptions except those in your [allow list](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#strip_exception_messages_whitelist), set this to `true`. |
+| [`custom_insights_events.enabled`](/docs/insights/insights-data-sources/custom-data/insert-custom-events-new-relic-apm-agents#java-att)
 
-    <tr>
-      <td>
-        [`custom_insights_events.enabled`](/docs/insights/insights-data-sources/custom-data/insert-custom-events-new-relic-apm-agents#java-att)
+        _boolean_ | Default: `true`
 
-        _boolean_
-      </td>
+        By default, the agent records events sent to the Event API via `recordCustomEvent()`. If you enable [high-security mode](#restricted), this is automatically set to `false`. |
 
-      <td>
-        Default: `true`
-
-        By default, the agent records events sent to the Event API via `recordCustomEvent()`. If you enable [high-security mode](#restricted), this is automatically set to `false`.
-      </td>
-    </tr>
-  </tbody>
-</table>

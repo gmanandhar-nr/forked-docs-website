@@ -33,41 +33,16 @@ It is possible to only accept only W3C Trace Context headers and disable the New
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$headers`
 
-  <tbody>
-    <tr>
-      <td>
-        `$headers`
+        _array_ | Required: an array containing distributed tracing headers. |
+| `$transport_type`
 
-        _array_
-      </td>
-
-      <td>
-        Required: an array containing distributed tracing headers.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `$transport_type`
-
-        _string_
-      </td>
-
-      <td>
-        Optional. A string overriding the default transport type.
+        _string_ | Optional. A string overriding the default transport type.
 
         Default values:
 
@@ -91,11 +66,8 @@ It is possible to only accept only W3C Trace Context headers and disable the New
 
         * `Other`
 
-        * `Queue`
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * `Queue` |
+
 
 ## Return values
 

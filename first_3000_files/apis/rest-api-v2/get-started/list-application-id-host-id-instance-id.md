@@ -130,91 +130,18 @@ Use the `$HOST_ID` to retrieve summary metrics for the host as well as specific 
 
 The instance ID meaning depends on the New Relic language agent being used. You can list this ID from the REST API. For Java, you can also [view the instance ID (JVM)](#UI) from APM's <DNT>**Overview**</DNT> page.
 
-<table>
-  <thead>
-    <tr>
-      <th width={100}>
-        Agent
-      </th>
+# Table
 
-      <th>
-        Instance ID represents
-      </th>
-    </tr>
-  </thead>
+| Agent | Instance ID represents |
+| - | - |
+| Go | The Go program on the host reporting to the app name |
+| Java | A Java Virtual Machine (JVM) |
+| .NET | For the agent for .NET Framework, this is the `AppDomain` |
+| Node.js | A worker process |
+| PHP | The daemon agent |
+| Ruby | An individual Ruby worker process |
+| Python | The master and worker processes |
 
-  <tbody>
-    <tr>
-      <td>
-        Go
-      </td>
-
-      <td>
-        The Go program on the host reporting to the app name
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Java
-      </td>
-
-      <td>
-        A Java Virtual Machine (JVM)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        .NET
-      </td>
-
-      <td>
-        For the agent for .NET Framework, this is the `AppDomain`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Node.js
-      </td>
-
-      <td>
-        A worker process
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PHP
-      </td>
-
-      <td>
-        The daemon agent
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Ruby
-      </td>
-
-      <td>
-        An individual Ruby worker process
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Python
-      </td>
-
-      <td>
-        The master and worker processes
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 You can retrieve summary metrics for the instance as well as specific metric timeslice values using the `INSTANCE_ID`. For details about available metrics, use the [REST API Explorer Application Instance](https://rpm.newrelic.com/api/explore/application_instances/names) page.
 

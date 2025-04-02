@@ -43,58 +43,12 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Network Interface metrics [#Azure Network Interface]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `BytesReceivedRate` | Number of bytes the Network Interface received. |
+| `BytesSentRate` | Number of bytes the Network Interface sent. |
+| `PacketsReceivedRate` | Number of packets the Network Interface received. |
+| `PacketsSentRate` | Number of packets the Network Interface sent. |
 
-  <tbody>
-    <tr>
-      <td>
-        `BytesReceivedRate`
-      </td>
-
-      <td>
-        Number of bytes the Network Interface received.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesSentRate`
-      </td>
-
-      <td>
-        Number of bytes the Network Interface sent.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PacketsReceivedRate`
-      </td>
-
-      <td>
-        Number of packets the Network Interface received.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PacketsSentRate`
-      </td>
-
-      <td>
-        Number of packets the Network Interface sent.
-      </td>
-    </tr>
-  </tbody>
-</table>

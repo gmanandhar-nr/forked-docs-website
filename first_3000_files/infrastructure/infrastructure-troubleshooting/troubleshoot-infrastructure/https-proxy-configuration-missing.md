@@ -33,101 +33,15 @@ Review the section below for your infrastructure agent version:
   >
     Infrastructure agent versions 1.3.1 or higher uses the following proxy precedence:
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Configuration
-          </th>
+    # Table
 
-          <th>
-            Precedence
-          </th>
+| Configuration | Precedence | Windows | Linux |
+| - | - | - | - |
+| `NRIA_PROXY` | 1 | HTTP/HTTPS | HTTP/HTTPS |
+| `proxy` (in `newrelic-infra.yml`) | 2 | HTTP/HTTPS | HTTP/HTTPS |
+| `HTTPS_PROXY` | 3 | HTTPS | HTTPS |
+| `HTTP_PROXY` | 4 | HTTP | HTTP |
 
-          <th>
-            Windows
-          </th>
-
-          <th>
-            Linux
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            `NRIA_PROXY`
-          </td>
-
-          <td>
-            1
-          </td>
-
-          <td>
-            HTTP/HTTPS
-          </td>
-
-          <td>
-            HTTP/HTTPS
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `proxy` (in `newrelic-infra.yml`)
-          </td>
-
-          <td>
-            2
-          </td>
-
-          <td>
-            HTTP/HTTPS
-          </td>
-
-          <td>
-            HTTP/HTTPS
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `HTTPS_PROXY`
-          </td>
-
-          <td>
-            3
-          </td>
-
-          <td>
-            HTTPS
-          </td>
-
-          <td>
-            HTTPS
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            `HTTP_PROXY`
-          </td>
-
-          <td>
-            4
-          </td>
-
-          <td>
-            HTTP
-          </td>
-
-          <td>
-            HTTP
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     The following options affect TLS certificate configuration:
 

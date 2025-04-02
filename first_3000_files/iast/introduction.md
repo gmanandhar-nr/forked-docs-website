@@ -39,71 +39,28 @@ IAST is fully integrated with [New Relic Vulnerability Management](/docs/vulnera
 
 Our <InlinePopover type="apm"/> agents deliver New Relic IAST and you can enable it with a simple configuration setting change. IAST is available in these languages:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <TechTileGrid>
-          <TechTile
+# Table
+
+| <TechTile
             name="Go agent"
             icon="logo-go"
             to="https://github.com/newrelic/csec-go-agent/tree/main#support-matrix"
-          />
-        </TechTileGrid>
-      </th>
-
-      <th>
-        <TechTileGrid>
-          <TechTile
+          /> | <TechTile
             name="Java agent"
             icon="logo-java"
             to="https://github.com/newrelic/csec-java-agent#support-matrix"
-          />
-        </TechTileGrid>
-      </th>
-
-      <th>
-        <TechTileGrid>
-          <TechTile
+          /> | <TechTile
             name="Node.js agent"
             icon="logo-nodejs"
             to="https://github.com/newrelic/csec-node-agent/#supported--modules"
-          />
-        </TechTileGrid>
-      </th>
-
-      <th>
-        <TechTileGrid>
-          <TechTile
+          /> | <TechTile
             name="Ruby agent"
             icon="logo-ruby"
             to="https://github.com/newrelic/csec-ruby-agent/tree/main#support-matrix"
-          />
-        </TechTileGrid>
-      </th>
-    </tr>
-  </thead>
+          /> |
+| - | - | - | - |
+| APM version 3.30.0 or higher | APM version 8.9.0 or higher | APM version 11.10.4 or higher | APM version 9.12.0 or higher |
 
-  <tbody>
-    <tr>
-      <td>
-        APM version 3.30.0 or higher
-      </td>
-
-      <td>
-        APM version 8.9.0 or higher
-      </td>
-
-      <td>
-        APM version 11.10.4 or higher
-      </td>
-
-      <td>
-        APM version 9.12.0 or higher
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Follow [these instructions](/docs/iast/install/) to install New Relic IAST.
 

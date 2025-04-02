@@ -42,53 +42,21 @@ To update the PHP agent:
        id="redhat-centos"
        title="RedHat or CentOS"
      >
-       <table>
-         <thead>
-           <tr>
-             <th style={{ width: "125px" }}>
-               Manager
-             </th>
+       # Table
 
-             <th>
-               Procedures
-             </th>
-           </tr>
-         </thead>
-
-         <tbody>
-           <tr>
-             <td>
-               <DNT>
-                 **yum**
-               </DNT>
-             </td>
-
-             <td>
-               If you are using the New Relic repositories directly, update to the latest agent using the following command:
+| Manager | Procedures |
+| - | - |
+| **yum** | If you are using the New Relic repositories directly, update to the latest agent using the following command:
 
                ```bash
                sudo yum update newrelic-php5
-               ```
-             </td>
-           </tr>
-
-           <tr>
-             <td>
-               <DNT>
-                 **rpm**
-               </DNT>
-             </td>
-
-             <td>
-               Download the newest version of the `.rpm` files from the [New Relic downloads page](https://download.newrelic.com/pub/newrelic/el5/x86_64/), and run the following command. Make sure to replace `X.X.X.X` with the latest [New Relic for PHP version number](/docs/releases/php).
+               ``` |
+| **rpm** | Download the newest version of the `.rpm` files from the [New Relic downloads page](https://download.newrelic.com/pub/newrelic/el5/x86_64/), and run the following command. Make sure to replace `X.X.X.X` with the latest [New Relic for PHP version number](/docs/releases/php).
 
                ```bash
                rpm -i newrelic-php5-common-X.X.X.X-1.noarch.rpm newrelic-daemon-X.X.X.X-1.x86_64.rpm newrelic-php5-X.X.X.X-1.x86_64.rpm
-               ```
-             </td>
-           </tr>
-         </tbody>
-       </table>
+               ``` |
+
      </Collapser>
 
      <Collapser

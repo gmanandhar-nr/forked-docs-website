@@ -36,61 +36,15 @@ You can [use NRQL queries to analyze past changes made via the API](/docs/synthe
 
 These are the [monitor types](/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors#types-monitors) and how they're referred to in in the Synthetics REST API:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Monitor type
-      </th>
+# Table
 
-      <th>
-        API name
-      </th>
-    </tr>
-  </thead>
+| Monitor type | API name |
+| - | - |
+| Ping | `SIMPLE` |
+| Simple browser | `BROWSER` |
+| Scripted browser | `SCRIPT_BROWSER` |
+| API test | `SCRIPT_API` |
 
-  <tbody>
-    <tr>
-      <td>
-        Ping
-      </td>
-
-      <td>
-        `SIMPLE`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Simple browser
-      </td>
-
-      <td>
-        `BROWSER`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Scripted browser
-      </td>
-
-      <td>
-        `SCRIPT_BROWSER`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        API test
-      </td>
-
-      <td>
-        `SCRIPT_API`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Use the API [#use-api]
 

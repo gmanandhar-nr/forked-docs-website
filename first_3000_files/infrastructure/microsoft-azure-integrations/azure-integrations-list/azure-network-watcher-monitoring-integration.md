@@ -36,68 +36,13 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Network Watcher metrics [#Azure-network-watcher]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `AverageRoundtripMs` | Average network round-trip time (ms) for connectivity monitoring probes sent between source and destination. |
+| `ChecksFailedPercent` | % of connectivity monitoring checks failed. |
+| `ProbesFailedPercent` | % of connectivity monitoring probes failed. |
+| `RoundTripTimeMs` | Round-trip time in milliseconds for the connectivity monitoring checks. |
+| `TestResult` | Connection monitor test result. |
 
-  <tbody>
-    <tr>
-      <td>
-        `AverageRoundtripMs`
-      </td>
-
-      <td>
-        Average network round-trip time (ms) for connectivity monitoring probes sent between source and destination.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ChecksFailedPercent`
-      </td>
-
-      <td>
-        % of connectivity monitoring checks failed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ProbesFailedPercent`
-      </td>
-
-      <td>
-        % of connectivity monitoring probes failed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RoundTripTimeMs`
-      </td>
-
-      <td>
-        Round-trip time in milliseconds for the connectivity monitoring checks.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TestResult`
-      </td>
-
-      <td>
-        Connection monitor test result.
-      </td>
-    </tr>
-  </tbody>
-</table>

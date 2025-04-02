@@ -23,85 +23,17 @@ To solve this problem, manage your application's [URL segment list settings](/do
 
 Here are some useful tips:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Adding segments to your allow list**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Tip**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Adding segments to your allow list** | **Tip** |
+| - | - |
+| Use constant URL segments. | Only add the URL segments that remain constant across many page views. Do not add unique segments such as IDs or highly-specific categories, because this can lead to [metric grouping issues](/docs/features/metric-grouping-issues). |
+| Enter exact matches. | Enter any URL segments as exact matches, including case. |
+| Use existing rules. | If a rule already appears for a domain:
 
-  <tbody>
-    <tr>
-      <td>
-        Use constant URL segments.
-      </td>
+        1. Go to **[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Browser > (select an app) > Settings > Segment allow lists**.
+        2. Rather than creating a new rule, edit the existing rule, and add the domain to the UI's **Allow listed segments** field. |
+| Group sub-domains. | Group similar sub-domains such as `foo.domain.com` and `bar.domain.com` under `*.domain.com`. This grouping must occur just before the top-level domain name. |
+| Set up single-page apps. | If your site is a single-page application and you only see `/` under page views, then your grouping is working correctly. New Relic records subsequent requests as AJAX loads, and your [**AJAX** page](/docs/browser/new-relic-browser/browser-pro-features/ajax-dashboard-identifying-time-consuming-calls) will contain more detailed information. If it doesn't, then follow the tips in this document. |
+| Remove rules when appropriate. | If you need to remove a rule, get support at [support.newrelic.com](https://support.newrelic.com/). |
 
-      <td>
-        Only add the URL segments that remain constant across many page views. Do not add unique segments such as IDs or highly-specific categories, because this can lead to [metric grouping issues](/docs/features/metric-grouping-issues).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Enter exact matches.
-      </td>
-
-      <td>
-        Enter any URL segments as exact matches, including case.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Use existing rules.
-      </td>
-
-      <td>
-        If a rule already appears for a domain:
-
-        1. Go to <DNT>**[one.newrelic.com > All capabilities](https://one.newrelic.com/all-capabilities) > Browser > (select an app) > Settings > Segment allow lists**</DNT>.
-        2. Rather than creating a new rule, edit the existing rule, and add the domain to the UI's <DNT>**Allow listed segments**</DNT> field.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Group sub-domains.
-      </td>
-
-      <td>
-        Group similar sub-domains such as `foo.domain.com` and `bar.domain.com` under `*.domain.com`. This grouping must occur just before the top-level domain name.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Set up single-page apps.
-      </td>
-
-      <td>
-        If your site is a single-page application and you only see `/` under page views, then your grouping is working correctly. New Relic records subsequent requests as AJAX loads, and your [<DNT>**AJAX**</DNT> page](/docs/browser/new-relic-browser/browser-pro-features/ajax-dashboard-identifying-time-consuming-calls) will contain more detailed information. If it doesn't, then follow the tips in this document.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Remove rules when appropriate.
-      </td>
-
-      <td>
-        If you need to remove a rule, get support at [support.newrelic.com](https://support.newrelic.com/).
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -75,61 +75,15 @@ Looking for API keys? See [API keys](/docs/apis/intro-apis/new-relic-api-keys).
 
 Our data ingest APIs are some of our [many solutions for reporting data](https://newrelic.com/instant-observability). Our APIs can be used directly, but they're also the underlying ingest route for many of our data-reporting tools. If you're just getting started reporting data to New Relic, we recommend starting at [Install New Relic](/docs/new-relic-solutions/new-relic-one/install-configure/install-new-relic).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        API type
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| API type | Description |
+| - | - |
+| [Metric API](/docs/introduction-new-relic-metric-api) | Send [dimensional metrics](/docs/data-apis/understand-data/new-relic-data-types/#dimensional-metrics) to New Relic from any source (including other telemetry monitoring services). |
+| [Event API](/docs/telemetry-data-platform/ingest-apis/introduction-event-api) | Send custom [event data](/docs/data-apis/understand-data/new-relic-data-types/#events-new-relic) to New Relic without the use of an agent or integration. |
+| [Log API](/docs/enable-new-relic-logs-http-input) | Send [log data](/docs/data-apis/understand-data/new-relic-data-types/#log-data) to New Relic. |
+| [Trace API](/docs/apm/distributed-tracing/trace-api/introduction-new-relic-trace-api) | Send [distributed tracing data](/docs/data-apis/understand-data/new-relic-data-types/#trace-data) (`Span` data) to New Relic without the use of an agent or integration. |
 
-  <tbody>
-    <tr>
-      <td>
-        [Metric API](/docs/introduction-new-relic-metric-api)
-      </td>
-
-      <td>
-        Send [dimensional metrics](/docs/data-apis/understand-data/new-relic-data-types/#dimensional-metrics) to New Relic from any source (including other telemetry monitoring services).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Event API](/docs/telemetry-data-platform/ingest-apis/introduction-event-api)
-      </td>
-
-      <td>
-        Send custom [event data](/docs/data-apis/understand-data/new-relic-data-types/#events-new-relic) to New Relic without the use of an agent or integration.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Log API](/docs/enable-new-relic-logs-http-input)
-      </td>
-
-      <td>
-        Send [log data](/docs/data-apis/understand-data/new-relic-data-types/#log-data) to New Relic.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Trace API](/docs/apm/distributed-tracing/trace-api/introduction-new-relic-trace-api)
-      </td>
-
-      <td>
-        Send [distributed tracing data](/docs/data-apis/understand-data/new-relic-data-types/#trace-data) (`Span` data) to New Relic without the use of an agent or integration.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## NerdGraph (GraphQL) [#graphql]
 

@@ -36,37 +36,18 @@ Normally, when you end a transaction you want the agent to record the associated
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `$ignore`
 
-  <tbody>
-    <tr>
-      <td>
-        `$ignore`
+        _boolean_ | Optional. Defaults to `false`.
 
-        _boolean_
-      </td>
+        If `false` or omitted, data from the transaction **is** recorded by the daemon.
 
-      <td>
-        Optional. Defaults to `false`.
+        If `true`, data from the transaction **is not** recorded by the daemon. |
 
-        If `false` or omitted, data from the transaction <DNT>**is**</DNT> recorded by the daemon.
-
-        If `true`, data from the transaction <DNT>**is not**</DNT> recorded by the daemon.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

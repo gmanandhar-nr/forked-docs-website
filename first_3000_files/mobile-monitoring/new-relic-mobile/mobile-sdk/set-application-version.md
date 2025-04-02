@@ -53,39 +53,12 @@ NewRelic.withApplicationVersion(appVersion: String?)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$appVersion` | `string` | Required. String indicating the application version. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$appVersion`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. String indicating the application version.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Example [#example]
 

@@ -37,95 +37,16 @@ https://nrql-lookup.service.eu.newrelic.com
 
 ### Endpoints
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Method
-      </th>
+# Table
 
-      <th>
-        Endpoint
-      </th>
+| Method | Endpoint | Description |
+| - | - | - |
+| [`create`](#create-and-update) | `POST /v1/accounts/YOUR_ACCOUNT_ID/TABLE_NAME` | Upload a new table. |
+| [`update`](#create-and-update) | `PUT /v1/accounts/YOUR_ACCOUNT_ID/TABLE_NAME` | Replace an existing table. |
+| [`read`](#read) | `GET /v1/accounts/YOUR_ACCOUNT_ID/TABLE_NAME` | Download a table that was previously uploaded. |
+| [`delete`](#delete) | `DELETE /v1/accounts/YOUR_ACCOUNT_ID/TABLE_NAME` | Delete the given table. |
+| [`list`](#list) | `GET /v1/accounts/YOUR_ACCOUNT_ID` | List the tables previously updated for this account. |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [`create`](#create-and-update)
-      </td>
-
-      <td>
-        `POST /v1/accounts/YOUR_ACCOUNT_ID/TABLE_NAME`
-      </td>
-
-      <td>
-        Upload a new table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`update`](#create-and-update)
-      </td>
-
-      <td>
-        `PUT /v1/accounts/YOUR_ACCOUNT_ID/TABLE_NAME`
-      </td>
-
-      <td>
-        Replace an existing table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`read`](#read)
-      </td>
-
-      <td>
-        `GET /v1/accounts/YOUR_ACCOUNT_ID/TABLE_NAME`
-      </td>
-
-      <td>
-        Download a table that was previously uploaded.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`delete`](#delete)
-      </td>
-
-      <td>
-        `DELETE /v1/accounts/YOUR_ACCOUNT_ID/TABLE_NAME`
-      </td>
-
-      <td>
-        Delete the given table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`list`](#list)
-      </td>
-
-      <td>
-        `GET /v1/accounts/YOUR_ACCOUNT_ID`
-      </td>
-
-      <td>
-        List the tables previously updated for this account.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 The variables required in the above NRQL Lookups API endpoints are defined below.
 

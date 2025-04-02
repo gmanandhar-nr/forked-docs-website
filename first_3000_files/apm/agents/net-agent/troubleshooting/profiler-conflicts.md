@@ -48,53 +48,23 @@ To avoid a profiler conflict, fully remove the other profiler from the environme
   >
     If the conflicting profiler has been disabled and there is still an issue, compare the registry keys to [<DNT>**Process Explorer**</DNT>](https://technet.microsoft.com/en-us/sysinternals/bb896653.aspx) to see which profiler is present. On the machine where you are experiencing this issue, check the <DNT>**WAS**</DNT> and <DNT>**W3SVC REG**</DNT> for IIS apps, or check your service keys or non-IIS app keys.
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            To check registry keys with this...
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **Do this...**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            PowerShell
-          </td>
-
-          <td>
-            If using Microsoft PowerShell, execute the following commands:
+| To check registry keys with this... | **Do this...** |
+| - | - |
+| PowerShell | If using Microsoft PowerShell, execute the following commands:
 
             ```sh
             (Get-Item -Path HKLM:\SYSTEM\CurrentControlSet\services\WAS).GetValue("Environment")
             (Get-Item -Path HKLM:\SYSTEM\CurrentControlSet\services\W3SVC).GetValue("Environment")
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Command line
-          </td>
-
-          <td>
-            If using <DNT>**cmd**</DNT>, do the following for either <DNT>**WAS**</DNT> and <DNT>**W3SVC REG**</DNT> or for your service/non-IIS app. Here is an example for an IIS application:
+            ``` |
+| Command line | If using **cmd**, do the following for either **WAS** and **W3SVC REG** or for your service/non-IIS app. Here is an example for an IIS application:
 
             1. On the command line, enter `regedit`.
-            2. From the <DNT>**Registry Editor**</DNT>, select <DNT>**HKEY_LOCAL_MACHINE > SYSTEM > CurrentControlSet > Services**</DNT>.
-            3. If applicable, select the <DNT>**WAS**</DNT> folder. From the <DNT>**WAS**</DNT> folder's list of registry keys, double-click <DNT>**Environment**</DNT>, and verify that [New Relic's CLSID](#clsid) and environment variables appear in the text box.
-            4. If applicable, select the <DNT>**W3SVC**</DNT> folder. From the <DNT>**W3SVC**</DNT> folder's list of registry keys, double-click <DNT>**Environment**</DNT>, and verify that [New Relic's CLSID](#clsid) and environment variables appear in the text box.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            2. From the **Registry Editor**, select **HKEY_LOCAL_MACHINE > SYSTEM > CurrentControlSet > Services**.
+            3. If applicable, select the **WAS** folder. From the **WAS** folder's list of registry keys, double-click **Environment**, and verify that [New Relic's CLSID](#clsid) and environment variables appear in the text box.
+            4. If applicable, select the **W3SVC** folder. From the **W3SVC** folder's list of registry keys, double-click **Environment**, and verify that [New Relic's CLSID](#clsid) and environment variables appear in the text box. |
+
   </Collapser>
 
   <Collapser

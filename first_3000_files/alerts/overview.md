@@ -87,141 +87,21 @@ This diagram shows how alerts work: you create an alert policy that includes an 
   src="/images/accounts_diagram_alerting-concepts.webp"
 />
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Term
-      </th>
+# Table
 
-      <th>
-        Explanation
-      </th>
-    </tr>
-  </thead>
+| Term | Explanation |
+| - | - |
+| **[Condition](/docs/alerts/create-alert/create-alert-condition/alert-conditions/#create-alert-condition/)** | Configuration of one or more thresholds applied to a signal. An incident is created when the thresholds are breached. |
+| **[Decision](/docs/alerts-applied-intelligence/applied-intelligence/incident-intelligence/change-applied-intelligence-correlation-logic-decisions/)** | Logical operation that group incidents into larger issues. There are built-in decisions and you can also create your own custom decisions. |
+| **[Destination](/docs/alerts-applied-intelligence/notifications/destinations/)** | Service by which you get notified. It's a unique identifier for a third-party system that you use. |
+| **[Event](/docs/data-apis/understand-data/new-relic-data-types/#events-new-relic)** | Indicate a state change or trigger defined by your New Relic alerts conditions or external monitoring systems. An event contains information about the affected entity. |
+| **[Incident](/docs/alerts-applied-intelligence/new-relic-alerts/alert-incidents/view-event-details-incidents/)** | Event generated when a condition threshold is breached. It's an individual event that details a symptom of a problem. |
+| **[Issue](/docs/new-relic-solutions/get-started/glossary/#issue)** | Collection of one or more incidents that requires attention and investigation and causes a notification. |
+| **[Notification](/docs/alerts-applied-intelligence/notifications/intro-notifications/)** | Message that you receive when an incident opens, is acknowledged, or closes. |
+| **[Policy](/docs/alerts-applied-intelligence/new-relic-alerts/alert-policies/create-edit-or-find-alert-policy/)** | Group of alert conditions that you configure to get notified when an incident occurs. |
+| **[Threshold](/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/advanced-techniques/set-thresholds-alert-condition)** | Value that a data source must pass to trigger an incident and the time-related settings that define an incident. |
+| **[Workflow](/docs/alerts-applied-intelligence/applied-intelligence/incident-workflows/incident-workflows/)** | Definition of when and where you want to receive notifications about issues. You can enrich your notifications with additional and related New Relic data. |
 
-  <tbody>
-    <tr>
-      <td>
-        <DNT>
-          **[Condition](/docs/alerts/create-alert/create-alert-condition/alert-conditions/#create-alert-condition/)**
-        </DNT>
-      </td>
-
-      <td>
-        Configuration of one or more thresholds applied to a signal. An incident is created when the thresholds are breached.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **[Decision](/docs/alerts-applied-intelligence/applied-intelligence/incident-intelligence/change-applied-intelligence-correlation-logic-decisions/)**
-        </DNT>
-      </td>
-
-      <td>
-        Logical operation that group incidents into larger issues. There are built-in decisions and you can also create your own custom decisions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **[Destination](/docs/alerts-applied-intelligence/notifications/destinations/)**
-        </DNT>
-      </td>
-
-      <td>
-        Service by which you get notified. It's a unique identifier for a third-party system that you use.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **[Event](/docs/data-apis/understand-data/new-relic-data-types/#events-new-relic)**
-        </DNT>
-      </td>
-
-      <td>
-        Indicate a state change or trigger defined by your New Relic alerts conditions or external monitoring systems. An event contains information about the affected entity.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **[Incident](/docs/alerts-applied-intelligence/new-relic-alerts/alert-incidents/view-event-details-incidents/)**
-        </DNT>
-      </td>
-
-      <td>
-        Event generated when a condition threshold is breached. It's an individual event that details a symptom of a problem.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **[Issue](/docs/new-relic-solutions/get-started/glossary/#issue)**
-        </DNT>
-      </td>
-
-      <td>
-        Collection of one or more incidents that requires attention and investigation and causes a notification.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **[Notification](/docs/alerts-applied-intelligence/notifications/intro-notifications/)**
-        </DNT>
-      </td>
-
-      <td>
-        Message that you receive when an incident opens, is acknowledged, or closes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **[Policy](/docs/alerts-applied-intelligence/new-relic-alerts/alert-policies/create-edit-or-find-alert-policy/)**
-        </DNT>
-      </td>
-
-      <td>
-        Group of alert conditions that you configure to get notified when an incident occurs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **[Threshold](/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/advanced-techniques/set-thresholds-alert-condition)**
-        </DNT>
-      </td>
-
-      <td>
-        Value that a data source must pass to trigger an incident and the time-related settings that define an incident.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **[Workflow](/docs/alerts-applied-intelligence/applied-intelligence/incident-workflows/incident-workflows/)**
-        </DNT>
-      </td>
-
-      <td>
-        Definition of when and where you want to receive notifications about issues. You can enrich your notifications with additional and related New Relic data.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 
 Ready to try New Relic for yourself? [Sign up for your free New Relic account](https://newrelic.com/signup) and follow our [quick launch guide](/docs/new-relic-solutions/get-started/intro-new-relic/#get-started) so you can start maximizing your data today! If you need any help, check out our [tutorial series](/docs/tutorial-create-alerts/create-new-relic-alerts/) on creating alerts to get started.

@@ -72,127 +72,16 @@ Select a New Relic product to see details about its data retention:
 
     For accounts on our [original pricing model](/docs/accounts/original-accounts-billing/product-pricing/product-based-pricing), APM data retention policies depend on your APM product subscription level.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "250px" }}>
-            <DNT>
-              **Component**
-            </DNT>
-          </th>
+    # Table
 
-          <th style={{ width: "140px" }}>
-            <DNT>
-              **Lite**
-            </DNT>
-          </th>
+| **Component** | **Lite** | **Essentials** | **Pro** |
+| - | - | - | - |
+| Metric timeslice data | 24 hours | 3 days | 90 days |
+| Key metrics | none | forever | forever |
+| Distributed tracing and logs in context | none | none | 8 days |
+| Other trace data \* | 1 day | 3 days | 7 days |
+| Event data \*\* | 1 day | 3 days | 8 days |
 
-          <th style={{ width: "140px" }}>
-            <DNT>
-              **Essentials**
-            </DNT>
-          </th>
-
-          <th style={{ width: "140px" }}>
-            <DNT>
-              **Pro**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Metric timeslice data
-          </td>
-
-          <td>
-            24 hours
-          </td>
-
-          <td>
-            3 days
-          </td>
-
-          <td>
-            90 days
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Key metrics
-          </td>
-
-          <td>
-            none
-          </td>
-
-          <td>
-            forever
-          </td>
-
-          <td>
-            forever
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Distributed tracing and logs in context
-          </td>
-
-          <td>
-            none
-          </td>
-
-          <td>
-            none
-          </td>
-
-          <td>
-            8 days
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Other trace data \*
-          </td>
-
-          <td>
-            1 day
-          </td>
-
-          <td>
-            3 days
-          </td>
-
-          <td>
-            7 days
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Event data \*\*
-          </td>
-
-          <td>
-            1 day
-          </td>
-
-          <td>
-            3 days
-          </td>
-
-          <td>
-            8 days
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     \* If you view a transaction trace in the New Relic UI, New Relic stores that trace data for up to one year.
 

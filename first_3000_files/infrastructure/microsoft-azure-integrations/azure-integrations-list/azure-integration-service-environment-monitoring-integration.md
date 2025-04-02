@@ -36,288 +36,35 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Integration Service Environment metrics [#Azure-integration-service-environment]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `ActionLatency` | Latency of completed workflow actions. |
+| `ActionsCompleted` | Number of workflow actions completed. |
+| `ActionsFailed` | Number of workflow actions failed. |
+| `ActionsSkipped` | Number of workflow actions skipped. |
+| `ActionsStarted` | Number of workflow actions started. |
+| `ActionsSucceeded` | Number of workflow actions succeeded. |
+| `ActionSuccessLatency` | Latency of succeeded workflow actions. |
+| `IntegrationServiceEnvironmentConnectorMemoryUsage` | Connector memory usage for integration service environment. |
+| `IntegrationServiceEnvironmentConnectorProcessorUsage` | Connector processor usage for integration service environment. |
+| `IntegrationServiceEnvironmentWorkflowMemoryUsage` | Workflow memory usage for integration service environment. |
+| `IntegrationServiceEnvironmentWorkflowProcessorUsage` | Workflow processor usage for integration service environment. |
+| `RunLatency` | Latency of completed workflow runs. |
+| `RunsCancelled` | Number of workflow runs cancelled. |
+| `RunsCompleted` | Number of workflow runs completed. |
+| `RunsFailed` | Number of workflow runs failed. |
+| `RunsStarted` | Number of workflow runs started. |
+| `RunsSucceeded` | Number of workflow runs succeeded. |
+| `RunSuccessLatency` | Latency of succeeded workflow runs. |
+| `TriggerFireLatency` | Latency of fired workflow triggers. |
+| `TriggerLatency` | Latency of completed workflow triggers. |
+| `TriggersCompleted` | Number of workflow triggers completed. |
+| `TriggersFailed` | Number of workflow triggers failed. |
+| `TriggersFired` | Number of workflow triggers fired. |
+| `TriggersSkipped` | Number of workflow triggers skipped. |
+| `TriggersStarted` | Number of workflow triggers started. |
+| `TriggersSucceeded` | Number of workflow triggers succeeded. |
+| `TriggerSuccessLatency` | Latency of succeeded workflow triggers. |
 
-  <tbody>
-    <tr>
-      <td>
-        `ActionLatency`
-      </td>
-
-      <td>
-        Latency of completed workflow actions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ActionsCompleted`
-      </td>
-
-      <td>
-        Number of workflow actions completed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ActionsFailed`
-      </td>
-
-      <td>
-        Number of workflow actions failed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ActionsSkipped`
-      </td>
-
-      <td>
-        Number of workflow actions skipped.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ActionsStarted`
-      </td>
-
-      <td>
-        Number of workflow actions started.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ActionsSucceeded`
-      </td>
-
-      <td>
-        Number of workflow actions succeeded.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ActionSuccessLatency`
-      </td>
-
-      <td>
-        Latency of succeeded workflow actions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IntegrationServiceEnvironmentConnectorMemoryUsage`
-      </td>
-
-      <td>
-        Connector memory usage for integration service environment.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IntegrationServiceEnvironmentConnectorProcessorUsage`
-      </td>
-
-      <td>
-        Connector processor usage for integration service environment.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IntegrationServiceEnvironmentWorkflowMemoryUsage`
-      </td>
-
-      <td>
-        Workflow memory usage for integration service environment.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IntegrationServiceEnvironmentWorkflowProcessorUsage`
-      </td>
-
-      <td>
-        Workflow processor usage for integration service environment.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RunLatency`
-      </td>
-
-      <td>
-        Latency of completed workflow runs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RunsCancelled`
-      </td>
-
-      <td>
-        Number of workflow runs cancelled.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RunsCompleted`
-      </td>
-
-      <td>
-        Number of workflow runs completed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RunsFailed`
-      </td>
-
-      <td>
-        Number of workflow runs failed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RunsStarted`
-      </td>
-
-      <td>
-        Number of workflow runs started.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RunsSucceeded`
-      </td>
-
-      <td>
-        Number of workflow runs succeeded.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RunSuccessLatency`
-      </td>
-
-      <td>
-        Latency of succeeded workflow runs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TriggerFireLatency`
-      </td>
-
-      <td>
-        Latency of fired workflow triggers.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TriggerLatency`
-      </td>
-
-      <td>
-        Latency of completed workflow triggers.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TriggersCompleted`
-      </td>
-
-      <td>
-        Number of workflow triggers completed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TriggersFailed`
-      </td>
-
-      <td>
-        Number of workflow triggers failed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TriggersFired`
-      </td>
-
-      <td>
-        Number of workflow triggers fired.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TriggersSkipped`
-      </td>
-
-      <td>
-        Number of workflow triggers skipped.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TriggersStarted`
-      </td>
-
-      <td>
-        Number of workflow triggers started.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TriggersSucceeded`
-      </td>
-
-      <td>
-        Number of workflow triggers succeeded.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TriggerSuccessLatency`
-      </td>
-
-      <td>
-        Latency of succeeded workflow triggers.
-      </td>
-    </tr>
-  </tbody>
-</table>

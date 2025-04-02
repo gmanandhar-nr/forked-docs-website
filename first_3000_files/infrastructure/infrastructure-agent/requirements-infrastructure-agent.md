@@ -33,134 +33,25 @@ The infrastructure agent supports these processor architectures:
 
 The infrastructure agent supports these operating systems up to their manufacturer's end-of-life. The agent might still be compatible with older versions, but please refer to the step-by-step instructions for each operating system if the guided installation is no longer available for a specific operating system version.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Operating system
-      </th>
+# Table
 
-      <th>
-        Supported by the infrastructure agent
-      </th>
-    </tr>
-  </thead>
+| Operating system | Supported by the infrastructure agent |
+| - | - |
+| [Amazon Linux 2, Amazon Linux 2023](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu) | All versions |
+| [CentOS](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu) | CentOS Stream 9 or higher |
+| [Debian](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu) | Version 11 ("bullseye") or higher |
+| [Docker](/docs/infrastructure/install-configure-manage-infrastructure/docker-installation/docker-instrumentation-infrastructure) | See [container monitoring requirements](/docs/infrastructure/install-infrastructure-agent/linux-installation/container-instrumentation-infrastructure-monitoring/#requirements) |
+| [Kubernetes](/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration) | See [Kubernetes integration requirements](/docs/kubernetes-pixie/kubernetes-integration/get-started/kubernetes-integration-compatibility-requirements/#compatibility) |
+| [Red Hat Enterprise Linux (RHEL)](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu) | Version 7.9 or higher |
+| [Oracle Linux](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu) | Version 7.9 or higher |
+| [SUSE Linux Enterprise Server (SLES)](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu) | Versions 12.5, 15.3, 15.4, 15.5 |
+| [Ubuntu](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu) | [LTS](https://wiki.ubuntu.com/LTS) versions 16.04.x, 18.04.x, 20.04.x, 22.04.x, 24.04.x
+        Interim releases 20.10, 21.04. |
+| [Windows](/docs/infrastructure-install-windows-server) | Windows Server 2016, 2019, and 2022, and their service packs.
 
-  <tbody>
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="amazon linux" alt="amazon linux.png" src="/images/os_icon_amazon-linux.webp"/>[Amazon Linux 2, Amazon Linux 2023](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu)
-      </td>
+        Windows 10, Windows 11, and their service packs. |
+| [macOS](/docs/infrastructure/install-infrastructure-agent/macos-installation/install-infrastructure-monitoring-agent-macos/) | 3 most recent major versions. Currently: 12 (Monterey), 13 (Ventura), 14 (Sonoma). |
 
-      <td>
-        All versions
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="centos icon" alt="centos icon" src="/images/os_icon_centos.webp"/>[CentOS](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu)
-      </td>
-
-      <td>
-        CentOS Stream 9 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="Debian icon" alt="Debian.png" src="/images/os_icon_debian.webp"/>[Debian](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu)
-      </td>
-
-      <td>
-        Version 11 ("bullseye") or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="Docker icon" alt="Docker icon" src="/images/os_icon_docker.webp"/>[Docker](/docs/infrastructure/install-configure-manage-infrastructure/docker-installation/docker-instrumentation-infrastructure)
-      </td>
-
-      <td>
-        See [container monitoring requirements](/docs/infrastructure/install-infrastructure-agent/linux-installation/container-instrumentation-infrastructure-monitoring/#requirements)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="Kubernetes icon" alt="Kubernetes icon" src="/images/os_icon_k8.webp"/>[Kubernetes](/docs/integrations/host-integrations/host-integrations-list/kubernetes-monitoring-integration)
-      </td>
-
-      <td>
-        See [Kubernetes integration requirements](/docs/kubernetes-pixie/kubernetes-integration/get-started/kubernetes-integration-compatibility-requirements/#compatibility)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="redhat icon" alt="redhat icon" src="/images/os_icon_redhat.webp"/>[Red Hat Enterprise Linux (RHEL)](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu)
-      </td>
-
-      <td>
-        Version 7.9 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="oracle icon" alt="Oracle icon" src="/images/os_icon_oracle.webp"/>[Oracle Linux](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu)
-      </td>
-
-      <td>
-        Version 7.9 or higher
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="suse icon" alt="suse icon" src="/images/os_icon_suse.webp"/>[SUSE Linux Enterprise Server (SLES)](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu)
-      </td>
-
-      <td>
-        Versions 12.5, 15.3, 15.4, 15.5
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="ubuntu icon" alt="ubuntu icon" src="/images/os_icon_ubuntu.webp"/>[Ubuntu](/docs/infrastructure-install-amazon-linux-centos-debian-rhel-or-ubuntu)
-      </td>
-
-      <td>
-        [LTS](https://wiki.ubuntu.com/LTS) versions 16.04.x, 18.04.x, 20.04.x, 22.04.x, 24.04.x
-        Interim releases 20.10, 21.04.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="Windows Server" alt="Windows Server icon" src="/images/os_icon_windows.webp"/>[Windows](/docs/infrastructure-install-windows-server)
-      </td>
-
-      <td>
-        Windows Server 2016, 2019, and 2022, and their service packs.
-
-        Windows 10, Windows 11, and their service packs.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <img style={{ width: '32px', height: '32px', verticalAlign: 'middle'}} class="inline" title="macOS" alt="macOS icon" src="/images/os_icon_mac.webp"/>[macOS](/docs/infrastructure/install-infrastructure-agent/macos-installation/install-infrastructure-monitoring-agent-macos/)
-      </td>
-
-      <td>
-        3 most recent major versions. Currently: 12 (Monterey), 13 (Ventura), 14 (Sonoma).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 You can also monitor Amazon BottleRocket workloads:
 

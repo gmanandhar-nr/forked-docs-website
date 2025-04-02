@@ -110,53 +110,13 @@ NewRelic.setAttribute(name: String?, value: Boolean)
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width={200}>
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `$name` | `string` | Required. Name of the attribute. |
+| `$value` | `string` or `float` | Required. The second parameter passed can be either a `string` value or a `float` value. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `$name`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. Name of the attribute.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `$value`
-            </td>
-
-            <td>
-              `string` or `float`
-            </td>
-
-            <td>
-              Required. The second parameter passed can be either a `string` value or a `float` value.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Return values [#return-values]
 

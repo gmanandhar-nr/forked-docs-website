@@ -66,51 +66,23 @@ Here are some causes and solutions for missing trace data:
   >
     If your <InlinePopover type="apm"/> agent can’t write data fast enough to the trace observer, `queue_size` is an additional APM agent configuration to limit the number of spans the agent will hold. See the following examples for your agent:
 
-    <table>
-      <thead>
-        <tr>
-          <th>
-            .NET configuration method
-          </th>
+    # Table
 
-          <th>
-            Example
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            Configuration file
-          </td>
-
-          <td>
-            ```xml
-            <configuration . . . >
-               <infiniteTracing>
-                  <trace_observer>
-                     <span_events queue_size="100000" />
-                  </trace_observer>
-               </infiniteTracing>
-            </configuration>
-            ```
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            Environment variable
-          </td>
-
-          <td>
-            ```ini
+| .NET configuration method | Example |
+| - | - |
+| Configuration file | ```xml
+            
+               
+                  
+                     
+                  
+               
+            
+            ``` |
+| Environment variable | ```ini
             NEW_RELIC_INFINITE_TRACING_SPAN_EVENTS_QUEUE_SIZE=100000
-            ```
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            ``` |
+
 
     <table>
       <thead>

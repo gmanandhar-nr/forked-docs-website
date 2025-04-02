@@ -22,55 +22,14 @@ New Relic's mobile monitoring provides you with a [<DNT>**Release versions**</DN
 
 We email you reports at regular intervals:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Time period**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Time period** | **Comments** |
+| - | - |
+| Day after release | The day after a new release launches, the report provides data about crash rates, HTTP errors, and network failures. This can help you quickly understand if the release is causing any major issues. |
+| Week and month after release | One week and one month later, the numbers and percentages will show whether new users are installing the app and existing users are upgrading to this version. This can help you analyze the success of specific app versions and your promotional efforts around them. |
+| Occasional followup emails | Over time you can evaluate your development efforts. This can help you determine whether each release is maintaining or improving the stability and performance of your app. This in turn can help you to identify any changes needed to support or enhance your app. |
 
-  <tbody>
-    <tr>
-      <td>
-        Day after release
-      </td>
-
-      <td>
-        The day after a new release launches, the report provides data about crash rates, HTTP errors, and network failures. This can help you quickly understand if the release is causing any major issues.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Week and month after release
-      </td>
-
-      <td>
-        One week and one month later, the numbers and percentages will show whether new users are installing the app and existing users are upgrading to this version. This can help you analyze the success of specific app versions and your promotional efforts around them.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Occasional followup emails
-      </td>
-
-      <td>
-        Over time you can evaluate your development efforts. This can help you determine whether each release is maintaining or improving the stability and performance of your app. This in turn can help you to identify any changes needed to support or enhance your app.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Edit version trend email settings [#version-trend-ui]
 

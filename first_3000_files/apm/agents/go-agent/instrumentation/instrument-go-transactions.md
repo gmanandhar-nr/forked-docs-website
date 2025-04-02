@@ -152,61 +152,15 @@ func myHandler(w http.ResponseWriter, r *http.Request) {
 
 New Relic for Go captures errors in three different ways:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "350px" }}>
-        If you want to...
-      </th>
+# Table
 
-      <th>
-        Use this
-      </th>
-    </tr>
-  </thead>
+| If you want to... | Use this |
+| - | - |
+| Track errors and report any combination of message, class, and attributes | [`Transaction.NoticeError()`](https://github.com/newrelic/go-agent/blob/master/GUIDE.md#noticeerror) |
+| Track expected errors and report any combination of message, class, and attributes without triggering alerts or affecting error metrics | [`Transaction.NoticeExpectedError()`](https://github.com/newrelic/go-agent/blob/master/GUIDE.md#noticeerror) |
+| Report panics | Transactions ended with `defer` automatically record panics. [See the New Relic for Go GitHub documentation for more information](https://github.com/newrelic/go-agent/blob/master/GUIDE.md#panics). As of version 3.0.0, this feature must be specifically enabled by setting the `Config.ErrorCollector.RecordPanics` configuration to `true`. |
+| Report error response codes | Transactions automatically record errors above 400 and below 100. [See the New Relic for Go GitHub documentation for more information](https://github.com/newrelic/go-agent/blob/master/GUIDE.md#error-response-codes). |
 
-  <tbody>
-    <tr>
-      <td>
-        Track errors and report any combination of message, class, and attributes
-      </td>
-
-      <td>
-        [`Transaction.NoticeError()`](https://github.com/newrelic/go-agent/blob/master/GUIDE.md#noticeerror)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Track expected errors and report any combination of message, class, and attributes without triggering alerts or affecting error metrics
-      </td>
-
-      <td>
-        [`Transaction.NoticeExpectedError()`](https://github.com/newrelic/go-agent/blob/master/GUIDE.md#noticeerror)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Report panics
-      </td>
-
-      <td>
-        Transactions ended with `defer` automatically record panics. [See the New Relic for Go GitHub documentation for more information](https://github.com/newrelic/go-agent/blob/master/GUIDE.md#panics). As of version 3.0.0, this feature must be specifically enabled by setting the `Config.ErrorCollector.RecordPanics` configuration to `true`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Report error response codes
-      </td>
-
-      <td>
-        Transactions automatically record errors above 400 and below 100. [See the New Relic for Go GitHub documentation for more information](https://github.com/newrelic/go-agent/blob/master/GUIDE.md#error-response-codes).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## View logs for your APM and infrastructure data [#logs-context]
 

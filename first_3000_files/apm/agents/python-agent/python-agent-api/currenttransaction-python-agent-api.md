@@ -27,33 +27,14 @@ Use `current_transaction` to retrieve the object representing the current [trans
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `active_only`
 
-  <tbody>
-    <tr>
-      <td>
-        `active_only`
+        _boolean_ | Optional. Default is `True`, meaning it will only return active transactions. If set to `False`, the call is capable of returning a transaction that has ended or stopped (for example, if `end_of_transaction` was used). |
 
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Default is `True`, meaning it will only return active transactions. If set to `False`, the call is capable of returning a transaction that has ended or stopped (for example, if `end_of_transaction` was used).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

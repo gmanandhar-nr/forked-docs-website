@@ -36,81 +36,15 @@ To [view and use your integration data](/docs/infrastructure/integrations/find-u
 
 You can [query and explore your data](/docs/using-new-relic/data/understand-data/query-new-relic-data) using the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event type
-      </th>
+| Entity | Event type | Provider |
+| - | - | - |
+| [Instance](#instance) | `AwsNeptuneInstanceSample` | `AwsNeptuneInstance` |
+| [Cluster](#cluster) | `AwsNeptuneClusterSample` | `AwsNeptuneCluster` |
+| [ClusterByRole](#clusterByRole) | `AwsNeptuneClusterByRoleSample` | `AwsNeptuneClusterByRole` |
+| [DatabaseClass](#database-class) | `AwsNeptuneDatabaseClassSample` | `AwsNeptuneDatabaseClass` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        [Instance](#instance)
-      </td>
-
-      <td>
-        `AwsNeptuneInstanceSample`
-      </td>
-
-      <td>
-        `AwsNeptuneInstance`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [Cluster](#cluster)
-      </td>
-
-      <td>
-        `AwsNeptuneClusterSample`
-      </td>
-
-      <td>
-        `AwsNeptuneCluster`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [ClusterByRole](#clusterByRole)
-      </td>
-
-      <td>
-        `AwsNeptuneClusterByRoleSample`
-      </td>
-
-      <td>
-        `AwsNeptuneClusterByRole`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [DatabaseClass](#database-class)
-      </td>
-
-      <td>
-        `AwsNeptuneDatabaseClassSample`
-      </td>
-
-      <td>
-        `AwsNeptuneDatabaseClass`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Metric data [#metrics]
 

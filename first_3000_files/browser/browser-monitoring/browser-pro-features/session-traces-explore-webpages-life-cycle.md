@@ -43,82 +43,27 @@ freshnessValidatedDate: 2024-05-06
 
 Session traces help you solve the following problems:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Problem
-      </th>
+# Table
 
-      <th>
-        Use session traces to...
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Backend problems
-      </td>
-
-      <td>
-        See how long it takes from when the request begins to when backend activity finishes and the DOM loading process begins.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Page load timing issues
-      </td>
-
-      <td>
-        Explore data that helps you answer questions such as:
+| Problem | Use session traces to... |
+| - | - |
+| Backend problems | See how long it takes from when the request begins to when backend activity finishes and the DOM loading process begins. |
+| Page load timing issues | Explore data that helps you answer questions such as:
 
         * What is your users' [page load](/docs/browser/new-relic-browser/page-load-timing-resources/page-load-timing-process) experience?
         * How long does it take for DOM processing or AJAX requests to complete?
         * Why is one page load slower than others?
-        * What is the context for individual events during a session?
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Poor core web vitals
-      </td>
-
-      <td>
-        Look at the timing segments for interaction to next paint and largest contentful paint to identify performance issues affecting your [core web vitals](/docs/tutorial-improve-site-performance/guide-to-monitoring-core-web-vitals).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        JavaScript events
-      </td>
-
-      <td>
-        Examine the sequence of [JavaScript](#slow-javascript-execution) and browser events to understand:
+        * What is the context for individual events during a session? |
+| Poor core web vitals | Look at the timing segments for interaction to next paint and largest contentful paint to identify performance issues affecting your [core web vitals](/docs/tutorial-improve-site-performance/guide-to-monitoring-core-web-vitals). |
+| JavaScript events | Examine the sequence of [JavaScript](#slow-javascript-execution) and browser events to understand:
 
         * Which ones take longer than others?
-        * When does each event occur?
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Errors
-      </td>
-
-      <td>
-        Sort or filter the errors to see what patterns emerge. For example, you can check whether errors increase based on:
+        * When does each event occur? |
+| Errors | Sort or filter the errors to see what patterns emerge. For example, you can check whether errors increase based on:
 
         * Browser type (Google Chrome, Mozilla Firefox, etc.)
-        * A specific device type (desktop, tablet, mobile)
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * A specific device type (desktop, tablet, mobile) |
+
 
 By connecting performance to user experience and interactions to performance, the ability to see all events in the user's session can help you pinpoint problem areas and identify solutions. You can also create a permalink to share this information with others.
 

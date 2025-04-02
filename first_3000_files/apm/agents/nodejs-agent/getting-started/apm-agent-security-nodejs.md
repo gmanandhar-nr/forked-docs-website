@@ -43,77 +43,30 @@ If you need different security settings than default or high-security mode, you 
 * [Custom attributes](https://newrelic.github.io/node-newrelic/API.html#addCustomAttribute)
 * [Node.js agent API]()https://newrelic.github.io/node-newrelic/API.html)
 
-<table>
-  <thead>
-    <tr>
-      <th width="300px">
-        <DNT>
-          **Setting**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Effects on data security**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Setting** | **Effects on data security** |
+| - | - |
+| [`audit_log.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#audit_log)
 
-  <tbody>
-    <tr>
-      <td>
-        [`audit_log.enabled`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#audit_log)
-
-        _boolean_
-      </td>
-
-      <td>
-        Default: `false`
+        _boolean_ | Default: `false`
 
         By default, the agent does not log all data sent to New Relic in the agent log file.
 
-        If you set this to `true`, the agent logs the data sent to the New Relic collector in the agent log file. You can then evaluate the information that the agent sends by reviewing the agent log file to see if it includes sensitive information.
-      </td>
-    </tr>
+        If you set this to `true`, the agent logs the data sent to the New Relic collector in the agent log file. You can then evaluate the information that the agent sends by reviewing the agent log file to see if it includes sensitive information. |
+| [`high_security`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#high_security)
 
-    <tr>
-      <td>
-        [`high_security`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#high_security)
+        _boolean_ | Default: `false`
 
-        _boolean_
-      </td>
+        To enable [high-security mode](#restricted), set this to `true` and [enable high security in New Relic](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic. |
+| [`proxy_host`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#proxy_host)
 
-      <td>
-        Default: `false`
+        _string_ | Default: (none)
 
-        To enable [high-security mode](#restricted), set this to `true` and [enable high security in New Relic](/docs/agents/manage-apm-agents/configuration/high-security-mode#version2enabled). This restricts the information you can send to New Relic.
-      </td>
-    </tr>
+        Some proxies default to using HTTP, which is a less secure protocol. |
+| [`record_sql`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#record-sql)
 
-    <tr>
-      <td>
-        [`proxy_host`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#proxy_host)
-
-        _string_
-      </td>
-
-      <td>
-        Default: (none)
-
-        Some proxies default to using HTTP, which is a less secure protocol.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        [`record_sql`](/docs/agents/nodejs-agent/installation-configuration/nodejs-agent-configuration#record-sql)
-
-        _string_
-      </td>
-
-      <td>
-        Default: `off`
+        _string_ | Default: `off`
 
         By default, `record_sql` is set to `off`. If you enable [high-security mode](#restricted), this is automatically changed to `obfuscated`.
 
@@ -121,8 +74,5 @@ If you need different security settings than default or high-security mode, you 
 
         * If you do not want the agent to capture slow queries or to include backtraces and SQL in transaction traces, set this to `off`.
         * If you want the agent to strip out string and numeric literals, set this to `obfuscated`.
-        * If you want the agent to capture all query information in its original form, set this to `raw`.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * If you want the agent to capture all query information in its original form, set this to `raw`. |
+

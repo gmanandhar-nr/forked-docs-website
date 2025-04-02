@@ -51,42 +51,10 @@ To view garbage collection metrics on a per-transaction basis, go to <DNT>**[one
 
 Detailed information includes:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Garbage collection details**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Garbage collection details** | **Comments** |
+| - | - |
+| Trend of garbage collection time | Garbage collection usually takes a small amount of time, and therefore the trend line may not be visible in your charts. To view the trend in garbage collection time, navigate to the [overview chart](#gc_view) or to [detailed transaction metrics](#detailed). Then, hide every chart label except **GC Execution** by selecting each label. |
+| Average number of calls | To view the average number of garbage collection calls for each controller action: From your [APM **Summary**](/docs/apm/applications-menu/monitoring/applications-overview-dashboard) [page](/docs/apm/applications-menu/monitoring/applications-overview-dashboard), select **Transaction**. Then select a controller action and view the **App Server Breakdown**. |
 
-  <tbody>
-    <tr>
-      <td>
-        Trend of garbage collection time
-      </td>
-
-      <td>
-        Garbage collection usually takes a small amount of time, and therefore the trend line may not be visible in your charts. To view the trend in garbage collection time, navigate to the [overview chart](#gc_view) or to [detailed transaction metrics](#detailed). Then, hide every chart label except <DNT>**GC Execution**</DNT> by selecting each label.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Average number of calls
-      </td>
-
-      <td>
-        To view the average number of garbage collection calls for each controller action: From your [APM <DNT>**Summary**</DNT>](/docs/apm/applications-menu/monitoring/applications-overview-dashboard) [page](/docs/apm/applications-menu/monitoring/applications-overview-dashboard), select <DNT>**Transaction**</DNT>. Then select a controller action and view the <DNT>**App Server Breakdown**</DNT>.
-      </td>
-    </tr>
-  </tbody>
-</table>

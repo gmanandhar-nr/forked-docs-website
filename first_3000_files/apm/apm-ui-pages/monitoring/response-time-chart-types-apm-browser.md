@@ -50,57 +50,14 @@ Response time charts are color-coded stacked bar charts. Response time is the du
 
 The relationship between response time and total amount of time reflects how much concurrency is taking place within the instrumented code in your application.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "100px" }}>
-        Response time
-      </th>
+# Table
 
-      <th>
-        Compared to total time
-      </th>
-    </tr>
-  </thead>
+| Response time | Compared to total time |
+| - | - |
+| **&lt;** | If response time is **less than** the total time spent, you are taking advantage of concurrency with a non-blocking or asynchronous computing model. |
+| **\\=** | If response time is **equal to** the total time spent, you may be using a blocking or synchronous computing model. |
+| **>** | If response time is **greater than** the total time spent, this may be due to resource contention. For example, if the response work runs in a highly contended thread pool, other jobs must finish before the response can complete. (The agent does not track time spent waiting for resources.) |
 
-  <tbody>
-    <tr>
-      <td style={{ textAlign: "center" }}>
-        <DNT>
-          **&lt;**
-        </DNT>
-      </td>
-
-      <td>
-        If response time is <DNT>**less than**</DNT> the total time spent, you are taking advantage of concurrency with a non-blocking or asynchronous computing model.
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "center" }}>
-        <DNT>
-          **\\=**
-        </DNT>
-      </td>
-
-      <td>
-        If response time is <DNT>**equal to**</DNT> the total time spent, you may be using a blocking or synchronous computing model.
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "center" }}>
-        <DNT>
-          **>**
-        </DNT>
-      </td>
-
-      <td>
-        If response time is <DNT>**greater than**</DNT> the total time spent, this may be due to resource contention. For example, if the response work runs in a highly contended thread pool, other jobs must finish before the response can complete. (The agent does not track time spent waiting for resources.)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Histogram charts [#histogram]
 

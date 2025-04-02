@@ -33,33 +33,14 @@ This call enables the capture of a web transaction's query string parameters as 
 
 ## Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `flag`
 
-  <tbody>
-    <tr>
-      <td>
-        `flag`
+        _boolean_ | Optional. Default is `True`. Use `False` to disable collection. |
 
-        _boolean_
-      </td>
-
-      <td>
-        Optional. Default is `True`. Use `False` to disable collection.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Return values
 

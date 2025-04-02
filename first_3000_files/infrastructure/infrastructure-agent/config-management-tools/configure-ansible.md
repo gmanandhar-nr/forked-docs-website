@@ -86,35 +86,11 @@ After installing, include the `newrelic.newrelic_install` role in a new or exist
 
 Here are available variables for configuring the `newrelic.newrelic_install` role:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Variable
-      </th>
+# Table
 
-      <th>
-        IsRequired
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `targets`
-      </td>
-
-      <td>
-        Required
-      </td>
-
-      <td>
-        List of targeted installs to run on hosts. Available options are:
+| Variable | IsRequired | Description |
+| - | - | - |
+| `targets` | Required | List of targeted installs to run on hosts. Available options are:
 
         * `infrastructure` (Linux & Windows)
         * `logs` (Linux & Windows)
@@ -125,53 +101,11 @@ Here are available variables for configuring the `newrelic.newrelic_install` rol
         * `apache` (Linux)
         * `mssql` (Windows)
         * `mysql` (Linux)
-        * `nginx` (Linux)
-      </td>
-    </tr>
+        * `nginx` (Linux) |
+| `tags` | Optional | Key-value pairs of tags passed to the installation. |
+| `install_timeout_seconds` | Optional | Sets timeout for installation task. Overrides the default timeout of 600s. |
+| `verbosity` | Optional | Verbosity options for the installation (`debug` or `trace`) writes verbose output to a log file on the host. |
 
-    <tr>
-      <td>
-        `tags`
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Key-value pairs of tags passed to the installation.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `install_timeout_seconds`
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Sets timeout for installation task. Overrides the default timeout of 600s.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `verbosity`
-      </td>
-
-      <td>
-        Optional
-      </td>
-
-      <td>
-        Verbosity options for the installation (`debug` or `trace`) writes verbose output to a log file on the host.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### Defaults
 

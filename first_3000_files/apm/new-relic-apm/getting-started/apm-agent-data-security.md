@@ -45,57 +45,16 @@ This aggregate metric data summarizes calls to specific methods in your applicat
 
 New Relic optionally collects:
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Data collection**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Data collection** | **Comments** |
+| - | - |
+| Uncaught errors | New Relic captures the error as well as a runtime stack trace of the offending code. |
+| Transaction traces | These are snapshots of a single transaction. As an option, the agent can also collect the query statements called within the transaction. The default collection uses obfuscation to hide any strings or numbers from the query.
 
-  <tbody>
-    <tr>
-      <td>
-        Uncaught errors
-      </td>
+        For transactions slower than a threshold you set, New Relic also collects data from SQL `EXPLAIN`. For database calls slower than a configured threshold, New Relic optionally collects runtime stack traces, which are helpful to pinpoint where in the code a database call is made. |
+| Custom parameters | You can add custom parameters to your application code and record them with transaction traces to provide additional context while you are examining profiling information. |
 
-      <td>
-        New Relic captures the error as well as a runtime stack trace of the offending code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Transaction traces
-      </td>
-
-      <td>
-        These are snapshots of a single transaction. As an option, the agent can also collect the query statements called within the transaction. The default collection uses obfuscation to hide any strings or numbers from the query.
-
-        For transactions slower than a threshold you set, New Relic also collects data from SQL `EXPLAIN`. For database calls slower than a configured threshold, New Relic optionally collects runtime stack traces, which are helpful to pinpoint where in the code a database call is made.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Custom parameters
-      </td>
-
-      <td>
-        You can add custom parameters to your application code and record them with transaction traces to provide additional context while you are examining profiling information.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Optional: For both errors and transaction traces, the HTTP request parameters can also be recorded.
 

@@ -36,78 +36,14 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Event Grid Subscriptions metrics [#Azure-event-grid-subscriptions]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `DeadLetteredCount` | Total dead lettered events matching this event subscription. |
+| `DeliveryAttemptFailCount` | Total events failed to deliver to this event subscription	. |
+| `DeliverySuccessCount` | Total events delivered to this event subscription. |
+| `DestinationProcessingDurationInMs` | Destination processing duration in milliseconds. |
+| `DroppedEventCount` | Total dropped events matching to this event subscription. |
+| `MatchedEventCount` | Total events matched to this event subscription. |
 
-  <tbody>
-    <tr>
-      <td>
-        `DeadLetteredCount`
-      </td>
-
-      <td>
-        Total dead lettered events matching this event subscription.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DeliveryAttemptFailCount`
-      </td>
-
-      <td>
-        Total events failed to deliver to this event subscription	.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DeliverySuccessCount`
-      </td>
-
-      <td>
-        Total events delivered to this event subscription.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DestinationProcessingDurationInMs`
-      </td>
-
-      <td>
-        Destination processing duration in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `DroppedEventCount`
-      </td>
-
-      <td>
-        Total dropped events matching to this event subscription.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MatchedEventCount`
-      </td>
-
-      <td>
-        Total events matched to this event subscription.
-      </td>
-    </tr>
-  </tbody>
-</table>

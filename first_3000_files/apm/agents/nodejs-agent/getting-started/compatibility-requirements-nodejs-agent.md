@@ -60,82 +60,16 @@ Before [installing the agent](/docs/apm/agents/nodejs-agent/installation-configu
 
     The following are proposed time ranges. The actual release date may vary.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "100px" }}>
-            Node.js version
-          </th>
+    # Table
 
-          <th>
-            Active long term support (LTS) start date
-          </th>
+| Node.js version | Active long term support (LTS) start date | Initial release date of Node.js agent
+            with support |
+| - | - | - |
+| 22 | October 2024 | June 28, 2024 with Node.js agent v11.22.0 |
+| 20 | October 2023 | August 28, 2023 with Node.js agent v11.0.0 |
+| 18 | October 2022 | August 3, 2022 with Node.js agent v9.0.0 |
+| 16 | October 2021 | July 26, 2021 with Node.js agent v8.0.0 |
 
-          <th>
-            Initial release date of Node.js agent
-            with support
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>
-            22
-          </td>
-
-          <td>
-            October 2024
-          </td>
-
-          <td>
-            June 28, 2024 with Node.js agent v11.22.0
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            20
-          </td>
-
-          <td>
-            October 2023
-          </td>
-
-          <td>
-            August 28, 2023 with Node.js agent v11.0.0
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            18
-          </td>
-
-          <td>
-            October 2022
-          </td>
-
-          <td>
-            August 3, 2022 with Node.js agent v9.0.0
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            16
-          </td>
-
-          <td>
-            October 2021
-          </td>
-
-          <td>
-            July 26, 2021 with Node.js agent v8.0.0
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     The following are proposed time ranges for EOL on older Node.js versions. We will typically drop support 2-4 months after the [published EOL date from Node.js](https://nodejs.org/en/about/previous-releases).
 

@@ -21,53 +21,25 @@ To add `RecordCustomEvent` to your Go app, use this format:
 RecordCustomEvent(eventType string, params map[string]interface{})
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th width="25%">
-        Parameter
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Parameter | Description |
+| - | - |
+| `eventType`
 
-  <tbody>
-    <tr>
-      <td>
-        `eventType`
-
-        _string_
-      </td>
-
-      <td>
-        Required. The name of the event type to record.
+        _string_ | Required. The name of the event type to record.
 
         * Must consist of alphanumeric characters, underscores `_`, or colons `:`.
         * Must contain no more than 255 bytes.
-        * Must follow New Relic data requirements for [names, limits, and restricted characters](/docs/insights/insights-data-sources/custom-data/data-requirements).
-      </td>
-    </tr>
+        * Must follow New Relic data requirements for [names, limits, and restricted characters](/docs/insights/insights-data-sources/custom-data/data-requirements). |
+| `params map`
 
-    <tr>
-      <td>
-        `params map`
-
-        `_number_`, `_string_`, or `_boolean_`
-      </td>
-
-      <td>
-        Required. Specify key/value pairs of attributes to annotate the event.
+        `_number_`, `_string_`, or `_boolean_` | Required. Specify key/value pairs of attributes to annotate the event.
 
         * Each value in the `params map` must be a number, string, or boolean.
         * Keys must be less than 255 bytes.
-        * The `params map` must not contain more than 64 attributes.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * The `params map` must not contain more than 64 attributes. |
+
 
 ## Example
 

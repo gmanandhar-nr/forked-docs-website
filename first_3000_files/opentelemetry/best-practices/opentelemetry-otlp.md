@@ -41,121 +41,15 @@ The mechanism to configure the endpoint will vary, but OpenTelemetry language SD
 
 If you're using a Collector, we recommend using the [otlphttpexporter](https://github.com/open-telemetry/opentelemetry-collector/tree/main/exporter/otlphttpexporter).
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Environment
-      </th>
+# Table
 
-      <th>
-        gRPC
-      </th>
+| Environment | gRPC | HTTP | Endpoint | Supported ports |
+| - | - | - | - | - |
+| US OTLP | ✅ | ✅ | `https://otlp.nr-data.net` | `443`, `4317`, `4318` |
+| EU OTLP | ✅ | ✅ | `https://otlp.eu01.nr-data.net` | `443`, `4317`, `4318` |
+| US FedRAMP OTLP(See [FedRAMP compliance](/docs/security/security-privacy/compliance/fedramp-compliant-endpoints/#otlp-api) for more information) | ✅ | ✅ | `https://gov-otlp.nr-data.net` | `443`, `4317`, `4318` |
+| Infinite tracing | ✅ | ✅ | `https://{trace-observer}` | `443` |
 
-      <th>
-        HTTP
-      </th>
-
-      <th>
-        Endpoint
-      </th>
-
-      <th>
-        Supported ports
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        US OTLP
-      </td>
-
-      <td>
-        ✅
-      </td>
-
-      <td>
-        ✅
-      </td>
-
-      <td>
-        `https://otlp.nr-data.net`
-      </td>
-
-      <td>
-        `443`, `4317`, `4318`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        EU OTLP
-      </td>
-
-      <td>
-        ✅
-      </td>
-
-      <td>
-        ✅
-      </td>
-
-      <td>
-        `https://otlp.eu01.nr-data.net`
-      </td>
-
-      <td>
-        `443`, `4317`, `4318`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        US FedRAMP OTLP<br/>(See [FedRAMP compliance](/docs/security/security-privacy/compliance/fedramp-compliant-endpoints/#otlp-api) for more information)
-      </td>
-
-      <td>
-        ✅
-      </td>
-
-      <td>
-        ✅
-      </td>
-
-      <td>
-        `https://gov-otlp.nr-data.net`
-      </td>
-
-      <td>
-        `443`, `4317`, `4318`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Infinite tracing<br/>
-      </td>
-
-      <td>
-        ✅
-      </td>
-
-      <td>
-        ✅
-      </td>
-
-      <td>
-        `https://{trace-observer}`
-      </td>
-
-      <td>
-        `443`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <CollapserGroup>
   <Collapser

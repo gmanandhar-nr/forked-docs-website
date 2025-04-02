@@ -45,78 +45,14 @@ You can [query and explore your data](/docs/using-new-relic/data/understand-data
 
 This New Relic integration collects the following Amazon SES data. For full descriptions of some of these metrics, see [Amazon's SNS metrics and dimensions](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/sns-metricscollected.html).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Metric | Description |
+| - | - |
+| `bounce` | The number of emails permanently rejected by a recipient's mail server. |
+| `click` | The number of times the recipient clicked a link in an HTML email. |
+| `complaint` | The number of times the recipient marked an email as spam. |
+| `delivery` | The number of emails successfully delivered to the recipient's mail server. |
+| `open` | The number of times a recipient opened an HTML email. |
+| `send` | The number of emails attempted to be sent. |
 
-  <tbody>
-    <tr>
-      <td>
-        `bounce`
-      </td>
-
-      <td>
-        The number of emails permanently rejected by a recipient's mail server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `click`
-      </td>
-
-      <td>
-        The number of times the recipient clicked a link in an HTML email.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `complaint`
-      </td>
-
-      <td>
-        The number of times the recipient marked an email as spam.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `delivery`
-      </td>
-
-      <td>
-        The number of emails successfully delivered to the recipient's mail server.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `open`
-      </td>
-
-      <td>
-        The number of times a recipient opened an HTML email.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `send`
-      </td>
-
-      <td>
-        The number of emails attempted to be sent.
-      </td>
-    </tr>
-  </tbody>
-</table>

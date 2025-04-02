@@ -31,65 +31,13 @@ Browser monitoring also minimizes network traffic for the end user by aggregatin
 
 The agent consists of multiple scripts to reduce the initial size of the "loader" and to support loading only the JavaScript necessary to support the agent features that are enabled. The first script, the "loader", is inserted inline into the HTML document. The remaining scripts are downloaded from the content delivery network (js-agent.newrelic.com) when the `load` page lifecycle event happens. The number of scripts loaded is dependent upon the type of agent being use. Find out about [browser agent types here](/docs/browser/browser-monitoring/installation/install-browser-monitoring-agent/#agent-types).
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Script
-      </th>
+# Table
 
-      <th>
-        Lite
-      </th>
+| Script | Lite | Pro | Pro + SPA |
+| - | - | - | - |
+| Inline script size | 10.2 kB | 15.5 kB | 17.5 kB |
+| Downloaded script size | 15.3 kB | 21 kB | 25.4 kB |
 
-      <th>
-        Pro
-      </th>
-
-      <th>
-        Pro + SPA
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Inline script size
-      </td>
-
-      <td>
-        10.2 kB
-      </td>
-
-      <td>
-        15.5 kB
-      </td>
-
-      <td>
-        17.5 kB
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Downloaded script size
-      </td>
-
-      <td>
-        15.3 kB
-      </td>
-
-      <td>
-        21 kB
-      </td>
-
-      <td>
-        25.4 kB
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <sup>
   Sizes are based on minified scripts using gzip compression.

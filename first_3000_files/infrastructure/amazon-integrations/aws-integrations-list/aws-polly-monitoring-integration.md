@@ -20,101 +20,16 @@ Data from this integration is attached to the `Metric` data type. To find this d
 
 ## Metric data [#metrics]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Metric (min, max, average, count, sum)
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `RequestCharacters` | count | The number of billable characters in requests. |
+| `ResponseLattency` | milliseconds | The latency between when the request was made and the start of the streaming response. |
+| `5XXCount` | count | The number of server errors. The HTTP response code range for a server error is 500 to 599. |
+| `2XXCount` | count | The number of successful translation requests. The response code for a successful request is 200 to 299. |
+| `4XXCount` | count | The number of user errors that occurred. The HTTP response code range for a user error is 400 to 499. |
 
-      <th>
-        Unit
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `RequestCharacters`
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of billable characters in requests.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `ResponseLattency`
-
-      </td>
-
-      <td>
-        milliseconds
-      </td>
-
-      <td>
-        The latency between when the request was made and the start of the streaming response.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `5XXCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of server errors. The HTTP response code range for a server error is 500 to 599.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `2XXCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of successful translation requests. The response code for a successful request is 200 to 299.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `4XXCount`
-
-      </td>
-
-      <td>
-        count
-      </td>
-
-      <td>
-        The number of user errors that occurred. The HTTP response code range for a user error is 400 to 499.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Tips on using your data [#use-data]
 

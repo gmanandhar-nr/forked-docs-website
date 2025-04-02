@@ -67,67 +67,14 @@ To view your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 You can [query and explore your data](/docs/using-new-relic/data/understand-data/query-new-relic-data) using the following [event types](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Account | `AzureCosmosDbAccountSample` | `AzureCosmosDbAccount` |
+| Database | `AzureCosmosDbDatabaseSample` | `AzureCosmosDbDatabase` |
+| Collection | `AzureCosmosDbCollectionSample` | `AzureCosmosDbCollection` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Account
-      </td>
-
-      <td>
-        `AzureCosmosDbAccountSample`
-      </td>
-
-      <td>
-        `AzureCosmosDbAccount`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Database
-      </td>
-
-      <td>
-        `AzureCosmosDbDatabaseSample`
-      </td>
-
-      <td>
-        `AzureCosmosDbDatabase`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Collection
-      </td>
-
-      <td>
-        `AzureCosmosDbCollectionSample`
-      </td>
-
-      <td>
-        `AzureCosmosDbCollection`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to find and use data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

@@ -185,52 +185,20 @@ You can create the NRAI plugin manually or by using the AWS CLI.
 
     ### Parameters [#parameters]
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Parameters</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>`<application-id>`</td>
-                    <td>The ID of your Amazon Q Business application.</td>
-                </tr>
-                <tr>
-                    <td>`<plugin-name>`</td>
-                    <td>The name of your custom plugin.</td>
-                </tr>
-                <tr>
-                    <td>`<region>`</td>
-                    <td>The AWS region where your resources are located.</td>
-                </tr>
-                <tr>
-                    <td>`<account-id>`</td>
-                    <td>Your AWS account ID.</td>
-                </tr>
-                <tr>
-                    <td>`<secret-name>`</td>
-                    <td>The name of the secret in AWS Secrets Manager.</td>
-                </tr>
-                <tr>
-                    <td>`<role-name>`</td>
-                    <td>The name of the IAM role.</td>
-                </tr>
-                <tr>
-                    <td>`<description>`</td>
-                    <td>A description for your custom plugin.</td>
-                </tr>
-                <tr>
-                    <td>`<bucket-name>`</td>
-                    <td>The name of the S3 bucket where your API schema is stored.</td>
-                </tr>
-                <tr>
-                    <td>`<key-name>`</td>
-                    <td>The key name of the API schema file in the S3 bucket.</td>
-                </tr>
-            </tbody>
-        </table>
+        # Table
+
+| Parameters | Description |
+| - | - |
+| `` | The ID of your Amazon Q Business application. |
+| `` | The name of your custom plugin. |
+| `` | The AWS region where your resources are located. |
+| `` | Your AWS account ID. |
+| `` | The name of the secret in AWS Secrets Manager. |
+| `` | The name of the IAM role. |
+| `` | A description for your custom plugin. |
+| `` | The name of the S3 bucket where your API schema is stored. |
+| `` | The key name of the API schema file in the S3 bucket. |
+
     </Collapser>
 </CollapserGroup>
 

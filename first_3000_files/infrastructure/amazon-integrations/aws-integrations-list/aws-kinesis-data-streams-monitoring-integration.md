@@ -67,172 +67,27 @@ This integration collects the following metrics. For additional information, see
 
 This integration collects the following metrics:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "285" }}>
-        Name
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `getRecordsBytes`
-      </td>
-
-      <td>
-        The number of bytes retrieved from the Kinesis stream, measured over the specified time period. Minimum, Maximum, and Average statistics represent the bytes in a single `GetRecords` operation for the stream in the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `getRecordsIteratorAgeMilliseconds`
-      </td>
-
-      <td>
-        The age of the last record in all `GetRecords` calls made against an Kinesis stream, measured over the specified time period, in milliseconds. Age is the difference between the current time and when the last record of the `GetRecords` call was written to the stream. The Minimum and Maximum statistics can be used to track the progress of Kinesis consumer applications. A value of zero indicates that the records being read are completely caught up with the stream.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `getRecordsLatency`
-      </td>
-
-      <td>
-        The time taken in milliseconds per `GetRecords` operation, measured over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `getRecordsRecords`
-      </td>
-
-      <td>
-        The number of records retrieved from the shard, measured over the specified time period. Minimum, Maximum, and Average statistics represent the records in a single `GetRecords` operation for the stream in the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incomingBytes`
-      </td>
-
-      <td>
-        The number of bytes successfully put to the Kinesis stream over the specified time period. This metric includes bytes from `PutRecord` and `PutRecords` operations. Minimum, Maximum, and Average statistics represent the bytes in a single put operation for the stream in the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `incomingRecords`
-      </td>
-
-      <td>
-        The number of records successfully put to the Kinesis stream over the specified time period. This metric includes record counts from `PutRecord` and `PutRecords` operations. Minimum, Maximum, and Average statistics represent the records in a single put operation for the stream in the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordBytes`
-      </td>
-
-      <td>
-        The number of bytes put to the Kinesis stream using the `PutRecord` operation over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordLatency`
-      </td>
-
-      <td>
-        The time taken in milliseconds per `PutRecord` operation, measured over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordSuccess`
-      </td>
-
-      <td>
-        The number of successful `PutRecord` operations per Kinesis stream, measured over the specified time period. Average reflects the percentage of successful writes to a stream.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordsBytes`
-      </td>
-
-      <td>
-        The number of bytes put to the Kinesis stream using the `PutRecords` operation over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordsLatency`
-      </td>
-
-      <td>
-        The time taken in milliseconds per `PutRecords` operation, measured over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordsRecords`
-      </td>
-
-      <td>
-        The number of successful records in a `PutRecords` operation per Kinesis stream, measured over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putRecordsSuccess`
-      </td>
-
-      <td>
-        The number of `PutRecords` operations where at least one record succeeded, per Kinesis stream, measured over the specified time period.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `readProvisionedThroughputExceeded`
-      </td>
-
-      <td>
-        The number of GetRecords calls throttled for the stream over the specified time period. The most commonly used statistic for this metric is Average.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `writeProvisionedThroughputExceeded`
-      </td>
-
-      <td>
-        The number of records rejected due to throttling for the stream over the specified time period. This metric includes throttling from `PutRecord` and `PutRecords` operations. The most commonly used statistic for this metric is Average.
+| Name | Description |
+| - | - |
+| `getRecordsBytes` | The number of bytes retrieved from the Kinesis stream, measured over the specified time period. Minimum, Maximum, and Average statistics represent the bytes in a single `GetRecords` operation for the stream in the specified time period. |
+| `getRecordsIteratorAgeMilliseconds` | The age of the last record in all `GetRecords` calls made against an Kinesis stream, measured over the specified time period, in milliseconds. Age is the difference between the current time and when the last record of the `GetRecords` call was written to the stream. The Minimum and Maximum statistics can be used to track the progress of Kinesis consumer applications. A value of zero indicates that the records being read are completely caught up with the stream. |
+| `getRecordsLatency` | The time taken in milliseconds per `GetRecords` operation, measured over the specified time period. |
+| `getRecordsRecords` | The number of records retrieved from the shard, measured over the specified time period. Minimum, Maximum, and Average statistics represent the records in a single `GetRecords` operation for the stream in the specified time period. |
+| `incomingBytes` | The number of bytes successfully put to the Kinesis stream over the specified time period. This metric includes bytes from `PutRecord` and `PutRecords` operations. Minimum, Maximum, and Average statistics represent the bytes in a single put operation for the stream in the specified time period. |
+| `incomingRecords` | The number of records successfully put to the Kinesis stream over the specified time period. This metric includes record counts from `PutRecord` and `PutRecords` operations. Minimum, Maximum, and Average statistics represent the records in a single put operation for the stream in the specified time period. |
+| `putRecordBytes` | The number of bytes put to the Kinesis stream using the `PutRecord` operation over the specified time period. |
+| `putRecordLatency` | The time taken in milliseconds per `PutRecord` operation, measured over the specified time period. |
+| `putRecordSuccess` | The number of successful `PutRecord` operations per Kinesis stream, measured over the specified time period. Average reflects the percentage of successful writes to a stream. |
+| `putRecordsBytes` | The number of bytes put to the Kinesis stream using the `PutRecords` operation over the specified time period. |
+| `putRecordsLatency` | The time taken in milliseconds per `PutRecords` operation, measured over the specified time period. |
+| `putRecordsRecords` | The number of successful records in a `PutRecords` operation per Kinesis stream, measured over the specified time period. |
+| `putRecordsSuccess` | The number of `PutRecords` operations where at least one record succeeded, per Kinesis stream, measured over the specified time period. |
+| `readProvisionedThroughputExceeded` | The number of GetRecords calls throttled for the stream over the specified time period. The most commonly used statistic for this metric is Average. |
+| `writeProvisionedThroughputExceeded` | The number of records rejected due to throttling for the stream over the specified time period. This metric includes throttling from `PutRecord` and `PutRecords` operations. The most commonly used statistic for this metric is Average.
 
         When the Minimum statistic has a non-zero value, records were being throttled for the stream during the specified time period.
 
-        When the Maximum statistic has a value of 0 (zero), no records were being throttled for the stream during the specified time period.
-      </td>
-    </tr>
-  </tbody>
-</table>
+        When the Maximum statistic has a value of 0 (zero), no records were being throttled for the stream during the specified time period. |
+

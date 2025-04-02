@@ -85,171 +85,80 @@ The script automatically identifies your service manager. If it fails, it will p
 
 The configuration file `config_defaults.sh` serves as a source of reference for all the configuration options. It contains the following environment parameters:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "250px" }}>
-        Variable
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
+| Variable | Description |
+| - | - |
+| `NRIA_AGENT_DIR`
 
-  <tbody>
-    <tr>
-      <td>
-        `NRIA_AGENT_DIR`
-
-        Required at agent startup.
-      </td>
-
-      <td>
-        The agent home directory.
+        Required at agent startup. | The agent home directory.
 
         Default:
 
         ```
         /var/db/newrelic-infra/
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_BIN_DIR`
 
-    <tr>
-      <td>
-        `NRIA_BIN_DIR`
-
-        Required at installation.
-      </td>
-
-      <td>
-        The path to the agent binary folder.
+        Required at installation. | The path to the agent binary folder.
 
         Default:
 
         ```
         /usr/local/bin
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_CONFIG_FILE`
 
-    <tr>
-      <td>
-        `NRIA_CONFIG_FILE`
-
-        Required at installation.
-      </td>
-
-      <td>
-        The agent configuration file's location.
+        Required at installation. | The agent configuration file's location.
 
         Default:
 
         ```
         /etc/newrelic-infra.yml
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_LICENSE_KEY`
 
-    <tr>
-      <td>
-        `NRIA_LICENSE_KEY`
+        Only configuration option required at startup. | The infrastructure agent license key. |
+| `NRIA_LOG_FILE`
 
-        Only configuration option required at startup.
-      </td>
-
-      <td>
-        The infrastructure agent license key.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `NRIA_LOG_FILE`
-
-        Required at agent startup.
-      </td>
-
-      <td>
-        The location where the agent will log.
+        Required at agent startup. | The location where the agent will log.
 
         Default:
 
         ```
         /var/run/newrelic-infra/newrelic-infra.log
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_MODE`
 
-    <tr>
-      <td>
-        `NRIA_MODE`
-
-        Required at installation.
-      </td>
-
-      <td>
-        The privilege level for the agent. Possible values are `ROOT`, `PRIVILEGED` or `UNPRIVILEGED`. For more info see our documentation on [agent running modes](/docs/infrastructure/install-infrastructure-agent/linux-installation/linux-agent-running-modes/#set-mode).
+        Required at installation. | The privilege level for the agent. Possible values are `ROOT`, `PRIVILEGED` or `UNPRIVILEGED`. For more info see our documentation on [agent running modes](/docs/infrastructure/install-infrastructure-agent/linux-installation/linux-agent-running-modes/#set-mode).
 
         Default:
 
         ```
         ROOT
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_PID_FILE`
 
-    <tr>
-      <td>
-        `NRIA_PID_FILE`
-
-        Required at agent startup.
-      </td>
-
-      <td>
-        The location where the agent will place its PID file.
+        Required at agent startup. | The location where the agent will place its PID file.
 
         Default:
 
         ```
         /var/run/newrelic-infra/newrelic-infra.pid
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_PLUGIN_DIR`
 
-    <tr>
-      <td>
-        `NRIA_PLUGIN_DIR`
-
-        Required at agent startup.
-      </td>
-
-      <td>
-        The directory containing the configuration files of the integrations.
+        Required at agent startup. | The directory containing the configuration files of the integrations.
 
         Default:
 
         ```
         /etc/newrelic-infra/integrations.d/
-        ```
-      </td>
-    </tr>
+        ``` |
+| `NRIA_USER`
 
-    <tr>
-      <td>
-        `NRIA_USER`
+        Required at installation time only when the running mode is set to either `PRIVILEGED` or `UNPRIVILEGED`. | The user that will run the agent binary. |
 
-        Required at installation time only when the running mode is set to either `PRIVILEGED` or `UNPRIVILEGED`.
-      </td>
-
-      <td>
-        The user that will run the agent binary.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## What's next? [#what-next]
 

@@ -97,90 +97,11 @@ To enable and use custom attributes for APM, follow the procedure for your <Inli
     Custom attribute collection is enabled by default in Java. You can collect custom attributes using XML and the Java agent APIs. These two methods can be used in conjunction with each other.
     Note that collecting custom attributes requires that the [New Relic Java API jar](/docs/apm/agents/java-agent/api-guides/guide-using-java-agent-api) be in the application's classpath.
 
-    <table>
-      <thead>
-        <tr>
-          <th style={{ width: "200px" }}>
-            Method
-          </th>
+    # Table
 
-          <th>
-            <DNT>
-              **How to do it**
-            </DNT>
-          </th>
-        </tr>
-      </thead>
+| Method | **How to do it** |
+| - | - |
 
-      <tbody>
-        <tr id="xml-java">
-          <td>
-            Specify attributes in XML
-          </td>
-
-          <td>
-            XML allows you to specify custom attributes without changing any of your source code. You can have multiple XML files for custom attributes that are grouped by some logical facet.
-
-            To set custom attributes for your Java app via XML:
-
-            1. Review the New Relic Java agent's documentation about [XML file format, methods and classes, and examples](/docs/agents/java-agent/custom-instrumentation/java-custom-instrumentation-xml-examples).
-            2. From your `Extensions` directory within the New Relic Java agent, create a single [XML file](/docs/agents/java-agent/custom-instrumentation/java-instrumentation-xml).
-            3. Define the methods you want New Relic to monitor by [editing your XML file](/docs/agents/java-agent/custom-instrumentation/java-instrumentation-xml) directly.
-            4. Define an XML instrumentation file using the [New Relic UI](/docs/agents/java-agent/custom-instrumentation/custom-instrumentation-editor-quickly-customize-your-java-instrumentation). This may require additional config in the `common:` block of your <DNT>**newrelic.yml**</DNT>. See <DNT>**Report custom attributes**</DNT> under [Instrumentation options](/docs/agents/java-agent/custom-instrumentation/custom-instrumentation-editor-instrument-ui#options) for more detail.
-          </td>
-        </tr>
-
-        <tr id="api-java">
-          <td>
-            Call the agent's API
-          </td>
-
-          <td>
-            <DNT>
-              **Example 1: Adding custom attributes to transactions**
-            </DNT>
-
-            To collect custom attributes using the agent's API, call the relevant methods:
-
-            1. For each method you want to record an attribute for, call `NewRelic.addCustomParameter(...)`.
-
-            2. Optional: Include or exclude certain attributes with [`attributes.include`](/docs/agents/java-agent/attributes/enabling-and-disabling-attributes#cfg-attributes-include) and [`attributes.exclude`](/docs/agents/java-agent/attributes/enabling-and-disabling-attributes#cfg-attributes-exclude).
-
-               For example, to record a variable named `userId`, include this code in the parent method:
-
-               ```java
-               NewRelic.addCustomParameter("userId", userId);
-               ```
-
-               <DNT>
-                 **Example 2: Adding custom attributes to spans in distributed traces**
-               </DNT>
-
-               To collect custom attributes using the agent's API, call the relevant methods:
-
-            3. For each span (currently executing method) that you want to record an attribute for, call `NewRelic.getAgent().getTracedMethod().addCustomAttribute(...)`.
-
-            4. Optional: Include or exclude certain attributes with [`span_events.attributes.include`](/docs/agents/java-agent/attributes/enabling-and-disabling-attributes#cfg-attributes-include) and [`span_events.attributes.exclude`](/docs/agents/java-agent/attributes/enabling-and-disabling-attributes#cfg-attributes-exclude).
-
-               For example, to record a variable named `userId` on the current span, include this code in the associated method:
-
-               ```java
-               NewRelic.getAgent().getTracedMethod().addCustomAttribute("userId", userId);
-               ```
-          </td>
-        </tr>
-
-        <tr id="collect-user-attributes">
-          <td>
-            Collect user attributes
-          </td>
-
-          <td>
-            The Java agent also includes a built-in mechanism to [enable user attributes](/docs/agents/java-agent/attributes/enabling-disabling-attributes-java#user-attributes) and collect user information from `HttpServletRequest.getUserPrincipal()` as custom attributes.
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </Collapser>
 
   <Collapser

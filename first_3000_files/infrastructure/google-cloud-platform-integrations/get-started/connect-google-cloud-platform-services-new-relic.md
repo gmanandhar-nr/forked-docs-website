@@ -24,91 +24,34 @@ To start receiving Google Cloud Platform (GCP) data with [New Relic GCP integrat
 
 These are the requirements for the authorization:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **GCP integration requirements**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **GCP integration requirements** | **Comments** |
+| - | - |
+| Monitoring | In the GCP project **API & Services Library** settings, you must enable **Google Stackdriver Monitoring API**. |
+| Authorization | **For [service account](#service) authorization (recommended):**
+        
 
-  <tbody>
-    <tr>
-      <td>
-        Monitoring
-      </td>
-
-      <td>
-        In the GCP project <DNT>**API & Services Library**</DNT> settings, you must enable <DNT>**Google Stackdriver Monitoring API**</DNT>.
-      </td>
-    </tr>
-
-    <tr>
-      <td rowSpan={2}>
-        Authorization
-      </td>
-
-      <td>
-        <DNT>
-          **For [service account](#service) authorization (recommended):**
-        </DNT>
-
-        You need a user with <DNT>**Project IAM Admin**</DNT> role to add the service account ID as a member in your GCP project.
+        You need a user with **Project IAM Admin** role to add the service account ID as a member in your GCP project.
 
         Before adding the service account ID, ensure you click the "Fetch data" button on the New Relic onboarding wizard to verify authorization for data retrieval from Google.
 
-        In the GCP project <DNT>**IAM & admin**</DNT>, the service account must have the <DNT>**Viewer**</DNT> role and the <DNT>**Service Usage Consumer**</DNT> role or, alternatively, a [custom role](/docs/integrations/google-cloud-platform-integrations/get-started/integrations-custom-roles).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **For [user account](#user) authorization:**
-        </DNT>
+        In the GCP project **IAM & admin**, the service account must have the **Viewer** role and the **Service Usage Consumer** role or, alternatively, a [custom role](/docs/integrations/google-cloud-platform-integrations/get-started/integrations-custom-roles). |
+| **For [user account](#user) authorization:**
+        
 
         The New Relic user that will integrate the GCP project must have a Google account and must be able to view the GCP project that New Relic will monitor.
 
-        In the GCP project <DNT>**IAM & admin**</DNT>, the user must have the <DNT>**Project Viewer**</DNT> and <DNT>**Monitoring viewer**</DNT> roles.
+        In the GCP project **IAM & admin**, the user must have the **Project Viewer** and **Monitoring viewer** roles.
 
         Please note that this authorization method will not allow New Relic to collect tags and other attributes that can be useful for narrowing down your NRQL queries, dashboards, and alerts.
 
-        You can migrate the authorization method from user account to service account from the <DNT>**Manage services**</DNT> link in New Relic's user interface.
-      </td>
-    </tr>
+        You can migrate the authorization method from user account to service account from the **Manage services** link in New Relic's user interface. |
+| Project name | As part of the [online setup process](#connect), you must identify `Project name` of the projects you want to monitor with New Relic. The UI workflow automatically lists active projects you can select. |
+| Permissions (only for user account authorization) | New Relic doesn't inherit your Google account's permissions and therefore is not authorized to perform any changes in the project. Also, New Relic requires a specific set of read-only permissions exclusively for certain types of data.
 
-    <tr>
-      <td>
-        Project name
-      </td>
+        For more information about the API permissions that New Relic uses, see the [Google documentation about scopes](https://developers.google.com/identity/protocols/googlescopes). |
 
-      <td>
-        As part of the [online setup process](#connect), you must identify `Project name` of the projects you want to monitor with New Relic. The UI workflow automatically lists active projects you can select.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Permissions (only for user account authorization)
-      </td>
-
-      <td>
-        New Relic doesn't inherit your Google account's permissions and therefore is not authorized to perform any changes in the project. Also, New Relic requires a specific set of read-only permissions exclusively for certain types of data.
-
-        For more information about the API permissions that New Relic uses, see the [Google documentation about scopes](https://developers.google.com/identity/protocols/googlescopes).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Authorization options [#authorization]
 

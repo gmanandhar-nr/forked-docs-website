@@ -47,58 +47,21 @@ Implementing custom metrics requires API calls. The exact details of the API cal
   If you are testing your custom metric implementation, run the agent for at least 10 minutes to ensure that the API call is reported to New Relic.
 </Callout>
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        New Relic agent
-      </th>
+# Table
 
-      <th>
-        Implementation
-      </th>
-    </tr>
-  </thead>
+| New Relic agent | Implementation |
+| - | - |
+| APM agents | * **C SDK:** [`newrelic_record_custom_metric()`](https://newrelic.github.io/c-sdk/libnewrelic_8h.html#aee71182588ace508cc816044d2024ff3)
+        * **Go:** [`app.RecordCustomMetric`](/docs/agents/go-agent/instrumentation/create-custom-metrics-go)
+        * **Java:** [`recordMetric`](http://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/NewRelic.html#recordMetric(java.lang.String,%20float))
+        * **.NET:** [`RecordMetric`](/docs/agents/net-agent/net-agent-api/recordmetric-net-agent)
+        * **Node.js:** [`recordMetric`](/docs/agents/nodejs-agent/supported-features/nodejs-custom-metrics)
+        * **PHP:** [`newrelic_custom_metric`](/docs/agents/php-agent/php-agent-api/newrelic_custom_metric)
+        * **Python:** [`record_custom_metric` and `register_data_source`](/docs/python/python-custom-metrics)
+        * **Ruby:** [`record_metric` and `increment_metric`](/docs/ruby/ruby-custom-metrics) |
+| New Relic mobile agents | [Record custom metrics SDK](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-custom-metrics/) |
+| New Relic browser agent | Browser does not support custom metrics. For options on adding custom data to browser, see [browser instrumentation](/docs/browser/new-relic-browser/page-load-timing-resources/instrumentation-browser-monitoring). |
 
-  <tbody>
-    <tr>
-      <td>
-        APM agents
-      </td>
-
-      <td>
-        * <DNT>**C SDK:**</DNT> [`newrelic_record_custom_metric()`](https://newrelic.github.io/c-sdk/libnewrelic_8h.html#aee71182588ace508cc816044d2024ff3)
-        * <DNT>**Go:**</DNT> [`app.RecordCustomMetric`](/docs/agents/go-agent/instrumentation/create-custom-metrics-go)
-        * <DNT>**Java:**</DNT> [`recordMetric`](http://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/NewRelic.html#recordMetric(java.lang.String,%20float))
-        * <DNT>**.NET:**</DNT> [`RecordMetric`](/docs/agents/net-agent/net-agent-api/recordmetric-net-agent)
-        * <DNT>**Node.js:**</DNT> [`recordMetric`](/docs/agents/nodejs-agent/supported-features/nodejs-custom-metrics)
-        * <DNT>**PHP:**</DNT> [`newrelic_custom_metric`](/docs/agents/php-agent/php-agent-api/newrelic_custom_metric)
-        * <DNT>**Python:**</DNT> [`record_custom_metric` and `register_data_source`](/docs/python/python-custom-metrics)
-        * <DNT>**Ruby:**</DNT> [`record_metric` and `increment_metric`](/docs/ruby/ruby-custom-metrics)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        New Relic mobile agents
-      </td>
-
-      <td>
-        [Record custom metrics SDK](/docs/mobile-monitoring/new-relic-mobile/mobile-sdk/record-custom-metrics/)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        New Relic browser agent
-      </td>
-
-      <td>
-        Browser does not support custom metrics. For options on adding custom data to browser, see [browser instrumentation](/docs/browser/new-relic-browser/page-load-timing-resources/instrumentation-browser-monitoring).
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Avoid grouping issues [#best_practices]
 

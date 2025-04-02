@@ -35,52 +35,20 @@ This setting allows you to run several web applications in a single JVM while re
 
 When you set `enable_auto_app_naming` to `true`, New Relic uses the following sources of information to name your applications:
 
-<table>
-  <thead>
-    <tr>
-      <th width={150}>
-        <DNT>
-          **App type**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Naming source**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Background tasks
-      </td>
-
-      <td>
-        The default application name from `newrelic.yml`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Web transactions
-      </td>
-
-      <td>
-        In order by priority:
+| **App type** | **Naming source** |
+| - | - |
+| Background tasks | The default application name from `newrelic.yml` |
+| Web transactions | In order by priority:
 
         * Request attribute (highest priority)
         * Servlet init parameter
         * Filter init parameter
         * Web app context parameter
         * Web app context name (display-name)
-        * Web app context path (lowest priority)
-      </td>
-    </tr>
-  </tbody>
-</table>
+        * Web app context path (lowest priority) |
+
 
 ## Request attribute
 

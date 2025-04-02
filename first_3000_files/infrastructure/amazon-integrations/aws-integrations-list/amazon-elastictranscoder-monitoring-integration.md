@@ -34,139 +34,19 @@ This integration collects the following Amazon Elastic Transcoder data:
 
 ### SWF metric data
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "220px" }}>
-        Metric (min, max, average, count, sum)  
+# Table
 
-      </th>
+| Metric (min, max, average, count, sum) | Unit | Description |
+| - | - | - |
+| `BilledAudioOutput` | Seconds | The number of billable seconds of audio output for a pipeline. |
+| `BilledHDOutput` | Seconds | The number of billable seconds of SD output for a pipeline. |
+| `BilledSDOutput` | Seconds | The number of billable seconds of SD output for a pipeline. |
+| `Errors` | Count | The number of errors caused by invalid operation parameters, such as a request for a job status that does not include the job ID. |
+| `JobsCompleted` | Count | The number of jobs completed by this pipeline. |
+| `JobsErrored` | Count | The number of jobs that failed because of invalid inputs, such as a request to transcode a file that is not in the given input bucket. |
+| `StandbyTime` | Seconds | The number of seconds before Elastic Transcoder started transcoding a job. |
+| `Throttles` | Count | The number of times that Elastic Transcoder automatically throttled an operation. |
 
-      <th>
-        Unit  
-
-      </th>
-
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `BilledAudioOutput`
-      </td>
-
-      <td>
-        Seconds
-      </td>
-
-      <td>
-        The number of billable seconds of audio output for a pipeline.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BilledHDOutput`
-      </td>
-
-      <td>
-        Seconds
-      </td>
-
-      <td>
-        The number of billable seconds of SD output for a pipeline.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BilledSDOutput`
-      </td>
-
-      <td>
-        Seconds
-      </td>
-
-      <td>
-        The number of billable seconds of SD output for a pipeline.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Errors`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of errors caused by invalid operation parameters, such as a request for a job status that does not include the job ID.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobsCompleted`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of jobs completed by this pipeline.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `JobsErrored`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of jobs that failed because of invalid inputs, such as a request to transcode a file that is not in the given input bucket.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `StandbyTime`
-      </td>
-
-      <td>
-        Seconds
-      </td>
-
-      <td>
-        The number of seconds before Elastic Transcoder started transcoding a job.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Throttles`
-      </td>
-
-      <td>
-        Count
-      </td>
-
-      <td>
-        The number of times that Elastic Transcoder automatically throttled an operation.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 All imported data has one dimension: `Domain`
 

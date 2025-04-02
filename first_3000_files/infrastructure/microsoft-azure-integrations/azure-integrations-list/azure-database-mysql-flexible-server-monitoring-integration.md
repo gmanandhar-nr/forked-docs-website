@@ -30,39 +30,12 @@ To find your integration data, go to <DNT>**[one.newrelic.com](https://one.newre
 
 Data is attached to the following [event types](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Entity
-      </th>
+# Table
 
-      <th>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| Server | `AzureMySqlFlexibleServerSample` | `AzureMySqlFlexibleServer` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Server
-      </td>
-
-      <td>
-        `AzureMySqlFlexibleServerSample`
-      </td>
-
-      <td>
-        `AzureMySqlFlexibleServer`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 

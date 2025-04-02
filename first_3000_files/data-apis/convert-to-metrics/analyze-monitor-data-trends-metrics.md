@@ -31,54 +31,17 @@ Using metrics allows for more efficient data storage. This in turn allows you to
 * <DNT>**Events, logs, spans:**</DNT> These types of data represent a single record at a specific moment in time. For example, you may have an event for every request to the system. This data is ideal for in-depth troubleshooting and analysis.
 * <DNT>**Metrics:**</DNT> These provide an aggregated view of your events, logs, or spans. Metrics are better for showing trends over longer time ranges. For example, you can aggregate the total number of requests per service to one metric and then examine this information month over month.
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        Why use metrics?
-      </th>
+# Table
 
-      <th>
-        Comments
-      </th>
-    </tr>
-  </thead>
+| Why use metrics? | Comments |
+| - | - |
+| Flexibility | * Metrics are [dimensional](/docs/telemetry-data-platform/ingest-manage-data/understand-data/new-relic-data-types#dimensional-metrics). You can choose what metadata (like host name or app name) is attached to them.
+        * Common metric measurements, like average, sum, minimum, and maximum, are already calculated. |
+| Data aggregation and retention | * The data has already been pre-aggregated into longer-period time buckets.
+        * Data retention is 13 months. |
+| Query capabilities | * You can [query using the `Metric` data type](/docs/telemetry-data-platform/get-data/apis/query-metric-data-type).
+        * When you create metrics, this does not delete your events or other types of data. However, metrics are better for longer-range querying and charting. |
 
-  <tbody>
-    <tr>
-      <td>
-        Flexibility
-      </td>
-
-      <td>
-        * Metrics are [dimensional](/docs/telemetry-data-platform/ingest-manage-data/understand-data/new-relic-data-types#dimensional-metrics). You can choose what metadata (like host name or app name) is attached to them.
-        * Common metric measurements, like average, sum, minimum, and maximum, are already calculated.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Data aggregation and retention
-      </td>
-
-      <td>
-        * The data has already been pre-aggregated into longer-period time buckets.
-        * Data retention is 13 months.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Query capabilities
-      </td>
-
-      <td>
-        * You can [query using the `Metric` data type](/docs/telemetry-data-platform/get-data/apis/query-metric-data-type).
-        * When you create metrics, this does not delete your events or other types of data. However, metrics are better for longer-range querying and charting.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Here's a video showing how to generate metric data from event data (7:47 minutes):
 

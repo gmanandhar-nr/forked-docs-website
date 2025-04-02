@@ -17,61 +17,20 @@ With the .NET agent enabled for a Windows Communication Foundation (WCF) applica
 
 ## Solution
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Basic solutions**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Basic solutions** | **Comments** |
+| - | - |
+| Disable the Cross Application Tracing (CAT) feature. | Read about how to [change the CAT configuration](/docs/agents/net-agent/configuration/net-agent-configuration#cross_application_tracer).
 
-  <tbody>
-    <tr>
-      <td>
-        Disable the Cross Application Tracing (CAT) feature.
-      </td>
-
-      <td>
-        Read about how to [change the CAT configuration](/docs/agents/net-agent/configuration/net-agent-configuration#cross_application_tracer).
-
-        If you need CAT to remain enabled, see the other solutions.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Use the Distributed Tracing (DT) feature instead of CAT.
-      </td>
-
-      <td>
-        Read about how to [enable the DT configuration](/docs/agents/net-agent/configuration/net-agent-configuration#distributed_tracing).
+        If you need CAT to remain enabled, see the other solutions. |
+| Use the Distributed Tracing (DT) feature instead of CAT. | Read about how to [enable the DT configuration](/docs/agents/net-agent/configuration/net-agent-configuration#distributed_tracing).
 
         DT is a new and improved way to accomplish tracing and has enhanced features, compared to CAT, in the New Relic UI.
 
-        DT doesn't require modifications to response headers and won't be affected by changing response headers.
-      </td>
-    </tr>
+        DT doesn't require modifications to response headers and won't be affected by changing response headers. |
+| Add your desired `Content-Type` header to both the message and `OperationContext`. | This solution requires you to modify your application code. |
 
-    <tr>
-      <td>
-        Add your desired `Content-Type` header to both the message and `OperationContext`.
-      </td>
-
-      <td>
-        This solution requires you to modify your application code.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Cause
 

@@ -70,31 +70,11 @@ For infrastructure alerting, see [REST API for infrastructure monitoring alerts]
 
 ## Available data and functions via REST API [#data]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **REST API functions**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        View account data
-      </td>
-
-      <td>
-        In general, any [role](/docs/accounts-partnerships/accounts/account-setup/users-roles) can use a <InlinePopover type="userKey"/> with <DNT>**GET > List**</DNT> functions to <DNT>**view**</DNT> alerts data. The account Owner and Admins may use their API key.
+| **REST API functions** | **Comments** |
+| - | - |
+| View account data | In general, any [role](/docs/accounts-partnerships/accounts/account-setup/users-roles) can use a  with **GET > List** functions to **view** alerts data. The account Owner and Admins may use their API key.
 
         List output will be [paginated](/docs/apis/rest-api-v2/requirements/pagination-api-output). Available functions include:
 
@@ -105,21 +85,9 @@ For infrastructure alerting, see [REST API for infrastructure monitoring alerts]
         * Conditions for [Multi-location synthetic monitoring](#multilocation-synthetics-conditions)
         * Conditions for NRQL ([Some limitations apply.](#excluded))
         * [Events](#events)
-        * [Incidents](/docs/alerts/organize-alerts/specify-when-alerts-create-incidents/)
-      </td>
-    </tr>
+        * [Incidents](/docs/alerts/organize-alerts/specify-when-alerts-create-incidents/) |
+| Maintain account data | You may have an `Owner` or `Admin` role in your account **and** a [user key](/docs/apis/get-started/intro-apis/types-new-relic-api-keys#user-api-key) or have a custom role that grants permissions to manage alerts and a user key in order to use any maintenance function, including **POST > Create**, **PUT > Add**, **PUT > Update**, and **DELETE**. |
 
-    <tr>
-      <td>
-        Maintain account data
-      </td>
-
-      <td>
-        You may have an `Owner` or `Admin` role in your account <DNT>**and**</DNT> a [user key](/docs/apis/get-started/intro-apis/types-new-relic-api-keys#user-api-key) or have a custom role that grants permissions to manage alerts and a user key in order to use any maintenance function, including <DNT>**POST > Create**</DNT>, <DNT>**PUT > Add**</DNT>, <DNT>**PUT > Update**</DNT>, and <DNT>**DELETE**</DNT>.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Conditions excluded from the REST API [#excluded]
 

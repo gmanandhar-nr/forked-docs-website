@@ -52,375 +52,46 @@ The New Relic Amazon DynamoDB integration collects the following metric data:
 
 ### DynamoDbTable
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Metric**
-        </DNT>
-      </th>
+# Table
+
+| **Metric** | **Description** |
+| - | - |
+| `batchGetSuccessfulRequestLatency` | Elapsed time for successful BatchGetItem operation requests, in milliseconds. |
+| `batchGetThrottledRequests` | BatchGetItem operation requests that exceed the provisioned throughput limits on a table. |
+| `batchWriteSuccessfulRequestLatency` | Elapsed time for successful BatchWriteItem operation requests, in milliseconds. |
+| `batchWriteThrottledRequests` | BatchWriteItem operation requests that exceed the provisioned throughput limits on a table. |
+| `conditionalCheckFailedRequests` | The number of failed attempts to perform conditional writes. |
+| `consumedReadCapacityUnits` | The number of read capacity units consumed over the specified time period, to track how much of provisioned throughput is used. |
+| `consumedWriteCapacityUnits` | The number of write capacity units consumed over the specified time period, to track how much of provisioned throughput is used. |
+| `deleteSuccessfulRequestLatency` | Elapsed time for successful Delete operation requests, in milliseconds. |
+| `deleteThrottledRequests` | Delete operation requests that exceed the provisioned throughput limits on a table. |
+| `getSuccessfulRequestLatency` | Elapsed time for successful Get operation requests, in milliseconds. |
+| `getThrottledRequests` | Get operation requests that exceed the provisioned throughput limits on a table. |
+| `pendingReplicationCount*` | The number of item updates that are written to one replica table, but that have not yet been written to another replica in the global table. |
+| `provisionedReadCapacityUnits` | The number of provisioned read capacity units for a table. |
+| `provisionedWriteCapacityUnits` | The number of provisioned write capacity units for a table. |
+| `putSuccessfulRequestLatency` | Elapsed time for successful Put operation requests, in milliseconds. |
+| `putThrottledRequests` | Put operation requests that exceed the provisioned throughput limits on a table. |
+| `queryReturnedItemCount` | The number of items returned by Query operations. |
+| `querySuccessfulRequestLatency` | Elapsed time for successful Query operation requests, in milliseconds. |
+| `queryThrottledRequests` | Query operation requests that exceed the provisioned throughput limits on a table. |
+| `readThrottleEvents` | Requests to DynamoDB that exceed the provisioned read capacity units for a table. |
+| `replicationLatency`\* | The elapsed time between an updated item appearing in the DynamoDB stream for one replica table, and that item appearing in another replica in the global table, in milliseconds. |
+| `scanReturnedItemCount` | The number of items returned by Scan operations. |
+| `scanSuccessfulRequestLatency` | Elapsed time for successful Scan operation requests, in milliseconds. |
+| `scanThrottledRequests` | Scan operation requests that exceed the provisioned throughput limits on a table. |
+| `batchGetSystemErrors` | `BatchGetItem` operation requests that generate an HTTP 500 status code. |
+| `batchWriteSystemErrors` | `BatchWriteItem` operation requests that generate an HTTP 500 status code. |
+| `deleteSystemErrors` | `DeleteItem` operation requests that generate an HTTP 500 status code. |
+| `getSystemErrors` | `GetItem` operation requests that generate an HTTP 500 status code. |
+| `putSystemErrors` | `PutItem` operation requests that generate an HTTP 500 status code. |
+| `querySystemErrors` | `Query` operation requests that generate an HTTP 500 status code. |
+| `scanSystemErrors` | `Scan` operation requests that generate an HTTP 500 status code. |
+| `updateSystemErrors` | `UpdateItem` operation requests that generate an HTTP 500 status code. |
+| `updateSuccessfulRequestLatency` | Elapsed time for successful Update operation requests, in milliseconds. |
+| `updateThrottledRequests` | Update operation requests that exceed the provisioned throughput limits on a table. |
+| `writeThrottleEvents` | Requests to DynamoDB that exceed the provisioned write capacity units for a table. |
 
-      <th width={285}>
-        <DNT>
-          **Description**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `batchGetSuccessfulRequestLatency`
-      </td>
-
-      <td>
-        Elapsed time for successful BatchGetItem operation requests, in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `batchGetThrottledRequests`
-      </td>
-
-      <td>
-        BatchGetItem operation requests that exceed the provisioned throughput limits on a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `batchWriteSuccessfulRequestLatency`
-      </td>
-
-      <td>
-        Elapsed time for successful BatchWriteItem operation requests, in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `batchWriteThrottledRequests`
-      </td>
-
-      <td>
-        BatchWriteItem operation requests that exceed the provisioned throughput limits on a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `conditionalCheckFailedRequests`
-      </td>
-
-      <td>
-        The number of failed attempts to perform conditional writes.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `consumedReadCapacityUnits`
-      </td>
-
-      <td>
-        The number of read capacity units consumed over the specified time period, to track how much of provisioned throughput is used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `consumedWriteCapacityUnits`
-      </td>
-
-      <td>
-        The number of write capacity units consumed over the specified time period, to track how much of provisioned throughput is used.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deleteSuccessfulRequestLatency`
-      </td>
-
-      <td>
-        Elapsed time for successful Delete operation requests, in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deleteThrottledRequests`
-      </td>
-
-      <td>
-        Delete operation requests that exceed the provisioned throughput limits on a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `getSuccessfulRequestLatency`
-      </td>
-
-      <td>
-        Elapsed time for successful Get operation requests, in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `getThrottledRequests`
-      </td>
-
-      <td>
-        Get operation requests that exceed the provisioned throughput limits on a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `pendingReplicationCount*`
-      </td>
-
-      <td>
-        The number of item updates that are written to one replica table, but that have not yet been written to another replica in the global table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `provisionedReadCapacityUnits`
-      </td>
-
-      <td>
-        The number of provisioned read capacity units for a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `provisionedWriteCapacityUnits`
-      </td>
-
-      <td>
-        The number of provisioned write capacity units for a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putSuccessfulRequestLatency`
-      </td>
-
-      <td>
-        Elapsed time for successful Put operation requests, in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putThrottledRequests`
-      </td>
-
-      <td>
-        Put operation requests that exceed the provisioned throughput limits on a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `queryReturnedItemCount`
-      </td>
-
-      <td>
-        The number of items returned by Query operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `querySuccessfulRequestLatency`
-      </td>
-
-      <td>
-        Elapsed time for successful Query operation requests, in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `queryThrottledRequests`
-      </td>
-
-      <td>
-        Query operation requests that exceed the provisioned throughput limits on a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `readThrottleEvents`
-      </td>
-
-      <td>
-        Requests to DynamoDB that exceed the provisioned read capacity units for a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `replicationLatency`\*
-      </td>
-
-      <td>
-        The elapsed time between an updated item appearing in the DynamoDB stream for one replica table, and that item appearing in another replica in the global table, in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `scanReturnedItemCount`
-      </td>
-
-      <td>
-        The number of items returned by Scan operations.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `scanSuccessfulRequestLatency`
-      </td>
-
-      <td>
-        Elapsed time for successful Scan operation requests, in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `scanThrottledRequests`
-      </td>
-
-      <td>
-        Scan operation requests that exceed the provisioned throughput limits on a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `batchGetSystemErrors`
-      </td>
-
-      <td>
-        `BatchGetItem` operation requests that generate an HTTP 500 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `batchWriteSystemErrors`
-      </td>
-
-      <td>
-        `BatchWriteItem` operation requests that generate an HTTP 500 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `deleteSystemErrors`
-      </td>
-
-      <td>
-        `DeleteItem` operation requests that generate an HTTP 500 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `getSystemErrors`
-      </td>
-
-      <td>
-        `GetItem` operation requests that generate an HTTP 500 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `putSystemErrors`
-      </td>
-
-      <td>
-        `PutItem` operation requests that generate an HTTP 500 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `querySystemErrors`
-      </td>
-
-      <td>
-        `Query` operation requests that generate an HTTP 500 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `scanSystemErrors`
-      </td>
-
-      <td>
-        `Scan` operation requests that generate an HTTP 500 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `updateSystemErrors`
-      </td>
-
-      <td>
-        `UpdateItem` operation requests that generate an HTTP 500 status code.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `updateSuccessfulRequestLatency`
-      </td>
-
-      <td>
-        Elapsed time for successful Update operation requests, in milliseconds.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `updateThrottledRequests`
-      </td>
-
-      <td>
-        Update operation requests that exceed the provisioned throughput limits on a table.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `writeThrottleEvents`
-      </td>
-
-      <td>
-        Requests to DynamoDB that exceed the provisioned write capacity units for a table.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ### DynamoDbRegion
 

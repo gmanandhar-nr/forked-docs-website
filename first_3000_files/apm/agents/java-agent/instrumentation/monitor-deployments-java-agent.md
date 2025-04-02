@@ -44,75 +44,20 @@ java -jar newrelic.jar deployment DEPLOYMENT_OPTIONS
 
 You can include these optional values with the deployment command:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "225px" }}>
-        Deployment option
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `--appname=NAME`
-      </td>
-
-      <td>
-        Set the application name. Defaults to [`app_name`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-app_name) setting from `newrelic.yml`.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `--environment=NAME`
-      </td>
-
-      <td>
-        Override the [`NEW_RELIC_ENVIRONMENT`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#newrelic-environment) or `newrelic.environment` system property.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `--user=USER`
-      </td>
-
-      <td>
-        Specify the user who is deploying the change.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `--revision=REV`
-      </td>
-
-      <td>
-        Specify the revision being deployed.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `--changes`
-      </td>
-
-      <td>
-        Read in a change log from the standard input. For example, you can pipe the change log:
+| Deployment option | Description |
+| - | - |
+| `--appname=NAME` | Set the application name. Defaults to [`app_name`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#cfg-app_name) setting from `newrelic.yml`. |
+| `--environment=NAME` | Override the [`NEW_RELIC_ENVIRONMENT`](/docs/agents/java-agent/configuration/java-agent-configuration-config-file#newrelic-environment) or `newrelic.environment` system property. |
+| `--user=USER` | Specify the user who is deploying the change. |
+| `--revision=REV` | Specify the revision being deployed. |
+| `--changes` | Read in a change log from the standard input. For example, you can pipe the change log:
 
         ```bash
         echo "get SHA-1 34837888734" | java -jar newrelic.jar deployment DEPLOYMENT_OPTIONS --changes
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 ## Proxy configurations [#proxy]
 

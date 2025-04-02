@@ -119,74 +119,15 @@ Specific settings related to Nagios are defined using the `env` section of the c
 
 ## Nagios instance settings [#instance-settings]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        Setting
-      </th>
+# Table
 
-      <th>
-        Description
-      </th>
+| Setting | Description | Default |
+| - | - | - |
+| **SERVICE_CHECKS_CONFIG** | This points to a [yaml file](#service-checks-yaml) containing definitions of the service checks that will be run by the integration.
+        **Required.** | N/A |
+| **CONCURRENCY** | The number of service checks to be run concurrently. | 1 |
+| **OUTPUT_TABLE_NAME** | The name of the table where the service check results are saved. | NagiosServiceCheckSample |
 
-      <th>
-        Default
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <DNT>
-          **SERVICE_CHECKS_CONFIG**
-        </DNT>
-      </td>
-
-      <td>
-        This points to a [yaml file](#service-checks-yaml) containing definitions of the service checks that will be run by the integration.
-        <DNT>**Required.**</DNT>
-      </td>
-
-      <td>
-        N/A
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **CONCURRENCY**
-        </DNT>
-      </td>
-
-      <td>
-        The number of service checks to be run concurrently.
-      </td>
-
-      <td>
-        1
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <DNT>
-          **OUTPUT_TABLE_NAME**
-        </DNT>
-      </td>
-
-      <td>
-        The name of the table where the service check results are saved.
-      </td>
-
-      <td>
-        NagiosServiceCheckSample
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Service checks config file [#service-checks-yaml]
 

@@ -36,438 +36,50 @@ This integration collects the following [metric data](/docs/infrastructure/integ
 
 ### Azure Functions Workflow metrics [#Azure-functions-workflow]
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "300px" }}>
-        Metric
-      </th>
+# Table
+
+| Metric | Description |
+| - | - |
+| `AppConnections` | The number of bound sockets existing in the sandbox (w3wp.exe and its child processes). A bound socket is created by calling bind()/connect() APIs and remains until said socket is closed with CloseHandle()/closesocket(). For WebApps and FunctionApps. |
+| `AverageMemoryWorkingSet` | The average amount of memory used by the app, in megabytes (MiB). For WebApps and FunctionApps. |
+| `BytesReceived` | The amount of incoming bandwidth consumed by the app, in MiB. For WebApps and FunctionApps. |
+| `BytesSent` | The amount of outgoing bandwidth consumed by the app, in MiB. For WebApps and FunctionApps. |
+| `CurrentAssemblies` | The current number of Assemblies loaded across all AppDomains in this application. For WebApps and FunctionApps. |
+| `FunctionExecutionCount` | Function Execution Count. For FunctionApps only. |
+| `FunctionExecutionUnits` | Function Execution Units. For FunctionApps only. |
+| `Gen0Collections` | The number of times the generation 0 objects are garbage collected since the start of the app process. |
+| `Gen1Collections` | The number of times the generation 1 objects are garbage collected since the start of the app process. Higher generation GCs include all lower generation GCs. For WebApps and FunctionApps. |
+| `Gen2Collections` | The number of times the generation 2 objects are garbage collected since the start of the app process. For WebApps and FunctionApps. |
+| `Handles` | The total number of handles currently open by the app process. For WebApps and FunctionApps. |
+| `HealthCheckStatus` | Health check status. For WebApps and FunctionApps. |
+| `Http101` | The count of requests resulting in an HTTP status code 101. For WebApps and FunctionApps. |
+| `Http2xx` | The count of requests resulting in an HTTP status code ≥ 200 but &lt; 300. For WebApps and FunctionApps. |
+| `Http3xx` | The count of requests resulting in an HTTP status code ≥ 300 but &lt; 400. For WebApps and FunctionApps. |
+| `Http401` | The count of requests resulting in HTTP 401 status code. For WebApps and FunctionApps. |
+| `Http403` | The count of requests resulting in HTTP 403 status code. For WebApps and FunctionApps. |
+| `Http404` | The count of requests resulting in HTTP 404 status code. For WebApps and FunctionApps. |
+| `Http406` | The count of requests resulting in HTTP 406 status code. For WebApps and FunctionApps. |
+| `Http4xx` | The count of requests resulting in an HTTP status code ≥ 400 but &lt; 500. For WebApps and FunctionApps. |
+| `Http5xx` | The count of requests resulting in an HTTP status code ≥ 500 but &lt; 600. For WebApps and FunctionApps. |
+| `HttpResponseTime` | The time taken for the app to serve requests, in seconds. For WebApps and FunctionApps. |
+| `IoOtherBytesPerSecond` | The rate at which the app process is issuing bytes to I/O operations that don't involve data, such as control operations. For WebApps and FunctionApps. |
+| `IoOtherOperationsPerSecond` | The rate at which the app process is issuing I/O operations that aren't read or write operations. For WebApps and FunctionApps. |
+| `IoReadBytesPerSecond` | The rate at which the app process is reading bytes from I/O operations. For WebApps and FunctionApps. |
+| `IoReadOperationsPerSecond` | The rate at which the app process is issuing read I/O operations. For WebApps and FunctionApps. |
+| `IoWriteBytesPerSecond` | The rate at which the app process is writing bytes to I/O operations. For WebApps and FunctionApps. |
+| `IoWriteOperationsPerSecond` | The rate at which the app process is issuing write I/O operations. For WebApps and FunctionApps. |
+| `MemoryWorkingSet` | The current amount of memory used by the app, in MiB. For WebApps and FunctionApps. |
+| `PrivateBytes` | Private Bytes is the current size, in bytes, of memory that the app process has allocated that can't be shared with other processes. For WebApps and FunctionApps. |
+| `Requests` | The total number of requests regardless of their resulting HTTP status code. For WebApps and FunctionApps. |
+| `RequestsInApplicationQueue` | The number of requests in the application request queue. For WebApps and FunctionApps. |
+| `Threads` | The number of threads currently active in the app process. For WebApps and FunctionApps. |
+| `TotalAppDomains` | The current number of AppDomains loaded in this application. For WebApps and FunctionApps. |
+| `TotalAppDomainsUnloaded` | The total number of AppDomains unloaded since the start of the application. For WebApps and FunctionApps. |
+| `WorkflowActionsCompleted` | Workflow Action Completed Count. For LogicApps only. |
+| `WorkflowJobExecutionDelay` | Workflow Job Execution Delay. For LogicApps only. |
+| `WorkflowJobExecutionDuration` | Workflow Job Execution Duration. For LogicApps only. |
+| `WorkflowRunsCompleted` | Workflow Runs Completed Count. For LogicApps only. |
+| `WorkflowRunsDispatched` | Workflow Runs Dispatched Count. For LogicApps only. |
+| `WorkflowRunsStarted` | Workflow Runs Started Count. For LogicApps only. |
+| `WorkflowTriggersCompleted` | Workflow Triggers Completed Count. For LogicApps only. |
 
-      <th>
-        Description
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `AppConnections`
-      </td>
-
-      <td>
-        The number of bound sockets existing in the sandbox (w3wp.exe and its child processes). A bound socket is created by calling bind()/connect() APIs and remains until said socket is closed with CloseHandle()/closesocket(). For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `AverageMemoryWorkingSet`
-      </td>
-
-      <td>
-        The average amount of memory used by the app, in megabytes (MiB). For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesReceived`
-      </td>
-
-      <td>
-        The amount of incoming bandwidth consumed by the app, in MiB. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `BytesSent`
-      </td>
-
-      <td>
-        The amount of outgoing bandwidth consumed by the app, in MiB. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `CurrentAssemblies`
-      </td>
-
-      <td>
-        The current number of Assemblies loaded across all AppDomains in this application. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FunctionExecutionCount`
-      </td>
-
-      <td>
-        Function Execution Count. For FunctionApps only.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `FunctionExecutionUnits`
-      </td>
-
-      <td>
-        Function Execution Units. For FunctionApps only.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Gen0Collections`
-      </td>
-
-      <td>
-        The number of times the generation 0 objects are garbage collected since the start of the app process.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Gen1Collections`
-      </td>
-
-      <td>
-        The number of times the generation 1 objects are garbage collected since the start of the app process. Higher generation GCs include all lower generation GCs. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Gen2Collections`
-      </td>
-
-      <td>
-        The number of times the generation 2 objects are garbage collected since the start of the app process. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Handles`
-      </td>
-
-      <td>
-        The total number of handles currently open by the app process. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HealthCheckStatus`
-      </td>
-
-      <td>
-        Health check status. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http101`
-      </td>
-
-      <td>
-        The count of requests resulting in an HTTP status code 101. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http2xx`
-      </td>
-
-      <td>
-        The count of requests resulting in an HTTP status code ≥ 200 but &lt; 300. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http3xx`
-      </td>
-
-      <td>
-        The count of requests resulting in an HTTP status code ≥ 300 but &lt; 400. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http401`
-      </td>
-
-      <td>
-        The count of requests resulting in HTTP 401 status code. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http403`
-      </td>
-
-      <td>
-        The count of requests resulting in HTTP 403 status code. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http404`
-      </td>
-
-      <td>
-        The count of requests resulting in HTTP 404 status code. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http406`
-      </td>
-
-      <td>
-        The count of requests resulting in HTTP 406 status code. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http4xx`
-      </td>
-
-      <td>
-        The count of requests resulting in an HTTP status code ≥ 400 but &lt; 500. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Http5xx`
-      </td>
-
-      <td>
-        The count of requests resulting in an HTTP status code ≥ 500 but &lt; 600. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `HttpResponseTime`
-      </td>
-
-      <td>
-        The time taken for the app to serve requests, in seconds. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IoOtherBytesPerSecond`
-      </td>
-
-      <td>
-        The rate at which the app process is issuing bytes to I/O operations that don't involve data, such as control operations. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IoOtherOperationsPerSecond`
-      </td>
-
-      <td>
-        The rate at which the app process is issuing I/O operations that aren't read or write operations. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IoReadBytesPerSecond`
-      </td>
-
-      <td>
-        The rate at which the app process is reading bytes from I/O operations. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IoReadOperationsPerSecond`
-      </td>
-
-      <td>
-        The rate at which the app process is issuing read I/O operations. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IoWriteBytesPerSecond`
-      </td>
-
-      <td>
-        The rate at which the app process is writing bytes to I/O operations. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `IoWriteOperationsPerSecond`
-      </td>
-
-      <td>
-        The rate at which the app process is issuing write I/O operations. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `MemoryWorkingSet`
-      </td>
-
-      <td>
-        The current amount of memory used by the app, in MiB. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `PrivateBytes`
-      </td>
-
-      <td>
-        Private Bytes is the current size, in bytes, of memory that the app process has allocated that can't be shared with other processes. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Requests`
-      </td>
-
-      <td>
-        The total number of requests regardless of their resulting HTTP status code. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `RequestsInApplicationQueue`
-      </td>
-
-      <td>
-        The number of requests in the application request queue. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `Threads`
-      </td>
-
-      <td>
-        The number of threads currently active in the app process. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalAppDomains`
-      </td>
-
-      <td>
-        The current number of AppDomains loaded in this application. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `TotalAppDomainsUnloaded`
-      </td>
-
-      <td>
-        The total number of AppDomains unloaded since the start of the application. For WebApps and FunctionApps.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowActionsCompleted`
-      </td>
-
-      <td>
-        Workflow Action Completed Count. For LogicApps only.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowJobExecutionDelay`
-      </td>
-
-      <td>
-        Workflow Job Execution Delay. For LogicApps only.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowJobExecutionDuration`
-      </td>
-
-      <td>
-        Workflow Job Execution Duration. For LogicApps only.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowRunsCompleted`
-      </td>
-
-      <td>
-        Workflow Runs Completed Count. For LogicApps only.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowRunsDispatched`
-      </td>
-
-      <td>
-        Workflow Runs Dispatched Count. For LogicApps only.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowRunsStarted`
-      </td>
-
-      <td>
-        Workflow Runs Started Count. For LogicApps only.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `WorkflowTriggersCompleted`
-      </td>
-
-      <td>
-        Workflow Triggers Completed Count. For LogicApps only.
-      </td>
-    </tr>
-  </tbody>
-</table>

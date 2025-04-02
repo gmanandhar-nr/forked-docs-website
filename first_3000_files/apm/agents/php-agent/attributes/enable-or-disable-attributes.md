@@ -777,58 +777,17 @@ New Relic follows these rules when determining which attributes to include or ex
 
 The following properties have been deprecated. Switch to the new attributes configuration for these properties when upgrading your PHP agent.
 
-<table>
-  <thead>
-    <tr>
-      <th width={200}>
-        <DNT>
-          **Deprecated property**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **New property**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Deprecated property** | **New property** |
+| - | - |
+| `newrelic.capture_params` | `newrelic.attributes.include = request.parameters.*`
 
-  <tbody>
-    <tr>
-      <td>
-        `newrelic.capture_params`
-      </td>
+        By default, request parameters are not sent to New Relic. Add `request.parameters.*` to the `newrelic.attributes.include` list to turn on all request parameters. The `newrelic.capture_params` property has been deprecated. |
+| `newrelic.ignored_params` | `newrelic.attributes.exclude = request.parameters.{name}`
 
-      <td>
-        `newrelic.attributes.include = request.parameters.*`
+        Add each request parameter key to the `newrelic.attributes.exclude` list, delimited by commas. Be sure to prepend the key with `request.parameters`. The `newrelic.ignored_params` property has been deprecated. |
+| `newrelic.{destination}.capture_attributes` | `newrelic.{destination}.attributes.enabled`
 
-        By default, request parameters are not sent to New Relic. Add `request.parameters.*` to the `newrelic.attributes.include` list to turn on all request parameters. The `newrelic.capture_params` property has been deprecated.
-      </td>
-    </tr>
+        The old `newrelic.{destination}.capture_attributes` flag would turn off user attribute collection. This has been deprecated. Use `newrelic.{destination}.attributes.enabled` instead. |
 
-    <tr>
-      <td>
-        `newrelic.ignored_params`
-      </td>
-
-      <td>
-        `newrelic.attributes.exclude = request.parameters.{name}`
-
-        Add each request parameter key to the `newrelic.attributes.exclude` list, delimited by commas. Be sure to prepend the key with `request.parameters`. The `newrelic.ignored_params` property has been deprecated.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        `newrelic.{destination}.capture_attributes`
-      </td>
-
-      <td>
-        `newrelic.{destination}.attributes.enabled`
-
-        The old `newrelic.{destination}.capture_attributes` flag would turn off user attribute collection. This has been deprecated. Use `newrelic.{destination}.attributes.enabled` instead.
-      </td>
-    </tr>
-  </tbody>
-</table>

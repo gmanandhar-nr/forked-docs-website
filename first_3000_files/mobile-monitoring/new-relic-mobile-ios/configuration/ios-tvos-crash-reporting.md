@@ -45,52 +45,20 @@ Crash reporting is enabled by default, but there are some circumstances where it
 
 To disable New Relic crash reporting, call the following API method:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "200px" }}>
-        <DNT>
-          **Language**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Procedure**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Objective-C
-      </td>
-
-      <td>
-        Call prior to `[NewRelic startWithApplicationToken:...];`
+| **Language** | **Procedure** |
+| - | - |
+| Objective-C | Call prior to `[NewRelic startWithApplicationToken:...];`
 
         ```objectivec
         [NewRelic disableFeatures:NRFeatureFlag_CrashReporting];
-        ```
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Swift
-      </td>
-
-      <td>
-        Call prior to `NewRelic.start(withApplicationToken:)`
+        ``` |
+| Swift | Call prior to `NewRelic.start(withApplicationToken:)`
 
         ```swift
         NewRelic.disableFeatures(NRMAFeatureFlags.NRFeatureFlag_CrashReporting)
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+        ``` |
+
 
 For more information about this call, see the `NewRelic.h` file. For more on applicable feature flags, see the `NewRelicFeatureFlags.h` file.

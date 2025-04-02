@@ -29,45 +29,8 @@ To avoid double instrumentation, New Relic's .NET agent automatically instrument
 
 To see additional metrics and transaction segments for Couchbase activity, use either of these options:
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        <DNT>
-          **Couchbase options**
-        </DNT>
-      </th>
+# Table
 
-      <th>
-        <DNT>
-          **Comments**
-        </DNT>
-      </th>
-    </tr>
-  </thead>
+| **Couchbase options** | **Comments** |
+| - | - |
 
-  <tbody>
-    <tr id="couchbase-sdk">
-      <td>
-        Use alternative methods
-      </td>
-
-      <td>
-        Use other methods in the Couchbase SDK where .NET agent instrumentation is not disabled. For example, if you use `GetAsync(string id)` instead of `Get(string id)`, your calls will be instrumented.
-      </td>
-    </tr>
-
-    <tr id="couchbase-xml">
-      <td>
-        Edit instrumentation XML file
-      </td>
-
-      <td>
-        If you do not use the multiple document methods in your application
-
-        1. Comment out the methods in the instrumentation XML file for Couchbase.
-        2. Comment back in the methods that are currently commented out.
-      </td>
-    </tr>
-  </tbody>
-</table>

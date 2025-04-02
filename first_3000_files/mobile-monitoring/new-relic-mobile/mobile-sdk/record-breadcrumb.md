@@ -88,53 +88,13 @@ NewRelic.recordBreadcrumb(
 
       ## Parameters [#parameters]
 
-      <table>
-        <thead>
-          <tr>
-            <th width="30%">
-              Parameter
-            </th>
+      # Table
 
-            <th width={200}>
-              Type
-            </th>
+| Parameter | Type | Description |
+| - | - | - |
+| `Name` | `string` | Required. The name you want to give to the breadcrumb event. |
+| `eventAttributes` | `dictionary` | Optional. A map that includes a list of attributes of the breadcrumb event. Create attributes for any event descriptors you think will be useful. |
 
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              `Name`
-            </td>
-
-            <td>
-              `string`
-            </td>
-
-            <td>
-              Required. The name you want to give to the breadcrumb event.
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              `eventAttributes`
-            </td>
-
-            <td>
-              `dictionary`
-            </td>
-
-            <td>
-              Optional. A map that includes a list of attributes of the breadcrumb event. Create attributes for any event descriptors you think will be useful.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       ## Return values [#return-values]
 

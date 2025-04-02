@@ -41,91 +41,18 @@ In the following example, `QA Server` and `Local Dev Server` are display names:
 
 To set a display name:
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "150px" }}>
-        New Relic agent
-      </th>
+# Table
 
-      <th>
-        Set the host display name
-      </th>
-    </tr>
-  </thead>
+| New Relic agent | Set the host display name |
+| - | - |
+| Go | Edit the Go agent [`HostDisplayName` configuration setting.](/docs/agents/go-agent/instrumentation/go-agent-configuration#host-display-name) |
+| Java | [Edit your config file or environment variables](/docs/agents/java-agent/configuration/hostname-logic-java#display-name). However, if the Java agent [detects an instance name](/docs/agents/java-agent/configuration/hostname-logic-java#instance-names), APM uses that name instead of the display name. |
+| .NET | Edit `displayName` attribute in the `processHost` element of the .NET agent config file or [environment variables](http://docs.newrelic.com/docs/agents/net-agent/configuration/net-agent-configuration#host-name). |
+| Node.js | Edit `display_name` in the `process_host` section of your config file. |
+| PHP | Edit `process_host.display_name` in your **newrelic.ini** file. |
+| Python | Edit `process_host.display_name` in your config file. |
+| Ruby | Edit `process_host.display_name` in your config file. |
 
-  <tbody>
-    <tr>
-      <td>
-        Go
-      </td>
-
-      <td>
-        Edit the Go agent [`HostDisplayName` configuration setting.](/docs/agents/go-agent/instrumentation/go-agent-configuration#host-display-name)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Java
-      </td>
-
-      <td>
-        [Edit your config file or environment variables](/docs/agents/java-agent/configuration/hostname-logic-java#display-name). However, if the Java agent [detects an instance name](/docs/agents/java-agent/configuration/hostname-logic-java#instance-names), APM uses that name instead of the display name.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        .NET
-      </td>
-
-      <td>
-        Edit `displayName` attribute in the `processHost` element of the .NET agent config file or [environment variables](http://docs.newrelic.com/docs/agents/net-agent/configuration/net-agent-configuration#host-name).
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Node.js
-      </td>
-
-      <td>
-        Edit `display_name` in the `process_host` section of your config file.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PHP
-      </td>
-
-      <td>
-        Edit `process_host.display_name` in your <DNT>**newrelic.ini**</DNT> file.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Python
-      </td>
-
-      <td>
-        Edit `process_host.display_name` in your config file.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Ruby
-      </td>
-
-      <td>
-        Edit `process_host.display_name` in your config file.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Remove hosts [#removing_hosts]
 

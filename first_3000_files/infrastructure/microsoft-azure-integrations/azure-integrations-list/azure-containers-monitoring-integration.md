@@ -31,67 +31,14 @@ To find your integration data, go to <DNT>**[one.newrelic.com > All capabilities
 
 Data is attached to the following [event type](/docs/data-apis/understand-data/new-relic-data-types/#event-data):
 
-<table>
-  <thead>
-    <tr>
-      <th style={{ width: "140px" }}>
-        Entity
-      </th>
+# Table
 
-      <th style={{ width: "340px" }}>
-        Event Type
-      </th>
+| Entity | Event Type | Provider |
+| - | - | - |
+| InstanceGroup | `AzureContainersInstanceGroupSample` | `AzureContainersInstanceGroup` |
+| Registry | `AzureContainersRegistrySample` | `AzureContainersRegistry` |
+| ManagedCluster | `AzureContainersManagedClusterSample` | `AzureContainersManagedCluster` |
 
-      <th>
-        Provider
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        InstanceGroup
-      </td>
-
-      <td>
-        `AzureContainersInstanceGroupSample`
-      </td>
-
-      <td>
-        `AzureContainersInstanceGroup`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Registry
-      </td>
-
-      <td>
-        `AzureContainersRegistrySample`
-      </td>
-
-      <td>
-        `AzureContainersRegistry`
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        ManagedCluster
-      </td>
-
-      <td>
-        `AzureContainersManagedClusterSample`
-      </td>
-
-      <td>
-        `AzureContainersManagedCluster`
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 For more on how to use your data, see [Understand and use integration data](/docs/infrastructure/integrations/find-use-infrastructure-integration-data).
 
