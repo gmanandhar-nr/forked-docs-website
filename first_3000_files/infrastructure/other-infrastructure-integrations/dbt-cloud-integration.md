@@ -83,7 +83,8 @@ Select the option most suitable for your needs by clicking on its tab:
         <Step>
           Complete the setup by enabling the `new_relic_data_pipeline_observability_get_dbt_run_metadata2` DAG.
         </Step>
-      </Steps> {% endtab %}
+      </Steps> 
+{% endtab %}
 
 {% tab title="Install with Docker Compose" %} <Steps>
         <Step>
@@ -220,7 +221,8 @@ Select the option most suitable for your needs by clicking on its tab:
         <Step>
           Complete the setup by enabling the `new_relic_data_pipeline_observability_get_dbt_run_metadata2` DAG.
         </Step>
-      </Steps> {% endtab %}
+      </Steps> 
+{% endtab %}
 
 {% endtabs %}
 

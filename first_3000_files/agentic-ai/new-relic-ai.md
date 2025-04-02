@@ -50,7 +50,8 @@ If you need help with where to begin, try out these sample prompts:
 
       ```
       How can I instrument AWS?
-      ``` {% endtab %}
+      ``` 
+{% endtab %}
 
 {% tab title="Improve response time" %} If you want to get to the root cause of latency issues for your app, here are some good questions to ask:
 
@@ -60,7 +61,8 @@ If you need help with where to begin, try out these sample prompts:
 
       ```
       Which infrastructure hosts are showing signs of degradation over the past hour?
-      ``` {% endtab %}
+      ``` 
+{% endtab %}
 
 {% tab title="Take observability to the next level" %} New Relic AI can also be your partner in observability maturity. If you're responsible for ensuring that your app can handle planned spikes, such as a big e-commerce sale, it's essential to understand the state of your system so you can improve it _ahead of time_.  Try asking New Relic AI:
 
@@ -70,7 +72,8 @@ If you need help with where to begin, try out these sample prompts:
 
       ```
       Were unique user sessions up or down last week compared to the week before?
-      ``` {% endtab %}
+      ``` 
+{% endtab %}
 
 {% endtabs %}
 

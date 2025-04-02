@@ -79,7 +79,8 @@ There are four ways to install the browser agent. Depending on your specific nee
             }
           });
           ```
-      </Collapser> {% endtab %}
+      </Collapser> 
+{% endtab %}
 
 {% tab title="Install with APM" %} With an APM agent, you can deploy browser monitoring without manually adding the snippet to your code. When you restart the agent, it automatically uses the latest version of the browser agent.
 
@@ -93,17 +94,20 @@ There are four ways to install the browser agent. Depending on your specific nee
       * [Node.js](/docs/agents/nodejs-agent/supported-features/page-load-timing-nodejs)
       * [PHP](/docs/agents/php-agent/features/page-load-timing-php)
       * [Python](/docs/agents/python-agent/supported-features/page-load-timing-python)
-      * [Ruby](/docs/agents/ruby-agent/features/page-load-timing-ruby) {% endtab %}
+      * [Ruby](/docs/agents/ruby-agent/features/page-load-timing-ruby) 
+{% endtab %}
 
 {% tab title="Create JavaScript via NerdGraph" %} If you'd prefer to create your browser snippet programmatically, you can do so via our NerdGraph, our GraphQL API.
 
       For more on this, see our [NerdGraph tutorial](/docs/apis/nerdgraph/examples/browser-monitoring-config-nerdgraph/) to create a browser snippet and configure it.
 
-      Once you have the snippet, add it to the `<head>` tag of your app. {% endtab %}
+      Once you have the snippet, add it to the `<head>` tag of your app. 
+{% endtab %}
 
 {% tab title="Install via NerdGraph and npm" %} If you want to automate browser monitoring deployment across multiple web apps, you can use NerdGraph and our browser agent npm package to configure and deploy the agent as part of your application build process.
 
-      For more on this, see [instrument multiple apps with npm and NerdGraph](/docs/apis/nerdgraph/examples/combining-npm-nerdgraph/). {% endtab %}
+      For more on this, see [instrument multiple apps with npm and NerdGraph](/docs/apis/nerdgraph/examples/combining-npm-nerdgraph/). 
+{% endtab %}
 
 {% endtabs %}
 
